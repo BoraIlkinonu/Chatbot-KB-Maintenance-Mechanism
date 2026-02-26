@@ -357,12 +357,14 @@ def download_file(service, file_meta, dest_dir):
 # Main sync
 # ──────────────────────────────────────────────────────────
 
-def run_sync(dry_run=False):
+def run_sync(dry_run=False, download_all=False):
     """Execute full sync: scan → detect changes → download → log.
 
     Args:
         dry_run: If True, scan and report changes but skip downloads
                  and do NOT update previous_scan.json.
+        download_all: If True, download ALL files (not just changed ones).
+                      Needed in CI where the runner starts with an empty sources dir.
     """
     print("=" * 60)
     print("  KB Maintenance Pipeline — Drive Sync" + (" (DRY RUN)" if dry_run else ""))
@@ -502,13 +504,21 @@ def run_sync(dry_run=False):
             elif ct == "METADATA_CHANGED":
                 sync_result["summary"]["metadata_changed"] += 1
 
-            # Download NEW, MODIFIED, RENAMED files (skip in dry-run mode)
-            if ct in ("NEW", "MODIFIED", "RENAMED") and not dry_run:
+            # Determine if this file should be downloaded
+            should_download = (
+                not dry_run and (
+                    ct in ("NEW", "MODIFIED", "RENAMED") or
+                    (download_all and ct in ("UNCHANGED", "METADATA_CHANGED"))
+                )
+            )
+
+            if should_download:
                 try:
                     # Preserve folder hierarchy from Drive
                     fp = change.get("folder_path", "")
                     dest_dir = term_sources / fp if fp else term_sources
-                    print(f"  [{ct}] Downloading: {fp}/{change['name']}" if fp else f"  [{ct}] Downloading: {change['name']}")
+                    label = ct if ct != "UNCHANGED" else "SYNC"
+                    print(f"  [{label}] Downloading: {fp}/{change['name']}" if fp else f"  [{label}] Downloading: {change['name']}")
                     local_path, local_md5 = download_file(
                         drive_service, change, dest_dir
                     )

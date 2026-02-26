@@ -52,7 +52,8 @@ def run_stage(stage_num, sync_result=None):
         return None
 
 
-def run_pipeline(skip_sync=False, force_full=False, cross_validate=False, dry_run=False):
+def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
+                  dry_run=False, download_all=False):
     """
     Execute the full pipeline.
 
@@ -61,6 +62,7 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False, dry_ru
         force_full: If True, run all stages regardless of changes
         cross_validate: If True, run Stage 8 cross-validation after build
         dry_run: If True, scan Drive and report changes without downloading or running stages
+        download_all: If True, download ALL files from Drive (not just changed ones)
     """
     print()
     print("=" * 60)
@@ -101,7 +103,7 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False, dry_ru
             return pipeline_log
         elif not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
-            sync_result = run_sync()
+            sync_result = run_sync(download_all=download_all)
             notify_sync_complete(sync_result["summary"])
             notify_revision_summary(sync_result.get("revision_history", {}))
 
@@ -248,7 +250,10 @@ if __name__ == "__main__":
                         help="Run Stage 8 cross-validation (requires claude CLI)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Scan and report changes without downloading or running stages")
+    parser.add_argument("--download-all", action="store_true",
+                        help="Download ALL files from Drive (not just changed). Use in CI.")
     args = parser.parse_args()
 
     run_pipeline(skip_sync=args.skip_sync, force_full=args.force_full,
-                 cross_validate=args.cross_validate, dry_run=args.dry_run)
+                 cross_validate=args.cross_validate, dry_run=args.dry_run,
+                 download_all=args.download_all)

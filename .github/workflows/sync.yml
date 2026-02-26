@@ -52,9 +52,9 @@ jobs:
           GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
-          ARGS=""
+          ARGS="--download-all"
           if [ "${{ github.event.inputs.force_full }}" = "true" ]; then
-            ARGS="--force-full"
+            ARGS="$ARGS --force-full"
           fi
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="--dry-run"
