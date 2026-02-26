@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-02-26T10:03:04.059953+00:00",
+  "generated_at": "2026-02-26T10:57:09.627102+00:00",
   "lesson_coverage": 1.0,
   "lesson_coverage_pct": "100.0%",
   "overall_coverage": 1.0,
   "overall_coverage_pct": "100.0%",
-  "total_source": 13502,
-  "matched": 11879,
-  "structural": 766,
+  "total_source": 13571,
+  "matched": 11916,
+  "structural": 769,
   "unmatched": 0,
-  "skipped_trivial": 857,
-  "total_kb": 11387,
+  "skipped_trivial": 886,
+  "total_kb": 10591,
   "truncations": [],
   "stage_losses": {},
   "checks": [
@@ -18,15 +18,15 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 100.0% (12645 matched [766 structural], 0 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 100.0% (12685 matched [769 structural], 0 unmatched of lesson-assigned atoms)",
       "details": {
         "lesson_coverage": 1.0,
         "overall_coverage": 1.0,
-        "lesson_matched": 11879,
-        "lesson_structural": 766,
+        "lesson_matched": 11916,
+        "lesson_structural": 769,
         "lesson_unmatched": 0,
-        "total_source": 13502,
-        "skipped_trivial": 857
+        "total_source": 13571,
+        "skipped_trivial": 886
       }
     },
     {
@@ -34,11 +34,11 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 100.0% (178/178)",
+      "message": "Link extraction coverage: 100.0% (188/188)",
       "details": {
         "link_coverage": 1.0,
-        "matched": 178,
-        "total": 178
+        "matched": 188,
+        "total": 188
       }
     },
     {

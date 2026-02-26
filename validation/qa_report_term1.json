@@ -1,22 +1,28 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-26T04:26:49.783451+00:00",
-  "started_at": "2026-02-26T04:26:49.783451+00:00",
-  "total_checks": 47,
-  "passed": 43,
-  "failed": 4,
+  "generated_at": "2026-02-26T11:32:50.782426+00:00",
+  "started_at": "2026-02-26T11:32:50.782426+00:00",
+  "total_checks": 48,
+  "passed": 46,
+  "failed": 2,
   "errors": 0,
   "warnings": 1,
-  "info_failures": 3,
+  "info_failures": 1,
   "layers_run": [
     1,
+    2,
     3
   ],
   "per_layer": {
     "1": {
       "total": 46,
-      "passed": 42,
-      "failed": 4
+      "passed": 45,
+      "failed": 1
+    },
+    "2": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1
     },
     "3": {
       "total": 1,
@@ -24,7 +30,19 @@
       "failed": 0
     }
   },
-  "layer_summaries": {},
+  "layer_summaries": {
+    "2": {
+      "confidence": 0.3,
+      "calls_made": 14,
+      "budget": 15,
+      "phase1_sampled": 2,
+      "phase1_confirmed": 0,
+      "phase1_false_positives": 0,
+      "phase2_sampled": 5,
+      "phase2_avg_score": 0.0,
+      "skipped": false
+    }
+  },
   "llm_meta": {},
   "results": [
     {
@@ -175,7 +193,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "All lessons have enriched dict",
+      "message": "All lessons have pipeline_version",
       "details": {
         "term": 1,
         "missing_indices": []
@@ -292,9 +310,9 @@
         "overfit_keywords": {
           "feedback": 18,
           "portfolio": 22,
-          "assessment": 21,
-          "ai": 19,
-          "player": 21
+          "assessment": 22,
+          "ai": 22,
+          "player": 20
         }
       }
     },
@@ -323,29 +341,12 @@
     {
       "check_id": "C011",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "4 plain-text resources (no URL) — possibly incomplete",
+      "message": "All resources contain URLs",
       "details": {
         "term": 1,
-        "plain_text": [
-          {
-            "lesson_id": 17,
-            "resource": "rubric"
-          },
-          {
-            "lesson_id": 17,
-            "resource": "Rubric"
-          },
-          {
-            "lesson_id": 19,
-            "resource": "Rubric"
-          },
-          {
-            "lesson_id": 20,
-            "resource": "Rubric"
-          }
-        ]
+        "plain_text": []
       }
     },
     {
@@ -373,53 +374,12 @@
     {
       "check_id": "C014",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "20 activity descriptions may be truncated mid-word",
+      "message": "No truncated activity descriptions detected",
       "details": {
         "term": 1,
-        "potentially_truncated": [
-          {
-            "lesson_id": 1,
-            "ending": "o\n\n✔ Identify the purpose of k"
-          },
-          {
-            "lesson_id": 2,
-            "ending": "ar\n\nBuild a larger environment"
-          },
-          {
-            "lesson_id": 3,
-            "ending": "lely by moving through the lin"
-          },
-          {
-            "lesson_id": 5,
-            "ending": "audience for each game\n\n✔ List"
-          },
-          {
-            "lesson_id": 6,
-            "ending": "Regular feedback within a team"
-          },
-          {
-            "lesson_id": 7,
-            "ending": "eed.\n\nNext, you determine what"
-          },
-          {
-            "lesson_id": 8,
-            "ending": " one simple post or ad for the"
-          },
-          {
-            "lesson_id": 9,
-            "ending": "clude multiple challenges\n\n✔ A"
-          },
-          {
-            "lesson_id": 10,
-            "ending": "loop is in a platformer and wh"
-          },
-          {
-            "lesson_id": 12,
-            "ending": "te, choke points, combat arena"
-          }
-        ]
+        "potentially_truncated": []
       }
     },
     {
@@ -451,18 +411,12 @@
     {
       "check_id": "X003",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "1 lessons have links in consolidated but none in KB",
+      "message": "Link counts consistent between consolidated and KB",
       "details": {
         "term": 1,
-        "mismatches": [
-          {
-            "lesson_id": 2,
-            "consolidated": 1,
-            "kb": 0
-          }
-        ]
+        "mismatches": []
       }
     },
     {
@@ -551,11 +505,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-25T16:37:41) > consolidated_at (2026-02-25T16:37:24)",
+      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-25T16:37:41.987236+00:00",
-        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+        "kb_ts": "2026-02-26T10:56:47.110157+00:00",
+        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
       }
     },
     {
@@ -563,7 +517,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "Term 1 has no native docs (expected: none in enriched)",
+      "message": "Term 1 has no native docs (expected)",
       "details": {
         "term": 1,
         "has_native": false
@@ -659,6 +613,19 @@
       "details": {
         "term": 1,
         "skipped": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T1L20",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T1L20)",
+      "details": {
+        "term": 1,
+        "lesson_num": 20,
+        "score": 0.0,
+        "consensus": true
       }
     },
     {

@@ -56,6 +56,24 @@ jobs:
         run: |
           python verify_extraction.py --save --github-summary
 
+      - name: Run Dual-Judge KB Validation
+        if: success()
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install anthropic
+          python validate_kb_judge.py --backend sdk --sample-rate 0.25 \
+            --seed ${{ github.run_number }} --budget 60
+        continue-on-error: true
+
+      - name: Upload dual-judge report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dual-judge-report-${{ github.run_number }}
+          path: validation/dual_judge_report*
+          retention-days: 30
+
       - name: Commit output files
         run: |
           git config user.name "KB Pipeline Bot"

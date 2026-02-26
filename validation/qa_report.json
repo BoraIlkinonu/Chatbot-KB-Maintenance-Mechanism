@@ -1,23 +1,29 @@
 {
   "verdict": "FAIL",
-  "generated_at": "2026-02-26T04:26:49.783451+00:00",
-  "started_at": "2026-02-26T04:26:49.579975+00:00",
-  "total_checks": 190,
-  "passed": 172,
+  "generated_at": "2026-02-26T11:32:50.782426+00:00",
+  "started_at": "2026-02-26T10:57:21.263224+00:00",
+  "total_checks": 197,
+  "passed": 179,
   "failed": 18,
   "errors": 2,
-  "warnings": 7,
-  "info_failures": 9,
+  "warnings": 11,
+  "info_failures": 5,
   "layers_run": [
     1,
+    2,
     3,
     4
   ],
   "per_layer": {
     "1": {
       "total": 139,
-      "passed": 126,
-      "failed": 13
+      "passed": 132,
+      "failed": 7
+    },
+    "2": {
+      "total": 7,
+      "passed": 2,
+      "failed": 5
     },
     "3": {
       "total": 26,
@@ -26,12 +32,28 @@
     },
     "4": {
       "total": 25,
-      "passed": 22,
-      "failed": 3
+      "passed": 21,
+      "failed": 4
     }
   },
-  "layer_summaries": {},
-  "llm_meta": {},
+  "layer_summaries": {
+    "2": {
+      "confidence": 0.3,
+      "calls_made": 14,
+      "budget": 15,
+      "phase1_sampled": 2,
+      "phase1_confirmed": 0,
+      "phase1_false_positives": 0,
+      "phase2_sampled": 5,
+      "phase2_avg_score": 0.0,
+      "skipped": false
+    }
+  },
+  "llm_meta": {
+    "model": "sonnet",
+    "budget": 15,
+    "calls_made": 14
+  },
   "results": [
     {
       "check_id": "S001",
@@ -181,7 +203,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "All lessons have enriched dict",
+      "message": "All lessons have pipeline_version",
       "details": {
         "term": 1,
         "missing_indices": []
@@ -298,9 +320,9 @@
         "overfit_keywords": {
           "feedback": 18,
           "portfolio": 22,
-          "assessment": 21,
-          "ai": 19,
-          "player": 21
+          "assessment": 22,
+          "ai": 22,
+          "player": 20
         }
       }
     },
@@ -329,29 +351,12 @@
     {
       "check_id": "C011",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "4 plain-text resources (no URL) — possibly incomplete",
+      "message": "All resources contain URLs",
       "details": {
         "term": 1,
-        "plain_text": [
-          {
-            "lesson_id": 17,
-            "resource": "rubric"
-          },
-          {
-            "lesson_id": 17,
-            "resource": "Rubric"
-          },
-          {
-            "lesson_id": 19,
-            "resource": "Rubric"
-          },
-          {
-            "lesson_id": 20,
-            "resource": "Rubric"
-          }
-        ]
+        "plain_text": []
       }
     },
     {
@@ -379,53 +384,12 @@
     {
       "check_id": "C014",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "20 activity descriptions may be truncated mid-word",
+      "message": "No truncated activity descriptions detected",
       "details": {
         "term": 1,
-        "potentially_truncated": [
-          {
-            "lesson_id": 1,
-            "ending": "o\n\n✔ Identify the purpose of k"
-          },
-          {
-            "lesson_id": 2,
-            "ending": "ar\n\nBuild a larger environment"
-          },
-          {
-            "lesson_id": 3,
-            "ending": "lely by moving through the lin"
-          },
-          {
-            "lesson_id": 5,
-            "ending": "audience for each game\n\n✔ List"
-          },
-          {
-            "lesson_id": 6,
-            "ending": "Regular feedback within a team"
-          },
-          {
-            "lesson_id": 7,
-            "ending": "eed.\n\nNext, you determine what"
-          },
-          {
-            "lesson_id": 8,
-            "ending": " one simple post or ad for the"
-          },
-          {
-            "lesson_id": 9,
-            "ending": "clude multiple challenges\n\n✔ A"
-          },
-          {
-            "lesson_id": 10,
-            "ending": "loop is in a platformer and wh"
-          },
-          {
-            "lesson_id": 12,
-            "ending": "te, choke points, combat arena"
-          }
-        ]
+        "potentially_truncated": []
       }
     },
     {
@@ -457,18 +421,12 @@
     {
       "check_id": "X003",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "1 lessons have links in consolidated but none in KB",
+      "message": "Link counts consistent between consolidated and KB",
       "details": {
         "term": 1,
-        "mismatches": [
-          {
-            "lesson_id": 2,
-            "consolidated": 1,
-            "kb": 0
-          }
-        ]
+        "mismatches": []
       }
     },
     {
@@ -557,11 +515,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-25T16:37:41) > consolidated_at (2026-02-25T16:37:24)",
+      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-25T16:37:41.987236+00:00",
-        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+        "kb_ts": "2026-02-26T10:56:47.110157+00:00",
+        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
       }
     },
     {
@@ -569,7 +527,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "Term 1 has no native docs (expected: none in enriched)",
+      "message": "Term 1 has no native docs (expected)",
       "details": {
         "term": 1,
         "has_native": false
@@ -716,7 +674,7 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All lesson_ids within 1-12",
+      "message": "All lesson_ids within 1-14",
       "details": {
         "term": 2,
         "out_of_range": []
@@ -815,7 +773,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "All lessons have enriched dict",
+      "message": "All lessons have pipeline_version",
       "details": {
         "term": 2,
         "missing_indices": []
@@ -837,11 +795,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "total_lessons matches actual count (12)",
+      "message": "total_lessons matches actual count (14)",
       "details": {
         "term": 2,
-        "declared": 12,
-        "actual": 12
+        "declared": 14,
+        "actual": 14
       }
     },
     {
@@ -926,15 +884,18 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "5 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']",
+      "message": "8 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']",
       "details": {
         "term": 2,
         "overfit_keywords": {
-          "player": 12,
-          "testing": 11,
-          "feedback": 11,
-          "portfolio": 11,
-          "reflection": 11
+          "player": 14,
+          "testing": 12,
+          "feedback": 14,
+          "portfolio": 12,
+          "reflection": 14,
+          "assessment": 14,
+          "ai": 14,
+          "launch": 14
         }
       }
     },
@@ -965,7 +926,7 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "10 plain-text resources (no URL) — possibly incomplete",
+      "message": "6 plain-text resources (no URL) — possibly incomplete",
       "details": {
         "term": 2,
         "plain_text": [
@@ -974,32 +935,12 @@
             "resource": "AI brainstorming task - slide10.xml"
           },
           {
-            "lesson_id": 3,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
-            "lesson_id": 4,
-            "resource": "Design Brief"
-          },
-          {
-            "lesson_id": 4,
-            "resource": "design brief"
-          },
-          {
-            "lesson_id": 4,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
-            "lesson_id": 5,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
             "lesson_id": 6,
             "resource": "Publishing your game to EndStar - slide10.xml"
           },
           {
             "lesson_id": 6,
-            "resource": "here - slide19.xml"
+            "resource": "here - slide20.xml"
           },
           {
             "lesson_id": 8,
@@ -1008,6 +949,10 @@
           {
             "lesson_id": 12,
             "resource": "portfolio slide - slide15.xml"
+          },
+          {
+            "lesson_id": 12,
+            "resource": "Scope Freeze - slide8.xml"
           }
         ]
       }
@@ -1037,53 +982,12 @@
     {
       "check_id": "C014",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "11 activity descriptions may be truncated mid-word",
+      "message": "No truncated activity descriptions detected",
       "details": {
         "term": 2,
-        "potentially_truncated": [
-          {
-            "lesson_id": 1,
-            "ending": "t with it.\n\n🔗Recap from Term 2"
-          },
-          {
-            "lesson_id": 2,
-            "ending": "o support planning,\n\nBy the en"
-          },
-          {
-            "lesson_id": 3,
-            "ending": "the different types of AI help"
-          },
-          {
-            "lesson_id": 4,
-            "ending": "rom these sources\n\nWhat did we"
-          },
-          {
-            "lesson_id": 5,
-            "ending": "\nONE claim my announcement mus"
-          },
-          {
-            "lesson_id": 6,
-            "ending": "e your game on a real platform"
-          },
-          {
-            "lesson_id": 7,
-            "ending": "opers spot problems, improve g"
-          },
-          {
-            "lesson_id": 8,
-            "ending": "ss you’re practicing in this l"
-          },
-          {
-            "lesson_id": 9,
-            "ending": "\n\nWhich issue should be the to"
-          },
-          {
-            "lesson_id": 11,
-            "ending": "’ve already gathered.\n\nThis is"
-          }
-        ]
+        "potentially_truncated": []
       }
     },
     {
@@ -1091,13 +995,13 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "KB has 12 lessons (expected 12, consolidated has 12 total, 12 in range)",
+      "message": "KB has 14 lessons (expected 14, consolidated has 14 total, 14 in range)",
       "details": {
         "term": 2,
-        "kb_count": 12,
-        "expected": 12,
-        "cons_total": 12,
-        "cons_in_range": 12
+        "kb_count": 14,
+        "expected": 14,
+        "cons_total": 14,
+        "cons_in_range": 14
       }
     },
     {
@@ -1105,11 +1009,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All 12 expected lessons present in KB",
+      "message": "All 14 expected lessons present in KB",
       "details": {
         "term": 2,
         "missing": [],
-        "expected_range": "1-12"
+        "expected_range": "1-14"
       }
     },
     {
@@ -1154,7 +1058,9 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14
         ],
         "actual": [
           1,
@@ -1168,7 +1074,9 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14
         ],
         "gaps": []
       }
@@ -1189,11 +1097,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-25T16:37:42) > consolidated_at (2026-02-25T16:37:24)",
+      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-25T16:37:42.091754+00:00",
-        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+        "kb_ts": "2026-02-26T10:56:47.324266+00:00",
+        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
       }
     },
     {
@@ -1201,7 +1109,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "Term 2 has no native docs (expected: none in enriched)",
+      "message": "Term 2 has no native docs (expected)",
       "details": {
         "term": 2,
         "has_native": false
@@ -1348,7 +1256,7 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All lesson_ids within 1-12",
+      "message": "All lesson_ids within 1-24",
       "details": {
         "term": 3,
         "out_of_range": []
@@ -1447,7 +1355,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "All lessons have enriched dict",
+      "message": "All lessons have pipeline_version",
       "details": {
         "term": 3,
         "missing_indices": []
@@ -1469,11 +1377,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "total_lessons matches actual count (12)",
+      "message": "total_lessons matches actual count (24)",
       "details": {
         "term": 3,
-        "declared": 12,
-        "actual": 12
+        "declared": 24,
+        "actual": 24
       }
     },
     {
@@ -1514,16 +1422,56 @@
       "layer": 1,
       "passed": false,
       "severity": "WARNING",
-      "message": "2 lessons have short activity_description (<50 chars)",
+      "message": "12 lessons have short activity_description (<50 chars)",
       "details": {
         "term": 3,
         "issues": [
           {
-            "lesson_id": 8,
+            "lesson_id": 13,
             "length": 0
           },
           {
-            "lesson_id": 10,
+            "lesson_id": 14,
+            "length": 0
+          },
+          {
+            "lesson_id": 15,
+            "length": 0
+          },
+          {
+            "lesson_id": 16,
+            "length": 0
+          },
+          {
+            "lesson_id": 17,
+            "length": 0
+          },
+          {
+            "lesson_id": 18,
+            "length": 0
+          },
+          {
+            "lesson_id": 19,
+            "length": 0
+          },
+          {
+            "lesson_id": 20,
+            "length": 0
+          },
+          {
+            "lesson_id": 21,
+            "length": 0
+          },
+          {
+            "lesson_id": 22,
+            "length": 0
+          },
+          {
+            "lesson_id": 23,
+            "length": 0
+          },
+          {
+            "lesson_id": 24,
             "length": 0
           }
         ]
@@ -1580,11 +1528,19 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "1 keywords appear in >80% of lessons (possible overfit): ['design brief']",
+      "message": "9 keywords appear in >80% of lessons (possible overfit): ['player', 'prototype', 'gameplay', 'feedback', 'portfolio']",
       "details": {
         "term": 3,
         "overfit_keywords": {
-          "design brief": 12
+          "player": 24,
+          "prototype": 22,
+          "gameplay": 22,
+          "feedback": 23,
+          "portfolio": 24,
+          "reflection": 24,
+          "assessment": 24,
+          "ai": 24,
+          "game design": 21
         }
       }
     },
@@ -1615,37 +1571,13 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "7 plain-text resources (no URL) — possibly incomplete",
+      "message": "1 plain-text resources (no URL) — possibly incomplete",
       "details": {
         "term": 3,
         "plain_text": [
           {
-            "lesson_id": 1,
-            "resource": "design brief"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "Design Briefs"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "design briefs"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
-            "lesson_id": 2,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
             "lesson_id": 12,
             "resource": "notebooklm.google.com - notebooklm.google.com"
-          },
-          {
-            "lesson_id": 12,
-            "resource": "Classkick at the end of each lesson"
           }
         ]
       }
@@ -1664,61 +1596,23 @@
     {
       "check_id": "C013",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "1 trivial assessment_signals (separators or too short)",
+      "message": "All assessment_signals are substantive",
       "details": {
         "term": 3,
-        "trivial": [
-          {
-            "lesson_id": 1,
-            "signal": "| --- | --- | --- | --- | --- |"
-          }
-        ]
+        "trivial": []
       }
     },
     {
       "check_id": "C014",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "8 activity descriptions may be truncated mid-word",
+      "message": "No truncated activity descriptions detected",
       "details": {
         "term": 3,
-        "potentially_truncated": [
-          {
-            "lesson_id": 1,
-            "ending": "ayers, while keeping them conn"
-          },
-          {
-            "lesson_id": 2,
-            "ending": "1997 (0:30 – 3:00) where he ex"
-          },
-          {
-            "lesson_id": 3,
-            "ending": "trength\n\none limitation\n\nfor e"
-          },
-          {
-            "lesson_id": 4,
-            "ending": ", purpose, constraints, and su"
-          },
-          {
-            "lesson_id": 6,
-            "ending": " one issue, fix it, and retest"
-          },
-          {
-            "lesson_id": 7,
-            "ending": "y 7.3 – Build & Test Prototype"
-          },
-          {
-            "lesson_id": 9,
-            "ending": "his is Medium Impact + Low Eff"
-          },
-          {
-            "lesson_id": 12,
-            "ending": "\n\nStudents assess their progre"
-          }
-        ]
+        "potentially_truncated": []
       }
     },
     {
@@ -1726,13 +1620,13 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "KB has 12 lessons (expected 12, consolidated has 24 total, 12 in range)",
+      "message": "KB has 24 lessons (expected 24, consolidated has 24 total, 24 in range)",
       "details": {
         "term": 3,
-        "kb_count": 12,
-        "expected": 12,
+        "kb_count": 24,
+        "expected": 24,
         "cons_total": 24,
-        "cons_in_range": 12
+        "cons_in_range": 24
       }
     },
     {
@@ -1740,11 +1634,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All 12 expected lessons present in KB",
+      "message": "All 24 expected lessons present in KB",
       "details": {
         "term": 3,
         "missing": [],
-        "expected_range": "1-12"
+        "expected_range": "1-24"
       }
     },
     {
@@ -1789,7 +1683,19 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
         ],
         "actual": [
           1,
@@ -1803,7 +1709,19 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
         ],
         "gaps": []
       }
@@ -1824,11 +1742,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-25T16:37:42) > consolidated_at (2026-02-25T16:37:24)",
+      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-25T16:37:42.231165+00:00",
-        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+        "kb_ts": "2026-02-26T10:56:47.661412+00:00",
+        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
       }
     },
     {
@@ -1836,13 +1754,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "Term 3 has native docs: 12 lessons have native_google_content",
+      "message": "Term 3 has native docs: 10 lessons have native_slides",
       "details": {
         "term": 3,
         "has_native": true,
         "lessons_with_native": [
-          1,
-          2,
           3,
           4,
           5,
@@ -1959,6 +1875,97 @@
       }
     },
     {
+      "check_id": "L2_P1_C004",
+      "layer": 2,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
+      "details": {
+        "original_check": "C004",
+        "verdict": "UNCERTAIN",
+        "consensus": true,
+        "term": 3
+      }
+    },
+    {
+      "check_id": "L2_P1_C006",
+      "layer": 2,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
+      "details": {
+        "original_check": "C006",
+        "verdict": "UNCERTAIN",
+        "consensus": true,
+        "term": 3
+      }
+    },
+    {
+      "check_id": "L2_P2_T1L20",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T1L20)",
+      "details": {
+        "term": 1,
+        "lesson_num": 20,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T2L4",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T2L4)",
+      "details": {
+        "term": 2,
+        "lesson_num": 4,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T3L2",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T3L2)",
+      "details": {
+        "term": 3,
+        "lesson_num": 2,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T3L1",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T3L1)",
+      "details": {
+        "term": 3,
+        "lesson_num": 1,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T2L10",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T2L10)",
+      "details": {
+        "term": 2,
+        "lesson_num": 10,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
       "check_id": "E001",
       "layer": 3,
       "passed": true,
@@ -2000,11 +2007,11 @@
       "layer": 3,
       "passed": true,
       "severity": "ERROR",
-      "message": "Term 2: 12 lessons correct",
+      "message": "Term 2: 14 lessons correct",
       "details": {
         "term": 2,
-        "actual": 12,
-        "expected": 12
+        "actual": 14,
+        "expected": 14
       }
     },
     {
@@ -2012,11 +2019,11 @@
       "layer": 3,
       "passed": true,
       "severity": "ERROR",
-      "message": "Term 3: 12 lessons correct",
+      "message": "Term 3: 24 lessons correct",
       "details": {
         "term": 3,
-        "actual": 12,
-        "expected": 12
+        "actual": 24,
+        "expected": 24
       }
     },
     {
@@ -2024,7 +2031,7 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "T3 L3-7 all have enriched big_question",
+      "message": "T3 L3-7 all have big_question",
       "details": {
         "expected": [
           3,
@@ -2041,6 +2048,8 @@
           5,
           6,
           7,
+          8,
+          10,
           12
         ],
         "missing": []
@@ -2051,9 +2060,9 @@
       "layer": 3,
       "passed": true,
       "severity": "ERROR",
-      "message": "Term 2 has 12 lessons (expected 12)",
+      "message": "Term 2 has 14 lessons (expected 14)",
       "details": {
-        "actual": 12
+        "actual": 14
       }
     },
     {
@@ -2061,10 +2070,10 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "All 1810 image paths exist on disk",
+      "message": "All 1872 image paths exist on disk",
       "details": {
         "missing_count": 0,
-        "total": 1810,
+        "total": 1872,
         "samples": []
       }
     },
@@ -2173,11 +2182,11 @@
       "layer": 3,
       "passed": true,
       "severity": "INFO",
-      "message": "26/46 lessons have 0 videos, 8/46 have 0 tools (acceptable)",
+      "message": "42/60 lessons have 0 videos, 8/60 have 0 tools (acceptable)",
       "details": {
-        "zero_videos": 26,
+        "zero_videos": 42,
         "zero_tools": 8,
-        "total": 46
+        "total": 60
       }
     },
     {
@@ -2206,58 +2215,58 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "12 multi-source lessons, 0 with merge issues",
+      "message": "10 multi-source lessons, 0 with merge issues",
       "details": {
         "multi_source": [
           {
-            "lesson_id": 1,
-            "native_count": 1,
-            "doc_sources": 6
-          },
-          {
-            "lesson_id": 2,
-            "native_count": 1,
-            "doc_sources": 5
-          },
-          {
             "lesson_id": 3,
-            "native_count": 5,
+            "native_count": 58,
             "doc_sources": 3
           },
           {
             "lesson_id": 4,
-            "native_count": 4,
+            "native_count": 52,
             "doc_sources": 3
           },
           {
             "lesson_id": 5,
-            "native_count": 5,
+            "native_count": 59,
             "doc_sources": 5
           },
           {
             "lesson_id": 6,
-            "native_count": 4,
+            "native_count": 54,
             "doc_sources": 4
           },
           {
             "lesson_id": 7,
-            "native_count": 5,
+            "native_count": 65,
             "doc_sources": 4
           },
           {
             "lesson_id": 8,
-            "native_count": 3,
+            "native_count": 44,
             "doc_sources": 2
           },
           {
             "lesson_id": 9,
-            "native_count": 4,
+            "native_count": 49,
             "doc_sources": 4
           },
           {
             "lesson_id": 10,
-            "native_count": 3,
+            "native_count": 40,
             "doc_sources": 3
+          },
+          {
+            "lesson_id": 11,
+            "native_count": 47,
+            "doc_sources": 4
+          },
+          {
+            "lesson_id": 12,
+            "native_count": 50,
+            "doc_sources": 5
           }
         ]
       }
@@ -2267,7 +2276,7 @@
       "layer": 3,
       "passed": true,
       "severity": "INFO",
-      "message": "0 lessons have empty/missing enriched data",
+      "message": "0 lessons missing enrichment fields",
       "details": {
         "count": 0,
         "samples": []
@@ -2494,7 +2503,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Found 12 matches for 'Triggers' in endstar_tools",
+      "message": "Found 24 matches for 'Triggers' in endstar_tools",
       "details": {
         "query": "Which lessons use the Triggers tool?",
         "field": "endstar_tools",
@@ -2530,7 +2539,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T2L1 learning_objectives: 3 items",
+      "message": "T2L1 learning_objectives: 5 items",
       "details": {
         "query": "What are the learning objectives for Term 2 Lesson 1?",
         "field": "learning_objectives",
@@ -2560,7 +2569,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T1L8 assessment_signals: 5 items",
+      "message": "T1L8 assessment_signals: 6 items",
       "details": {
         "query": "How is Lesson 8 assessed?",
         "field": "assessment_signals",
@@ -2625,10 +2634,10 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T3L4 enriched.big_question: present",
+      "message": "T3L4 big_question: present",
       "details": {
         "query": "What is the big question for Term 3 Lesson 4?",
-        "field": "enriched.big_question",
+        "field": "big_question",
         "scope": {
           "term": 3,
           "lesson_id": 4
@@ -2640,7 +2649,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Found 2 matches for 'testing' in core_topics",
+      "message": "Found 18 matches for 'testing' in core_topics",
       "details": {
         "query": "Which term covers game testing and feedback?",
         "field": "core_topics",
@@ -2650,11 +2659,23 @@
         "matches": [
           {
             "term": 1,
-            "lesson_id": 17
+            "lesson_id": 1
           },
           {
-            "term": 3,
-            "lesson_id": 7
+            "term": 1,
+            "lesson_id": 2
+          },
+          {
+            "term": 1,
+            "lesson_id": 3
+          },
+          {
+            "term": 1,
+            "lesson_id": 6
+          },
+          {
+            "term": 1,
+            "lesson_id": 8
           }
         ]
       }
@@ -2679,7 +2700,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T1L1 resources: 2 items",
+      "message": "T1L1 resources: 3 items",
       "details": {
         "query": "Show me resources for Term 1 Lesson 1",
         "field": "resources",
@@ -2694,7 +2715,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T2L7 core_topics: 5 items",
+      "message": "T2L7 core_topics: 37 items",
       "details": {
         "query": "What are the core topics for Term 2 Lesson 7?",
         "field": "core_topics",
@@ -2723,7 +2744,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T3L5 keywords: 10 items",
+      "message": "T3L5 keywords: 23 items",
       "details": {
         "query": "What keywords describe Term 3 Lesson 5?",
         "field": "keywords",
@@ -2753,7 +2774,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "lesson_title coverage: 100% (46/46) — threshold: 100%",
+      "message": "lesson_title coverage: 100% (60/60) — threshold: 100%",
       "details": {
         "coverage": 1.0,
         "threshold": 1.0,
@@ -2765,26 +2786,50 @@
       "layer": 4,
       "passed": false,
       "severity": "ERROR",
-      "message": "learning_objectives coverage: 91% (42/46) — threshold: 100%",
+      "message": "learning_objectives coverage: 80% (48/60) — threshold: 100%",
       "details": {
-        "coverage": 0.913,
+        "coverage": 0.8,
         "threshold": 1.0,
         "missing": [
           {
             "term": 3,
-            "lesson_id": 8
+            "lesson_id": 13
           },
           {
             "term": 3,
-            "lesson_id": 9
+            "lesson_id": 14
           },
           {
             "term": 3,
-            "lesson_id": 10
+            "lesson_id": 15
           },
           {
             "term": 3,
-            "lesson_id": 11
+            "lesson_id": 16
+          },
+          {
+            "term": 3,
+            "lesson_id": 17
+          },
+          {
+            "term": 3,
+            "lesson_id": 18
+          },
+          {
+            "term": 3,
+            "lesson_id": 19
+          },
+          {
+            "term": 3,
+            "lesson_id": 20
+          },
+          {
+            "term": 3,
+            "lesson_id": 21
+          },
+          {
+            "term": 3,
+            "lesson_id": 22
           }
         ]
       }
@@ -2794,18 +2839,50 @@
       "layer": 4,
       "passed": false,
       "severity": "ERROR",
-      "message": "activity_description coverage: 96% (44/46) — threshold: 100%",
+      "message": "activity_description coverage: 80% (48/60) — threshold: 100%",
       "details": {
-        "coverage": 0.957,
+        "coverage": 0.8,
         "threshold": 1.0,
         "missing": [
           {
             "term": 3,
-            "lesson_id": 8
+            "lesson_id": 13
           },
           {
             "term": 3,
-            "lesson_id": 10
+            "lesson_id": 14
+          },
+          {
+            "term": 3,
+            "lesson_id": 15
+          },
+          {
+            "term": 3,
+            "lesson_id": 16
+          },
+          {
+            "term": 3,
+            "lesson_id": 17
+          },
+          {
+            "term": 3,
+            "lesson_id": 18
+          },
+          {
+            "term": 3,
+            "lesson_id": 19
+          },
+          {
+            "term": 3,
+            "lesson_id": 20
+          },
+          {
+            "term": 3,
+            "lesson_id": 21
+          },
+          {
+            "term": 3,
+            "lesson_id": 22
           }
         ]
       }
@@ -2813,11 +2890,11 @@
     {
       "check_id": "UC04",
       "layer": 4,
-      "passed": true,
-      "severity": "INFO",
-      "message": "resources coverage: 67% (31/46) — threshold: 60%",
+      "passed": false,
+      "severity": "WARNING",
+      "message": "resources coverage: 55% (33/60) — threshold: 60%",
       "details": {
-        "coverage": 0.674,
+        "coverage": 0.55,
         "threshold": 0.6
       }
     },
@@ -2826,9 +2903,9 @@
       "layer": 4,
       "passed": false,
       "severity": "WARNING",
-      "message": "assessment_signals coverage: 54% (25/46) — threshold: 80%",
+      "message": "assessment_signals coverage: 60% (36/60) — threshold: 80%",
       "details": {
-        "coverage": 0.543,
+        "coverage": 0.6,
         "threshold": 0.8
       }
     },
@@ -2867,12 +2944,12 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Topic overlap between terms: {'T1-T2': 0.0, 'T1-T3': 0.0, 'T2-T3': 0.0} — distinguishable",
+      "message": "Topic overlap between terms: {'T1-T2': 0.0, 'T1-T3': 0.0, 'T2-T3': 0.03} — distinguishable",
       "details": {
         "overlaps": {
           "T1-T2": 0.0,
           "T1-T3": 0.0,
-          "T2-T3": 0.0
+          "T2-T3": 0.03
         }
       }
     },

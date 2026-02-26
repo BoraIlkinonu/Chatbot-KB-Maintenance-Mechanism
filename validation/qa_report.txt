@@ -1,35 +1,42 @@
 ======================================================================
   QA REPORT — FAIL
-  2026-02-26T04:26:49.783451+00:00
+  2026-02-26T11:32:50.782426+00:00
 ======================================================================
 
 Verdict:    FAIL
-Checks:     190 total, 172 passed, 18 failed
+Checks:     197 total, 179 passed, 18 failed
 Errors:     2
-Warnings:   7
-Layers run: [1, 3, 4]
+Warnings:   11
+Layers run: [1, 2, 3, 4]
 
-  Layer 1 (Programmatic): 126/139 passed
+  Layer 1 (Programmatic): 132/139 passed
+  Layer 2 (LLM Cross-Val): 2/7 passed
   Layer 3 (Edge Cases): 24/26 passed
-  Layer 4 (User Scenarios): 22/25 passed
+  Layer 4 (User Scenarios): 21/25 passed
 
 FAILURES:
 --------------------------------------------------
-  [ERROR] UC02: learning_objectives coverage: 91% (42/46) — threshold: 100%
-  [ERROR] UC03: activity_description coverage: 96% (44/46) — threshold: 100%
-  [WARNING] C004: 2 lessons have short activity_description (<50 chars)
+  [ERROR] UC02: learning_objectives coverage: 80% (48/60) — threshold: 100%
+  [ERROR] UC03: activity_description coverage: 80% (48/60) — threshold: 100%
+  [WARNING] C004: 12 lessons have short activity_description (<50 chars)
   [WARNING] C006: 2 video URLs don't match known video domains
-  [WARNING] C013: 1 trivial assessment_signals (separators or too short)
   [WARNING] I003: 11 URLs with encoding issues
   [WARNING] I007: 373 duplicate image paths within lessons
-  [WARNING] UC05: assessment_signals coverage: 54% (25/46) — threshold: 80%
-  [WARNING] X003: 1 lessons have links in consolidated but none in KB
+  [WARNING] L2_P2_T1L20: LLM field accuracy: 0% (T1L20)
+  [WARNING] L2_P2_T2L10: LLM field accuracy: 0% (T2L10)
+  [WARNING] L2_P2_T2L4: LLM field accuracy: 0% (T2L4)
+  [WARNING] L2_P2_T3L1: LLM field accuracy: 0% (T3L1)
+  [WARNING] L2_P2_T3L2: LLM field accuracy: 0% (T3L2)
+  [WARNING] UC04: resources coverage: 55% (33/60) — threshold: 60%
+  [WARNING] UC05: assessment_signals coverage: 60% (36/60) — threshold: 80%
   [INFO] C008: 5 keywords appear in >80% of lessons (possible overfit): ['feedback', 'portfolio', 'assessment', 'ai', 'player']
-  [INFO] C008: 5 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']
-  [INFO] C008: 1 keywords appear in >80% of lessons (possible overfit): ['design brief']
-  [INFO] C011: 4 plain-text resources (no URL) — possibly incomplete
-  [INFO] C011: 10 plain-text resources (no URL) — possibly incomplete
-  [INFO] C011: 7 plain-text resources (no URL) — possibly incomplete
-  [INFO] C014: 20 activity descriptions may be truncated mid-word
-  [INFO] C014: 11 activity descriptions may be truncated mid-word
-  [INFO] C014: 8 activity descriptions may be truncated mid-word
+  [INFO] C008: 8 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']
+  [INFO] C008: 9 keywords appear in >80% of lessons (possible overfit): ['player', 'prototype', 'gameplay', 'feedback', 'portfolio']
+  [INFO] C011: 6 plain-text resources (no URL) — possibly incomplete
+  [INFO] C011: 1 plain-text resources (no URL) — possibly incomplete
+
+LLM CROSS-VALIDATION:
+--------------------------------------------------
+  Confidence: 0.3
+  Calls made: 14
+  Budget:     15

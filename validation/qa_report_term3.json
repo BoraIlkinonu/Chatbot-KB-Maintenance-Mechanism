@@ -1,22 +1,28 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-26T04:26:49.783451+00:00",
-  "started_at": "2026-02-26T04:26:49.783451+00:00",
-  "total_checks": 47,
-  "passed": 41,
+  "generated_at": "2026-02-26T11:32:50.782426+00:00",
+  "started_at": "2026-02-26T11:32:50.782426+00:00",
+  "total_checks": 51,
+  "passed": 45,
   "failed": 6,
   "errors": 0,
-  "warnings": 3,
-  "info_failures": 3,
+  "warnings": 4,
+  "info_failures": 2,
   "layers_run": [
     1,
+    2,
     3
   ],
   "per_layer": {
     "1": {
       "total": 46,
-      "passed": 40,
-      "failed": 6
+      "passed": 42,
+      "failed": 4
+    },
+    "2": {
+      "total": 4,
+      "passed": 2,
+      "failed": 2
     },
     "3": {
       "total": 1,
@@ -24,7 +30,19 @@
       "failed": 0
     }
   },
-  "layer_summaries": {},
+  "layer_summaries": {
+    "2": {
+      "confidence": 0.3,
+      "calls_made": 14,
+      "budget": 15,
+      "phase1_sampled": 2,
+      "phase1_confirmed": 0,
+      "phase1_false_positives": 0,
+      "phase2_sampled": 5,
+      "phase2_avg_score": 0.0,
+      "skipped": false
+    }
+  },
   "llm_meta": {},
   "results": [
     {
@@ -76,7 +94,7 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All lesson_ids within 1-12",
+      "message": "All lesson_ids within 1-24",
       "details": {
         "term": 3,
         "out_of_range": []
@@ -175,7 +193,7 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "All lessons have enriched dict",
+      "message": "All lessons have pipeline_version",
       "details": {
         "term": 3,
         "missing_indices": []
@@ -197,11 +215,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "total_lessons matches actual count (12)",
+      "message": "total_lessons matches actual count (24)",
       "details": {
         "term": 3,
-        "declared": 12,
-        "actual": 12
+        "declared": 24,
+        "actual": 24
       }
     },
     {
@@ -242,16 +260,56 @@
       "layer": 1,
       "passed": false,
       "severity": "WARNING",
-      "message": "2 lessons have short activity_description (<50 chars)",
+      "message": "12 lessons have short activity_description (<50 chars)",
       "details": {
         "term": 3,
         "issues": [
           {
-            "lesson_id": 8,
+            "lesson_id": 13,
             "length": 0
           },
           {
-            "lesson_id": 10,
+            "lesson_id": 14,
+            "length": 0
+          },
+          {
+            "lesson_id": 15,
+            "length": 0
+          },
+          {
+            "lesson_id": 16,
+            "length": 0
+          },
+          {
+            "lesson_id": 17,
+            "length": 0
+          },
+          {
+            "lesson_id": 18,
+            "length": 0
+          },
+          {
+            "lesson_id": 19,
+            "length": 0
+          },
+          {
+            "lesson_id": 20,
+            "length": 0
+          },
+          {
+            "lesson_id": 21,
+            "length": 0
+          },
+          {
+            "lesson_id": 22,
+            "length": 0
+          },
+          {
+            "lesson_id": 23,
+            "length": 0
+          },
+          {
+            "lesson_id": 24,
             "length": 0
           }
         ]
@@ -308,11 +366,19 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "1 keywords appear in >80% of lessons (possible overfit): ['design brief']",
+      "message": "9 keywords appear in >80% of lessons (possible overfit): ['player', 'prototype', 'gameplay', 'feedback', 'portfolio']",
       "details": {
         "term": 3,
         "overfit_keywords": {
-          "design brief": 12
+          "player": 24,
+          "prototype": 22,
+          "gameplay": 22,
+          "feedback": 23,
+          "portfolio": 24,
+          "reflection": 24,
+          "assessment": 24,
+          "ai": 24,
+          "game design": 21
         }
       }
     },
@@ -343,37 +409,13 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "7 plain-text resources (no URL) — possibly incomplete",
+      "message": "1 plain-text resources (no URL) — possibly incomplete",
       "details": {
         "term": 3,
         "plain_text": [
           {
-            "lesson_id": 1,
-            "resource": "design brief"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "Design Briefs"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "design briefs"
-          },
-          {
-            "lesson_id": 1,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
-            "lesson_id": 2,
-            "resource": "Classkick at the end of each lesson"
-          },
-          {
             "lesson_id": 12,
             "resource": "notebooklm.google.com - notebooklm.google.com"
-          },
-          {
-            "lesson_id": 12,
-            "resource": "Classkick at the end of each lesson"
           }
         ]
       }
@@ -392,61 +434,23 @@
     {
       "check_id": "C013",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "1 trivial assessment_signals (separators or too short)",
+      "message": "All assessment_signals are substantive",
       "details": {
         "term": 3,
-        "trivial": [
-          {
-            "lesson_id": 1,
-            "signal": "| --- | --- | --- | --- | --- |"
-          }
-        ]
+        "trivial": []
       }
     },
     {
       "check_id": "C014",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "8 activity descriptions may be truncated mid-word",
+      "message": "No truncated activity descriptions detected",
       "details": {
         "term": 3,
-        "potentially_truncated": [
-          {
-            "lesson_id": 1,
-            "ending": "ayers, while keeping them conn"
-          },
-          {
-            "lesson_id": 2,
-            "ending": "1997 (0:30 – 3:00) where he ex"
-          },
-          {
-            "lesson_id": 3,
-            "ending": "trength\n\none limitation\n\nfor e"
-          },
-          {
-            "lesson_id": 4,
-            "ending": ", purpose, constraints, and su"
-          },
-          {
-            "lesson_id": 6,
-            "ending": " one issue, fix it, and retest"
-          },
-          {
-            "lesson_id": 7,
-            "ending": "y 7.3 – Build & Test Prototype"
-          },
-          {
-            "lesson_id": 9,
-            "ending": "his is Medium Impact + Low Eff"
-          },
-          {
-            "lesson_id": 12,
-            "ending": "\n\nStudents assess their progre"
-          }
-        ]
+        "potentially_truncated": []
       }
     },
     {
@@ -454,13 +458,13 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "KB has 12 lessons (expected 12, consolidated has 24 total, 12 in range)",
+      "message": "KB has 24 lessons (expected 24, consolidated has 24 total, 24 in range)",
       "details": {
         "term": 3,
-        "kb_count": 12,
-        "expected": 12,
+        "kb_count": 24,
+        "expected": 24,
         "cons_total": 24,
-        "cons_in_range": 12
+        "cons_in_range": 24
       }
     },
     {
@@ -468,11 +472,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "All 12 expected lessons present in KB",
+      "message": "All 24 expected lessons present in KB",
       "details": {
         "term": 3,
         "missing": [],
-        "expected_range": "1-12"
+        "expected_range": "1-24"
       }
     },
     {
@@ -517,7 +521,19 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
         ],
         "actual": [
           1,
@@ -531,7 +547,19 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
         ],
         "gaps": []
       }
@@ -552,11 +580,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-25T16:37:42) > consolidated_at (2026-02-25T16:37:24)",
+      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-25T16:37:42.231165+00:00",
-        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+        "kb_ts": "2026-02-26T10:56:47.661412+00:00",
+        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
       }
     },
     {
@@ -564,13 +592,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "Term 3 has native docs: 12 lessons have native_google_content",
+      "message": "Term 3 has native docs: 10 lessons have native_slides",
       "details": {
         "term": 3,
         "has_native": true,
         "lessons_with_native": [
-          1,
-          2,
           3,
           4,
           5,
@@ -677,15 +703,67 @@
       }
     },
     {
+      "check_id": "L2_P1_C004",
+      "layer": 2,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
+      "details": {
+        "original_check": "C004",
+        "verdict": "UNCERTAIN",
+        "consensus": true,
+        "term": 3
+      }
+    },
+    {
+      "check_id": "L2_P1_C006",
+      "layer": 2,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
+      "details": {
+        "original_check": "C006",
+        "verdict": "UNCERTAIN",
+        "consensus": true,
+        "term": 3
+      }
+    },
+    {
+      "check_id": "L2_P2_T3L2",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T3L2)",
+      "details": {
+        "term": 3,
+        "lesson_num": 2,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
+      "check_id": "L2_P2_T3L1",
+      "layer": 2,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "LLM field accuracy: 0% (T3L1)",
+      "details": {
+        "term": 3,
+        "lesson_num": 1,
+        "score": 0.0,
+        "consensus": true
+      }
+    },
+    {
       "check_id": "E003",
       "layer": 3,
       "passed": true,
       "severity": "ERROR",
-      "message": "Term 3: 12 lessons correct",
+      "message": "Term 3: 24 lessons correct",
       "details": {
         "term": 3,
-        "actual": 12,
-        "expected": 12
+        "actual": 24,
+        "expected": 24
       }
     }
   ]

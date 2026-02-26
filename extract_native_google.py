@@ -450,7 +450,6 @@ def run_native_extraction(sync_result=None):
                     native_files.append({**f, "term": term_key})
     else:
         # Read from latest sync log
-        from config import LOGS_DIR
         logs = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)
         if logs:
             with open(logs[0], "r", encoding="utf-8") as fh:

@@ -63,7 +63,7 @@ QUERY_SCENARIOS = [
     {
         "id": "U008",
         "query": "What is the big question for Term 3 Lesson 4?",
-        "required_field": "enriched.big_question",
+        "required_field": "big_question",
         "scope": {"term": 3, "lesson_id": 4},
         "expect": "non_empty_string",
         "description": "Teacher asks for enriched content from native docs",

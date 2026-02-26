@@ -368,6 +368,17 @@ def extract_activities_from_docx_sections(sections):
     return parts
 
 
+def _ensure_trailing_punctuation(text):
+    """Ensure text ends with proper punctuation. Adds a period if the text
+    ends with an alphanumeric character (indicating a sentence cut off mid-flow)."""
+    stripped = text.rstrip()
+    if not stripped:
+        return text
+    if stripped[-1] not in ".!?:)]\"\u2019":
+        stripped += "."
+    return stripped
+
+
 def extract_programme_metadata(text):
     """Extract programme-level metadata (Subject, Year Group, Duration) from text.
     Returns dict with keys present or empty dict if not found."""
@@ -390,7 +401,8 @@ def extract_curriculum_alignment_from_text(text):
     name is on the first line and details follow on subsequent lines."""
     prefixes = [
         "CSTA", "UK Computer Science", "UK Design", "IB Design",
-        "IB MYP", "NGSS", "Common Core", "ISTE",
+        "IB MYP", "NGSS", "Common Core", "ISTE", "OECD",
+        "UK D&T", "AQA",
     ]
     results = []
     lines = text.split("\n")
@@ -433,7 +445,8 @@ def extract_curriculum_alignment_from_text(text):
 # Known curriculum framework prefixes for splitting joined alignment text
 _ALIGNMENT_PREFIXES = [
     "CSTA", "UK Computer Science", "UK Design", "IB Design",
-    "IB MYP", "NGSS", "Common Core", "ISTE",
+    "IB MYP", "NGSS", "Common Core", "ISTE", "OECD",
+    "UK D&T", "AQA",
 ]
 
 
@@ -469,6 +482,27 @@ def _parse_curriculum_alignment(raw):
             "text": line,
         })
     return results
+
+
+def extract_curriculum_alignment_from_slides(slides):
+    """Extract curriculum alignment from slide speaker notes (fallback for T1).
+    Looks for known framework prefixes in speaker notes text."""
+    alignments = []
+    for slide in slides:
+        notes = slide.get("notes", "")
+        if not notes:
+            continue
+        lines = notes.split("\n")
+        for line in lines:
+            stripped = line.strip()
+            if not stripped:
+                continue
+            for prefix in _ALIGNMENT_PREFIXES:
+                if stripped.startswith(prefix):
+                    if stripped not in alignments:
+                        alignments.append(stripped)
+                    break
+    return alignments
 
 
 # ──────────────────────────────────────────────────────────
@@ -576,13 +610,23 @@ def extract_learning_objectives_from_slides(slides):
             post_objectives.append(current_title)
 
         # Strategy B: Content BEFORE the heading (Term 1 format)
+        # Term 1 has objectives listed above the "Lesson Objectives" label
         pre_objectives = []
         for line in lines[:heading_idx]:
             stripped = line.strip()
-            if not stripped or stripped.startswith("‹") or len(stripped) < 15:
+            if not stripped or stripped.startswith("‹"):
+                continue
+            # Skip very short lines (slide numbers, bullets, etc.)
+            if len(stripped) < 10:
+                continue
+            # Skip noise lines
+            if any(kw in stripped.lower() for kw in [
+                "by the end", "term ", "lesson ", "click", "scan",
+                "welcome", "today", "explorer", "http",
+            ]):
                 continue
             stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
-            if stripped and len(stripped) > 15:
+            if stripped and len(stripped) >= 10:
                 pre_objectives.append(stripped)
 
         # Use whichever strategy found more content
@@ -629,21 +673,42 @@ def extract_uae_link_from_slides(slides):
 
 
 def extract_success_criteria_from_slides(slides):
-    """Extract success criteria from slides with 'we will know we are successful'."""
+    """Extract success criteria from slides with 'we will know we are successful',
+    'Criteria:', or tiered 'All students must / Many will / Some may' format."""
     criteria = []
 
     for slide in slides:
         text = slide["text"]
-        if "successful" not in text.lower() and "success criteria" not in text.lower():
+        text_lower = text.lower()
+
+        # Check for known success criteria triggers
+        has_trigger = any(kw in text_lower for kw in [
+            "successful", "success criteria", "criteria:",
+            "all students must", "many students will", "some students may",
+        ])
+        if not has_trigger:
             continue
 
         lines = text.split("\n")
         capturing = False
         for line in lines:
             stripped = line.strip()
-            if "successful" in stripped.lower() or "success criteria" in stripped.lower():
+            if "successful" in stripped.lower() or "success criteria" in stripped.lower() or stripped.lower().startswith("criteria"):
                 capturing = True
                 continue
+
+            # Capture tiered differentiated criteria
+            tiered_match = re.match(
+                r"((?:All|Many|Some)\s+students\s+(?:must|will|may|could)\b.*)",
+                stripped, re.IGNORECASE,
+            )
+            if tiered_match:
+                capturing = True
+                cleaned = tiered_match.group(1).strip()
+                if cleaned and len(cleaned) > 15:
+                    criteria.append(cleaned)
+                continue
+
             if capturing and stripped:
                 stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
                 if len(stripped) > 15 and not stripped.startswith("‹"):
@@ -716,8 +781,10 @@ def extract_ai_focus_from_slides(slides):
             if not stripped or len(stripped) < 20 or len(stripped) > 150:
                 continue
 
-            # Skip page numbers, links, navigation
+            # Skip page numbers, links, navigation, MCQ answers
             if stripped.startswith("‹") or stripped.startswith("http"):
+                continue
+            if re.match(r"^[A-Da-d][\.\)]\s", stripped):
                 continue
 
             stripped_lower = stripped.lower()
@@ -754,6 +821,7 @@ def extract_core_topics_from_slides(slides, lesson_num):
         r"^your turn", r"mandatory", r"diagnostic", r"^term \d",
         r"^lesson \d", r"^today", r"explorer.*programme", r"^important",
         r"^activity \d", r"^portfolio entry", r"^upload", r"^submit",
+        r"^[A-Da-d][\.\)]\s",  # MCQ answer options (A. / B) / etc.)
     ]
 
     for slide in slides[2:]:  # Skip first 2 slides (usually title/cover)
@@ -842,7 +910,8 @@ def extract_activity_type_from_content(slides, activities_text):
     slide_text = " ".join(s["text"] + " " + s["notes"] for s in slides).lower() if slides else ""
     all_text = (slide_text + " " + activities_text).lower()
 
-    type_signals = {
+    # Primary activity signals (higher priority)
+    primary_signals = {
         "Brief analysis": ["design brief", "analyse", "brief analysis", "problem statement"],
         "Persona and empathy mapping": ["persona", "empathy map", "player profile", "user research"],
         "Research and prototyping": ["research", "primary research", "secondary research", "prototype"],
@@ -853,20 +922,32 @@ def extract_activity_type_from_content(slides, activities_text):
         "Peer testing and feedback": ["peer test", "feedback", "WWW", "EBI"],
         "Iteration and refinement": ["iteration", "refine", "improve", "priority"],
         "Project management": ["project manage", "milestone", "timeline", "risk"],
-        "Portfolio and documentation": ["portfolio", "documentation", "evidence", "curate"],
         "Reflection and evaluation": ["reflection", "evaluate", "SMART goal", "presentation"],
         "Game readiness review": ["readiness", "launch", "review", "evaluate"],
         "Launch strategy": ["launch", "strategy", "plan", "success criteria"],
         "Agentic AI": ["agentic ai", "ai agent", "agent", "autonomous"],
     }
 
+    # Secondary activity signals (only used as fallback when no primary match)
+    secondary_signals = {
+        "Portfolio and documentation": ["portfolio", "documentation", "evidence", "curate"],
+    }
+
     best_type = ""
     best_score = 0
-    for activity_type, signals in type_signals.items():
+    for activity_type, signals in primary_signals.items():
         score = sum(1 for s in signals if s in all_text)
         if score > best_score:
             best_score = score
             best_type = activity_type
+
+    # Only fall back to secondary signals if no primary match
+    if best_score == 0:
+        for activity_type, signals in secondary_signals.items():
+            score = sum(1 for s in signals if s in all_text)
+            if score > best_score:
+                best_score = score
+                best_type = activity_type
 
     return best_type if best_score > 0 else ""
 
@@ -877,15 +958,15 @@ def extract_artifacts_from_slides(slides):
 
     for slide in slides:
         text = slide["text"] + "\n" + slide["notes"]
-        # Match "Portfolio Entry X – Title" or similar
-        matches = re.findall(r"Portfolio\s+Entry\s+\d+\s*[–\-:]\s*([^\n]+)", text, re.IGNORECASE)
+        # Match "Portfolio Entry/Evidence X – Title" or similar
+        matches = re.findall(r"Portfolio\s+(?:Entry|Evidence)\s+\d+\s*[–\-:]\s*([^\n]+)", text, re.IGNORECASE)
         for m in matches:
             artifact = f"Portfolio Entry – {m.strip()}"
             if artifact not in artifacts:
                 artifacts.append(artifact)
 
-        # Also look for "Portfolio Entry X" without title
-        matches = re.findall(r"(Portfolio\s+Entry\s+\d+[^\n]*)", text, re.IGNORECASE)
+        # Also look for "Portfolio Entry/Evidence X" without title
+        matches = re.findall(r"(Portfolio\s+(?:Entry|Evidence)\s+\d+[^\n]*)", text, re.IGNORECASE)
         for m in matches:
             m = m.strip()
             if m and m not in artifacts and not any(m in a for a in artifacts):
@@ -896,7 +977,7 @@ def extract_artifacts_from_slides(slides):
 
 def extract_assessment_signals_from_slides(slides):
     """Extract assessment signals (basic/intermediate/advanced) from content.
-    Focuses on tiered criteria and 'I can...' statements."""
+    Focuses on tiered criteria, 'I can...' statements, and formal quiz codes."""
     signals = []
 
     for slide in slides:
@@ -911,6 +992,13 @@ def extract_assessment_signals_from_slides(slides):
                 signal = f"{level}: {m.strip()}"
                 if signal not in signals:
                     signals.append(signal)
+
+        # Look for formal AFL MCQ quiz codes (GD-14.1, AI-07.2, etc.)
+        quiz_matches = re.findall(r"((?:GD|AI)-\d+[\.\:]\d*\s*[^\n]*)", text)
+        for m in quiz_matches:
+            m = m.strip()
+            if m and m not in signals:
+                signals.append(m)
 
         # "I can..." statements from success criteria slides
         if "success criteria" in text_lower or "successful" in text_lower:
@@ -929,31 +1017,38 @@ def extract_assessment_signals_from_slides(slides):
                 # Capture "I can..." and assessment-like statements
                 stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
                 if stripped and len(stripped) > 20:
+                    # Skip separator lines (underscores, dashes, pipes, equals)
+                    if re.match(r'^[\s\-_|=*]+$', stripped):
+                        continue
                     signals.append(stripped)
 
     return signals
 
 
 def extract_resources_from_slides(slides):
-    """Extract resource references from slide content."""
+    """Extract resource references from slide content.
+    Only extracts actual URLs — bare text mentions like 'Rubric' are not resources."""
     resources = []
 
     for slide in slides:
         text = slide["text"] + "\n" + slide["notes"]
 
-        # Look for resource patterns
-        patterns = [
-            r"Classkick\s+[^\n]+",
-            r"Design\s+Brief[s]?\s*",
-            r"Rubric\s*",
-            r"https?://[^\s\n]+",
-        ]
-        for pattern in patterns:
-            matches = re.findall(pattern, text, re.IGNORECASE)
-            for m in matches:
-                m = m.strip()
-                if m and m not in resources:
-                    resources.append(m)
+        # Extract actual URLs
+        urls = re.findall(r"https?://[^\s\n\)\"'>]+", text)
+        for url in urls:
+            url = url.rstrip(".,;:")
+            if url and url not in resources:
+                resources.append(url)
+
+        # Named tool references with URLs (e.g. "Classkick at https://...")
+        tool_url_matches = re.findall(
+            r"(?:Classkick|Google\s+(?:Classroom|Drive|Slides|Docs))\s+(?:at\s+)?(https?://[^\s\n]+)",
+            text, re.IGNORECASE
+        )
+        for url in tool_url_matches:
+            url = url.rstrip(".,;:")
+            if url and url not in resources:
+                resources.append(url)
 
     return resources
 
@@ -962,8 +1057,16 @@ def extract_resources_from_slides(slides):
 # Keyword extraction (content-aware + dictionary)
 # ──────────────────────────────────────────────────────────
 
-def extract_keywords(all_text, lesson_num):
-    """Extract keywords combining dictionary lookup with content analysis."""
+def extract_keywords(all_text, lesson_num, lesson_specific_text=""):
+    """Extract keywords combining dictionary lookup with content analysis.
+
+    Args:
+        all_text: Full concatenated text (slides + shared docs) — used for lesson dictionary lookup.
+        lesson_num: Lesson number for LESSON_KEYWORDS dictionary.
+        lesson_specific_text: Text from lesson slides, speaker notes, and lesson plan only
+            (not shared assessment/programme docs). Content candidates are matched against
+            this narrower text to avoid programme-wide terms appearing in every lesson.
+    """
     keywords = []
 
     # Start with lesson-specific keywords that appear in content
@@ -974,7 +1077,9 @@ def extract_keywords(all_text, lesson_num):
         if kw.lower() in text_lower:
             keywords.append(kw)
 
-    # Additional content-based keywords
+    # Additional content-based keywords — matched against lesson-specific text only
+    # to avoid programme-wide terms (player, portfolio, assessment) appearing in every lesson
+    specific_lower = (lesson_specific_text or all_text).lower()
     content_candidates = [
         "design brief", "problem statement", "audience", "constraints",
         "UAE heritage", "sustainability", "innovation", "persona",
@@ -991,8 +1096,15 @@ def extract_keywords(all_text, lesson_num):
     ]
 
     for kw in content_candidates:
-        if kw.lower() in text_lower and kw not in keywords:
-            keywords.append(kw)
+        kw_lower = kw.lower()
+        # Use word-boundary matching to avoid partial matches (e.g. "AI" in "detail")
+        if " " in kw_lower:
+            if kw_lower in specific_lower and kw not in keywords:
+                keywords.append(kw)
+        else:
+            pattern = r"(?<![a-zA-Z])" + re.escape(kw_lower) + r"(?![a-zA-Z])"
+            if re.search(pattern, specific_lower) and kw not in keywords:
+                keywords.append(kw)
 
     return keywords
 
@@ -1177,6 +1289,7 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     native_slides_images = []     # {url, source_url, object_id}
     native_slides_tables = []     # {headers, rows}
     native_slides_speaker_notes = []  # {slide, notes}
+    _seen_native_img_urls = set()
 
     for native in native_content:
         ntype = native.get("native_type", "")
@@ -1222,9 +1335,11 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
                     if video.get("url"):
                         native_slides_videos.append(video)
 
-                # Per-slide image URLs → image entries
+                # Per-slide image URLs → image entries (dedup by URL)
                 for img in slide.get("image_urls", []):
-                    if img.get("url"):
+                    img_url = img.get("url", "")
+                    if img_url and img_url not in _seen_native_img_urls:
+                        _seen_native_img_urls.add(img_url)
                         native_slides_images.append({
                             **img,
                             "slide_number": slide_num,
@@ -1289,10 +1404,19 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     if not learning_objectives and all_slides:
         learning_objectives = extract_learning_objectives_from_slides(all_slides)
 
-    # Core Topics (from slides or native docs)
+    # Core Topics (from slides or native docs) — deduplicated case-insensitively
     core_topics = extract_core_topics_from_slides(all_slides, lesson_num) if all_slides else []
     if not core_topics and native_content:
         core_topics = extract_core_topics_from_native(native_content, lesson_num)
+    # Deduplicate case-insensitively while preserving first occurrence
+    seen_topics = set()
+    deduped_topics = []
+    for t in core_topics:
+        t_lower = t.strip().lower()
+        if t_lower not in seen_topics:
+            seen_topics.add(t_lower)
+            deduped_topics.append(t)
+    core_topics = deduped_topics
 
     # AI Focus
     ai_focus = extract_ai_focus_from_slides(all_slides) if all_slides else []
@@ -1303,10 +1427,18 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     if docx_activities:
         activities_text_parts = list(activities_text_parts) + docx_activities
     activities_text = "\n\n".join(activities_text_parts) if activities_text_parts else ""
+    # Ensure activity text ends with punctuation (not mid-sentence)
+    if activities_text:
+        activities_text = _ensure_trailing_punctuation(activities_text)
     activity_type = extract_activity_type_from_content(all_slides, activities_text + "\n" + all_text)
 
-    # Keywords
-    keywords = extract_keywords(all_text, lesson_num)
+    # Keywords — use lesson-specific text (slides + notes + lesson plan) not shared docs
+    lesson_specific_text = "\n".join(
+        s["text"] + "\n" + s["notes"] for s in all_slides
+    ) if all_slides else ""
+    if activities_text:
+        lesson_specific_text += "\n" + activities_text
+    keywords = extract_keywords(all_text, lesson_num, lesson_specific_text=lesson_specific_text)
 
     # Artifacts
     artifacts = extract_artifacts_from_slides(all_slides) if all_slides else []
@@ -1398,8 +1530,10 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
                     "source_file": native.get("file_name", ""),
                 })
 
-    # Build Endstar tools from keyword matching on all content
-    endstar_tools = extract_endstar_tools(all_text)
+    # Build Endstar tools from keyword matching on lesson-specific slide text
+    # (not all_text which includes shared programme docs that mention tools globally)
+    lesson_slide_text = " ".join(s["text"] + " " + s["notes"] for s in all_slides)
+    endstar_tools = extract_endstar_tools(lesson_slide_text)
 
     # Build video entries from consolidated video references + native Slides videos
     all_video_refs = list(lesson_data.get("video_refs", []))
@@ -1470,7 +1604,11 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
         "big_question": big_question,
         "uae_link": uae_link,
         "success_criteria": success_criteria,
-        "curriculum_alignment": native_curriculum_alignment or _parse_curriculum_alignment(docx_curriculum_lines),
+        "curriculum_alignment": (
+            native_curriculum_alignment
+            or _parse_curriculum_alignment(docx_curriculum_lines)
+            or _parse_curriculum_alignment(extract_curriculum_alignment_from_slides(all_slides))
+        ),
         "programme_metadata": programme_metadata,
         "key_facts": [],
         "detailed_activities": activities_text if activities_text else "",

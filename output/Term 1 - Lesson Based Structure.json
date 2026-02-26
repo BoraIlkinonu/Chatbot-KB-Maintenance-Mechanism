@@ -2,7 +2,7 @@
   "term": 1,
   "total_lessons": 22,
   "generated_from": "KB Maintenance Pipeline v2",
-  "generated_at": "2026-02-26T09:37:42.199071+00:00",
+  "generated_at": "2026-02-26T13:59:10.663626+00:00",
   "lessons": [
     {
       "lesson_title": "Lesson 1 – Introduction to Game Development",
@@ -42,21 +42,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "B. Removing unused objects and testing regularly",
-          "C. Using only default tiles",
-          "D. Avoiding saving until the end",
-          "A. Move Tool",
-          "B. Tile Tool",
-          "C. Prop Tool",
-          "D. Erase Tool",
           "AI Literacy (OECD K1.3)",
-          "A. AI understands tools but chooses shortcuts",
-          "B. AI checks Endstar before answering",
-          "D. AI follows outdated rules",
-          "A. Follow AI steps exactly",
-          "B. Ask AI to repeat answers",
-          "C. Test AI suggestions and decide what works",
-          "D. Avoid AI completely",
           "Innovation"
         ],
         "endstar_tools": [
@@ -74,8 +60,8 @@
         "learning_objectives": [
           "Use AI responsibly to ask questions about game development and Endstar."
         ],
-        "activity_type": "Portfolio and documentation",
-        "activity_description": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+        "activity_type": "Brief refinement and team setup",
+        "activity_description": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
         "artifacts": [],
         "assessment_signals": [
           "✔ Navigate the basic interface (toolbar, camera, workspace)",
@@ -85,7 +71,11 @@
           "✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)",
           "✔ Explain how Endstar’s UI compares to other platforms they’ve used",
           "✔ Discover advanced properties (scale, rotation, object attributes)",
-          "✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased"
+          "✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased",
+          "GD-01.1\nWhich action is most likely to reduce performance issues in an Endstar environment?",
+          "GD-01.2\nWhich tool is most appropriate for removing an object that is no longer needed?",
+          "AI-01.1\nWhy can AI give confident instructions that do not fully work in Endstar?",
+          "AI-01.2\nWhat is the best role for a student when using AI in Lesson 1?"
         ],
         "videos": [
           {
@@ -141,7 +131,6 @@
         ],
         "keywords": [
           "innovation",
-          "persona",
           "testing",
           "iteration",
           "feedback",
@@ -522,13 +511,13 @@
           }
         ]
       },
-      "description_of_activities": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+      "description_of_activities": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
       "other_resources": "",
       "videos_column": "",
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.119152+00:00",
+      "generated_at": "2026-02-26T13:59:10.528834+00:00",
       "pipeline_version": "2.1",
       "week": 1,
       "big_question": "",
@@ -546,10 +535,15 @@
         "✔ Discover advanced properties (scale, rotation, object attributes)",
         "✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Understanding AI limits and reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
-      "detailed_activities": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+      "detailed_activities": "Activity:  Open and Navigate Endstar\n\nStudents must be able to open Endstar, navigate all functions of Endstar and be prepared to answer questions about the platform as part of this introductory activity.\n\nThis activity is a basic ‘get to know’ the Endstar programme.\n\nCriteria: We know we are successful when….\n\n✔ Log in successfully to Endstar\n\n✔ Navigate the basic interface (toolbar, camera, workspace)\n\n✔ Upload one screenshot of their environment to their Portfolio\n\n✔ Identify the purpose of key tools (move, tile, prop, erase, inspect)\n\n✔ Adjust essential settings for smoother performance (resolution, fullscreen, mouse sensitivity)\n\n✔ Use AI to ask at least one productive question about the platform (e.g., “What does this tool do?”)\n\n✔ Explain how Endstar’s UI compares to other platforms they’ve used\n\n✔ Discover advanced properties (scale, rotation, object attributes)\n\n✔ Use AI thoughtfully—evaluating whether its suggestions are accurate, useful, or biased\n\nTeaching note: Before starting any work please have the students complete the diagnostic here. They will repeat the same set of questions in lesson 24.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Optional Activity. The Studio can be accessed by the students outside of the classroom.\n\nTeaching Note: Core activity download and get endstar working please share the log in details for endstar with your class.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
       "rubrics": [],
       "data_tables": [],
       "schedule_tables": [],
@@ -732,21 +726,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. Increasing enemy difficulty",
-          "B. Adding random props",
-          "C. Using clear pathways and landmarks",
-          "D. Making the level larger",
-          "A. It makes the game shorter",
-          "C. It reduces file size",
-          "D. It limits creativity",
-          "AI Literacy (OECD K1.3)",
-          "A. AI prefers artistic designs",
-          "C. The engine is faulty",
-          "D. The player misunderstood the rules",
-          "A. Using the first idea given",
-          "B. Asking for more detail",
-          "C. Testing ideas inside Endstar before keeping them",
-          "D. Copying ideas from popular games"
+          "AI Literacy (OECD K1.3)"
         ],
         "endstar_tools": [
           "Connections",
@@ -756,7 +736,6 @@
           "Human judgement still matters.",
           "AI Literacy Focus: Fluency ≠ understanding (OECD K1.3)",
           "AI Literacy (OECD K1.3)",
-          "B. AI cannot experience gameplay like a human player",
           "Which action best shows healthy scepticism when using AI for environment ideas?"
         ],
         "learning_objectives": [
@@ -766,9 +745,14 @@
           "Build and test a playable environment layout."
         ],
         "activity_type": "Iteration and refinement",
-        "activity_description": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+        "activity_description": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-02.1\nA player feels lost while playing a level. Which design choice best improves navigation?",
+          "GD-02.2\nWhy is consistency important in environment design?",
+          "AI-02.1\nAI suggests an environment layout that looks good but plays poorly. What does this show?",
+          "AI-02.2\nWhich action best shows healthy scepticism when using AI for environment ideas?"
+        ],
         "videos": [
           {
             "video_id": "",
@@ -1048,22 +1032,38 @@
           }
         ]
       },
-      "description_of_activities": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+      "description_of_activities": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
       "other_resources": "",
       "videos_column": "",
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.123154+00:00",
+      "generated_at": "2026-02-26T13:59:10.533995+00:00",
       "pipeline_version": "2.1",
       "week": 1,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Build a basic environment using one tile",
+        "✔ Use Move, Tile, and Erase tools",
+        "✔ Upload screenshot to portfolio",
+        "Many students will:",
+        "✔ Integrate 5–10 tiles to shape platforms",
+        "✔ Add 1–2 props to improve navigation",
+        "Some students may:",
+        "✔ Begin simple multi-path branching",
+        "✔ Use AI suggestions selectively to enhance design"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Understanding AI limits and reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
-      "detailed_activities": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements",
+      "detailed_activities": "Do you Remember the In-Game Tools from Last Lesson?\n\nStudents should become familiar with the following tools in the gamer interface:\n\nEmpty Tool (for navigation)\n\nTerrain Tool (for placing terrain)\n\nProp Tool (for placing new objects)\n\nErase Tool (for removing objects)\n\nWiring Tool (for connections)\n\nInspector Tool (for changing properties)\n\nCopy Tool (for duplicating objects)\n\nMove Tool (for repositioning)\n\nActivity: Create a More Complex Game Environment in Endstar\n\nBuild a larger environment using:\n\nExplain your design choices\n\nShow how the player will move across your level\n\nUpload evidence to Portfolio\n\n✔ Build a basic environment using one tile\n\n✔ Use Move, Tile, and Erase tools\n\n✔ Upload screenshot to portfolio\n\n✔ Integrate 5–10 tiles to shape platforms\n\n✔ Add 1–2 props to improve navigation\n\n✔ Begin simple multi-path branching\n\n✔ Use AI suggestions selectively to enhance design\n\nTeacher Note: Draw comparisons to familiar games to help students visualize.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching note: If a student completes everything in the ‘All Students’ row, they have achieved the lesson objective. The ‘Many’ and ‘Some’ levels are upward extensions, not mandatory requirements.",
       "rubrics": [],
       "data_tables": [],
       "schedule_tables": [],
@@ -1194,23 +1194,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. Slower loading times",
-          "B. More complex puzzles",
-          "C. Players cannot recover from mistakes",
-          "D. Reduced visual quality",
-          "A. They make the level longer",
-          "B. They give players choice and recovery options",
-          "C. They reduce challenge",
-          "D. They limit player movement",
           "AI Literacy (OECD K1.1)",
-          "A. AI often changes its answers",
-          "B. AI prefers certain genres",
-          "C. AI cannot predict player behaviour accurately",
-          "D. AI ignores instructions",
-          "A. AI lacks creativity",
-          "B. AI cannot judge player frustration",
-          "C. AI cannot follow rules",
-          "D. AI misunderstands visuals",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -1220,19 +1204,21 @@
         ],
         "ai_focus": [
           "AI Literacy Focus: AI predicts patterns (OECD K1.1)",
-          "AI Literacy (OECD K1.1)",
-          "C. AI cannot predict player behaviour accurately",
-          "B. AI cannot judge player frustration",
-          "C. AI cannot follow rules"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
           "Understanding Basic Wiring Techniques",
           "Testing Complex Connections"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Iteration and refinement",
         "activity_description": "Endstar lets students creatively connect objects to build mechanisms. You could design a simple lever to open a door or create more complex setups like moving an object onto a pressure plate to achieve the same result.\n\nIt's your task to come up with innovative mechanisms to accomplish the goal of your game.\n\nActivity 1:  Create a Complex Game Pathway in Endstar\n\nStudents should create a linear pathway using connected elements. The environment should be navigable solely by moving through the links they've established.\n\nThis could involve a range of door mechanisms and/or intricate puzzles.\n\n✔ Design a basic navigable pathway\n\n✔ Use one type of door mechanism to control access\n\n✔ Ensure the pathway works from start to finish\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Integrate more than one door mechanism\n\n✔ Add a simple puzzle or challenge linked to the pathway\n\n✔ Show how doors and pathway work together\n\n✔ Create a more complex environment with multiple routes\n\n✔ Use a variety of door mechanisms and layered puzzles\n\n✔ Test and refine the pathway based on playtesting or feedback\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-03.1\nWhat is a major risk of designing a pathway with only one possible route?",
+          "GD-03.2\nWhy might branching paths improve player experience?",
+          "AI-03.1\nWhy should students test AI-suggested pathways?",
+          "AI-03.2\nWhat limitation of AI is revealed when a pathway works logically but feels unfair?"
+        ],
         "videos": [
           {
             "video_id": "",
@@ -1262,8 +1248,7 @@
           "portfolio",
           "assessment",
           "AI",
-          "endstar",
-          "playtest"
+          "endstar"
         ],
         "images": [
           {
@@ -1601,13 +1586,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.124892+00:00",
+      "generated_at": "2026-02-26T13:59:10.538786+00:00",
       "pipeline_version": "2.1",
       "week": 2,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Design a basic navigable pathway",
+        "✔ Use one type of door mechanism to control access",
+        "✔ Ensure the pathway works from start to finish",
+        "✔ Upload a screenshot or short demo to portfolio",
+        "Many students will:",
+        "✔ Integrate more than one door mechanism",
+        "✔ Add a simple puzzle or challenge linked to the pathway",
+        "✔ Show how doors and pathway work together",
+        "Some students may:",
+        "✔ Create a more complex environment with multiple routes",
+        "✔ Use a variety of door mechanisms and layered puzzles",
+        "✔ Test and refine the pathway based on playtesting or feedback"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Evaluating AI outputs)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Endstar lets students creatively connect objects to build mechanisms. You could design a simple lever to open a door or create more complex setups like moving an object onto a pressure plate to achieve the same result.\n\nIt's your task to come up with innovative mechanisms to accomplish the goal of your game.\n\nActivity 1:  Create a Complex Game Pathway in Endstar\n\nStudents should create a linear pathway using connected elements. The environment should be navigable solely by moving through the links they've established.\n\nThis could involve a range of door mechanisms and/or intricate puzzles.\n\n✔ Design a basic navigable pathway\n\n✔ Use one type of door mechanism to control access\n\n✔ Ensure the pathway works from start to finish\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Integrate more than one door mechanism\n\n✔ Add a simple puzzle or challenge linked to the pathway\n\n✔ Show how doors and pathway work together\n\n✔ Create a more complex environment with multiple routes\n\n✔ Use a variety of door mechanisms and layered puzzles\n\n✔ Test and refine the pathway based on playtesting or feedback\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -1725,22 +1729,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Introduction to Game Development",
-          "A. Visual detail",
-          "B. Time pressure",
-          "C. Player decision-making and logic",
-          "D. Number of props",
-          "A. They load faster",
-          "B. They require planning and reasoning",
-          "C. They look more complex",
-          "D. They reduce difficulty",
           "AI Literacy (OECD K1.1)",
-          "A. AI prefers hard challenges",
-          "B. AI cannot accurately measure enjoyment",
-          "C. AI misunderstands logic",
-          "D. AI ignores rules",
-          "A. Implement it fully",
-          "B. Ask AI to simplify it",
-          "D. Replace it with another AI idea",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -1752,16 +1741,20 @@
         "ai_focus": [
           "AI does not remember meaning or intent.",
           "AI Literacy Focus: AI output variation (OECD K1.1)",
-          "AI Literacy (OECD K1.1)",
-          "B. AI cannot accurately measure enjoyment"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
           "Understand and Implement Basic and Complex Puzzles"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Game expansion and polish",
         "activity_description": "Activity 1:  Create an Engaging Puzzle\n\nStudents should explore all available prop options to design an engaging and interactive puzzle. The puzzle should incorporate multiple inputs, encouraging diverse and meaningful problem-solving strategies.\n\nUsing basic props, students are challenged to create a puzzle that feels complex and enjoyable to solve, testing players' logic and creativity.\n\nAll students must: \u000b✔ Create an interactive puzzle using basic props\n\n✔ Use more than one input type (e.g. switch, trigger, door)\n\n✔ Ensure the puzzle can be completed logically by a player\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Combine multiple input types in one puzzle\n\n✔ Add an extra step or layer to increase challenge\n\n✔ Make the puzzle more engaging through player choice or timing\n\n✔ Design a complex puzzle with multiple prop interactions\n\n✔ Create layered logic that requires player reasoning\n\n✔ Refine the puzzle based on testing or feedback\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-04.1\nWhich feature best defines a puzzle in a game?",
+          "GD-04.2\nWhy are multi-step puzzles often more engaging than single-action puzzles?",
+          "AI-04.1\nAI suggests a puzzle that works but feels frustrating. What limitation does this show?",
+          "AI-04.2\nWhat is the student’s responsibility after receiving an AI puzzle idea?"
+        ],
         "videos": [
           {
             "video_id": "",
@@ -2118,13 +2111,31 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.126893+00:00",
+      "generated_at": "2026-02-26T13:59:10.541993+00:00",
       "pipeline_version": "2.1",
       "week": 2,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must: \u000b✔ Create an interactive puzzle using basic props",
+        "✔ Use more than one input type (e.g. switch, trigger, door)",
+        "✔ Ensure the puzzle can be completed logically by a player",
+        "✔ Upload a screenshot or short demo to portfolio",
+        "Many students will:",
+        "✔ Combine multiple input types in one puzzle",
+        "✔ Add an extra step or layer to increase challenge",
+        "✔ Make the puzzle more engaging through player choice or timing",
+        "Some students may:",
+        "✔ Design a complex puzzle with multiple prop interactions",
+        "✔ Create layered logic that requires player reasoning",
+        "✔ Refine the puzzle based on testing or feedback"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Analysing reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Create an Engaging Puzzle\n\nStudents should explore all available prop options to design an engaging and interactive puzzle. The puzzle should incorporate multiple inputs, encouraging diverse and meaningful problem-solving strategies.\n\nUsing basic props, students are challenged to create a puzzle that feels complex and enjoyable to solve, testing players' logic and creativity.\n\nAll students must: \u000b✔ Create an interactive puzzle using basic props\n\n✔ Use more than one input type (e.g. switch, trigger, door)\n\n✔ Ensure the puzzle can be completed logically by a player\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Combine multiple input types in one puzzle\n\n✔ Add an extra step or layer to increase challenge\n\n✔ Make the puzzle more engaging through player choice or timing\n\n✔ Design a complex puzzle with multiple prop interactions\n\n✔ Create layered logic that requires player reasoning\n\n✔ Refine the puzzle based on testing or feedback\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -2225,19 +2236,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. It breaks engine rules",
-          "C. It increases file size",
-          "D. It limits tools available",
-          "A. Developer guesses",
-          "B. AI-generated descriptions",
-          "C. Real player reviews and feedback",
-          "D. Random gameplay videos",
           "AI Literacy (OECD K1.4)",
-          "B. If the data represents the intended audience",
-          "D. If the reviews are positive",
-          "A. AI avoids opinions",
-          "B. AI prefers popular games",
-          "D. AI cannot read reviews",
           "Choose a platformer you are familiar with",
           "Game Sites",
           "Research Sites",
@@ -2248,14 +2247,13 @@
         ],
         "ai_focus": [
           "AI Literacy Focus: Bias, data limits & audience context (OECD K1.4)",
-          "AI Literacy (OECD K1.4)",
-          "D. AI cannot read reviews"
+          "AI Literacy (OECD K1.4)"
         ],
         "learning_objectives": [
           "How to complete market research on selected games",
           "Learn the basics of Market Research as an Entrepreneur"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Game readiness review",
         "activity_description": "Activity 1:  Complete Market Research on Two Platformer Games\n\nStudents will research and select two platformer games to research. Using their workbooks, they are to conduct thorough market research on TWO games. The findings should help them determine the type of game they aim to develop.\n\nEnsure all research notes are detailed and recorded in the workbook to guide your game creation process.\n\n✔ Create an interactive puzzle using basic props\n\n✔ Identify the target audience for each game\n\n✔ List main features in the workbook\n\n✔ Upload completed research notes to portfolio\n\n✔ Analyse player reviews or feedback\n\n✔ Identify patterns or trends in popularity\n\n✔ Discuss findings with peers\n\n✔ Analyse player reviews or feedback\n\n✔ Identify patterns or trends in popularity\n\n✔ Discuss findings with peers\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
         "assessment_signals": [
@@ -2267,7 +2265,11 @@
           "Identify the Target Audience: Who is this game targeted for?",
           "Gather Information About Popular Games: What makes this a popular game to play?",
           "Collect Feedback: What do your classmates think of the game?",
-          "Compile and Analyze Data: Look for mentioned features that you should consider further."
+          "Compile and Analyze Data: Look for mentioned features that you should consider further.",
+          "GD-05.1\nWhy is copying features from a popular game risky?",
+          "GD-05.2\nWhich source best helps understand player preferences?",
+          "AI-05.1\nAI summarises game reviews. What should students check first?",
+          "AI-05.2\nWhy might AI-generated market insights be incomplete?"
         ],
         "videos": [],
         "resources": [
@@ -2500,7 +2502,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.130895+00:00",
+      "generated_at": "2026-02-26T13:59:10.541993+00:00",
       "pipeline_version": "2.1",
       "week": 3,
       "big_question": "",
@@ -2508,9 +2510,27 @@
       "success_criteria": [
         "Efficiency in Resources: Prevents wasting time and resources by guiding your development with informed feedback.",
         "Collect Feedback: What do your classmates think of the game?",
-        "Compile and Analyze Data: Look for mentioned features that you should consider further."
+        "Compile and Analyze Data: Look for mentioned features that you should consider further.",
+        "All students must:",
+        "✔ Create an interactive puzzle using basic props",
+        "✔ Identify the target audience for each game",
+        "✔ List main features in the workbook",
+        "✔ Upload completed research notes to portfolio",
+        "Many students will:",
+        "✔ Analyse player reviews or feedback",
+        "✔ Identify patterns or trends in popularity",
+        "✔ Discuss findings with peers",
+        "Some students may:",
+        "✔ Analyse player reviews or feedback",
+        "✔ Identify patterns or trends in popularity",
+        "✔ Discuss findings with peers"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.4 (Using AI with traditional tools)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Complete Market Research on Two Platformer Games\n\nStudents will research and select two platformer games to research. Using their workbooks, they are to conduct thorough market research on TWO games. The findings should help them determine the type of game they aim to develop.\n\nEnsure all research notes are detailed and recorded in the workbook to guide your game creation process.\n\n✔ Create an interactive puzzle using basic props\n\n✔ Identify the target audience for each game\n\n✔ List main features in the workbook\n\n✔ Upload completed research notes to portfolio\n\n✔ Analyse player reviews or feedback\n\n✔ Identify patterns or trends in popularity\n\n✔ Discuss findings with peers\n\n✔ Analyse player reviews or feedback\n\n✔ Identify patterns or trends in popularity\n\n✔ Discuss findings with peers\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -2622,20 +2642,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. A game with simple visuals",
-          "A. It speeds up the engine through communication",
-          "B. It helps tasks be completed efficiently",
-          "C. It reduces creativity",
-          "D. It limits responsibility",
           "AI Literacy (OECD K1.3)",
-          "A. AI slows progress",
-          "B. AI removes creativity",
-          "C. Human values and trade-offs require judgement",
-          "D. AI cannot generate ideas that are unique",
-          "A. Generating rough ideas",
-          "B. Summarising feedback",
-          "C. Choosing what the team believes is meaningful",
-          "D. Listing possible features",
           "Testing"
         ],
         "endstar_tools": [
@@ -2644,8 +2651,7 @@
         "ai_focus": [
           "Would AI have helped here — or is this a human judgement call?",
           "AI Literacy Focus: Choosing when NOT to use AI (OECD K1.3)",
-          "AI Literacy (OECD K1.3)",
-          "D. AI cannot generate ideas that are unique"
+          "AI Literacy (OECD K1.3)"
         ],
         "learning_objectives": [
           "What is Product-Market Fit and Why is it Needed?",
@@ -2661,7 +2667,11 @@
           "Poor Engagement: The game lacked elements that resonated with UAE students,  such as familiar cultural stories or relatable settings. It felt disconnected and failed to capture their interest.",
           "No, they didn’t! But why didn’t they succeed?",
           "YOU cannot do this alone",
-          "Game studio members don't work alone; diverse skill sets are essential."
+          "Game studio members don't work alone; diverse skill sets are essential.",
+          "GD-06.1\nWhich situation best shows poor Product–Market Fit?",
+          "GD-06.2\nWhy is understanding your role in a team important?",
+          "AI-06.1\nWhy might a team choose not to use AI during a decision?",
+          "AI-06.2\nWhich decision is least appropriate to delegate fully to AI?"
         ],
         "videos": [],
         "resources": [],
@@ -2677,8 +2687,7 @@
           "assessment",
           "research",
           "AI",
-          "launch",
-          "polish"
+          "launch"
         ],
         "images": [
           {
@@ -2905,15 +2914,33 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.135182+00:00",
+      "generated_at": "2026-02-26T13:59:10.541993+00:00",
       "pipeline_version": "2.1",
       "week": 3,
       "big_question": "",
       "uae_link": "",
       "success_criteria": [
-        "No, they didn’t! But why didn’t they succeed?"
+        "No, they didn’t! But why didn’t they succeed?",
+        "All students must:",
+        "✔ Review one game and its target audience",
+        "✔ Decide whether the game meets basic market needs",
+        "✔ Record conclusions clearly in the workbook",
+        "✔ Identify their role within the team",
+        "Many students will:",
+        "✔ Explain why the game does or does not fit the market",
+        "✔ Suggest changes to improve product–market fit",
+        "✔ Contribute ideas during team discussion",
+        "Some students may:",
+        "✔ Propose clear improvements to better match player needs",
+        "✔ Link feedback to features, audience, and gameplay",
+        "✔ Take a leadership role in organising team direction"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Diverse Skill Sets: Just like in professional game studios, different talents (like programming, design, and storytelling) come together to create a richer and more complex game.\n\nEnhanced Creativity: Teams often generate more creative ideas than individuals alone, as collaboration fosters innovation and problem-solving.\n\nEfficiency: In the industry, tasks are divided among team members to speed up development and tackle complex projects effectively.\n\nPeer Review: Regular feedback within a team helps improve game quality, as different perspectives can spot issues and opportunities that one person might miss.\n\nResilience: Working in teams provides support and motivation, which is crucial during challenging phases of game development.\n\nActivity 1:  Market Matchmaker\n\nUsing the headings provided in your workbook, students will revisit the game they reviewed last lesson. They will apply these headings to determine whether the game matches the market's needs. Based on this evaluation, students can then draw conclusions on how they might adjust the game to better achieve market fit.\n\n✔ Review one game and its target audience\n\n✔ Decide whether the game meets basic market needs\n\n✔ Record conclusions clearly in the workbook\n\n✔ Identify their role within the team\n\n✔ Explain why the game does or does not fit the market\n\n✔ Suggest changes to improve product–market fit\n\n✔ Contribute ideas during team discussion\n\n✔ Propose clear improvements to better match player needs\n\n✔ Link feedback to features, audience, and gameplay\n\n✔ Take a leadership role in organising team direction\n\nWhich situation best shows poor Product–Market Fit?\n\nA. A game with simple visuals\n\nB. A game built slowly by a huge team\n\nC. A polished game that players do not enjoy\n\nD. A game made by a small team but built quickly\n\nWhy is understanding your role in a team important?\n\nA. It speeds up the engine through communication\n\nB. It helps tasks be completed efficiently\n\nD. It limits responsibility\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -3053,19 +3080,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. To finish the game faster",
-          "B. To choose the best engine settings",
-          "D. To make the game more complex",
-          "A. The developer’s personal preferences",
-          "B. The game’s file size",
-          "D. The number of features in the game",
           "AI Literacy (OECD K1.4)",
-          "A. AI prefers popular trends",
-          "C. AI misunderstands game engines",
-          "D. AI ignores user input",
-          "A. Using the first message AI generates",
-          "B. Letting AI decide the launch strategy",
-          "D. Avoiding human input to save time",
           "Let’s Discuss",
           "Sound"
         ],
@@ -3073,11 +3088,11 @@
         "ai_focus": [
           "AI Literacy Focus: Responsible use of AI in communication (OECD K1.4)",
           "AI Literacy (OECD K1.4)",
-          "Which action best demonstrates responsible AI use in marketing?",
-          "A. Using the first message AI generates"
+          "Which action best demonstrates responsible AI use in marketing?"
         ],
         "learning_objectives": [
           "Understanding Go-To-Market (GTM)",
+          "Making your",
           "Go-Market-Strategy"
         ],
         "activity_type": "Game readiness review",
@@ -3094,15 +3109,17 @@
           "What is involved in Go-To-Market?",
           "Example: Selling Pearls",
           "Imagine you are a pearl merchant in the sunny UAE. One day, while diving, you find something incredible—a seabed full of glowing pearls. These pearls shine brightly, like stars in the night sky. In your eyes, these are not ordinary pearls; they glow with a special light that no one has ever seen before.",
-          "Excited about your discovery, you decide to create a plan to sell these glowing pearls to people all around the world. This plan is called a Go-To-Market (GTM) strategy."
+          "Excited about your discovery, you decide to create a plan to sell these glowing pearls to people all around the world. This plan is called a Go-To-Market (GTM) strategy.",
+          "GD-07.1\nWhat is the primary goal of a Go-To-Market (GTM) strategy?",
+          "GD-07.2\nWhich element is most important when defining a target audience?",
+          "AI-07.1\nAI suggests a marketing message that sounds exciting but attracts the wrong audience. What does this show?",
+          "AI-07.2\nWhich action best demonstrates responsible AI use in marketing?"
         ],
         "videos": [],
         "resources": [],
         "keywords": [
           "sound",
           "audience",
-          "persona",
-          "UX",
           "player",
           "feedback",
           "portfolio",
@@ -3329,15 +3346,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.139185+00:00",
+      "generated_at": "2026-02-26T13:59:10.563322+00:00",
       "pipeline_version": "2.1",
       "week": 4,
       "big_question": "",
       "uae_link": "",
       "success_criteria": [
-        "Remember, a strong GTM strategy aligns your product with market needs and creates a clear path to reach your customers."
+        "Remember, a strong GTM strategy aligns your product with market needs and creates a clear path to reach your customers.",
+        "All students must:",
+        "✔ State whether the game meets the basic needs of its audience",
+        "✔ Give at least one reason for their decision",
+        "✔ Record feedback clearly in the workbook",
+        "Many students will:",
+        "✔ Give detailed feedback on the game’s key features",
+        "✔ Explain how features appeal to the target audience",
+        "✔ Suggest simple improvements",
+        "Some students may:",
+        "✔ Provide comprehensive feedback across multiple areas",
+        "✔ Evaluate audience fit, unique selling points, and player appeal",
+        "✔ Suggest specific strategies to improve market success"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.4 (Using AI with traditional tools)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "First, you identify who would want your pearls. Are they tourists looking for unique souvenirs, local jewelers wanting to create exclusive jewelry, or high-end collectors searching for rare pieces?\n\nDo you think tourists or local people would be more interested in buying your pearls? Explain why you think one group might prefer them more.\n\nHow would you sell your pearls differently to a local person compared to a tourist? Think about what each group might like or need.\n\nNext, you determine what makes your pearls special. Perhaps they have a unique color or shine that no other pearls have. You craft a story about why these pearls are valuable and how they can add beauty and elegance to any jewelry piece.\n\nCan you create a short story that makes your pearls seem special and unique? What details would you include to show how different your pearls are?\n\nWhat specific parts of your story would you emphasize to make your pearls stand out? Why are these parts important to your story?\n\nThen, you decide how to get your pearls to the customers. Will you sell them at a bustling market in Dubai, through an online store, or by partnering with luxury jewelry stores?\n\nBased on what you've learned about choosing the right customers, where do you think is the best place to sell your amazing pearls?\n\nWhy is this distribution channel the best choice for your pearls?\n\nFinally, you plan how to sell your pearls. Will you showcase them at local markets with a beautiful display, run advertisements online, or arrange exclusive previews for high-end clients?\n\nWhere do you think is the best place to sell your pearls, and why do you think this place would be perfect?\n\nWhat parts of your pearl’s story would you highlight to make them appealing to buy? Why are these important?\n\nStep 2 is designed to help you transition from developing your game to planning its launch. This task is straightforward but critical, as it requires you to align your Go-To-Market strategy with the theme and goals of your game.\n\nRemember, the theme of your game should shine through in your marketing efforts.\n\nActivity 1:  Making your team game’s GTM\n\nTogether, as a team, you need to start planning your game's launch. Your Go-To-Market strategy should be crafted in a way that aligns with your game’s theme and objectives.\n\nThink about who your ideal players are, what message will grab their attention, and how you can make the introduction of your game an exciting event that they won’t want to miss.\n\n✔ State whether the game meets the basic needs of its audience\n\n✔ Give at least one reason for their decision\n\n✔ Record feedback clearly in the workbook\n\n✔ Give detailed feedback on the game’s key features\n\n✔ Explain how features appeal to the target audience\n\n✔ Suggest simple improvements\n\n✔ Provide comprehensive feedback across multiple areas\n\n✔ Evaluate audience fit, unique selling points, and player appeal\n\n✔ Suggest specific strategies to improve market success\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -3465,19 +3499,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. It reduces development time",
-          "C. It improves graphics performance",
-          "D. It limits player feedback",
-          "A. Professional networking platforms",
-          "B. Academic forums",
-          "D. Internal testing tools",
           "AI Literacy (OECD K1.4)",
-          "A. Whether the platform is popular and ethical",
-          "B. Whether reach equals relevance for their audience",
-          "C. Whether the AI response is detailed",
-          "D. Whether competitors use it fairly",
-          "C. The game may lose features",
-          "D. The engine may crash",
           "Let’s Discuss"
         ],
         "endstar_tools": [],
@@ -3498,7 +3520,11 @@
           "Examples of Game Launch Marketing",
           "Game Launch Marketing are strategies and activities used to promote a game leading up to and during its release. This can include social media campaigns, trailers, influencer partnerships, and pre-release events, all aimed at generating buzz and attracting players.",
           "Activity 1:  Develop a Marketing Plan",
-          "Use the sample as a guide, but feel free to be creative and think outside the box to make your game stand out!"
+          "Use the sample as a guide, but feel free to be creative and think outside the box to make your game stand out!",
+          "GD-08.1\nWhy is choosing the right marketing channel important?",
+          "GD-08.2\nWhich channel choice best matches a game aimed at younger players?",
+          "AI-08.1\nAI recommends a marketing platform because it has the “largest reach.” What should students question first?",
+          "AI-08.2\nWhat risk exists when relying only on AI to select marketing channels?"
         ],
         "videos": [],
         "resources": [
@@ -3510,7 +3536,6 @@
           "testing",
           "feedback",
           "portfolio",
-          "collaboration",
           "assessment",
           "AI",
           "launch",
@@ -3732,7 +3757,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.143188+00:00",
+      "generated_at": "2026-02-26T13:59:10.565323+00:00",
       "pipeline_version": "2.1",
       "week": 4,
       "big_question": "",
@@ -3742,9 +3767,41 @@
         "Discussion Point: How do different channels target different segments of your audience?",
         "Examples of Game Launch Marketing",
         "Game Launch Marketing are strategies and activities used to promote a game leading up to and during its release. This can include social media campaigns, trailers, influencer partnerships, and pre-release events, all aimed at generating buzz and attracting players.",
-        "Use the sample as a guide, but feel free to be creative and think outside the box to make your game stand out!"
+        "All students must:",
+        "✔ Choose at least one marketing platform (e.g. Instagram, TikTok)",
+        "✔ Create one simple post or ad for the chosen platform",
+        "✔ Explain why this platform fits the game and target audience",
+        "✔ Upload post/ad design to portfolio",
+        "Many students will:",
+        "✔ Choose multiple platforms",
+        "✔ Create two posts or ads per platform",
+        "✔ Explain how each platform helps reach the target audience",
+        "✔ Show how posts improve game visibility",
+        "Some students may:",
+        "✔ Design an advanced channel strategy across platforms",
+        "✔ Use ideas such as influencers, targeted ads, or cross-posting",
+        "✔ Create highly creative and immersive promotional content",
+        "Use the sample as a guide, but feel free to be creative and think outside the box to make your game stand out!",
+        "All students must:",
+        "✔ Identify the game’s target audience",
+        "✔ Explain the core value of the game",
+        "✔ Choose at least one marketing channel",
+        "✔ Create a basic promotional idea",
+        "Many students will:",
+        "✔ Use multiple marketing channels",
+        "✔ Design clear promotional strategies for each channel",
+        "✔ Explain how these strategies increase visibility",
+        "Some students may:",
+        "✔ Create an advanced launch plan",
+        "✔ Include strategies such as influencers, events, or partnerships",
+        "✔ Design a coordinated campaign that maximises engagement"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.4 (Iterating prompts for accuracy)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Build a Channel Strategy\n\nStudents will choose one or more marketing channels (e.g., Instagram, TikTok, etc.) to promote their game. They will then design a sample post or advertisement for one of the selected channels.\n\nIn addition, students should be able to explain why they chose that particular channel and why this strategy would be the most effective for their game launch.\n\n✔ Choose at least one marketing platform (e.g. Instagram, TikTok)\n\n✔ Create one simple post or ad for the chosen platform\n\n✔ Explain why this platform fits the game and target audience\n\n✔ Upload post/ad design to portfolio\n\n✔ Choose multiple platforms\n\n✔ Create two posts or ads per platform\n\n✔ Explain how each platform helps reach the target audience\n\n✔ Show how posts improve game visibility\n\n✔ Design an advanced channel strategy across platforms\n\n✔ Use ideas such as influencers, targeted ads, or cross-posting\n\n✔ Create highly creative and immersive promotional content\n\nActivity 1:  Develop a Marketing Plan\n\nAs you’ve seen from the sample, a successful marketing plan requires a variety of key elements. Now, students must create a marketing plan for a different game, which could even be one of their own creations.\n\nUse the sample as a guide, but feel free to be creative and think outside the box to make your game stand out!\n\n✔ Identify the game’s target audience\n\n✔ Explain the core value of the game\n\n✔ Choose at least one marketing channel\n\n✔ Create a basic promotional idea\n\n✔ Use multiple marketing channels\n\n✔ Design clear promotional strategies for each channel\n\n✔ Explain how these strategies increase visibility\n\n✔ Create an advanced launch plan\n\n✔ Include strategies such as influencers, events, or partnerships\n\n✔ Design a coordinated campaign that maximises engagement\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -3869,20 +3926,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. It uses more dialogue",
-          "C. It must include cutscenes",
-          "D. It focuses only on visuals",
-          "A. It shortens development time",
-          "B. It helps players understand progression and purpose",
-          "C. It increases difficulty automatically",
-          "D. It limits creative freedom",
           "AI Literacy (OECD K1.3)",
-          "A. AI avoids creativity",
-          "C. AI misunderstands gameplay mechanics",
-          "D. AI cannot write stories",
-          "A. Replace their own ideas",
-          "B. Accept the most detailed suggestion",
-          "D. Use AI ideas without modification",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -3892,7 +3936,6 @@
         ],
         "ai_focus": [
           "AI Literacy (OECD K1.3)",
-          "D. AI cannot write stories",
           "What is the student’s role when using AI for story ideas?"
         ],
         "learning_objectives": [
@@ -3905,7 +3948,11 @@
         "assessment_signals": [
           "Develop your characters",
           "Make the adventure challenging and engaging",
-          "Become a Story-Teller"
+          "Become a Story-Teller",
+          "GD-09.1\nWhat distinguishes a game story from a book or film story?",
+          "GD-09.2\nWhy is a clear beginning, middle, and challenge important in a game narrative?",
+          "AI-09.1\nAI suggests a story idea that fits the genre but feels generic. What limitation does this reveal?",
+          "AI-09.2\nWhat is the student’s role when using AI for story ideas?"
         ],
         "videos": [],
         "resources": [
@@ -3916,7 +3963,6 @@
           "audience",
           "player",
           "brainstorming",
-          "storyboard",
           "gameplay",
           "feedback",
           "portfolio",
@@ -4272,19 +4318,50 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.146898+00:00",
+      "generated_at": "2026-02-26T13:59:10.575537+00:00",
       "pipeline_version": "2.1",
       "week": 5,
       "big_question": "",
       "uae_link": "",
       "success_criteria": [
+        "All students must:",
+        "✔ Create a basic outline of the game’s story",
+        "✔ Identify a hero, a goal, and a world setting",
+        "✔ Include at least one key challenge the hero faces",
+        "✔ Record the outline in the workbook]",
+        "Many students will:",
+        "✔ Include multiple challenges",
+        "✔ Add detailed descriptions of the world",
+        "✔ Explain how the hero progresses through the story",
+        "Some students may:",
+        "✔ Develop a complex storyline with a clear narrative arc",
+        "✔ Create well-defined characters with motivations",
+        "✔ Design creative solutions to challenges that deepen engagement",
         "Define your theme",
         "Develop your characters",
         "Plan player choices",
         "Make the adventure challenging and engaging",
-        "Become a Story-Teller"
+        "Become a Story-Teller",
+        "All students must:",
+        "✔ Create a comic strip showing the basic storyline of the game",
+        "✔ Include at least one key scene or challenge",
+        "✔ Show a clear beginning and problem",
+        "✔ Upload comic strip to portfolio",
+        "Many students will:",
+        "✔ Include multiple scenes and challenges",
+        "✔ Add dialogue or descriptions to explain events",
+        "✔ Show how the story progresses between scenes",
+        "Some students may:",
+        "✔ Create a detailed comic strip with varied scenes",
+        "✔ Show character development and story progression",
+        "✔ Present a clear narrative arc that engages the player"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Evaluating AI outputs)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Plan your Story\n\nCreating an effective storyline for your game is essential. In this activity, you’ll collaborate as a team to plan and creatively communicate your storyline. You can do this using Mural or physical sticky notes, whichever works best for your group.\n\n✔ Create a basic outline of the game’s story\n\n✔ Identify a hero, a goal, and a world setting\n\n✔ Include at least one key challenge the hero faces\n\n✔ Record the outline in the workbook]\n\n✔ Include multiple challenges\n\n✔ Add detailed descriptions of the world\n\n✔ Explain how the hero progresses through the story\n\n✔ Develop a complex storyline with a clear narrative arc\n\n✔ Create well-defined characters with motivations\n\n✔ Design creative solutions to challenges that deepen engagement\n\nActivity 2:  Create Your Game as a Comic\n\nUse the student workbook to draw key scenes and challenges from your game in a comic strip format. Add dialogues and short descriptions to each scene to bring your story to life. This activity will help you clearly outline your game’s progression and share your creative vision.\n\n✔ Create a comic strip showing the basic storyline of the game\n\n✔ Include at least one key scene or challenge\n\n✔ Show a clear beginning and problem\n\n✔ Upload comic strip to portfolio\n\n✔ Include multiple scenes and challenges\n\n✔ Add dialogue or descriptions to explain events\n\n✔ Show how the story progresses between scenes\n\n✔ Create a detailed comic strip with varied scenes\n\n✔ Show character development and story progression\n\n✔ Present a clear narrative arc that engages the player\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -4418,20 +4495,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. To make the game longer",
-          "B. To repeat actions without change",
-          "D. To reduce player choice",
-          "A. Action with no reward",
-          "B. Reward with no challenge",
-          "C. Action followed by reward and increasing challenge",
-          "D. Random actions without feedback",
           "AI Literacy (OECD K1.1)",
-          "A. AI cannot follow instructions",
-          "C. AI avoids repetition",
-          "D. AI cannot generate diagrams",
-          "A. Implement it exactly",
-          "C. Replace it with another AI idea",
-          "D. Ignore feedback",
           "Open Endstar",
           "Create your Gameplay Loop",
           "Time to Try",
@@ -4439,9 +4503,7 @@
         ],
         "endstar_tools": [],
         "ai_focus": [
-          "AI Literacy (OECD K1.1)",
-          "A. AI cannot follow instructions",
-          "D. AI cannot generate diagrams"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
           "Create a gameplay loop for your game idea",
@@ -4450,7 +4512,12 @@
         "activity_type": "Game expansion and polish",
         "activity_description": "Use AI to explore what makes a core gameplay loop engaging, defining its parts, crafting a loop for your theme, and adding a risk–reward twist.\n\nWhich part of your loop, action, reward, or progression, do you think players will love most, and why?\n\nHow did the risk–reward twist change the feel or challenge of your loop?\n\nIf you wanted players to feel curiosity or surprise, what extra tweak would you add to your loop?\n\n“In two sentences, explain what a core gameplay loop is in a platformer and why it matters.”\n\n“For our [theme] platformer, design a simple three-step loop with action, reward, and progression.”\n\n“Suggest one twist to add risk–reward tension to that loop.”\n\nStudents will prompt Ana to explain gameplay loops, design a three-step loop for their chosen theme, and refine it with a tension-building twist, then sketch and share their final loops.\n\nActivity 1:  Lets Create a Gameplay Loop\n\nBuilding on their game idea from the previous session, students will use PowerPoint or paper to create a gameplay loop that emphasizes the four main points.\n\nAction - What is the player doing?\n\nReward - What reward do they receive?\n\nExpansion - How does the game change?\n\n6-11 Framework - What emotion and instincts are you basing it on?\n\n✔ Create a gameplay loop diagram or presentation\n\n✔ Show player action, reward, and expansion\n\n✔ Identify emotions and instincts using the 6–11 Framework\n\n✔ Upload diagram or slides to portfolio\n\n✔ Include multiple actions, rewards, and expansions\n\n✔ Describe emotions and instincts in more detail\n\n✔ Explain how the loop keeps players engaged\n\n✔ Design advanced gameplay loops with varied outcomes\n\n✔ Link emotions and instincts clearly to player behaviour\n\n✔ Present a creative and well-structured gameplay system\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-10.1\nWhat is the main purpose of a gameplay loop?",
+          "GD-10.2\nWhich loop is most likely to keep players engaged?",
+          "AI-10.1\nWhy might AI struggle to design an engaging gameplay loop on its own?",
+          "AI-10.2\nWhat should students do after receiving an AI-generated gameplay loop idea?"
+        ],
         "videos": [],
         "resources": [],
         "keywords": [
@@ -5036,13 +5103,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.151521+00:00",
+      "generated_at": "2026-02-26T13:59:10.577539+00:00",
       "pipeline_version": "2.1",
       "week": 5,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Create a gameplay loop diagram or presentation",
+        "✔ Show player action, reward, and expansion",
+        "✔ Identify emotions and instincts using the 6–11 Framework",
+        "✔ Upload diagram or slides to portfolio",
+        "Many students will:",
+        "✔ Include multiple actions, rewards, and expansions",
+        "✔ Describe emotions and instincts in more detail",
+        "✔ Explain how the loop keeps players engaged",
+        "Some students may:",
+        "✔ Design advanced gameplay loops with varied outcomes",
+        "✔ Link emotions and instincts clearly to player behaviour",
+        "✔ Present a creative and well-structured gameplay system"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Analysing reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Use AI to explore what makes a core gameplay loop engaging, defining its parts, crafting a loop for your theme, and adding a risk–reward twist.\n\nWhich part of your loop, action, reward, or progression, do you think players will love most, and why?\n\nHow did the risk–reward twist change the feel or challenge of your loop?\n\nIf you wanted players to feel curiosity or surprise, what extra tweak would you add to your loop?\n\n“In two sentences, explain what a core gameplay loop is in a platformer and why it matters.”\n\n“For our [theme] platformer, design a simple three-step loop with action, reward, and progression.”\n\n“Suggest one twist to add risk–reward tension to that loop.”\n\nStudents will prompt Ana to explain gameplay loops, design a three-step loop for their chosen theme, and refine it with a tension-building twist, then sketch and share their final loops.\n\nActivity 1:  Lets Create a Gameplay Loop\n\nBuilding on their game idea from the previous session, students will use PowerPoint or paper to create a gameplay loop that emphasizes the four main points.\n\nAction - What is the player doing?\n\nReward - What reward do they receive?\n\nExpansion - How does the game change?\n\n6-11 Framework - What emotion and instincts are you basing it on?\n\n✔ Create a gameplay loop diagram or presentation\n\n✔ Show player action, reward, and expansion\n\n✔ Identify emotions and instincts using the 6–11 Framework\n\n✔ Upload diagram or slides to portfolio\n\n✔ Include multiple actions, rewards, and expansions\n\n✔ Describe emotions and instincts in more detail\n\n✔ Explain how the loop keeps players engaged\n\n✔ Design advanced gameplay loops with varied outcomes\n\n✔ Link emotions and instincts clearly to player behaviour\n\n✔ Present a creative and well-structured gameplay system\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -5173,21 +5259,7 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. High-resolution graphics",
-          "B. Characters, world, and conflict",
-          "C. Complex controls",
-          "D. Multiple endings",
-          "A. Gameplay is faster to design",
-          "B. Players experience story through interaction",
-          "C. Narratives reduce difficulty",
-          "D. AI performs better with stories",
           "AI Literacy (OECD K1.3)",
-          "B. AI removes technical accuracy",
-          "C. Narrative meaning and emotion require human judgement",
-          "A. Generating placeholder ideas",
-          "B. Summarising character traits",
-          "C. Deciding emotional tone and message",
-          "D. Listing possible story events",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -5199,18 +5271,21 @@
           "AI Literacy Focus: Human creativity & authorship (OECD K1.3)",
           "AI Literacy (OECD K1.3)",
           "Why might teams choose not to use AI for narrative decisions?",
-          "C. Narrative meaning and emotion require human judgement",
-          "D. AI cannot generate text in local languages such as arabic",
           "Which task is most appropriate for humans rather than AI in narrative design?"
         ],
         "learning_objectives": [
           "Create a gameplay loop for YOUR game idea?",
           "What is a Game Narrative?"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Persona and empathy mapping",
         "activity_description": "Activity 1:  Creating a Game Narrative\n\nBased on your game idea, it's time to develop a full narrative for a platformer-style game. Keep everything you’ve learned in mind as you craft your story.\n\nUse Mural to plan out all key elements, including your character’s backstory, game world, conflict, choices, consequences, and narrative progression.\n\nUse AI to turn your gameplay loop into a compelling one-sentence story hook and add a memorable twist.\n\nWhich team’s hook made you most curious to play, and what grabbed your attention?\n\nHow did the added twist change the feel or tone of the story hook?\n\nIf you could tweak one word or image in your hook to match your game’s style, what would you pick?\n\n“Using this loop, [action] → [reward] → [progression], write a one-sentence story hook.”\n\n“Suggest one surprising character or setting detail to make that hook more memorable.”\n\n“Combine the hook and twist into a single, exciting sentence.”\n\nStudents will prompt AI to craft a story hook from their loop, generate a surprising detail, and share the combined hook to see which concept most excites the class.\n\n✔ Create a basic narrative outline\n\n✔ Include main character backstory, game world, and conflict\n\n✔ Show how the story begins\n\n✔ Add choices and consequences to the narrative\n\n✔ Explain how decisions affect the story\n\n✔ Show progression through the game world\n\n✔ Design a complex narrative with layered conflicts\n\n✔ Include strategic choices that change the storyline\n\n✔ Show how every decision impacts gameplay progression\n\nWhy might teams choose not to use AI for narrative decisions?\n\nA. AI takes time to generate the users requests and can slow the creative process\n\nB. AI removes technical accuracy\n\nC. Narrative meaning and emotion require human judgement\n\nD. AI cannot generate text in local languages such as arabic\n\nWhich task is most appropriate for humans rather than AI in narrative design?\n\nA. Generating placeholder ideas\n\nB. Summarising character traits\n\nC. Deciding emotional tone and message\n\nD. Listing possible story events\n\nOECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-11.1\nWhich element is essential for a strong game narrative?",
+          "GD-11.2\nWhy must the narrative support gameplay rather than replace it?",
+          "AI-11.1\nWhy might teams choose not to use AI for narrative decisions?",
+          "AI-11.2\nWhich task is most appropriate for humans rather than AI in narrative design?"
+        ],
         "videos": [],
         "resources": [
           "HERE - https://www.mural.co"
@@ -5218,7 +5293,6 @@
         "keywords": [
           "portfolio",
           "evidence",
-          "persona",
           "player",
           "gameplay",
           "level design",
@@ -5551,13 +5625,31 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.155524+00:00",
+      "generated_at": "2026-02-26T13:59:10.589381+00:00",
       "pipeline_version": "2.1",
       "week": 6,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Create a basic narrative outline",
+        "✔ Include main character backstory, game world, and conflict",
+        "✔ Show how the story begins",
+        "Many students will:",
+        "✔ Add choices and consequences to the narrative",
+        "✔ Explain how decisions affect the story",
+        "✔ Show progression through the game world",
+        "Some students may:",
+        "✔ Design a complex narrative with layered conflicts",
+        "✔ Include strategic choices that change the storyline",
+        "✔ Show how every decision impacts gameplay progression"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Creating a Game Narrative\n\nBased on your game idea, it's time to develop a full narrative for a platformer-style game. Keep everything you’ve learned in mind as you craft your story.\n\nUse Mural to plan out all key elements, including your character’s backstory, game world, conflict, choices, consequences, and narrative progression.\n\nUse AI to turn your gameplay loop into a compelling one-sentence story hook and add a memorable twist.\n\nWhich team’s hook made you most curious to play, and what grabbed your attention?\n\nHow did the added twist change the feel or tone of the story hook?\n\nIf you could tweak one word or image in your hook to match your game’s style, what would you pick?\n\n“Using this loop, [action] → [reward] → [progression], write a one-sentence story hook.”\n\n“Suggest one surprising character or setting detail to make that hook more memorable.”\n\n“Combine the hook and twist into a single, exciting sentence.”\n\nStudents will prompt AI to craft a story hook from their loop, generate a surprising detail, and share the combined hook to see which concept most excites the class.\n\n✔ Create a basic narrative outline\n\n✔ Include main character backstory, game world, and conflict\n\n✔ Show how the story begins\n\n✔ Add choices and consequences to the narrative\n\n✔ Explain how decisions affect the story\n\n✔ Show progression through the game world\n\n✔ Design a complex narrative with layered conflicts\n\n✔ Include strategic choices that change the storyline\n\n✔ Show how every decision impacts gameplay progression\n\nWhy might teams choose not to use AI for narrative decisions?\n\nA. AI takes time to generate the users requests and can slow the creative process\n\nB. AI removes technical accuracy\n\nC. Narrative meaning and emotion require human judgement\n\nD. AI cannot generate text in local languages such as arabic\n\nWhich task is most appropriate for humans rather than AI in narrative design?\n\nA. Generating placeholder ideas\n\nB. Summarising character traits\n\nC. Deciding emotional tone and message\n\nD. Listing possible story events\n\nOECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -5694,20 +5786,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. It improves rendering speed",
-          "C. It reduces file size",
-          "D. It limits creativity",
-          "A. Random placement of obstacles",
-          "B. Visual cues and planned pathways",
-          "C. Maximum enemy density",
-          "D. Uniform level sections",
           "AI Literacy (OECD K1.1)",
-          "A. AI cannot draw maps",
-          "C. AI avoids creativity",
-          "D. AI prefers finished designs",
-          "A. Asking AI to optimise layouts",
-          "B. Copying layouts from other games",
-          "D. Avoiding iteration",
           "Open Endstar",
           "Time to Try",
           "Let’s Discuss",
@@ -5719,8 +5798,7 @@
         "ai_focus": [
           "“Responsible AI means designing technology that is fair, transparent, and respects the needs of all its users.”",
           "Ask AI - Responsible AI Design",
-          "AI Literacy (OECD K1.1)",
-          "A. AI cannot draw maps"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
           "Create a Level Layout for your Game",
@@ -5729,7 +5807,12 @@
         "activity_type": "Iteration and refinement",
         "activity_description": "Use AI to draft and refine a detailed level concept, defining routes, obstacles, and landmarks, to build clear, engaging platformer layouts.\n\nWhich route or landmark best helps players know where to go next, and why?\n\nHow well does the balance of combat arenas and puzzle rooms suit your theme?\n\nWhat one tweak would improve flow or challenge, and how would you ask AI to make that change?\n\n“Create a [theme] platformer level: define PlayerStartEnd, MainRoute, OptionRoute, choke points, combat arenas, and puzzle rooms.”\n\n“Add a hidden shortcut between the second and third combat arenas and move the first checkpoint to just after the first puzzle.”\n\n“Suggest a memorable landmark at the level’s midpoint to help players orient themselves.\n\nStudents will prompt AI to generate a full level blueprint, identify start/end points, main and optional routes, checkpoints, and obstacles, then refine their design with targeted AI tweaks.\n\nActivity 1:  Create a Simple Level Layout\n\nStudents will sketch a top-down or side view map of a level, highlighting key points. These points should be clearly marked and accompanied by notes explaining them.\n\nStart and End Point - Gameplay Loop\n\nAdd Obstacles and Reward with Annotations\n\n✔ Create a top-down or side-view map\n\n✔ Mark start point, end point, and one pathway\n\n✔ Design multiple paths with obstacles or rewards\n\n✔ Add annotations explaining key elements\n\n✔ Show how players move through the level\n\n✔ Create a complex map with strategic routes\n\n✔ Design challenges that affect player decisions\n\n✔ Use detailed annotations to improve gameplay flow\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-12.1\nWhy is sketching a level layout before building important?",
+          "GD-12.2\nWhich layout choice best supports clear player navigation?",
+          "AI-12.1\nWhy is AI less useful during early level layout planning?",
+          "AI-12.2\nWhat best demonstrates confidence without AI reliance in Lesson 12?"
+        ],
         "videos": [],
         "resources": [],
         "keywords": [
@@ -6266,13 +6349,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.160263+00:00",
+      "generated_at": "2026-02-26T13:59:10.595292+00:00",
       "pipeline_version": "2.1",
       "week": 6,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Create a top-down or side-view map",
+        "✔ Mark start point, end point, and one pathway",
+        "✔ Label key areas clearly",
+        "✔ Upload map to portfolio",
+        "Many students will:",
+        "✔ Design multiple paths with obstacles or rewards",
+        "✔ Add annotations explaining key elements",
+        "✔ Show how players move through the level",
+        "Some students may:",
+        "✔ Create a complex map with strategic routes",
+        "✔ Design challenges that affect player decisions",
+        "✔ Use detailed annotations to improve gameplay flow"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Choosing when NOT to use AI)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Use AI to draft and refine a detailed level concept, defining routes, obstacles, and landmarks, to build clear, engaging platformer layouts.\n\nWhich route or landmark best helps players know where to go next, and why?\n\nHow well does the balance of combat arenas and puzzle rooms suit your theme?\n\nWhat one tweak would improve flow or challenge, and how would you ask AI to make that change?\n\n“Create a [theme] platformer level: define PlayerStartEnd, MainRoute, OptionRoute, choke points, combat arenas, and puzzle rooms.”\n\n“Add a hidden shortcut between the second and third combat arenas and move the first checkpoint to just after the first puzzle.”\n\n“Suggest a memorable landmark at the level’s midpoint to help players orient themselves.\n\nStudents will prompt AI to generate a full level blueprint, identify start/end points, main and optional routes, checkpoints, and obstacles, then refine their design with targeted AI tweaks.\n\nActivity 1:  Create a Simple Level Layout\n\nStudents will sketch a top-down or side view map of a level, highlighting key points. These points should be clearly marked and accompanied by notes explaining them.\n\nStart and End Point - Gameplay Loop\n\nAdd Obstacles and Reward with Annotations\n\n✔ Create a top-down or side-view map\n\n✔ Mark start point, end point, and one pathway\n\n✔ Design multiple paths with obstacles or rewards\n\n✔ Add annotations explaining key elements\n\n✔ Show how players move through the level\n\n✔ Create a complex map with strategic routes\n\n✔ Design challenges that affect player decisions\n\n✔ Use detailed annotations to improve gameplay flow\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -6405,22 +6507,7 @@
           "What you built + how you used AI",
           "AI as an Assistant",
           "Assessment For Learning",
-          "A. To increase visual detail",
-          "B. To improve performance",
-          "C. To influence player mood and behaviour",
-          "D. To make levels easier",
-          "A. Soft blues and greens",
-          "B. Neutral greys and beige",
-          "C. Dark reds and high-contrast shadows",
-          "D. Pastel colours",
           "AI Literacy (OECD K1.3)",
-          "A. AI prefers brighter colours",
-          "B. AI optimises for appearance, not emotional intent",
-          "C. AI misunderstands colour theory rules",
-          "D. AI cannot generate palettes",
-          "A. Use the suggested palette exactly",
-          "B. Choose the most complex option",
-          "D. Avoid colour changes",
           "Open Endstar",
           "Time to Try"
         ],
@@ -6429,17 +6516,21 @@
         ],
         "ai_focus": [
           "AI Literacy (OECD K1.3)",
-          "D. AI cannot generate palettes",
           "What is the student’s responsibility when using AI for colour inspiration?"
         ],
         "learning_objectives": [
           "Create a Colorful Environment",
           "The Basics of Color Theory"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Game expansion and polish",
         "activity_description": "Activity:  Create an Environment of Color\n\nLike an art project, games are designed to immerse players in their environment. Is your world warm and welcoming, or cold and tranquil? Students must open Endstar and use the tools to design a small part of their level, applying the principles of color theory.\n\nUse AI to learn core color theory concepts and see how they apply to game design, mood setting, and player guidance.\n\nWhich AI-taught concept, complementary vs. analogous palettes, mood palettes, or the quiz format, helped you understand color theory best, and why?\n\nIf you could tweak AI’s explanation style, what would you ask for to make it even clearer?\n\n“Explain how complementary and analogous colors work to guide player attention in a game level.”\n\n“Suggest two color palettes (with hex codes) for a spooky forest and explain why they set the mood.”\n\n“Quiz me on color theory with three multiple-choice questions about primary, secondary, and tertiary colors.”\n\nStudents will run one of their own color-theory prompts with AI, take notes on definitions or examples she provides, and then share which explanation style helped them most.\n\n✔ Design a basic environment using tileset colors, scenery, and props\n\n✔ Apply basic color theory principles\n\n✔ Create a clear visual concept\n\n✔ Upload environment screenshot to portfolio\n\n✔ Use varied colors, scenery, and props\n\n✔ Apply color theory to show mood or emotion\n\n✔ Explain how color affects the player experience\n\n✔ Design a visually cohesive and immersive environment\n\n✔ Use contrast and color strategically\n\n✔ Enhance atmosphere through advanced visual choices\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-13.1\nWhat is the primary purpose of using colour intentionally in a game environment?",
+          "GD-13.2\nWhich colour choice is most likely to create tension or danger in a level?",
+          "AI-13.1\nAI suggests a colour palette that looks attractive but does not match the game’s mood. What does this show?",
+          "AI-13.2\nWhat is the student’s responsibility when using AI for colour inspiration?"
+        ],
         "videos": [],
         "resources": [
           "https://forms.gle/ihCECsXvADJqfB6x6"
@@ -6449,12 +6540,10 @@
           "feedback",
           "portfolio",
           "assessment",
-          "presentation",
           "AI",
           "endstar",
           "game design",
-          "color theory",
-          "moodboard"
+          "color theory"
         ],
         "images": [
           {
@@ -6900,13 +6989,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.163001+00:00",
+      "generated_at": "2026-02-26T13:59:10.603034+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Design a basic environment using tileset colors, scenery, and props",
+        "✔ Apply basic color theory principles",
+        "✔ Create a clear visual concept",
+        "✔ Upload environment screenshot to portfolio",
+        "Many students will:",
+        "✔ Use varied colors, scenery, and props",
+        "✔ Apply color theory to show mood or emotion",
+        "✔ Explain how color affects the player experience",
+        "Some students may:",
+        "✔ Design a visually cohesive and immersive environment",
+        "✔ Use contrast and color strategically",
+        "✔ Enhance atmosphere through advanced visual choices"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Evaluating AI outputs)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity:  Create an Environment of Color\n\nLike an art project, games are designed to immerse players in their environment. Is your world warm and welcoming, or cold and tranquil? Students must open Endstar and use the tools to design a small part of their level, applying the principles of color theory.\n\nUse AI to learn core color theory concepts and see how they apply to game design, mood setting, and player guidance.\n\nWhich AI-taught concept, complementary vs. analogous palettes, mood palettes, or the quiz format, helped you understand color theory best, and why?\n\nIf you could tweak AI’s explanation style, what would you ask for to make it even clearer?\n\n“Explain how complementary and analogous colors work to guide player attention in a game level.”\n\n“Suggest two color palettes (with hex codes) for a spooky forest and explain why they set the mood.”\n\n“Quiz me on color theory with three multiple-choice questions about primary, secondary, and tertiary colors.”\n\nStudents will run one of their own color-theory prompts with AI, take notes on definitions or examples she provides, and then share which explanation style helped them most.\n\n✔ Design a basic environment using tileset colors, scenery, and props\n\n✔ Apply basic color theory principles\n\n✔ Create a clear visual concept\n\n✔ Upload environment screenshot to portfolio\n\n✔ Use varied colors, scenery, and props\n\n✔ Apply color theory to show mood or emotion\n\n✔ Explain how color affects the player experience\n\n✔ Design a visually cohesive and immersive environment\n\n✔ Use contrast and color strategically\n\n✔ Enhance atmosphere through advanced visual choices\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -7071,22 +7179,7 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. To finalise game mechanics",
-          "B. To collect inspiration and define visual direction",
-          "C. To reduce development time",
-          "D. To replace level sketches",
-          "A. Finished code",
-          "B. Engine settings",
-          "C. Images, colours, and visual references",
-          "D. Player scores",
           "AI Literacy (OECD K1.4)",
-          "A. The game may load slowly",
-          "B. The design may feel unoriginal or copied",
-          "C. The engine may not support visuals",
-          "D. The AI response may be short",
-          "A. Copying AI images directly",
-          "B. Using AI to replace research",
-          "D. Letting AI define the final style",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -7106,7 +7199,12 @@
         "activity_type": "Iteration and refinement",
         "activity_description": "Activity:  Let’s Create YOUR Mood Board\n\nNow that you’ve learned more about mood boards, your team’s task is to create one that will inspire the design of your game. Endstar should be open as you create.You can focus on the following elements:\n\nOther Similar Games - What games inspire your design choices\n\nColor Palette - What types of colors do you plan to use?\n\nCharacters - What visuals have inspired your character design?\n\nScenery - Share images that represent the scenery and environment you envision for your game world.\n\nCompare human vs. AI feedback on your moodboard to see how each perspective can help you refine your game’s visual vision.\n\nWhich piece of feedback, peer or AI, do you think will help your moodboard most, and why?\n\nWhat AI suggestion surprised you, and how could you use it?\n\nHow will you combine both sets of comments into one clear improvement before moving on?\n\n“Here’s my moodboard description for a [theme] platformer: [paste description]. Give me three strengths and two improvement suggestions.”\n\n“Which of my peer’s feedback points match your suggestions, and where do you offer something new?”\n\n“What one extra change would you make to tie my moodboard more closely to my game’s theme?”\n\nStudents will collect peer strengths/suggestions, prompt AI for her own three strengths and two improvements, then spot where feedback overlaps or differs and plan one combined revision.\n\n✔ Include images from similar games\n\n✔ Add a color palette, character, and scenery inspiration\n\n✔ Upload moodboard to portfolio\n\n✔ Create a detailed moodboard with clear design direction\n\n✔ Explain why colors, characters, and scenery were chosen\n\n✔ Show how the moodboard supports the game theme\n\n✔ Design a cohesive and advanced moodboard\n\n✔ Use color theory to strengthen visual identity\n\n✔ Clearly link inspirations to game design decisions\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-14.1\nWhat is the main purpose of a moodboard in game design?",
+          "GD-14.2\nWhich item best belongs on a game moodboard?",
+          "AI-14.1\nAI generates visual inspiration similar to existing games. What risk does this create?",
+          "AI-14.2\nWhich action best demonstrates responsible AI use when creating a moodboard?"
+        ],
         "videos": [],
         "resources": [],
         "keywords": [
@@ -7472,13 +7570,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.163001+00:00",
+      "generated_at": "2026-02-26T13:59:10.609037+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Create a moodboard",
+        "✔ Include images from similar games",
+        "✔ Add a color palette, character, and scenery inspiration",
+        "✔ Upload moodboard to portfolio",
+        "Many students will:",
+        "✔ Create a detailed moodboard with clear design direction",
+        "✔ Explain why colors, characters, and scenery were chosen",
+        "✔ Show how the moodboard supports the game theme",
+        "Some students may:",
+        "✔ Design a cohesive and advanced moodboard",
+        "✔ Use color theory to strengthen visual identity",
+        "✔ Clearly link inspirations to game design decisions"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.4 (Using AI with traditional tools)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity:  Let’s Create YOUR Mood Board\n\nNow that you’ve learned more about mood boards, your team’s task is to create one that will inspire the design of your game. Endstar should be open as you create.You can focus on the following elements:\n\nOther Similar Games - What games inspire your design choices\n\nColor Palette - What types of colors do you plan to use?\n\nCharacters - What visuals have inspired your character design?\n\nScenery - Share images that represent the scenery and environment you envision for your game world.\n\nCompare human vs. AI feedback on your moodboard to see how each perspective can help you refine your game’s visual vision.\n\nWhich piece of feedback, peer or AI, do you think will help your moodboard most, and why?\n\nWhat AI suggestion surprised you, and how could you use it?\n\nHow will you combine both sets of comments into one clear improvement before moving on?\n\n“Here’s my moodboard description for a [theme] platformer: [paste description]. Give me three strengths and two improvement suggestions.”\n\n“Which of my peer’s feedback points match your suggestions, and where do you offer something new?”\n\n“What one extra change would you make to tie my moodboard more closely to my game’s theme?”\n\nStudents will collect peer strengths/suggestions, prompt AI for her own three strengths and two improvements, then spot where feedback overlaps or differs and plan one combined revision.\n\n✔ Include images from similar games\n\n✔ Add a color palette, character, and scenery inspiration\n\n✔ Upload moodboard to portfolio\n\n✔ Create a detailed moodboard with clear design direction\n\n✔ Explain why colors, characters, and scenery were chosen\n\n✔ Show how the moodboard supports the game theme\n\n✔ Design a cohesive and advanced moodboard\n\n✔ Use color theory to strengthen visual identity\n\n✔ Clearly link inspirations to game design decisions\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -7598,20 +7715,7 @@
           "Basic Rule-Block Setup",
           "Assessment For Learning",
           "Game Development",
-          "A. Visual style",
-          "B. Player input only",
-          "C. Game logic and behaviour based on conditions",
-          "D. File storage like creating variables",
-          "A. They affect graphics quality",
-          "C. They increase game length",
-          "D. They reduce testing needs",
           "AI Literacy (OECD K1.1)",
-          "B. AI cannot understand cause-and-effect in gameplay systems",
-          "C. AI avoids logic problems and can hallucinate",
-          "D. AI prefers simple games",
-          "A. Letting AI design the entire system",
-          "B. Using AI to simulate quality assurance testing",
-          "D. Avoiding human input",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -7624,20 +7728,23 @@
           "Rule Blocks"
         ],
         "ai_focus": [
-          "AI Literacy (OECD K1.1)",
-          "B. AI cannot understand cause-and-effect in gameplay systems",
-          "C. Using AI for ideas, then testing and refining logic manually"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
+          "Basics of Lua",
           "How to use Lua in Endstar"
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Persona and empathy mapping",
         "activity_description": "Use AI to demystify Lua—what it is, where it’s used, and why game developers choose it over other languages.\n\nWhich Lua fact from AI surprised you the most, and why?\n\nHow do Lua’s features—like being lightweight or embeddable—help make games better?\n\nIf you were making a game mod, would you choose Lua or another language, why?\n\n“Explain what Lua is in three simple sentences for someone who’s never coded before.”\n\n“List five popular games or apps that use Lua for scripting and give one reason each chose it.”\n\n“Compare Lua to Python and JavaScript: why might a game developer pick Lua instead?”\n\nStudents will prompt AI to:\n\nExplain Lua in simple terms\n\nIdentify real-world uses in games/apps\n\nCompare its strengths to other scripting languages\n\nActivity 1:  Basic Rule-Block Setup\n\nToday’s activity is a basic setup using a rule-block. Students will watch the attached video, then recreate the wiring and connections. More advanced students are encouraged to design a more complex system using additional rule-blocks.\n\nFor those interested in diving deeper into this coding language, a free course is available below:\n\nCodeacademy Lua Course HERE\n\nAll students must: Review the video guidance and accurately recreate the wired system, utilizing the same rule-blocks and props, ensuring all connections function as demonstrated.\n\nMany students will: Modify the wired system by integrating at least one additional rule-block, enhancing the complexity while ensuring the system still functions correctly.\n\nSome students may: Design and implement a more advanced system that incorporates two or more rule-blocks and additional props, showcasing layered functionality and interconnected components to create a dynamic and versatile setup.\n\n✔ Watch the video guidance\n\n✔ Recreate the wired system using the same rule-blocks and props\n\n✔ Ensure all connections function correctly\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Add at least one additional rule-block\n\n✔ Modify the system while keeping it functional\n\n✔ Explain what the added rule-block does\n\n✔ Design a more advanced system using two or more rule-blocks\n\n✔ Integrate additional props to create layered functionality\n\n✔ Build a dynamic system with interconnected components\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
         "assessment_signals": [
           "Basic Rule-Block Setup",
           "Understand the wiring process for rule-blocks.",
-          "Demonstrate a basic wiring setup."
+          "Demonstrate a basic wiring setup.",
+          "GD-15.1\nWhat does a rule block system primarily control in a game?",
+          "GD-15.2\nWhy can small changes in rule logic have a big impact on gameplay?",
+          "AI-15.1\nWhy should students be cautious when using AI to suggest rule logic?",
+          "AI-15.2\nWhat is the best use of AI when working with rule blocks?"
         ],
         "videos": [
           {
@@ -7654,7 +7761,6 @@
           "HERE - https://www.codecademy.com/enrolled/courses/learn-lua"
         ],
         "keywords": [
-          "persona",
           "player",
           "testing",
           "game mechanic",
@@ -8069,13 +8175,35 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.163001+00:00",
+      "generated_at": "2026-02-26T13:59:10.617041+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must: Review the video guidance and accurately recreate the wired system, utilizing the same rule-blocks and props, ensuring all connections function as demonstrated.",
+        "Many students will: Modify the wired system by integrating at least one additional rule-block, enhancing the complexity while ensuring the system still functions correctly.",
+        "Some students may: Design and implement a more advanced system that incorporates two or more rule-blocks and additional props, showcasing layered functionality and interconnected components to create a dynamic and versatile setup.",
+        "All students must:",
+        "✔ Watch the video guidance",
+        "✔ Recreate the wired system using the same rule-blocks and props",
+        "✔ Ensure all connections function correctly",
+        "✔ Upload a screenshot or short demo to portfolio",
+        "Many students will:",
+        "✔ Add at least one additional rule-block",
+        "✔ Modify the system while keeping it functional",
+        "✔ Explain what the added rule-block does",
+        "Some students may:",
+        "✔ Design a more advanced system using two or more rule-blocks",
+        "✔ Integrate additional props to create layered functionality",
+        "✔ Build a dynamic system with interconnected components"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Analysing reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Use AI to demystify Lua—what it is, where it’s used, and why game developers choose it over other languages.\n\nWhich Lua fact from AI surprised you the most, and why?\n\nHow do Lua’s features—like being lightweight or embeddable—help make games better?\n\nIf you were making a game mod, would you choose Lua or another language, why?\n\n“Explain what Lua is in three simple sentences for someone who’s never coded before.”\n\n“List five popular games or apps that use Lua for scripting and give one reason each chose it.”\n\n“Compare Lua to Python and JavaScript: why might a game developer pick Lua instead?”\n\nStudents will prompt AI to:\n\nExplain Lua in simple terms\n\nIdentify real-world uses in games/apps\n\nCompare its strengths to other scripting languages\n\nActivity 1:  Basic Rule-Block Setup\n\nToday’s activity is a basic setup using a rule-block. Students will watch the attached video, then recreate the wiring and connections. More advanced students are encouraged to design a more complex system using additional rule-blocks.\n\nFor those interested in diving deeper into this coding language, a free course is available below:\n\nCodeacademy Lua Course HERE\n\nAll students must: Review the video guidance and accurately recreate the wired system, utilizing the same rule-blocks and props, ensuring all connections function as demonstrated.\n\nMany students will: Modify the wired system by integrating at least one additional rule-block, enhancing the complexity while ensuring the system still functions correctly.\n\nSome students may: Design and implement a more advanced system that incorporates two or more rule-blocks and additional props, showcasing layered functionality and interconnected components to create a dynamic and versatile setup.\n\n✔ Watch the video guidance\n\n✔ Recreate the wired system using the same rule-blocks and props\n\n✔ Ensure all connections function correctly\n\n✔ Upload a screenshot or short demo to portfolio\n\n✔ Add at least one additional rule-block\n\n✔ Modify the system while keeping it functional\n\n✔ Explain what the added rule-block does\n\n✔ Design a more advanced system using two or more rule-blocks\n\n✔ Integrate additional props to create layered functionality\n\n✔ Build a dynamic system with interconnected components\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -8202,18 +8330,7 @@
           "Codeacademy Lua Course HERE",
           "Assessment For Learning",
           "Game Development",
-          "C. It shortens playtime",
-          "D. It removes the need for testing",
-          "A. Optional visual effects",
-          "C. Core mechanics that affect player experience",
-          "D. Cosmetic changes",
           "AI Literacy (OECD K1.3)",
-          "A. AI works too randomly",
-          "C. AI cannot generate lists",
-          "D. AI avoids planning",
-          "A. Listing possible tasks",
-          "B. Estimating time roughly",
-          "D. Organising tasks alphabetically",
           "Video Guidance",
           "Video Link",
           "Basic Scripting Edit",
@@ -8232,8 +8349,7 @@
         ],
         "ai_focus": [
           "AI Literacy Focus: Prioritising human judgement (OECD K1.3)",
-          "AI Literacy (OECD K1.3)",
-          "C. AI cannot generate lists"
+          "AI Literacy (OECD K1.3)"
         ],
         "learning_objectives": [
           "Advancing your knowledge of Scripting",
@@ -8243,6 +8359,10 @@
         "activity_description": "What Should We Build First?\n\nList all the remaining tasks for your game idea.\n\nWhich tasks are most important for the player experience?\n\nCreate a short priority list and explain your choices.\n\nGood projects succeed because of decisions, not features.\n\nAI Literacy Focus: Prioritising human judgement (OECD K1.3)\n\nPractice basic Lua scripting with AI as your coding coach—generating snippets, understanding each line, and troubleshooting errors.\n\nWhich part of AI’s explanation made you most confident about how the code works?\n\nWhat happened when you tweaked the variables or logic—did AI’s suggestion change the output?\n\nHow could you use this Lua snippet in your platformer?\n\n“Here’s my Lua error message: [paste error]. Help me debug it and explain the fix.”\n\n“The code I have written [pasted] isn’t working, can you explain why?”\n\n“I get this error [pasted] when I try to run my code. Can you explain some possible reasons why this is happening and provide a possible solution?”\n\nStudents will review your Lua task with you, prompt AI to write and explain the code, run and tweak it in their editor, then debug with AI’s help and share what they’ve learned.\n\nToday’s activity is exploratory. Students will review the code of a prop in Endstar and make a basic edit. More advanced students are encouraged to try more complex edits.\n\nFor those interested in diving deeper into this coding language, a free course is available below:\n\nCodeacademy Lua Course HERE\n\n✔ Create a clear priority list for their team\n\n✔ Identify incomplete theory or gameplay tasks\n\n✔ Upload the priority list to portfolio\n\n✔ Explain why each priority is important\n\n✔ Organise tasks in a logical order\n\n✔ Assign responsibilities within the team\n\n✔ Set clear deadlines for each priority\n\n✔ Create a timeline toward pitch readiness\n\n✔ Adjust priorities based on team progress\n\nWhy is prioritising tasks important in game development?\n\nA. If tasks are prioritised we are guaranteed a better UX\n\nB. It ensures the most important player-facing features are built first\n\nD. It removes the need for testing\n\nWhich task should usually be prioritised first?\n\nA. Optional visual effects\n\nB. Secondary features like a unique never seen before narrative\n\nC. Core mechanics that affect player experience\n\nWhy might AI be less suitable for deciding task priorities?\n\nB. AI lacks understanding of team goals and values\n\nC. AI cannot generate lists\n\nWhich decision should remain primarily human-led during planning?\n\nB. Estimating time roughly\n\nC. Deciding what matters most for the player experience\n\nD. Organising tasks alphabetically\n\nOECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)\n\nBeing a successful entrepreneur requires focusing on the most critical actions that drive progress. In this class, students and teams should create a list of priorities to work toward a successful pitch. These priorities could include:\n\nCatching up on incomplete theory work\n\nGaining a deeper understanding of specific areas of theory\n\nFinalizing any unfinished gameplay elements\n\nAs a team, you should carefully plan during this hour. There is no criteria for this activity.\n\nWhich tasks directly impact gameplay, our pitch, or understanding of objectives?\n\nPrioritize these first (e.g., level gameplay finalization, implementing feedback).\n\nDelegate Within Your Team:\n\nCan everyone on the team complete different tasks today?\n\nAssign essential tasks to each members of your team.\n\nWhat small steps can I take to move our game forward?\n\nFocus on completing one small, manageable piece at a time.\n\nAre there tasks that can be done in 5-10 minutes?\n\nKnock these out to reduce your to-do list and feel accomplished.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
         "assessment_signals": [
+          "GD-16.1\nWhy is prioritising tasks important in game development?",
+          "GD-16.2\nWhich task should usually be prioritised first?",
+          "AI-16.1\nWhy might AI be less suitable for deciding task priorities?",
+          "AI-16.2\nWhich decision should remain primarily human-led during planning?",
           "Path 2: Catch-up & Embed",
           "Catching up on incomplete theory work",
           "Gaining a deeper understanding of specific areas of theory",
@@ -8573,18 +8693,35 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.163001+00:00",
+      "generated_at": "2026-02-26T13:59:10.623829+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
       "success_criteria": [
+        "All students must:",
+        "✔ Create a clear priority list for their team",
+        "✔ Identify incomplete theory or gameplay tasks",
+        "✔ Upload the priority list to portfolio",
+        "Many students will:",
+        "✔ Explain why each priority is important",
+        "✔ Organise tasks in a logical order",
+        "✔ Assign responsibilities within the team",
+        "Some students may:",
+        "✔ Set clear deadlines for each priority",
+        "✔ Create a timeline toward pitch readiness",
+        "✔ Adjust priorities based on team progress",
         "Catching up on incomplete theory work",
         "Gaining a deeper understanding of specific areas of theory",
         "Finalizing any unfinished gameplay elements",
         "As a team, you should carefully plan during this hour. There is no criteria for this activity."
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "What Should We Build First?\n\nList all the remaining tasks for your game idea.\n\nWhich tasks are most important for the player experience?\n\nCreate a short priority list and explain your choices.\n\nGood projects succeed because of decisions, not features.\n\nAI Literacy Focus: Prioritising human judgement (OECD K1.3)\n\nPractice basic Lua scripting with AI as your coding coach—generating snippets, understanding each line, and troubleshooting errors.\n\nWhich part of AI’s explanation made you most confident about how the code works?\n\nWhat happened when you tweaked the variables or logic—did AI’s suggestion change the output?\n\nHow could you use this Lua snippet in your platformer?\n\n“Here’s my Lua error message: [paste error]. Help me debug it and explain the fix.”\n\n“The code I have written [pasted] isn’t working, can you explain why?”\n\n“I get this error [pasted] when I try to run my code. Can you explain some possible reasons why this is happening and provide a possible solution?”\n\nStudents will review your Lua task with you, prompt AI to write and explain the code, run and tweak it in their editor, then debug with AI’s help and share what they’ve learned.\n\nToday’s activity is exploratory. Students will review the code of a prop in Endstar and make a basic edit. More advanced students are encouraged to try more complex edits.\n\nFor those interested in diving deeper into this coding language, a free course is available below:\n\nCodeacademy Lua Course HERE\n\n✔ Create a clear priority list for their team\n\n✔ Identify incomplete theory or gameplay tasks\n\n✔ Upload the priority list to portfolio\n\n✔ Explain why each priority is important\n\n✔ Organise tasks in a logical order\n\n✔ Assign responsibilities within the team\n\n✔ Set clear deadlines for each priority\n\n✔ Create a timeline toward pitch readiness\n\n✔ Adjust priorities based on team progress\n\nWhy is prioritising tasks important in game development?\n\nA. If tasks are prioritised we are guaranteed a better UX\n\nB. It ensures the most important player-facing features are built first\n\nD. It removes the need for testing\n\nWhich task should usually be prioritised first?\n\nA. Optional visual effects\n\nB. Secondary features like a unique never seen before narrative\n\nC. Core mechanics that affect player experience\n\nWhy might AI be less suitable for deciding task priorities?\n\nB. AI lacks understanding of team goals and values\n\nC. AI cannot generate lists\n\nWhich decision should remain primarily human-led during planning?\n\nB. Estimating time roughly\n\nC. Deciding what matters most for the player experience\n\nD. Organising tasks alphabetically\n\nOECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)\n\nBeing a successful entrepreneur requires focusing on the most critical actions that drive progress. In this class, students and teams should create a list of priorities to work toward a successful pitch. These priorities could include:\n\nCatching up on incomplete theory work\n\nGaining a deeper understanding of specific areas of theory\n\nFinalizing any unfinished gameplay elements\n\nAs a team, you should carefully plan during this hour. There is no criteria for this activity.\n\nWhich tasks directly impact gameplay, our pitch, or understanding of objectives?\n\nPrioritize these first (e.g., level gameplay finalization, implementing feedback).\n\nDelegate Within Your Team:\n\nCan everyone on the team complete different tasks today?\n\nAssign essential tasks to each members of your team.\n\nWhat small steps can I take to move our game forward?\n\nFocus on completing one small, manageable piece at a time.\n\nAre there tasks that can be done in 5-10 minutes?\n\nKnock these out to reduce your to-do list and feel accomplished.\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -8699,19 +8836,7 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. To prove your game is finished",
-          "B. To receive praise from other teams",
-          "C. To identify issues and improve player experience",
-          "D. To compare scores",
-          "D. General opinions about the theme",
           "AI Literacy (OECD K1.3)",
-          "B. AI cannot play games",
-          "C. Humans can experience frustration and enjoyment directly",
-          "D. AI prefers finished products",
-          "A. Replacing human testers",
-          "B. Scoring the game automatically",
-          "C. Helping summarise feedback after human testing",
-          "D. Deciding which feedback to ignore",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -8720,8 +8845,7 @@
         "ai_focus": [
           "“Many jobs of the future will combine human judgement with AI support to make stronger, faster, and more balanced decisions.”",
           "How can you blend both human and AI insights to make your own feedback even stronger next time?",
-          "AI Literacy (OECD K1.3)",
-          "B. AI cannot play games"
+          "AI Literacy (OECD K1.3)"
         ],
         "learning_objectives": [
           "Understand what peer testing is",
@@ -8730,12 +8854,15 @@
         "activity_type": "Brief refinement and team setup",
         "activity_description": "Students must pair up with a member from another team who is not a friend to conduct serious peer testing of their game. This process is intended to provide valuable feedback that can be used to enhance your game.\n\nIn your workbook, you will find specific headings under which to conduct the testing, as well as an area to record your observations and feedback.\n\nUse AI to turn rough peer-testing notes into clear, rubric-aligned feedback, then compare AI-crafted comments with human insights to deepen your critique skills.\n\nIn what ways did AI’s rewritten feedback feel clearer or more helpful than your original notes?\n\nWhich suggestion—from your peer or from AI—will you act on first, and why?\n\nHow can you blend both human and AI insights to make your own feedback even stronger next time?\n\n“Here are my raw notes on Team X’s game under Usability, Functionality, Balance, and Narrative: [paste notes]. Rewrite them into three strengths and two improvement suggestions aligned to our rubric.”\n\n“Summarize all our feedback into a brief report for the teacher, highlighting key insights and how they map to the lesson’s learning outcomes.”\n\nStudents will prompt AI to refine their raw observations into structured feedback, use AI to articulate reflective answers, and then spot how AI’s perspective complements or differs from their classmates’.\n\n✔ Test another team’s game\n\n✔ Give clear feedback on usability and functionality\n\n✔ Identify obvious bugs or issues\n\n✔ Record feedback in the workbook\n\n✔ Give detailed feedback on game balance or narrative\n\n✔ Suggest specific improvements\n\n✔ Explain how issues affect the player experience\n\n✔ Provide comprehensive feedback across multiple areas\n\n✔ Evaluate usability, challenge, balance, and engagement\n\n✔ Suggest innovative improvements or extensions\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-17.1\nWhat is the main purpose of peer testing in game development?",
+          "GD-17.2\nWhich feedback is most useful during peer testing?",
+          "AI-17.1\nWhy is human feedback especially valuable compared to AI feedback during playtesting?",
+          "AI-17.2\nWhat is the best role of AI during peer testing?"
+        ],
         "videos": [],
         "resources": [
-          "https://forms.gle/ihCECsXvADJqfB6x6",
-          "rubric",
-          "Rubric"
+          "https://forms.gle/ihCECsXvADJqfB6x6"
         ],
         "keywords": [
           "innovation",
@@ -8750,8 +8877,7 @@
           "AI",
           "endstar",
           "game design",
-          "narrative",
-          "playtest"
+          "narrative"
         ],
         "images": [
           {
@@ -8990,13 +9116,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.178939+00:00",
+      "generated_at": "2026-02-26T13:59:10.629817+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Test another team’s game",
+        "✔ Give clear feedback on usability and functionality",
+        "✔ Identify obvious bugs or issues",
+        "✔ Record feedback in the workbook",
+        "Many students will:",
+        "✔ Give detailed feedback on game balance or narrative",
+        "✔ Suggest specific improvements",
+        "✔ Explain how issues affect the player experience",
+        "Some students may:",
+        "✔ Provide comprehensive feedback across multiple areas",
+        "✔ Evaluate usability, challenge, balance, and engagement",
+        "✔ Suggest innovative improvements or extensions"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Evaluating AI outputs)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Students must pair up with a member from another team who is not a friend to conduct serious peer testing of their game. This process is intended to provide valuable feedback that can be used to enhance your game.\n\nIn your workbook, you will find specific headings under which to conduct the testing, as well as an area to record your observations and feedback.\n\nUse AI to turn rough peer-testing notes into clear, rubric-aligned feedback, then compare AI-crafted comments with human insights to deepen your critique skills.\n\nIn what ways did AI’s rewritten feedback feel clearer or more helpful than your original notes?\n\nWhich suggestion—from your peer or from AI—will you act on first, and why?\n\nHow can you blend both human and AI insights to make your own feedback even stronger next time?\n\n“Here are my raw notes on Team X’s game under Usability, Functionality, Balance, and Narrative: [paste notes]. Rewrite them into three strengths and two improvement suggestions aligned to our rubric.”\n\n“Summarize all our feedback into a brief report for the teacher, highlighting key insights and how they map to the lesson’s learning outcomes.”\n\nStudents will prompt AI to refine their raw observations into structured feedback, use AI to articulate reflective answers, and then spot how AI’s perspective complements or differs from their classmates’.\n\n✔ Test another team’s game\n\n✔ Give clear feedback on usability and functionality\n\n✔ Identify obvious bugs or issues\n\n✔ Record feedback in the workbook\n\n✔ Give detailed feedback on game balance or narrative\n\n✔ Suggest specific improvements\n\n✔ Explain how issues affect the player experience\n\n✔ Provide comprehensive feedback across multiple areas\n\n✔ Evaluate usability, challenge, balance, and engagement\n\n✔ Suggest innovative improvements or extensions\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -9148,27 +9293,14 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. Restarting the game from scratch",
-          "B. Making random changes",
-          "D. Adding new features every time",
-          "A. Cosmetic details",
-          "B. Optional features",
-          "D. Extra animations",
           "AI Literacy (OECD K1.1)",
-          "A. AI ignores user input",
-          "C. AI cannot read comments",
-          "D. AI prefers short answers",
-          "A. Let AI choose all fixes",
-          "B. Apply AI suggestions without testing",
-          "D. Avoid feedback",
           "Let’s Discuss"
         ],
         "endstar_tools": [
           "Prototyping tools"
         ],
         "ai_focus": [
-          "AI Literacy (OECD K1.1)",
-          "C. AI cannot read comments"
+          "AI Literacy (OECD K1.1)"
         ],
         "learning_objectives": [
           "Analyse and implement the received feedback into your game"
@@ -9176,12 +9308,16 @@
         "activity_type": "Iteration and refinement",
         "activity_description": "Activity 1:  Putting Feedback in Place\n\nStudents should use this class to carefully evaluate the feedback they received on their game. By following the evaluation steps, ensure that the feedback you implement leads to meaningful improvements in gameplay.\n\nRemember to prioritize the most important changes first and continually test your game to assess the impact of these adjustments\n\nUse AI to organize and prioritize peer feedback—sorting comments into categories, spotting high-impact suggestions, and reflecting on your choices.\n\nWhich themes or patterns did AI spot that you hadn’t noticed, and how did that change your view of the feedback?\n\nHow did AI’s impact vs. feasibility advice help you decide what to tackle first in your game?\n\nWhen drafting your reflection with AI, what made your explanation stronger or easier to understand?\n\n“Here is my raw feedback on our game: [paste comments]. Please sort each point into usability, functionality, balance, or narrative and highlight any recurring themes.”\n\n“From those categories, which two suggestions would have the biggest impact and are realistic for us to implement before our next test? Explain why.”\n\n“Help me write a brief answer to: ‘What feedback did I choose to implement and why?’ in clear, student-friendly language.”\n\nStudents will work with AI to turn their scattered play-test notes into an organized plan: they’ll categorize feedback into core areas, identify the most impactful and feasible changes to make before the next prototype, and craft a clear reflection on why they chose those improvements—all in one cohesive process.\n\n✔ Implement feedback to fix obvious issues\n\n✔ Improve basic usability or functionality\n\n✔ Highlight three key changes in the workbook\n\n✔ Apply feedback to improve game balance or narrative\n\n✔ Refine progression or story elements\n\n✔ Highlight three key improvements clearly\n\n✔ Make thoughtful innovations based on feedback\n\n✔ Improve usability, balance, and narrative together\n\n✔ Highlight more than three key changes\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-18.1\nWhat does iteration mean in game development?",
+          "GD-18.2\nWhich change should usually be prioritised first?",
+          "AI-18.1\nWhy might AI struggle to decide which feedback matters most?",
+          "AI-18.2\nHow should students use AI during iteration?"
+        ],
         "videos": [],
         "resources": [],
         "keywords": [
           "innovation",
-          "persona",
           "player",
           "prototype",
           "testing",
@@ -9416,13 +9552,31 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.181768+00:00",
+      "generated_at": "2026-02-26T13:59:10.635019+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Implement feedback to fix obvious issues",
+        "✔ Improve basic usability or functionality",
+        "✔ Highlight three key changes in the workbook",
+        "Many students will:",
+        "✔ Apply feedback to improve game balance or narrative",
+        "✔ Refine progression or story elements",
+        "✔ Highlight three key improvements clearly",
+        "Some students may:",
+        "✔ Make thoughtful innovations based on feedback",
+        "✔ Improve usability, balance, and narrative together",
+        "✔ Highlight more than three key changes"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.1 (Iterating prompts for accuracy)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Putting Feedback in Place\n\nStudents should use this class to carefully evaluate the feedback they received on their game. By following the evaluation steps, ensure that the feedback you implement leads to meaningful improvements in gameplay.\n\nRemember to prioritize the most important changes first and continually test your game to assess the impact of these adjustments\n\nUse AI to organize and prioritize peer feedback—sorting comments into categories, spotting high-impact suggestions, and reflecting on your choices.\n\nWhich themes or patterns did AI spot that you hadn’t noticed, and how did that change your view of the feedback?\n\nHow did AI’s impact vs. feasibility advice help you decide what to tackle first in your game?\n\nWhen drafting your reflection with AI, what made your explanation stronger or easier to understand?\n\n“Here is my raw feedback on our game: [paste comments]. Please sort each point into usability, functionality, balance, or narrative and highlight any recurring themes.”\n\n“From those categories, which two suggestions would have the biggest impact and are realistic for us to implement before our next test? Explain why.”\n\n“Help me write a brief answer to: ‘What feedback did I choose to implement and why?’ in clear, student-friendly language.”\n\nStudents will work with AI to turn their scattered play-test notes into an organized plan: they’ll categorize feedback into core areas, identify the most impactful and feasible changes to make before the next prototype, and craft a clear reflection on why they chose those improvements—all in one cohesive process.\n\n✔ Implement feedback to fix obvious issues\n\n✔ Improve basic usability or functionality\n\n✔ Highlight three key changes in the workbook\n\n✔ Apply feedback to improve game balance or narrative\n\n✔ Refine progression or story elements\n\n✔ Highlight three key improvements clearly\n\n✔ Make thoughtful innovations based on feedback\n\n✔ Improve usability, balance, and narrative together\n\n✔ Highlight more than three key changes\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -9521,20 +9675,7 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. Developer opinions and meetings",
-          "B. Player feedback and survey results",
-          "C. Visual quality and color theory",
-          "D. Number of features and mechanics",
-          "A. Players finish the game quickly",
-          "C. The game uses advanced mechanics",
-          "D. The game looks professional",
           "AI Literacy (OECD K1.4)",
-          "A. AI avoids statistics and is always biased",
-          "C. AI prefers positive feedback",
-          "D. AI cannot read charts",
-          "A. Accept the results as final",
-          "B. Remove conflicting feedback",
-          "D. Ignore outliers automatically",
           "Teacher’s grading copy can be found HERE",
           "Let’s Discuss"
         ],
@@ -9543,22 +9684,25 @@
         ],
         "ai_focus": [
           "AI Literacy Focus: Analysing reliability & ethical responsibility (OECD K1.4)",
-          "AI Literacy (OECD K1.4)",
-          "D. AI cannot read charts"
+          "AI Literacy (OECD K1.4)"
         ],
         "learning_objectives": [
           "What market demand is and why it matters.",
           "How to validate demand before launching a product.",
           "How to demonstrate that a market exists for your product."
         ],
-        "activity_type": "Portfolio and documentation",
+        "activity_type": "Iteration and refinement",
         "activity_description": "Activity 1:  Time to Validate\n\nStudents must team up and work on validating market demand for their own product ideas (or use pre-selected ideas from the teacher). Each team will:\n\nStep 1: Design a simple survey or interview script.\n\nStep 2: Conduct 5-10 interviews or survey 20+ potential customers.\n\nStep 3: Compile and analyze the results, identifying key trends or insights about market demand.\n\nUse AI to create clear, unbiased survey questions, grasp what product–market fit means in games, and turn real feedback into honest insights.\n\nHow did AI’s survey questions help you get more honest feedback, and what biased question did you avoid?\n\nWhat new insight did AI’s product–market fit explanation give you about whether players really want your game?\n\nWhich demand pattern from the analysis surprised you most, and how will it shape your next design step?\n\n“Based on our platformer’s theme and audience, write five neutral, inclusive survey questions that avoid leading language.”\n\n“What is product–market fit in gaming, and how can I tell if my game has achieved it?”\n\n“Here are our survey responses: [paste data]. Identify the top two demand patterns and flag any feedback that might be biased or one-off.”\n\nStudents will work with AI to design a simple, ethical survey or interview script tailored to their game concept, ask AI to explain product–market fit in gaming and how to recognize it, then feed AI actual survey or interview responses to spot key demand patterns and avoid bias.\n\n✔ Complete a basic validation activity (survey or interviews)\n\n✔ Show clear interest or lack of interest in the idea\n\n✔ Analyse customer feedback in detail\n\n✔ Identify clear signs of demand\n\n✔ Highlight trends or patterns\n\n✔ Present strong validation evidence\n\n✔ Use engagement data, sign-ups, or pre-orders\n\n✔ Clearly demonstrate market demand\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
+        "assessment_signals": [
+          "GD-19.1\nWhat evidence best helps validate Product–Market Fit?",
+          "GD-19.2\nWhich result suggests good Product–Market Fit?",
+          "AI-19.1\nWhy should students be cautious when using AI to analyse survey results?",
+          "AI-19.2\nWhat is the student’s responsibility after AI highlights trends in data?"
+        ],
         "videos": [],
         "resources": [
-          "HERE - https://endlessstudios.com/programs/287258/?progTab=Resources&resource=362276",
-          "Rubric"
+          "HERE - https://endlessstudios.com/programs/287258/?progTab=Resources&resource=362276"
         ],
         "keywords": [
           "audience",
@@ -9842,13 +9986,31 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.186452+00:00",
+      "generated_at": "2026-02-26T13:59:10.643568+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Complete a basic validation activity (survey or interviews)",
+        "✔ Show clear interest or lack of interest in the idea",
+        "✔ Record results clearly",
+        "Many students will:",
+        "✔ Analyse customer feedback in detail",
+        "✔ Identify clear signs of demand",
+        "✔ Highlight trends or patterns",
+        "Some students may:",
+        "✔ Present strong validation evidence",
+        "✔ Use engagement data, sign-ups, or pre-orders",
+        "✔ Clearly demonstrate market demand"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.4 (Analysing reliability)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Activity 1:  Time to Validate\n\nStudents must team up and work on validating market demand for their own product ideas (or use pre-selected ideas from the teacher). Each team will:\n\nStep 1: Design a simple survey or interview script.\n\nStep 2: Conduct 5-10 interviews or survey 20+ potential customers.\n\nStep 3: Compile and analyze the results, identifying key trends or insights about market demand.\n\nUse AI to create clear, unbiased survey questions, grasp what product–market fit means in games, and turn real feedback into honest insights.\n\nHow did AI’s survey questions help you get more honest feedback, and what biased question did you avoid?\n\nWhat new insight did AI’s product–market fit explanation give you about whether players really want your game?\n\nWhich demand pattern from the analysis surprised you most, and how will it shape your next design step?\n\n“Based on our platformer’s theme and audience, write five neutral, inclusive survey questions that avoid leading language.”\n\n“What is product–market fit in gaming, and how can I tell if my game has achieved it?”\n\n“Here are our survey responses: [paste data]. Identify the top two demand patterns and flag any feedback that might be biased or one-off.”\n\nStudents will work with AI to design a simple, ethical survey or interview script tailored to their game concept, ask AI to explain product–market fit in gaming and how to recognize it, then feed AI actual survey or interview responses to spot key demand patterns and avoid bias.\n\n✔ Complete a basic validation activity (survey or interviews)\n\n✔ Show clear interest or lack of interest in the idea\n\n✔ Analyse customer feedback in detail\n\n✔ Identify clear signs of demand\n\n✔ Highlight trends or patterns\n\n✔ Present strong validation evidence\n\n✔ Use engagement data, sign-ups, or pre-orders\n\n✔ Clearly demonstrate market demand\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -10000,20 +10162,7 @@
           "AI as an Assistant",
           "Assessment For Learning",
           "Game Development",
-          "A. To show all features",
-          "C. To demonstrate technical skill only",
-          "D. To impress judges with visuals",
-          "A. Long text descriptions",
-          "B. Technical engine details",
-          "C. Clear visuals with simple explanations",
-          "D. Hidden features",
-          "AI Literacy (OECD K1.3)",
-          "A. Writing the full script without input",
-          "B. Replacing the team’s ideas",
-          "D. Designing slides automatically",
-          "A. The slides may be too short",
-          "C. The visuals may load slowly",
-          "D. The presentation may be longer"
+          "AI Literacy (OECD K1.3)"
         ],
         "endstar_tools": [
           "Mechanics",
@@ -10030,11 +10179,14 @@
         "activity_type": "Brief refinement and team setup",
         "activity_description": "“Strong project leaders make sure everyone knows their role, timelines are realistic, and the whole team feels supported to succeed.”\n\nAsk AI - Project Leadership & Collaboration\n\nBy practising timeboxing and role assignments with AI, students are learning how real project leaders break down complex tasks, motivate teammates, and guide groups through challenges — all skills that matter far beyond the classroom.\n\nWhat makes someone a good team leader in a time-limited project?\n\nHow could you help your team stay motivated and confident through stressful rehearsals?\n\nActivity 1:  Create Your Presentation\n\nStudents should use a presentation tool to outline your game’s concept, market demand and features. As a Team, use the template provided with everyone having a role in the presentation. Make sure to include your problem, journey and solution.\n\nDon’t forget to add at least 5 visuals to bring your game to life and support your data. Remember, a picture is worth a thousand words, so use visuals to make a strong impact.\n\nUse AI to co-create a clear, time-boxed plan and assign roles so your team can draft, build, and rehearse the final pitch efficiently with the provided pitch template.\n\nWhich time block in our schedule feels most critical for success, and why?\n\nHow will clearly assigned roles help us stay on track during each session?\n\nWhich practice question from AI was hardest to answer, and how can we improve our response?\n\n“We have 3 hours to finish and practice our pitch using the Student Pitch Template. Create a schedule with three 1-hour sessions—detailing start/end times and tasks for planning, slide design, and rehearsal.”\n\n“Based on our team’s strengths (speaker, writer, designer, timekeeper), assign roles and suggest specific tasks each person should handle in our timeline.”\n\n“Give us three likely audience questions about our pitch and draft concise, confident responses we can practice.”\n\nStudents will work with AI to break a 3-hour pitch session into digestible blocks—planning, slide creation, rehearsal—and map out who does what. They’ll also use AI to simulate audience Q&A, ensuring they can refine clarity and tone before the final presentation.\n\n✔ Create a presentation with a clear structure\n\n✔ Include at least 3 sections and 5 slides\n\n✔ Use basic visuals to support ideas\n\n✔ Use storytelling to explain the game journey\n\n✔ Create a visually engaging presentation\n\n✔ Maintain a clear narrative flow\n\n✔ Deliver a highly polished presentation\n\n✔ Use professional-level visuals and strong storytelling\n\n✔ Present confidently and clearly\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
         "artifacts": [],
-        "assessment_signals": [],
-        "videos": [],
-        "resources": [
-          "Rubric"
+        "assessment_signals": [
+          "GD-20.1\nWhat is the main goal of a game presentation?",
+          "GD-20.2\nWhich slide content best helps an audience understand your game?",
+          "AI-20.1\nHow can AI be useful when preparing a presentation?",
+          "AI-20.2\nWhat risk exists if AI controls the entire presentation narrative?"
         ],
+        "videos": [],
+        "resources": [],
         "keywords": [
           "audience",
           "player",
@@ -10047,8 +10199,7 @@
           "presentation",
           "AI",
           "game design",
-          "narrative",
-          "polish"
+          "narrative"
         ],
         "images": [
           {
@@ -10293,13 +10444,31 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.192222+00:00",
+      "generated_at": "2026-02-26T13:59:10.650971+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Create a presentation with a clear structure",
+        "✔ Include at least 3 sections and 5 slides",
+        "✔ Use basic visuals to support ideas",
+        "Many students will:",
+        "✔ Use storytelling to explain the game journey",
+        "✔ Create a visually engaging presentation",
+        "✔ Maintain a clear narrative flow",
+        "Some students may:",
+        "✔ Deliver a highly polished presentation",
+        "✔ Use professional-level visuals and strong storytelling",
+        "✔ Present confidently and clearly"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Using AI with traditional tools)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "“Strong project leaders make sure everyone knows their role, timelines are realistic, and the whole team feels supported to succeed.”\n\nAsk AI - Project Leadership & Collaboration\n\nBy practising timeboxing and role assignments with AI, students are learning how real project leaders break down complex tasks, motivate teammates, and guide groups through challenges — all skills that matter far beyond the classroom.\n\nWhat makes someone a good team leader in a time-limited project?\n\nHow could you help your team stay motivated and confident through stressful rehearsals?\n\nActivity 1:  Create Your Presentation\n\nStudents should use a presentation tool to outline your game’s concept, market demand and features. As a Team, use the template provided with everyone having a role in the presentation. Make sure to include your problem, journey and solution.\n\nDon’t forget to add at least 5 visuals to bring your game to life and support your data. Remember, a picture is worth a thousand words, so use visuals to make a strong impact.\n\nUse AI to co-create a clear, time-boxed plan and assign roles so your team can draft, build, and rehearse the final pitch efficiently with the provided pitch template.\n\nWhich time block in our schedule feels most critical for success, and why?\n\nHow will clearly assigned roles help us stay on track during each session?\n\nWhich practice question from AI was hardest to answer, and how can we improve our response?\n\n“We have 3 hours to finish and practice our pitch using the Student Pitch Template. Create a schedule with three 1-hour sessions—detailing start/end times and tasks for planning, slide design, and rehearsal.”\n\n“Based on our team’s strengths (speaker, writer, designer, timekeeper), assign roles and suggest specific tasks each person should handle in our timeline.”\n\n“Give us three likely audience questions about our pitch and draft concise, confident responses we can practice.”\n\nStudents will work with AI to break a 3-hour pitch session into digestible blocks—planning, slide creation, rehearsal—and map out who does what. They’ll also use AI to simulate audience Q&A, ensuring they can refine clarity and tone before the final presentation.\n\n✔ Create a presentation with a clear structure\n\n✔ Include at least 3 sections and 5 slides\n\n✔ Use basic visuals to support ideas\n\n✔ Use storytelling to explain the game journey\n\n✔ Create a visually engaging presentation\n\n✔ Maintain a clear narrative flow\n\n✔ Deliver a highly polished presentation\n\n✔ Use professional-level visuals and strong storytelling\n\n✔ Present confidently and clearly\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -10480,17 +10649,8 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. Adding more features to the game",
-          "B. Improving slide visuals and animations",
-          "D. Increasing the speaking volume of the presenter",
-          "A. Every member memorises the script word-for-word",
-          "B. The slides explain everything without speaking",
-          "D. The pitch matches the AI-generated script exactly",
           "AI-21.1 (OECD K1.3)",
-          "A. The pitch will sound too formal",
-          "D. The pitch may exceed the time limit",
           "AI - 21.2",
-          "D. Asking AI to predict judge questions",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -10513,7 +10673,10 @@
           "Are you ready to ‘Showcase’?",
           "Once you've completed all the items on your checklist, you should be fully prepared to present at our Showcase.",
           "Activity 1: Demo Day Rehearsal",
-          "Using the presentation template provided, it’s now your time to effectively showcase your game. Remember, the presentation tasks should be shared among team members."
+          "Using the presentation template provided, it’s now your time to effectively showcase your game. Remember, the presentation tasks should be shared among team members.",
+          "GD-21.1\nDuring a rehearsal, a team finishes within the time limit but judges still seem confused. What is the most important issue to address before the final pitch?",
+          "GD-21.2\nWhich behaviour best indicates a team is ready for a live pitch?",
+          "AI-21.1 (OECD K1.3)"
         ],
         "videos": [],
         "resources": [
@@ -10817,13 +10980,32 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.197069+00:00",
+      "generated_at": "2026-02-26T13:59:10.654506+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
-      "success_criteria": [],
-      "curriculum_alignment": [],
+      "success_criteria": [
+        "All students must:",
+        "✔ Ensure all parts of the game are complete and functioning",
+        "✔ Prepare a basic overview of the game",
+        "✔ Explain main objectives and gameplay mechanics",
+        "✔ Confirm readiness for presentation",
+        "Many students will:",
+        "✔ Explain the design process, including challenges faced",
+        "✔ Describe how feedback improved the game",
+        "✔ Identify specific features that make the game unique",
+        "Some students may:",
+        "✔ Prepare a polished and well-structured presentation",
+        "✔ Discuss development insights, market thinking, or future plans",
+        "✔ Include interactive elements or a short demo"
+      ],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI)"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Use AI to polish every part of your demo pitch—checking slides against your checklist, sharpening your script, and rehearsing Q&A—so you deliver a clear, confident team presentation.\n\nWhich piece of AI’s slide feedback revealed a gap you hadn’t noticed, and how will you fix it?\n\nHow did rewriting your script with AI change the way you’ll deliver your section?\n\nWhich simulated question was toughest, and what strategy will you use to answer it smoothly in the real showcase?\n\n“Here’s the text from our slide on market fit: [paste slide]. Against our checklist, what’s missing or needs clearer wording?”\n\n“This is my speaking script for the game-story section: [paste script]. Can you rewrite it to be more confident and engaging for a judge panel?”\n\n“Act like a Demo Day judge and ask us three challenging questions about our game’s design and launch plan.”\n\nStudents will collaborate with AI to finalize their pitch: reviewing slides for missing checklist items, refining scripts for clarity and tone, and rehearsing with simulated audience questions. Each team member will know their part, the slides will hit all key points, and the group will be ready for tough questions at the showcase.\n\nActivity 1: Demo Day Rehearsal\n\nUsing the presentation template provided, it’s now your time to effectively showcase your game. Remember, the presentation tasks should be shared among team members.\n\nJust like in game development, successful collaboration and delegation are key to a standout performance in the Showcase.\n\n✔ Ensure all parts of the game are complete and functioning\n\n✔ Prepare a basic overview of the game\n\n✔ Explain main objectives and gameplay mechanics\n\n✔ Confirm readiness for presentation\n\n✔ Explain the design process, including challenges faced\n\n✔ Describe how feedback improved the game\n\n✔ Identify specific features that make the game unique\n\n✔ Prepare a polished and well-structured presentation\n\n✔ Discuss development insights, market thinking, or future plans\n\n✔ Include interactive elements or a short demo\n\nQuestion 1:  Why is delegating tasks important on a team?\n\nQuestion 2:  What have you learned so far about working as a team?\n\nQuestion 3:  If you had to choose skills your team is missing, what might they be?\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",
@@ -10936,21 +11118,7 @@
           "What you built + how you used AI",
           "Assessment For Learning",
           "Game Development",
-          "A. They slow the presentation",
-          "B. They reveal gaps or unclear explanations",
-          "C. They test memory",
-          "D. They reduce confidence",
-          "A. Ignore it",
-          "B. Defend the design immediately",
-          "D. Change the topic",
           "AI Literacy (OECD K1.3)",
-          "A. AI avoids uncertainty",
-          "B. AI cannot understand the game",
-          "C. AI lacks real-time audience context and intent",
-          "D. AI prefers prepared scripts",
-          "A. Writing answers word-for-word",
-          "C. Choosing which questions to ignore",
-          "D. Replacing live feedback",
           "Let’s Discuss"
         ],
         "endstar_tools": [
@@ -10959,8 +11127,7 @@
           "Visuals"
         ],
         "ai_focus": [
-          "AI Literacy (OECD K1.3)",
-          "B. AI cannot understand the game"
+          "AI Literacy (OECD K1.3)"
         ],
         "learning_objectives": [
           "Review your presentation checklist",
@@ -10979,6 +11146,10 @@
           "“Ana, make our conclusion slide more powerful and memorable—then rewrite our closing script to match that tone.”",
           "Activity 1:  Finalise your Presentation",
           "Students have had a chance to start their presentations and today is aimed at finalising these. Your task is to carefully follow the template provided and make any necessary additions to ensure your presentation is engaging, clear, and ready to deliver.",
+          "GD-22.1\nWhy are audience questions valuable during pitch practice?",
+          "GD-22.2\nWhat is the best response when a question highlights a weakness?",
+          "AI-22.1\nWhy is AI less reliable for predicting audience questions?",
+          "AI-22.2\nHow can AI support question preparation responsibly?",
           "Question 2:  How could you delegate the different aspects of the presentation within your team?",
           "Question 3:  How can we overcome public speaking nervousness?"
         ],
@@ -10986,7 +11157,6 @@
         "resources": [],
         "keywords": [
           "audience",
-          "player",
           "testing",
           "gameplay",
           "feedback",
@@ -10997,8 +11167,7 @@
           "presentation",
           "AI",
           "game design",
-          "strategy",
-          "polish"
+          "strategy"
         ],
         "images": [
           {
@@ -11280,17 +11449,34 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-26T09:37:42.199071+00:00",
+      "generated_at": "2026-02-26T13:59:10.663626+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "",
       "uae_link": "",
       "success_criteria": [
         "AI as an Assistant",
+        "All students must:",
+        "✔ Rehearse the full pitch as a team",
+        "✔ Clearly explain the game’s purpose and mechanics",
+        "✔ Stay within the presentation structure provided",
+        "Many students will:",
+        "✔ Refine explanations based on rehearsal feedback",
+        "✔ Improve clarity, timing, and role coordination",
+        "✔ Highlight unique or innovative elements confidently",
+        "Some students may:",
+        "✔ Deliver a confident, polished rehearsal pitch",
+        "✔ Integrate live gameplay or interactive moments",
+        "✔ Adjust presentation flow to better engage the audience",
         "Question 2:  How could you delegate the different aspects of the presentation within your team?",
         "Question 3:  How can we overcome public speaking nervousness?"
       ],
-      "curriculum_alignment": [],
+      "curriculum_alignment": [
+        {
+          "framework": "OECD",
+          "text": "OECD Mapping: Knowledge K1.3 (Choosing when NOT to use AI"
+        }
+      ],
       "programme_metadata": {},
       "key_facts": [],
       "detailed_activities": "Use Ana as a “critical friend” to review your full Showcase presentation—checking clarity, flow, and checklist coverage—then refine slides, script, and talking order to maximize audience impact.\n\nWhich of Ana’s suggestions uncovered a gap you hadn’t spotted, and how will you fix it?\n\nHow did adjusting the flow or speaking order change your confidence in delivering the pitch?\n\nWhat final tweak from Ana—on visuals or wording—will you add to make your presentation stand out?\n\n“Ana, here’s our slide outline and speaking script for the Showcase. What’s missing or unclear based on our presentation checklist?””\n\n“Ana, does this sequence flow well? Please tell us if it’s clear who speaks when, and suggest any adjustments to improve pacing or transitions.”\n\n“Ana, make our conclusion slide more powerful and memorable—then rewrite our closing script to match that tone.”\n\nStudents will collaborate with Ana to perform a final, end-to-end review of their pitch: they’ll have Ana compare their slide outline and script against the lesson’s presentation checklist, suggest improvements for engagement and coherence, and simulate audience Q&A—ensuring each team member knows their part and the pitch meets all success criteria before delivery.\n\nActivity 1:  Finalise your Presentation\n\nStudents have had a chance to start their presentations and today is aimed at finalising these. Your task is to carefully follow the template provided and make any necessary additions to ensure your presentation is engaging, clear, and ready to deliver.\n\nJust like in game development, successful collaboration and delegation are key to a standout performance in the Showcase.\n\n✔ Rehearse the full pitch as a team\n\n✔ Clearly explain the game’s purpose and mechanics\n\n✔ Stay within the presentation structure provided\n\n✔ Refine explanations based on rehearsal feedback\n\n✔ Improve clarity, timing, and role coordination\n\n✔ Highlight unique or innovative elements confidently\n\n✔ Deliver a confident, polished rehearsal pitch\n\n✔ Integrate live gameplay or interactive moments\n\n✔ Adjust presentation flow to better engage the audience\n\nTeaching Note: Have students complete the activities and then upload their progress to classkick.",

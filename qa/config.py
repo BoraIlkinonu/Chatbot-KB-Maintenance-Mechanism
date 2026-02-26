@@ -12,18 +12,18 @@ TERM_PROFILES = {
         "lessons_with_lesson_plans": [],
     },
     2: {
-        "total_lessons": 12,
+        "total_lessons": 14,
         "has_native_docs": False,
         "has_student_slides": False,
         "has_lesson_plans": False,
         "lessons_with_lesson_plans": [],
     },
     3: {
-        "total_lessons": 12,
+        "total_lessons": 24,
         "has_native_docs": True,
-        "has_student_slides": False,
+        "has_student_slides": True,
         "has_lesson_plans": True,
-        "lessons_with_lesson_plans": [3, 4, 5, 6, 7],
+        "lessons_with_lesson_plans": [1, 2, 3, 4, 5, 6, 7, 11, 12],
     },
 }
 

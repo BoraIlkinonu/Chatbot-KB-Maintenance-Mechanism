@@ -1,41 +1,41 @@
 ======================================================================
   EXTRACTION VERIFICATION REPORT
-  2026-02-26T10:03:04.037993+00:00
+  2026-02-26T10:57:09.603727+00:00
 ======================================================================
 
 Files excluded by file_manifest.json: 3075
 
-LESSON COVERAGE: 100.0%  (12645/12645 lesson-assigned atoms)
+LESSON COVERAGE: 100.0%  (12685/12685 lesson-assigned atoms)
   ^ Content assigned to a specific term+lesson that SHOULD appear in the KB
 
 Overall Coverage: 100.0%  (includes admin docs, guides, templates)
-  Source atoms:   13502
-  Trivial skip:   857
-  Matched:        11879
-  Structural:     766  (slide labels absorbed into KB content)
+  Source atoms:   13571
+  Trivial skip:   886
+  Matched:        11916
+  Structural:     769  (slide labels absorbed into KB content)
   Unmatched:      0
-  KB atoms:       11387
+  KB atoms:       10591
 
 Per-Type Coverage:
 --------------------------------------------------
-  image          : 1020/1020 (100.0%)
+  image          : 1019/1019 (100.0%)
   image_ref      :  881/ 881 (100.0%)
-  link           :  177/ 177 (100.0%)
+  link           :  187/ 187 (100.0%)
   speaker_note   :  335/ 335 (100.0%)
   table          : 1171/1171 (100.0%)
-  text_block     : 8294/8294 (100.0%)
+  text_block     : 8322/8322 (100.0%)
   video_url      :    1/   1 (100.0%)
 
 Per-Term Coverage:
 --------------------------------------------------
   Term 1         : 2938/2938 (100.0%)
-  Term 2         : 3704/3704 (100.0%)
+  Term 2         : 3741/3741 (100.0%)
   Term 3         : 5237/5237 (100.0%)
 
 Verification Checks:
 --------------------------------------------------
-  [PASS   ] V001: Lesson content coverage: 100.0% (12645 matched [766 structural], 0 unmatched of lesson-assigned atoms)
-  [PASS   ] V002: Link extraction coverage: 100.0% (178/178)
+  [PASS   ] V001: Lesson content coverage: 100.0% (12685 matched [769 structural], 0 unmatched of lesson-assigned atoms)
+  [PASS   ] V002: Link extraction coverage: 100.0% (188/188)
   [PASS   ] V003: Text content lost at early stages: 0 atoms
   [PASS   ] V004: Truncation limits hit: 0 fields
   [PASS   ] V005: Source files with unassigned content: 0

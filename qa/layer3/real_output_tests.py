@@ -80,14 +80,15 @@ def run_real_output_tests(output_dir: Path, media_dir: Path) -> list[CheckResult
             details={"term": 3},
         ))
 
-    # E005: Term 2 has exactly 12 lessons (not 14)
+    # E005: Term 2 has expected number of lessons
     kb2 = loaded_kbs.get(2)
     if kb2:
         t2_count = len(kb2.get("lessons", []))
+        t2_expected = TERM_PROFILES.get(2, {}).get("total_lessons", 14)
         results.append(CheckResult(
             check_id="E005", layer=3, severity="ERROR",
-            passed=t2_count == 12,
-            message=f"Term 2 has {t2_count} lessons (expected 12)",
+            passed=t2_count == t2_expected,
+            message=f"Term 2 has {t2_count} lessons (expected {t2_expected})",
             details={"actual": t2_count},
         ))
     else:

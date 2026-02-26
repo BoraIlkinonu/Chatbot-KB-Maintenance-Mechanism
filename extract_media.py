@@ -202,6 +202,9 @@ def extract_docx_links(docx_path):
                 url = rid_to_url.get(rid, "")
                 if not url:
                     continue
+                # Skip local file paths — only keep web URLs
+                if not url.startswith(("http://", "https://", "mailto:")):
+                    continue
 
                 # Get the visible text within the hyperlink
                 texts = []
