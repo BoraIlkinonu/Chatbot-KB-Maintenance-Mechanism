@@ -1,16 +1,15 @@
 {
   "verdict": "FAIL",
-  "generated_at": "2026-02-26T11:32:50.782426+00:00",
-  "started_at": "2026-02-26T10:57:21.263224+00:00",
-  "total_checks": 197,
-  "passed": 179,
-  "failed": 18,
+  "generated_at": "2026-02-26T14:29:38.028558+00:00",
+  "started_at": "2026-02-26T14:29:37.668258+00:00",
+  "total_checks": 190,
+  "passed": 178,
+  "failed": 12,
   "errors": 2,
-  "warnings": 11,
+  "warnings": 5,
   "info_failures": 5,
   "layers_run": [
     1,
-    2,
     3,
     4
   ],
@@ -20,11 +19,6 @@
       "passed": 132,
       "failed": 7
     },
-    "2": {
-      "total": 7,
-      "passed": 2,
-      "failed": 5
-    },
     "3": {
       "total": 26,
       "passed": 24,
@@ -32,28 +26,12 @@
     },
     "4": {
       "total": 25,
-      "passed": 21,
-      "failed": 4
+      "passed": 22,
+      "failed": 3
     }
   },
-  "layer_summaries": {
-    "2": {
-      "confidence": 0.3,
-      "calls_made": 14,
-      "budget": 15,
-      "phase1_sampled": 2,
-      "phase1_confirmed": 0,
-      "phase1_false_positives": 0,
-      "phase2_sampled": 5,
-      "phase2_avg_score": 0.0,
-      "skipped": false
-    }
-  },
-  "llm_meta": {
-    "model": "sonnet",
-    "budget": 15,
-    "calls_made": 14
-  },
+  "layer_summaries": {},
+  "llm_meta": {},
   "results": [
     {
       "check_id": "S001",
@@ -515,11 +493,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
+      "message": "KB generated_at (2026-02-26T14:29:36) > consolidated_at (2026-02-26T14:29:36)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-26T10:56:47.110157+00:00",
-        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
+        "kb_ts": "2026-02-26T14:29:36.870190+00:00",
+        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
       }
     },
     {
@@ -1097,11 +1075,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
+      "message": "KB generated_at (2026-02-26T14:29:37) > consolidated_at (2026-02-26T14:29:36)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-26T10:56:47.324266+00:00",
-        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
+        "kb_ts": "2026-02-26T14:29:37.082960+00:00",
+        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
       }
     },
     {
@@ -1742,11 +1720,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
+      "message": "KB generated_at (2026-02-26T14:29:37) > consolidated_at (2026-02-26T14:29:36)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-26T10:56:47.661412+00:00",
-        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
+        "kb_ts": "2026-02-26T14:29:37.371343+00:00",
+        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
       }
     },
     {
@@ -1875,97 +1853,6 @@
       }
     },
     {
-      "check_id": "L2_P1_C004",
-      "layer": 2,
-      "passed": true,
-      "severity": "WARNING",
-      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
-      "details": {
-        "original_check": "C004",
-        "verdict": "UNCERTAIN",
-        "consensus": true,
-        "term": 3
-      }
-    },
-    {
-      "check_id": "L2_P1_C006",
-      "layer": 2,
-      "passed": true,
-      "severity": "WARNING",
-      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
-      "details": {
-        "original_check": "C006",
-        "verdict": "UNCERTAIN",
-        "consensus": true,
-        "term": 3
-      }
-    },
-    {
-      "check_id": "L2_P2_T1L20",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T1L20)",
-      "details": {
-        "term": 1,
-        "lesson_num": 20,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
-      "check_id": "L2_P2_T2L4",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T2L4)",
-      "details": {
-        "term": 2,
-        "lesson_num": 4,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
-      "check_id": "L2_P2_T3L2",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T3L2)",
-      "details": {
-        "term": 3,
-        "lesson_num": 2,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
-      "check_id": "L2_P2_T3L1",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T3L1)",
-      "details": {
-        "term": 3,
-        "lesson_num": 1,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
-      "check_id": "L2_P2_T2L10",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T2L10)",
-      "details": {
-        "term": 2,
-        "lesson_num": 10,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
       "check_id": "E001",
       "layer": 3,
       "passed": true,
@@ -2070,10 +1957,10 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "All 1872 image paths exist on disk",
+      "message": "All 1871 image paths exist on disk",
       "details": {
         "missing_count": 0,
-        "total": 1872,
+        "total": 1871,
         "samples": []
       }
     },
@@ -2147,7 +2034,7 @@
           {
             "term": 3,
             "lesson_id": 7,
-            "images": 91
+            "images": 90
           },
           {
             "term": 3,
@@ -2182,10 +2069,10 @@
       "layer": 3,
       "passed": true,
       "severity": "INFO",
-      "message": "42/60 lessons have 0 videos, 8/60 have 0 tools (acceptable)",
+      "message": "42/60 lessons have 0 videos, 20/60 have 0 tools (acceptable)",
       "details": {
         "zero_videos": 42,
-        "zero_tools": 8,
+        "zero_tools": 20,
         "total": 60
       }
     },
@@ -2418,7 +2305,7 @@
       "layer": 3,
       "passed": false,
       "severity": "WARNING",
-      "message": "373 duplicate image paths within lessons",
+      "message": "372 duplicate image paths within lessons",
       "details": {
         "duplicates": [
           {
@@ -2503,7 +2390,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Found 24 matches for 'Triggers' in endstar_tools",
+      "message": "Found 5 matches for 'Triggers' in endstar_tools",
       "details": {
         "query": "Which lessons use the Triggers tool?",
         "field": "endstar_tools",
@@ -2513,23 +2400,23 @@
         "matches": [
           {
             "term": 3,
-            "lesson_id": 1
-          },
-          {
-            "term": 3,
-            "lesson_id": 2
-          },
-          {
-            "term": 3,
-            "lesson_id": 3
-          },
-          {
-            "term": 3,
-            "lesson_id": 4
-          },
-          {
-            "term": 3,
             "lesson_id": 5
+          },
+          {
+            "term": 3,
+            "lesson_id": 6
+          },
+          {
+            "term": 3,
+            "lesson_id": 7
+          },
+          {
+            "term": 3,
+            "lesson_id": 9
+          },
+          {
+            "term": 3,
+            "lesson_id": 11
           }
         ]
       }
@@ -2569,7 +2456,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T1L8 assessment_signals: 6 items",
+      "message": "T1L8 assessment_signals: 10 items",
       "details": {
         "query": "How is Lesson 8 assessed?",
         "field": "assessment_signals",
@@ -2649,7 +2536,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Found 18 matches for 'testing' in core_topics",
+      "message": "Found 10 matches for 'testing' in core_topics",
       "details": {
         "query": "Which term covers game testing and feedback?",
         "field": "core_topics",
@@ -2657,14 +2544,6 @@
           "search_value": "testing"
         },
         "matches": [
-          {
-            "term": 1,
-            "lesson_id": 1
-          },
-          {
-            "term": 1,
-            "lesson_id": 2
-          },
           {
             "term": 1,
             "lesson_id": 3
@@ -2675,7 +2554,15 @@
           },
           {
             "term": 1,
-            "lesson_id": 8
+            "lesson_id": 17
+          },
+          {
+            "term": 2,
+            "lesson_id": 4
+          },
+          {
+            "term": 2,
+            "lesson_id": 6
           }
         ]
       }
@@ -2715,7 +2602,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T2L7 core_topics: 37 items",
+      "message": "T2L7 core_topics: 29 items",
       "details": {
         "query": "What are the core topics for Term 2 Lesson 7?",
         "field": "core_topics",
@@ -2901,11 +2788,11 @@
     {
       "check_id": "UC05",
       "layer": 4,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "assessment_signals coverage: 60% (36/60) — threshold: 80%",
+      "passed": true,
+      "severity": "INFO",
+      "message": "assessment_signals coverage: 80% (48/60) — threshold: 80%",
       "details": {
-        "coverage": 0.6,
+        "coverage": 0.8,
         "threshold": 0.8
       }
     },
@@ -2944,11 +2831,11 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "Topic overlap between terms: {'T1-T2': 0.0, 'T1-T3': 0.0, 'T2-T3': 0.03} — distinguishable",
+      "message": "Topic overlap between terms: {'T1-T2': 0.0, 'T1-T3': 0.01, 'T2-T3': 0.03} — distinguishable",
       "details": {
         "overlaps": {
           "T1-T2": 0.0,
-          "T1-T3": 0.0,
+          "T1-T3": 0.01,
           "T2-T3": 0.03
         }
       }

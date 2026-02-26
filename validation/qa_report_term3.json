@@ -1,16 +1,15 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-26T11:32:50.782426+00:00",
-  "started_at": "2026-02-26T11:32:50.782426+00:00",
-  "total_checks": 51,
-  "passed": 45,
-  "failed": 6,
+  "generated_at": "2026-02-26T14:29:38.028558+00:00",
+  "started_at": "2026-02-26T14:29:38.028558+00:00",
+  "total_checks": 47,
+  "passed": 43,
+  "failed": 4,
   "errors": 0,
-  "warnings": 4,
+  "warnings": 2,
   "info_failures": 2,
   "layers_run": [
     1,
-    2,
     3
   ],
   "per_layer": {
@@ -19,30 +18,13 @@
       "passed": 42,
       "failed": 4
     },
-    "2": {
-      "total": 4,
-      "passed": 2,
-      "failed": 2
-    },
     "3": {
       "total": 1,
       "passed": 1,
       "failed": 0
     }
   },
-  "layer_summaries": {
-    "2": {
-      "confidence": 0.3,
-      "calls_made": 14,
-      "budget": 15,
-      "phase1_sampled": 2,
-      "phase1_confirmed": 0,
-      "phase1_false_positives": 0,
-      "phase2_sampled": 5,
-      "phase2_avg_score": 0.0,
-      "skipped": false
-    }
-  },
+  "layer_summaries": {},
   "llm_meta": {},
   "results": [
     {
@@ -580,11 +562,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T10:56:47) > consolidated_at (2026-02-26T10:20:46)",
+      "message": "KB generated_at (2026-02-26T14:29:37) > consolidated_at (2026-02-26T14:29:36)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-26T10:56:47.661412+00:00",
-        "cons_ts": "2026-02-26T10:20:46.070414+00:00"
+        "kb_ts": "2026-02-26T14:29:37.371343+00:00",
+        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
       }
     },
     {
@@ -700,58 +682,6 @@
       "details": {
         "term": 3,
         "skipped": true
-      }
-    },
-    {
-      "check_id": "L2_P1_C004",
-      "layer": 2,
-      "passed": true,
-      "severity": "WARNING",
-      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
-      "details": {
-        "original_check": "C004",
-        "verdict": "UNCERTAIN",
-        "consensus": true,
-        "term": 3
-      }
-    },
-    {
-      "check_id": "L2_P1_C006",
-      "layer": 2,
-      "passed": true,
-      "severity": "WARNING",
-      "message": "LLM: UNCERTAIN — Call failed: Expecting value: line 1 column 1 (char 0)",
-      "details": {
-        "original_check": "C006",
-        "verdict": "UNCERTAIN",
-        "consensus": true,
-        "term": 3
-      }
-    },
-    {
-      "check_id": "L2_P2_T3L2",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T3L2)",
-      "details": {
-        "term": 3,
-        "lesson_num": 2,
-        "score": 0.0,
-        "consensus": true
-      }
-    },
-    {
-      "check_id": "L2_P2_T3L1",
-      "layer": 2,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "LLM field accuracy: 0% (T3L1)",
-      "details": {
-        "term": 3,
-        "lesson_num": 1,
-        "score": 0.0,
-        "consensus": true
       }
     },
     {

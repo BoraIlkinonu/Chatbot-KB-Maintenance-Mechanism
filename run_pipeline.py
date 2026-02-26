@@ -18,6 +18,7 @@ from change_analyzer import analyze_changes
 from notify_slack import (
     notify_sync_complete, notify_build_complete, notify_validation_result,
     notify_new_images, notify_no_changes, notify_error, notify_activity_summary,
+    notify_dry_run_summary, notify_revision_summary,
 )
 
 
@@ -51,7 +52,7 @@ def run_stage(stage_num, sync_result=None):
         return None
 
 
-def run_pipeline(skip_sync=False, force_full=False, cross_validate=False):
+def run_pipeline(skip_sync=False, force_full=False, cross_validate=False, dry_run=False):
     """
     Execute the full pipeline.
 
@@ -59,6 +60,7 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False):
         skip_sync: If True, skip Drive sync and use latest sync log
         force_full: If True, run all stages regardless of changes
         cross_validate: If True, run Stage 8 cross-validation after build
+        dry_run: If True, scan Drive and report changes without downloading or running stages
     """
     print()
     print("=" * 60)
@@ -80,10 +82,28 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False):
 
     try:
         # ─── Step 1: Sync ────────────────────────────────
-        if not skip_sync:
+        if dry_run:
+            print("\n>>> STEP 1: Drive Sync (DRY RUN)\n")
+            sync_result = run_sync(dry_run=True)
+            notify_dry_run_summary(sync_result)
+            notify_revision_summary(sync_result.get("revision_history", {}))
+            notify_activity_summary(sync_result.get("activity_log", {}))
+            pipeline_log["status"] = "dry_run"
+            pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
+            # Save pipeline log and exit early
+            log_path = LOGS_DIR / f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
+            with open(log_path, "w", encoding="utf-8") as f:
+                json.dump(pipeline_log, f, indent=2, ensure_ascii=False)
+            print(f"\n{'=' * 60}")
+            print(f"  Dry run complete — no stages executed")
+            print(f"  Log: {log_path}")
+            print(f"{'=' * 60}\n")
+            return pipeline_log
+        elif not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync()
             notify_sync_complete(sync_result["summary"])
+            notify_revision_summary(sync_result.get("revision_history", {}))
 
             # Notify about activity
             notify_activity_summary(sync_result.get("activity_log", {}))
@@ -226,7 +246,9 @@ if __name__ == "__main__":
     parser.add_argument("--force-full", action="store_true", help="Force full rebuild")
     parser.add_argument("--cross-validate", action="store_true",
                         help="Run Stage 8 cross-validation (requires claude CLI)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Scan and report changes without downloading or running stages")
     args = parser.parse_args()
 
     run_pipeline(skip_sync=args.skip_sync, force_full=args.force_full,
-                 cross_validate=args.cross_validate)
+                 cross_validate=args.cross_validate, dry_run=args.dry_run)

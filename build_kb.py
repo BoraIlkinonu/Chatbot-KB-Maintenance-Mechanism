@@ -231,8 +231,8 @@ def extract_from_native_doc(native_doc):
     for heading, content in sections.items():
         heading_lower = heading.lower()
 
-        # Lesson title from HEADING_2: "Lesson X: Title"
-        if re.match(r"lesson\s*\d+\s*:", heading, re.IGNORECASE):
+        # Lesson title from HEADING_2: "Lesson X: Title" (accept :, –, —, -)
+        if re.match(r"lesson\s*\d+\s*[:–\-—]", heading, re.IGNORECASE):
             result["title"] = heading
 
         # Big Question
@@ -561,6 +561,8 @@ def extract_title_from_slides(slides):
                 "welcome", "today", "mandatory", "diagnostic", "speaker note",
                 "http", "important", "explorer", "activity ", "portfolio entry",
                 "upload", "submit", "download",
+                "learning check", "learning objective", "lesson objective",
+                "assessment", "plenary", "mcq", "quiz", "afl",
             ]):
                 continue
             # A good title is 10-80 chars, starts with capital, not a question
@@ -691,7 +693,7 @@ def extract_uae_link_from_slides(slides):
     """Extract UAE link/context from slide content."""
     for slide in slides:
         text = slide["text"] + "\n" + slide["notes"]
-        match = re.search(r"UAE\s*Link\s*:\s*(.+?)(?:\n(?:Reflection|$))", text, re.DOTALL | re.IGNORECASE)
+        match = re.search(r"UAE\s*Link\s*:\s*(.+?)(?:\n\n|\n(?=[A-Z][a-z]+\s*:)|$)", text, re.DOTALL | re.IGNORECASE)
         if match:
             uae_text = match.group(1).strip()
             # Clean up
@@ -852,6 +854,11 @@ def extract_core_topics_from_slides(slides, lesson_num):
         r"^lesson \d", r"^today", r"explorer.*programme", r"^important",
         r"^activity \d", r"^portfolio entry", r"^upload", r"^submit",
         r"^[A-Da-d][\.\)]\s",  # MCQ answer options (A. / B) / etc.)
+        r"^learning objective", r"^learning check", r"^lesson objective",
+        r"^success criteria", r"^my success", r"^self.assessment",
+        r"^write ", r"^short ", r"^add ", r"^fill ", r"^step \d",
+        r"^open ", r"^need help", r"^follow this",
+        r"^let'?s", r"^remember",
     ]
 
     for slide in slides[2:]:  # Skip first 2 slides (usually title/cover)
@@ -996,21 +1003,26 @@ def extract_activity_type_from_content(slides, activities_text, lesson_title="")
 def extract_artifacts_from_slides(slides):
     """Extract portfolio entries and artifacts from slide content."""
     artifacts = []
+    seen_keys = set()  # Normalized keys for deduplication
 
     for slide in slides:
         text = slide["text"] + "\n" + slide["notes"]
-        # Match "Portfolio Entry/Evidence X – Title" or similar
-        matches = re.findall(r"Portfolio\s+(?:Entry|Evidence)\s+\d+\s*[–\-:]\s*([^\n]+)", text, re.IGNORECASE)
+        # Match "Portfolio Entry/Evidence X – Title" or similar (em-dash, en-dash, hyphen, colon)
+        matches = re.findall(r"Portfolio\s+(?:Entry|Evidence)\s+\d+\s*[–\-—:]\s*([^\n]+)", text, re.IGNORECASE)
         for m in matches:
             artifact = f"Portfolio Entry – {m.strip()}"
-            if artifact not in artifacts:
+            key = artifact.lower().strip()
+            if key not in seen_keys:
+                seen_keys.add(key)
                 artifacts.append(artifact)
 
         # Also look for "Portfolio Entry/Evidence X" without title
         matches = re.findall(r"(Portfolio\s+(?:Entry|Evidence)\s+\d+[^\n]*)", text, re.IGNORECASE)
         for m in matches:
             m = m.strip()
-            if m and m not in artifacts and not any(m in a for a in artifacts):
+            key = m.lower().strip()
+            if m and key not in seen_keys and not any(key in k for k in seen_keys):
+                seen_keys.add(key)
                 artifacts.append(m)
 
     return artifacts
@@ -1055,13 +1067,24 @@ def extract_assessment_signals_from_slides(slides):
                     continue
                 if "lesson" in stripped.lower() and ":" in stripped:
                     continue
-                # Capture "I can..." and assessment-like statements
+                # Only capture actual assessment content, not general slide text
                 stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
                 if stripped and len(stripped) > 20:
                     # Skip separator lines (underscores, dashes, pipes, equals)
                     if re.match(r'^[\s\-_|=*]+$', stripped):
                         continue
-                    signals.append(stripped)
+                    stripped_lower = stripped.lower()
+                    is_assessment = (
+                        stripped_lower.startswith("i can") or
+                        stripped_lower.startswith("i have") or
+                        stripped_lower.startswith("i am able") or
+                        "all students" in stripped_lower or
+                        "many students" in stripped_lower or "many will" in stripped_lower or
+                        "some students" in stripped_lower or "some may" in stripped_lower or
+                        re.match(r"^(basic|intermediate|advanced|emerging|proficient)\s*:", stripped_lower)
+                    )
+                    if is_assessment:
+                        signals.append(stripped)
 
     return signals
 
@@ -1328,9 +1351,12 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     all_slides = []
     all_tables = []
     all_speaker_notes = []
+    contributing_doc_paths = set()  # Track docs that actually produced content
 
     for doc in docs:
         content = read_full_content(doc)
+        if content.strip():
+            contributing_doc_paths.add(doc.get("path", ""))
         all_text += content + "\n"
 
         # Parse slides from ANY markdown with slide patterns
@@ -1738,7 +1764,7 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
         "native_links": native_link_entries,
         "remaining_content": native_remaining_content,
         "image_count": len(images) + len(native_image_entries),
-        "document_sources": [d.get("path", "") for d in docs],
+        "document_sources": [d.get("path", "") for d in docs if d.get("path", "") in contributing_doc_paths],
     }
 
     return lesson_entry

@@ -73,12 +73,19 @@ def extract_lesson_from_path(path, term=None):
         if 1 <= start <= max_lesson and 1 <= end <= max_lesson:
             return list(range(start, end + 1))
 
-    # Week folder → lessons
-    match = re.search(r"week[_\s\-]*(\d)", path_lower)
-    if match:
-        week = int(match.group(1))
-        if week in WEEK_LESSON_MAP:
-            return WEEK_LESSON_MAP[week]
+    # Week folder → lessons (only for curriculum content, not support docs)
+    if not any(skip in path_lower for skip in ["assessment", "exemplar", "teacher guide"]):
+        match = re.search(r"week[_\s\-]*(\d)", path_lower)
+        if match:
+            week = int(match.group(1))
+            if week in WEEK_LESSON_MAP:
+                return WEEK_LESSON_MAP[week]
+
+    # Cross-term check: skip files that reference a different term
+    if term:
+        for t_num in range(1, 4):
+            if t_num != term and re.search(rf"term\s*{t_num}\b", path_lower):
+                return []  # File belongs to different term
 
     # Portfolio / all lessons
     if any(t in path_lower for t in ["portfolio", "all weeks", "all lessons"]):
