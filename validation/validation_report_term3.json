@@ -1,0 +1,1053 @@
+{
+  "generated_at": "2026-02-25T16:37:51.194787+00:00",
+  "status": "NEEDS_REVIEW",
+  "overall_confidence": 60,
+  "publish_blocked": true,
+  "summary": {
+    "total_lessons": 12,
+    "anomalies_total": 71,
+    "errors": 20,
+    "warnings": 19,
+    "info": 32
+  },
+  "per_lesson": {
+    "1": {
+      "documents": 6,
+      "images": 64,
+      "native": 1,
+      "anomalies": 2
+    },
+    "2": {
+      "documents": 5,
+      "images": 48,
+      "native": 1,
+      "anomalies": 1
+    },
+    "3": {
+      "documents": 3,
+      "images": 86,
+      "native": 5,
+      "anomalies": 2
+    },
+    "4": {
+      "documents": 3,
+      "images": 77,
+      "native": 4,
+      "anomalies": 2
+    },
+    "5": {
+      "documents": 5,
+      "images": 100,
+      "native": 5,
+      "anomalies": 2
+    },
+    "6": {
+      "documents": 4,
+      "images": 84,
+      "native": 4,
+      "anomalies": 2
+    },
+    "7": {
+      "documents": 4,
+      "images": 91,
+      "native": 5,
+      "anomalies": 2
+    },
+    "8": {
+      "documents": 2,
+      "images": 67,
+      "native": 3,
+      "anomalies": 3
+    },
+    "9": {
+      "documents": 4,
+      "images": 93,
+      "native": 4,
+      "anomalies": 3
+    },
+    "10": {
+      "documents": 3,
+      "images": 65,
+      "native": 3,
+      "anomalies": 3
+    },
+    "11": {
+      "documents": 4,
+      "images": 87,
+      "native": 4,
+      "anomalies": 2
+    },
+    "12": {
+      "documents": 5,
+      "images": 143,
+      "native": 3,
+      "anomalies": 1
+    }
+  },
+  "anomalies": [
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 1,
+      "content_type": "students_slides",
+      "message": "Lesson 1 missing students slides"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 1,
+      "doc_z": 2.38,
+      "img_z": 0.49,
+      "message": "Lesson 1 has high content volume (doc z=2.38, img z=0.49)"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 2,
+      "content_type": "students_slides",
+      "message": "Lesson 2 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "teachers_slides",
+      "message": "Lesson 3 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "students_slides",
+      "message": "Lesson 3 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "teachers_slides",
+      "message": "Lesson 4 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "students_slides",
+      "message": "Lesson 4 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "teachers_slides",
+      "message": "Lesson 5 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "students_slides",
+      "message": "Lesson 5 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "teachers_slides",
+      "message": "Lesson 6 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "students_slides",
+      "message": "Lesson 6 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "teachers_slides",
+      "message": "Lesson 7 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "students_slides",
+      "message": "Lesson 7 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "teachers_slides",
+      "message": "Lesson 8 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "students_slides",
+      "message": "Lesson 8 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 8,
+      "content_type": "lesson_plan",
+      "message": "Lesson 8 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "teachers_slides",
+      "message": "Lesson 9 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "students_slides",
+      "message": "Lesson 9 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 9,
+      "content_type": "lesson_plan",
+      "message": "Lesson 9 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "teachers_slides",
+      "message": "Lesson 10 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "students_slides",
+      "message": "Lesson 10 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 10,
+      "content_type": "lesson_plan",
+      "message": "Lesson 10 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "teachers_slides",
+      "message": "Lesson 11 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "students_slides",
+      "message": "Lesson 11 missing students slides"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 12,
+      "doc_z": 1.59,
+      "img_z": 2.27,
+      "message": "Lesson 12 has low content volume (doc z=1.59, img z=2.27)"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Curriculum Specifications Term 2 .md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Specifications Term 2 .md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Learning Schedule_Sheet1.csv",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Learning Schedule_Sheet1.csv"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Term 2 Introduction content.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Term 2 Introduction content.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md",
+      "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term3\\Technical Support Guides\\Classkick\\Classkick - how to.md",
+      "message": "Document not assigned to any lesson: term3\\Technical Support Guides\\Classkick\\Classkick - how to.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 4.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 4.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 5.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 5.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 6.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 6.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 7.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 7.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 11.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 11.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 1.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 1.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Exampler Work - Lesson 5-6 .md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 5-6 .md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Exampler Work - Lesson 7-8.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 7-8.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Exampler Work - Lesson 9-10.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 9-10.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Exampler Work - Lesson 11-12 .md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 11-12 .md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 1.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 1.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 1 .md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 1 .md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 3.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 3.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 4.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 4.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 5.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 5.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 6.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 6.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 7.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 7.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 11.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 11.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    },
+    {
+      "type": "NAMING_INCONSISTENT",
+      "severity": "INFO",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md",
+      "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md"
+    },
+    {
+      "type": "NAMING_INCONSISTENT",
+      "severity": "INFO",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md",
+      "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md"
+    },
+    {
+      "type": "NAMING_INCONSISTENT",
+      "severity": "INFO",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md",
+      "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md"
+    },
+    {
+      "type": "NAMING_INCONSISTENT",
+      "severity": "INFO",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md",
+      "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md"
+    },
+    {
+      "type": "NAMING_INCONSISTENT",
+      "severity": "INFO",
+      "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md",
+      "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md"
+    }
+  ],
+  "anomalies_by_severity": {
+    "ERROR": [
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 1,
+        "content_type": "students_slides",
+        "message": "Lesson 1 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 2,
+        "content_type": "students_slides",
+        "message": "Lesson 2 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "teachers_slides",
+        "message": "Lesson 3 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "students_slides",
+        "message": "Lesson 3 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "teachers_slides",
+        "message": "Lesson 4 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "students_slides",
+        "message": "Lesson 4 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "teachers_slides",
+        "message": "Lesson 5 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "students_slides",
+        "message": "Lesson 5 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "teachers_slides",
+        "message": "Lesson 6 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "students_slides",
+        "message": "Lesson 6 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "teachers_slides",
+        "message": "Lesson 7 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "students_slides",
+        "message": "Lesson 7 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "teachers_slides",
+        "message": "Lesson 8 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "students_slides",
+        "message": "Lesson 8 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "teachers_slides",
+        "message": "Lesson 9 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "students_slides",
+        "message": "Lesson 9 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "teachers_slides",
+        "message": "Lesson 10 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "students_slides",
+        "message": "Lesson 10 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "teachers_slides",
+        "message": "Lesson 11 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "students_slides",
+        "message": "Lesson 11 missing students slides"
+      }
+    ],
+    "WARNING": [
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 8,
+        "content_type": "lesson_plan",
+        "message": "Lesson 8 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 9,
+        "content_type": "lesson_plan",
+        "message": "Lesson 9 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 10,
+        "content_type": "lesson_plan",
+        "message": "Lesson 10 missing lesson plan"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Curriculum Specifications Term 2 .md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Specifications Term 2 .md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Learning Schedule_Sheet1.csv",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Learning Schedule_Sheet1.csv"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Term 2 Introduction content.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Term 2 Introduction content.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md",
+        "message": "Document not assigned to any lesson: term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term3\\Technical Support Guides\\Classkick\\Classkick - how to.md",
+        "message": "Document not assigned to any lesson: term3\\Technical Support Guides\\Classkick\\Classkick - how to.md"
+      }
+    ],
+    "INFO": [
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 1,
+        "doc_z": 2.38,
+        "img_z": 0.49,
+        "message": "Lesson 1 has high content volume (doc z=2.38, img z=0.49)"
+      },
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 12,
+        "doc_z": 1.59,
+        "img_z": 2.27,
+        "message": "Lesson 12 has low content volume (doc z=1.59, img z=2.27)"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 4.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 4.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 5.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 5.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 6.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 6.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 7.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 7.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 11.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 11.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 1.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 1.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Exampler Work - Lesson 5-6 .md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 5-6 .md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Exampler Work - Lesson 7-8.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 7-8.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Exampler Work - Lesson 9-10.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 9-10.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Exampler Work - Lesson 11-12 .md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Exampler Work - Lesson 11-12 .md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 1.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 1.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 1 .md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 1 .md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 3.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 3.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 4.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 4.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 5.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 5.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 6.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 6.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 7.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 7.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 11.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 11.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      },
+      {
+        "type": "NAMING_INCONSISTENT",
+        "severity": "INFO",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md",
+        "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md"
+      },
+      {
+        "type": "NAMING_INCONSISTENT",
+        "severity": "INFO",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md",
+        "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md"
+      },
+      {
+        "type": "NAMING_INCONSISTENT",
+        "severity": "INFO",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md",
+        "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md"
+      },
+      {
+        "type": "NAMING_INCONSISTENT",
+        "severity": "INFO",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md",
+        "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md"
+      },
+      {
+        "type": "NAMING_INCONSISTENT",
+        "severity": "INFO",
+        "path": "term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md",
+        "message": "Misspelling: 'Exampler' should be 'Exemplar' in term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md"
+      }
+    ]
+  }
+}

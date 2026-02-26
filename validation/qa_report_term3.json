@@ -1,0 +1,692 @@
+{
+  "verdict": "NEEDS_REVIEW",
+  "generated_at": "2026-02-26T04:26:49.783451+00:00",
+  "started_at": "2026-02-26T04:26:49.783451+00:00",
+  "total_checks": 47,
+  "passed": 41,
+  "failed": 6,
+  "errors": 0,
+  "warnings": 3,
+  "info_failures": 3,
+  "layers_run": [
+    1,
+    3
+  ],
+  "per_layer": {
+    "1": {
+      "total": 46,
+      "passed": 40,
+      "failed": 6
+    },
+    "3": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "layer_summaries": {},
+  "llm_meta": {},
+  "results": [
+    {
+      "check_id": "S001",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "Top-level KB has all required fields",
+      "details": {
+        "term": 3,
+        "missing": []
+      }
+    },
+    {
+      "check_id": "S002",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All lessons have non-empty lesson_title",
+      "details": {
+        "term": 3,
+        "empty_indices": []
+      }
+    },
+    {
+      "check_id": "S003",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All lessons have required metadata keys",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S004",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All metadata.term_id match parent KB term",
+      "details": {
+        "term": 3,
+        "mismatches": []
+      }
+    },
+    {
+      "check_id": "S005",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All lesson_ids within 1-12",
+      "details": {
+        "term": 3,
+        "out_of_range": []
+      }
+    },
+    {
+      "check_id": "S006",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All core_topics are valid",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S007",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All learning_objectives are valid",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S008",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All endstar_tools are canonical",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S009",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All videos entries are valid dicts with url",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S010",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All resources are lists of strings",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S011",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All keywords are valid",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S012",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "All images entries are valid dicts with image_path",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S013",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All grade_band values match expected pattern",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "S014",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "All lessons have enriched dict",
+      "details": {
+        "term": 3,
+        "missing_indices": []
+      }
+    },
+    {
+      "check_id": "S015",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "No null values in array fields",
+      "details": {
+        "term": 3,
+        "nulls": []
+      }
+    },
+    {
+      "check_id": "S016",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "total_lessons matches actual count (12)",
+      "details": {
+        "term": 3,
+        "declared": 12,
+        "actual": 12
+      }
+    },
+    {
+      "check_id": "C001",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "No raw slide reference titles",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "C002",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All learning objectives meet minimum length",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "C003",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "No duplicate core_topics within lessons",
+      "details": {
+        "term": 3,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "C004",
+      "layer": 1,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "2 lessons have short activity_description (<50 chars)",
+      "details": {
+        "term": 3,
+        "issues": [
+          {
+            "lesson_id": 8,
+            "length": 0
+          },
+          {
+            "lesson_id": 10,
+            "length": 0
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C005",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All resource URLs are syntactically valid",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "C006",
+      "layer": 1,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "2 video URLs don't match known video domains",
+      "details": {
+        "term": 3,
+        "issues": [
+          {
+            "lesson_index": 2,
+            "video_index": 1,
+            "url": "https://docs.google.com/file/d/1zhMjUhFWC_swsC344_7KA_0ycUO3SnSR/preview",
+            "domain": "docs.google.com"
+          },
+          {
+            "lesson_index": 9,
+            "video_index": 0,
+            "url": "https://docs.google.com/file/d/1PbKFmxqT8tqu4LNMxz0oMSTPUSTM9r6l/preview",
+            "domain": "docs.google.com"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C007",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "All keywords meet minimum length",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "C008",
+      "layer": 1,
+      "passed": false,
+      "severity": "INFO",
+      "message": "1 keywords appear in >80% of lessons (possible overfit): ['design brief']",
+      "details": {
+        "term": 3,
+        "overfit_keywords": {
+          "design brief": 12
+        }
+      }
+    },
+    {
+      "check_id": "C009",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All endstar_tools are canonical",
+      "details": {
+        "term": 3,
+        "issues": []
+      }
+    },
+    {
+      "check_id": "C010",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All lessons have non-empty titles",
+      "details": {
+        "term": 3,
+        "empty_lesson_ids": []
+      }
+    },
+    {
+      "check_id": "C011",
+      "layer": 1,
+      "passed": false,
+      "severity": "INFO",
+      "message": "7 plain-text resources (no URL) — possibly incomplete",
+      "details": {
+        "term": 3,
+        "plain_text": [
+          {
+            "lesson_id": 1,
+            "resource": "design brief"
+          },
+          {
+            "lesson_id": 1,
+            "resource": "Design Briefs"
+          },
+          {
+            "lesson_id": 1,
+            "resource": "design briefs"
+          },
+          {
+            "lesson_id": 1,
+            "resource": "Classkick at the end of each lesson"
+          },
+          {
+            "lesson_id": 2,
+            "resource": "Classkick at the end of each lesson"
+          },
+          {
+            "lesson_id": 12,
+            "resource": "notebooklm.google.com - notebooklm.google.com"
+          },
+          {
+            "lesson_id": 12,
+            "resource": "Classkick at the end of each lesson"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C012",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "No video URL duplication across videos/resources",
+      "details": {
+        "term": 3,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "C013",
+      "layer": 1,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "1 trivial assessment_signals (separators or too short)",
+      "details": {
+        "term": 3,
+        "trivial": [
+          {
+            "lesson_id": 1,
+            "signal": "| --- | --- | --- | --- | --- |"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "C014",
+      "layer": 1,
+      "passed": false,
+      "severity": "INFO",
+      "message": "8 activity descriptions may be truncated mid-word",
+      "details": {
+        "term": 3,
+        "potentially_truncated": [
+          {
+            "lesson_id": 1,
+            "ending": "ayers, while keeping them conn"
+          },
+          {
+            "lesson_id": 2,
+            "ending": "1997 (0:30 – 3:00) where he ex"
+          },
+          {
+            "lesson_id": 3,
+            "ending": "trength\n\none limitation\n\nfor e"
+          },
+          {
+            "lesson_id": 4,
+            "ending": ", purpose, constraints, and su"
+          },
+          {
+            "lesson_id": 6,
+            "ending": " one issue, fix it, and retest"
+          },
+          {
+            "lesson_id": 7,
+            "ending": "y 7.3 – Build & Test Prototype"
+          },
+          {
+            "lesson_id": 9,
+            "ending": "his is Medium Impact + Low Eff"
+          },
+          {
+            "lesson_id": 12,
+            "ending": "\n\nStudents assess their progre"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "X001",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "KB has 12 lessons (expected 12, consolidated has 24 total, 12 in range)",
+      "details": {
+        "term": 3,
+        "kb_count": 12,
+        "expected": 12,
+        "cons_total": 24,
+        "cons_in_range": 12
+      }
+    },
+    {
+      "check_id": "X002",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All 12 expected lessons present in KB",
+      "details": {
+        "term": 3,
+        "missing": [],
+        "expected_range": "1-12"
+      }
+    },
+    {
+      "check_id": "X003",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Link counts consistent between consolidated and KB",
+      "details": {
+        "term": 3,
+        "mismatches": []
+      }
+    },
+    {
+      "check_id": "X004",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Image counts consistent",
+      "details": {
+        "term": 3,
+        "mismatches": []
+      }
+    },
+    {
+      "check_id": "X005",
+      "layer": 1,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "All lesson IDs contiguous",
+      "details": {
+        "term": 3,
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "actual": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "gaps": []
+      }
+    },
+    {
+      "check_id": "X006",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All lesson titles unique within term",
+      "details": {
+        "term": 3,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "X008",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "KB generated_at (2026-02-25T16:37:42) > consolidated_at (2026-02-25T16:37:24)",
+      "details": {
+        "term": 3,
+        "kb_ts": "2026-02-25T16:37:42.231165+00:00",
+        "cons_ts": "2026-02-25T16:37:24.876590+00:00"
+      }
+    },
+    {
+      "check_id": "X009",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "Term 3 has native docs: 12 lessons have native_google_content",
+      "details": {
+        "term": 3,
+        "has_native": true,
+        "lessons_with_native": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "check_id": "X010",
+      "layer": 1,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "All KB lessons have documents in consolidated",
+      "details": {
+        "term": 3,
+        "empty_lessons": []
+      }
+    },
+    {
+      "check_id": "X011",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "Templates KB found for term 3",
+      "details": {
+        "term": 3,
+        "template_files": [
+          "templates.json",
+          "Term 1 - Templates.json",
+          "Term 2 - Templates.json"
+        ]
+      }
+    },
+    {
+      "check_id": "R001",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "R002",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "R003",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "R004",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "R005",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "R006",
+      "layer": 1,
+      "passed": true,
+      "severity": "INFO",
+      "message": "No previous build for term 3 — skipping regression check",
+      "details": {
+        "term": 3,
+        "skipped": true
+      }
+    },
+    {
+      "check_id": "E003",
+      "layer": 3,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "Term 3: 12 lessons correct",
+      "details": {
+        "term": 3,
+        "actual": 12,
+        "expected": 12
+      }
+    }
+  ]
+}

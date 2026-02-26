@@ -1,0 +1,58 @@
+======================================================================
+  CROSS-VALIDATION REPORT
+  2026-02-25T19:22:34.966427+00:00
+  Model: opus (via claude CLI)
+======================================================================
+
+Overall Confidence: 30%
+
+PHASE 1: Error Investigation
+----------------------------------------
+  Total errors reviewed: 22
+  Confirmed errors:      0
+  False positives:       22
+  Uncertain:             0
+
+  False Positives (top 10):
+    - Term 2 L1: students_slides — Student slides are not consistently provided across terms
+    - Term 2 L2: students_slides — Student slides are not consistently provided across terms
+    - Term 2 L3: teachers_slides — Lesson has 3 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\Lesson 3\\Handout.
+    - Term 2 L3: students_slides — Student slides are not consistently provided across terms
+    - Term 2 L4: teachers_slides — Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\Teacher Resources\
+    - Term 2 L4: students_slides — Student slides are not consistently provided across terms
+    - Term 2 L5: teachers_slides — Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\Teacher Resources\
+    - Term 2 L5: students_slides — Student slides are not consistently provided across terms
+    - Term 2 L6: teachers_slides — Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\Teacher Resources\
+    - Term 2 L6: students_slides — Student slides are not consistently provided across terms
+
+PHASE 2: Pass Verification
+----------------------------------------
+  Lessons available:     12
+  Lessons selected:      6
+  Selection rate:        50%
+
+  Average field accuracy: 0.0%
+
+  Per-Lesson Scores:
+    Term 2 L1: 0%
+    Term 2 L2: 0%
+    Term 2 L3: 0%
+    Term 2 L4: 0%
+    Term 2 L5: 0%
+    Term 2 L8: 0%
+
+  Field Accuracy Summary:
+    lesson_title             : 0% correct (0C 0P 0I 6M)
+    learning_objectives      : 0% correct (0C 0P 0I 6M)
+    core_topics              : 0% correct (0C 0P 0I 6M)
+    activity_description     : 0% correct (0C 0P 0I 6M)
+    resources                : 0% correct (0C 0P 0I 6M)
+    videos                   : 0% correct (0C 0P 0I 6M)
+    endstar_tools            : 0% correct (0C 0P 0I 6M)
+    keywords                 : 0% correct (0C 0P 0I 6M)
+
+RECOMMENDATIONS
+----------------------------------------
+  - Fix content_type detection for non-standard filenames (10 false positives from naming mismatches)
+  - Remove students_slides from EXPECTED_CONTENT_TYPES or make it optional (12 false positives)
+

@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-02-26T10:03:04.059953+00:00",
+  "lesson_coverage": 1.0,
+  "lesson_coverage_pct": "100.0%",
+  "overall_coverage": 1.0,
+  "overall_coverage_pct": "100.0%",
+  "total_source": 13502,
+  "matched": 11879,
+  "structural": 766,
+  "unmatched": 0,
+  "skipped_trivial": 857,
+  "total_kb": 11387,
+  "truncations": [],
+  "stage_losses": {},
+  "checks": [
+    {
+      "check_id": "V001",
+      "layer": 5,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "Lesson content coverage: 100.0% (12645 matched [766 structural], 0 unmatched of lesson-assigned atoms)",
+      "details": {
+        "lesson_coverage": 1.0,
+        "overall_coverage": 1.0,
+        "lesson_matched": 11879,
+        "lesson_structural": 766,
+        "lesson_unmatched": 0,
+        "total_source": 13502,
+        "skipped_trivial": 857
+      }
+    },
+    {
+      "check_id": "V002",
+      "layer": 5,
+      "passed": true,
+      "severity": "ERROR",
+      "message": "Link extraction coverage: 100.0% (178/178)",
+      "details": {
+        "link_coverage": 1.0,
+        "matched": 178,
+        "total": 178
+      }
+    },
+    {
+      "check_id": "V003",
+      "layer": 5,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Text content lost at early stages: 0 atoms",
+      "details": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    {
+      "check_id": "V004",
+      "layer": 5,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Truncation limits hit: 0 fields",
+      "details": {
+        "truncations": []
+      }
+    },
+    {
+      "check_id": "V005",
+      "layer": 5,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Source files with unassigned content: 0",
+      "details": {
+        "files": []
+      }
+    },
+    {
+      "check_id": "V006",
+      "layer": 5,
+      "passed": true,
+      "severity": "INFO",
+      "message": "Speaker note preservation: 100.0% (335/335)",
+      "details": {
+        "coverage": 1.0,
+        "matched": 335,
+        "total": 335
+      }
+    },
+    {
+      "check_id": "V007",
+      "layer": 5,
+      "passed": false,
+      "severity": "WARNING",
+      "message": "Unconsumed native doc sections: 893 (new content types may need dedicated KB fields)",
+      "details": {
+        "count": 893,
+        "examples": [
+          {
+            "term": 3,
+            "lesson": 1,
+            "content": "Term 2 assessment is split evenly between process and product .",
+            "location": "remaining_content[0].content[0]"
+          },
+          {
+            "term": 3,
+            "lesson": 1,
+            "content": "Portfolio: 50 marks (50%)",
+            "location": "remaining_content[0].content[1]"
+          },
+          {
+            "term": 3,
+            "lesson": 1,
+            "content": "Game: 50 marks (50%)",
+            "location": "remaining_content[0].content[2]"
+          },
+          {
+            "term": 3,
+            "lesson": 1,
+            "content": "Assessment is completed once at the end of Term 2, except for portfolio completi",
+            "location": "remaining_content[0].content[3]"
+          },
+          {
+            "term": 3,
+            "lesson": 1,
+            "content": "This document remains the single source of truth for Term 2 assessment.",
+            "location": "remaining_content[0].content[4]"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "V008",
+      "layer": 5,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "New/unclassified source files: 0 (all files classified)",
+      "details": {
+        "count": 0,
+        "files": []
+      }
+    },
+    {
+      "check_id": "V009",
+      "layer": 5,
+      "passed": true,
+      "severity": "WARNING",
+      "message": "Stale manifest entries (missing from disk): 0 (all manifest entries valid)",
+      "details": {
+        "count": 0,
+        "files": []
+      }
+    }
+  ]
+}

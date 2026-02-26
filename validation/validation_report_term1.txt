@@ -1,0 +1,78 @@
+======================================================================
+  VALIDATION REPORT — Term 1
+======================================================================
+
+Status: NEEDS_REVIEW
+Confidence: 60%
+Publish Blocked: True
+
+Anomalies: 90
+  Errors:   23
+  Warnings: 38
+  Info:     29
+
+ERRORS:
+  [ERROR] Lesson 1 missing students slides
+  [ERROR] Lesson 2 missing teachers slides
+  [ERROR] Lesson 2 missing students slides
+  [ERROR] Lesson 3 missing teachers slides
+  [ERROR] Lesson 3 missing students slides
+  [ERROR] Lesson 4 missing teachers slides
+  [ERROR] Lesson 4 missing students slides
+  [ERROR] Lesson 5 missing teachers slides
+  [ERROR] Lesson 5 missing students slides
+  [ERROR] Lesson 6 missing teachers slides
+  [ERROR] Lesson 6 missing students slides
+  [ERROR] Lesson 7 missing teachers slides
+  [ERROR] Lesson 7 missing students slides
+  [ERROR] Lesson 8 missing teachers slides
+  [ERROR] Lesson 8 missing students slides
+  [ERROR] Lesson 9 missing teachers slides
+  [ERROR] Lesson 9 missing students slides
+  [ERROR] Lesson 10 missing teachers slides
+  [ERROR] Lesson 10 missing students slides
+  [ERROR] Lesson 11 missing teachers slides
+  [ERROR] Lesson 11 missing students slides
+  [ERROR] Lesson 12 missing teachers slides
+  [ERROR] Lesson 12 missing students slides
+
+WARNINGS:
+  [WARNING] Lesson 1 missing lesson plan
+  [WARNING] Lesson 2 missing lesson plan
+  [WARNING] Lesson 3 missing lesson plan
+  [WARNING] Lesson 4 missing lesson plan
+  [WARNING] Lesson 5 missing lesson plan
+  [WARNING] Lesson 6 missing lesson plan
+  [WARNING] Lesson 7 missing lesson plan
+  [WARNING] Lesson 8 missing lesson plan
+  [WARNING] Lesson 9 missing lesson plan
+  [WARNING] Lesson 10 missing lesson plan
+  [WARNING] Lesson 11 missing lesson plan
+  [WARNING] Lesson 12 missing lesson plan
+  [WARNING] Document not assigned to any lesson: term1\Administrative\Explorers Programme Curriculum Specifications Term 1.md
+  [WARNING] Document not assigned to any lesson: term1\Administrative\IB Wrapper Design Curriciulum Mapping.md
+  [WARNING] Document not assigned to any lesson: term1\Feedback & Surveys\Feedback Forms.md
+  [WARNING] Document not assigned to any lesson: term1\Programme Overview\Explorer's Programme Overview.md
+  [WARNING] Document not assigned to any lesson: term1\Programme Overview\Learning Outcomes - Jan 2026 Cohort.md
+  [WARNING] Document not assigned to any lesson: term1\Programme Overview\Teacher Training - Explorer Programme.md
+  [WARNING] Document not assigned to any lesson: term1\Quick Access Links\Curriculum Overview - Canva Link.md
+  [WARNING] Document not assigned to any lesson: term1\Showcase & Deliverables\Pitch and Student Rubric links.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Endstar Level Design - Teacher Rubric.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Endstar Setup Guide.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Endstar Troubleshooting V1.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv
+  [WARNING] Document not assigned to any lesson: term1\Technical Support\Endstar Engine Props and Rule Block Cheat Sheet.md
+  [WARNING] Document not assigned to any lesson: term1\Technical Support\Endstar Setup Guide.md
+  [WARNING] Document not assigned to any lesson: term1\Technical Support\Endstar Troubleshooting.md
+  [WARNING] Document not assigned to any lesson: term1\Lessons Resources\Student Assessment Templates\Students Assesment Templates .md
+  [WARNING] Document not assigned to any lesson: term1\Lessons Resources\Student Assessment Templates\Students Master Checklist - V1.md
+  [WARNING] Document not assigned to any lesson: term1\Lessons Resources\Student Assessment Templates\Students Master Checklist_Sheet1.csv
+  [WARNING] Document not assigned to any lesson: term1\Lessons Resources\Student Assessment Templates\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md
+  [WARNING] Document not assigned to any lesson: term1\Programme Overview\Canva File Link\Endstar Term 2 Overview.md
+  [WARNING] Document not assigned to any lesson: term1\Quick Access Links\Troubleshooting Guide\Endstar Troubleshooting.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Exemplar Workbook\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md
+  [WARNING] Document not assigned to any lesson: term1\Teacher Resources\Exemplar Workbook\Explorers Programme - January 2026 - Abderrahmane.md
+

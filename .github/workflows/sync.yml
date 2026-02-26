@@ -1,0 +1,77 @@
+name: KB Sync & Build Pipeline
+
+on:
+  schedule:
+    # Midnight UAE (UTC+4) = 20:00 UTC
+    - cron: '0 20 * * *'
+
+  workflow_dispatch:
+    inputs:
+      force_full:
+        description: 'Force full pipeline rebuild'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install google-auth google-auth-oauthlib google-api-python-client
+          pip install python-pptx python-docx openpyxl PyPDF2
+
+      - name: Run Pipeline
+        env:
+          GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ "${{ github.event.inputs.force_full }}" = "true" ]; then
+            python run_pipeline.py --force-full
+          else
+            python run_pipeline.py
+          fi
+
+      - name: Run Extraction Verification
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python verify_extraction.py --save --github-summary
+
+      - name: Commit output files
+        run: |
+          git config user.name "KB Pipeline Bot"
+          git config user.email "kb-pipeline@endstar.ai"
+          git add output/ logs/ state/ validation/ -f
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "KB Pipeline: Auto-sync $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Upload logs as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-logs-${{ github.run_number }}
+          path: logs/
+          retention-days: 30

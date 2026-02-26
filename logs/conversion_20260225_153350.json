@@ -1,0 +1,31 @@
+{
+  "converted_at": "2026-02-25T15:33:50.729506+00:00",
+  "files": [
+    {
+      "source": "C:\\Users\\Bora\\AppData\\Local\\Temp\\pytest-of-Bora\\pytest-899\\test_duplicate_detected_both_p0\\sources\\term1\\Lesson 1\\Teachers Slide.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lesson 1\\Teachers Slide.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "C:\\Users\\Bora\\AppData\\Local\\Temp\\pytest-of-Bora\\pytest-899\\test_duplicate_detected_both_p0\\sources\\term1\\Lesson 1\\Teachers Slides.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lesson 1\\Teachers Slides.md",
+      "success": true,
+      "error": null
+    }
+  ],
+  "summary": {
+    "success": 2,
+    "failed": 0,
+    "by_type": {
+      "PPTX": 2
+    }
+  },
+  "pdf_metadata": {
+    "total_images": 0,
+    "total_links": 0,
+    "files": []
+  }
+}

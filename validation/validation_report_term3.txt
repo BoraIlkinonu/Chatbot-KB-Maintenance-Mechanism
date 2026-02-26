@@ -1,0 +1,56 @@
+======================================================================
+  VALIDATION REPORT — Term 3
+======================================================================
+
+Status: NEEDS_REVIEW
+Confidence: 60%
+Publish Blocked: True
+
+Anomalies: 71
+  Errors:   20
+  Warnings: 19
+  Info:     32
+
+ERRORS:
+  [ERROR] Lesson 1 missing students slides
+  [ERROR] Lesson 2 missing students slides
+  [ERROR] Lesson 3 missing teachers slides
+  [ERROR] Lesson 3 missing students slides
+  [ERROR] Lesson 4 missing teachers slides
+  [ERROR] Lesson 4 missing students slides
+  [ERROR] Lesson 5 missing teachers slides
+  [ERROR] Lesson 5 missing students slides
+  [ERROR] Lesson 6 missing teachers slides
+  [ERROR] Lesson 6 missing students slides
+  [ERROR] Lesson 7 missing teachers slides
+  [ERROR] Lesson 7 missing students slides
+  [ERROR] Lesson 8 missing teachers slides
+  [ERROR] Lesson 8 missing students slides
+  [ERROR] Lesson 9 missing teachers slides
+  [ERROR] Lesson 9 missing students slides
+  [ERROR] Lesson 10 missing teachers slides
+  [ERROR] Lesson 10 missing students slides
+  [ERROR] Lesson 11 missing teachers slides
+  [ERROR] Lesson 11 missing students slides
+
+WARNINGS:
+  [WARNING] Lesson 8 missing lesson plan
+  [WARNING] Lesson 9 missing lesson plan
+  [WARNING] Lesson 10 missing lesson plan
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Curriculum Specifications Term 2 .md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Learning Schedule_Sheet1.csv
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Term 2 Introduction content.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Curriculum Alignment\US Computer Science Curriculum Alignment (US private schools and Charter schools).md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\Defender Of The Desert Term_2_Design Brief.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\Exemplar-Games.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\Guardians Of History Term_2_Design Brief.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\Open Brief Term_2_Design Brief.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\Term_2_Design Briefs All 6 in A4.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\The Grandeur Of Light Term_2_Design Brief.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\The Secrets Of Art Term_2_Design Brief.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Design Briefs and Exemplar Games\The Time Traveler's Compass Term_2_Design Briefs .md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Assessment Guides\Student Guide\TERM 2 ASSESSMENT – STUDENT GUIDE.md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Assessment Guides\Student Guide\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md
+  [WARNING] Document not assigned to any lesson: term3\Teacher Resources\Curriculum Content\LO's and Success Criteria\Term-2LOsSC-and-AI-KS.md
+  [WARNING] Document not assigned to any lesson: term3\Technical Support Guides\Classkick\Classkick - how to.md
+

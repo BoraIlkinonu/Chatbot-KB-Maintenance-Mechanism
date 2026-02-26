@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-02-25T12:57:17.522620+00:00",
+  "term": 2,
+  "total_templates": 5,
+  "templates": [
+    {
+      "file": "https://docs.google.com/document/d/1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W/edit?usp=drivesdk&ouid=108982108349610202917&rtpof=true&sd=true",
+      "metadata": {
+        "id": "term-2-assessment-student-guide",
+        "template_name": "TERM 2 ASSESSMENT – STUDENT GUIDE",
+        "programme_component": "summative-product",
+        "purpose": "Your Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": [
+            "Core mechanics are basic, incomplete, or inconsistently implemented.  Puzzles rely on simple or repetitive logic with weak progression. Required systems (interactive objects, NPC logic, zones, progression, win conditions) may be missing or malfunctioning, with bugs interrupting gameplay."
+          ]
+        },
+        "term": 2,
+        "source_drive_id": "1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W",
+        "modified_time": "2025-12-24T07:30:16.090Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD/view?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-student-guide-visual-version",
+        "template_name": "TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version ",
+        "programme_component": "summative-product",
+        "purpose": "Your Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": [
+            "This rubric is not a checklist"
+          ]
+        },
+        "term": 2,
+        "source_drive_id": "1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD",
+        "modified_time": "2025-12-24T07:30:37.525Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA/edit?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-teacher-portfolio-game",
+        "template_name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME)",
+        "programme_component": "summative-product",
+        "purpose": "Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA",
+        "modified_time": "2025-12-31T07:24:18.754Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL/view?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-teacher-portfolio-game-visual-version",
+        "template_name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version",
+        "programme_component": "summative-product",
+        "purpose": "Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL",
+        "modified_time": "2025-12-31T07:30:01.912Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?usp=drivesdk&ouid=108982108349610202917&rtpof=true&sd=true",
+      "metadata": {
+        "id": "activities-portfolio-deck",
+        "template_name": "Activities & Portfolio Deck",
+        "programme_component": "assessment",
+        "purpose": "Student Portfolio template for the Explorer's Programme",
+        "weighting_percent": 25,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_",
+        "modified_time": "2026-01-09T10:29:22.917Z"
+      }
+    }
+  ]
+}

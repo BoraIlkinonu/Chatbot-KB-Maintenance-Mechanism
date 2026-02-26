@@ -1,0 +1,179 @@
+{
+  "audit_at": "2026-02-25T16:38:15.334018+00:00",
+  "summary": {
+    "total_checks": 24,
+    "passed": 24,
+    "failed": 0,
+    "pass_rate": 100.0
+  },
+  "checks": [
+    {
+      "check": "Stage 1: total PPTX images ≈ 1042",
+      "passed": true,
+      "status": "PASS",
+      "actual": 1042,
+      "expected": 1042,
+      "tolerance": "±5%"
+    },
+    {
+      "check": "Stage 1: total PPTX links ≈ 146",
+      "passed": true,
+      "status": "PASS",
+      "actual": 146,
+      "expected": 146,
+      "tolerance": "±10%"
+    },
+    {
+      "check": "Stage 1: every PPTX entry has 'images' and 'links' keys",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 2: total PDF images ≈ 68",
+      "passed": true,
+      "status": "PASS",
+      "actual": 64,
+      "expected": 68,
+      "tolerance": "±10%"
+    },
+    {
+      "check": "Stage 2: total PDF links ≈ 157",
+      "passed": true,
+      "status": "PASS",
+      "actual": 157,
+      "expected": 157,
+      "tolerance": "±10%"
+    },
+    {
+      "check": "Stage 3: native Slides links ≈ 80",
+      "passed": true,
+      "status": "PASS",
+      "actual": 80,
+      "expected": 80,
+      "tolerance": "±10%"
+    },
+    {
+      "check": "Stage 3: native Slides embedded videos ≈ 3",
+      "passed": true,
+      "status": "PASS",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": "±50%"
+    },
+    {
+      "check": "Stage 3: native Docs links ≈ 25",
+      "passed": true,
+      "status": "PASS",
+      "actual": 25,
+      "expected": 25,
+      "tolerance": "±10%"
+    },
+    {
+      "check": "Stage 3: every Slides extraction has 'links' and 'videos' per slide",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 3: every Doc extraction has top-level 'links' list",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 5: consolidated content files exist",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 5: summary has 'total_links' field",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 5: summary has 'total_video_refs' field",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 5: summary has 'total_video_files' field",
+      "passed": true,
+      "status": "PASS"
+    },
+    {
+      "check": "Stage 5: total_video_files ≈ 14",
+      "passed": true,
+      "status": "PASS",
+      "actual": 14,
+      "expected": 14,
+      "tolerance": "±30%"
+    },
+    {
+      "check": "Stage 5: every lesson has 'links' and 'video_refs' keys",
+      "passed": true,
+      "status": "PASS",
+      "actual": 58,
+      "expected": 58
+    },
+    {
+      "check": "Stage 5: ≥30 lessons have non-empty links",
+      "passed": true,
+      "status": "PASS",
+      "actual": 33,
+      "expected": "≥30"
+    },
+    {
+      "check": "Stage 6: endstar_tools non-empty for ≥10 lessons",
+      "passed": true,
+      "status": "PASS",
+      "actual": 38,
+      "expected": "≥10"
+    },
+    {
+      "check": "Stage 6: videos non-empty for ≥8 lessons",
+      "passed": true,
+      "status": "PASS",
+      "actual": 20,
+      "expected": "≥8"
+    },
+    {
+      "check": "Stage 6: resources non-empty for ≥30 lessons",
+      "passed": true,
+      "status": "PASS",
+      "actual": 31,
+      "expected": "≥30"
+    },
+    {
+      "check": "Stage 6 spot: T2L5 resources contains 'notebooklm'",
+      "passed": true,
+      "status": "PASS",
+      "actual": "launch brie - https://docs.google.com/presentation/d/1mzwwbwdmvdrwytxx0qm-bdqotkmhj0z7/edit?slide=id.g3c20245e7e7_0_0#slide=id.g3c20245e7e7_0_0 launch decision - https://docs.google.com/presentation/d"
+    },
+    {
+      "check": "Stage 6 spot: T2L11 resources has ≥1 entry",
+      "passed": true,
+      "status": "PASS",
+      "actual": 3,
+      "expected": "≥1"
+    },
+    {
+      "check": "Stage 6 spot: T3L6 endstar_tools contains 'Mechanics'",
+      "passed": true,
+      "status": "PASS",
+      "actual": [
+        "Interactions",
+        "Logic",
+        "Mechanics",
+        "NPCs",
+        "Prototyping tools",
+        "Sound",
+        "Triggers"
+      ]
+    },
+    {
+      "check": "Stage 6 spot: T1L1 resources has ≥2 entries",
+      "passed": true,
+      "status": "PASS",
+      "actual": 2,
+      "expected": "≥2"
+    }
+  ]
+}

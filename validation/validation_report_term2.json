@@ -1,0 +1,949 @@
+{
+  "generated_at": "2026-02-25T16:37:51.164873+00:00",
+  "status": "NEEDS_REVIEW",
+  "overall_confidence": 60,
+  "publish_blocked": true,
+  "summary": {
+    "total_lessons": 12,
+    "anomalies_total": 61,
+    "errors": 22,
+    "warnings": 14,
+    "info": 25
+  },
+  "per_lesson": {
+    "1": {
+      "documents": 1,
+      "images": 30,
+      "native": 0,
+      "anomalies": 2
+    },
+    "2": {
+      "documents": 1,
+      "images": 39,
+      "native": 0,
+      "anomalies": 2
+    },
+    "3": {
+      "documents": 3,
+      "images": 34,
+      "native": 0,
+      "anomalies": 4
+    },
+    "4": {
+      "documents": 1,
+      "images": 43,
+      "native": 0,
+      "anomalies": 3
+    },
+    "5": {
+      "documents": 1,
+      "images": 25,
+      "native": 0,
+      "anomalies": 3
+    },
+    "6": {
+      "documents": 1,
+      "images": 35,
+      "native": 0,
+      "anomalies": 3
+    },
+    "7": {
+      "documents": 1,
+      "images": 32,
+      "native": 0,
+      "anomalies": 3
+    },
+    "8": {
+      "documents": 1,
+      "images": 24,
+      "native": 0,
+      "anomalies": 3
+    },
+    "9": {
+      "documents": 1,
+      "images": 28,
+      "native": 0,
+      "anomalies": 3
+    },
+    "10": {
+      "documents": 1,
+      "images": 24,
+      "native": 0,
+      "anomalies": 3
+    },
+    "11": {
+      "documents": 1,
+      "images": 22,
+      "native": 0,
+      "anomalies": 3
+    },
+    "12": {
+      "documents": 1,
+      "images": 22,
+      "native": 0,
+      "anomalies": 3
+    }
+  },
+  "anomalies": [
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 1,
+      "content_type": "students_slides",
+      "message": "Lesson 1 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 1,
+      "content_type": "lesson_plan",
+      "message": "Lesson 1 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 2,
+      "content_type": "students_slides",
+      "message": "Lesson 2 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 2,
+      "content_type": "lesson_plan",
+      "message": "Lesson 2 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "teachers_slides",
+      "message": "Lesson 3 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "students_slides",
+      "message": "Lesson 3 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 3,
+      "content_type": "lesson_plan",
+      "message": "Lesson 3 missing lesson plan"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 3,
+      "doc_z": 3.32,
+      "img_z": 0.63,
+      "message": "Lesson 3 has low content volume (doc z=3.32, img z=0.63)"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "teachers_slides",
+      "message": "Lesson 4 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "students_slides",
+      "message": "Lesson 4 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 4,
+      "content_type": "lesson_plan",
+      "message": "Lesson 4 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "teachers_slides",
+      "message": "Lesson 5 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "students_slides",
+      "message": "Lesson 5 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 5,
+      "content_type": "lesson_plan",
+      "message": "Lesson 5 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "teachers_slides",
+      "message": "Lesson 6 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "students_slides",
+      "message": "Lesson 6 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 6,
+      "content_type": "lesson_plan",
+      "message": "Lesson 6 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "teachers_slides",
+      "message": "Lesson 7 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "students_slides",
+      "message": "Lesson 7 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 7,
+      "content_type": "lesson_plan",
+      "message": "Lesson 7 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "teachers_slides",
+      "message": "Lesson 8 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "students_slides",
+      "message": "Lesson 8 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 8,
+      "content_type": "lesson_plan",
+      "message": "Lesson 8 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "teachers_slides",
+      "message": "Lesson 9 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "students_slides",
+      "message": "Lesson 9 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 9,
+      "content_type": "lesson_plan",
+      "message": "Lesson 9 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "teachers_slides",
+      "message": "Lesson 10 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "students_slides",
+      "message": "Lesson 10 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 10,
+      "content_type": "lesson_plan",
+      "message": "Lesson 10 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "teachers_slides",
+      "message": "Lesson 11 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "students_slides",
+      "message": "Lesson 11 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 11,
+      "content_type": "lesson_plan",
+      "message": "Lesson 11 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 12,
+      "content_type": "teachers_slides",
+      "message": "Lesson 12 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 12,
+      "content_type": "students_slides",
+      "message": "Lesson 12 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 12,
+      "content_type": "lesson_plan",
+      "message": "Lesson 12 missing lesson plan"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md",
+      "message": "Document not assigned to any lesson: term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md",
+      "message": "Document not assigned to any lesson: term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 4.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 4.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 5.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 5.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 6.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 6.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 7.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 7.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 8.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 8.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 9.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 9.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 11.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 11.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 13.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 13.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 14.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 14.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 1.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 1.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 1.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 1.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 2.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 3.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 3.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 4.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 4.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 5.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 5.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 6.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 6.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 7.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 7.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 11.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 11.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Lesson 12.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Lesson 12.md"
+    }
+  ],
+  "anomalies_by_severity": {
+    "ERROR": [
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 1,
+        "content_type": "students_slides",
+        "message": "Lesson 1 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 2,
+        "content_type": "students_slides",
+        "message": "Lesson 2 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "teachers_slides",
+        "message": "Lesson 3 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "students_slides",
+        "message": "Lesson 3 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "teachers_slides",
+        "message": "Lesson 4 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "students_slides",
+        "message": "Lesson 4 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "teachers_slides",
+        "message": "Lesson 5 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "students_slides",
+        "message": "Lesson 5 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "teachers_slides",
+        "message": "Lesson 6 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "students_slides",
+        "message": "Lesson 6 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "teachers_slides",
+        "message": "Lesson 7 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "students_slides",
+        "message": "Lesson 7 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "teachers_slides",
+        "message": "Lesson 8 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "students_slides",
+        "message": "Lesson 8 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "teachers_slides",
+        "message": "Lesson 9 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "students_slides",
+        "message": "Lesson 9 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "teachers_slides",
+        "message": "Lesson 10 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "students_slides",
+        "message": "Lesson 10 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "teachers_slides",
+        "message": "Lesson 11 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "students_slides",
+        "message": "Lesson 11 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 12,
+        "content_type": "teachers_slides",
+        "message": "Lesson 12 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 12,
+        "content_type": "students_slides",
+        "message": "Lesson 12 missing students slides"
+      }
+    ],
+    "WARNING": [
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 1,
+        "content_type": "lesson_plan",
+        "message": "Lesson 1 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 2,
+        "content_type": "lesson_plan",
+        "message": "Lesson 2 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 3,
+        "content_type": "lesson_plan",
+        "message": "Lesson 3 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 4,
+        "content_type": "lesson_plan",
+        "message": "Lesson 4 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 5,
+        "content_type": "lesson_plan",
+        "message": "Lesson 5 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 6,
+        "content_type": "lesson_plan",
+        "message": "Lesson 6 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 7,
+        "content_type": "lesson_plan",
+        "message": "Lesson 7 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 8,
+        "content_type": "lesson_plan",
+        "message": "Lesson 8 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 9,
+        "content_type": "lesson_plan",
+        "message": "Lesson 9 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 10,
+        "content_type": "lesson_plan",
+        "message": "Lesson 10 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 11,
+        "content_type": "lesson_plan",
+        "message": "Lesson 11 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 12,
+        "content_type": "lesson_plan",
+        "message": "Lesson 12 missing lesson plan"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md",
+        "message": "Document not assigned to any lesson: term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md",
+        "message": "Document not assigned to any lesson: term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md"
+      }
+    ],
+    "INFO": [
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 3,
+        "doc_z": 3.32,
+        "img_z": 0.63,
+        "message": "Lesson 3 has low content volume (doc z=3.32, img z=0.63)"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 4.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 4.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 5.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 5.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 6.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 6.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 7.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 7.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 8.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 8.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 9.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 9.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 11.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 11.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 13.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 13.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 14.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 14.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 1.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 1.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 1.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 1.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 2.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 3.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 3.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 4.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 4.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 5.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 5.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 6.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 6.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 7.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 7.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 11.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 11.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Lesson 12.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Lesson 12.md"
+      }
+    ]
+  }
+}

@@ -1,0 +1,871 @@
+{
+  "cross_validated_at": "2026-02-25T19:22:34.966427+00:00",
+  "model_used": "opus",
+  "cli_tool": "claude",
+  "phase1_error_investigation": {
+    "total_errors_reviewed": 22,
+    "qa_failures_reviewed": 0,
+    "confirmed_errors": [],
+    "false_positives": [
+      {
+        "term": 2,
+        "lesson": 1,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 2,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 3,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 3 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Lesson 3\\\\Handout.md', 'term2\\\\Lesson 3\\\\Slides.md', 'term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 2\\\\Lesson 3.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 3,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 4,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 2\\\\Lesson 4.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 4,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 5,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 3\\\\Lesson 5.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 5,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 6,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 3\\\\Lesson 6.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 6,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 7,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 4\\\\Lesson 7.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 7,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 8,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 4\\\\Lesson 8.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 8,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 9,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 5\\\\Lesson 9.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 9,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 10,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 5\\\\Lesson 10.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 10,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 11,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 6\\\\Lesson 11.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 11,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "llm_evidence": "Call failed: Command '['claude', '-p', '--model', 'opus', '--output-format', 'json', '--json-schema', '{\"type\": \"object\", \"properties\": {\"verdict\": {\"type\": \"string\", \"enum\": [\"TRUE_POSITIVE\", \"FALSE_POSITIVE\", \"UNCERTAIN\"]}, \"reason\": {\"type\": \"string\"}, \"evidence\": {\"type\": \"string\"}}, \"required\": [\"verdict\", \"reason\", \"evidence\"]}']' timed out after 120 seconds",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 12,
+        "type": "MISSING",
+        "content_type": "teachers_slides",
+        "reason": "Lesson has 1 document(s) but content_type != 'teachers_slides'. File(s): ['term2\\\\Teacher Resources\\\\Curriculum Content\\\\Week 6\\\\Lesson 12.md']",
+        "evidence": "Filename pattern mismatch — content exists under different name",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      },
+      {
+        "term": 2,
+        "lesson": 12,
+        "type": "MISSING",
+        "content_type": "students_slides",
+        "reason": "Student slides are not consistently provided across terms",
+        "evidence": "Structural observation — not all lessons include student versions",
+        "llm_verdict": "UNCERTAIN",
+        "llm_reason": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "llm_evidence": "Call failed: Expecting value: line 1 column 1 (char 0)",
+        "consensus": true,
+        "judge_votes": [
+          "UNCERTAIN",
+          "UNCERTAIN"
+        ]
+      }
+    ],
+    "uncertain": []
+  },
+  "phase2_pass_verification": {
+    "total_available": 12,
+    "total_selected": 6,
+    "selection_rate": "50%",
+    "per_lesson": [
+      {
+        "term": 2,
+        "lesson": 2,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      },
+      {
+        "term": 2,
+        "lesson": 4,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      },
+      {
+        "term": 2,
+        "lesson": 3,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      },
+      {
+        "term": 2,
+        "lesson": 1,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      },
+      {
+        "term": 2,
+        "lesson": 5,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      },
+      {
+        "term": 2,
+        "lesson": 8,
+        "fields": {
+          "lesson_title": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "learning_objectives": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "core_topics": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "activity_description": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "resources": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "videos": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "endstar_tools": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          },
+          "keywords": {
+            "verdict": "MISSING",
+            "evidence": "Call failed: Expecting value: line 1 column 1 (char 0)"
+          }
+        },
+        "overall_score": 0.0,
+        "consensus": true,
+        "judge_votes": {
+          "lesson_title": [
+            "MISSING",
+            "MISSING"
+          ],
+          "learning_objectives": [
+            "MISSING",
+            "MISSING"
+          ],
+          "core_topics": [
+            "MISSING",
+            "MISSING"
+          ],
+          "activity_description": [
+            "MISSING",
+            "MISSING"
+          ],
+          "resources": [
+            "MISSING",
+            "MISSING"
+          ],
+          "videos": [
+            "MISSING",
+            "MISSING"
+          ],
+          "endstar_tools": [
+            "MISSING",
+            "MISSING"
+          ],
+          "keywords": [
+            "MISSING",
+            "MISSING"
+          ]
+        }
+      }
+    ],
+    "field_accuracy": {
+      "lesson_title": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "learning_objectives": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "core_topics": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "activity_description": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "resources": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "videos": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "endstar_tools": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      },
+      "keywords": {
+        "correct": 0,
+        "partial": 0,
+        "incorrect": 0,
+        "missing": 6
+      }
+    }
+  },
+  "overall_confidence": 0.3,
+  "recommendations": [
+    "Fix content_type detection for non-standard filenames (10 false positives from naming mismatches)",
+    "Remove students_slides from EXPECTED_CONTENT_TYPES or make it optional (12 false positives)"
+  ]
+}

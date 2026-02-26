@@ -1,0 +1,1311 @@
+{
+  "generated_at": "2026-02-25T16:37:51.153273+00:00",
+  "status": "NEEDS_REVIEW",
+  "overall_confidence": 60,
+  "publish_blocked": true,
+  "summary": {
+    "total_lessons": 22,
+    "anomalies_total": 90,
+    "errors": 23,
+    "warnings": 38,
+    "info": 29
+  },
+  "per_lesson": {
+    "1": {
+      "documents": 3,
+      "images": 24,
+      "native": 0,
+      "anomalies": 3
+    },
+    "2": {
+      "documents": 1,
+      "images": 17,
+      "native": 0,
+      "anomalies": 3
+    },
+    "3": {
+      "documents": 1,
+      "images": 22,
+      "native": 0,
+      "anomalies": 3
+    },
+    "4": {
+      "documents": 1,
+      "images": 22,
+      "native": 0,
+      "anomalies": 3
+    },
+    "5": {
+      "documents": 1,
+      "images": 13,
+      "native": 0,
+      "anomalies": 3
+    },
+    "6": {
+      "documents": 1,
+      "images": 13,
+      "native": 0,
+      "anomalies": 3
+    },
+    "7": {
+      "documents": 1,
+      "images": 13,
+      "native": 0,
+      "anomalies": 3
+    },
+    "8": {
+      "documents": 1,
+      "images": 13,
+      "native": 0,
+      "anomalies": 3
+    },
+    "9": {
+      "documents": 1,
+      "images": 22,
+      "native": 0,
+      "anomalies": 3
+    },
+    "10": {
+      "documents": 1,
+      "images": 38,
+      "native": 0,
+      "anomalies": 4
+    },
+    "11": {
+      "documents": 1,
+      "images": 21,
+      "native": 0,
+      "anomalies": 3
+    },
+    "12": {
+      "documents": 1,
+      "images": 35,
+      "native": 0,
+      "anomalies": 4
+    }
+  },
+  "anomalies": [
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 1,
+      "content_type": "students_slides",
+      "message": "Lesson 1 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 1,
+      "content_type": "lesson_plan",
+      "message": "Lesson 1 missing lesson plan"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 1,
+      "doc_z": 4.58,
+      "img_z": 0.54,
+      "message": "Lesson 1 has low content volume (doc z=4.58, img z=0.54)"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 2,
+      "content_type": "teachers_slides",
+      "message": "Lesson 2 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 2,
+      "content_type": "students_slides",
+      "message": "Lesson 2 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 2,
+      "content_type": "lesson_plan",
+      "message": "Lesson 2 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "teachers_slides",
+      "message": "Lesson 3 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 3,
+      "content_type": "students_slides",
+      "message": "Lesson 3 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 3,
+      "content_type": "lesson_plan",
+      "message": "Lesson 3 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "teachers_slides",
+      "message": "Lesson 4 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 4,
+      "content_type": "students_slides",
+      "message": "Lesson 4 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 4,
+      "content_type": "lesson_plan",
+      "message": "Lesson 4 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "teachers_slides",
+      "message": "Lesson 5 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 5,
+      "content_type": "students_slides",
+      "message": "Lesson 5 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 5,
+      "content_type": "lesson_plan",
+      "message": "Lesson 5 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "teachers_slides",
+      "message": "Lesson 6 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 6,
+      "content_type": "students_slides",
+      "message": "Lesson 6 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 6,
+      "content_type": "lesson_plan",
+      "message": "Lesson 6 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "teachers_slides",
+      "message": "Lesson 7 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 7,
+      "content_type": "students_slides",
+      "message": "Lesson 7 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 7,
+      "content_type": "lesson_plan",
+      "message": "Lesson 7 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "teachers_slides",
+      "message": "Lesson 8 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 8,
+      "content_type": "students_slides",
+      "message": "Lesson 8 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 8,
+      "content_type": "lesson_plan",
+      "message": "Lesson 8 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "teachers_slides",
+      "message": "Lesson 9 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 9,
+      "content_type": "students_slides",
+      "message": "Lesson 9 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 9,
+      "content_type": "lesson_plan",
+      "message": "Lesson 9 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "teachers_slides",
+      "message": "Lesson 10 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 10,
+      "content_type": "students_slides",
+      "message": "Lesson 10 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 10,
+      "content_type": "lesson_plan",
+      "message": "Lesson 10 missing lesson plan"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 10,
+      "doc_z": 0.22,
+      "img_z": 2.61,
+      "message": "Lesson 10 has low content volume (doc z=0.22, img z=2.61)"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "teachers_slides",
+      "message": "Lesson 11 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 11,
+      "content_type": "students_slides",
+      "message": "Lesson 11 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 11,
+      "content_type": "lesson_plan",
+      "message": "Lesson 11 missing lesson plan"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 12,
+      "content_type": "teachers_slides",
+      "message": "Lesson 12 missing teachers slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "ERROR",
+      "lesson": 12,
+      "content_type": "students_slides",
+      "message": "Lesson 12 missing students slides"
+    },
+    {
+      "type": "MISSING",
+      "severity": "WARNING",
+      "lesson": 12,
+      "content_type": "lesson_plan",
+      "message": "Lesson 12 missing lesson plan"
+    },
+    {
+      "type": "VOLUME_OUTLIER",
+      "severity": "INFO",
+      "lesson": 12,
+      "doc_z": 0.22,
+      "img_z": 2.17,
+      "message": "Lesson 12 has low content volume (doc z=0.22, img z=2.17)"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md",
+      "message": "Document not assigned to any lesson: term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md",
+      "message": "Document not assigned to any lesson: term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Feedback & Surveys\\Feedback Forms.md",
+      "message": "Document not assigned to any lesson: term1\\Feedback & Surveys\\Feedback Forms.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Programme Overview\\Explorer's Programme Overview.md",
+      "message": "Document not assigned to any lesson: term1\\Programme Overview\\Explorer's Programme Overview.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md",
+      "message": "Document not assigned to any lesson: term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Programme Overview\\Teacher Training - Explorer Programme.md",
+      "message": "Document not assigned to any lesson: term1\\Programme Overview\\Teacher Training - Explorer Programme.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Quick Access Links\\Curriculum Overview - Canva Link.md",
+      "message": "Document not assigned to any lesson: term1\\Quick Access Links\\Curriculum Overview - Canva Link.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md",
+      "message": "Document not assigned to any lesson: term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Endstar Setup Guide.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Setup Guide.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Endstar Troubleshooting V1.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Troubleshooting V1.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md",
+      "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Technical Support\\Endstar Setup Guide.md",
+      "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Setup Guide.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Technical Support\\Endstar Troubleshooting.md",
+      "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Troubleshooting.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md",
+      "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md",
+      "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv",
+      "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md",
+      "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md",
+      "message": "Document not assigned to any lesson: term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md",
+      "message": "Document not assigned to any lesson: term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md"
+    },
+    {
+      "type": "ORPHANED",
+      "severity": "WARNING",
+      "path": "term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.md",
+      "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Teachers Slides.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Teachers Slides.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Endstar Setup Guide.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Endstar Setup Guide.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Endstar Troubleshooting.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Endstar Troubleshooting.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 10.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 10.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 11.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 11.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 12.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 12.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 13.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 13.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 14.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 14.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 15.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 15.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 16.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 16.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 17.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 17.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 18.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 18.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 19.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 19.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 2.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 2.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 20.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 20.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 21.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 21.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 22.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 22.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 3.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 3.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 4.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 4.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 5.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 5.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 6.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 6.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 7.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 7.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 8.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 8.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Explorer's Programme - Lesson 9.md",
+      "duplicate_type": "fuzzy_name",
+      "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 9.md"
+    },
+    {
+      "type": "DUPLICATE",
+      "severity": "INFO",
+      "file": "Endstar Troubleshooting.md",
+      "duplicate_type": "exact_name",
+      "message": "Potential duplicate (exact_name): Endstar Troubleshooting.md"
+    }
+  ],
+  "anomalies_by_severity": {
+    "ERROR": [
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 1,
+        "content_type": "students_slides",
+        "message": "Lesson 1 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 2,
+        "content_type": "teachers_slides",
+        "message": "Lesson 2 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 2,
+        "content_type": "students_slides",
+        "message": "Lesson 2 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "teachers_slides",
+        "message": "Lesson 3 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 3,
+        "content_type": "students_slides",
+        "message": "Lesson 3 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "teachers_slides",
+        "message": "Lesson 4 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 4,
+        "content_type": "students_slides",
+        "message": "Lesson 4 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "teachers_slides",
+        "message": "Lesson 5 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 5,
+        "content_type": "students_slides",
+        "message": "Lesson 5 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "teachers_slides",
+        "message": "Lesson 6 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 6,
+        "content_type": "students_slides",
+        "message": "Lesson 6 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "teachers_slides",
+        "message": "Lesson 7 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 7,
+        "content_type": "students_slides",
+        "message": "Lesson 7 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "teachers_slides",
+        "message": "Lesson 8 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 8,
+        "content_type": "students_slides",
+        "message": "Lesson 8 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "teachers_slides",
+        "message": "Lesson 9 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 9,
+        "content_type": "students_slides",
+        "message": "Lesson 9 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "teachers_slides",
+        "message": "Lesson 10 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 10,
+        "content_type": "students_slides",
+        "message": "Lesson 10 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "teachers_slides",
+        "message": "Lesson 11 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 11,
+        "content_type": "students_slides",
+        "message": "Lesson 11 missing students slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 12,
+        "content_type": "teachers_slides",
+        "message": "Lesson 12 missing teachers slides"
+      },
+      {
+        "type": "MISSING",
+        "severity": "ERROR",
+        "lesson": 12,
+        "content_type": "students_slides",
+        "message": "Lesson 12 missing students slides"
+      }
+    ],
+    "WARNING": [
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 1,
+        "content_type": "lesson_plan",
+        "message": "Lesson 1 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 2,
+        "content_type": "lesson_plan",
+        "message": "Lesson 2 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 3,
+        "content_type": "lesson_plan",
+        "message": "Lesson 3 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 4,
+        "content_type": "lesson_plan",
+        "message": "Lesson 4 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 5,
+        "content_type": "lesson_plan",
+        "message": "Lesson 5 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 6,
+        "content_type": "lesson_plan",
+        "message": "Lesson 6 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 7,
+        "content_type": "lesson_plan",
+        "message": "Lesson 7 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 8,
+        "content_type": "lesson_plan",
+        "message": "Lesson 8 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 9,
+        "content_type": "lesson_plan",
+        "message": "Lesson 9 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 10,
+        "content_type": "lesson_plan",
+        "message": "Lesson 10 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 11,
+        "content_type": "lesson_plan",
+        "message": "Lesson 11 missing lesson plan"
+      },
+      {
+        "type": "MISSING",
+        "severity": "WARNING",
+        "lesson": 12,
+        "content_type": "lesson_plan",
+        "message": "Lesson 12 missing lesson plan"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md",
+        "message": "Document not assigned to any lesson: term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md",
+        "message": "Document not assigned to any lesson: term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Feedback & Surveys\\Feedback Forms.md",
+        "message": "Document not assigned to any lesson: term1\\Feedback & Surveys\\Feedback Forms.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Programme Overview\\Explorer's Programme Overview.md",
+        "message": "Document not assigned to any lesson: term1\\Programme Overview\\Explorer's Programme Overview.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md",
+        "message": "Document not assigned to any lesson: term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Programme Overview\\Teacher Training - Explorer Programme.md",
+        "message": "Document not assigned to any lesson: term1\\Programme Overview\\Teacher Training - Explorer Programme.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Quick Access Links\\Curriculum Overview - Canva Link.md",
+        "message": "Document not assigned to any lesson: term1\\Quick Access Links\\Curriculum Overview - Canva Link.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md",
+        "message": "Document not assigned to any lesson: term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Endstar Setup Guide.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Setup Guide.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Endstar Troubleshooting V1.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Endstar Troubleshooting V1.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md",
+        "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Technical Support\\Endstar Setup Guide.md",
+        "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Setup Guide.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Technical Support\\Endstar Troubleshooting.md",
+        "message": "Document not assigned to any lesson: term1\\Technical Support\\Endstar Troubleshooting.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md",
+        "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md",
+        "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv",
+        "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md",
+        "message": "Document not assigned to any lesson: term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md",
+        "message": "Document not assigned to any lesson: term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md",
+        "message": "Document not assigned to any lesson: term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md"
+      },
+      {
+        "type": "ORPHANED",
+        "severity": "WARNING",
+        "path": "term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.md",
+        "message": "Document not assigned to any lesson: term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.md"
+      }
+    ],
+    "INFO": [
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 1,
+        "doc_z": 4.58,
+        "img_z": 0.54,
+        "message": "Lesson 1 has low content volume (doc z=4.58, img z=0.54)"
+      },
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 10,
+        "doc_z": 0.22,
+        "img_z": 2.61,
+        "message": "Lesson 10 has low content volume (doc z=0.22, img z=2.61)"
+      },
+      {
+        "type": "VOLUME_OUTLIER",
+        "severity": "INFO",
+        "lesson": 12,
+        "doc_z": 0.22,
+        "img_z": 2.17,
+        "message": "Lesson 12 has low content volume (doc z=0.22, img z=2.17)"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Teachers Slides.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Teachers Slides.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Endstar Setup Guide.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Endstar Setup Guide.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Endstar Troubleshooting.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Endstar Troubleshooting.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 10.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 10.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 11.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 11.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 12.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 12.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 13.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 13.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 14.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 14.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 15.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 15.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 16.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 16.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 17.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 17.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 18.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 18.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 19.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 19.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 2.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 2.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 20.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 20.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 21.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 21.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 22.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 22.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 3.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 3.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 4.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 4.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 5.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 5.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 6.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 6.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 7.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 7.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 8.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 8.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Explorer's Programme - Lesson 9.md",
+        "duplicate_type": "fuzzy_name",
+        "message": "Potential duplicate (fuzzy_name): Explorer's Programme - Lesson 9.md"
+      },
+      {
+        "type": "DUPLICATE",
+        "severity": "INFO",
+        "file": "Endstar Troubleshooting.md",
+        "duplicate_type": "exact_name",
+        "message": "Potential duplicate (exact_name): Endstar Troubleshooting.md"
+      }
+    ]
+  }
+}

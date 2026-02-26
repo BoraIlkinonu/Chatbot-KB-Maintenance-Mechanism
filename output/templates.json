@@ -1,0 +1,512 @@
+{
+  "generated_at": "2026-02-25T12:57:17.381852+00:00",
+  "total_templates": 13,
+  "templates": [
+    {
+      "file": "https://drive.google.com/file/d/1C1yLByEeKypBjIA9Po2ng5D8Fuin-9tt/view?usp=drivesdk",
+      "metadata": {
+        "id": "pitch-rubric",
+        "template_name": "Pitch Rubric",
+        "programme_component": "showcase",
+        "purpose": "Pitch / Showcase template for the Explorer's Programme",
+        "weighting_percent": 25,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1C1yLByEeKypBjIA9Po2ng5D8Fuin-9tt",
+        "modified_time": "2026-01-08T08:18:35.566Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1BCR37kL-fYF4Hlox2XWyU-mIKP6J_fk3M9QFJkP6Se8/edit?usp=drivesdk",
+      "metadata": {
+        "id": "students-assesment-templates",
+        "template_name": "Students Assesment Templates ",
+        "programme_component": "summative-product",
+        "purpose": "Students Game Should Include Checklist → Product",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1BCR37kL-fYF4Hlox2XWyU-mIKP6J_fk3M9QFJkP6Se8",
+        "modified_time": "2026-01-04T06:47:37.892Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/spreadsheets/d/1Oho2QN9LhJiWGP3nVp3HFlT38ungb_uFP3FVbsAor0o/edit?usp=drivesdk",
+      "metadata": {
+        "id": "students-master-checklist",
+        "template_name": "Students Master Checklist",
+        "programme_component": "summative-product",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1Oho2QN9LhJiWGP3nVp3HFlT38ungb_uFP3FVbsAor0o",
+        "modified_time": "2025-09-05T07:46:29.364Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1oEBUbOc2XCukS1cn-akM63jUk6XZw2WEChOg7I_-HWA/edit?usp=drivesdk",
+      "metadata": {
+        "id": "students-master-checklist-v1",
+        "template_name": "Students Master Checklist - V1",
+        "programme_component": "summative-product",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1oEBUbOc2XCukS1cn-akM63jUk6XZw2WEChOg7I_-HWA",
+        "modified_time": "2025-09-29T00:29:51.659Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1xsBH0v1e0PU7Ky5flxqJ8L6O-2tUKA4c/view?usp=drivesdk",
+      "metadata": {
+        "id": "students-master-checklist-v1",
+        "template_name": "Students Master Checklist - V1",
+        "programme_component": "summative-product",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1xsBH0v1e0PU7Ky5flxqJ8L6O-2tUKA4c",
+        "modified_time": "2025-09-05T07:47:39.073Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1G6g_GQeeuYr6P5uvlQgL3sSmtNBU-FRp/view?usp=drivesdk",
+      "metadata": {
+        "id": "us-curriculum-assessment-guide-term-1-studio-project-explorer-s-programme-endstar-foundations",
+        "template_name": "US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations)",
+        "programme_component": "summative-product",
+        "purpose": "Assessment / Rubric template for the Explorer's Programme",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1G6g_GQeeuYr6P5uvlQgL3sSmtNBU-FRp",
+        "modified_time": "2025-09-18T06:24:55.000Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1dXizd8jEYXSSYNGEzJM1DiI49Eb0DSDaOZfd5JClY7g/edit?usp=drivesdk",
+      "metadata": {
+        "id": "pitch-and-student-rubric-links",
+        "template_name": "Pitch and Student Rubric links",
+        "programme_component": "showcase",
+        "purpose": "Student Pitch Template: Showcase Template - Pitch Presentation Template.pptx",
+        "weighting_percent": 25,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 1,
+        "source_drive_id": "1dXizd8jEYXSSYNGEzJM1DiI49Eb0DSDaOZfd5JClY7g",
+        "modified_time": "2026-01-08T07:30:19.644Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1iF_c9uAbOyB_YwgQSSILojPiGXdYxZT0PVuYy_e7-M4/edit?usp=drivesdk",
+      "metadata": {
+        "id": "endstar-level-design-teacher-rubric",
+        "template_name": "Endstar Level Design - Teacher Rubric",
+        "programme_component": "summative-product",
+        "purpose": "The students have the potential to score the necessary point for each item in any way they can, complexity or simplicity do not matter. This should avoid students falling into the habit of doing features to check a box, but instead they try to design a feature that will need a creative solution.Thus promoting critical thinking and problem solving.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12",
+          "Lesson 13",
+          "Lesson 14",
+          "Lesson 15",
+          "Lesson 16",
+          "Lesson 17",
+          "Lesson 18",
+          "Lesson 19",
+          "Lesson 20",
+          "Lesson 21",
+          "Lesson 22",
+          "Lesson 23",
+          "Lesson 24"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": [
+            "Level 2 (Intermediate)",
+            "NPC gives basic info or task"
+          ]
+        },
+        "term": 1,
+        "source_drive_id": "1iF_c9uAbOyB_YwgQSSILojPiGXdYxZT0PVuYy_e7-M4",
+        "modified_time": "2025-09-29T00:36:20.369Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W/edit?usp=drivesdk&ouid=108982108349610202917&rtpof=true&sd=true",
+      "metadata": {
+        "id": "term-2-assessment-student-guide",
+        "template_name": "TERM 2 ASSESSMENT – STUDENT GUIDE",
+        "programme_component": "summative-product",
+        "purpose": "Your Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": [
+            "Core mechanics are basic, incomplete, or inconsistently implemented.  Puzzles rely on simple or repetitive logic with weak progression. Required systems (interactive objects, NPC logic, zones, progression, win conditions) may be missing or malfunctioning, with bugs interrupting gameplay."
+          ]
+        },
+        "term": 2,
+        "source_drive_id": "1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W",
+        "modified_time": "2025-12-24T07:30:16.090Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD/view?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-student-guide-visual-version",
+        "template_name": "TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version ",
+        "programme_component": "summative-product",
+        "purpose": "Your Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": [
+            "This rubric is not a checklist"
+          ]
+        },
+        "term": 2,
+        "source_drive_id": "1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD",
+        "modified_time": "2025-12-24T07:30:37.525Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/document/d/1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA/edit?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-teacher-portfolio-game",
+        "template_name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME)",
+        "programme_component": "summative-product",
+        "purpose": "Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA",
+        "modified_time": "2025-12-31T07:24:18.754Z"
+      }
+    },
+    {
+      "file": "https://drive.google.com/file/d/1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL/view?usp=drivesdk",
+      "metadata": {
+        "id": "term-2-assessment-teacher-portfolio-game-visual-version",
+        "template_name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version",
+        "programme_component": "summative-product",
+        "purpose": "Term 2 assessment is split evenly between process and product.",
+        "weighting_percent": 50,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL",
+        "modified_time": "2025-12-31T07:30:01.912Z"
+      }
+    },
+    {
+      "file": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?usp=drivesdk&ouid=108982108349610202917&rtpof=true&sd=true",
+      "metadata": {
+        "id": "activities-portfolio-deck",
+        "template_name": "Activities & Portfolio Deck",
+        "programme_component": "assessment",
+        "purpose": "Student Portfolio template for the Explorer's Programme",
+        "weighting_percent": 25,
+        "linked_lessons": [
+          "Lesson 1",
+          "Lesson 2",
+          "Lesson 3",
+          "Lesson 4",
+          "Lesson 5",
+          "Lesson 6",
+          "Lesson 7",
+          "Lesson 8",
+          "Lesson 9",
+          "Lesson 10",
+          "Lesson 11",
+          "Lesson 12"
+        ],
+        "core_skills": [],
+        "assessment_criteria_summary": {
+          "items": []
+        },
+        "term": 2,
+        "source_drive_id": "1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_",
+        "modified_time": "2026-01-09T10:29:22.917Z"
+      }
+    }
+  ]
+}

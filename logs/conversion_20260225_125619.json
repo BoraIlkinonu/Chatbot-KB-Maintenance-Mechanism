@@ -1,0 +1,731 @@
+{
+  "converted_at": "2026-02-25T12:56:13.827810+00:00",
+  "files": [
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Feedback & Surveys\\Feedback Forms.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Feedback & Surveys\\Feedback Forms.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Explorer's Programme Overview.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Explorer's Programme Overview.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Teacher Training - Explorer Programme.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Teacher Training - Explorer Programme.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Quick Access Links\\Curriculum Overview - Canva Link.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Quick Access Links\\Curriculum Overview - Canva Link.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Showcase & Deliverables\\Pitch and Student Rubric links.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Setup Guide.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Setup Guide.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Troubleshooting V1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Troubleshooting V1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv",
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Setup Guide.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Setup Guide.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Troubleshooting.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Troubleshooting.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 1.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 11.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 13.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 13.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 14.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 14.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 15.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 15.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 16.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 16.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 17.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 17.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 18.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 18.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 19.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 19.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 20.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 20.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 21.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 21.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 22.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 22.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 3.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 4.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 5.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 6.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 7.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 9.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 9.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 3.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 4.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 5.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 6.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 7.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 9.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 9.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 11.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 1.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Specifications Term 2 .docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Specifications Term 2 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Learning Schedule.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Learning Schedule_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Term 2 Introduction content.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Term 2 Introduction content.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 3.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 5.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 2.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 1 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 1 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 3.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 4.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 5.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 6.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson Plan\\Lesson 7.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson Plan\\Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 11.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 12.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Students Slides\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Students Slides\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Teachers Slides\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Teachers Slides\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Technical Support Guides\\Classkick\\Classkick - how to.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Technical Support Guides\\Classkick\\Classkick - how to.md",
+      "success": true,
+      "error": null
+    }
+  ],
+  "summary": {
+    "success": 101,
+    "failed": 0,
+    "by_type": {
+      "DOCX": 23,
+      "PPTX": 47,
+      "PDF": 27,
+      "XLSX": 4
+    }
+  }
+}

@@ -1,0 +1,2015 @@
+{
+  "converted_at": "2026-02-26T09:35:10.422692+00:00",
+  "files": [
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Administrative\\Explorers Programme Curriculum Specifications Term 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Administrative\\IB Wrapper Design Curriciulum Mapping.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Feedback & Surveys\\Feedback Forms.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Feedback & Surveys\\Feedback Forms.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Explorer's Programme Overview.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Explorer's Programme Overview.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Learning Outcomes - Jan 2026 Cohort.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Teacher Training - Explorer Programme.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Teacher Training - Explorer Programme.pdf",
+      "success": false,
+      "error": "'IndirectObject' object has no attribute 'get'"
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Quick Access Links\\Curriculum Overview - Canva Link.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Quick Access Links\\Curriculum Overview - Canva Link.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Showcase & Deliverables\\Pitch and Student Rubric links.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Showcase & Deliverables\\Pitch and Student Rubric links.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Level Design - Teacher Rubric.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\ENDSTAR LEVEL DESIGN STUDENT GUIDE.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Setup Guide.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Setup Guide.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Troubleshooting V1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Endstar Troubleshooting V1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet1.csv",
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Learning Schedule Explorers Programme Jan Cohort 2025_26_Sheet2.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Teacher Resources\\Mubarak Bin Mohammad Learning Schedule_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Engine Props and Rule Block Cheat Sheet.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Setup Guide.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Setup Guide.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Troubleshooting.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Technical Support\\Endstar Troubleshooting.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 1.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 11.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 13.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 13.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 14.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 14.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 15.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 15.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 16.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 16.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 17.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 17.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 18.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 18.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 19.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 19.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 20.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 20.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 21.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 21.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 22.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 22.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 3.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 4.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 5.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 6.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 7.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 9.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Lesson Decks (Slides)\\Explorer's Programme - Lesson 9.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Assesment Templates .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist - V1.pdf",
+      "success": false,
+      "error": "'IndirectObject' object has no attribute 'get'"
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\Students Master Checklist_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Lessons Resources\\Student Assessment Templates\\US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Programme Overview\\Canva File Link\\Endstar Term 2 Overview.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+      "success": false,
+      "error": "'IndirectObject' object has no attribute 'get'"
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Exemplar Workbook\\Explorers Programme - January 2026 - Abderrahmane.pdf",
+      "success": false,
+      "error": "'IndirectObject' object has no attribute 'get'"
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 3.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 4.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 5.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 6.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 7.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson 8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 9.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Lesson 9.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 11.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 13.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 7\\Lesson 14.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 1.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term2\\Teacher Resources\\Curriculum Content\\Week 1\\Teacher Slides\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Specifications Term 2 .docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Specifications Term 2 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Learning Schedule.xlsx",
+      "type": "XLSX",
+      "output": [
+        "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Learning Schedule_Sheet1.csv"
+      ],
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Term 2 Introduction content.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Term 2 Introduction content.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Alignment\\US Computer Science Curriculum Alignment (US private schools and Charter schools).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 1.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 3.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 5.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Professional Development\\Week 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM 2 ASSESSMENT – STUDENT GUIDE.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 1\\Exampler Work - Lesson 1 -2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 3\\Exampler Work - Lesson 5-6 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 4\\Exampler Work - Lesson 7-8.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 5\\Exampler Work - Lesson 9-10.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\Week 6\\Exampler Work - Lesson 11-12 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.pdf",
+      "type": "PDF",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\LO's and Success Criteria\\Term-2LOsSC-and-AI-KS.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 1.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 1.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 2.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Lesson Plans\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 1 .pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 1 .md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 2.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 1\\Teachers Slides\\Lesson 2.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 3.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 3.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 4.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 2\\Lesson Plans\\Lesson 4.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 5.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 5.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 6.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 3\\Lesson Plans\\Lesson 6.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson Plan\\Lesson 7.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 4\\Lesson Plan\\Lesson 7.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 11.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 11.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 12.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Lesson Plans\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Students Slides\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Students Slides\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Teachers Slides\\Lesson 12.pptx",
+      "type": "PPTX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Teacher Resources\\Curriculum Content\\Week 6\\Teachers Slides\\Lesson 12.md",
+      "success": true,
+      "error": null
+    },
+    {
+      "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Technical Support Guides\\Classkick\\Classkick - how to.docx",
+      "type": "DOCX",
+      "output": "D:\\Chatbot KB Maintenance Mechanism\\converted\\term3\\Technical Support Guides\\Classkick\\Classkick - how to.md",
+      "success": true,
+      "error": null
+    }
+  ],
+  "summary": {
+    "success": 97,
+    "failed": 4,
+    "by_type": {
+      "DOCX": 23,
+      "PPTX": 47,
+      "PDF": 27,
+      "XLSX": 4
+    }
+  },
+  "pdf_metadata": {
+    "total_images": 64,
+    "total_links": 157,
+    "files": [
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Programme Overview\\Explorer's Programme Overview.pdf",
+        "relative_path": "term1\\Programme Overview\\Explorer's Programme Overview.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_001.png",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 452760,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_002.png",
+            "page_number": 2,
+            "index": 2,
+            "size_bytes": 498600,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_003.png",
+            "page_number": 4,
+            "index": 3,
+            "size_bytes": 452760,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_004.png",
+            "page_number": 5,
+            "index": 4,
+            "size_bytes": 452760,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_005.png",
+            "page_number": 6,
+            "index": 5,
+            "size_bytes": 452760,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_006.png",
+            "page_number": 8,
+            "index": 6,
+            "size_bytes": 498600,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_007.png",
+            "page_number": 8,
+            "index": 7,
+            "size_bytes": 2430000,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_008.png",
+            "page_number": 16,
+            "index": 8,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_009.png",
+            "page_number": 22,
+            "index": 9,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_010.png",
+            "page_number": 28,
+            "index": 10,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_011.png",
+            "page_number": 34,
+            "index": 11,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_012.png",
+            "page_number": 40,
+            "index": 12,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_013.png",
+            "page_number": 57,
+            "index": 13,
+            "size_bytes": 344763,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_014.png",
+            "page_number": 58,
+            "index": 14,
+            "size_bytes": 206712,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_015.png",
+            "page_number": 59,
+            "index": 15,
+            "size_bytes": 342732,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_016.png",
+            "page_number": 59,
+            "index": 16,
+            "size_bytes": 342732,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Explorer's_Programme_Overview\\image_017.png",
+            "page_number": 60,
+            "index": 17,
+            "size_bytes": 452760,
+            "extension": ".png",
+            "source": "pdf"
+          }
+        ],
+        "links": [
+          {
+            "url": "https://drive.google.com/file/d/1mMBJOU41axDfx7PUVLixPCev_lRqWDTM/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/1mMBJOU41axDfx7PUVLixPCev_lRqWDTM/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/11-AzKBHV8X0SNL8oD2nA2VCq2e7-GImR/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/11-AzKBHV8X0SNL8oD2nA2VCq2e7-GImR/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112271145",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112271145",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/1XtbQOkK7Vhh7TkYsa1Vkv2RKUTWLgRBI/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/1XtbQOkK7Vhh7TkYsa1Vkv2RKUTWLgRBI/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/1_RHDf9kmP2Ot-Wa0qGOyeG1QNOcFWj1I/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://drive.google.com/file/d/1_RHDf9kmP2Ot-Wa0qGOyeG1QNOcFWj1I/view?usp=drive_link",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112257323",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112257323",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112237513",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112237513",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112260091",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112260091",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112253618",
+            "page_number": 7
+          },
+          {
+            "url": "https://vimeo.com/1112253618",
+            "page_number": 7
+          },
+          {
+            "url": "https://www.canva.com/design/DAGuuNHECUs/wAR0BdFyXhlfalzU7JVU0g/view?utm_content=DAGuuNHECUs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h518cfb78ca",
+            "page_number": 10
+          },
+          {
+            "url": "https://www.canva.com/design/DAGuuNHECUs/wAR0BdFyXhlfalzU7JVU0g/view?utm_content=DAGuuNHECUs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h518cfb78ca",
+            "page_number": 10
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1e1H1YbnA_ex1yaFzi3pEgn4S_IOpT6jk/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 12
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1c-MLYCQc_MEbL34da8fdhWPULfZDRhjX/edit?usp=sharing&ouid=104745523759898364799&rtpof=true&sd=true",
+            "page_number": 12
+          },
+          {
+            "url": "https://docs.google.com/document/d/1tLaiizSIYgqOtj6PLZWSgMs5XFBy_CxMAxVPqXJMpeQ/edit?usp=sharing",
+            "page_number": 12
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 12
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1EQSScTSZ-IcMXkOeN19OmFWaRJDKR9Ec/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 14
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1-pLde-8q3p0qQnm836nArKVmmhqBjlh3/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 14
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 14
+          },
+          {
+            "url": "https://docs.google.com/document/d/11RGO1FwhogiKT9Gwq4KG-01fgLZd0oixCPm3dppWEow/edit?usp=sharing",
+            "page_number": 15
+          },
+          {
+            "url": "https://forms.gle/ihCECsXvADJqfB6x6",
+            "page_number": 16
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1MOwV5M8kb7Vz6Yx8LYoOhsb4zrjfcT7i/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 18
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1dRA92-oAVIiXj5md_de4xi8ridnY59PO/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 18
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 18
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1AvR6mzn5P-rBLcgrimMfMA7NAvVmSNGS/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 20
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1HQ7CB0cIbFj5gBCCF8g2stlkHHYs7znb/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 20
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 20
+          },
+          {
+            "url": "https://docs.google.com/document/d/11RGO1FwhogiKT9Gwq4KG-01fgLZd0oixCPm3dppWEow/edit?usp=sharing",
+            "page_number": 21
+          },
+          {
+            "url": "https://forms.gle/ihCECsXvADJqfB6x6",
+            "page_number": 22
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/18H91NbKP2Tl5uyYHa6g0HhOcvZPPwxiA/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 24
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1fpqLIruZRsmN1ASDvp-qLWs4QlJQ0mBD/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 24
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 24
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1i2iGbEEoGzJG-A4wf75eCHQpcJXZo5oT/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 26
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/131aIuZdaZX3afEFOrJZ9sSsVQfrZ8r1u/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 26
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 26
+          },
+          {
+            "url": "https://docs.google.com/document/d/11RGO1FwhogiKT9Gwq4KG-01fgLZd0oixCPm3dppWEow/edit?usp=sharing",
+            "page_number": 27
+          },
+          {
+            "url": "https://forms.gle/ihCECsXvADJqfB6x6",
+            "page_number": 28
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1ScbJ9jCZTBC38vajz9HHLrKG-E3loHc1/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 30
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1cWsDV6TwHn4uxtwW7O5tsq8Qe6tKW6lC/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 30
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 30
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1_db72ml7sXxkz7uiX2v3AGja1PChOEj7/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 32
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1oc5h4wTU-TDRljTJPHoZjlhqt6jajdCQ/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 32
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 32
+          },
+          {
+            "url": "https://docs.google.com/document/d/11RGO1FwhogiKT9Gwq4KG-01fgLZd0oixCPm3dppWEow/edit?usp=sharing",
+            "page_number": 33
+          },
+          {
+            "url": "https://forms.gle/ihCECsXvADJqfB6x6",
+            "page_number": 34
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1mRjFMPDx9ow8CWlvLXCHK3001WXMNG8-/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 36
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1_P3vXaryRouCl2eBiaqSpzOubS_qtixu/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 36
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 36
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1F12TK2v5ebDUuRLUVDtiDeZC5ef7FFI_/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 38
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1hpsdO2Av0ebW8W5Dv3S8ukbMHjc9TNQU/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 38
+          },
+          {
+            "url": "https://drive.google.com/file/d/1RvCjbaYf83MifEVa-IMWQoYwRW3uwQ0k/view?usp=drive_link",
+            "page_number": 38
+          },
+          {
+            "url": "https://docs.google.com/document/d/11RGO1FwhogiKT9Gwq4KG-01fgLZd0oixCPm3dppWEow/edit?usp=sharing",
+            "page_number": 39
+          },
+          {
+            "url": "https://forms.gle/ihCECsXvADJqfB6x6",
+            "page_number": 40
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1pJW6UDeLcARsKIbn7Kf2OE8dxbgJ9y2d/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 42
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1lUaKpSYP5n9p1NUGY8AfEc85USmSbA6F/edit?usp=sharing&ouid=109043583077729984320&rtpof=true&sd=true",
+            "page_number": 42
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1RkCOeN-3VFuueiRu-qfoFEUjAxSeIwze/edit?usp=sharing&ouid=102820577572582741554&rtpof=true&sd=true",
+            "page_number": 42
+          },
+          {
+            "url": "https://docs.google.com/presentation/d/1RkCOeN-3VFuueiRu-qfoFEUjAxSeIwze/edit?usp=sharing&ouid=102820577572582741554&rtpof=true&sd=true",
+            "page_number": 44
+          },
+          {
+            "url": "https://studio.endlessstudios.com/games/Endstar/",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1026031072?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1026033353?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/940383091",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/939982068",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/940383418?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1023828378?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1019428683",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1019427992",
+            "page_number": 45
+          },
+          {
+            "url": "https://drive.google.com/file/d/15Hdzy8d5-FSEOT9hyrESVjMq2Q7WX00m/view?usp=sharing",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1026035389?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://vimeo.com/1026037272?share=copy",
+            "page_number": 45
+          },
+          {
+            "url": "https://drive.google.com/file/d/1YqQRPMzX59m4m4Wuji03iO66wUxOPxR-/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/16AYkm152WFf6i9gDbzlcIWsVmu6YqrV2/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1sitxhCLqPy9GA7gO73j6y6m_6-ABIo32/view?usp=drive_link",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1sitxhCLqPy9GA7gO73j6y6m_6-ABIo32/view?usp=drive_link",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1xrtOO_Kf3tXkm3Gba7aVdmoqoRNBASuS/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1KKWYv7SFsNiPTx4Paf-Wvjm08noz1_Wn/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1bVAFzVeg-3xZEmw5xoY2i-aIrS0-fPUO/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1fSUd3qEtCaLRM9cARlFMo4B2QsE3oqHy/view?usp=sharing",
+            "page_number": 46
+          },
+          {
+            "url": "https://vimeo.com/1051794159?share=copy",
+            "page_number": 46
+          },
+          {
+            "url": "https://vimeo.com/1059601838?share=copy",
+            "page_number": 46
+          },
+          {
+            "url": "https://drive.google.com/file/d/1EmrkIWJ6vxLsUPbhLxlB6BWnJ6UusyvR/view?usp=sharing",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/1TY6DJUXstKTtMmG3OvUcI5Zswkb48mPs/view?usp=drive_link",
+            "page_number": 47
+          },
+          {
+            "url": "https://vimeo.com/1059601983?share=copy",
+            "page_number": 47
+          },
+          {
+            "url": "https://vimeo.com/1062715189?share=copy",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/17-vbEc6sGK9QdQ3yqiEc3LSbyaDYlrne/view?usp=sharing",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/1Z2HCKdzyRoFoOfnLlTGpBxymsD5Xmz_a/view?usp=sharing",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/1LAedEEotmDNBaHrAi-rgdchtexJC5_1X/view?usp=sharing",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/1annhVpQQC7b-n2CC8Bxd_QJywiLEyXr8/view?usp=sharing",
+            "page_number": 47
+          },
+          {
+            "url": "https://vimeo.com/1059600989?share=copy",
+            "page_number": 47
+          },
+          {
+            "url": "https://vimeo.com/1059600989?share=copy",
+            "page_number": 47
+          },
+          {
+            "url": "https://vimeo.com/1112808685?share=copy#t=0",
+            "page_number": 47
+          },
+          {
+            "url": "https://drive.google.com/file/d/1z33FnWPYxz8TkSLpkSxxbLdpW2Mbciub/view?usp=sharing",
+            "page_number": 48
+          },
+          {
+            "url": "https://drive.google.com/file/d/11_S94eMZeAO_WteRZvPFsDPlrbQTZV7d/view?usp=drive_link",
+            "page_number": 48
+          },
+          {
+            "url": "https://drive.google.com/file/d/1xjAUQxD0crDzCVO5iKVD2Ktdn-dI0u6J/view?usp=sharing",
+            "page_number": 48
+          },
+          {
+            "url": "https://vimeo.com/1112850628?share=copy#t=0",
+            "page_number": 48
+          },
+          {
+            "url": "https://drive.google.com/file/d/1_m_vTjVvbEL_V7GLUAUR7m-0qiDKoAW1/view?usp=sharing",
+            "page_number": 48
+          },
+          {
+            "url": "https://drive.google.com/file/d/15E5Q_ANlnN8OjGuD9fdxNFuecHBpArEA/view?usp=sharing",
+            "page_number": 48
+          },
+          {
+            "url": "https://drive.google.com/file/d/1W5jFQuH2pAQl5Fesmi3BKYl0B-HsPrha/view?usp=sharing",
+            "page_number": 48
+          },
+          {
+            "url": "https://vimeo.com/1106394499",
+            "page_number": 48
+          },
+          {
+            "url": "https://vimeo.com/1051793863?share=copy",
+            "page_number": 48
+          },
+          {
+            "url": "https://vimeo.com/1062710534?share=copy",
+            "page_number": 49
+          },
+          {
+            "url": "https://vimeo.com/1066500112?share=copy",
+            "page_number": 49
+          },
+          {
+            "url": "https://vimeo.com/1059602220?share=copy",
+            "page_number": 49
+          },
+          {
+            "url": "https://drive.google.com/file/d/10yL4tdSujDA1wdN6X3oNiK0lKMVeJ21P/view?usp=sharing",
+            "page_number": 49
+          },
+          {
+            "url": "https://vimeo.com/1026035389",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1119690130",
+            "page_number": 50
+          },
+          {
+            "url": "https://drive.google.com/file/d/1LGPflbPuvPUfm74Rk4-LAvViu6LUMCYQ/view?usp=sharing",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1051793863",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1026041037?share=copy",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1026033919?share=copy",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1112810906?share=copy#t=0",
+            "page_number": 50
+          },
+          {
+            "url": "https://drive.google.com/file/d/1OIgNMAFlnxeN39JElFGhorCbP6xX5f4n/view",
+            "page_number": 50
+          },
+          {
+            "url": "https://vimeo.com/1106395634",
+            "page_number": 50
+          },
+          {
+            "url": "https://docs.google.com/document/d/1Z9bKljiPhGL5YsjrV8TNmOUPB1RJLsoFrlsD4gJwiMk/edit?tab=t.7rf1cqgtd3fc#heading=h.7ohtizz6ue32",
+            "page_number": 56
+          },
+          {
+            "url": "https://docs.google.com/document/d/1Z9bKljiPhGL5YsjrV8TNmOUPB1RJLsoFrlsD4gJwiMk/edit?tab=t.7rf1cqgtd3fc#heading=h.7ohtizz6ue32",
+            "page_number": 56
+          },
+          {
+            "url": "https://drive.google.com/file/d/1AahkjdzW_aVpwX7_PsuNe9AsT36arkvr/view?usp=sharing",
+            "page_number": 56
+          },
+          {
+            "url": "https://drive.google.com/file/d/1AahkjdzW_aVpwX7_PsuNe9AsT36arkvr/view?usp=sharing",
+            "page_number": 56
+          },
+          {
+            "url": "https://drive.google.com/file/d/1AahkjdzW_aVpwX7_PsuNe9AsT36arkvr/view?usp=sharing",
+            "page_number": 56
+          },
+          {
+            "url": "https://drive.google.com/file/d/1AahkjdzW_aVpwX7_PsuNe9AsT36arkvr/view?usp=sharing",
+            "page_number": 56
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLSfqu26ab9EwYjjN8KLpB-W4qaxp3U-6C7cGqhQ5EYl_-hkSXQ/viewform?usp=dialog",
+            "page_number": 57
+          },
+          {
+            "url": "https://forms.gle/jmx8UEhP7jkJwP7n8",
+            "page_number": 58
+          },
+          {
+            "url": "https://wa.me/971528962197",
+            "page_number": 59
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScvp6h7B_siFMVoXHMZ_O7GmDNDcmJDdFvu03NU9TTopNZzWQ/viewform",
+            "page_number": 59
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Setup Guide.pdf",
+        "relative_path": "term1\\Teacher Resources\\Endstar Setup Guide.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_001.png",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 1371951,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_002.png",
+            "page_number": 1,
+            "index": 2,
+            "size_bytes": 634500,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_003.png",
+            "page_number": 2,
+            "index": 3,
+            "size_bytes": 2912328,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_004.png",
+            "page_number": 3,
+            "index": 4,
+            "size_bytes": 3285576,
+            "extension": ".png",
+            "source": "pdf"
+          }
+        ],
+        "links": [
+          {
+            "url": "http://endlessstudios.com",
+            "page_number": 1
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Teacher Resources\\Endstar Troubleshooting V1.pdf",
+        "relative_path": "term1\\Teacher Resources\\Endstar Troubleshooting V1.pdf",
+        "images": [],
+        "links": [
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://forms.gle/ZRvHZaqJ3jvruEeB6",
+            "page_number": 2
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Setup Guide.pdf",
+        "relative_path": "term1\\Technical Support\\Endstar Setup Guide.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_001.png",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 1371951,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_002.png",
+            "page_number": 1,
+            "index": 2,
+            "size_bytes": 634500,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_003.png",
+            "page_number": 2,
+            "index": 3,
+            "size_bytes": 2912328,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Endstar_Setup_Guide\\image_004.png",
+            "page_number": 3,
+            "index": 4,
+            "size_bytes": 3285576,
+            "extension": ".png",
+            "source": "pdf"
+          }
+        ],
+        "links": [
+          {
+            "url": "http://endlessstudios.com",
+            "page_number": 1
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Technical Support\\Endstar Troubleshooting.pdf",
+        "relative_path": "term1\\Technical Support\\Endstar Troubleshooting.pdf",
+        "images": [],
+        "links": [
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://forms.gle/ZRvHZaqJ3jvruEeB6",
+            "page_number": 2
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.pdf",
+        "relative_path": "term1\\Quick Access Links\\Troubleshooting Guide\\Endstar Troubleshooting.pdf",
+        "images": [],
+        "links": [
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://endstar.wiki.gg/wiki/Help/Troubleshooting?utm_source=chatgpt.com",
+            "page_number": 1
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLScfqdZAe8s5zH3t2-0UVRH9vN0i-Ay-dOCM1HL8cyyOhVfqNg/viewform",
+            "page_number": 2
+          },
+          {
+            "url": "https://forms.gle/ZRvHZaqJ3jvruEeB6",
+            "page_number": 2
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Defender Of The Desert Term_2_Design Brief.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Defender_Of_The_Desert_Term_2_Design_Brief\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 92762,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Exemplar-Games.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Exemplar-Games\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 371689,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Guardians Of History Term_2_Design Brief.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Guardians_Of_History_Term_2_Design_Brief\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 98483,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Open Brief Term_2_Design Brief.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Open_Brief_Term_2_Design_Brief\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 212048,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\Term_2_Design Briefs All 6 in A4.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 202572,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_002.jpg",
+            "page_number": 2,
+            "index": 2,
+            "size_bytes": 291646,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_003.jpg",
+            "page_number": 3,
+            "index": 3,
+            "size_bytes": 112293,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_004.jpg",
+            "page_number": 4,
+            "index": 4,
+            "size_bytes": 92762,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_005.jpg",
+            "page_number": 5,
+            "index": 5,
+            "size_bytes": 98483,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Term_2_Design_Briefs_All_6_in_A4\\image_006.jpg",
+            "page_number": 6,
+            "index": 6,
+            "size_bytes": 212048,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Grandeur Of Light Term_2_Design Brief.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\The_Grandeur_Of_Light_Term_2_Design_Brief\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 291646,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Secrets Of Art Term_2_Design Brief.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\The_Secrets_Of_Art_Term_2_Design_Brief\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 112293,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .pdf",
+        "relative_path": "term3\\Teacher Resources\\Design Briefs and Exemplar Games\\The Time Traveler's Compass Term_2_Design Briefs .pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\The_Time_Traveler's_Compass_Term_2_Design_Briefs_\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 202572,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 1.pdf",
+        "relative_path": "term3\\Teacher Resources\\Professional Development\\Week 1.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 418319,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_003.png",
+            "page_number": 3,
+            "index": 3,
+            "size_bytes": 1024,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_004.jpg",
+            "page_number": 3,
+            "index": 4,
+            "size_bytes": 178915,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_006.png",
+            "page_number": 4,
+            "index": 6,
+            "size_bytes": 1024,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_007.jpg",
+            "page_number": 4,
+            "index": 7,
+            "size_bytes": 160289,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_009.png",
+            "page_number": 5,
+            "index": 9,
+            "size_bytes": 5476,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_010.jpg",
+            "page_number": 5,
+            "index": 10,
+            "size_bytes": 156362,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_011.jpg",
+            "page_number": 6,
+            "index": 11,
+            "size_bytes": 437253,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_012.jpg",
+            "page_number": 8,
+            "index": 12,
+            "size_bytes": 434821,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_013.jpg",
+            "page_number": 9,
+            "index": 13,
+            "size_bytes": 298249,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_014.png",
+            "page_number": 10,
+            "index": 14,
+            "size_bytes": 3072,
+            "extension": ".png",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_015.jpg",
+            "page_number": 12,
+            "index": 15,
+            "size_bytes": 243475,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_1\\image_016.jpg",
+            "page_number": 14,
+            "index": 16,
+            "size_bytes": 366192,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": [
+          {
+            "url": "https://drive.google.com/drive/folders/1tcPe7yo0ApOcGbNx-NDBQNMgpid9jiRH?usp=drive_link",
+            "page_number": 3
+          },
+          {
+            "url": "https://drive.google.com/drive/folders/1kJ4L9-YpLJ4OgbKodck3Vov-OpakKbsb?usp=drive_link",
+            "page_number": 4
+          },
+          {
+            "url": "https://docs.google.com/spreadsheets/d/1zs3bKjAo9iGOMsaMp6dokkCBLKAYW9OXnNaIKcs5TXc/edit?usp=sharing",
+            "page_number": 5
+          },
+          {
+            "url": "https://drive.google.com/drive/folders/1pPs1uGDL3LTq3xHOT7lKuhV6VaqX5-xk?usp=drive_link",
+            "page_number": 10
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 3.pdf",
+        "relative_path": "term3\\Teacher Resources\\Professional Development\\Week 3.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_3\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 354617,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_3\\image_002.jpg",
+            "page_number": 3,
+            "index": 2,
+            "size_bytes": 203284,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_3\\image_003.jpg",
+            "page_number": 5,
+            "index": 3,
+            "size_bytes": 665274,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_3\\image_004.jpg",
+            "page_number": 6,
+            "index": 4,
+            "size_bytes": 378041,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_3\\image_005.jpg",
+            "page_number": 8,
+            "index": 5,
+            "size_bytes": 69206,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": [
+          {
+            "url": "https://tinyurl.com/49fphchy",
+            "page_number": 5
+          },
+          {
+            "url": "https://shorturl.at/REctC",
+            "page_number": 5
+          },
+          {
+            "url": "https://tinyurl.com/cabv5y46",
+            "page_number": 7
+          }
+        ]
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Professional Development\\Week 5.pdf",
+        "relative_path": "term3\\Teacher Resources\\Professional Development\\Week 5.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 296386,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_002.jpg",
+            "page_number": 2,
+            "index": 2,
+            "size_bytes": 343362,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_003.jpg",
+            "page_number": 6,
+            "index": 3,
+            "size_bytes": 24596,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_004.jpg",
+            "page_number": 6,
+            "index": 4,
+            "size_bytes": 24050,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_005.jpg",
+            "page_number": 6,
+            "index": 5,
+            "size_bytes": 21959,
+            "extension": ".jpg",
+            "source": "pdf"
+          },
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\Week_5\\image_006.jpg",
+            "page_number": 6,
+            "index": 6,
+            "size_bytes": 24147,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+        "relative_path": "term3\\Teacher Resources\\Assessment Guides\\Student Guide\\TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\TERM-2-ASSESSMENT-STUDENT_GUIDE-Visual_Version_\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 198030,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      },
+      {
+        "source": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+        "relative_path": "term3\\Teacher Resources\\Assessment Guides\\Teacher Guide\\TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+        "images": [
+          {
+            "image_path": "D:\\Chatbot KB Maintenance Mechanism\\media\\pdf_images\\TERM_2_ASSESSMENT_–_TEACHER-_(PORTFOLIO_+_GAME)_Visual_Version\\image_001.jpg",
+            "page_number": 1,
+            "index": 1,
+            "size_bytes": 81983,
+            "extension": ".jpg",
+            "source": "pdf"
+          }
+        ],
+        "links": []
+      }
+    ]
+  }
+}

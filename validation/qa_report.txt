@@ -1,0 +1,35 @@
+======================================================================
+  QA REPORT — FAIL
+  2026-02-26T04:26:49.783451+00:00
+======================================================================
+
+Verdict:    FAIL
+Checks:     190 total, 172 passed, 18 failed
+Errors:     2
+Warnings:   7
+Layers run: [1, 3, 4]
+
+  Layer 1 (Programmatic): 126/139 passed
+  Layer 3 (Edge Cases): 24/26 passed
+  Layer 4 (User Scenarios): 22/25 passed
+
+FAILURES:
+--------------------------------------------------
+  [ERROR] UC02: learning_objectives coverage: 91% (42/46) — threshold: 100%
+  [ERROR] UC03: activity_description coverage: 96% (44/46) — threshold: 100%
+  [WARNING] C004: 2 lessons have short activity_description (<50 chars)
+  [WARNING] C006: 2 video URLs don't match known video domains
+  [WARNING] C013: 1 trivial assessment_signals (separators or too short)
+  [WARNING] I003: 11 URLs with encoding issues
+  [WARNING] I007: 373 duplicate image paths within lessons
+  [WARNING] UC05: assessment_signals coverage: 54% (25/46) — threshold: 80%
+  [WARNING] X003: 1 lessons have links in consolidated but none in KB
+  [INFO] C008: 5 keywords appear in >80% of lessons (possible overfit): ['feedback', 'portfolio', 'assessment', 'ai', 'player']
+  [INFO] C008: 5 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']
+  [INFO] C008: 1 keywords appear in >80% of lessons (possible overfit): ['design brief']
+  [INFO] C011: 4 plain-text resources (no URL) — possibly incomplete
+  [INFO] C011: 10 plain-text resources (no URL) — possibly incomplete
+  [INFO] C011: 7 plain-text resources (no URL) — possibly incomplete
+  [INFO] C014: 20 activity descriptions may be truncated mid-word
+  [INFO] C014: 11 activity descriptions may be truncated mid-word
+  [INFO] C014: 8 activity descriptions may be truncated mid-word

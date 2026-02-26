@@ -1,0 +1,53 @@
+======================================================================
+  VALIDATION REPORT — Term 2
+======================================================================
+
+Status: NEEDS_REVIEW
+Confidence: 60%
+Publish Blocked: True
+
+Anomalies: 61
+  Errors:   22
+  Warnings: 14
+  Info:     25
+
+ERRORS:
+  [ERROR] Lesson 1 missing students slides
+  [ERROR] Lesson 2 missing students slides
+  [ERROR] Lesson 3 missing teachers slides
+  [ERROR] Lesson 3 missing students slides
+  [ERROR] Lesson 4 missing teachers slides
+  [ERROR] Lesson 4 missing students slides
+  [ERROR] Lesson 5 missing teachers slides
+  [ERROR] Lesson 5 missing students slides
+  [ERROR] Lesson 6 missing teachers slides
+  [ERROR] Lesson 6 missing students slides
+  [ERROR] Lesson 7 missing teachers slides
+  [ERROR] Lesson 7 missing students slides
+  [ERROR] Lesson 8 missing teachers slides
+  [ERROR] Lesson 8 missing students slides
+  [ERROR] Lesson 9 missing teachers slides
+  [ERROR] Lesson 9 missing students slides
+  [ERROR] Lesson 10 missing teachers slides
+  [ERROR] Lesson 10 missing students slides
+  [ERROR] Lesson 11 missing teachers slides
+  [ERROR] Lesson 11 missing students slides
+  [ERROR] Lesson 12 missing teachers slides
+  [ERROR] Lesson 12 missing students slides
+
+WARNINGS:
+  [WARNING] Lesson 1 missing lesson plan
+  [WARNING] Lesson 2 missing lesson plan
+  [WARNING] Lesson 3 missing lesson plan
+  [WARNING] Lesson 4 missing lesson plan
+  [WARNING] Lesson 5 missing lesson plan
+  [WARNING] Lesson 6 missing lesson plan
+  [WARNING] Lesson 7 missing lesson plan
+  [WARNING] Lesson 8 missing lesson plan
+  [WARNING] Lesson 9 missing lesson plan
+  [WARNING] Lesson 10 missing lesson plan
+  [WARNING] Lesson 11 missing lesson plan
+  [WARNING] Lesson 12 missing lesson plan
+  [WARNING] Document not assigned to any lesson: term2\Teacher Resources\Curriculum Content\Week 7\Lesson 13.md
+  [WARNING] Document not assigned to any lesson: term2\Teacher Resources\Curriculum Content\Week 7\Lesson 14.md
+
