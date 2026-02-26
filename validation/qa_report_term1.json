@@ -1,7 +1,7 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-26T14:29:38.028558+00:00",
-  "started_at": "2026-02-26T14:29:38.028558+00:00",
+  "generated_at": "2026-02-26T22:32:05.047707+00:00",
+  "started_at": "2026-02-26T22:32:05.047597+00:00",
   "total_checks": 47,
   "passed": 46,
   "failed": 1,
@@ -487,11 +487,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T14:29:36) > consolidated_at (2026-02-26T14:29:36)",
+      "message": "KB generated_at (2026-02-26T22:32:03) > consolidated_at (2026-02-26T22:32:03)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-26T14:29:36.870190+00:00",
-        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
+        "kb_ts": "2026-02-26T22:32:03.398281+00:00",
+        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
       }
     },
     {
@@ -525,9 +525,9 @@
       "details": {
         "term": 1,
         "template_files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },

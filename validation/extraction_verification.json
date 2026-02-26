@@ -1,44 +1,119 @@
 {
-  "generated_at": "2026-02-26T20:29:45.812922+00:00",
-  "lesson_coverage": 1.0,
-  "lesson_coverage_pct": "100.0%",
-  "overall_coverage": 1.0,
-  "overall_coverage_pct": "100.0%",
-  "total_source": 0,
-  "matched": 0,
-  "structural": 0,
-  "unmatched": 0,
-  "skipped_trivial": 0,
-  "total_kb": 10503,
+  "generated_at": "2026-02-26T22:32:17.749093+00:00",
+  "lesson_coverage": 0.9994,
+  "lesson_coverage_pct": "99.9%",
+  "overall_coverage": 0.9994,
+  "overall_coverage_pct": "99.9%",
+  "total_source": 13583,
+  "matched": 11909,
+  "structural": 769,
+  "unmatched": 8,
+  "skipped_trivial": 897,
+  "total_kb": 8766,
   "truncations": [],
-  "stage_losses": {},
+  "stage_losses": {
+    "6": [
+      {
+        "type": "link",
+        "content_preview": "slide10.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+        "location": "slide:19:run_hyperlink",
+        "term": 2,
+        "lesson": 2,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide10.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": 6,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide20.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "location": "slide:19:run_hyperlink",
+        "term": 2,
+        "lesson": 6,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide9.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": 8,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": 12,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:16:run_hyperlink",
+        "term": 2,
+        "lesson": 12,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:16:run_hyperlink",
+        "term": 2,
+        "lesson": 12,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide8.xml",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:18:run_hyperlink",
+        "term": 2,
+        "lesson": 12,
+        "reason": "present in stage 5 but missing from KB output"
+      }
+    ]
+  },
   "checks": [
     {
       "check_id": "V001",
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 100.0% (0 matched [0 structural], 0 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 99.9% (12678 matched [769 structural], 8 unmatched of lesson-assigned atoms)",
       "details": {
-        "lesson_coverage": 1.0,
-        "overall_coverage": 1.0,
-        "lesson_matched": 0,
-        "lesson_structural": 0,
-        "lesson_unmatched": 0,
-        "total_source": 0,
-        "skipped_trivial": 0
+        "lesson_coverage": 0.9994,
+        "overall_coverage": 0.9994,
+        "lesson_matched": 11909,
+        "lesson_structural": 769,
+        "lesson_unmatched": 8,
+        "total_source": 13583,
+        "skipped_trivial": 897
       }
     },
     {
       "check_id": "V002",
       "layer": 5,
-      "passed": false,
+      "passed": true,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 0.0% (0/0)",
+      "message": "Link extraction coverage: 95.8% (182/190)",
       "details": {
-        "link_coverage": 0.0,
-        "matched": 0,
-        "total": 0
+        "link_coverage": 0.9579,
+        "matched": 182,
+        "total": 190
       }
     },
     {
@@ -75,13 +150,13 @@
     {
       "check_id": "V006",
       "layer": 5,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "Speaker note preservation: 0.0% (0/0)",
+      "message": "Speaker note preservation: 100.0% (335/335)",
       "details": {
-        "coverage": 0.0,
-        "matched": 0,
-        "total": 0
+        "coverage": 1.0,
+        "matched": 335,
+        "total": 335
       }
     },
     {
@@ -89,39 +164,39 @@
       "layer": 5,
       "passed": false,
       "severity": "WARNING",
-      "message": "Unconsumed native doc sections: 893 (new content types may need dedicated KB fields)",
+      "message": "Unconsumed native doc sections: 5 (new content types may need dedicated KB fields)",
       "details": {
-        "count": 893,
+        "count": 5,
         "examples": [
           {
             "term": 3,
-            "lesson": 1,
-            "content": "Term 2 assessment is split evenly between process and product .",
+            "lesson": 3,
+            "content": "Students reflect on which research method was most useful and why.\u000b Students com",
             "location": "remaining_content[0].content[0]"
           },
           {
             "term": 3,
-            "lesson": 1,
-            "content": "Portfolio: 50 marks (50%)",
-            "location": "remaining_content[0].content[1]"
+            "lesson": 4,
+            "content": "Students articulate a clear project vision and complete My Success Criteria / Se",
+            "location": "remaining_content[0].content[0]"
           },
           {
             "term": 3,
-            "lesson": 1,
-            "content": "Game: 50 marks (50%)",
-            "location": "remaining_content[0].content[2]"
+            "lesson": 5,
+            "content": "Students complete My Success Criteria / Self-Assessment and AI MCQ exit-ticket q",
+            "location": "remaining_content[0].content[0]"
           },
           {
             "term": 3,
-            "lesson": 1,
-            "content": "Assessment is completed once at the end of Term 2, except for portfolio completi",
-            "location": "remaining_content[0].content[3]"
+            "lesson": 6,
+            "content": "Students complete My Success Criteria / Self-Assessment and AI MCQ exit-ticket q",
+            "location": "remaining_content[0].content[0]"
           },
           {
             "term": 3,
-            "lesson": 1,
-            "content": "This document remains the single source of truth for Term 2 assessment.",
-            "location": "remaining_content[0].content[4]"
+            "lesson": 7,
+            "content": "Students reflect on how expanding mechanics and immersion changed the player exp",
+            "location": "remaining_content[0].content[0]"
           }
         ]
       }
@@ -140,23 +215,12 @@
     {
       "check_id": "V009",
       "layer": 5,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "Stale manifest entries (missing from disk): 115 (files may have been moved/renamed/deleted)",
+      "message": "Stale manifest entries (missing from disk): 0 (all manifest entries valid)",
       "details": {
-        "count": 115,
-        "files": [
-          "term1/Administrative/Explorers Programme Curriculum Specifications Term 1.docx",
-          "term1/Administrative/IB Wrapper Design Curriciulum Mapping.pptx",
-          "term1/Feedback & Surveys/Feedback Forms.docx",
-          "term1/Lessons Resources/Student Assessment Templates/Students Assesment Templates .docx",
-          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.docx",
-          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.pdf",
-          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist.xlsx",
-          "term1/Lessons Resources/Student Assessment Templates/US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
-          "term1/Programme Overview/Canva File Link/Endstar Term 2 Overview.docx",
-          "term1/Programme Overview/Explorer's Programme Overview.pdf"
-        ]
+        "count": 0,
+        "files": []
       }
     }
   ]

@@ -1,13 +1,13 @@
 {
   "verdict": "FAIL",
-  "generated_at": "2026-02-26T14:29:38.028558+00:00",
-  "started_at": "2026-02-26T14:29:37.668258+00:00",
+  "generated_at": "2026-02-26T22:32:05.042219+00:00",
+  "started_at": "2026-02-26T22:32:04.619142+00:00",
   "total_checks": 190,
-  "passed": 178,
-  "failed": 12,
-  "errors": 2,
-  "warnings": 5,
-  "info_failures": 5,
+  "passed": 176,
+  "failed": 14,
+  "errors": 5,
+  "warnings": 6,
+  "info_failures": 3,
   "layers_run": [
     1,
     3,
@@ -16,18 +16,18 @@
   "per_layer": {
     "1": {
       "total": 139,
-      "passed": 132,
-      "failed": 7
+      "passed": 131,
+      "failed": 8
     },
     "3": {
       "total": 26,
-      "passed": 24,
-      "failed": 2
+      "passed": 22,
+      "failed": 4
     },
     "4": {
       "total": 25,
-      "passed": 22,
-      "failed": 3
+      "passed": 23,
+      "failed": 2
     }
   },
   "layer_summaries": {},
@@ -493,11 +493,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T14:29:36) > consolidated_at (2026-02-26T14:29:36)",
+      "message": "KB generated_at (2026-02-26T22:32:03) > consolidated_at (2026-02-26T22:32:03)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-26T14:29:36.870190+00:00",
-        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
+        "kb_ts": "2026-02-26T22:32:03.398281+00:00",
+        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
       }
     },
     {
@@ -531,9 +531,9 @@
       "details": {
         "term": 1,
         "template_files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },
@@ -902,37 +902,12 @@
     {
       "check_id": "C011",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "6 plain-text resources (no URL) — possibly incomplete",
+      "message": "All resources contain URLs",
       "details": {
         "term": 2,
-        "plain_text": [
-          {
-            "lesson_id": 2,
-            "resource": "AI brainstorming task - slide10.xml"
-          },
-          {
-            "lesson_id": 6,
-            "resource": "Publishing your game to EndStar - slide10.xml"
-          },
-          {
-            "lesson_id": 6,
-            "resource": "here - slide20.xml"
-          },
-          {
-            "lesson_id": 8,
-            "resource": "example agent prompt - slide9.xml"
-          },
-          {
-            "lesson_id": 12,
-            "resource": "portfolio slide - slide15.xml"
-          },
-          {
-            "lesson_id": 12,
-            "resource": "Scope Freeze - slide8.xml"
-          }
-        ]
+        "plain_text": []
       }
     },
     {
@@ -1075,11 +1050,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T14:29:37) > consolidated_at (2026-02-26T14:29:36)",
+      "message": "KB generated_at (2026-02-26T22:32:03) > consolidated_at (2026-02-26T22:32:03)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-26T14:29:37.082960+00:00",
-        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
+        "kb_ts": "2026-02-26T22:32:03.832885+00:00",
+        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
       }
     },
     {
@@ -1113,9 +1088,9 @@
       "details": {
         "term": 2,
         "template_files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },
@@ -1355,11 +1330,11 @@
       "layer": 1,
       "passed": true,
       "severity": "ERROR",
-      "message": "total_lessons matches actual count (24)",
+      "message": "total_lessons matches actual count (12)",
       "details": {
         "term": 3,
-        "declared": 24,
-        "actual": 24
+        "declared": 12,
+        "actual": 12
       }
     },
     {
@@ -1398,61 +1373,12 @@
     {
       "check_id": "C004",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "12 lessons have short activity_description (<50 chars)",
+      "message": "All activity descriptions meet minimum length",
       "details": {
         "term": 3,
-        "issues": [
-          {
-            "lesson_id": 13,
-            "length": 0
-          },
-          {
-            "lesson_id": 14,
-            "length": 0
-          },
-          {
-            "lesson_id": 15,
-            "length": 0
-          },
-          {
-            "lesson_id": 16,
-            "length": 0
-          },
-          {
-            "lesson_id": 17,
-            "length": 0
-          },
-          {
-            "lesson_id": 18,
-            "length": 0
-          },
-          {
-            "lesson_id": 19,
-            "length": 0
-          },
-          {
-            "lesson_id": 20,
-            "length": 0
-          },
-          {
-            "lesson_id": 21,
-            "length": 0
-          },
-          {
-            "lesson_id": 22,
-            "length": 0
-          },
-          {
-            "lesson_id": 23,
-            "length": 0
-          },
-          {
-            "lesson_id": 24,
-            "length": 0
-          }
-        ]
+        "issues": []
       }
     },
     {
@@ -1477,7 +1403,7 @@
         "issues": [
           {
             "lesson_index": 2,
-            "video_index": 1,
+            "video_index": 0,
             "url": "https://docs.google.com/file/d/1zhMjUhFWC_swsC344_7KA_0ycUO3SnSR/preview",
             "domain": "docs.google.com"
           },
@@ -1510,15 +1436,15 @@
       "details": {
         "term": 3,
         "overfit_keywords": {
-          "player": 24,
-          "prototype": 22,
-          "gameplay": 22,
-          "feedback": 23,
-          "portfolio": 24,
-          "reflection": 24,
-          "assessment": 24,
-          "ai": 24,
-          "game design": 21
+          "player": 12,
+          "prototype": 10,
+          "gameplay": 10,
+          "feedback": 11,
+          "portfolio": 12,
+          "reflection": 12,
+          "assessment": 12,
+          "ai": 12,
+          "endstar": 12
         }
       }
     },
@@ -1547,17 +1473,12 @@
     {
       "check_id": "C011",
       "layer": 1,
-      "passed": false,
+      "passed": true,
       "severity": "INFO",
-      "message": "1 plain-text resources (no URL) — possibly incomplete",
+      "message": "All resources contain URLs",
       "details": {
         "term": 3,
-        "plain_text": [
-          {
-            "lesson_id": 12,
-            "resource": "notebooklm.google.com - notebooklm.google.com"
-          }
-        ]
+        "plain_text": []
       }
     },
     {
@@ -1596,26 +1517,39 @@
     {
       "check_id": "X001",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "KB has 24 lessons (expected 24, consolidated has 24 total, 24 in range)",
+      "message": "KB has 12 lessons (expected 24, consolidated has 12 total, 12 in range)",
       "details": {
         "term": 3,
-        "kb_count": 24,
+        "kb_count": 12,
         "expected": 24,
-        "cons_total": 24,
-        "cons_in_range": 24
+        "cons_total": 12,
+        "cons_in_range": 12
       }
     },
     {
       "check_id": "X002",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "All 24 expected lessons present in KB",
+      "message": "Expected lessons missing from KB: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]",
       "details": {
         "term": 3,
-        "missing": [],
+        "missing": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
         "expected_range": "1-24"
       }
     },
@@ -1644,9 +1578,9 @@
     {
       "check_id": "X005",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "All lesson IDs contiguous",
+      "message": "Missing lesson IDs: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]",
       "details": {
         "term": 3,
         "expected": [
@@ -1687,7 +1621,9 @@
           9,
           10,
           11,
-          12,
+          12
+        ],
+        "gaps": [
           13,
           14,
           15,
@@ -1700,8 +1636,7 @@
           22,
           23,
           24
-        ],
-        "gaps": []
+        ]
       }
     },
     {
@@ -1720,11 +1655,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T14:29:37) > consolidated_at (2026-02-26T14:29:36)",
+      "message": "KB generated_at (2026-02-26T22:32:04) > consolidated_at (2026-02-26T22:32:03)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-26T14:29:37.371343+00:00",
-        "cons_ts": "2026-02-26T14:29:36.656916+00:00"
+        "kb_ts": "2026-02-26T22:32:04.217145+00:00",
+        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
       }
     },
     {
@@ -1753,12 +1688,14 @@
     {
       "check_id": "X010",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "All KB lessons have documents in consolidated",
+      "message": "1 KB lessons have 0 documents in consolidated: [8]",
       "details": {
         "term": 3,
-        "empty_lessons": []
+        "empty_lessons": [
+          8
+        ]
       }
     },
     {
@@ -1770,9 +1707,9 @@
       "details": {
         "term": 3,
         "template_files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },
@@ -1860,8 +1797,8 @@
       "message": "3 KB files loaded successfully",
       "details": {
         "files": [
-          "Term 1 - Lesson Based Structure.json",
           "Term 2 - Lesson Based Structure.json",
+          "Term 1 - Lesson Based Structure.json",
           "Term 3 - Lesson Based Structure.json"
         ],
         "errors": []
@@ -1904,12 +1841,12 @@
     {
       "check_id": "E003",
       "layer": 3,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "Term 3: 24 lessons correct",
+      "message": "Term 3: 12 lessons (expected 24)",
       "details": {
         "term": 3,
-        "actual": 24,
+        "actual": 12,
         "expected": 24
       }
     },
@@ -1957,10 +1894,10 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "All 1871 image paths exist on disk",
+      "message": "All 1853 image paths exist on disk",
       "details": {
         "missing_count": 0,
-        "total": 1871,
+        "total": 1853,
         "samples": []
       }
     },
@@ -1982,9 +1919,9 @@
       "message": "3 template KB files found",
       "details": {
         "files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },
@@ -2009,27 +1946,27 @@
           {
             "term": 3,
             "lesson_id": 1,
-            "images": 64
+            "images": 66
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "images": 86
+            "images": 85
           },
           {
             "term": 3,
             "lesson_id": 4,
-            "images": 77
+            "images": 76
           },
           {
             "term": 3,
             "lesson_id": 5,
-            "images": 100
+            "images": 99
           },
           {
             "term": 3,
             "lesson_id": 6,
-            "images": 84
+            "images": 83
           },
           {
             "term": 3,
@@ -2039,27 +1976,27 @@
           {
             "term": 3,
             "lesson_id": 8,
-            "images": 67
+            "images": 66
           },
           {
             "term": 3,
             "lesson_id": 9,
-            "images": 93
+            "images": 92
           },
           {
             "term": 3,
             "lesson_id": 10,
-            "images": 65
+            "images": 64
           },
           {
             "term": 3,
             "lesson_id": 11,
-            "images": 87
+            "images": 86
           },
           {
             "term": 3,
             "lesson_id": 12,
-            "images": 143
+            "images": 142
           }
         ]
       }
@@ -2069,11 +2006,11 @@
       "layer": 3,
       "passed": true,
       "severity": "INFO",
-      "message": "42/60 lessons have 0 videos, 20/60 have 0 tools (acceptable)",
+      "message": "33/48 lessons have 0 videos, 14/48 have 0 tools (acceptable)",
       "details": {
-        "zero_videos": 42,
-        "zero_tools": 20,
-        "total": 60
+        "zero_videos": 33,
+        "zero_tools": 14,
+        "total": 48
       }
     },
     {
@@ -2102,58 +2039,53 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "10 multi-source lessons, 0 with merge issues",
+      "message": "9 multi-source lessons, 0 with merge issues",
       "details": {
         "multi_source": [
           {
             "lesson_id": 3,
             "native_count": 58,
-            "doc_sources": 3
+            "doc_sources": 1
           },
           {
             "lesson_id": 4,
             "native_count": 52,
-            "doc_sources": 3
+            "doc_sources": 1
           },
           {
             "lesson_id": 5,
             "native_count": 59,
-            "doc_sources": 5
+            "doc_sources": 3
           },
           {
             "lesson_id": 6,
             "native_count": 54,
-            "doc_sources": 4
+            "doc_sources": 2
           },
           {
             "lesson_id": 7,
             "native_count": 65,
-            "doc_sources": 4
-          },
-          {
-            "lesson_id": 8,
-            "native_count": 44,
             "doc_sources": 2
           },
           {
             "lesson_id": 9,
             "native_count": 49,
-            "doc_sources": 4
+            "doc_sources": 2
           },
           {
             "lesson_id": 10,
             "native_count": 40,
-            "doc_sources": 3
+            "doc_sources": 1
           },
           {
             "lesson_id": 11,
             "native_count": 47,
-            "doc_sources": 4
+            "doc_sources": 2
           },
           {
             "lesson_id": 12,
             "native_count": 50,
-            "doc_sources": 5
+            "doc_sources": 3
           }
         ]
       }
@@ -2204,67 +2136,37 @@
       "layer": 3,
       "passed": false,
       "severity": "WARNING",
-      "message": "11 URLs with encoding issues",
+      "message": "5 URLs with encoding issues",
       "details": {
         "issues": [
           {
             "term": 2,
             "lesson_id": 9,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\claude",
+            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 9,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Make S",
+            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 10,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\claude",
+            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 10,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Make S",
-            "issue": "unencoded space"
-          },
-          {
-            "term": 3,
-            "lesson_id": 3,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\",
-            "issue": "unencoded space"
-          },
-          {
-            "term": 3,
-            "lesson_id": 4,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\",
+            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
             "issue": "unencoded space"
           },
           {
             "term": 3,
             "lesson_id": 10,
             "url": " https://www.youtube.com/watch?v=46SNhe_nEIY&t=1149s",
-            "issue": "unencoded space"
-          },
-          {
-            "term": 3,
-            "lesson_id": 11,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\",
-            "issue": "unencoded space"
-          },
-          {
-            "term": 3,
-            "lesson_id": 11,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\",
-            "issue": "unencoded space"
-          },
-          {
-            "term": 3,
-            "lesson_id": 12,
-            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term3\\Teacher Resources\\Assessment Guides\\Exemplar work\\",
             "issue": "unencoded space"
           }
         ]
@@ -2273,11 +2175,17 @@
     {
       "check_id": "I004",
       "layer": 3,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "Consolidated and KB lesson counts match",
+      "message": "Lesson count mismatches: [{'term': 3, 'kb': 12, 'expected': 24}]",
       "details": {
-        "mismatches": []
+        "mismatches": [
+          {
+            "term": 3,
+            "kb": 12,
+            "expected": 24
+          }
+        ]
       }
     },
     {
@@ -2305,58 +2213,58 @@
       "layer": 3,
       "passed": false,
       "severity": "WARNING",
-      "message": "372 duplicate image paths within lessons",
+      "message": "375 duplicate image paths within lessons",
       "details": {
         "duplicates": [
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_001.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_001.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_002.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_002.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_003.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_003.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_004.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_004.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_005.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_005.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_006.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_006.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_007.jpg"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_007.jpg"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_008.png"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_008.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_009.jpg"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_009.jpg"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_010.jpg"
+            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_010.jpg"
           }
         ]
       }
@@ -2456,7 +2364,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T1L8 assessment_signals: 10 items",
+      "message": "T1L8 assessment_signals: 4 items",
       "details": {
         "query": "How is Lesson 8 assessed?",
         "field": "assessment_signals",
@@ -2602,7 +2510,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "T2L7 core_topics: 29 items",
+      "message": "T2L7 core_topics: 25 items",
       "details": {
         "query": "What are the core topics for Term 2 Lesson 7?",
         "field": "core_topics",
@@ -2661,7 +2569,7 @@
       "layer": 4,
       "passed": true,
       "severity": "INFO",
-      "message": "lesson_title coverage: 100% (60/60) — threshold: 100%",
+      "message": "lesson_title coverage: 100% (48/48) — threshold: 100%",
       "details": {
         "coverage": 1.0,
         "threshold": 1.0,
@@ -2671,128 +2579,46 @@
     {
       "check_id": "UC02",
       "layer": 4,
-      "passed": false,
-      "severity": "ERROR",
-      "message": "learning_objectives coverage: 80% (48/60) — threshold: 100%",
+      "passed": true,
+      "severity": "INFO",
+      "message": "learning_objectives coverage: 100% (48/48) — threshold: 100%",
       "details": {
-        "coverage": 0.8,
+        "coverage": 1.0,
         "threshold": 1.0,
-        "missing": [
-          {
-            "term": 3,
-            "lesson_id": 13
-          },
-          {
-            "term": 3,
-            "lesson_id": 14
-          },
-          {
-            "term": 3,
-            "lesson_id": 15
-          },
-          {
-            "term": 3,
-            "lesson_id": 16
-          },
-          {
-            "term": 3,
-            "lesson_id": 17
-          },
-          {
-            "term": 3,
-            "lesson_id": 18
-          },
-          {
-            "term": 3,
-            "lesson_id": 19
-          },
-          {
-            "term": 3,
-            "lesson_id": 20
-          },
-          {
-            "term": 3,
-            "lesson_id": 21
-          },
-          {
-            "term": 3,
-            "lesson_id": 22
-          }
-        ]
+        "missing": []
       }
     },
     {
       "check_id": "UC03",
       "layer": 4,
-      "passed": false,
-      "severity": "ERROR",
-      "message": "activity_description coverage: 80% (48/60) — threshold: 100%",
+      "passed": true,
+      "severity": "INFO",
+      "message": "activity_description coverage: 100% (48/48) — threshold: 100%",
       "details": {
-        "coverage": 0.8,
+        "coverage": 1.0,
         "threshold": 1.0,
-        "missing": [
-          {
-            "term": 3,
-            "lesson_id": 13
-          },
-          {
-            "term": 3,
-            "lesson_id": 14
-          },
-          {
-            "term": 3,
-            "lesson_id": 15
-          },
-          {
-            "term": 3,
-            "lesson_id": 16
-          },
-          {
-            "term": 3,
-            "lesson_id": 17
-          },
-          {
-            "term": 3,
-            "lesson_id": 18
-          },
-          {
-            "term": 3,
-            "lesson_id": 19
-          },
-          {
-            "term": 3,
-            "lesson_id": 20
-          },
-          {
-            "term": 3,
-            "lesson_id": 21
-          },
-          {
-            "term": 3,
-            "lesson_id": 22
-          }
-        ]
+        "missing": []
       }
     },
     {
       "check_id": "UC04",
       "layer": 4,
-      "passed": false,
-      "severity": "WARNING",
-      "message": "resources coverage: 55% (33/60) — threshold: 60%",
+      "passed": true,
+      "severity": "INFO",
+      "message": "resources coverage: 69% (33/48) — threshold: 60%",
       "details": {
-        "coverage": 0.55,
+        "coverage": 0.688,
         "threshold": 0.6
       }
     },
     {
       "check_id": "UC05",
       "layer": 4,
-      "passed": true,
-      "severity": "INFO",
-      "message": "assessment_signals coverage: 80% (48/60) — threshold: 80%",
+      "passed": false,
+      "severity": "WARNING",
+      "message": "assessment_signals coverage: 60% (29/48) — threshold: 80%",
       "details": {
-        "coverage": 0.8,
+        "coverage": 0.604,
         "threshold": 0.8
       }
     },
@@ -2819,11 +2645,55 @@
     {
       "check_id": "UN03",
       "layer": 4,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "All lesson IDs sequential and match title numbering",
+      "message": "1 sequencing/numbering issues",
       "details": {
-        "issues": []
+        "issues": [
+          {
+            "term": 3,
+            "actual": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "expected": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ]
       }
     },
     {

@@ -1,29 +1,31 @@
 ======================================================================
   QA REPORT — FAIL
-  2026-02-26T14:29:38.028558+00:00
+  2026-02-26T22:32:05.047385+00:00
 ======================================================================
 
 Verdict:    FAIL
-Checks:     190 total, 178 passed, 12 failed
-Errors:     2
-Warnings:   5
+Checks:     190 total, 176 passed, 14 failed
+Errors:     5
+Warnings:   6
 Layers run: [1, 3, 4]
 
-  Layer 1 (Programmatic): 132/139 passed
-  Layer 3 (Edge Cases): 24/26 passed
-  Layer 4 (User Scenarios): 22/25 passed
+  Layer 1 (Programmatic): 131/139 passed
+  Layer 3 (Edge Cases): 22/26 passed
+  Layer 4 (User Scenarios): 23/25 passed
 
 FAILURES:
 --------------------------------------------------
-  [ERROR] UC02: learning_objectives coverage: 80% (48/60) — threshold: 100%
-  [ERROR] UC03: activity_description coverage: 80% (48/60) — threshold: 100%
-  [WARNING] C004: 12 lessons have short activity_description (<50 chars)
+  [ERROR] E003: Term 3: 12 lessons (expected 24)
+  [ERROR] I004: Lesson count mismatches: [{'term': 3, 'kb': 12, 'expected': 24}]
+  [ERROR] X001: KB has 12 lessons (expected 24, consolidated has 12 total, 12 in range)
+  [ERROR] X002: Expected lessons missing from KB: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  [ERROR] X010: 1 KB lessons have 0 documents in consolidated: [8]
   [WARNING] C006: 2 video URLs don't match known video domains
-  [WARNING] I003: 11 URLs with encoding issues
-  [WARNING] I007: 372 duplicate image paths within lessons
-  [WARNING] UC04: resources coverage: 55% (33/60) — threshold: 60%
+  [WARNING] I003: 5 URLs with encoding issues
+  [WARNING] I007: 375 duplicate image paths within lessons
+  [WARNING] UC05: assessment_signals coverage: 60% (29/48) — threshold: 80%
+  [WARNING] UN03: 1 sequencing/numbering issues
+  [WARNING] X005: Missing lesson IDs: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
   [INFO] C008: 5 keywords appear in >80% of lessons (possible overfit): ['feedback', 'portfolio', 'assessment', 'ai', 'player']
   [INFO] C008: 8 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']
   [INFO] C008: 9 keywords appear in >80% of lessons (possible overfit): ['player', 'prototype', 'gameplay', 'feedback', 'portfolio']
-  [INFO] C011: 6 plain-text resources (no URL) — possibly incomplete
-  [INFO] C011: 1 plain-text resources (no URL) — possibly incomplete
