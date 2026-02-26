@@ -97,18 +97,30 @@ ENDSTAR_TOOLS = {
     "npcs": "NPCs",
     "npc": "NPCs",
     "interactions": "Interactions",
-    "mechanics": "Mechanics",
+    "mechanics tool": "Mechanics",
+    "mechanics system": "Mechanics",
     "logic": "Logic",
     "connections": "Connections",
     "props": "Props",
     "rule block": "Rule Blocks",
     "rule blocks": "Rule Blocks",
-    "visuals": "Visuals",
-    "sound": "Sound",
+    "visuals tool": "Visuals",
+    "visual tool": "Visuals",
+    "sound tool": "Sound",
+    "sound effect": "Sound",
+    "sound engine": "Sound",
     "npc dialogue": "NPC dialogue",
     "level flow": "Level flow",
     "prototype": "Prototyping tools",
     "prototyping": "Prototyping tools",
+}
+
+# Single-word Endstar tool keywords that are ambiguous and need context
+# These only match when co-occurring with Endstar-related terms nearby
+ENDSTAR_AMBIGUOUS_TOOLS = {
+    "sound": "Sound",
+    "mechanics": "Mechanics",
+    "visuals": "Visuals",
 }
 
 # URL patterns for video services

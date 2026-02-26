@@ -158,7 +158,7 @@ def extract_pptx_links(pptx_path):
                 try:
                     if hasattr(shape, "click_action") and shape.click_action and shape.click_action.hyperlink:
                         addr = shape.click_action.hyperlink.address
-                        if addr:
+                        if addr and (addr.startswith("http") or addr.startswith("mailto:")):
                             links.append({
                                 "url": addr,
                                 "text": shape.text.strip() if shape.has_text_frame else "",

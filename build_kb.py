@@ -28,7 +28,8 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from config import (
     CONSOLIDATED_DIR, OUTPUT_DIR, LOGS_DIR, SOURCES_DIR, WEEK_LESSON_MAP,
-    BASE_DIR, CONVERTED_DIR, NATIVE_DIR, ENDSTAR_TOOLS, VIDEO_URL_PATTERNS,
+    BASE_DIR, CONVERTED_DIR, NATIVE_DIR, ENDSTAR_TOOLS, ENDSTAR_AMBIGUOUS_TOOLS,
+    VIDEO_URL_PATTERNS,
 )
 
 
@@ -398,7 +399,8 @@ def extract_programme_metadata(text):
 def extract_curriculum_alignment_from_text(text):
     """Extract curriculum alignment standards from DOCX/markdown text.
     Handles both single-line and multi-line paragraphs where the framework
-    name is on the first line and details follow on subsequent lines."""
+    name is on the first line and details follow on subsequent lines.
+    Also finds framework references embedded mid-sentence."""
     prefixes = [
         "CSTA", "UK Computer Science", "UK Design", "IB Design",
         "IB MYP", "NGSS", "Common Core", "ISTE", "OECD",
@@ -438,6 +440,13 @@ def extract_curriculum_alignment_from_text(text):
             results.append("\n".join(block))
             i = j
         else:
+            # Second pass: check for framework refs embedded mid-sentence
+            for prefix in prefixes:
+                pos = stripped.find(prefix)
+                if pos > 0:  # Found mid-line (not at start)
+                    embedded = stripped[pos:].strip()
+                    if embedded not in results:
+                        results.append(embedded)
             i += 1
     return results
 
@@ -486,7 +495,8 @@ def _parse_curriculum_alignment(raw):
 
 def extract_curriculum_alignment_from_slides(slides):
     """Extract curriculum alignment from slide speaker notes (fallback for T1).
-    Looks for known framework prefixes in speaker notes text."""
+    Looks for known framework prefixes in speaker notes text, including
+    references embedded mid-sentence."""
     alignments = []
     for slide in slides:
         notes = slide.get("notes", "")
@@ -497,11 +507,21 @@ def extract_curriculum_alignment_from_slides(slides):
             stripped = line.strip()
             if not stripped:
                 continue
+            found_start = False
             for prefix in _ALIGNMENT_PREFIXES:
                 if stripped.startswith(prefix):
                     if stripped not in alignments:
                         alignments.append(stripped)
+                    found_start = True
                     break
+            if not found_start:
+                # Second pass: find framework refs embedded mid-sentence
+                for prefix in _ALIGNMENT_PREFIXES:
+                    pos = stripped.find(prefix)
+                    if pos > 0:
+                        embedded = stripped[pos:].strip()
+                        if embedded not in alignments:
+                            alignments.append(embedded)
     return alignments
 
 
@@ -587,6 +607,12 @@ def extract_learning_objectives_from_slides(slides):
         # Strategy A: Content AFTER the heading (Term 2/3 format)
         post_objectives = []
         current_title = ""
+        # Patterns that indicate success criteria / self-assessment, not objectives
+        _success_criteria_patterns = [
+            "i can ", "i clearly ", "i differentiated", "i critically",
+            "i have ", "i am able",
+            "success criteria", "we will know", "successful when",
+        ]
         for line in lines[heading_idx + 1:]:
             stripped = line.strip()
             if not stripped:
@@ -595,6 +621,10 @@ def extract_learning_objectives_from_slides(slides):
                 continue
             stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
             if stripped.startswith("‹") or len(stripped) < 10:
+                continue
+            # Skip self-assessment / success criteria lines
+            stripped_lower = stripped.lower()
+            if any(pat in stripped_lower for pat in _success_criteria_patterns):
                 continue
             # Detect title-like lines (short, title case) vs description lines
             if len(stripped) < 60 and stripped[0].isupper() and not stripped.endswith("."):
@@ -905,27 +935,30 @@ def extract_core_topics_from_native(native_content, lesson_num):
     return topics
 
 
-def extract_activity_type_from_content(slides, activities_text):
-    """Determine the activity type from content analysis."""
+def extract_activity_type_from_content(slides, activities_text, lesson_title=""):
+    """Determine the activity type from content analysis.
+    Uses lesson-specific text only (slide text + activities), not shared docs."""
     slide_text = " ".join(s["text"] + " " + s["notes"] for s in slides).lower() if slides else ""
     all_text = (slide_text + " " + activities_text).lower()
+    title_lower = lesson_title.lower() if lesson_title else ""
 
-    # Primary activity signals (higher priority)
+    # Primary activity signals — ordered from most specific to most generic.
+    # Use multi-word phrases to avoid false matches from common single words.
     primary_signals = {
-        "Brief analysis": ["design brief", "analyse", "brief analysis", "problem statement"],
+        "Agentic AI": ["agentic ai", "ai agent", "autonomous agent", "agent framework"],
+        "Brief analysis": ["design brief", "brief analysis", "analyse the brief", "problem statement"],
         "Persona and empathy mapping": ["persona", "empathy map", "player profile", "user research"],
-        "Research and prototyping": ["research", "primary research", "secondary research", "prototype"],
-        "Brief refinement and team setup": ["rewrite", "team", "roles", "brief refinement"],
+        "Research and prototyping": ["primary research", "secondary research", "research method", "research finding"],
+        "Brief refinement and team setup": ["brief refinement", "rewrite the brief", "team roles", "role allocation"],
         "Ideation and prototyping": ["brainstorm", "ideation", "concept generation", "storyboard"],
-        "Prototyping and iteration": ["prototype", "debugging", "iteration", "build"],
-        "Game expansion and polish": ["expansion", "polish", "immersion", "visual"],
-        "Peer testing and feedback": ["peer test", "feedback", "WWW", "EBI"],
-        "Iteration and refinement": ["iteration", "refine", "improve", "priority"],
-        "Project management": ["project manage", "milestone", "timeline", "risk"],
-        "Reflection and evaluation": ["reflection", "evaluate", "SMART goal", "presentation"],
-        "Game readiness review": ["readiness", "launch", "review", "evaluate"],
-        "Launch strategy": ["launch", "strategy", "plan", "success criteria"],
-        "Agentic AI": ["agentic ai", "ai agent", "agent", "autonomous"],
+        "Prototyping and iteration": ["prototype build", "debugging", "iteration cycle", "build and test"],
+        "Game expansion and polish": ["game expansion", "polish", "immersion", "visual enhancement"],
+        "Peer testing and feedback": ["peer test", "peer review", "www/ebi", "ebi feedback"],
+        "Iteration and refinement": ["iteration plan", "refine and improve", "priority matrix", "feedback implementation"],
+        "Project management": ["project manage", "milestone", "timeline", "risk assessment"],
+        "Reflection and evaluation": ["reflection", "self-evaluation", "smart goal", "presentation prep"],
+        "Launch strategy": ["launch strategy", "launch plan", "go-to-market", "marketing strategy"],
+        "Game readiness review": ["game readiness", "readiness review", "launch checklist", "final review"],
     }
 
     # Secondary activity signals (only used as fallback when no primary match)
@@ -933,10 +966,18 @@ def extract_activity_type_from_content(slides, activities_text):
         "Portfolio and documentation": ["portfolio", "documentation", "evidence", "curate"],
     }
 
+    # Lesson-title boosting: if title contains a distinctive phrase, boost that type
+    title_boost = {}
+    for activity_type, signals in primary_signals.items():
+        for s in signals:
+            if s in title_lower:
+                title_boost[activity_type] = title_boost.get(activity_type, 0) + 2
+
     best_type = ""
     best_score = 0
     for activity_type, signals in primary_signals.items():
         score = sum(1 for s in signals if s in all_text)
+        score += title_boost.get(activity_type, 0)
         if score > best_score:
             best_score = score
             best_type = activity_type
@@ -1115,21 +1156,84 @@ def extract_keywords(all_text, lesson_num, lesson_specific_text=""):
 
 def extract_endstar_tools(all_text):
     """Match Endstar platform tool keywords against combined lesson text.
-    Returns deduplicated list of canonical tool names."""
+    Returns deduplicated list of canonical tool names.
+    Ambiguous single-word tools (sound, mechanics, visuals) require
+    co-occurrence with Endstar-related context terms."""
     text_lower = all_text.lower()
     found = set()
+    # Check explicit (non-ambiguous) keywords first
     for keyword, canonical in ENDSTAR_TOOLS.items():
-        # Use word boundary matching to avoid partial matches
-        # For multi-word keywords, just check substring
         if " " in keyword:
             if keyword in text_lower:
                 found.add(canonical)
         else:
-            # Single-word: check word boundary-ish (preceded/followed by non-alpha)
             pattern = r"(?<![a-z])" + re.escape(keyword) + r"(?![a-z])"
             if re.search(pattern, text_lower):
                 found.add(canonical)
+    # Check ambiguous single-word keywords only with Endstar context
+    _context_terms = ["endstar", "platform tool", "game engine", "tool panel",
+                      "toolbox", "endstar tool"]
+    has_context = any(ct in text_lower for ct in _context_terms)
+    if has_context:
+        for keyword, canonical in ENDSTAR_AMBIGUOUS_TOOLS.items():
+            if canonical not in found:
+                pattern = r"(?<![a-z])" + re.escape(keyword) + r"(?![a-z])"
+                if re.search(pattern, text_lower):
+                    found.add(canonical)
     return sorted(found)
+
+
+def extract_video_refs_from_slides(slides):
+    """Extract video references from slide text mentions (URLs + contextual keywords).
+    Captures YouTube/Vimeo URLs and Drive file links near video-related keywords."""
+    video_refs = []
+    seen_urls = set()
+    # Patterns for video service URLs
+    yt_pattern = re.compile(
+        r"((?:https?://)?(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)[\w\-]+)", re.IGNORECASE
+    )
+    vimeo_pattern = re.compile(
+        r"((?:https?://)?(?:www\.)?vimeo\.com/\d+)", re.IGNORECASE
+    )
+    # Drive file link near video keywords
+    drive_pattern = re.compile(
+        r"(https?://drive\.google\.com/file/d/[\w\-]+(?:/[^\s]*)?)", re.IGNORECASE
+    )
+    video_keywords = ["video", "tutorial", "watch", "\U0001f3a5", "\U0001f4f9",
+                       "\U0001f517"]  # 🎥 📹 🔗
+
+    for slide in slides:
+        combined = slide["text"] + "\n" + slide["notes"]
+        # Extract YouTube URLs
+        for match in yt_pattern.finditer(combined):
+            url = match.group(1)
+            if url not in seen_urls:
+                seen_urls.add(url)
+                video_refs.append({
+                    "url": url, "type": "youtube",
+                    "title": "", "video_id": "",
+                })
+        # Extract Vimeo URLs
+        for match in vimeo_pattern.finditer(combined):
+            url = match.group(1)
+            if url not in seen_urls:
+                seen_urls.add(url)
+                video_refs.append({
+                    "url": url, "type": "vimeo",
+                    "title": "", "video_id": "",
+                })
+        # Extract Drive file links only near video context
+        combined_lower = combined.lower()
+        if any(kw in combined_lower for kw in video_keywords):
+            for match in drive_pattern.finditer(combined):
+                url = match.group(1)
+                if url not in seen_urls:
+                    seen_urls.add(url)
+                    video_refs.append({
+                        "url": url, "type": "drive_video",
+                        "title": "", "video_id": "",
+                    })
+    return video_refs
 
 
 def build_video_entries(video_refs):
@@ -1174,6 +1278,9 @@ def build_resource_entries(links):
     for link in links:
         url = link.get("url", "").strip()
         if not url or url in seen_urls:
+            continue
+        # Skip non-web URLs (e.g. PPTX internal XML references like slide10.xml)
+        if not url.startswith("http") and not url.startswith("mailto:"):
             continue
         seen_urls.add(url)
 
@@ -1430,7 +1537,7 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     # Ensure activity text ends with punctuation (not mid-sentence)
     if activities_text:
         activities_text = _ensure_trailing_punctuation(activities_text)
-    activity_type = extract_activity_type_from_content(all_slides, activities_text + "\n" + all_text)
+    activity_type = extract_activity_type_from_content(all_slides, activities_text, lesson_title=title)
 
     # Keywords — use lesson-specific text (slides + notes + lesson plan) not shared docs
     lesson_specific_text = "\n".join(
@@ -1536,6 +1643,7 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     endstar_tools = extract_endstar_tools(lesson_slide_text)
 
     # Build video entries from consolidated video references + native Slides videos
+    # + text-mention video refs extracted from slide content
     all_video_refs = list(lesson_data.get("video_refs", []))
     for nv in native_slides_videos:
         all_video_refs.append({
@@ -1544,6 +1652,9 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
             "title": nv.get("url", ""),
             "type": nv.get("source", "native_slides"),
         })
+    # Extract video URLs mentioned in slide text/notes
+    slide_video_refs = extract_video_refs_from_slides(all_slides) if all_slides else []
+    all_video_refs.extend(slide_video_refs)
     video_entries = build_video_entries(all_video_refs)
 
     # Build resource entries from consolidated links + native Slides/Docs links
