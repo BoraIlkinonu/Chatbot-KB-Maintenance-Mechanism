@@ -41,19 +41,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
           pip install google-auth google-auth-oauthlib google-api-python-client
           pip install python-pptx python-docx openpyxl PyPDF2
-
-      - name: Install Claude CLI
-        run: npm install -g @anthropic-ai/claude-code
 
       - name: Run Pipeline
         env:
@@ -76,21 +68,24 @@ jobs:
         run: |
           python verify_extraction.py --save --github-summary
 
-      - name: Run Dual-Judge KB Validation
-        if: success() && github.event.inputs.dry_run != 'true'
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Reminder — Run dual-judge validation locally
+        if: github.event.inputs.dry_run != 'true'
         run: |
-          python validate_kb_judge.py --backend cli --sample-rate 0.25 \
-            --seed ${{ github.run_number }} --budget 60
-        continue-on-error: true
+          echo "============================================================"
+          echo "  Dual-judge LLM validation is NOT run in CI."
+          echo "  After downloading the generated KBs, run locally:"
+          echo ""
+          echo "    python validate_kb_judge.py --backend cli --verbose"
+          echo ""
+          echo "  See VALIDATE_KB.md for full instructions."
+          echo "============================================================"
 
-      - name: Upload dual-judge report
+      - name: Upload KB outputs as artifact
         if: always() && github.event.inputs.dry_run != 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: dual-judge-report-${{ github.run_number }}
-          path: validation/dual_judge_report*
+          name: kb-outputs-${{ github.run_number }}
+          path: output/
           retention-days: 30
 
       - name: Commit output files
