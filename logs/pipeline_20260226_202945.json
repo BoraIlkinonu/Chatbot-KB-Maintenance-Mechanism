@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-02-26T20:29:45.420874+00:00",
+  "stages_run": [],
+  "errors": [
+    "Pipeline failed: [Errno 2] No such file or directory: '/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/client_secret_2_509243096178-6836hetgaplnd64sjh004f0c2471uvbo.apps.googleusercontent.com.json'"
+  ],
+  "status": "failed"
+}

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-02-26T10:57:09.627102+00:00",
+  "generated_at": "2026-02-26T20:29:45.812922+00:00",
   "lesson_coverage": 1.0,
   "lesson_coverage_pct": "100.0%",
   "overall_coverage": 1.0,
   "overall_coverage_pct": "100.0%",
-  "total_source": 13571,
-  "matched": 11916,
-  "structural": 769,
+  "total_source": 0,
+  "matched": 0,
+  "structural": 0,
   "unmatched": 0,
-  "skipped_trivial": 886,
-  "total_kb": 10591,
+  "skipped_trivial": 0,
+  "total_kb": 10503,
   "truncations": [],
   "stage_losses": {},
   "checks": [
@@ -18,27 +18,27 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 100.0% (12685 matched [769 structural], 0 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 100.0% (0 matched [0 structural], 0 unmatched of lesson-assigned atoms)",
       "details": {
         "lesson_coverage": 1.0,
         "overall_coverage": 1.0,
-        "lesson_matched": 11916,
-        "lesson_structural": 769,
+        "lesson_matched": 0,
+        "lesson_structural": 0,
         "lesson_unmatched": 0,
-        "total_source": 13571,
-        "skipped_trivial": 886
+        "total_source": 0,
+        "skipped_trivial": 0
       }
     },
     {
       "check_id": "V002",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 100.0% (188/188)",
+      "message": "Link extraction coverage: 0.0% (0/0)",
       "details": {
-        "link_coverage": 1.0,
-        "matched": 188,
-        "total": 188
+        "link_coverage": 0.0,
+        "matched": 0,
+        "total": 0
       }
     },
     {
@@ -75,13 +75,13 @@
     {
       "check_id": "V006",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "INFO",
-      "message": "Speaker note preservation: 100.0% (335/335)",
+      "message": "Speaker note preservation: 0.0% (0/0)",
       "details": {
-        "coverage": 1.0,
-        "matched": 335,
-        "total": 335
+        "coverage": 0.0,
+        "matched": 0,
+        "total": 0
       }
     },
     {
@@ -140,12 +140,23 @@
     {
       "check_id": "V009",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "Stale manifest entries (missing from disk): 0 (all manifest entries valid)",
+      "message": "Stale manifest entries (missing from disk): 115 (files may have been moved/renamed/deleted)",
       "details": {
-        "count": 0,
-        "files": []
+        "count": 115,
+        "files": [
+          "term1/Administrative/Explorers Programme Curriculum Specifications Term 1.docx",
+          "term1/Administrative/IB Wrapper Design Curriciulum Mapping.pptx",
+          "term1/Feedback & Surveys/Feedback Forms.docx",
+          "term1/Lessons Resources/Student Assessment Templates/Students Assesment Templates .docx",
+          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.docx",
+          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.pdf",
+          "term1/Lessons Resources/Student Assessment Templates/Students Master Checklist.xlsx",
+          "term1/Lessons Resources/Student Assessment Templates/US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+          "term1/Programme Overview/Canva File Link/Endstar Term 2 Overview.docx",
+          "term1/Programme Overview/Explorer's Programme Overview.pdf"
+        ]
       }
     }
   ]
