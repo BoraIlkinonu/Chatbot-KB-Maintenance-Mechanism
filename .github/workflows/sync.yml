@@ -15,6 +15,14 @@ on:
         options:
           - 'false'
           - 'true'
+      dry_run:
+        description: 'Dry run (scan only, no downloads or stages)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 permissions:
   contents: write
@@ -33,41 +41,52 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Python dependencies
         run: |
           pip install --upgrade pip
           pip install google-auth google-auth-oauthlib google-api-python-client
           pip install python-pptx python-docx openpyxl PyPDF2
+
+      - name: Install Claude CLI
+        run: npm install -g @anthropic-ai/claude-code
 
       - name: Run Pipeline
         env:
           GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
+          ARGS=""
           if [ "${{ github.event.inputs.force_full }}" = "true" ]; then
-            python run_pipeline.py --force-full
-          else
-            python run_pipeline.py
+            ARGS="--force-full"
           fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="--dry-run"
+          fi
+          python run_pipeline.py $ARGS
 
       - name: Run Extraction Verification
+        if: github.event.inputs.dry_run != 'true'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           python verify_extraction.py --save --github-summary
 
       - name: Run Dual-Judge KB Validation
-        if: success()
+        if: success() && github.event.inputs.dry_run != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          pip install anthropic
-          python validate_kb_judge.py --backend sdk --sample-rate 0.25 \
+          python validate_kb_judge.py --backend cli --sample-rate 0.25 \
             --seed ${{ github.run_number }} --budget 60
         continue-on-error: true
 
       - name: Upload dual-judge report
-        if: always()
+        if: always() && github.event.inputs.dry_run != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: dual-judge-report-${{ github.run_number }}
@@ -75,6 +94,7 @@ jobs:
           retention-days: 30
 
       - name: Commit output files
+        if: github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "KB Pipeline Bot"
           git config user.email "kb-pipeline@endstar.ai"
