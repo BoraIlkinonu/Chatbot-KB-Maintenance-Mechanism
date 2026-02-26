@@ -150,42 +150,44 @@ def notify_activity_summary(activities_by_term):
     if total == 0:
         return False
 
-    # Group activities by user across all terms
-    user_actions = {}  # {user_name: {action_type: count}}
+    # Group activities by user across all terms with details
+    user_events = {}  # {user_name: [{action, target, term, time}, ...]}
     for term, activities in activities_by_term.items():
         for a in activities:
+            timestamp = a.get("timestamp", "")
             for actor in a.get("actors", []):
                 user = actor.get("person_name", "unknown")
-                if user not in user_actions:
-                    user_actions[user] = {}
+                if user not in user_events:
+                    user_events[user] = []
                 for action in a.get("actions", []):
-                    atype = action.get("type", "unknown")
-                    user_actions[user][atype] = user_actions[user].get(atype, 0) + 1
+                    for target in a.get("targets", []):
+                        user_events[user].append({
+                            "action": action.get("type", "unknown"),
+                            "target": target.get("title", "?"),
+                            "term": term,
+                            "time": timestamp,
+                        })
 
     msg = f":eyes: *Drive Activity Summary* ({total} events)\n"
 
-    # Per-user summary
-    if user_actions:
-        msg += "\n*Changes by user:*\n"
-        for user, actions in sorted(user_actions.items()):
-            action_parts = [f"{count} {atype}" for atype, count in sorted(actions.items())]
-            msg += f"  • {user}: {', '.join(action_parts)}\n"
+    # Per-user: action details with timestamps and term
+    for user, events in sorted(user_events.items()):
+        # Sort by time descending (most recent first)
+        events.sort(key=lambda e: e.get("time", ""), reverse=True)
 
-    # Per-term breakdown with latest events
-    for term, activities in activities_by_term.items():
-        if activities:
-            msg += f"\n*{term}*: {len(activities)} events"
-            for a in activities[:3]:
-                actors = ", ".join(
-                    act.get("person_name", "unknown") for act in a.get("actors", [])
-                )
-                actions = ", ".join(
-                    act.get("type", "?") for act in a.get("actions", [])
-                )
-                targets = ", ".join(
-                    t.get("title", "?") for t in a.get("targets", [])
-                )
-                msg += f"\n  • {actors}: {actions} → _{targets}_"
+        # Count actions
+        action_counts = {}
+        for e in events:
+            action_counts[e["action"]] = action_counts.get(e["action"], 0) + 1
+        counts_str = ", ".join(f"{c} {a}" for a, c in sorted(action_counts.items()))
+
+        msg += f"\n*{user}* ({counts_str}):\n"
+        for e in events[:5]:  # Show up to 5 most recent per user
+            time_str = _format_timestamp(e["time"])
+            term_str = _term_label(e["term"])
+            msg += f"  • {e['action']} → `{e['target']}` [{term_str}] — {time_str}\n"
+        if len(events) > 5:
+            msg += f"  _... and {len(events) - 5} more events_\n"
 
     return send_slack(msg)
 
@@ -248,42 +250,66 @@ def notify_dry_run_summary(sync_result):
     return send_slack(msg, blocks=blocks)
 
 
+def _format_timestamp(iso_str):
+    """Format ISO8601 timestamp to readable 'YYYY-MM-DD HH:MM UTC'."""
+    if not iso_str:
+        return "unknown time"
+    try:
+        # Handle various ISO formats
+        clean = iso_str.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(clean)
+        return dt.strftime("%Y-%m-%d %H:%M UTC")
+    except Exception:
+        return iso_str[:16] if len(iso_str) >= 16 else iso_str
+
+
+def _term_label(term_key):
+    """Convert term key like 'term1' to 'Term 1'."""
+    if not term_key:
+        return ""
+    import re
+    m = re.match(r"term\s*(\d+)", str(term_key), re.IGNORECASE)
+    return f"Term {m.group(1)}" if m else str(term_key)
+
+
 def notify_revision_summary(revision_data):
     """Notify about revision history for changed files."""
     if not revision_data:
         return False
 
-    # Group revisions by user
-    user_files = {}  # {user_name: [file_name, ...]}
+    # Group revisions by user with timestamps and file details
+    user_details = {}  # {user_name: [{file, term, time}, ...]}
     for file_id, file_info in revision_data.items():
         file_name = file_info.get("name", "unknown")
+        term = file_info.get("term", "")
         for rev in file_info.get("revisions", []):
             user = rev.get("user_name") or rev.get("user_email") or "unknown"
-            if user not in user_files:
-                user_files[user] = set()
-            user_files[user].add(file_name)
+            if user not in user_details:
+                user_details[user] = []
+            user_details[user].append({
+                "file": file_name,
+                "term": term,
+                "time": rev.get("time", ""),
+            })
 
-    if not user_files:
+    if not user_details:
         return False
 
     msg = f":scroll: *Revision History* ({len(revision_data)} files)\n"
 
-    # Per-user file list
-    msg += "\n*Changes by user:*\n"
-    for user, files in sorted(user_files.items()):
-        files_list = sorted(files)
-        display_files = ", ".join(f"`{f}`" for f in files_list[:5])
-        if len(files_list) > 5:
-            display_files += f" +{len(files_list) - 5} more"
-        msg += f"  • {user}: {len(files_list)} files ({display_files})\n"
+    # Per-user: files with term and last edit time
+    for user, entries in sorted(user_details.items()):
+        # Deduplicate files, keep latest time per file
+        file_latest = {}
+        for e in entries:
+            key = e["file"]
+            if key not in file_latest or e["time"] > file_latest[key]["time"]:
+                file_latest[key] = e
 
-    # Per-file revision counts
-    msg += "\n*Revision counts:*\n"
-    for file_id, file_info in list(revision_data.items())[:10]:
-        name = file_info.get("name", "unknown")
-        rev_count = len(file_info.get("revisions", []))
-        msg += f"  • `{name}`: {rev_count} revisions\n"
-    if len(revision_data) > 10:
-        msg += f"  ... and {len(revision_data) - 10} more files\n"
+        msg += f"\n*{user}:*\n"
+        for fname, info in sorted(file_latest.items()):
+            term_str = f" [{_term_label(info['term'])}]" if info["term"] else ""
+            time_str = _format_timestamp(info["time"])
+            msg += f"  • `{fname}`{term_str} — {time_str}\n"
 
     return send_slack(msg)
