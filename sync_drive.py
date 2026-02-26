@@ -58,60 +58,9 @@ def scan_folder(service, folder_id, depth=0, folder_path=""):
                 children = scan_folder(service, item["id"], depth + 1, subfolder_path)
                 files.extend(children)
             elif mime == "application/vnd.google-apps.shortcut":
-                # Resolve shortcut to its target file/folder
-                try:
-                    target = service.files().get(
-                        fileId=item["id"],
-                        fields="shortcutDetails(targetId,targetMimeType)",
-                    ).execute()
-                    details = target.get("shortcutDetails", {})
-                    target_id = details.get("targetId")
-                    target_mime = details.get("targetMimeType", "")
-                    if target_id and target_mime == "application/vnd.google-apps.folder":
-                        # Shortcut to folder — recurse into it
-                        sc_path = f"{folder_path}/{item.get('name', '')}" if folder_path else item.get("name", "")
-                        children = scan_folder(service, target_id, depth + 1, sc_path)
-                        files.extend(children)
-                    elif target_id:
-                        # Fetch actual target metadata and add as a regular file
-                        target_meta = service.files().get(
-                            fileId=target_id,
-                            fields=(
-                                "id,name,mimeType,size,md5Checksum,createdTime,"
-                                "modifiedTime,lastModifyingUser,owners,webViewLink,"
-                                "fileExtension,version,headRevisionId,parents,"
-                                "shared,description"
-                            ),
-                        ).execute()
-                        t_mime = target_meta.get("mimeType", "")
-                        t_last_mod = target_meta.get("lastModifyingUser", {})
-                        t_owners = target_meta.get("owners", [])
-                        files.append({
-                            "id": target_meta["id"],
-                            "name": target_meta.get("name", ""),
-                            "mime_type": t_mime,
-                            "size": int(target_meta.get("size", 0) or 0),
-                            "md5": target_meta.get("md5Checksum", ""),
-                            "created_time": target_meta.get("createdTime", ""),
-                            "modified_time": target_meta.get("modifiedTime", ""),
-                            "version": target_meta.get("version", ""),
-                            "head_revision_id": target_meta.get("headRevisionId", ""),
-                            "web_link": target_meta.get("webViewLink", ""),
-                            "extension": target_meta.get("fileExtension", ""),
-                            "parent_id": folder_id,
-                            "folder_path": folder_path,
-                            "shared": target_meta.get("shared", False),
-                            "description": target_meta.get("description", ""),
-                            "last_modifier_email": t_last_mod.get("emailAddress", ""),
-                            "last_modifier_name": t_last_mod.get("displayName", ""),
-                            "owner_email": t_owners[0].get("emailAddress", "") if t_owners else "",
-                            "owner_name": t_owners[0].get("displayName", "") if t_owners else "",
-                            "is_native_google": t_mime.startswith("application/vnd.google-apps."),
-                            "native_type": NATIVE_GOOGLE_MIMES.get(t_mime),
-                            "resolved_from_shortcut": item.get("name", ""),
-                        })
-                except Exception as e:
-                    print(f"  Could not resolve shortcut '{item.get('name', '')}': {e}")
+                # Shortcuts are pointers to files/folders already in the scan tree.
+                # Skip them to avoid duplicate scanning and extra API calls.
+                print(f"  Skipping shortcut: {item.get('name', '')}")
             else:
                 last_mod = item.get("lastModifyingUser", {})
                 owners = item.get("owners", [])
@@ -564,11 +513,15 @@ def run_sync(dry_run=False, download_all=False):
 
         # Fetch activity (incremental: since last sync if available)
         print(f"  Fetching activity log...")
-        file_id_pairs = [(f["id"], f["name"]) for f in current_files]
+        # For per-file fallback, only query changed files (not all files)
+        changed_ids = [
+            (c["id"], c["name"]) for c in changes
+            if c["change_type"] in ("NEW", "MODIFIED", "METADATA_CHANGED", "RENAMED")
+        ]
         activities = fetch_recent_activity(
             activity_service, folder_id,
             since_timestamp=last_sync_timestamp,
-            file_ids=file_id_pairs,
+            file_ids=changed_ids if changed_ids else None,
         )
         sync_result["activity_log"][term_key] = activities
         print(f"  {len(activities)} activity records")
