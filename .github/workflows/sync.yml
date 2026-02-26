@@ -45,7 +45,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install google-auth google-auth-oauthlib google-api-python-client
-          pip install python-pptx python-docx openpyxl PyPDF2
+          pip install python-pptx python-docx openpyxl pypdf
 
       - name: Run Pipeline
         env:
@@ -98,7 +98,9 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "KB Pipeline: Auto-sync $(date -u +%Y-%m-%d)"
+            git stash --include-untracked
             git pull --rebase
+            git stash pop || true
             git push
           fi
 

@@ -57,6 +57,61 @@ def scan_folder(service, folder_id, depth=0, folder_path=""):
                 subfolder_path = f"{folder_path}/{subfolder_name}" if folder_path else subfolder_name
                 children = scan_folder(service, item["id"], depth + 1, subfolder_path)
                 files.extend(children)
+            elif mime == "application/vnd.google-apps.shortcut":
+                # Resolve shortcut to its target file/folder
+                try:
+                    target = service.files().get(
+                        fileId=item["id"],
+                        fields="shortcutDetails(targetId,targetMimeType)",
+                    ).execute()
+                    details = target.get("shortcutDetails", {})
+                    target_id = details.get("targetId")
+                    target_mime = details.get("targetMimeType", "")
+                    if target_id and target_mime == "application/vnd.google-apps.folder":
+                        # Shortcut to folder — recurse into it
+                        sc_path = f"{folder_path}/{item.get('name', '')}" if folder_path else item.get("name", "")
+                        children = scan_folder(service, target_id, depth + 1, sc_path)
+                        files.extend(children)
+                    elif target_id:
+                        # Fetch actual target metadata and add as a regular file
+                        target_meta = service.files().get(
+                            fileId=target_id,
+                            fields=(
+                                "id,name,mimeType,size,md5Checksum,createdTime,"
+                                "modifiedTime,lastModifyingUser,owners,webViewLink,"
+                                "fileExtension,version,headRevisionId,parents,"
+                                "shared,description"
+                            ),
+                        ).execute()
+                        t_mime = target_meta.get("mimeType", "")
+                        t_last_mod = target_meta.get("lastModifyingUser", {})
+                        t_owners = target_meta.get("owners", [])
+                        files.append({
+                            "id": target_meta["id"],
+                            "name": target_meta.get("name", ""),
+                            "mime_type": t_mime,
+                            "size": int(target_meta.get("size", 0) or 0),
+                            "md5": target_meta.get("md5Checksum", ""),
+                            "created_time": target_meta.get("createdTime", ""),
+                            "modified_time": target_meta.get("modifiedTime", ""),
+                            "version": target_meta.get("version", ""),
+                            "head_revision_id": target_meta.get("headRevisionId", ""),
+                            "web_link": target_meta.get("webViewLink", ""),
+                            "extension": target_meta.get("fileExtension", ""),
+                            "parent_id": folder_id,
+                            "folder_path": folder_path,
+                            "shared": target_meta.get("shared", False),
+                            "description": target_meta.get("description", ""),
+                            "last_modifier_email": t_last_mod.get("emailAddress", ""),
+                            "last_modifier_name": t_last_mod.get("displayName", ""),
+                            "owner_email": t_owners[0].get("emailAddress", "") if t_owners else "",
+                            "owner_name": t_owners[0].get("displayName", "") if t_owners else "",
+                            "is_native_google": t_mime.startswith("application/vnd.google-apps."),
+                            "native_type": NATIVE_GOOGLE_MIMES.get(t_mime),
+                            "resolved_from_shortcut": item.get("name", ""),
+                        })
+                except Exception as e:
+                    print(f"  Could not resolve shortcut '{item.get('name', '')}': {e}")
             else:
                 last_mod = item.get("lastModifyingUser", {})
                 owners = item.get("owners", [])
@@ -148,15 +203,82 @@ def detect_changes(current_files, previous_files_by_id):
 # Drive Activity API
 # ──────────────────────────────────────────────────────────
 
-def fetch_recent_activity(activity_service, folder_id, since_timestamp=None):
-    """Fetch recent activity for a folder from Drive Activity API.
+def _parse_activity_response(resp):
+    """Parse activity API response into structured records."""
+    records = []
+    for activity in resp.get("activities", []):
+        timestamp = activity.get("timestamp") or ""
+        if not timestamp:
+            ts_range = activity.get("timeRange", {})
+            timestamp = ts_range.get("endTime") or ts_range.get("startTime", "")
+
+        actors = []
+        for actor in activity.get("actors", []):
+            user = actor.get("user", {})
+            known_user = user.get("knownUser", {})
+            actors.append({
+                "person_name": known_user.get("personName", ""),
+                "is_current_user": known_user.get("isCurrentUser", False),
+            })
+
+        actions = []
+        for action in activity.get("actions", []):
+            detail = action.get("detail", {})
+            action_type = next(iter(detail.keys()), "unknown") if detail else "unknown"
+            actions.append({
+                "type": action_type,
+                "detail": detail.get(action_type, {}),
+            })
+
+        targets = []
+        for target in activity.get("targets", []):
+            drive_item = target.get("driveItem", {})
+            targets.append({
+                "title": drive_item.get("title", ""),
+                "name": drive_item.get("name", ""),
+                "mime_type": drive_item.get("mimeType", ""),
+                "file_id": drive_item.get("name", "").replace("items/", ""),
+            })
+
+        records.append({
+            "timestamp": timestamp,
+            "actors": actors,
+            "actions": actions,
+            "targets": targets,
+        })
+    return records
+
+
+def fetch_recent_activity(activity_service, folder_id, since_timestamp=None,
+                          file_ids=None):
+    """Fetch recent activity from Drive Activity API.
+
+    First tries folder-level query (ancestorName). If that fails (e.g. no ownership),
+    falls back to per-file queries (itemName) for changed files.
 
     Args:
         since_timestamp: ISO8601 timestamp to filter events from. If None, fetches from 2020.
+        file_ids: List of (file_id, file_name) tuples for per-file fallback.
     """
+    time_filter = f"time >= '{since_timestamp}'" if since_timestamp else "time >= '2020-01-01T00:00:00Z'"
+
+    # Strategy 1: Folder-level query (works if you own or have editor access)
+    activities = _fetch_activity_by_ancestor(activity_service, folder_id, time_filter)
+    if activities is not None:
+        return activities
+
+    # Strategy 2: Per-file queries (works with read-only access)
+    if file_ids:
+        print(f"    Falling back to per-file activity queries ({len(file_ids)} files)...")
+        return _fetch_activity_by_files(activity_service, file_ids, time_filter)
+
+    return []
+
+
+def _fetch_activity_by_ancestor(activity_service, folder_id, time_filter):
+    """Try folder-level activity query. Returns None if access denied."""
     activities = []
     try:
-        time_filter = f"time >= '{since_timestamp}'" if since_timestamp else "time >= '2020-01-01T00:00:00Z'"
         body = {
             "ancestorName": f"items/{folder_id}",
             "pageSize": 100,
@@ -167,58 +289,50 @@ def fetch_recent_activity(activity_service, folder_id, since_timestamp=None):
         while True:
             if page_token:
                 body["pageToken"] = page_token
-
             resp = activity_service.activity().query(body=body).execute()
-
-            for activity in resp.get("activities", []):
-                timestamp = activity.get("timestamp") or ""
-                if not timestamp:
-                    ts_range = activity.get("timeRange", {})
-                    timestamp = ts_range.get("endTime") or ts_range.get("startTime", "")
-
-                actors = []
-                for actor in activity.get("actors", []):
-                    user = actor.get("user", {})
-                    known_user = user.get("knownUser", {})
-                    actors.append({
-                        "person_name": known_user.get("personName", ""),
-                        "is_current_user": known_user.get("isCurrentUser", False),
-                    })
-
-                actions = []
-                for action in activity.get("actions", []):
-                    detail = action.get("detail", {})
-                    action_type = next(iter(detail.keys()), "unknown") if detail else "unknown"
-                    actions.append({
-                        "type": action_type,
-                        "detail": detail.get(action_type, {}),
-                    })
-
-                targets = []
-                for target in activity.get("targets", []):
-                    drive_item = target.get("driveItem", {})
-                    targets.append({
-                        "title": drive_item.get("title", ""),
-                        "name": drive_item.get("name", ""),
-                        "mime_type": drive_item.get("mimeType", ""),
-                        "file_id": drive_item.get("name", "").replace("items/", ""),
-                    })
-
-                activities.append({
-                    "timestamp": timestamp,
-                    "actors": actors,
-                    "actions": actions,
-                    "targets": targets,
-                })
-
+            activities.extend(_parse_activity_response(resp))
             page_token = resp.get("nextPageToken")
             if not page_token:
                 break
 
-    except Exception as e:
-        print(f"  Warning: Could not fetch activity for folder {folder_id}: {e}")
+        return activities
 
-    return activities
+    except Exception as e:
+        print(f"    Folder-level activity query failed (likely no ownership): {e}")
+        return None  # Signal to caller to try per-file fallback
+
+
+def _fetch_activity_by_files(activity_service, file_ids, time_filter):
+    """Query activity per-file using itemName. Works with read-only access."""
+    all_activities = []
+    seen_timestamps = set()  # Dedup across files
+
+    for file_id, file_name in file_ids:
+        try:
+            body = {
+                "itemName": f"items/{file_id}",
+                "pageSize": 50,
+                "filter": time_filter,
+            }
+            resp = activity_service.activity().query(body=body).execute()
+            records = _parse_activity_response(resp)
+
+            for record in records:
+                # Dedup by timestamp + first target
+                dedup_key = record["timestamp"] + str(record.get("targets", [{}])[0].get("file_id", ""))
+                if dedup_key not in seen_timestamps:
+                    seen_timestamps.add(dedup_key)
+                    all_activities.append(record)
+
+            time.sleep(0.05)  # Light rate limiting
+
+        except Exception as e:
+            # Skip individual file failures silently
+            pass
+
+    # Sort by timestamp descending
+    all_activities.sort(key=lambda a: a.get("timestamp", ""), reverse=True)
+    return all_activities
 
 
 # ──────────────────────────────────────────────────────────
@@ -318,11 +432,25 @@ EXPORT_MIMES = {
 }
 
 
+SKIP_MIMES = {
+    "application/vnd.google-apps.shortcut",
+    "application/vnd.google-apps.folder",
+    "application/vnd.google-apps.form",
+    "application/vnd.google-apps.map",
+    "application/vnd.google-apps.site",
+}
+
+
 def download_file(service, file_meta, dest_dir):
     """Download a file from Drive. Exports native Google formats to Office equivalents."""
     fid = file_meta["id"]
     name = file_meta["name"]
     mime = file_meta["mime_type"]
+
+    # Skip non-downloadable types (shortcuts, folders, forms, etc.)
+    if mime in SKIP_MIMES:
+        print(f"    Skipping {name} (type: {mime.split('.')[-1]})")
+        return None, None
 
     dest_dir = Path(dest_dir)
     dest_dir.mkdir(parents=True, exist_ok=True)
@@ -436,9 +564,11 @@ def run_sync(dry_run=False, download_all=False):
 
         # Fetch activity (incremental: since last sync if available)
         print(f"  Fetching activity log...")
+        file_id_pairs = [(f["id"], f["name"]) for f in current_files]
         activities = fetch_recent_activity(
             activity_service, folder_id,
             since_timestamp=last_sync_timestamp,
+            file_ids=file_id_pairs,
         )
         sync_result["activity_log"][term_key] = activities
         print(f"  {len(activities)} activity records")
@@ -522,6 +652,9 @@ def run_sync(dry_run=False, download_all=False):
                     local_path, local_md5 = download_file(
                         drive_service, change, dest_dir
                     )
+                    if local_path is None:
+                        # File was skipped (shortcut, folder, etc.)
+                        continue
                     change["local_path"] = local_path
                     change["local_md5"] = local_md5
                     downloaded.append(change["name"])

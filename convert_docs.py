@@ -256,31 +256,47 @@ def extract_pdf_links(reader):
 
 
 def convert_pdf(pdf_path, output_dir):
-    """Convert PDF to Markdown (best effort). Also extracts images and links."""
+    """Convert PDF to Markdown (best effort). Also extracts images and links.
+    Uses pypdf (preferred) or PyPDF2 as fallback."""
     try:
-        from PyPDF2 import PdfReader
+        # Prefer pypdf (maintained successor), fall back to PyPDF2
+        try:
+            from pypdf import PdfReader
+        except ImportError:
+            from PyPDF2 import PdfReader
 
         reader = PdfReader(pdf_path)
         output_file = output_dir / (pdf_path.stem + ".md")
 
         content = [f"# {pdf_path.stem}\n"]
         for page_num, page in enumerate(reader.pages, 1):
-            text = page.extract_text()
-            if text:
+            try:
+                text = page.extract_text()
+                if text:
+                    content.append(f"\n## Page {page_num}\n")
+                    content.append(text + "\n")
+                    content.append("---\n")
+            except Exception:
                 content.append(f"\n## Page {page_num}\n")
-                content.append(text + "\n")
+                content.append("[Page could not be extracted]\n")
                 content.append("---\n")
 
         with open(output_file, "w", encoding="utf-8") as f:
             f.write("\n".join(content))
 
-        # Extract images and links
-        pdf_images = extract_pdf_images(reader, pdf_path)
-        pdf_links = extract_pdf_links(reader)
+        # Extract images and links (best effort)
+        try:
+            pdf_images = extract_pdf_images(reader, pdf_path)
+        except Exception:
+            pdf_images = []
+        try:
+            pdf_links = extract_pdf_links(reader)
+        except Exception:
+            pdf_links = []
 
         return str(output_file), True, None, {"images": pdf_images, "links": pdf_links}
     except ImportError:
-        return str(pdf_path), False, "PyPDF2 not installed", {}
+        return str(pdf_path), False, "pypdf/PyPDF2 not installed", {}
     except Exception as e:
         return str(pdf_path), False, str(e), {}
 
