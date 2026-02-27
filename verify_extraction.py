@@ -145,10 +145,17 @@ def _write_github_summary(result, checks, failed_checks):
     if not summary_path:
         return
 
+    # Split lesson vs non-lesson
+    lesson_unmatched = sum(1 for m in result.unmatched
+                           if m.source_atom.term is not None and m.source_atom.lesson is not None)
+    nonlesson_unmatched = len(result.unmatched) - lesson_unmatched
+
     lines = ["## KB Extraction Verification", ""]
-    lines.append(f"**Lesson Coverage:** {result.lesson_coverage_pct}")
-    lines.append(f"**Overall Coverage:** {result.coverage_pct}")
-    lines.append(f"**Matched:** {len(result.matched)} | **Unmatched:** {len(result.unmatched)}")
+    lines.append(f"**Lesson Content** (slides, lesson plans — powers the chatbot):")
+    lines.append(f"  Coverage: **{result.lesson_coverage_pct}** | Unmatched: {lesson_unmatched}")
+    lines.append("")
+    lines.append(f"**Non-Lesson Content** (admin docs, guides — does NOT affect chatbot):")
+    lines.append(f"  Coverage: {result.coverage_pct} overall | Unmatched: {nonlesson_unmatched}")
     lines.append("")
 
     # V-check table
@@ -182,6 +189,11 @@ def _send_slack_notification(result, checks, failed_checks):
 
     import urllib.request
 
+    # Split lesson vs non-lesson for clear Slack display
+    lesson_unmatched = sum(1 for m in result.unmatched
+                           if m.source_atom.term is not None and m.source_atom.lesson is not None)
+    nonlesson_unmatched = len(result.unmatched) - lesson_unmatched
+
     blocks = [
         {
             "type": "header",
@@ -191,8 +203,12 @@ def _send_slack_notification(result, checks, failed_checks):
             "type": "section",
             "text": {
                 "type": "mrkdwn",
-                "text": f"*Lesson Coverage:* {result.lesson_coverage_pct}\n"
-                        f"*Matched:* {len(result.matched)} | *Unmatched:* {len(result.unmatched)}",
+                "text": (
+                    f":books: *Lesson Content* (powers the chatbot):\n"
+                    f"  Coverage: *{result.lesson_coverage_pct}* | Unmatched: {lesson_unmatched}\n\n"
+                    f":file_folder: *Non-Lesson Content* (admin docs, guides — does NOT affect chatbot):\n"
+                    f"  Unmatched: {nonlesson_unmatched}"
+                ),
             },
         },
     ]

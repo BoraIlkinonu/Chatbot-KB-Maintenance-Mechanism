@@ -213,7 +213,7 @@ def format_coverage_report(result: ReconciliationResult,
         lines.append(f"Files excluded by file_manifest.json: {len(excluded_files)}")
         lines.append("")
 
-    # Lesson coverage (the key metric)
+    # Split atoms into lesson vs non-lesson
     lesson_matched = sum(1 for m in result.matched
                          if m.source_atom.term is not None and m.source_atom.lesson is not None)
     lesson_structural = sum(1 for m in result.structural
@@ -222,16 +222,41 @@ def format_coverage_report(result: ReconciliationResult,
                            if m.source_atom.term is not None and m.source_atom.lesson is not None)
     lesson_total = lesson_matched + lesson_structural + lesson_unmatched
 
-    lines.append(f"LESSON COVERAGE: {result.lesson_coverage_pct}  ({lesson_matched + lesson_structural}/{lesson_total} lesson-assigned atoms)")
-    lines.append(f"  ^ Content assigned to a specific term+lesson that SHOULD appear in the KB")
+    nonlesson_matched = len(result.matched) - lesson_matched
+    nonlesson_structural = len(result.structural) - lesson_structural
+    nonlesson_unmatched = len(result.unmatched) - lesson_unmatched
+    nonlesson_total = nonlesson_matched + nonlesson_structural + nonlesson_unmatched
+
+    # ── Section 1: Lesson Content (slides, lesson plans — the core KB)
+    lines.append("-" * 70)
+    lines.append("  LESSON CONTENT  (slides, lesson plans, activities)")
+    lines.append("  This is what powers the chatbot KB. Must be near 100%.")
+    lines.append("-" * 70)
+    lines.append(f"  Coverage:     {result.lesson_coverage_pct}  ({lesson_matched + lesson_structural}/{lesson_total} atoms)")
+    lines.append(f"  Matched:      {lesson_matched}")
+    lines.append(f"  Structural:   {lesson_structural}  (slide labels absorbed into KB)")
+    lines.append(f"  Unmatched:    {lesson_unmatched}")
     lines.append("")
-    lines.append(f"Overall Coverage: {result.coverage_pct}  (includes admin docs, guides, templates)")
-    lines.append(f"  Source atoms:   {result.total_source}")
-    lines.append(f"  Trivial skip:   {result.skipped_trivial}")
-    lines.append(f"  Matched:        {len(result.matched)}")
-    lines.append(f"  Structural:     {len(result.structural)}  (slide labels absorbed into KB content)")
-    lines.append(f"  Unmatched:      {len(result.unmatched)}")
-    lines.append(f"  KB atoms:       {result.total_kb}")
+
+    # ── Section 2: Non-lesson Content (admin docs, support resources, etc.)
+    lines.append("-" * 70)
+    lines.append("  NON-LESSON CONTENT  (admin docs, curriculum specs, guides)")
+    lines.append("  Support files excluded from lesson KB. Gaps here do NOT")
+    lines.append("  affect the chatbot. Tracked for completeness only.")
+    lines.append("-" * 70)
+    if nonlesson_total > 0:
+        nonlesson_cov = (nonlesson_matched + nonlesson_structural) / nonlesson_total
+        lines.append(f"  Coverage:     {nonlesson_cov:.1%}  ({nonlesson_matched + nonlesson_structural}/{nonlesson_total} atoms)")
+        lines.append(f"  Matched:      {nonlesson_matched}")
+        lines.append(f"  Structural:   {nonlesson_structural}")
+        lines.append(f"  Unmatched:    {nonlesson_unmatched}")
+    else:
+        lines.append(f"  No non-lesson atoms (all content assigned to lessons)")
+    lines.append("")
+
+    # ── Totals
+    lines.append(f"OVERALL: {result.coverage_pct} coverage across all {result.total_source} source atoms "
+                 f"({result.skipped_trivial} trivial skipped, {result.total_kb} KB atoms)")
     lines.append("")
 
     # Per-type coverage
@@ -341,10 +366,29 @@ def generate_json_report(result: ReconciliationResult,
             "reason": a.reason,
         })
 
+    # Split lesson vs non-lesson stats
+    lesson_matched = sum(1 for m in result.matched
+                         if m.source_atom.term is not None and m.source_atom.lesson is not None)
+    lesson_structural = sum(1 for m in result.structural
+                            if m.source_atom.term is not None and m.source_atom.lesson is not None)
+    lesson_unmatched = sum(1 for m in result.unmatched
+                           if m.source_atom.term is not None and m.source_atom.lesson is not None)
+    nonlesson_matched = len(result.matched) - lesson_matched
+    nonlesson_structural = len(result.structural) - lesson_structural
+    nonlesson_unmatched = len(result.unmatched) - lesson_unmatched
+    nonlesson_total = nonlesson_matched + nonlesson_structural + nonlesson_unmatched
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "lesson_coverage": round(result.lesson_coverage, 4),
         "lesson_coverage_pct": result.lesson_coverage_pct,
+        "lesson_matched": lesson_matched,
+        "lesson_structural": lesson_structural,
+        "lesson_unmatched": lesson_unmatched,
+        "nonlesson_matched": nonlesson_matched,
+        "nonlesson_structural": nonlesson_structural,
+        "nonlesson_unmatched": nonlesson_unmatched,
+        "nonlesson_total": nonlesson_total,
         "overall_coverage": round(result.coverage, 4),
         "overall_coverage_pct": result.coverage_pct,
         "total_source": result.total_source,
