@@ -1177,6 +1177,28 @@
         "term2/Technical Support Guides/Endstar - /Endstar Troubleshooting.pdf"
       ],
       "action_required": "Review file_manifest.json — classify pending_review files as lesson_content, support_resource, or exclude."
+    },
+    {
+      "alert_type": "new_files_detected",
+      "timestamp": "2026-02-27T20:27:36.989280+00:00",
+      "count": 14,
+      "files": [
+        "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 2/Exampler Work - Lesson 3-4.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
+        "term2/Teacher Resources/Curriculum Content/Week 5/Students Slides/Lesson 10.pptx",
+        "term2/Technical Support Guides/Endstar - /Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+        "term2/Technical Support Guides/Endstar - /Endstar Engine User Guide (WIP) (1).pdf",
+        "term2/Technical Support Guides/Endstar - /Endstar Setup Guide.pdf",
+        "term2/Technical Support Guides/Endstar - /Endstar Troubleshooting.pdf"
+      ],
+      "action_required": "Review file_manifest.json — classify pending_review files as lesson_content, support_resource, or exclude."
     }
   ]
 }
