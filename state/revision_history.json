@@ -1,9 +1,10 @@
 {
-  "last_updated": "2026-02-27T03:09:00.468333+00:00",
+  "last_updated": "2026-02-27T04:03:47.965999+00:00",
   "files": {
     "1jh-FPpnaSjBGhCe-l5AXJz34nNzWbMfV": {
       "name": "Lesson 13.pptx",
-      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 7",
+      "term": "term3",
       "revisions": [
         {
           "id": "0B9YDzTjtup_1N0JDYlFsTUdObnowa1RBTGY5cmhnVEFlWTJZPQ",
@@ -16,7 +17,8 @@
     },
     "1_fXt_8ctnx4PoY7mmIoqY2a1rQuRALa_": {
       "name": "Lesson 14.pptx",
-      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 7",
+      "term": "term3",
       "revisions": [
         {
           "id": "0B9YDzTjtup_1YjRtYU5tdkUrZE5pUUNrNDd5NWpHRkdwWUpZPQ",
@@ -24,6 +26,2491 @@
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
           "size": 13278722
+        }
+      ]
+    },
+    "1nsaONtImqRtK3UOqNNIzWPe7SMtpNr9B": {
+      "name": "Feedback Forms.docx",
+      "folder_path": "Feedback & Surveys",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JOHcwU2VuUkVmYlUvRDNod0ZhMWdwcjF6WDN3PQ",
+          "time": "2026-01-08T07:28:25.469Z",
+          "user_email": "",
+          "user_name": "",
+          "size": 8868
+        }
+      ]
+    },
+    "19g2fpX2kAoX8O8JAq8GmE_I8aQ3Uzof1": {
+      "name": "Explorer's Programme - Lesson 1.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEQUx1RkNZYlN2UzdyVStzSkFMeWlyRnJJMDgwPQ",
+          "time": "2026-02-10T05:49:17.165Z",
+          "user_email": "",
+          "user_name": "",
+          "size": 17010823
+        }
+      ]
+    },
+    "1C6KBsx8QysfS4GGTF-37PSjOL0h4O-gn": {
+      "name": "Explorer's Programme - Lesson 10.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEbnZ5eTBzeXFXdDE2Qmsrd3ZZekpnK0FmVnZzPQ",
+          "time": "2025-12-31T10:03:38.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 17462485
+        }
+      ]
+    },
+    "1r8eY6Um-C4qLe9NrL2LIRfSWWEEKbQOO": {
+      "name": "Explorer's Programme - Lesson 11.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEcFlaMHd0M2dJb1pBY2pQYk9KK0VnYlNmV1JRPQ",
+          "time": "2025-12-31T10:07:28.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 10816837
+        }
+      ]
+    },
+    "1fOmEqwdoxkntuofYQxZKi-K42JdAmyAA": {
+      "name": "Explorer's Programme - Lesson 12.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEOUVKYm5NeWRNUmRsK1VRak5rcWNuVnNlb2hzPQ",
+          "time": "2025-12-31T10:08:03.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 13253083
+        }
+      ]
+    },
+    "1DGEHyvh7o7dHd2BHmbHMTfbIUCE6FHI7": {
+      "name": "Explorer's Programme - Lesson 13.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEMHdsVEozbkh1cjd4bW1CZUxzbzJubWc1YUdRPQ",
+          "time": "2025-12-31T10:08:18.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 16210217
+        }
+      ]
+    },
+    "1GH-JopTSxUEV4vCnePb68EVvjt1Q2z-j": {
+      "name": "Explorer's Programme - Lesson 14.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScERXBYa0wrbXpEdmVJM0FrOVUvaldZMm9nbmQ4PQ",
+          "time": "2025-12-31T10:08:30.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 17912807
+        }
+      ]
+    },
+    "1FfKPmrRUoHHQDi15SiI8x1RsRWZmWD26": {
+      "name": "Explorer's Programme - Lesson 15.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEK2hLWUJYTExHV24yWHhMUGJVZlAyMXJkNEI0PQ",
+          "time": "2025-12-31T10:10:28.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 19594062
+        }
+      ]
+    },
+    "1wDqEBeFnPPvdaAAm370crHl8j3EwBsUf": {
+      "name": "Explorer's Programme - Lesson 16.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEUkhLekQ5a3BRQ1dtQkF1OS9iVWVnd3FsZWY4PQ",
+          "time": "2025-12-31T10:10:44.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 15387861
+        }
+      ]
+    },
+    "1GRX20oIM281xkugb63kQE_m8sXW3Q-12": {
+      "name": "Explorer's Programme - Lesson 17.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEUTB3ZkxBODR3Rm5Ba0N3QlBxRkdYNEhYVm9rPQ",
+          "time": "2025-12-31T10:11:00.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8538258
+        }
+      ]
+    },
+    "1hK0Miyd2xxlffrO0tcLZkM8cMGAW6gEi": {
+      "name": "Explorer's Programme - Lesson 18.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEYnJFV0lXL0U0MHRPakQ0Wi8zaXYvOUM5eWRnPQ",
+          "time": "2025-12-31T10:11:22.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 10775495
+        }
+      ]
+    },
+    "1KVdl6fLCcZKxVADOVfmVGjeWoZ0Lmcui": {
+      "name": "Explorer's Programme - Lesson 19.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEbXdyN1EvcmNNalRxdFpEay93aW05NnhZSFZrPQ",
+          "time": "2025-12-31T10:11:40.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8190478
+        }
+      ]
+    },
+    "1mIzlML2mE0y43b1zJIIVWgbkE5waWsNQ": {
+      "name": "Explorer's Programme - Lesson 2.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEQ3VFc3RiOXp3N1l5cUZBWVB0VzM2cFp5a0JRPQ",
+          "time": "2025-12-31T10:00:50.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 12066778
+        }
+      ]
+    },
+    "10kf7Jm1k3d_uXWUxbFKiivW7NL94RDKh": {
+      "name": "Explorer's Programme - Lesson 20.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEYStOaW5kYTJIMWhocnk4UTBsbHFTbExhSWpFPQ",
+          "time": "2025-12-31T10:11:53.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 10674738
+        }
+      ]
+    },
+    "13Vs-tnHCFsyorBMc__-tmIMP6cBSyRur": {
+      "name": "Explorer's Programme - Lesson 21.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEVzVqZ2R1NVRCa1pXNmI3SHZDTXlHTnBNQkFZPQ",
+          "time": "2025-12-31T10:12:50.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8492191
+        }
+      ]
+    },
+    "1Me55EGsVMboq4RJU0DtMdsloUnDj7fcW": {
+      "name": "Explorer's Programme - Lesson 22.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScETGNpbUlVSFpQZDNxNkVWcCs2NE9qSHk0NGpRPQ",
+          "time": "2025-12-31T10:13:24.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 10485186
+        }
+      ]
+    },
+    "1263vGdjxaXodHr-QYKncpd5DcbUNnU1F": {
+      "name": "Explorer's Programme - Lesson 3.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScER3VPTU03alJuTXppcEZ5Sk5Hd2liSUNLUWZzPQ",
+          "time": "2025-12-31T10:01:29.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 12103310
+        }
+      ]
+    },
+    "1Fxlf6Oy7WtMOecZ78_CUShJEaUKRk3VM": {
+      "name": "Explorer's Programme - Lesson 4.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScETFhPb2sxdXl3OFo5WVBBUjZJSVhvU25DMUE0PQ",
+          "time": "2025-12-31T10:01:44.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 14217585
+        }
+      ]
+    },
+    "16vBfpjlKgrVTHG3CRUZwkPUCSB1JtX9o": {
+      "name": "Explorer's Programme - Lesson 5.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEcjZoYTd0blFRZFpPMzdjOCtsY2ZVR3FSOElNPQ",
+          "time": "2025-12-31T10:02:01.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8285387
+        }
+      ]
+    },
+    "1WN4YIEfwueEKKd6TD5Ghm0qUdDgCum1Y": {
+      "name": "Explorer's Programme - Lesson 6.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEUm1NcWlmeTJoa2x6Vnd5VVYrQlVyNmlsY2ZVPQ",
+          "time": "2025-12-31T10:02:18.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8197579
+        }
+      ]
+    },
+    "1aE18bYIGbNrc7thQVpICQYdpYiZFu69v": {
+      "name": "Explorer's Programme - Lesson 7.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEMmF0WFRTRERvOGIzL3FjZlVlUERHL2tUc2owPQ",
+          "time": "2025-12-31T10:02:39.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 8089893
+        }
+      ]
+    },
+    "1-P43q5sMtQC8mdM1rO4WmgDR5Yo7HFTq": {
+      "name": "Explorer's Programme - Lesson 8.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScES0NFY0RuVmZIOGUyUDF3SitIek5xTndsdWtFPQ",
+          "time": "2025-12-31T10:02:57.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 7857947
+        }
+      ]
+    },
+    "1KgBi71b3PysRlgATfUAEgOm_pi7IbgMR": {
+      "name": "Explorer's Programme - Lesson 9.pptx",
+      "folder_path": "Lessons Resources/Lesson Decks (Slides)",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEV3JsVE42em80VjlhUWRoV21zVHIwbXRpNzdnPQ",
+          "time": "2025-12-31T10:03:19.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 12953754
+        }
+      ]
+    },
+    "1xsBH0v1e0PU7Ky5flxqJ8L6O-2tUKA4c": {
+      "name": "Students Master Checklist - V1.pdf",
+      "folder_path": "Lessons Resources/Student Assessment Templates",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_NjNQa3h0TGJQME0xaitLUThBaGgvR3FLSmZ3PQ",
+          "time": "2025-09-05T07:46:30.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 110156
+        }
+      ]
+    },
+    "1G6g_GQeeuYr6P5uvlQgL3sSmtNBU-FRp": {
+      "name": "US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+      "folder_path": "Lessons Resources/Student Assessment Templates",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_b0xYSW1NV0d0NXh4bGtrSXZodm5SSFgzNlJJPQ",
+          "time": "2025-09-18T06:24:55.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 93214
+        }
+      ]
+    },
+    "13Xxo0z5GuUfu5WWQOyEFHHseqhkO3-Gr": {
+      "name": "Explorer's Programme Overview.pdf",
+      "folder_path": "Programme Overview",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B2gfI5TQNScEU3c5TGw1NUFZZXF2RVFFei91dDJFU2M0T1A0PQ",
+          "time": "2026-01-07T12:11:14.000Z",
+          "user_email": "",
+          "user_name": "goldlucks.og",
+          "size": 35906965
+        }
+      ]
+    },
+    "11eKeEqldn6-HGN-gsofW93l-80sE6LQy": {
+      "name": "Teacher Training - Explorer Programme.pdf",
+      "folder_path": "Programme Overview",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JcWNEWHNwMU5WemllS0RINTNpNTZHNEdEcXUwPQ",
+          "time": "2025-09-29T00:42:07.901Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 37933597
+        }
+      ]
+    },
+    "1uQsHLrRZq3a79ktzPYRS2JWRVNgBLXkP": {
+      "name": "Endstar Troubleshooting.pdf",
+      "folder_path": "Quick Access Links/Troubleshooting Guide",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JRUk3dnRVcW1KNDFNVUtsSDljUTBkY3JTbDFzPQ",
+          "time": "2025-09-08T13:56:12.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 149058
+        }
+      ]
+    },
+    "1J1lzRFmLyT-S8aDwSGcAhfRxWDk5GlFN": {
+      "name": "Curriculum Overview - Canva Link.docx",
+      "folder_path": "Quick Access Links",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JQytwTlFoOVBJWlQzM2R0Qk9CNUoxbHZJZ2xjPQ",
+          "time": "2026-01-08T07:26:39.325Z",
+          "user_email": "",
+          "user_name": "",
+          "size": 8089
+        }
+      ]
+    },
+    "1a715pT-di1BqrCu8cc8c5pOONFkqlomE": {
+      "name": "Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+      "folder_path": "Teacher Resources/Exemplar Workbook",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_MEFuclEySDArVnNZVnRBT0toUDdQbHNDMDFRPQ",
+          "time": "2026-01-08T03:37:38.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 27256114
+        }
+      ]
+    },
+    "101wtzms8ohIyOy9hJ7hf4cfG1Fb9tx20": {
+      "name": "Explorers Programme - January 2026 - Abderrahmane.pdf",
+      "folder_path": "Teacher Resources/Exemplar Workbook",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_SHpQRE0rb1E2d1ljOWdhYU5JZ3lYOERsS2tRPQ",
+          "time": "2026-01-02T06:27:34.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 27295376
+        }
+      ]
+    },
+    "19wCPZtWhOKE2AJsXPFJ9s5i1ZjxAFxzY": {
+      "name": "Endstar Setup Guide.pdf",
+      "folder_path": "Teacher Resources",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JOFhldHd6OGN1V2hmdUEzNWlFT1NTUGR2QzdnPQ",
+          "time": "2025-09-29T00:35:08.300Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 1027818
+        }
+      ]
+    },
+    "133pcu41topR7D5NRTAJ_K-X6_rKjurlx": {
+      "name": "Endstar Troubleshooting V1.pdf",
+      "folder_path": "Teacher Resources",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-Jazk5dVJ1TEs0K2VkWkFBdW1yU3JFWGFLS0lzPQ",
+          "time": "2025-09-29T00:35:08.300Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 149058
+        }
+      ]
+    },
+    "13Tu47gYkJJ0ZNWeHkGdKj9FdQTtcK6m0": {
+      "name": "Learning Schedule Explorers Programme Jan Cohort 2025_26.xlsx",
+      "folder_path": "Teacher Resources",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_eEYxZnJCQ1hMd0d1YXFpNGFOSnM4QWlrUG9JPQ",
+          "time": "2026-02-03T03:57:13.027Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 46959
+        }
+      ]
+    },
+    "1tLwMqQn0y9RPLSFzn-Uik40kCxXezplX": {
+      "name": "Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+      "folder_path": "Technical Support",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_RTFEeENla2ZsWXk3SnJMb3hEdDdsRnpFNXZVPQ",
+          "time": "2026-01-05T08:04:44.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 67840
+        }
+      ]
+    },
+    "1hAcNKueIEN4pgV1h99ov6kPeYRYj6ztW": {
+      "name": "Endstar Setup Guide.pdf",
+      "folder_path": "Technical Support",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-Jb1hlMm1GZzhiVDl6Ti9jYW9aSU9OWTlVQ2FZPQ",
+          "time": "2025-09-08T14:01:34.262Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 1027818
+        }
+      ]
+    },
+    "1EBASx0gEaMz7BcVwP5NE0MYgEdqhbWmd": {
+      "name": "Endstar Troubleshooting.pdf",
+      "folder_path": "Technical Support",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-Jb1FYMU9VNnc0c0p1QkNTS2V4NEtwNUNwUUNRPQ",
+          "time": "2025-09-08T14:01:34.262Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 149058
+        }
+      ]
+    },
+    "1cxfhtOTdvOcLBbpqbGLuEuBFTk0-BGVN": {
+      "name": "School AI Login & Space Access.mov",
+      "folder_path": "Technical Support",
+      "term": "term1",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JU3F4VWxXNW9WVjRYU0hDTHBRRDhkbXdKUlBnPQ",
+          "time": "2025-09-08T14:01:34.262Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 103625641
+        }
+      ]
+    },
+    "1oxW7t5J2b44B5c3Yg3fnpIqjPGYi6Yqy": {
+      "name": "Exampler Work - Lesson 1 -2.pptx",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 1",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6B3WUAez5EocktuOGFjbmtvNkFMSTl2Z09TcTVpaGMxbjJBPQ",
+          "time": "2025-12-29T07:08:09.743Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 11690663
+        }
+      ]
+    },
+    "1zhMjUhFWC_swsC344_7KA_0ycUO3SnSR": {
+      "name": "Designing_Restoring_Light.mp4",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 2",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6B3WUAez5Eob2cwY2hwWUxVTlFZdVllU0lacE43UnNUd0JvPQ",
+          "time": "2025-12-30T19:39:38.000Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 37700474
+        }
+      ]
+    },
+    "1rCR0jVGEDMBvCXDLERFZ52Z5LRkitzRUktc_Mb6M_II": {
+      "name": "Exampler Work - Lesson 3-4",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 2",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-29T06:56:16.726Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "174",
+          "time": "2025-12-29T08:47:10.448Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "258",
+          "time": "2025-12-29T11:42:44.941Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "334",
+          "time": "2025-12-30T19:45:03.441Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "336",
+          "time": "2025-12-31T05:35:31.396Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1zAfC4Iu6EFL_JXz9of0IFT5aeSgFsZekp1lvpd6HMEQ": {
+      "name": "Exampler Work - Lesson 5-6 ",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 3",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-29T11:32:19.382Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "136",
+          "time": "2025-12-29T12:01:42.665Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "202",
+          "time": "2025-12-29T12:58:10.881Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        }
+      ]
+    },
+    "16WlHyyn1KLNVvqwDBicUSSH5KWZ5Gdkdb7l5ygsSSFM": {
+      "name": "Exampler Work - Lesson 7-8",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 4",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-29T13:00:28.702Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "496",
+          "time": "2025-12-29T13:57:38.240Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        }
+      ]
+    },
+    "1-n-UBklBHQupX0ydLBRFX2Gb3bXJxR_6OY7FyILydxk": {
+      "name": "Exampler Work - Lesson 9-10",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 5",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-29T13:52:30.293Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "288",
+          "time": "2025-12-30T06:57:14.674Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        }
+      ]
+    },
+    "1_4Qn7N0nKMOvB_HVVfqEc2sb613W1PG-fHkCtfg-oag": {
+      "name": "Exampler Work - Lesson 11-12 ",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 6",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-30T06:10:19.969Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "2",
+          "time": "2025-12-30T06:10:37.593Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "262",
+          "time": "2025-12-30T08:07:06.764Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        }
+      ]
+    },
+    "1WCd5jhVvtkto0b3XmdS3hX-OJIhIXeeB": {
+      "name": "Light_of_the_Mosque.mp4",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 6",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6B3WUAez5Eob1JuQUI0czBkeGJYSHlKT2JUVWZES3JMK2JzPQ",
+          "time": "2026-01-01T06:28:20.000Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 33698037
+        }
+      ]
+    },
+    "1PbKFmxqT8tqu4LNMxz0oMSTPUSTM9r6l": {
+      "name": "The_Unseen_Hero.mp4",
+      "folder_path": "Teacher Resources/Assessment Guides/Exemplar work/Week 6",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6B3WUAez5EoQU9VRzliNERmUTRvNFM4aFpkazFTYktrdE1ZPQ",
+          "time": "2025-12-30T19:32:14.000Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 38886266
+        }
+      ]
+    },
+    "1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W": {
+      "name": "TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+      "folder_path": "Teacher Resources/Assessment Guides/Student Guide",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QSkZ1dFBPZlRMdUJ3TjJJMzVHamhSOU90aHdFPQ",
+          "time": "2025-12-24T07:28:49.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 14609
+        }
+      ]
+    },
+    "1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD": {
+      "name": "TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+      "folder_path": "Teacher Resources/Assessment Guides/Student Guide",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QcjZRaC85UnFjamVhK05DSitxWlRDcFpienQ4PQ",
+          "time": "2025-12-24T07:28:56.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 596747
+        }
+      ]
+    },
+    "1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA": {
+      "name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME)",
+      "folder_path": "Teacher Resources/Assessment Guides/Teacher Guide",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-24T07:02:52.442Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "2",
+          "time": "2025-12-24T07:03:00.177Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "45",
+          "time": "2025-12-31T07:24:18.725Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL": {
+      "name": "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+      "folder_path": "Teacher Resources/Assessment Guides/Teacher Guide",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QYVZvaDJFcXo2YnJ3NTdTb0dwSTE5OVVNcWQ0PQ",
+          "time": "2025-12-31T07:29:08.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 645444
+        }
+      ]
+    },
+    "1T6zYPcZ8zR_shuEKg9gtAAvXbkkHPArt": {
+      "name": "US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+      "folder_path": "Teacher Resources/Curriculum Alignment",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QVWxpSnJxY0hKSFV0VWtkRDMzQU5RNmI2QjJJPQ",
+          "time": "2026-01-12T11:59:36.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 144200
+        }
+      ]
+    },
+    "1BNkzUduOInmvXpaWvKzplqn5O-MGqtsM": {
+      "name": "Term-2LOsSC-and-AI-KS.pdf",
+      "folder_path": "Teacher Resources/Curriculum Content/LO's and Success Criteria",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QWkM1NlpGeXIxR2RWTXcrcDFrcldGcjBLUFJrPQ",
+          "time": "2026-01-06T08:00:18.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 49894
+        }
+      ]
+    },
+    "1QZzpI1wQvpecw64AgjDzfyRLGzulL0Re": {
+      "name": "Lesson 1.docx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QNndIT25HSlI3bldZYnp2VG1Qc3NPaU5IUmhVPQ",
+          "time": "2025-12-29T13:28:06.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 9215
+        }
+      ]
+    },
+    "1zscQBb4o-plB8ER8OwsN-DI1CIHyjQlQ": {
+      "name": "Lesson 2.docx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QSUwwaEpoRDludXBMOHZ3K21hclh0RHc2bUp3PQ",
+          "time": "2025-12-29T13:30:54.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 9260
+        }
+      ]
+    },
+    "1cip_tc4ZVdNjl_x0TEIrP9IW4ShGeiMm": {
+      "name": "Lesson 1",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JOVZHZWo3SjBHN2dCUFYwT0FySmY5Y3RGVDlrPQ",
+          "time": "2026-01-06T11:33:54.964Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 34345232
+        }
+      ]
+    },
+    "1Q-U5KIoUtdAaI5RM0EcTOdKwoFy415Pi": {
+      "name": "Lesson 2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JYi9kZVVVbFMwOFlnVk5PYnRzMDc1Zml6c0JrPQ",
+          "time": "2026-01-09T10:08:43.264Z",
+          "user_email": "",
+          "user_name": "",
+          "size": 25044412
+        }
+      ]
+    },
+    "1Jrw7MCq0Sr59NxoCC1Y_zaRrYobQGuAh": {
+      "name": "Lesson 1 .pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_d2d4MlZWQVVXVmUyekQ5YUUzOThubFNrMlFZPQ",
+          "time": "2026-01-14T10:07:51.725Z",
+          "user_email": "",
+          "user_name": "",
+          "size": 34353232
+        }
+      ]
+    },
+    "1gA4yxYHFTheYxgxRPK9c2aK5ystqPvkG": {
+      "name": "Lesson 2.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_elg1YWJscFVQMEc0Wm5ZbXNURFpDUEdmMFdrPQ",
+          "time": "2026-01-09T09:58:27.636Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 25049179
+        }
+      ]
+    },
+    "1cmZ47axRHmfFIzQJV7-66JaMHDzPMKuHWkeCrpDg4EE": {
+      "name": "Lesson 3",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-08T06:41:11.107Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "29",
+          "time": "2026-01-08T06:43:48.271Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1JuEN5IxaHs7I1Se42uko8oUKMBmgssXd8skNcNDYII0": {
+      "name": "Lesson 4",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-08T07:06:17.053Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "5",
+          "time": "2026-01-08T07:06:35.552Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1pwtaqQnVgHLfluIHBJcT2oWDO1XYywdCBdiMRMs1xY0": {
+      "name": "Lesson 3",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:35:32.036Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "20",
+          "time": "2026-01-06T11:38:22.101Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1qYyW20fxgglj6MMIVQeQDlOeATjCui4iuVYBH1edmEc": {
+      "name": "Lesson 4",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:35:34.994Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "20",
+          "time": "2026-01-06T11:39:33.704Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "21",
+          "time": "2026-01-09T10:09:22.962Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1qTbpTagXjNXqJHcUBlcGdwRp2rumRFbmhpc6LnhFRcQ": {
+      "name": "Lesson 3",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T07:11:53.437Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "4",
+          "time": "2026-01-04T07:12:45.238Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "110",
+          "time": "2026-01-04T11:40:49.105Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "111",
+          "time": "2026-01-04T14:37:48.360Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "114",
+          "time": "2026-01-05T06:54:39.443Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "115",
+          "time": "2026-01-26T07:32:52.519Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        }
+      ]
+    },
+    "1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ": {
+      "name": "Lesson 4",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T07:13:31.837Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "4",
+          "time": "2026-01-04T07:14:35.581Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "35",
+          "time": "2026-01-04T12:17:49.553Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "39",
+          "time": "2026-01-04T13:03:49.116Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "43",
+          "time": "2026-01-04T14:38:22.032Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "46",
+          "time": "2026-01-05T06:56:43.838Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "48",
+          "time": "2026-01-09T10:00:01.591Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "15k8b5Jo_W0NBYxA9vyDKnq9Iwt13MRfAbL45rtJOXUk": {
+      "name": "Lesson 5",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-08T07:29:07.133Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "10",
+          "time": "2026-01-08T07:51:30.263Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "17",
+          "time": "2026-01-09T06:01:40.716Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "12iFaZ7kxtJ3B5hfNE3JWy2PDVEGihpucMsrXVcE0BUk": {
+      "name": "Lesson 6",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-08T07:52:14.842Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "4",
+          "time": "2026-01-08T07:52:30.878Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "12",
+          "time": "2026-01-09T06:04:58.832Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1SYejGLpHtWMj16WZwGXmRo9RCsZi_4Po1mKuLch20X0": {
+      "name": "Lesson 5",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:40:10.049Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "24",
+          "time": "2026-01-06T11:42:37.656Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "34",
+          "time": "2026-01-09T10:11:06.673Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc": {
+      "name": "Lesson 6",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:40:12.391Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "25",
+          "time": "2026-01-06T11:43:54.805Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "27",
+          "time": "2026-01-09T10:11:42.963Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1lTbBFlTQ41pyc747HliVoth_2MudXDw0w2BrVnKua3Q": {
+      "name": "Lesson 5",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:09:26.372Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "63",
+          "time": "2026-01-04T12:22:58.720Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "74",
+          "time": "2026-01-04T14:40:22.381Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "77",
+          "time": "2026-01-05T06:58:32.835Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "99",
+          "time": "2026-01-09T10:01:54.230Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "101",
+          "time": "2026-01-15T06:35:20.600Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "146",
+          "time": "2026-01-26T07:36:29.753Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "147",
+          "time": "2026-02-23T08:42:46.534Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 0
+        }
+      ]
+    },
+    "1XmQdlY3HEyXSmuStbj6cNufLM8sXnMS8xLH1M2ZvWWY": {
+      "name": "Lesson 6",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:11:56.368Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "39",
+          "time": "2026-01-04T12:29:29.922Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "45",
+          "time": "2026-01-04T14:42:54.120Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "48",
+          "time": "2026-01-05T07:28:14.526Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "50",
+          "time": "2026-01-09T10:02:27.767Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "124uCYW6bPJnubZ87wD5kInHgII0lAeRf6dsfUbgomjY": {
+      "name": "Lesson 7",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Lesson Plan",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-12T07:44:10.902Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "2",
+          "time": "2026-01-12T07:45:50.496Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        }
+      ]
+    },
+    "1LqQdIOmSidvzWLifHM0agIbOLj2ogUGB": {
+      "name": "Lesson 8",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Lesson Plan",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QM3FMSnZjNTZKOHlsaFJoWlJwRTZZVFdrKy9FPQ",
+          "time": "2026-01-12T07:46:47.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 9078
+        }
+      ]
+    },
+    "1FkovqTGdbeE2C1wVR8FCqCNPw4pAvwHjYW17joAHcxk": {
+      "name": "Lesson 7 ",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:44:25.028Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "14",
+          "time": "2026-01-06T11:45:40.635Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "16",
+          "time": "2026-01-09T10:13:44.413Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1kQO8XOSKO7Vzul9fzEGoYtNImYayhzQqMtonnZdT_To": {
+      "name": "Lesson 8",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:44:29.472Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "11",
+          "time": "2026-01-06T11:46:38.123Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "12",
+          "time": "2026-01-09T10:14:12.682Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY": {
+      "name": "Lesson 7 ",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:32:09.931Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "102",
+          "time": "2026-01-04T12:41:28.839Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "107",
+          "time": "2026-01-04T14:44:05.869Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "111",
+          "time": "2026-01-05T07:31:38.806Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "174",
+          "time": "2026-01-06T05:57:36.720Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "175",
+          "time": "2026-01-09T06:12:49.298Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "178",
+          "time": "2026-01-09T10:03:11.958Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0": {
+      "name": "Lesson 8",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:32:44.440Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "38",
+          "time": "2026-01-04T12:47:14.517Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "45",
+          "time": "2026-01-04T14:45:13.513Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "48",
+          "time": "2026-01-05T07:32:16.866Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "49",
+          "time": "2026-01-09T10:03:46.084Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1IdexiZxE9rObgNnrOaNJGe4bHMt5Tnzm": {
+      "name": "Lesson 10",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Lesson Plan",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QS2dGRjROb2hTS2R5SEk2ck1rVHQzK3ZseFFRPQ",
+          "time": "2026-01-12T07:47:40.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 9051
+        }
+      ]
+    },
+    "1j1S8_K1zzhu5kvGZzOSxiWtAAj-tAR2P": {
+      "name": "Lesson 9",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Lesson Plan",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QRjR1UDRIM2p1UnBlMER0N0tET0lZVHl3aTFFPQ",
+          "time": "2026-01-12T07:47:34.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 9134
+        }
+      ]
+    },
+    "1w6bhh0c__RRcjzrF563GnlxnJOJoIF_KYVp25dnVud0": {
+      "name": "Lesson 10",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:47:14.545Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "6",
+          "time": "2026-01-06T11:48:49.988Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24": {
+      "name": "Lesson 9",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:47:11.035Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "7",
+          "time": "2026-01-06T11:48:20.210Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "8",
+          "time": "2026-01-09T10:15:14.372Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE": {
+      "name": "Lesson 10",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:54:06.716Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "31",
+          "time": "2026-01-04T13:04:25.714Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "35",
+          "time": "2026-01-04T14:46:38.721Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "38",
+          "time": "2026-01-05T07:33:38.902Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        }
+      ]
+    },
+    "1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs": {
+      "name": "Lesson 9",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T12:53:41.642Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "14",
+          "time": "2026-01-04T12:57:34.705Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "18",
+          "time": "2026-01-04T14:45:52.162Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "25",
+          "time": "2026-01-05T07:33:13.079Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "26",
+          "time": "2026-01-09T10:04:36.575Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1un1LPJElWToNbaEEoidWdYNw2DxMU0Uk": {
+      "name": "Lesson 11.docx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QZW1YL1ZyU1ErMk13dGUrdVJ5UTJNODVrclIwPQ",
+          "time": "2026-01-12T08:34:55.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 8716
+        }
+      ]
+    },
+    "10HpIPOmwRsdRevtCf5idc2kxmTYph5VB": {
+      "name": "Lesson 12.docx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Lesson Plans",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QcXh1bVIxWU1wcWQ2ZDB0K3VoeXFBYWo0OWRZPQ",
+          "time": "2026-01-12T08:34:57.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 8663
+        }
+      ]
+    },
+    "1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI": {
+      "name": "Lesson 11",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:49:13.261Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "6",
+          "time": "2026-01-06T11:50:23.356Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "10",
+          "time": "2026-01-09T10:17:25.937Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1E9wwEcrty-GdiLz_chmzkLfx4FyT6r-ONIkzvxkZhmU": {
+      "name": "Lesson 12",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Students Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-06T11:49:15.794Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "7",
+          "time": "2026-01-06T11:51:26.188Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "9",
+          "time": "2026-01-09T10:17:58.731Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U": {
+      "name": "Lesson 11",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T13:05:36.704Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "45",
+          "time": "2026-01-04T13:20:43.836Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "50",
+          "time": "2026-01-04T14:47:25.464Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "53",
+          "time": "2026-01-05T07:33:49.265Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "62",
+          "time": "2026-01-09T10:06:03.186Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1qNzGaeYZ9BlWk4ZnESDrPrJBA3jFGm4snWyQO0PHTKc": {
+      "name": "Lesson 12",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Teachers Slides",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-01-04T13:06:10.320Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "55",
+          "time": "2026-01-04T13:37:29.904Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "72",
+          "time": "2026-01-04T14:49:32.907Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "75",
+          "time": "2026-01-05T07:33:58.242Z",
+          "user_email": "teacher14@endlessstudios.com",
+          "user_name": "Teacher Fourteen",
+          "size": 0
+        },
+        {
+          "id": "77",
+          "time": "2026-01-09T10:06:39.770Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 0
+        }
+      ]
+    },
+    "1y5cDbjoCmZt71UIlUQ3CfeF3dbWomcLe": {
+      "name": "Defender Of The Desert Term_2_Design Brief.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JOFFCZ0VIcnRYWUZzY09lektkcGZER3ZmYXAwPQ",
+          "time": "2025-12-30T18:49:22.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 196358
+        }
+      ]
+    },
+    "1n3jUHek4lsuwe4aktppHwWB5mfFPl6pk": {
+      "name": "Exemplar-Games.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QdjNMdG9uWkU2Kzlnam9PN1JDbThRSWdWVC9nPQ",
+          "time": "2025-12-24T10:23:22.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 441542
+        }
+      ]
+    },
+    "1q1alcp0vGEhYAWxA6wDOmvgTy6LJGz-v": {
+      "name": "Guardians Of History Term_2_Design Brief.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JcTZzV1A3bGkrTzRNZ2lIMHB2dUpnL1pLL3dRPQ",
+          "time": "2025-12-30T18:51:15.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 203516
+        }
+      ]
+    },
+    "1HZNIUsWD-BO639vLyt66VSHxpI-MXbfV": {
+      "name": "Open Brief Term_2_Design Brief.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JRFJna3ZkNEorVHFNRXlDQ0VBNDRPenMwR3o4PQ",
+          "time": "2025-12-30T18:45:14.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 323423
+        }
+      ]
+    },
+    "19Wz_DQTu7vW8HqqBl2PbWDmCos373eiY": {
+      "name": "Term_2_Design Briefs All 6 in A4.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QOE9QV0lFYW5WeDIvZEZodTk3M3dnWnZDaXlFPQ",
+          "time": "2025-12-29T08:06:37.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 1643065
+        }
+      ]
+    },
+    "1HfpfHfxymvTdoR42_A7OKtrw9t-7wfev": {
+      "name": "The Grandeur Of Light Term_2_Design Brief.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JY2FSZGhZODluRlczNHhMQ3Rya2JsWUVFRDIwPQ",
+          "time": "2025-12-30T18:47:35.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 397564
+        }
+      ]
+    },
+    "1O_Jh8-5hJUAHRjmAmsonXaX0l002GASs": {
+      "name": "The Secrets Of Art Term_2_Design Brief.pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JTVpUR2Q0NGltOEI4bWd5KzJuWFdyNU1vdmpFPQ",
+          "time": "2025-12-30T18:48:44.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 215963
+        }
+      ]
+    },
+    "1bK7w-1XuZFAGYf2zuZMDWksn8Fe4qRom": {
+      "name": "The Time Traveler's Compass Term_2_Design Briefs .pdf",
+      "folder_path": "Teacher Resources/Design Briefs and Exemplar Games",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JVnVLL1EyK0o3L3llZTZRTU40bEw0b1NZWkw0PQ",
+          "time": "2025-12-30T18:45:55.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 316413
+        }
+      ]
+    },
+    "1nGD6KnTma51S_sx-8xW8MR9RLXXZwRhD": {
+      "name": "Week 1.pdf",
+      "folder_path": "Teacher Resources/Professional Development",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QNENtTUFpZFRNWFl5UUI1NEx4MG51dlluRUZFPQ",
+          "time": "2026-01-13T05:26:24.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 3514740
+        }
+      ]
+    },
+    "1488ayNvjhqqWzx900MmbZ4ZsM1xac4Vr": {
+      "name": "Week 3.pdf",
+      "folder_path": "Teacher Resources/Professional Development",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QU0NONWVJcDZOOFFZOXVqUFg5M3dyRDREeHY0PQ",
+          "time": "2026-01-22T11:19:34.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 2112686
+        }
+      ]
+    },
+    "1NRSY3ZffCq673klm0WoG3J_1jFGVQ5vt": {
+      "name": "Week 5.pdf",
+      "folder_path": "Teacher Resources/Professional Development",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QNjlXT0l4Z0VYeFFBbGVwZVErV3RpSjFKcHlzPQ",
+          "time": "2026-02-05T07:34:46.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 1010593
+        }
+      ]
+    },
+    "1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_": {
+      "name": "Activities & Portfolio Deck",
+      "folder_path": "Teacher Resources/Student Portfolio",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JSFNPR3pmWGZHcE11MjZZeUJDaitQRVR1Qk93PQ",
+          "time": "2026-01-09T10:29:22.917Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 36284615
+        }
+      ]
+    },
+    "1EDRV5C67LX97IBtNo_2xN37UQjF5QECc": {
+      "name": "Curriculum Specifications Term 2 .docx",
+      "folder_path": "Teacher Resources",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QeWtmYUJGNXR6VDMwRnpBUEc1L1Bld2VpT1dVPQ",
+          "time": "2025-12-31T06:45:58.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 15172
+        },
+        {
+          "id": "0ByQWsJ0u6H-QSXllY3hVQk5VSkJFcjErVWFUa3ZwbUVEQlRnPQ",
+          "time": "2026-02-03T06:14:20.813Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 12839
+        }
+      ]
+    },
+    "1zs3bKjAo9iGOMsaMp6dokkCBLKAYW9OXnNaIKcs5TXc": {
+      "name": "Learning Schedule",
+      "folder_path": "Teacher Resources",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2025-12-23T08:50:21.079Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "4",
+          "time": "2025-12-23T08:50:39.688Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "14",
+          "time": "2026-01-02T07:13:49.519Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "34",
+          "time": "2026-01-05T06:09:08.146Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 0
+        },
+        {
+          "id": "144",
+          "time": "2026-01-05T07:24:12.979Z",
+          "user_email": "akhan@endlessstudios.com",
+          "user_name": "Ajas Khan",
+          "size": 0
+        },
+        {
+          "id": "155",
+          "time": "2026-01-06T16:25:05.017Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        },
+        {
+          "id": "159",
+          "time": "2026-01-23T06:05:11.953Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
+        }
+      ]
+    },
+    "1b3Pevvotp8wZclu5l4ttIBgb26Bo4yC0": {
+      "name": "Term 2 Introduction content.pptx",
+      "folder_path": "Teacher Resources",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-Qc3ZSZkJIRVBDc2VveEVISDF2eXh4TW51YmVVPQ",
+          "time": "2026-02-04T04:44:31.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 17236424
+        }
+      ]
+    },
+    "1K9aKmDaQASl8esfoHajw3kdkM_LDhVRZ": {
+      "name": "Students Log In Video.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_UW1WbVBPVjVGVndFeUU4ZG1JdE9ZYWdVa01vPQ",
+          "time": "2026-01-04T07:44:55.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 93489879
+        }
+      ]
+    },
+    "1y-LN60mcYLFHhxz25o1R5ofFBV240tMC": {
+      "name": "Teachers Dashboard Classkick 1.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_Z0VVUklhaGhqUUYrcEpUc1QwWXhTTUJjaG53PQ",
+          "time": "2026-01-04T08:07:30.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 45576827
+        }
+      ]
+    },
+    "1qoa7eSwoC-j1RzNIm6-cKoglhelrveKX": {
+      "name": "Teachers how to add students.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_aHVObURRaDRRRC9XbE9IUGIyN1pzRG5GYnRRPQ",
+          "time": "2026-01-04T08:11:43.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 92847761
+        }
+      ]
+    },
+    "1ZVXzFqSb-MokYWItreMXUaqksoq2OAOO": {
+      "name": "Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+      "folder_path": "Technical Support Guides/Endstar - ",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B1clhxk0XaL1WjdmUGxTTTlYT0ZDODJ1RWQ1ckNPSDhWKzhBPQ",
+          "time": "2026-01-05T07:53:53.000Z",
+          "user_email": "asabar@endlessstudios.com",
+          "user_name": "Abzer Sabar",
+          "size": 67840
+        }
+      ]
+    },
+    "16jK0Zn45YLrB6zYCXnHUpfrKNHU9beEn": {
+      "name": "Endstar Engine User Guide (WIP) (1).pdf",
+      "folder_path": "Technical Support Guides/Endstar - ",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B1clhxk0XaL1L0RKR2N4VVVUTkZ5WTFNVWpRTFUvMTNFR0VjPQ",
+          "time": "2026-01-05T07:46:31.000Z",
+          "user_email": "asabar@endlessstudios.com",
+          "user_name": "Abzer Sabar",
+          "size": 438990
+        }
+      ]
+    },
+    "1KaV4AnrJZzGjPpUzsRs52Z5Wsf-F5WVR": {
+      "name": "Endstar Setup Guide.pdf",
+      "folder_path": "Technical Support Guides/Endstar - ",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_bm8yT085K1ovZWZLdTQ2OGE3NTRLYnZTMFZFPQ",
+          "time": "2025-09-29T00:02:56.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 1027818
+        }
+      ]
+    },
+    "17WvBxXw4tQhs24LWnjQW_pnQvblB8Kh0": {
+      "name": "Endstar Troubleshooting.pdf",
+      "folder_path": "Technical Support Guides/Endstar - ",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_emFiMjNiNHduT0ljbHowTzlFMjZtRzhpd2pZPQ",
+          "time": "2025-09-17T20:36:46.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 207128
+        }
+      ]
+    },
+    "1lTOCB_yDfOI8sP-mU64Z3ikBgPmnhp8B": {
+      "name": "School AI Login & Space Access.mov",
+      "folder_path": "Technical Support Guides/School AI",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "0B6OXc2TCXvf_L1dOaVFWVzVYbTZmcXpndW1WWGVaOFNqOUgwPQ",
+          "time": "2025-08-20T06:13:32.000Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 103625641
+        }
+      ]
+    },
+    "1T-KSpJ3PNLHTJ0TqtFQkttM7v5pvlMLL": {
+      "name": "Assention.mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1QzVUSjVJd1BuMWRhSHdmbitQc2FubWRIVzJZPQ",
+          "time": "2026-02-24T14:41:27.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 24611940
+        }
+      ]
+    },
+    "1x7kiu6Dy6LxOLTBaOsoeensSgWJBBUmP": {
+      "name": "Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1bmNtLzZ5b3crZUdmam5oVFMrNHU3RE94NDY0PQ",
+          "time": "2026-02-22T17:14:40.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 32426455
+        }
+      ]
+    },
+    "1C6C7uz6kBX6d9OqnaZinQrMMul6OAoXB": {
+      "name": "Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1ZzRkWEVuQzdnQkxmMGJiRFczVlVxSE5ZdTVnPQ",
+          "time": "2026-02-24T04:17:10.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 35731315
+        }
+      ]
+    },
+    "1zDh96tb4T8JUa9wfSsTRdtU7jh0YNQGw": {
+      "name": "TrailerCreationinCapcut.mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1VXRudjZyWHNYeTl3WElKNmNXQjQ5SGU4UnlFPQ",
+          "time": "2026-02-24T17:59:23.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 148762660
+        }
+      ]
+    },
+    "1ky7zJ0aO-rJYT71o3qK126UAM3ZV7tU7": {
+      "name": "Lesson 1.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Teacher Slides",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1em9DZDUrNCt4N0VUZDQ3ZjAxTDIya1VaTmVjPQ",
+          "time": "2026-01-18T06:53:23.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 24099607
+        },
+        {
+          "id": "0B9YDzTjtup_1YjR1Q0xFYTVUNTBZbnAzcFFuSERUNXIzWEVnPQ",
+          "time": "2026-02-22T13:53:15.911Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 9951889
+        }
+      ]
+    },
+    "1MzWwbWDMVdrWytXx0QM-BDqotKmhj0z7": {
+      "name": "Lesson 2.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 1/Teacher Slides",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1amwrL0R0V1pJblJ1R0lhT3hNNFVQc0xTNFVNPQ",
+          "time": "2026-01-20T18:39:04.000Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 20768744
+        },
+        {
+          "id": "0B9YDzTjtup_1a0VWd0FRMDJXUmR5dUFWRjd6a2p6b3BieWljPQ",
+          "time": "2026-02-22T13:54:13.800Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 21292291
+        }
+      ]
+    },
+    "1-L-qPJpIr-tiC-MTonDuIyXZywIV4296": {
+      "name": "Lesson 3.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1Rk1QQ2U5VEFQbTdaRXYwUUIrNEJOdFhDY0pvPQ",
+          "time": "2026-02-23T05:39:55.646Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 10984984
+        }
+      ]
+    },
+    "1l2ywBK7TujzSV3DxkuS9pN6N_KjMQWWu": {
+      "name": "Lesson 4.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1dUpyZ3kvRWhjbWUrcHBZYU5yMkd1Si9mNk1BPQ",
+          "time": "2026-01-30T09:43:36.000Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 99415667
+        },
+        {
+          "id": "0B9YDzTjtup_1bVVOUzB1MEQ2WE1OVHJ6RVFRMmNVRTQ2SWtFPQ",
+          "time": "2026-02-22T13:58:36.483Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 9887039
+        }
+      ]
+    },
+    "1uytG6ExZQIVU21LLM3SoCTCA-cU5kLg5": {
+      "name": "Lesson 5.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1VlJCYVVMWTVNYWl5QkRKTGpOSnJ0VDJZWThnPQ",
+          "time": "2026-02-04T05:39:59.000Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 8747315
+        },
+        {
+          "id": "0B9YDzTjtup_1R09ETXVPYWRoVk9PVDd0M24zVXErcDBqTG53PQ",
+          "time": "2026-02-22T13:59:26.047Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 14194411
+        }
+      ]
+    },
+    "1pA0gc6RKqhA2CUuGeJUkebDyODkjcfzL": {
+      "name": "Lesson 6.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1eW1xbWlBSzRZbEd3THVaTWxkaEhCN0FSUUlNPQ",
+          "time": "2026-02-26T09:00:10.795Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 33370506
+        }
+      ]
+    },
+    "14ULVoLTeGILn4ebb_YT9v8bCBQD0z9ma": {
+      "name": "Lesson 7.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1dUNHd28wczlUTFAxcHMwU3k5dVZSbThxbkRjPQ",
+          "time": "2026-02-22T14:02:15.867Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 42189368
+        }
+      ]
+    },
+    "17Aox4Z2s2FM_usV0RF--3o9o-PgBZq-f": {
+      "name": "Lesson 8.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1bEJUVElzeFU3cERER2dmNTdOcG1QcFRURFNVPQ",
+          "time": "2026-02-22T14:03:25.730Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 19980390
+        }
+      ]
+    },
+    "16ZDNt7OtwzJN__oi-JnJ66aX-R4qlpjm": {
+      "name": "claude & blender video.mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JZ1MyR1A3OVlxTGtXVnZFT2RaUUM4bjFZaWVNPQ",
+          "time": "2026-02-17T19:35:31.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 758765
+        }
+      ]
+    },
+    "1xMFOEJ4ykrOz3l-mi8QmOJqR_stzNzU2": {
+      "name": "Lesson 10.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1aWZCY2R2RjEzNUNJUlNVMVNQRFFpK0xKMG44PQ",
+          "time": "2026-02-23T11:16:46.448Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 13526916
+        }
+      ]
+    },
+    "15BRTVwLLDNZFJV_U5C7LhtvQq_5Sf2lq": {
+      "name": "Lesson 9.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1Ung3NGllUjU0Qzk4aGpoLzIvVERuSzVHUkNRPQ",
+          "time": "2026-02-22T14:04:12.476Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 15058424
+        }
+      ]
+    },
+    "12dOEamzHxssBC4XGMsJB8BC73BZ6qW_B": {
+      "name": "Make Stylized 3D Game Assets FAST with AI .mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B6QnY51ORm-JWVRubjl0RVQwTzU2a3lYNVZwVDVYanFvaWZFPQ",
+          "time": "2026-02-17T19:32:47.000Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 36154044
+        }
+      ]
+    },
+    "1-sBZzLT3SF0LrS5K0CoLsFwRQsqvdK_R": {
+      "name": "Lesson 11.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1VjM0WUFjSGF1dzRvWlNXRXEzaWRDY1prbjdRPQ",
+          "time": "2026-02-25T17:51:07.802Z",
+          "user_email": "",
+          "user_name": "obrienciaran4",
+          "size": 17471245
+        }
+      ]
+    },
+    "12ASVMUEF7xdIRK9diRAtNt4b8Ouk5mTU": {
+      "name": "Lesson 12.pptx",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1SlNIY21nN0dielhmMVlaVXpma0UzcGxwNVRvPQ",
+          "time": "2026-02-25T18:55:28.228Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 13089074
         }
       ]
     }

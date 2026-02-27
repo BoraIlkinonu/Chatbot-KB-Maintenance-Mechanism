@@ -1,12 +1,12 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-26T21:22:06.858579+00:00",
-  "started_at": "2026-02-26T21:22:06.858579+00:00",
+  "generated_at": "2026-02-27T04:08:50.339402+00:00",
+  "started_at": "2026-02-27T04:08:50.339295+00:00",
   "total_checks": 47,
-  "passed": 46,
-  "failed": 1,
+  "passed": 43,
+  "failed": 4,
   "errors": 0,
-  "warnings": 0,
+  "warnings": 3,
   "info_failures": 1,
   "layers_run": [
     1,
@@ -15,8 +15,8 @@
   "per_layer": {
     "1": {
       "total": 46,
-      "passed": 45,
-      "failed": 1
+      "passed": 42,
+      "failed": 4
     },
     "3": {
       "total": 1,
@@ -240,12 +240,21 @@
     {
       "check_id": "C004",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "All activity descriptions meet minimum length",
+      "message": "2 lessons have short activity_description (<50 chars)",
       "details": {
         "term": 2,
-        "issues": []
+        "issues": [
+          {
+            "lesson_id": 13,
+            "length": 0
+          },
+          {
+            "lesson_id": 14,
+            "length": 0
+          }
+        ]
       }
     },
     {
@@ -262,12 +271,25 @@
     {
       "check_id": "C006",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "All video URLs match known patterns",
+      "message": "2 video URLs don't match known video domains",
       "details": {
         "term": 2,
-        "issues": []
+        "issues": [
+          {
+            "lesson_index": 2,
+            "video_index": 0,
+            "url": "https://docs.google.com/file/d/1zhMjUhFWC_swsC344_7KA_0ycUO3SnSR/preview",
+            "domain": "docs.google.com"
+          },
+          {
+            "lesson_index": 9,
+            "video_index": 0,
+            "url": "https://docs.google.com/file/d/1PbKFmxqT8tqu4LNMxz0oMSTPUSTM9r6l/preview",
+            "domain": "docs.google.com"
+          }
+        ]
       }
     },
     {
@@ -286,18 +308,19 @@
       "layer": 1,
       "passed": false,
       "severity": "INFO",
-      "message": "8 keywords appear in >80% of lessons (possible overfit): ['player', 'testing', 'feedback', 'portfolio', 'reflection']",
+      "message": "9 keywords appear in >80% of lessons (possible overfit): ['player', 'prototype', 'gameplay', 'feedback', 'portfolio']",
       "details": {
         "term": 2,
         "overfit_keywords": {
           "player": 14,
-          "testing": 12,
-          "feedback": 14,
-          "portfolio": 12,
+          "prototype": 13,
+          "gameplay": 12,
+          "feedback": 13,
+          "portfolio": 14,
           "reflection": 14,
           "assessment": 14,
           "ai": 14,
-          "launch": 14
+          "endstar": 12
         }
       }
     },
@@ -337,12 +360,17 @@
     {
       "check_id": "C012",
       "layer": 1,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "No video URL duplication across videos/resources",
+      "message": "1 video URLs duplicated in both videos and resources",
       "details": {
         "term": 2,
-        "duplicates": []
+        "duplicates": [
+          {
+            "lesson_id": 5,
+            "url": "https://youtu.be/K-NBcP0YUQI"
+          }
+        ]
       }
     },
     {
@@ -474,11 +502,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T21:22:05) > consolidated_at (2026-02-26T21:22:05)",
+      "message": "KB generated_at (2026-02-27T04:08:48) > consolidated_at (2026-02-27T04:08:47)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-26T21:22:05.963440+00:00",
-        "cons_ts": "2026-02-26T21:22:05.494786+00:00"
+        "kb_ts": "2026-02-27T04:08:48.916250+00:00",
+        "cons_ts": "2026-02-27T04:08:47.958103+00:00"
       }
     },
     {
@@ -512,9 +540,9 @@
       "details": {
         "term": 2,
         "template_files": [
-          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json"
+          "Term 2 - Templates.json",
+          "templates.json"
         ]
       }
     },

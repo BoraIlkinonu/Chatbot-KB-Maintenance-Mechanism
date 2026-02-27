@@ -1,88 +1,2506 @@
 {
-  "generated_at": "2026-02-27T03:09:13.139275+00:00",
-  "lesson_coverage": 0.9992,
-  "lesson_coverage_pct": "99.9%",
-  "overall_coverage": 0.9992,
-  "overall_coverage_pct": "99.9%",
-  "total_source": 10200,
-  "matched": 8776,
-  "structural": 691,
-  "unmatched": 8,
-  "skipped_trivial": 725,
-  "total_kb": 8765,
+  "generated_at": "2026-02-27T04:09:23.118388+00:00",
+  "lesson_coverage": 0.9971,
+  "lesson_coverage_pct": "99.7%",
+  "overall_coverage": 0.9826,
+  "overall_coverage_pct": "98.3%",
+  "total_source": 17092,
+  "matched": 14651,
+  "structural": 911,
+  "unmatched": 276,
+  "skipped_trivial": 1254,
+  "total_kb": 10078,
   "truncations": [],
   "stage_losses": {
-    "1": [
+    "6": [
+      {
+        "type": "text_block",
+        "content_preview": "How am I assessed in Term 2?",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:3",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "It should include:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:8",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "your ideas and design decisions",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:9",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "(Checked during the term)",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:15",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "This checks that:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:17",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "the work is completed",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:18",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "the work is on task and linked to your game",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:19",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "This section checks completion only, not quality.",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:20",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "(Completed at the end of Term 2)",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:23",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "table",
+        "content_preview": "Weight",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "table:0:r0c1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "AI-Based",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": 3,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "AI-Based",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": 3,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
+        "location": "slide:17:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
+        "location": "slide:18:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
+        "location": "slide:18:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
+        "location": "slide:17:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
+        "location": "slide:18:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Action:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
+        "location": "slide:18:para:2",
+        "term": 2,
+        "lesson": 5,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Give me:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
+        "location": "slide:9:para:15",
+        "term": 2,
+        "lesson": 7,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Purpose:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": 8,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Explorers Programme Curriculum Specifications Term 2",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Programme Overview",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:2",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Curriculum Overview (T2)",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:4",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Learning Schedule (T2)",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:5",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Programme Intro Video",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:6",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Lesson Decks Teacher (Slides)",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:14",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Root Folder: Teacher Slides",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:16",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Student SlidesStudent Slides",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:23",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Lesson Plans",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:24",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Root Folder: Lesson Plans",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:26",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Product (Game) 50%",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:37",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Exemplar work",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:43",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Classkick Classkick support",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:56",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Support Contact (Endless Studios Team) explorers@endlessstudios.com",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:58",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
       {
         "type": "link",
-        "content_preview": "slide10.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
-        "location": "slide:19:run_hyperlink",
+        "content_preview": "https://www.youtube.com/watch?v=tCsdyXYBdQs",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:6:hyperlink",
         "term": 2,
-        "lesson": 2,
-        "reason": "link never extracted from source"
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/14f_itGQ3zsYLTP7tMZEnoyEiWNVHwXoW/view",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:7:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://app.schoolai.com/sign-in",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:55:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Curriculum Overview",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:1:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Game Briefs",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:2:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Curriculum Links",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 1",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 2",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 3",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 4",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 5",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Week 6",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Deck Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:para:1",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Technical Guides",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:6:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Technical Guides ( Student Version )",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Learning Schedule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "How To Install",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Surveys Students",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Technical Guides ( Teacher Version )",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Learning Schedule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "How To Install",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Surveys Teachers",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:9:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Move to Position node",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Multiple NPC Spawner",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Item Granter",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Damager Block",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Video Tutorials",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "How to log in",
+        "source_file": "term2/Technical Support Guides/Classkick/Classkick - how to.docx",
+        "location": "paragraph:2",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "How to assign a roster",
+        "source_file": "term2/Technical Support Guides/Classkick/Classkick - how to.docx",
+        "location": "paragraph:5",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "How to grade work",
+        "source_file": "term2/Technical Support Guides/Classkick/Classkick - how to.docx",
+        "location": "paragraph:7",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide10.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+        "location": "slide:19:run_hyperlink",
+        "term": 3,
+        "lesson": 2,
+        "reason": "present in stage 5 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide10.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
         "location": "slide:8:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 6,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide20.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
         "location": "slide:19:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 6,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide9.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
         "location": "slide:8:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 8,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide15.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
         "location": "slide:13:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 12,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide15.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
         "location": "slide:16:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 12,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide15.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
         "location": "slide:16:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 12,
-        "reason": "link never extracted from source"
+        "reason": "present in stage 5 but missing from KB output"
       },
       {
         "type": "link",
         "content_preview": "slide8.xml",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
         "location": "slide:18:run_hyperlink",
-        "term": 2,
+        "term": 3,
         "lesson": 12,
+        "reason": "present in stage 5 but missing from KB output"
+      }
+    ],
+    "3": [
+      {
+        "type": "text_block",
+        "content_preview": "(Checked once, at the end of Term 2)",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:32",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "They will:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:34",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "look across multiple entries",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:35",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "judge improvement over time",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:36",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Important note about Term 2 and Term 3",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:49",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "By the end of Term 2, your game should be:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:50",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "fully playable from start to finish",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:51",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "In Term 3 (first two weeks only), you will:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:55",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "You are not expected to redesign or rebuild the game in Term 3.",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:59",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "What does success in Term 2 look like?",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:65",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "You are successful if:",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:66",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "your work improves over time",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:68",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "your game meets the brief and works reliably",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:70",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Final reminder",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:73",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "They are used by both students and teachers",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:75",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Transparency is intentional — use them to guide your work",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:76",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Focus on thinking, improvement, and meeting the brief",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "location": "paragraph:77",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "This is a best-fit judgement. For each criterion, select the single level that best describes the st",
+        "source_file": "term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+        "location": "paragraph:43",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Advanced Wiring",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Adding Filters",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Creating NPC’s",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Interactable and Trigger volume",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Group Nodes",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Adding Collaborators",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Text Bubble Bark",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Automatic Item Ensurer",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "All Item Remover",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Dynamic Item Spawner",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Item Quantity Checker",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Healer Block",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Teleport Point",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Checkpoint System",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Teleporter - Health Utilies - Health Modifier",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Resource Collection Rule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Push Physics Rule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Do Once per Context",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Custom Timer Rule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Banner - Mini Activity",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Glass Prop",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Controllable Boat",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Push Physics Rule",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Health UI for NPCs",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "Tutorial Link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:para:0",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 2 but missing from KB output"
+      }
+    ],
+    "2": [
+      {
+        "type": "text_block",
+        "content_preview": "2- Define",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": 6,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "3- Ideate",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
+        "location": "slide:10:para:0",
+        "term": 2,
+        "lesson": 6,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1Jrw7MCq0Sr59NxoCC1Y_zaRrYobQGuAh/edit?usp=sharing&ouid=10087",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1gA4yxYHFTheYxgxRPK9c2aK5ystqPvkG/edit?usp=drive_link&ouid=10",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1qTbpTagXjNXqJHcUBlcGdwRp2rumRFbmhpc6LnhFRcQ/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1lTbBFlTQ41pyc747HliVoth_2MudXDw0w2BrVnKua3Q/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1XmQdlY3HEyXSmuStbj6cNufLM8sXnMS8xLH1M2ZvWWY/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1qNzGaeYZ9BlWk4ZnESDrPrJBA3jFGm4snWyQO0PHTKc/edit?usp=drive_l",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?usp=sharing&ouid=10087",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?slide=id.g3b482366c76_",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?slide=id.g3b482366c76_",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?slide=id.g3b482366c76_",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?slide=id.g3b482366c76_",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_/edit?slide=id.g3b482366c76_",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:5:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1KaV4AnrJZzGjPpUzsRs52Z5Wsf-F5WVR/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://wa.me/971528962197",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://forms.gle/PPSLL6kVF2rzJpiX9",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:7:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1KaV4AnrJZzGjPpUzsRs52Z5Wsf-F5WVR/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://wa.me/971528962197",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://forms.gle/PPSLL6kVF2rzJpiX9",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1026035389?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1026037272?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1KKWYv7SFsNiPTx4Paf-Wvjm08noz1_Wn/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1YqQRPMzX59m4m4Wuji03iO66wUxOPxR-/view",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1sitxhCLqPy9GA7gO73j6y6m_6-ABIo32/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/16AYkm152WFf6i9gDbzlcIWsVmu6YqrV2/view",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1026033919?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1dtUvXi5kL-z0aiuJXtdxGxHi9keMeJji/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1EmrkIWJ6vxLsUPbhLxlB6BWnJ6UusyvR/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1TY6DJUXstKTtMmG3OvUcI5Zswkb48mPs/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/17-vbEc6sGK9QdQ3yqiEc3LSbyaDYlrne/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1059601983?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1062715189?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1LAedEEotmDNBaHrAi-rgdchtexJC5_1X/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1annhVpQQC7b-n2CC8Bxd_QJywiLEyXr8/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:11:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1112808685?share=copy#t=0",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1Z2HCKdzyRoFoOfnLlTGpBxymsD5Xmz_a/view",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1059600989?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1z33FnWPYxz8TkSLpkSxxbLdpW2Mbciub/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/11_S94eMZeAO_WteRZvPFsDPlrbQTZV7d/view?usp=drive_link",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1_m_vTjVvbEL_V7GLUAUR7m-0qiDKoAW1/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1xjAUQxD0crDzCVO5iKVD2Ktdn-dI0u6J/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1112850628?share=copy#t=0",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:12:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/15E5Q_ANlnN8OjGuD9fdxNFuecHBpArEA/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1W5jFQuH2pAQl5Fesmi3BKYl0B-HsPrha/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1106394499",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1051793863?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/10yL4tdSujDA1wdN6X3oNiK0lKMVeJ21P/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1059602220?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1062710534?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1066500112?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1LGPflbPuvPUfm74Rk4-LAvViu6LUMCYQ/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/file/d/1W5jFQuH2pAQl5Fesmi3BKYl0B-HsPrha/view?usp=sharing",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1112810906?share=copy#t=0",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1026041037?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://vimeo.com/1059601838?share=copy",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:14:run_hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image1.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:15:image:image1.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image10.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image10.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image4.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:10:image:image4.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image13.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image13.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image3.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image3.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image8.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:1:image:image8.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image11.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image11.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image7.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:1:image:image7.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image14.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image14.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image12.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:3:image:image12.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image9.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:1:image:image9.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "image",
+        "content_preview": "image2.png",
+        "source_file": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+        "location": "slide:1:image:image2.png",
+        "term": 2,
+        "lesson": null,
+        "reason": "present in stage 1 but missing from KB output"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
+        "location": "slide:20:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
+        "location": "slide:21:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
+        "location": "slide:23:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
+        "location": "slide:24:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
+        "location": "slide:20:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
+        "location": "slide:21:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 3 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 3,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
+        "location": "slide:23:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 4 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
+        "location": "slide:24:text:7",
+        "term": 2,
+        "lesson": 4,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
+        "location": "slide:25:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
+        "location": "slide:26:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
+        "location": "slide:27:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
+        "location": "slide:20:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
+        "location": "slide:21:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
+        "location": "slide:25:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
+        "location": "slide:26:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 7 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
+        "location": "slide:27:text:7",
+        "term": 2,
+        "lesson": 7,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 .1",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
+        "location": "slide:20:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 . 2",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
+        "location": "slide:21:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      },
+      {
+        "type": "text_block",
+        "content_preview": "MCQ 8 . 3",
+        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
+        "location": "slide:22:text:7",
+        "term": 2,
+        "lesson": 8,
+        "reason": "text content not captured during conversion"
+      }
+    ],
+    "1": [
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/presentation/d/1z92F5UcRfy7j9GmiG-prFrqbzJOaTPTNk5cDcw7h9Ps/edit?slide=id.g3",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:4:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://docs.google.com/spreadsheets/d/1zs3bKjAo9iGOMsaMp6dokkCBLKAYW9OXnNaIKcs5TXc/edit?gid=0#gid=0",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:5:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1C3vnru_8uH1-hCilsq16lfpP0tcF6W8M",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:16:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1c5hFY9HgU4Om4dNnRhhmMGwZrjghJeJ_?usp=sharing",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:21:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1v57qEDs4hAcNjKScU-WPi-WoNZNiQpCl",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:23:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1srSpxmAqNSVEV9GpEyaDeXC-GcZlTfgB",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:26:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1_BJwDwvWSIaqJ93Du4ysK-7kCMbT53ea",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:42:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/18JR2IVT6dOcF73DW-B0CMY7kxm4jr9Hu",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:43:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1-enCAULBONbecdVwfE8GnjXw3HGOY8iC",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:46:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1u6ilinS8oWFKmlgZMuRr4WM2a3P4dK5Y",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:53:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1GRCX-p5yZydWyi4oJ5n5pAsb0cdMvzDb",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:55:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "https://drive.google.com/drive/folders/1eK2aFyLJ4CKOl4aT480Z00x2VmrnK8rG",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:56:hyperlink",
+        "term": 2,
+        "lesson": null,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "mailto:explorers@endlessstudios.com",
+        "source_file": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+        "location": "paragraph:58:hyperlink",
+        "term": 2,
+        "lesson": null,
         "reason": "link never extracted from source"
       }
     ]
@@ -93,38 +2511,64 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 99.9% (9467 matched [691 structural], 8 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 99.7% (15280 matched [878 structural], 44 unmatched of lesson-assigned atoms)",
       "details": {
-        "lesson_coverage": 0.9992,
-        "overall_coverage": 0.9992,
-        "lesson_matched": 8776,
-        "lesson_structural": 691,
-        "lesson_unmatched": 8,
-        "total_source": 10200,
-        "skipped_trivial": 725
+        "lesson_coverage": 0.9971,
+        "overall_coverage": 0.9826,
+        "lesson_matched": 14402,
+        "lesson_structural": 878,
+        "lesson_unmatched": 44,
+        "total_source": 17092,
+        "skipped_trivial": 1254
       }
     },
     {
       "check_id": "V002",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 95.3% (163/171)",
+      "message": "Link extraction coverage: 75.5% (265/351)",
       "details": {
-        "link_coverage": 0.9532,
-        "matched": 163,
-        "total": 171
+        "link_coverage": 0.755,
+        "matched": 265,
+        "total": 351
       }
     },
     {
       "check_id": "V003",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "Text content lost at early stages: 0 atoms",
+      "message": "Text content lost at early stages: 26 atoms",
       "details": {
-        "count": 0,
-        "examples": []
+        "count": 26,
+        "examples": [
+          {
+            "content": "2- Define",
+            "stage": 2,
+            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx"
+          },
+          {
+            "content": "3- Ideate",
+            "stage": 2,
+            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx"
+          },
+          {
+            "content": "MCQ 3 .1",
+            "stage": 2,
+            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+          },
+          {
+            "content": "MCQ 3 . 2",
+            "stage": 2,
+            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+          },
+          {
+            "content": "MCQ 3 . 3",
+            "stage": 2,
+            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+          }
+        ]
       }
     },
     {
@@ -140,11 +2584,17 @@
     {
       "check_id": "V005",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "Source files with unassigned content: 0",
+      "message": "Source files with unassigned content: 5",
       "details": {
-        "files": []
+        "files": [
+          "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+          "term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+          "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+          "term2/Teacher Resources/Term 2 Introduction content.pptx",
+          "term2/Technical Support Guides/Classkick/Classkick - how to.docx"
+        ]
       }
     },
     {
@@ -152,11 +2602,11 @@
       "layer": 5,
       "passed": true,
       "severity": "INFO",
-      "message": "Speaker note preservation: 100.0% (258/258)",
+      "message": "Speaker note preservation: 100.0% (394/394)",
       "details": {
         "coverage": 1.0,
-        "matched": 258,
-        "total": 258
+        "matched": 394,
+        "total": 394
       }
     },
     {
@@ -164,39 +2614,39 @@
       "layer": 5,
       "passed": false,
       "severity": "WARNING",
-      "message": "Unconsumed native doc sections: 5 (new content types may need dedicated KB fields)",
+      "message": "Unconsumed native doc sections: 523 (new content types may need dedicated KB fields)",
       "details": {
-        "count": 5,
+        "count": 523,
         "examples": [
           {
-            "term": 3,
-            "lesson": 3,
-            "content": "Students reflect on which research method was most useful and why.\u000b Students com",
+            "term": 2,
+            "lesson": 1,
+            "content": "Term 2 assessment is split evenly between process and product .",
             "location": "remaining_content[0].content[0]"
           },
           {
-            "term": 3,
-            "lesson": 4,
-            "content": "Students articulate a clear project vision and complete My Success Criteria / Se",
-            "location": "remaining_content[0].content[0]"
+            "term": 2,
+            "lesson": 1,
+            "content": "Portfolio: 50 marks (50%)",
+            "location": "remaining_content[0].content[1]"
           },
           {
-            "term": 3,
-            "lesson": 5,
-            "content": "Students complete My Success Criteria / Self-Assessment and AI MCQ exit-ticket q",
-            "location": "remaining_content[0].content[0]"
+            "term": 2,
+            "lesson": 1,
+            "content": "Game: 50 marks (50%)",
+            "location": "remaining_content[0].content[2]"
           },
           {
-            "term": 3,
-            "lesson": 6,
-            "content": "Students complete My Success Criteria / Self-Assessment and AI MCQ exit-ticket q",
-            "location": "remaining_content[0].content[0]"
+            "term": 2,
+            "lesson": 1,
+            "content": "Assessment is completed once at the end of Term 2, except for portfolio completi",
+            "location": "remaining_content[0].content[3]"
           },
           {
-            "term": 3,
-            "lesson": 7,
-            "content": "Students reflect on how expanding mechanics and immersion changed the player exp",
-            "location": "remaining_content[0].content[0]"
+            "term": 2,
+            "lesson": 1,
+            "content": "This document remains the single source of truth for Term 2 assessment.",
+            "location": "remaining_content[0].content[4]"
           }
         ]
       }
@@ -215,12 +2665,23 @@
     {
       "check_id": "V009",
       "layer": 5,
-      "passed": true,
+      "passed": false,
       "severity": "WARNING",
-      "message": "Stale manifest entries (missing from disk): 0 (all manifest entries valid)",
+      "message": "Stale manifest entries (missing from disk): 67 (files may have been moved/renamed/deleted)",
       "details": {
-        "count": 0,
-        "files": []
+        "count": 67,
+        "files": [
+          "term1/Administrative/IB Wrapper Design Curriciulum Mapping.pptx",
+          "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Assention.mp4",
+          "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+          "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+          "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/TrailerCreationinCapcut.mp4",
+          "term3/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+          "term3/Teacher Resources/Assessment Guides/Student Guide/TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+          "term3/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+          "term3/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+          "term3/Teacher Resources/Curriculum Alignment/US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf"
+        ]
       }
     }
   ]
