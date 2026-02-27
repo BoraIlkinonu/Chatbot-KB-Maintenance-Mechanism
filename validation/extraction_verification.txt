@@ -1,6 +1,6 @@
 ======================================================================
   EXTRACTION VERIFICATION REPORT
-  2026-02-27T13:59:09.407330+00:00
+  2026-02-27T14:32:53.902536+00:00
 ======================================================================
 
 Files excluded by file_manifest.json: 43
@@ -9,10 +9,10 @@ Files excluded by file_manifest.json: 43
   LESSON CONTENT  (slides, lesson plans, activities)
   This is what powers the chatbot KB. Must be near 100%.
 ----------------------------------------------------------------------
-  Coverage:     99.8%  (12094/12114 atoms)
-  Matched:      11294
-  Structural:   800  (slide labels absorbed into KB)
-  Unmatched:    20
+  Coverage:     100.0%  (11410/11410 atoms)
+  Matched:      11264
+  Structural:   146  (slide labels absorbed into KB)
+  Unmatched:    0
 
 ----------------------------------------------------------------------
   NON-LESSON CONTENT  (admin docs, curriculum specs, guides)
@@ -21,32 +21,27 @@ Files excluded by file_manifest.json: 43
 ----------------------------------------------------------------------
   No non-lesson atoms (all content assigned to lessons)
 
-OVERALL: 99.8% coverage across all 13159 source atoms (1045 trivial skipped, 10080 KB atoms)
+OVERALL: 100.0% coverage across all 11460 source atoms (50 trivial skipped, 10080 KB atoms)
 
 Per-Type Coverage:
 --------------------------------------------------
   image          : 1306/1306 (100.0%)
-  link           :  235/ 243 ( 96.7%)
+  link           :  235/ 235 (100.0%)
   speaker_note   :  317/ 317 (100.0%)
   table          :  902/ 902 (100.0%)
-  text_block     : 8534/8546 ( 99.9%)
+  text_block     : 8504/8504 (100.0%)
 
 Per-Term Coverage:
 --------------------------------------------------
-  Term 1         : 2938/2938 (100.0%)
-  Term 2         : 4621/4633 ( 99.7%)
-  Term 3         : 3735/3743 ( 99.8%)
-
-Loss Attribution by Stage:
---------------------------------------------------
-  Stage 1 (Media Extraction): 8 atoms lost
-  Stage 2 (Document Conversion): 12 atoms lost
+  Term 1         : 2937/2937 (100.0%)
+  Term 2         : 4605/4605 (100.0%)
+  Term 3         : 3722/3722 (100.0%)
 
 Verification Checks:
 --------------------------------------------------
-  [PASS   ] V001: Lesson content coverage: 99.8% (12094 matched [800 structural], 20 unmatched of lesson-assigned atoms)
-  [PASS   ] V002: Link extraction coverage: 96.7% (235/243)
-  [WARNING] V003: Text content lost at early stages: 12 atoms
+  [PASS   ] V001: Lesson content coverage: 100.0% (11410 matched [146 structural], 0 unmatched of lesson-assigned atoms)
+  [PASS   ] V002: Link extraction coverage: 100.0% (235/235)
+  [PASS   ] V003: Text content lost at early stages: 0 atoms
   [PASS   ] V004: Truncation limits hit: 0 fields
   [PASS   ] V005: Source files with unassigned content: 0
   [PASS   ] V006: Speaker note preservation: 100.0% (317/317)

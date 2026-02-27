@@ -1,224 +1,39 @@
 {
-  "generated_at": "2026-02-27T13:59:09.435458+00:00",
-  "lesson_coverage": 0.9983,
-  "lesson_coverage_pct": "99.8%",
-  "lesson_matched": 11294,
-  "lesson_structural": 800,
-  "lesson_unmatched": 20,
+  "generated_at": "2026-02-27T14:32:53.926903+00:00",
+  "lesson_coverage": 1.0,
+  "lesson_coverage_pct": "100.0%",
+  "lesson_matched": 11264,
+  "lesson_structural": 146,
+  "lesson_unmatched": 0,
   "nonlesson_matched": 0,
   "nonlesson_structural": 0,
   "nonlesson_unmatched": 0,
   "nonlesson_total": 0,
-  "overall_coverage": 0.9983,
-  "overall_coverage_pct": "99.8%",
-  "total_source": 13159,
-  "matched": 11294,
-  "structural": 800,
-  "unmatched": 20,
-  "skipped_trivial": 1045,
+  "overall_coverage": 1.0,
+  "overall_coverage_pct": "100.0%",
+  "total_source": 11460,
+  "matched": 11264,
+  "structural": 146,
+  "unmatched": 0,
+  "skipped_trivial": 50,
   "total_kb": 10080,
   "truncations": [],
-  "stage_losses": {
-    "2": [
-      {
-        "type": "text_block",
-        "content_preview": "AI-Based",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx",
-        "location": "slide:8:para:0",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "AI-Based",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx",
-        "location": "slide:8:para:0",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
-        "location": "slide:17:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
-        "location": "slide:18:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
-        "location": "slide:18:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
-        "location": "slide:17:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
-        "location": "slide:18:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Action:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
-        "location": "slide:18:para:2",
-        "term": 2,
-        "lesson": 5,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "2- Define",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
-        "location": "slide:10:para:0",
-        "term": 2,
-        "lesson": 6,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "3- Ideate",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
-        "location": "slide:10:para:0",
-        "term": 2,
-        "lesson": 6,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Give me:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
-        "location": "slide:9:para:15",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Purpose:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
-        "location": "slide:13:para:0",
-        "term": 2,
-        "lesson": 8,
-        "reason": "text content not captured during conversion"
-      }
-    ],
-    "1": [
-      {
-        "type": "link",
-        "content_preview": "slide10.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
-        "location": "slide:19:run_hyperlink",
-        "term": 3,
-        "lesson": 2,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide10.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
-        "location": "slide:8:run_hyperlink",
-        "term": 3,
-        "lesson": 6,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide20.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
-        "location": "slide:19:run_hyperlink",
-        "term": 3,
-        "lesson": 6,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide9.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
-        "location": "slide:8:run_hyperlink",
-        "term": 3,
-        "lesson": 8,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:13:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:16:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:16:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "link never extracted from source"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide8.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:18:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "link never extracted from source"
-      }
-    ]
-  },
+  "stage_losses": {},
   "checks": [
     {
       "check_id": "V001",
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 99.8% (12094 matched [800 structural], 20 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 100.0% (11410 matched [146 structural], 0 unmatched of lesson-assigned atoms)",
       "details": {
-        "lesson_coverage": 0.9983,
-        "overall_coverage": 0.9983,
-        "lesson_matched": 11294,
-        "lesson_structural": 800,
-        "lesson_unmatched": 20,
-        "total_source": 13159,
-        "skipped_trivial": 1045
+        "lesson_coverage": 1.0,
+        "overall_coverage": 1.0,
+        "lesson_matched": 11264,
+        "lesson_structural": 146,
+        "lesson_unmatched": 0,
+        "total_source": 11460,
+        "skipped_trivial": 50
       }
     },
     {
@@ -226,48 +41,22 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 96.7% (235/243)",
+      "message": "Link extraction coverage: 100.0% (235/235)",
       "details": {
-        "link_coverage": 0.9671,
+        "link_coverage": 1.0,
         "matched": 235,
-        "total": 243
+        "total": 235
       }
     },
     {
       "check_id": "V003",
       "layer": 5,
-      "passed": false,
+      "passed": true,
       "severity": "WARNING",
-      "message": "Text content lost at early stages: 12 atoms",
+      "message": "Text content lost at early stages: 0 atoms",
       "details": {
-        "count": 12,
-        "examples": [
-          {
-            "content": "AI-Based",
-            "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx"
-          },
-          {
-            "content": "AI-Based",
-            "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx"
-          },
-          {
-            "content": "Action:",
-            "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
-          },
-          {
-            "content": "Action:",
-            "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
-          },
-          {
-            "content": "Action:",
-            "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
-          }
-        ]
+        "count": 0,
+        "examples": []
       }
     },
     {
