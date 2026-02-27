@@ -185,6 +185,20 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
             from llm_extract import run_extraction
             extract_result = run_extraction(backend="auto", force=force_extract)
             pipeline_results["extraction"] = extract_result
+
+            # Check if extraction actually produced results
+            total_usable = extract_result.get("extracted", 0) + extract_result.get("cached", 0)
+            if total_usable == 0:
+                print(f"\n  Extraction produced 0 usable results "
+                      f"({extract_result.get('errors', 0)} errors).")
+                print("  Entering fallback mode — sources only.\n")
+                pipeline_results["fallback"] = True
+                notify_sources_ready(pipeline_results)
+                pipeline_log["status"] = "fallback"
+                pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
+                _save_pipeline_log(pipeline_log)
+                return pipeline_log
+
             pipeline_log["steps_run"].append({
                 "step": 3, "name": "LLM Extract", "status": "success",
             })
@@ -193,7 +207,6 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
             print(f"\n  No LLM backend available: {e}")
             print("  Entering fallback mode — sources only.\n")
             pipeline_results["fallback"] = True
-            pipeline_results["sync_summary"] = pipeline_results.get("sync_summary", {})
             notify_sources_ready(pipeline_results)
             pipeline_log["status"] = "fallback"
             pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()

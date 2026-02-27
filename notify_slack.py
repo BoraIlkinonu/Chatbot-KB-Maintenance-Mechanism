@@ -696,27 +696,46 @@ def notify_sources_ready(results):
     """
     Notify that sources are ready for local processing (fallback mode).
 
-    Sent when no LLM backend is available in CI.
+    Sent when no LLM backend is available in CI, or when extraction
+    produced 0 usable results.
     """
     import os
     run_number = os.environ.get("GITHUB_RUN_NUMBER", "?")
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    run_id = os.environ.get("GITHUB_RUN_ID", "")
 
     s = results.get("sync_summary", {})
+    ext = results.get("extraction")
 
     sections = [
         ":arrows_counterclockwise: *Source Files Changed — Local Processing Required*",
     ]
 
+    # Explain WHY fallback was triggered
+    if ext and ext.get("errors", 0) > 0:
+        sections.append(
+            f":warning: LLM extraction failed: {ext['errors']} errors, "
+            f"0 usable results (no API key or backend unavailable)"
+        )
+    else:
+        sections.append(
+            ":information_source: No LLM backend available in CI — "
+            "extraction must be run locally"
+        )
+
     if s:
         sections.append(
-            f"*Changes:*\n"
-            f"  +{s.get('new', 0)} new | ~{s.get('modified', 0)} modified | "
+            f"*Sync:* {s.get('total_files', 0)} files | "
+            f"+{s.get('new', 0)} new, ~{s.get('modified', 0)} modified | "
             f"{s.get('downloaded', 0)} downloaded"
         )
 
     sections.append(
         f":arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"
     )
+
+    if repo and run_id:
+        sections.append(f"<https://github.com/{repo}/actions/runs/{run_id}|View CI Run>")
 
     sections.append(
         ":computer: *Run locally:*\n"
