@@ -117,14 +117,23 @@ def notify_new_images(admin_flags):
     if not admin_flags:
         return False
 
+    # Group by term for clearer display
+    by_term = {}
+    for flag in admin_flags:
+        term = flag.get("term", "unknown")
+        by_term.setdefault(term, []).append(flag)
+
     msg = (
         f":frame_with_picture: *New Images Detected — Admin Review Needed*\n"
         f"{len(admin_flags)} file(s) with new/modified images:\n"
     )
-    for flag in admin_flags[:10]:
-        fp = flag.get("folder_path", "")
-        display = f"{fp}/{flag.get('file', '')}" if fp else flag.get("file", "")
-        msg += f"  • `{display}` ({flag.get('change_type', '')})\n"
+    for term_key in sorted(by_term):
+        term_label = _term_label(term_key)
+        msg += f"\n*{term_label}:* `sources/{term_key}/`\n"
+        for flag in by_term[term_key][:10]:
+            fp = flag.get("folder_path", "")
+            display = f"{fp}/{flag.get('file', '')}" if fp else flag.get("file", "")
+            msg += f"  • `{display}` ({flag.get('change_type', '')})\n"
 
     msg += "\n_Run Stage 4 (Claude image analysis) when ready._"
 
