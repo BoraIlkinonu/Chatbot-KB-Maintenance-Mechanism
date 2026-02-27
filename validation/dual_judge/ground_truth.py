@@ -1,47 +1,57 @@
 """
 Ground truth extraction from source files for dual-judge evaluation.
 
-Reads the consolidated JSON (by_lesson → documents → full_path to converted
-.md files) and native_content arrays to build a complete text representation
-of what the source files actually contain.
+Scans converted/ directory and native_extractions.json directly to build
+ground truth text. Does NOT depend on consolidated JSON files — reads
+from the same source files the pipeline uses, so it never goes stale.
 """
 
 import json
+import re
 from pathlib import Path
 
-from config import CONSOLIDATED_DIR
+from config import CONVERTED_DIR, NATIVE_DIR, WEEK_LESSON_MAP
 
 
 def extract_ground_truth(term: int, lesson_num: int) -> str:
     """Extract all source content for a lesson as readable text.
 
-    Reads consolidated JSON to find converted documents and native content,
-    then reads the actual files. Returns a single string for LLM evaluation.
+    Scans converted/term{N}/ for markdown files matching the lesson,
+    and reads native extractions for the same term+lesson. Returns a
+    single string for LLM evaluation.
     """
-    consolidated_file = CONSOLIDATED_DIR / f"consolidated_term{term}.json"
-    if not consolidated_file.exists():
-        return "[No source content found]"
-
-    data = json.loads(consolidated_file.read_text(encoding="utf-8"))
-    by_lesson = data.get("by_lesson", {})
-    lesson_data = by_lesson.get(str(lesson_num), {})
-
-    if not lesson_data:
-        return "[No source content found]"
-
     parts = []
 
     # 1. Converted documents (PPTX→MD, DOCX→MD, etc.)
-    for doc in lesson_data.get("documents", []):
-        doc_text = _extract_document(doc)
-        if doc_text:
-            parts.append(doc_text)
+    converted_dir = CONVERTED_DIR / f"term{term}"
+    if converted_dir.exists():
+        for md_file in sorted(converted_dir.rglob("*.md")):
+            rel_path = md_file.relative_to(CONVERTED_DIR)
+            lessons = _extract_lesson_from_path(str(rel_path), term)
+            if lesson_num in lessons:
+                doc_text = _read_md_file(md_file, str(rel_path))
+                if doc_text:
+                    parts.append(doc_text)
 
     # 2. Native Google Docs/Slides content
-    for native in lesson_data.get("native_content", []):
-        native_text = _extract_native(native)
-        if native_text:
-            parts.append(native_text)
+    native_path = NATIVE_DIR / "native_extractions.json"
+    if native_path.exists():
+        try:
+            data = json.loads(native_path.read_text(encoding="utf-8"))
+            extractions = data.get("extractions", data if isinstance(data, list) else [])
+            for ext in extractions:
+                ext_term = ext.get("term", "")
+                if ext_term != f"term{term}":
+                    continue
+                name = ext.get("file_name", "")
+                source_path = ext.get("source_path", name)
+                lessons = _extract_lesson_from_path(source_path or name, term)
+                if lesson_num in lessons:
+                    native_text = _extract_native(ext)
+                    if native_text:
+                        parts.append(native_text)
+        except (json.JSONDecodeError, OSError):
+            pass
 
     if not parts:
         return "[No source content found]"
@@ -49,23 +59,47 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
     return "\n\n".join(parts)
 
 
-def _extract_document(doc: dict) -> str | None:
-    """Extract text from a converted document entry.
+def _extract_lesson_from_path(path: str, term: int) -> list[int]:
+    """Extract lesson number(s) from file path.
 
-    Each document has a full_path to a .md file on disk and metadata
-    like content_type, format, slide_count.
+    Mirrors consolidate.extract_lesson_from_path() logic so ground truth
+    matches what the pipeline assigns.
     """
-    full_path = doc.get("full_path", "")
-    rel_path = doc.get("path", "")
-    content_type = doc.get("content_type", "unknown")
+    path_lower = path.lower().replace("\\", "/")
+    max_lesson = {1: 24, 2: 14, 3: 24}.get(term, 24)
 
-    if not full_path:
-        return None
+    # Explicit "Lesson X"
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
+    if match:
+        num = int(match.group(1))
+        if 1 <= num <= max_lesson:
+            return [num]
 
-    path = Path(full_path)
-    if not path.exists():
-        return None
+    # "Lessons X-Y" (range)
+    match = re.search(r"lessons?\s*(\d{1,2})\s*[-–]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start <= max_lesson and 1 <= end <= max_lesson:
+            return list(range(start, end + 1))
 
+    # Week folder → lessons (skip support docs)
+    if not any(skip in path_lower for skip in ["assessment", "exemplar", "teacher guide"]):
+        match = re.search(r"week[_\s\-]*(\d)", path_lower)
+        if match:
+            week = int(match.group(1))
+            if week in WEEK_LESSON_MAP:
+                return WEEK_LESSON_MAP[week]
+
+    # Cross-term check
+    for t_num in range(1, 4):
+        if t_num != term and re.search(rf"term\s*{t_num}\b", path_lower):
+            return []
+
+    return []
+
+
+def _read_md_file(path: Path, rel_path: str) -> str | None:
+    """Read a converted markdown file and format it for ground truth."""
     try:
         text = path.read_text(encoding="utf-8", errors="replace").strip()
     except OSError:
@@ -74,54 +108,44 @@ def _extract_document(doc: dict) -> str | None:
     if not text:
         return None
 
-    # Cap at 8000 chars per document to stay within prompt limits
+    # Cap at 8000 chars per document
     if len(text) > 8000:
         text = text[:8000] + "\n[... truncated ...]"
 
-    header = f"=== {content_type.upper()} — {rel_path} ==="
-    return f"{header}\n{text}"
+    return f"=== CONVERTED — {rel_path} ===\n{text}"
 
 
 def _extract_native(native: dict) -> str | None:
-    """Extract text from native Google Docs/Slides content.
-
-    Native content comes in two formats:
-    - Slides: has 'slides' array with pageElements
-    - Docs: has 'content_blocks' array with text blocks
-    """
+    """Extract text from native Google Docs/Slides content."""
     title = native.get("title", native.get("file_name", "unknown"))
     native_type = native.get("native_type", "unknown")
     parts = [f"=== NATIVE {native_type.upper()} — {title} ==="]
 
-    # Google Slides format (from native extraction)
+    # Google Slides format
     if "slides" in native and isinstance(native["slides"], list):
         for i, slide in enumerate(native["slides"], 1):
             slide_parts = [f"--- Slide {i} ---"]
 
-            # Text elements from shapes
             for element in slide.get("pageElements", slide.get("elements", [])):
                 text = _extract_shape_text(element)
                 if text:
                     slide_parts.append(text)
 
-            # Direct text field
             if slide.get("text"):
                 slide_parts.append(str(slide["text"]))
 
-            # Speaker notes
             notes = slide.get("notes", "")
             if notes:
                 slide_parts.append(f"[Speaker Notes]: {notes}")
 
-            # Links
             for link in slide.get("links", []):
                 url = link.get("url", link) if isinstance(link, dict) else str(link)
                 slide_parts.append(f"[Link]: {url}")
 
-            if len(slide_parts) > 1:  # More than just the header
+            if len(slide_parts) > 1:
                 parts.extend(slide_parts)
 
-    # Google Docs format (from native extraction)
+    # Google Docs format
     if "content_blocks" in native and isinstance(native["content_blocks"], list):
         for block in native["content_blocks"]:
             if isinstance(block, dict):
@@ -144,7 +168,7 @@ def _extract_native(native: dict) -> str | None:
         elif isinstance(link, str):
             parts.append(f"[Link]: {link}")
 
-    # Pre-extracted section fields (some native docs have these directly)
+    # Pre-extracted section fields
     for key in ["big_question", "uae_link", "learning_objectives",
                 "success_criteria", "activities", "assessment",
                 "curriculum_alignment"]:
@@ -153,11 +177,10 @@ def _extract_native(native: dict) -> str | None:
             content = val if isinstance(val, str) else json.dumps(val, ensure_ascii=False)
             parts.append(f"[{key}]: {content}")
 
-    if len(parts) <= 1:  # Only header, no content
+    if len(parts) <= 1:
         return None
 
     result = "\n".join(parts)
-    # Cap at 5000 chars per native doc
     if len(result) > 5000:
         result = result[:5000] + "\n[... truncated ...]"
     return result
@@ -165,11 +188,9 @@ def _extract_native(native: dict) -> str | None:
 
 def _extract_shape_text(element: dict) -> str | None:
     """Extract text from a Google Slides shape/pageElement."""
-    # Direct text field
     if "text" in element and isinstance(element["text"], str):
         return element["text"].strip() or None
 
-    # Nested shape → text → textElements
     shape = element.get("shape", element)
     text_content = shape.get("text", {})
     if isinstance(text_content, str):
