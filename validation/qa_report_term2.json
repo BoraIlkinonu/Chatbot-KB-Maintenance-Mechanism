@@ -1,7 +1,7 @@
 {
   "verdict": "NEEDS_REVIEW",
-  "generated_at": "2026-02-27T10:14:46.959766+00:00",
-  "started_at": "2026-02-27T10:14:46.959661+00:00",
+  "generated_at": "2026-02-27T10:53:07.189732+00:00",
+  "started_at": "2026-02-27T10:53:07.189641+00:00",
   "total_checks": 47,
   "passed": 43,
   "failed": 4,
@@ -502,11 +502,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-27T10:14:45) > consolidated_at (2026-02-27T10:14:44)",
+      "message": "KB generated_at (2026-02-27T10:53:05) > consolidated_at (2026-02-27T10:53:04)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-27T10:14:45.517557+00:00",
-        "cons_ts": "2026-02-27T10:14:44.526655+00:00"
+        "kb_ts": "2026-02-27T10:53:05.802249+00:00",
+        "cons_ts": "2026-02-27T10:53:04.852787+00:00"
       }
     },
     {

@@ -2,7 +2,7 @@
   "term": 3,
   "total_lessons": 14,
   "generated_from": "KB Maintenance Pipeline v2",
-  "generated_at": "2026-02-27T10:14:46.016607+00:00",
+  "generated_at": "2026-02-27T10:53:06.284765+00:00",
   "lessons": [
     {
       "lesson_title": "Lesson 1 – Program Launch & Game Readiness Review",
@@ -574,7 +574,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.608044+00:00",
+      "generated_at": "2026-02-27T10:53:05.892660+00:00",
       "pipeline_version": "2.1",
       "week": 1,
       "big_question": "How ready is my game — and am I ready — to run this like a real studio?",
@@ -1567,7 +1567,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.646911+00:00",
+      "generated_at": "2026-02-27T10:53:05.929354+00:00",
       "pipeline_version": "2.1",
       "week": 1,
       "big_question": "How do we clearly define what to improve in our game, who it's for, and how we'll know it's successful?",
@@ -2606,7 +2606,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.695187+00:00",
+      "generated_at": "2026-02-27T10:53:05.976225+00:00",
       "pipeline_version": "2.1",
       "week": 2,
       "big_question": "When does AI become an \"agent\"—and when is that unnecessary or irresponsible?",
@@ -3724,7 +3724,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.730073+00:00",
+      "generated_at": "2026-02-27T10:53:06.011250+00:00",
       "pipeline_version": "2.1",
       "week": 2,
       "big_question": "How can we control what AI knows and what it produces?",
@@ -4400,7 +4400,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.767799+00:00",
+      "generated_at": "2026-02-27T10:53:06.046520+00:00",
       "pipeline_version": "2.1",
       "week": 3,
       "big_question": "How can we promote our game clearly and honestly without misleading players?",
@@ -5306,7 +5306,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.795993+00:00",
+      "generated_at": "2026-02-27T10:53:06.073605+00:00",
       "pipeline_version": "2.1",
       "week": 3,
       "big_question": "How do developers responsibly release a game today - and plan where it could go next?",
@@ -6112,7 +6112,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.823087+00:00",
+      "generated_at": "2026-02-27T10:53:06.099771+00:00",
       "pipeline_version": "2.1",
       "week": 4,
       "big_question": "How can we collect honest feedback and use it responsibly after launch?",
@@ -6793,7 +6793,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.844101+00:00",
+      "generated_at": "2026-02-27T10:53:06.121650+00:00",
       "pipeline_version": "2.1",
       "week": 4,
       "big_question": "How do we decide what to fix next — and what not to fix?",
@@ -7586,7 +7586,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.873105+00:00",
+      "generated_at": "2026-02-27T10:53:06.149624+00:00",
       "pipeline_version": "2.1",
       "week": 5,
       "big_question": "How do we prove that a fix actually worked?",
@@ -8413,7 +8413,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.901315+00:00",
+      "generated_at": "2026-02-27T10:53:06.177453+00:00",
       "pipeline_version": "2.1",
       "week": 5,
       "big_question": "Does my game actually fit its market — or do I just hope it does?",
@@ -9155,7 +9155,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.927723+00:00",
+      "generated_at": "2026-02-27T10:53:06.203490+00:00",
       "pipeline_version": "2.1",
       "week": 6,
       "big_question": "What does my Product–Market Fit evidence really mean- and how do I communicate it professionally?",
@@ -9762,7 +9762,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.963133+00:00",
+      "generated_at": "2026-02-27T10:53:06.234768+00:00",
       "pipeline_version": "2.1",
       "week": 6,
       "big_question": "How do professional developers decide what to stop building — and start promoting?",
@@ -10130,7 +10130,21 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_001.jpg",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_001.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_002.jpg",
             "slide_numbers": [
               5
             ],
@@ -10144,25 +10158,11 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_002.jpg",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_003.jpg",
             "slide_numbers": [
-              18
+              19
             ],
-            "primary_slide": 18,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_003.png",
-            "slide_numbers": [
-              13
-            ],
-            "primary_slide": 13,
+            "primary_slide": 19,
             "kb_tags": []
           },
           {
@@ -10174,160 +10174,6 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_004.png",
             "slide_numbers": [
-              1
-            ],
-            "primary_slide": 1,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_005.png",
-            "slide_numbers": [
-              10
-            ],
-            "primary_slide": 10,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_006.png",
-            "slide_numbers": [
-              11
-            ],
-            "primary_slide": 11,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_007.png",
-            "slide_numbers": [
-              18
-            ],
-            "primary_slide": 18,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_008.jpg",
-            "slide_numbers": [
-              18
-            ],
-            "primary_slide": 18,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_009.jpg",
-            "slide_numbers": [
-              4
-            ],
-            "primary_slide": 4,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_010.png",
-            "slide_numbers": [
-              1
-            ],
-            "primary_slide": 1,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_011.png",
-            "slide_numbers": [
-              11
-            ],
-            "primary_slide": 11,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_012.png",
-            "slide_numbers": [
-              12
-            ],
-            "primary_slide": 12,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_013.jpg",
-            "slide_numbers": [
-              15
-            ],
-            "primary_slide": 15,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_014.png",
-            "slide_numbers": [
-              1
-            ],
-            "primary_slide": 1,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_015.png",
-            "slide_numbers": [
               13
             ],
             "primary_slide": 13,
@@ -10340,7 +10186,21 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_016.png",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_005.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_006.png",
             "slide_numbers": [
               2,
               3,
@@ -10356,12 +10216,12 @@
               13,
               14,
               15,
-              16,
               17,
               18,
               19,
               20,
-              21
+              21,
+              22
             ],
             "primary_slide": 2,
             "kb_tags": []
@@ -10373,7 +10233,63 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_017.jpg",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_007.png",
+            "slide_numbers": [
+              11
+            ],
+            "primary_slide": 11,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_008.png",
+            "slide_numbers": [
+              11
+            ],
+            "primary_slide": 11,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_009.jpg",
+            "slide_numbers": [
+              5
+            ],
+            "primary_slide": 5,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_010.jpg",
+            "slide_numbers": [
+              19
+            ],
+            "primary_slide": 19,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_011.jpg",
             "slide_numbers": [
               4
             ],
@@ -10387,11 +10303,100 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_012.png",
+            "slide_numbers": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              19
+            ],
+            "primary_slide": 2,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_013.png",
+            "slide_numbers": [
+              13
+            ],
+            "primary_slide": 13,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_014.jpg",
+            "slide_numbers": [
+              6
+            ],
+            "primary_slide": 6,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_015.png",
+            "slide_numbers": [
+              10
+            ],
+            "primary_slide": 10,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_016.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_017.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_018.png",
             "slide_numbers": [
-              3
+              2
             ],
-            "primary_slide": 3,
+            "primary_slide": 2,
             "kb_tags": []
           },
           {
@@ -10403,9 +10408,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_019.png",
             "slide_numbers": [
-              11
+              3
             ],
-            "primary_slide": 11,
+            "primary_slide": 3,
             "kb_tags": []
           },
           {
@@ -10431,9 +10436,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_021.png",
             "slide_numbers": [
-              1
+              2
             ],
-            "primary_slide": 1,
+            "primary_slide": 2,
             "kb_tags": []
           },
           {
@@ -10445,9 +10450,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_022.png",
             "slide_numbers": [
-              2
+              12
             ],
-            "primary_slide": 2,
+            "primary_slide": 12,
             "kb_tags": []
           },
           {
@@ -10459,9 +10464,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_023.png",
             "slide_numbers": [
-              2
+              19
             ],
-            "primary_slide": 2,
+            "primary_slide": 19,
             "kb_tags": []
           },
           {
@@ -10487,14 +10492,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_025.png",
             "slide_numbers": [
-              2,
-              3,
-              4,
-              5,
-              6,
-              18
+              11
             ],
-            "primary_slide": 2,
+            "primary_slide": 11,
             "kb_tags": []
           },
           {
@@ -10504,21 +10504,7 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_026.jpg",
-            "slide_numbers": [
-              5
-            ],
-            "primary_slide": 5,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_027.png",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_026.png",
             "slide_numbers": [
               13
             ],
@@ -10532,11 +10518,25 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_027.jpg",
+            "slide_numbers": [
+              4
+            ],
+            "primary_slide": 4,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_13/image_028.jpg",
             "slide_numbers": [
-              6
+              15
             ],
-            "primary_slide": 6,
+            "primary_slide": 15,
             "kb_tags": []
           }
         ]
@@ -10547,7 +10547,7 @@
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:45.993214+00:00",
+      "generated_at": "2026-02-27T10:53:06.262293+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "How do we turn a finished game into a professional marketing asset?",
@@ -10632,19 +10632,19 @@
           "notes": "Give students exactly 3 minutes to count and record their ME/AI/BOTH totals. Then ask for a show of hands: \"Who had more than half as AI?\" \nDo not single students out. \nUse aggregate data to frame a brief class discussion. \nConnect to K3.3 and K4.1 — explain these are real frameworks used by OECD to evaluate AI literacy in professional settings."
         },
         {
-          "slide": 18,
+          "slide": 19,
           "notes": "Use this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses."
         },
         {
-          "slide": 19,
+          "slide": 20,
           "notes": "Teaching note: This question reinforces that AI can surface issues, but humans must prioritise based on player impact and context.\nIt helps students practise evaluating AI output rather than accepting it wholesale.\nThis is a practice question only, to be completed in Classkick.\nAnswer key: C"
         },
         {
-          "slide": 20,
+          "slide": 21,
           "notes": "This question helps students recognise that AI is best used for idea generation, not ownership of decisions.\nIt reinforces that responsibility and accountability always remain with humans.\nThis is a practice question only, to be completed in Classkick.\nAnswer key: B"
         },
         {
-          "slide": 21,
+          "slide": 22,
           "notes": "Teaching note: This question reinforces that AI does not take responsibility for outcomes.\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.\nThis is a practice question only, to be completed in Classkick.\nAnswer key: D-"
         }
       ],
@@ -10712,26 +10712,30 @@
         },
         {
           "slide_number": 16,
-          "content": "Reflection: Human Creativity Check\n\nWhat parts of my game are uniquely human — things no AI tool could create for me?\nThink about:\n🎮 A mechanic inspired by your personal experience\n💬 Dialogue that reflects your humour or personality\n🎨 Design choices based on your taste or culture\n💡 A problem you solved in your own creative way\n❤️ An emotion you wanted players to feel\nWrite 3 Specific Examples - explain WHY AI could not generate this without knowing you.\n____________________________________\n____________________________________\n____________________________________\n\nAI can generate ideas, assets, and suggestions.\nBut your game exists because of you.\n\nGame studios use AI to speed up production.\nBut creative vision, emotional direction, and final decisions remain human responsibilities.\n\n‹#›"
+          "content": ""
         },
         {
           "slide_number": 17,
-          "content": "Extension Task: Alternative Asset Exploration\n\nGenerate alternative versions of your audio assets and evaluate them against your primary selections.\n\n🎵 Alternative Soundtrack\n\nReturn to Suno AI and generate one alternative soundtrack with a deliberately different genre, tempo, or mood. Do not use the same prompt — intentionally shift one variable and observe how it changes the emotional impact of your trailer concept.\n\n🎙 Alternative Voice Tone\n\nReturn to ElevenLabs and apply a different voice style — more authoritative, more playful, or more urgent — to the same voiceover lines. Compare the two versions side by side.\n\n💬 Comparison Question: Which combination of soundtrack and voiceover tone most authentically matches your target audience's expectations — and why? Write a one-sentence justification for your primary selection.\n________________________________________________________________________________________________________________________\n\n‹#›"
+          "content": "Reflection: Human Creativity Check\n\nWhat parts of my game are uniquely human — things no AI tool could create for me?\nThink about:\n🎮 A mechanic inspired by your personal experience\n💬 Dialogue that reflects your humour or personality\n🎨 Design choices based on your taste or culture\n💡 A problem you solved in your own creative way\n❤️ An emotion you wanted players to feel\nWrite 3 Specific Examples - explain WHY AI could not generate this without knowing you.\n____________________________________\n____________________________________\n____________________________________\n\nAI can generate ideas, assets, and suggestions.\nBut your game exists because of you.\n\nGame studios use AI to speed up production.\nBut creative vision, emotional direction, and final decisions remain human responsibilities.\n\n‹#›"
         },
         {
           "slide_number": 18,
-          "content": "My Success Criteria / Self-Assessment\n\n‹#›\n\nReflect on how well you met today's learning objectives.\n\nAll\n\nI captured gameplay and created a Suno soundtrack and ElevenLabs voiceover that followed my L12 plan. All files are saved correctly.\n\nMost\n\nI compared multiple AI outputs and chose the version that best matches my game’s tone and target audience — not just the most impressive one.\n\nSome\n\nI refined my prompts strategically when results missed the mark, improving quality through deliberate iteration."
+          "content": "Extension Task: Alternative Asset Exploration\n\nGenerate alternative versions of your audio assets and evaluate them against your primary selections.\n\n🎵 Alternative Soundtrack\n\nReturn to Suno AI and generate one alternative soundtrack with a deliberately different genre, tempo, or mood. Do not use the same prompt — intentionally shift one variable and observe how it changes the emotional impact of your trailer concept.\n\n🎙 Alternative Voice Tone\n\nReturn to ElevenLabs and apply a different voice style — more authoritative, more playful, or more urgent — to the same voiceover lines. Compare the two versions side by side.\n\n💬 Comparison Question: Which combination of soundtrack and voiceover tone most authentically matches your target audience's expectations — and why? Write a one-sentence justification for your primary selection.\n________________________________________________________________________________________________________________________\n\n‹#›"
         },
         {
           "slide_number": 19,
-          "content": "Lesson 13– Learning Check\n\nAnswer these questions to check your understanding of AI Literacy\n\nMCQ 13.1\n\nAI generates three soundtrack options for your trailer. One sounds exciting and energetic — but it doesn't match the tone of your game at all.\n\nWhat is the most responsible action?\n\nA. Use the most exciting one because trailers should always feel energetic, regardless of game tone\n\nB. Let AI choose automatically based on the highest engagement score\n\nC. Select the option that aligns with the game's actual identity, tone, and target audience\n\nD. Generate 10 more automatically until one feels perfect without further evaluation\n\nOECD Mapping\nKnowledge Area: AI Reshapes Work & Human Roles\nCode: K3.3 (Human judgment)\n\n‹#›"
+          "content": "My Success Criteria / Self-Assessment\n\n‹#›\n\nReflect on how well you met today's learning objectives.\n\nAll\n\nI captured gameplay and created a Suno soundtrack and ElevenLabs voiceover that followed my L12 plan. All files are saved correctly.\n\nMost\n\nI compared multiple AI outputs and chose the version that best matches my game’s tone and target audience — not just the most impressive one.\n\nSome\n\nI refined my prompts strategically when results missed the mark, improving quality through deliberate iteration."
         },
         {
           "slide_number": 20,
-          "content": "The AI-generated voiceover for your trailer sounds great — but it exaggerates gameplay features that your game doesn't actually have.\n\nA. Keep it for maximum marketing impact — trailers are always aspirational\n\nB. Revise the voiceover text to accurately reflect actual gameplay\n\nC. Keep generating new AI versions until one happens to be both exciting and accurate\n\nD. Remove the voiceover entirely to avoid any risk of inaccuracy\n\nAnswer these questions to check your understanding of AI Literacy\n\nMCQ 13.2\n\nLesson 13 – Learning Check\n\nOECD Mapping\nKnowledge Area: AI's Role in Society\nCode: K5.4 (Accountability and ethical responsibility ).\n\nWhat should you do?\n\n‹#›"
+          "content": "Lesson 13– Learning Check\n\nAnswer these questions to check your understanding of AI Literacy\n\nMCQ 13.1\n\nAI generates three soundtrack options for your trailer. One sounds exciting and energetic — but it doesn't match the tone of your game at all.\n\nWhat is the most responsible action?\n\nA. Use the most exciting one because trailers should always feel energetic, regardless of game tone\n\nB. Let AI choose automatically based on the highest engagement score\n\nC. Select the option that aligns with the game's actual identity, tone, and target audience\n\nD. Generate 10 more automatically until one feels perfect without further evaluation\n\nOECD Mapping\nKnowledge Area: AI Reshapes Work & Human Roles\nCode: K3.3 (Human judgment)\n\n‹#›"
         },
         {
           "slide_number": 21,
+          "content": "The AI-generated voiceover for your trailer sounds great — but it exaggerates gameplay features that your game doesn't actually have.\n\nA. Keep it for maximum marketing impact — trailers are always aspirational\n\nB. Revise the voiceover text to accurately reflect actual gameplay\n\nC. Keep generating new AI versions until one happens to be both exciting and accurate\n\nD. Remove the voiceover entirely to avoid any risk of inaccuracy\n\nAnswer these questions to check your understanding of AI Literacy\n\nMCQ 13.2\n\nLesson 13 – Learning Check\n\nOECD Mapping\nKnowledge Area: AI's Role in Society\nCode: K5.4 (Accountability and ethical responsibility ).\n\nWhat should you do?\n\n‹#›"
+        },
+        {
+          "slide_number": 22,
           "content": "Why is it important that humans complete the Trailer Pre-Production Plan before using AI tools like Suno or ElevenLabs?\n\nSelect the best answer:\n\nA. So AI tools generate longer and more detailed outputs\n\nB. So fewer AI prompts need to be written\n\nC. So AI can automatically correct poor gameplay design\n\nD. So humans define creative intent before AI generates assets\n\nAnswer these questions to check your understanding of AI Literacy\n\nMCQ 13.3\n\nLesson 13 – Learning Check\n\nOECD Mapping\nKnowledge Area: : AI Reshapes Work & Human Roles\nCode: K3.3 (Human responsibility for final decisions)\n\n‹#›"
         }
       ],
@@ -10818,7 +10822,7 @@
           "I edited confidently in CapCut, synced audio correctly, and produced a polished trailer that clearly shows my game’s value."
         ],
         "activity_type": "Game expansion and polish",
-        "activity_description": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
+        "activity_description": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your  social poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
         "artifacts": [],
         "assessment_signals": [
           "I can explain why manual editing provides more control than AI-generated video.",
@@ -10885,166 +10889,7 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_002.jpg",
-            "slide_numbers": [
-              6
-            ],
-            "primary_slide": 6,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_003.png",
-            "slide_numbers": [
-              1
-            ],
-            "primary_slide": 1,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_004.png",
-            "slide_numbers": [
-              7
-            ],
-            "primary_slide": 7,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_005.png",
-            "slide_numbers": [
-              2,
-              3,
-              4,
-              5,
-              6,
-              16
-            ],
-            "primary_slide": 2,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_006.png",
-            "slide_numbers": [
-              8
-            ],
-            "primary_slide": 8,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_007.png",
-            "slide_numbers": [
-              2
-            ],
-            "primary_slide": 2,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_008.jpg",
-            "slide_numbers": [
-              16
-            ],
-            "primary_slide": 16,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_009.jpg",
-            "slide_numbers": [
-              11
-            ],
-            "primary_slide": 11,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_010.png",
-            "slide_numbers": [
-              1
-            ],
-            "primary_slide": 1,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_011.jpg",
-            "slide_numbers": [
-              3
-            ],
-            "primary_slide": 3,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_012.png",
-            "slide_numbers": [
-              7
-            ],
-            "primary_slide": 7,
-            "kb_tags": []
-          },
-          {
-            "image_id": "",
-            "content_type": "",
-            "visual_description": "",
-            "educational_context": "",
-            "source": "pptx",
-            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_013.png",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_002.png",
             "slide_numbers": [
               2,
               3,
@@ -11075,7 +10920,21 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_014.jpg",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_003.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_004.jpg",
             "slide_numbers": [
               14
             ],
@@ -11089,7 +10948,68 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_015.png",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_005.jpg",
+            "slide_numbers": [
+              11
+            ],
+            "primary_slide": 11,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_006.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_007.jpg",
+            "slide_numbers": [
+              16
+            ],
+            "primary_slide": 16,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_008.png",
+            "slide_numbers": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              16
+            ],
+            "primary_slide": 2,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_009.png",
             "slide_numbers": [
               2
             ],
@@ -11103,11 +11023,96 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_016.png",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_010.jpg",
             "slide_numbers": [
               16
             ],
             "primary_slide": 16,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_011.png",
+            "slide_numbers": [
+              8
+            ],
+            "primary_slide": 8,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_012.png",
+            "slide_numbers": [
+              1
+            ],
+            "primary_slide": 1,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_013.png",
+            "slide_numbers": [
+              16
+            ],
+            "primary_slide": 16,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_014.jpg",
+            "slide_numbers": [
+              4,
+              5
+            ],
+            "primary_slide": 4,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_015.png",
+            "slide_numbers": [
+              7
+            ],
+            "primary_slide": 7,
+            "kb_tags": []
+          },
+          {
+            "image_id": "",
+            "content_type": "",
+            "visual_description": "",
+            "educational_context": "",
+            "source": "pptx",
+            "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_016.jpg",
+            "slide_numbers": [
+              6
+            ],
+            "primary_slide": 6,
             "kb_tags": []
           },
           {
@@ -11131,12 +11136,11 @@
             "educational_context": "",
             "source": "pptx",
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
-            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_018.jpg",
+            "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_018.png",
             "slide_numbers": [
-              4,
-              5
+              2
             ],
-            "primary_slide": 4,
+            "primary_slide": 2,
             "kb_tags": []
           },
           {
@@ -11148,9 +11152,9 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_019.png",
             "slide_numbers": [
-              1
+              7
             ],
-            "primary_slide": 1,
+            "primary_slide": 7,
             "kb_tags": []
           },
           {
@@ -11162,20 +11166,20 @@
             "source_pptx": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
             "image_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/Lesson_14/image_020.jpg",
             "slide_numbers": [
-              16
+              3
             ],
-            "primary_slide": 16,
+            "primary_slide": 3,
             "kb_tags": []
           }
         ]
       },
-      "description_of_activities": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
+      "description_of_activities": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your  social poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
       "other_resources": "",
       "videos_column": "",
       "testing_scores": "",
       "comments": "",
       "prompts": "",
-      "generated_at": "2026-02-27T10:14:46.016559+00:00",
+      "generated_at": "2026-02-27T10:53:06.284717+00:00",
       "pipeline_version": "2.1",
       "week": null,
       "big_question": "Is your trailer just a video…or is it a strategic marketing tool?",
@@ -11222,7 +11226,7 @@
       ],
       "programme_metadata": {},
       "key_facts": [],
-      "detailed_activities": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
+      "detailed_activities": "🔍 Stage 1 – Individual Reaction (2 mins)\n\nWould you trust AI to generate your entire trailer?\n\n_____________________________________________\n\nWhy or why not?\u000b_____________________________________________\n\n📊 Stage 2 – Evidence Builder (3 mins)\n\nIn pairs, complete the below table for each trailer type.\n\nRunway ML is an AI-powered creative tool that helps you generate and edit videos, images, and animations using simple text prompts.\n\nWatch the Runway video demonstration and complete the task below.\n\n| Trailer Type | Advantages | Risks |\n\n| AI-Generated Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\n| Manually Edited Trailer | 1. ________________ 2. ________________ | 1. ________________ 2. ________________ |\n\nKey Insight: Automation ≠ Ownership. AI can assist, but the creative vision behind a strong marketing asset must be human-led.\n\n🤖 AI-Generated (Runway ML)\n\nFast production turnaround\n\nAutomated visual generation\n\nRisk of generic, template output\n\nLimited creative ownership\n\n✂️ Manual Editing (CapCut)\n\nAuthentic gameplay footage\n\nIntentional pacing decisions\n\nTime-intensive but purposeful\n\nExplore: AI-Generated Video vs. Manual Editing\n\nTrim & split to tighten pacing\n\n🎯 Focus on pacing and clarity — not effects.\n\nExplore: Teacher Demo – CapCut\n\nDetailed Steps to Create Your Game Trailer (CapCut) (25 mins)\n\nOpen CapCut → tap New Project\n\nSocial Media Poster/end card image\n\n3.  Arrange clips to match this structure:\n\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\n\nAdd soundtrack and voiceover to timeline\n\nSync audio to each section (Hook / Gameplay / Details)\n\nAdd your  social poster/end card at the end (3–5s)\n\nFinal check: text readable + audio levels balanced\n\n8.   Export your trailer (1080p)\n\n✂️ Split clips to remove boring parts\n\nCut menus, pauses, loading screens\n\n⚡Speed up slow moments (1.2x–1.5x)\n\nKeep clips short and punchy\n\n🎥 Use quick, clean transitions\n\nMatch cuts to the music beat\n\n🔊 Lower music under voiceover\n\n🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\nExplain scope freeze as a formal, intentional decision — not just \"stopping.\" Use the analogy of a restaurant menu: chefs don't add new dishes on the night of a dinner service. Ask: \"When does building become a way of avoiding launching?\" Pause for responses. This concept may feel counterintuitive to students who love adding features — acknowledge that tension directly.\n\nUse this slide for end-of-lesson self-assessment. Ask students to identify whether they achieved All, Most, or Some of today’s criteria and to record one improvement target. Inspectors should see students articulating their progress and next steps. Ask: 'What will you do differently next time?' and record responses.\n\nIt helps students practise evaluating AI output rather than accepting it wholesale.\n\nThis question helps students recognise that AI is best used for idea generation, not ownership of decisions.\n\nStudents must understand that humans are accountable for decisions made using AI support, especially after launch.",
       "rubrics": [],
       "data_tables": [
         {
@@ -11355,7 +11359,7 @@
         },
         {
           "slide_number": 10,
-          "content": "Detailed Steps to Create Your Game Trailer (CapCut) (25 mins)\nOpen CapCut → tap New Project\nImport:\nGameplay clips\nSuno soundtrack\nElevenLabs voiceover\nSocial Media Poster/end card image\n3.  Arrange clips to match this structure:\nHook (2–3s)\nKey Gameplay (8–12s)\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\nAdd soundtrack and voiceover to timeline\nSync audio to each section (Hook / Gameplay / Details)\nAdd your poster/end card at the end (3–5s)\nFinal check: text readable + audio levels balanced\n8.   Export your trailer (1080p)\n\nEditing Tips\n✂️ Split clips to remove boring parts\nCut menus, pauses, loading screens\n⚡Speed up slow moments (1.2x–1.5x)\nKeep clips short and punchy\n🎥 Use quick, clean transitions\nMatch cuts to the music beat\n🔊 Lower music under voiceover\nAdd smooth fade in/out\n⏱ 15–20 seconds max\nIf it feels slow, cut it\n\nNeed More Help?\n 🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\n‹#›"
+          "content": "Detailed Steps to Create Your Game Trailer (CapCut) (25 mins)\nOpen CapCut → tap New Project\nImport:\nGameplay clips\nSuno soundtrack\nElevenLabs voiceover\nSocial Media Poster/end card image\n3.  Arrange clips to match this structure:\nHook (2–3s)\nKey Gameplay (8–12s)\nGame Details (3–5s): Title + Tagline + Deeplink  (Social Poster)\nAdd soundtrack and voiceover to timeline\nSync audio to each section (Hook / Gameplay / Details)\nAdd your  social poster/end card at the end (3–5s)\nFinal check: text readable + audio levels balanced\n8.   Export your trailer (1080p)\n\nEditing Tips\n✂️ Split clips to remove boring parts\nCut menus, pauses, loading screens\n⚡Speed up slow moments (1.2x–1.5x)\nKeep clips short and punchy\n🎥 Use quick, clean transitions\nMatch cuts to the music beat\n🔊 Lower music under voiceover\nAdd smooth fade in/out\n⏱ 15–20 seconds max\nIf it feels slow, cut it\n\nNeed More Help?\n 🎥Check out this Video with the clear steps you will need.\n\nSkill Boxes Key: 🟩 Creativity | 🟧 Computational Thinking | 🟦Communication\n\nActivity 14.1 : Build your Trailer\n\n‹#›"
         },
         {
           "slide_number": 11,

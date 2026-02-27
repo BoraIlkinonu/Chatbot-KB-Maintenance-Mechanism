@@ -1,6 +1,6 @@
 ======================================================================
   QA REPORT — FAIL
-  2026-02-27T10:14:46.958179+00:00
+  2026-02-27T10:53:07.188126+00:00
 ======================================================================
 
 Verdict:    FAIL
@@ -25,7 +25,7 @@ FAILURES:
   [WARNING] C006: 2 video URLs don't match known video domains
   [WARNING] C012: 1 video URLs duplicated in both videos and resources
   [WARNING] I003: 5 URLs with encoding issues
-  [WARNING] I007: 409 duplicate image paths within lessons
+  [WARNING] I007: 403 duplicate image paths within lessons
   [WARNING] UC05: assessment_signals coverage: 60% (30/50) — threshold: 80%
   [WARNING] UN03: 1 sequencing/numbering issues
   [WARNING] X005: Missing lesson IDs: [15, 16, 17, 18, 19, 20, 21, 22, 23, 24]

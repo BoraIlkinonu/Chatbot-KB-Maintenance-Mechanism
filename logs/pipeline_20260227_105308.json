@@ -1,0 +1,44 @@
+{
+  "started_at": "2026-02-27T10:43:01.048668+00:00",
+  "stages_run": [
+    {
+      "stage": 1,
+      "name": "Media Extraction",
+      "status": "success",
+      "completed_at": "2026-02-27T10:49:29.067393+00:00"
+    },
+    {
+      "stage": 2,
+      "name": "Document Conversion",
+      "status": "success",
+      "completed_at": "2026-02-27T10:49:49.024550+00:00"
+    },
+    {
+      "stage": 3,
+      "name": "Native Google Extraction",
+      "status": "success",
+      "completed_at": "2026-02-27T10:53:04.179950+00:00"
+    },
+    {
+      "stage": 5,
+      "name": "Consolidation",
+      "status": "success",
+      "completed_at": "2026-02-27T10:53:04.935522+00:00"
+    },
+    {
+      "stage": 6,
+      "name": "KB Build",
+      "status": "success",
+      "completed_at": "2026-02-27T10:53:06.645019+00:00"
+    },
+    {
+      "stage": 7,
+      "name": "Validation",
+      "status": "success",
+      "completed_at": "2026-02-27T10:53:07.194944+00:00"
+    }
+  ],
+  "errors": [],
+  "status": "completed",
+  "completed_at": "2026-02-27T10:53:08.115897+00:00"
+}
