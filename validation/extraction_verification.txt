@@ -1,52 +1,48 @@
 ======================================================================
   EXTRACTION VERIFICATION REPORT
-  2026-02-27T04:09:23.071484+00:00
+  2026-02-27T04:48:07.214622+00:00
 ======================================================================
 
-Files excluded by file_manifest.json: 3054
+Files excluded by file_manifest.json: 43
 
-LESSON COVERAGE: 99.7%  (15280/15324 lesson-assigned atoms)
+LESSON COVERAGE: 99.8%  (12093/12113 lesson-assigned atoms)
   ^ Content assigned to a specific term+lesson that SHOULD appear in the KB
 
-Overall Coverage: 98.3%  (includes admin docs, guides, templates)
-  Source atoms:   17092
-  Trivial skip:   1254
-  Matched:        14651
-  Structural:     911  (slide labels absorbed into KB content)
-  Unmatched:      276
+Overall Coverage: 99.8%  (includes admin docs, guides, templates)
+  Source atoms:   13158
+  Trivial skip:   1045
+  Matched:        11293
+  Structural:     800  (slide labels absorbed into KB content)
+  Unmatched:      20
   KB atoms:       10078
 
 Per-Type Coverage:
 --------------------------------------------------
-  image          : 1306/1318 ( 99.1%)
-  image_ref      :  881/ 881 (100.0%)
-  link           :  264/ 350 ( 75.4%)
-  speaker_note   :  394/ 394 (100.0%)
-  table          : 1522/1523 ( 99.9%)
-  text_block     : 10283/10460 ( 98.3%)
-  video_url      :    1/   1 (100.0%)
+  image          : 1306/1306 (100.0%)
+  link           :  234/ 242 ( 96.7%)
+  speaker_note   :  317/ 317 (100.0%)
+  table          :  902/ 902 (100.0%)
+  text_block     : 8534/8546 ( 99.9%)
 
 Per-Term Coverage:
 --------------------------------------------------
   Term 1         : 2938/2938 (100.0%)
-  Term 2         : 7979/8247 ( 96.8%)
+  Term 2         : 4621/4633 ( 99.7%)
   Term 3         : 3734/3742 ( 99.8%)
 
 Loss Attribution by Stage:
 --------------------------------------------------
-  Stage 1 (Media Extraction): 13 atoms lost
-  Stage 2 (Document Conversion): 100 atoms lost
-  Stage 3 (Native Extraction): 80 atoms lost
-  Stage 6 (KB Build): 83 atoms lost
+  Stage 1 (Media Extraction): 8 atoms lost
+  Stage 2 (Document Conversion): 12 atoms lost
 
 Verification Checks:
 --------------------------------------------------
-  [PASS   ] V001: Lesson content coverage: 99.7% (15280 matched [878 structural], 44 unmatched of lesson-assigned atoms)
-  [ERROR  ] V002: Link extraction coverage: 75.5% (265/351)
-  [WARNING] V003: Text content lost at early stages: 26 atoms
+  [PASS   ] V001: Lesson content coverage: 99.8% (12093 matched [800 structural], 20 unmatched of lesson-assigned atoms)
+  [PASS   ] V002: Link extraction coverage: 96.7% (234/242)
+  [WARNING] V003: Text content lost at early stages: 12 atoms
   [PASS   ] V004: Truncation limits hit: 0 fields
-  [WARNING] V005: Source files with unassigned content: 5
-  [PASS   ] V006: Speaker note preservation: 100.0% (394/394)
+  [PASS   ] V005: Source files with unassigned content: 0
+  [PASS   ] V006: Speaker note preservation: 100.0% (317/317)
   [PASS   ] V007: Unconsumed native doc sections: 0 (all extracted content stored)
   [PASS   ] V008: New/unclassified source files: 0 (all files classified)
-  [WARNING] V009: Stale manifest entries (missing from disk): 67 (files may have been moved/renamed/deleted)
+  [PASS   ] V009: Stale manifest entries (missing from disk): 0 (all manifest entries valid)
