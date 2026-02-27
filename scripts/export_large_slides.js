@@ -4,11 +4,15 @@
  * Bypasses the 10MB Drive API export limit by using UrlFetchApp,
  * which uses the same backend as the browser "Download as PPTX".
  *
+ * REQUIRES: Enable the "Drive API" Advanced Service:
+ *   1. In the Apps Script editor, click "Services" (+ icon) in the left sidebar
+ *   2. Find "Drive API" and click "Add"
+ *
  * SETUP:
  *   1. Go to https://script.google.com and create a new project
  *      Name it "Export Large Files"
  *   2. Paste this entire file into the editor
- *   3. Set EXPORTS_FOLDER_ID below (open folder in Drive, copy ID from URL)
+ *   3. Enable the Drive API Advanced Service (see above)
  *   4. Run setupDailyTrigger() ONCE — this will:
  *      - Ask for permissions (approve them)
  *      - Run the first export immediately
@@ -23,8 +27,7 @@
 
 /**
  * ID of the Drive folder where exported PPTX files will be saved.
- * Create a folder in your Drive and paste its ID here.
- * (The folder ID is the last part of the folder URL)
+ * Open the folder in Drive → copy the ID from the URL after /folders/
  */
 var EXPORTS_FOLDER_ID = "1_RDSSJXYMNBT3rw3Y3i8W9qmd9pyYY0n";
 
@@ -38,22 +41,24 @@ var SOURCE_FOLDERS = {
   "term3": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
 };
 
-/**
- * Minimum file size (in slides) to trigger export.
- * Files with fewer slides are small enough for the API export.
- * Set to 0 to export ALL native Slides files.
- */
-var MIN_SLIDES_FOR_EXPORT = 0;
-
 // ─── MAIN FUNCTIONS ─────────────────────────────────────
 
 /**
- * Export all large native Google Slides from source folders to PPTX.
+ * Export all native Google Slides from source folders to PPTX.
  * Safe to run multiple times — skips files already exported (unless modified).
  */
 function exportAllLargeSlides() {
-  var exportsFolder = DriveApp.getFolderById(EXPORTS_FOLDER_ID);
-  var existingExports = getExistingExports_(exportsFolder);
+  // Verify exports folder is accessible
+  try {
+    Drive.Files.get(EXPORTS_FOLDER_ID);
+  } catch (e) {
+    Logger.log("ERROR: Cannot access exports folder " + EXPORTS_FOLDER_ID);
+    Logger.log("Make sure the folder exists and you have access to it.");
+    Logger.log("Error: " + e.message);
+    return;
+  }
+
+  var existingExports = getExistingExports_();
 
   var totalExported = 0;
   var totalSkipped = 0;
@@ -66,8 +71,8 @@ function exportAllLargeSlides() {
     var nativeSlides = findNativeSlides_(folderId);
     Logger.log("  Found " + nativeSlides.length + " native Google Slides files");
 
-    // Create term subfolder in exports
-    var termFolder = getOrCreateSubfolder_(exportsFolder, termKey);
+    // Create or find term subfolder in exports
+    var termFolderId = getOrCreateSubfolder_(EXPORTS_FOLDER_ID, termKey);
 
     for (var i = 0; i < nativeSlides.length; i++) {
       var file = nativeSlides[i];
@@ -83,11 +88,11 @@ function exportAllLargeSlides() {
         }
         // Source was modified — delete old export and re-export
         Logger.log("  Re-exporting (modified): " + file.name);
-        DriveApp.getFileById(existing.exportFileId).setTrashed(true);
+        try { Drive.Files.remove(existing.exportFileId); } catch (e) { /* ignore */ }
       }
 
       try {
-        var result = exportSlideToPptx_(file, termFolder);
+        var result = exportSlideToPptx_(file, termFolderId);
         Logger.log("  Exported: " + file.name + " (" + formatBytes_(result.size) + ")");
         totalExported++;
       } catch (e) {
@@ -97,7 +102,7 @@ function exportAllLargeSlides() {
       }
 
       // Rate limiting — avoid quota exhaustion
-      Utilities.sleep(1000);
+      Utilities.sleep(2000);
     }
   }
 
@@ -123,26 +128,29 @@ function exportAllLargeSlides() {
  * Useful for debugging.
  */
 function listExports() {
-  var exportsFolder = DriveApp.getFolderById(EXPORTS_FOLDER_ID);
-  var files = exportsFolder.getFiles();
+  var response = Drive.Files.list({
+    q: "'" + EXPORTS_FOLDER_ID + "' in parents and trashed = false",
+    fields: "files(id,name,size,description,mimeType)",
+    pageSize: 100,
+  });
 
-  while (files.hasNext()) {
-    var file = files.next();
-    var desc = file.getDescription() || "";
-    Logger.log(file.getName() + " | " + formatBytes_(file.getSize()) + " | " + desc);
-  }
-
-  // Also check subfolders
-  var folders = exportsFolder.getFolders();
-  while (folders.hasNext()) {
-    var folder = folders.next();
-    Logger.log("\n--- " + folder.getName() + " ---");
-    var subFiles = folder.getFiles();
-    while (subFiles.hasNext()) {
-      var f = subFiles.next();
-      Logger.log(f.getName() + " | " + formatBytes_(f.getSize()) + " | " + (f.getDescription() || ""));
+  var files = response.files || [];
+  Logger.log("Root files: " + files.length);
+  files.forEach(function(f) {
+    if (f.mimeType === "application/vnd.google-apps.folder") {
+      Logger.log("\n--- Folder: " + f.name + " ---");
+      var subResp = Drive.Files.list({
+        q: "'" + f.id + "' in parents and trashed = false",
+        fields: "files(id,name,size,description)",
+        pageSize: 100,
+      });
+      (subResp.files || []).forEach(function(sf) {
+        Logger.log("  " + sf.name + " | " + formatBytes_(parseInt(sf.size || 0)) + " | " + (sf.description || "").substring(0, 50));
+      });
+    } else {
+      Logger.log(f.name + " | " + formatBytes_(parseInt(f.size || 0)) + " | " + (f.description || "").substring(0, 50));
     }
-  }
+  });
 }
 
 /**
@@ -176,27 +184,28 @@ function setupDailyTrigger() {
   exportAllLargeSlides();
 }
 
-
 /**
  * Clean up all exports (delete everything in the exports folder).
  * Run this if you want to force a full re-export.
  */
 function cleanExports() {
-  var exportsFolder = DriveApp.getFolderById(EXPORTS_FOLDER_ID);
+  var response = Drive.Files.list({
+    q: "'" + EXPORTS_FOLDER_ID + "' in parents and trashed = false",
+    fields: "files(id,name,mimeType)",
+    pageSize: 200,
+  });
 
-  // Delete files in root
-  var files = exportsFolder.getFiles();
-  while (files.hasNext()) {
-    files.next().setTrashed(true);
-  }
+  var files = response.files || [];
+  files.forEach(function(f) {
+    try {
+      Drive.Files.remove(f.id);
+      Logger.log("Deleted: " + f.name);
+    } catch (e) {
+      Logger.log("Could not delete " + f.name + ": " + e.message);
+    }
+  });
 
-  // Delete subfolders
-  var folders = exportsFolder.getFolders();
-  while (folders.hasNext()) {
-    folders.next().setTrashed(true);
-  }
-
-  Logger.log("Exports folder cleaned.");
+  Logger.log("Exports folder cleaned. Deleted " + files.length + " items.");
 }
 
 // ─── INTERNAL HELPERS ───────────────────────────────────
@@ -205,7 +214,7 @@ function cleanExports() {
  * Export a single Google Slides file to PPTX using UrlFetchApp.
  * This bypasses the 10MB API export limit.
  */
-function exportSlideToPptx_(fileInfo, destFolder) {
+function exportSlideToPptx_(fileInfo, destFolderId) {
   var exportUrl = "https://docs.google.com/presentation/d/" + fileInfo.id + "/export/pptx";
 
   var response = UrlFetchApp.fetch(exportUrl, {
@@ -224,49 +233,68 @@ function exportSlideToPptx_(fileInfo, destFolder) {
   blob.setName(fileName);
 
   // Save to Drive with metadata in description for pipeline to read
-  var exportedFile = destFolder.createFile(blob);
-  exportedFile.setDescription(JSON.stringify({
-    source_id: fileInfo.id,
-    source_name: fileInfo.name,
-    source_modified: fileInfo.modifiedTime,
-    exported_at: new Date().toISOString(),
-    folder_path: fileInfo.folderPath || "",
-  }));
+  var fileMetadata = {
+    name: fileName,
+    parents: [destFolderId],
+    description: JSON.stringify({
+      source_id: fileInfo.id,
+      source_name: fileInfo.name,
+      source_modified: fileInfo.modifiedTime,
+      exported_at: new Date().toISOString(),
+      folder_path: fileInfo.folderPath || "",
+    }),
+  };
+
+  var exportedFile = Drive.Files.create(fileMetadata, blob, {
+    supportsAllDrives: true,
+  });
 
   return {
-    exportFileId: exportedFile.getId(),
-    size: exportedFile.getSize(),
+    exportFileId: exportedFile.id,
+    size: parseInt(exportedFile.size || 0),
   };
 }
 
 /**
- * Recursively find all native Google Slides files in a folder.
+ * Find all native Google Slides files in a folder using Drive API.
+ * Uses Drive Advanced Service (works with shared folders you don't own).
  */
 function findNativeSlides_(folderId, folderPath) {
   folderPath = folderPath || "";
   var results = [];
-  var folder = DriveApp.getFolderById(folderId);
+  var pageToken = null;
 
-  // Find Google Slides files
-  var files = folder.getFilesByType(MimeType.GOOGLE_SLIDES);
-  while (files.hasNext()) {
-    var file = files.next();
-    results.push({
-      id: file.getId(),
-      name: file.getName(),
-      modifiedTime: file.getLastUpdated().toISOString(),
-      folderPath: folderPath,
+  do {
+    var response = Drive.Files.list({
+      q: "'" + folderId + "' in parents and trashed = false",
+      fields: "nextPageToken,files(id,name,mimeType,modifiedTime)",
+      pageSize: 200,
+      pageToken: pageToken,
+      supportsAllDrives: true,
+      includeItemsFromAllDrives: true,
     });
-  }
 
-  // Recurse into subfolders
-  var subfolders = folder.getFolders();
-  while (subfolders.hasNext()) {
-    var sub = subfolders.next();
-    var subPath = folderPath ? folderPath + "/" + sub.getName() : sub.getName();
-    var subResults = findNativeSlides_(sub.getId(), subPath);
-    results = results.concat(subResults);
-  }
+    var files = response.files || [];
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+
+      if (file.mimeType === "application/vnd.google-apps.folder") {
+        // Recurse into subfolder
+        var subPath = folderPath ? folderPath + "/" + file.name : file.name;
+        var subResults = findNativeSlides_(file.id, subPath);
+        results = results.concat(subResults);
+      } else if (file.mimeType === "application/vnd.google-apps.presentation") {
+        results.push({
+          id: file.id,
+          name: file.name,
+          modifiedTime: file.modifiedTime,
+          folderPath: folderPath,
+        });
+      }
+    }
+
+    pageToken = response.nextPageToken;
+  } while (pageToken);
 
   return results;
 }
@@ -274,45 +302,64 @@ function findNativeSlides_(folderId, folderPath) {
 /**
  * Build a map of existing exports: {sourceFileId: {exportFileId, sourceModified}}
  */
-function getExistingExports_(exportsFolder) {
+function getExistingExports_() {
   var map = {};
 
-  function scanFolder(folder) {
-    var files = folder.getFiles();
-    while (files.hasNext()) {
-      var file = files.next();
-      try {
-        var desc = JSON.parse(file.getDescription() || "{}");
-        if (desc.source_id) {
-          map[desc.source_id] = {
-            exportFileId: file.getId(),
-            sourceModified: desc.source_modified || "",
-          };
-        }
-      } catch (e) {
-        // Skip files without valid JSON description
-      }
-    }
+  function scanFolder(parentId) {
+    var response = Drive.Files.list({
+      q: "'" + parentId + "' in parents and trashed = false",
+      fields: "files(id,name,description,mimeType)",
+      pageSize: 200,
+    });
 
-    var subfolders = folder.getFolders();
-    while (subfolders.hasNext()) {
-      scanFolder(subfolders.next());
+    var files = response.files || [];
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+      if (file.mimeType === "application/vnd.google-apps.folder") {
+        scanFolder(file.id);
+      } else {
+        try {
+          var desc = JSON.parse(file.description || "{}");
+          if (desc.source_id) {
+            map[desc.source_id] = {
+              exportFileId: file.id,
+              sourceModified: desc.source_modified || "",
+            };
+          }
+        } catch (e) {
+          // Skip files without valid JSON description
+        }
+      }
     }
   }
 
-  scanFolder(exportsFolder);
+  scanFolder(EXPORTS_FOLDER_ID);
   return map;
 }
 
 /**
- * Get or create a subfolder by name.
+ * Get or create a subfolder by name using Drive API.
  */
-function getOrCreateSubfolder_(parentFolder, name) {
-  var folders = parentFolder.getFoldersByName(name);
-  if (folders.hasNext()) {
-    return folders.next();
+function getOrCreateSubfolder_(parentId, name) {
+  // Check if subfolder already exists
+  var response = Drive.Files.list({
+    q: "'" + parentId + "' in parents and name = '" + name + "' and mimeType = 'application/vnd.google-apps.folder' and trashed = false",
+    fields: "files(id)",
+    pageSize: 1,
+  });
+
+  if (response.files && response.files.length > 0) {
+    return response.files[0].id;
   }
-  return parentFolder.createFolder(name);
+
+  // Create new subfolder
+  var folderMetadata = {
+    name: name,
+    mimeType: "application/vnd.google-apps.folder",
+    parents: [parentId],
+  };
+  var folder = Drive.Files.create(folderMetadata);
+  return folder.id;
 }
 
 /**
