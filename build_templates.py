@@ -371,7 +371,7 @@ def run_build_templates():
     all_templates = drive_templates if drive_templates else local_templates
 
     if not all_templates:
-        print("\nNo template files found.")
+        print("\nNo template files found. Ensure assessment/rubric files exist in sources/.")
         return None
 
     # Group by term

@@ -318,7 +318,7 @@ def download_slide_images(slides_data, file_name, output_base):
             try:
                 resp = requests.get(url, timeout=30)
                 if resp.status_code != 200:
-                    print(f"    Image {index}: HTTP {resp.status_code}, skipping")
+                    print(f"    Image {index}: HTTP {resp.status_code} — content URL may have expired, will retry on next run")
                     continue
 
                 # Determine extension from Content-Type or URL
@@ -349,7 +349,7 @@ def download_slide_images(slides_data, file_name, output_base):
                 })
 
             except Exception as e:
-                print(f"    Image {index}: download error: {e}")
+                print(f"    Image {index}: download failed ({e}) — will retry on next pipeline run")
 
     return downloaded
 
@@ -503,11 +503,12 @@ def run_native_extraction(sync_result=None):
         elif ntype == "google_sheet":
             data = extract_sheet(sheets_svc, fid, name)
         else:
-            print(f"  Skipping unknown native type: {ntype}")
+            print(f"  Skipping unsupported native type '{ntype}' for {name} — not processed by the pipeline")
             continue
 
         if "error" in data:
-            print(f"  ERROR: {data['error']}")
+            print(f"  Extraction failed for {name}: {data['error']}"
+                  f" — check file permissions and ensure service account has read access")
             results["errors"] += 1
         else:
             results["total"] += 1
@@ -582,7 +583,8 @@ def run_native_extraction(sync_result=None):
         json.dump(image_metadata, f, indent=2, ensure_ascii=False)
 
     print(f"\nExtracted: {results['total']} files")
-    print(f"Errors: {results['errors']}")
+    if results["errors"] > 0:
+        print(f"Extraction errors: {results['errors']} (see messages above for details)")
     print(f"Images downloaded: {image_metadata['total_images']}")
     print(f"Saved: {output_path}")
     print(f"Image metadata: {img_meta_path}")

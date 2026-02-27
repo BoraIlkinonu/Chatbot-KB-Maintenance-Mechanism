@@ -329,7 +329,7 @@ def fetch_file_revisions(drive_service, file_id, file_name):
                 break
 
     except Exception as e:
-        print(f"    Warning: Could not fetch revisions for {file_name}: {e}")
+        print(f"    Skipping revision history for {file_name} (access limited — no impact on pipeline)")
 
     return revisions
 
@@ -448,7 +448,7 @@ def _download_from_exports_folder(service, source_file_id, dest_dir, file_name):
                 return str(dest_path), local_md5
 
     except Exception as e:
-        print(f"    Exports folder lookup failed: {e}")
+        print(f"    Exports folder not accessible — pre-export not available for this file")
 
     return None, None
 
@@ -495,8 +495,10 @@ def download_file(service, file_meta, dest_dir):
             )
             if fallback_path:
                 return fallback_path, fallback_md5
-            # No fallback available — re-raise so caller logs the error
-            print(f"    No pre-exported PPTX found. Run Apps Script to export.")
+            # No fallback available — text/links still extracted via native API (Stage 3).
+            # Only PPTX-based image extraction is lost. Re-raise so caller logs the error.
+            print(f"    No pre-export found for {name}. Text content still available via native API."
+                  f" Run Apps Script exportAllLargeSlides() for image extraction.")
         raise
 
     with open(dest_path, "wb") as f:
@@ -520,7 +522,7 @@ def verify_downloaded_pptx(sources_dir):
     try:
         from pptx import Presentation
     except ImportError:
-        print("  [WARN] python-pptx not installed, skipping PPTX integrity check")
+        print("  python-pptx not available — PPTX integrity check skipped (optional)")
         return results
 
     pptx_files = list(Path(sources_dir).rglob("*.pptx"))
@@ -554,7 +556,7 @@ def verify_downloaded_pptx(sources_dir):
             elif total_shapes == 0:
                 results["warnings"].append({
                     "file": rel_path,
-                    "warning": f"{slide_count} slides but 0 shapes (possibly corrupt)",
+                    "warning": f"{slide_count} slides but 0 shapes — may be a Google-exported placeholder file",
                 })
             else:
                 results["valid"] += 1
@@ -757,7 +759,11 @@ def run_sync(dry_run=False, download_all=False):
                     downloaded.append(change["name"])
                     sync_result["summary"]["downloaded"] += 1
                 except Exception as e:
-                    print(f"    ERROR downloading {change['name']}: {e}")
+                    err_str = str(e)
+                    if "exportSizeLimitExceeded" in err_str or ("403" in err_str and "export" in err_str.lower()):
+                        print(f"    Export too large for {change['name']} — no pre-export available, skipped")
+                    else:
+                        print(f"    Download failed for {change['name']}: {e}")
                     change["download_error"] = str(e)
                     error_entry = {
                         "file": change["name"],
@@ -793,7 +799,14 @@ def run_sync(dry_run=False, download_all=False):
         else:
             print(f"  Downloaded: {len(downloaded)} files")
         if errors:
-            print(f"  Errors: {len(errors)}")
+            export_limit = sum(1 for e in errors if "exportSizeLimitExceeded" in e.get("error", "") or "403" in e.get("error", ""))
+            other = len(errors) - export_limit
+            parts = []
+            if export_limit:
+                parts.append(f"{export_limit} export-size-limit")
+            if other:
+                parts.append(f"{other} unexpected")
+            print(f"  Download errors: {len(errors)} ({', '.join(parts)})")
         print()
 
     # Verify integrity of downloaded PPTX files

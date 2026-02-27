@@ -380,7 +380,8 @@ def run_conversion(source_dir=None):
             results["summary"]["success"] += 1
         else:
             results["summary"]["failed"] += 1
-            print(f"  ERROR: {error}")
+            print(f"  Conversion failed: {error}"
+                  f" — if this is a Google-exported file, native API extraction (Stage 3) provides the same content")
 
         results["summary"]["by_type"][label] = (
             results["summary"]["by_type"].get(label, 0) + 1

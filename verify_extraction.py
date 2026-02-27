@@ -231,7 +231,7 @@ def _send_slack_notification(result, checks, failed_checks):
         urllib.request.urlopen(req, timeout=10)
         print("Slack notification sent.")
     except Exception as e:
-        print(f"Slack notification failed: {e}")
+        print(f"Slack notification could not be sent: {e} — pipeline results are unaffected")
 
 
 def _generate_fix_suggestions(attributions, result):

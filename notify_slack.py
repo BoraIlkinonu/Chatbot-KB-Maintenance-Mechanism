@@ -18,7 +18,7 @@ def send_slack(message, blocks=None):
     """Send a message to Slack via webhook."""
     webhook = SLACK_WEBHOOK_URL or os.environ.get("SLACK_WEBHOOK_URL", "")
     if not webhook:
-        print("[Slack] No webhook URL configured. Skipping notification.")
+        print("[Slack] Notifications disabled (no SLACK_WEBHOOK_URL set)")
         return False
 
     try:
@@ -36,7 +36,7 @@ def send_slack(message, blocks=None):
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.status == 200
     except Exception as e:
-        print(f"[Slack] Error sending notification: {e}")
+        print(f"[Slack] Could not deliver notification: {e} — pipeline results are unaffected")
         return False
 
 
@@ -61,24 +61,39 @@ def notify_sync_complete(sync_summary, revision_count=0, download_errors=None):
         msg += f"\nRevision data fetched for {revision_count} changed files"
 
     if s["errors"] > 0 and download_errors:
-        msg += f"\n:rotating_light: *{s['errors']} download failure(s):*\n"
-        for err in download_errors[:15]:
-            term_label = _term_label(err.get("term", ""))
-            error_msg = err.get("error", "unknown error")
-            # Classify error type for clarity
-            if "403" in error_msg or "exportSizeLimitExceeded" in error_msg:
-                reason = "export too large — handled via Apps Script"
-            elif "404" in error_msg:
-                reason = "file not found"
-            elif "401" in error_msg:
-                reason = "auth error"
+        # Classify errors
+        export_too_large = []
+        other_errors = []
+        for err in download_errors:
+            error_msg = err.get("error", "")
+            if "exportSizeLimitExceeded" in error_msg or ("403" in error_msg and "export" in error_msg.lower()):
+                export_too_large.append(err)
             else:
-                reason = error_msg[:150]
-            msg += f"  • `{err['file']}` [{term_label}] — {reason}\n"
-        if len(download_errors) > 15:
-            msg += f"  _... +{len(download_errors) - 15} more_\n"
+                other_errors.append(err)
+
+        if export_too_large:
+            msg += (
+                f"\n:warning: *{len(export_too_large)} native Google Slides too large to export via API*\n"
+                f"_Apps Script pre-export was also not found for these files._\n"
+                f"_Action: run `exportAllLargeSlides()` in Apps Script, then re-run pipeline._\n"
+            )
+            for err in export_too_large[:15]:
+                term_label = _term_label(err.get("term", ""))
+                fp = err.get("folder_path", "")
+                display = f"{fp}/{err['file']}" if fp else err["file"]
+                msg += f"  • `{display}` [{term_label}]\n"
+            if len(export_too_large) > 15:
+                msg += f"  _... +{len(export_too_large) - 15} more_\n"
+
+        if other_errors:
+            msg += f"\n:rotating_light: *{len(other_errors)} unexpected download failure(s):*\n"
+            for err in other_errors[:10]:
+                term_label = _term_label(err.get("term", ""))
+                fp = err.get("folder_path", "")
+                display = f"{fp}/{err['file']}" if fp else err["file"]
+                msg += f"  • `{display}` [{term_label}] — {err.get('error', '')[:150]}\n"
     elif s["errors"] > 0:
-        msg += "\n:rotating_light: *Errors occurred during sync — check logs*"
+        msg += "\n:rotating_light: *Errors occurred during sync — see sync log JSON for error details (likely export-size-limit or permission issues)*"
 
     return send_slack(msg)
 

@@ -759,7 +759,7 @@ def run_consolidation():
     print("Checking for new source files...")
     new_files = detect_new_files()
     if new_files:
-        print(f"  ** {len(new_files)} NEW files detected (flagged as pending_review):")
+        print(f"  {len(new_files)} new source file(s) detected — added to file_manifest.json as pending_review:")
         for nf in new_files[:10]:
             print(f"     - {nf}")
         if len(new_files) > 10:
@@ -772,7 +772,7 @@ def run_consolidation():
     print("Checking for stale/missing files...")
     stale_files = detect_stale_files()
     if stale_files:
-        print(f"  !! {len(stale_files)} STALE files detected (in manifest but missing from disk):")
+        print(f"  {len(stale_files)} file(s) in manifest no longer found on disk:")
         for sf in stale_files[:10]:
             print(f"     - {sf}")
         if len(stale_files) > 10:

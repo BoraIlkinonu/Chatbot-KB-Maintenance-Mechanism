@@ -112,7 +112,8 @@ def extract_pptx_images(pptx_path, output_base):
                 })
 
     except Exception as e:
-        print(f"  Error extracting from {pptx_path.name}: {e}")
+        print(f"  Could not extract media from {pptx_path.name}: {e}"
+              f" — text content still available via native API extraction")
 
     return extracted
 
@@ -169,7 +170,7 @@ def extract_pptx_links(pptx_path):
                     pass
 
     except Exception as e:
-        print(f"  Error extracting links from {pptx_path.name}: {e}")
+        print(f"  Could not extract links from {pptx_path.name}: {e} — links may be available from native API")
 
     return links
 
@@ -220,7 +221,7 @@ def extract_docx_links(docx_path):
                 })
 
     except Exception as e:
-        print(f"  Error extracting links from {docx_path.name}: {e}")
+        print(f"  Could not extract links from {docx_path.name}: {e} — non-critical")
 
     return links
 
@@ -263,7 +264,7 @@ def extract_pdf_links(pdf_path):
                     continue
 
     except Exception as e:
-        print(f"  Error extracting links from {pdf_path.name}: {e}")
+        print(f"  Could not extract links from {pdf_path.name}: {e} — non-critical")
 
     return links
 

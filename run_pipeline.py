@@ -48,8 +48,49 @@ def run_stage(stage_num, sync_result=None):
         report = run_qa(layers=[1, 3, 4])
         return {"verdict": report.compute_verdict(), "exit_code": report.exit_code()}
     else:
-        print(f"Stage {stage_num} not implemented (Stage 4 is manual).")
+        print(f"Stage {stage_num} is not an automated pipeline stage.")
         return None
+
+
+def _write_sync_github_summary(summary, download_errors):
+    """Write sync results to GitHub step summary (CI only)."""
+    import os
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+
+    lines = ["## Sync Results\n"]
+    lines.append(f"| Metric | Count |")
+    lines.append(f"|--------|-------|")
+    lines.append(f"| Files scanned | {summary['total_files']} |")
+    lines.append(f"| New | {summary['new']} |")
+    lines.append(f"| Modified | {summary['modified']} |")
+    lines.append(f"| Downloaded | {summary['downloaded']} |")
+    lines.append(f"| Errors | {summary['errors']} |")
+    lines.append("")
+
+    if download_errors:
+        export_errors = [e for e in download_errors
+                         if "exportSizeLimitExceeded" in e.get("error", "") or "403" in e.get("error", "")]
+        other_errors = [e for e in download_errors if e not in export_errors]
+
+        if export_errors:
+            lines.append(f"### Export-size-limit failures ({len(export_errors)} files)")
+            lines.append("These native Google Slides exceed the 10MB export limit. "
+                         "The Apps Script pre-export fallback did not have a cached copy.")
+            lines.append("**Action:** Run `exportAllLargeSlides()` in Apps Script, then re-run pipeline.\n")
+            for err in export_errors:
+                lines.append(f"- `{err['file']}` [{err.get('term', '')}]")
+            lines.append("")
+
+        if other_errors:
+            lines.append(f"### Unexpected download failures ({len(other_errors)} files)")
+            for err in other_errors:
+                lines.append(f"- `{err['file']}` [{err.get('term', '')}] — {err.get('error', '')[:150]}")
+            lines.append("")
+
+    with open(summary_path, "a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
@@ -104,7 +145,8 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         elif not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync(download_all=download_all)
-            notify_sync_complete(sync_result["summary"], download_errors=sync_result.get("download_errors", []))
+            download_errors = sync_result.get("download_errors", [])
+            notify_sync_complete(sync_result["summary"], download_errors=download_errors)
             notify_revision_summary(sync_result.get("revision_history", {}))
 
             # Notify about activity
@@ -112,6 +154,9 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
 
             # Notify about PPTX integrity issues (errors/warnings only)
             notify_pptx_integrity(sync_result.get("integrity", {}))
+
+            # Write sync summary to GitHub step summary
+            _write_sync_github_summary(sync_result["summary"], download_errors)
         else:
             print("\n>>> STEP 1: Sync skipped (using latest log)\n")
             logs = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)

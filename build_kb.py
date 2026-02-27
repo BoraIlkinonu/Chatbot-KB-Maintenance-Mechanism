@@ -1809,7 +1809,8 @@ def run_build(term_num=None):
             if combined:
                 terms_to_build = sorted(int(t) for t in combined.get("by_term", {}).keys())
             else:
-                print("No consolidated content found. Run consolidate.py first.")
+                print("No consolidated content found. If running standalone, run consolidate.py first."
+                      " In pipeline mode, this means Stage 5 failed.")
                 return None
 
     if not terms_to_build:
@@ -1828,13 +1829,13 @@ def run_build(term_num=None):
         else:
             combined = _load_combined()
             if not combined:
-                print(f"  No consolidated data found for Term {t}, skipping.")
+                print(f"  No consolidated data for Term {t} — this term may not have been synced yet. Skipping.")
                 continue
             term_data = combined.get("by_term", {}).get(str(t), {})
             term_lessons = term_data.get("by_lesson", {})
 
         if not term_lessons:
-            print(f"  No lesson data found for Term {t}, skipping.")
+            print(f"  No lesson data for Term {t} — no lesson-assignable files found. Skipping.")
             continue
 
         # Determine max lesson from actual data — no hard-coded cap
