@@ -1,20 +1,14 @@
 """
-Dual-judge consensus: two independent LLM calls must agree.
+Dual-judge consensus: two independent LLM calls must agree on ALL fields.
 
-Relaxed consensus: Tier 1 fields must agree; Tier 2/3 accept
-first judge's verdict on disagreement (reduces retry cost).
+Both judges evaluate independently. Consensus requires agreement across
+all 20 fields (Tier 1, 2, and 3). Up to 5 retry attempts.
 """
 
 import json
 import time
 
 from validation.dual_judge.client import CliClient, SdkClient
-
-# Field tiers for consensus checking
-TIER1_FIELDS = {
-    "lesson_title", "learning_objectives", "description_of_activities",
-    "core_topics", "teacher_notes", "slides", "videos", "resources",
-}
 
 ALL_FIELDS = [
     "lesson_title", "learning_objectives", "description_of_activities",
@@ -27,7 +21,7 @@ ALL_FIELDS = [
 
 
 class DualJudge:
-    """Two independent LLM calls with consensus checking."""
+    """Two independent LLM calls with full consensus checking."""
 
     def __init__(self, client: CliClient | SdkClient):
         self.client = client
@@ -53,18 +47,17 @@ class DualJudge:
                     results.append(fallback)
                 time.sleep(0.5)  # Avoid rate limits
 
-            # Check Tier 1 consensus (relaxed: only critical fields must agree)
-            tier1_agree = True
+            # Check consensus: ALL fields must agree between both judges
+            all_agree = True
             votes = {}
             for field in ALL_FIELDS:
                 v1 = results[0].get(field, {}).get("verdict", "")
                 v2 = results[1].get(field, {}).get("verdict", "")
                 votes[field] = [v1, v2]
-                if field in TIER1_FIELDS and v1 != v2:
-                    tier1_agree = False
+                if v1 != v2:
+                    all_agree = False
 
-            if tier1_agree:
-                # Consensus reached — use judge 1's verdicts (they agree on Tier 1)
+            if all_agree:
                 merged = results[0].copy()
                 merged["_consensus"] = True
                 merged["_attempt"] = attempt
