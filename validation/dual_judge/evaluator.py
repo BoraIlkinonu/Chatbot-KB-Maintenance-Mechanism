@@ -21,9 +21,10 @@ def _load_prompt_template() -> str:
     return prompt_path.read_text(encoding="utf-8")
 
 
-def _load_kb(term: int) -> dict:
+def _load_kb(term: int, kb_dir: Path | None = None) -> dict:
     """Load a term's KB JSON file."""
-    kb_path = OUTPUT_DIR / f"Term {term} - Lesson Based Structure.json"
+    base = kb_dir or OUTPUT_DIR
+    kb_path = base / f"Term {term} - Lesson Based Structure.json"
     if not kb_path.exists():
         return {}
     return json.loads(kb_path.read_text(encoding="utf-8"))
@@ -58,11 +59,11 @@ def _format_kb_entry(lesson: dict) -> str:
     return json.dumps(entry, indent=2, ensure_ascii=False)
 
 
-def _build_all_lessons(terms: list[int]) -> list[dict]:
+def _build_all_lessons(terms: list[int], kb_dir: Path | None = None) -> list[dict]:
     """Build a flat list of all lesson dicts with term/lesson metadata."""
     all_lessons = []
     for term in terms:
-        kb = _load_kb(term)
+        kb = _load_kb(term, kb_dir=kb_dir)
         if not kb:
             continue
         lessons = kb.get("lessons", [])
@@ -86,6 +87,7 @@ def run_dual_judge_validation(
     seed: int | None = None,
     budget: int = 60,
     verbose: bool = False,
+    kb_dir: Path | None = None,
 ) -> DualJudgeReport:
     """Run dual-LLM judge validation on KB output.
 
@@ -96,6 +98,7 @@ def run_dual_judge_validation(
         seed: Random seed for reproducible sampling
         budget: Maximum LLM calls allowed
         verbose: Print progress to stdout
+        kb_dir: Path to KB output directory (default: OUTPUT_DIR from config)
 
     Returns:
         DualJudgeReport with scores, verdicts, and failure details
@@ -117,7 +120,9 @@ def run_dual_judge_validation(
         print(f"  Backend: {backend_name}")
 
     # Load all lessons across terms
-    all_lessons = _build_all_lessons(terms)
+    if kb_dir and verbose:
+        print(f"  KB dir: {kb_dir}")
+    all_lessons = _build_all_lessons(terms, kb_dir=kb_dir)
     report.total_lessons = len(all_lessons)
 
     if verbose:

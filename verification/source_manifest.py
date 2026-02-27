@@ -64,6 +64,12 @@ def _iter_shapes_recursive(shapes):
             yield from _iter_shapes_recursive(shape.shapes)
 
 
+def _is_internal_pptx_link(url):
+    """Check if a URL is an internal PPTX slide-to-slide navigation reference.
+    These look like 'slide10.xml' and are not real external URLs."""
+    return bool(re.match(r"slide\d+\.xml$", url, re.IGNORECASE))
+
+
 def _extract_pptx_atoms(pptx_path, rel_path, term, lessons):
     """Extract all ContentAtoms from a PPTX file."""
     atoms = []
@@ -84,7 +90,9 @@ def _extract_pptx_atoms(pptx_path, rel_path, term, lessons):
             if shape.has_text_frame:
                 for para_idx, para in enumerate(shape.text_frame.paragraphs):
                     para_text = para.text.strip()
-                    if para_text:
+                    # Skip trivially short text (< 10 chars) — matches
+                    # stage attribution filters so coverage is consistent
+                    if para_text and len(para_text) >= 10:
                         for lesson in _lesson_iter(lessons):
                             atoms.append(ContentAtom(
                                 atom_type="text_block",
@@ -101,6 +109,9 @@ def _extract_pptx_atoms(pptx_path, rel_path, term, lessons):
                         try:
                             if run.hyperlink and run.hyperlink.address:
                                 url = run.hyperlink.address
+                                # Skip internal PPTX slide-to-slide navigation links
+                                if _is_internal_pptx_link(url):
+                                    continue
                                 for lesson in _lesson_iter(lessons):
                                     atoms.append(ContentAtom(
                                         atom_type="link",
@@ -169,10 +180,13 @@ def _extract_pptx_atoms(pptx_path, rel_path, term, lessons):
                 for run in para.runs:
                     try:
                         if run.hyperlink and run.hyperlink.address:
+                            url = run.hyperlink.address
+                            if _is_internal_pptx_link(url):
+                                continue
                             for lesson in _lesson_iter(lessons):
                                 atoms.append(ContentAtom(
                                     atom_type="link",
-                                    content=run.hyperlink.address,
+                                    content=url,
                                     source_file=rel_path,
                                     location=f"{location_prefix}:notes_hyperlink",
                                     term=term,

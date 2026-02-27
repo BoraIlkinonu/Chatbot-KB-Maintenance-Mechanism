@@ -50,11 +50,17 @@ def main():
         "--json", action="store_true", dest="json_output",
         help="Print JSON report to stdout",
     )
+    parser.add_argument(
+        "--kb-dir", type=str, default=None,
+        help="Path to KB output directory (default: output/ from config)",
+    )
 
     args = parser.parse_args()
 
+    from pathlib import Path
     from validation.dual_judge import run_dual_judge_validation
 
+    kb_dir = Path(args.kb_dir) if args.kb_dir else None
     report = run_dual_judge_validation(
         terms=args.terms,
         sample_rate=args.sample_rate,
@@ -62,6 +68,7 @@ def main():
         seed=args.seed,
         budget=args.budget,
         verbose=args.verbose,
+        kb_dir=kb_dir,
     )
 
     if args.json_output:
