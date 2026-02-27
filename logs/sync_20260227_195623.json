@@ -1,7 +1,10 @@
 {
-  "scan_timestamp": "2026-02-27T19:49:55.504102+00:00",
+  "sync_timestamp": "2026-02-27T19:49:55.504102+00:00",
+  "dry_run": false,
   "terms": {
     "term1": {
+      "folder_id": "17s13FlHGkaNPPlf3jAUY0tSza2yxHqPe",
+      "folder_name": "Term 1 - Foundations",
       "files": [
         {
           "id": "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o",
@@ -24,7 +27,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Administrative/Explorers Programme Curriculum Specifications Term 1.docx",
+          "local_md5": "6f18372aae60d48a36fb8595fd89ca9b"
         },
         {
           "id": "1ZIMPwxP_-TN8siD8M_cUL5_l6RwvF0hMF6oXRTlQ3Gk",
@@ -47,7 +53,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Administrative/IB Wrapper Design Curriciulum Mapping.pptx",
+          "local_md5": "b76aaccafb461f7abbad20148321ac62"
         },
         {
           "id": "1nsaONtImqRtK3UOqNNIzWPe7SMtpNr9B",
@@ -70,7 +79,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Feedback & Surveys/Feedback Forms.docx",
+          "local_md5": "bdd99d0a53426b52d9853f9800659106"
         },
         {
           "id": "19g2fpX2kAoX8O8JAq8GmE_I8aQ3Uzof1",
@@ -93,7 +105,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 1.pptx",
+          "local_md5": "8b76f362275840f1c5c99ad5ee857ce7"
         },
         {
           "id": "1C6KBsx8QysfS4GGTF-37PSjOL0h4O-gn",
@@ -116,7 +131,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 10.pptx",
+          "local_md5": "849d97f38c307cbb932815d09f7d5688"
         },
         {
           "id": "1r8eY6Um-C4qLe9NrL2LIRfSWWEEKbQOO",
@@ -139,7 +157,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 11.pptx",
+          "local_md5": "350dac0cd1fd2539847ab09379e4dfaf"
         },
         {
           "id": "1fOmEqwdoxkntuofYQxZKi-K42JdAmyAA",
@@ -162,7 +183,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 12.pptx",
+          "local_md5": "0e3a7d99d8ea97c56837bc579d45479a"
         },
         {
           "id": "1DGEHyvh7o7dHd2BHmbHMTfbIUCE6FHI7",
@@ -185,7 +209,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 13.pptx",
+          "local_md5": "da6ff9ba8cf4e1c1f3426974d4601edc"
         },
         {
           "id": "1GH-JopTSxUEV4vCnePb68EVvjt1Q2z-j",
@@ -208,7 +235,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 14.pptx",
+          "local_md5": "c45628087d23fa46c924d70b1050277d"
         },
         {
           "id": "1FfKPmrRUoHHQDi15SiI8x1RsRWZmWD26",
@@ -231,7 +261,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 15.pptx",
+          "local_md5": "a0cf3b94913f8b42eb7b14b29d8b12c7"
         },
         {
           "id": "1wDqEBeFnPPvdaAAm370crHl8j3EwBsUf",
@@ -254,7 +287,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 16.pptx",
+          "local_md5": "b275766e5cb62401818e2785a4dff8c3"
         },
         {
           "id": "1GRX20oIM281xkugb63kQE_m8sXW3Q-12",
@@ -277,7 +313,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 17.pptx",
+          "local_md5": "aac159afa5928890707e0bc11f6a71d8"
         },
         {
           "id": "1hK0Miyd2xxlffrO0tcLZkM8cMGAW6gEi",
@@ -300,7 +339,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 18.pptx",
+          "local_md5": "bf7ed8901f3718c4f2df7bedc1b8f21d"
         },
         {
           "id": "1KVdl6fLCcZKxVADOVfmVGjeWoZ0Lmcui",
@@ -323,7 +365,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 19.pptx",
+          "local_md5": "da66f38afcf9484e80cef12f592c5a0f"
         },
         {
           "id": "1mIzlML2mE0y43b1zJIIVWgbkE5waWsNQ",
@@ -346,7 +391,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 2.pptx",
+          "local_md5": "bedb90dcba28cae2947049368040b0b5"
         },
         {
           "id": "10kf7Jm1k3d_uXWUxbFKiivW7NL94RDKh",
@@ -369,7 +417,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 20.pptx",
+          "local_md5": "c2406e48cefdf454249b440709d32b4a"
         },
         {
           "id": "13Vs-tnHCFsyorBMc__-tmIMP6cBSyRur",
@@ -392,7 +443,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 21.pptx",
+          "local_md5": "e22882ea03e82d11ba4a52f33dca01ac"
         },
         {
           "id": "1Me55EGsVMboq4RJU0DtMdsloUnDj7fcW",
@@ -415,7 +469,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 22.pptx",
+          "local_md5": "4cee56e12331931a77609325648a5f15"
         },
         {
           "id": "1263vGdjxaXodHr-QYKncpd5DcbUNnU1F",
@@ -438,7 +495,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 3.pptx",
+          "local_md5": "ba38cc07d8c246f24e531fc346209fa7"
         },
         {
           "id": "1Fxlf6Oy7WtMOecZ78_CUShJEaUKRk3VM",
@@ -461,7 +521,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 4.pptx",
+          "local_md5": "7321cbc0df2440dc27c4a6fceb071ec7"
         },
         {
           "id": "16vBfpjlKgrVTHG3CRUZwkPUCSB1JtX9o",
@@ -484,7 +547,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 5.pptx",
+          "local_md5": "b830d5b66103c1e3dff527ac2526b243"
         },
         {
           "id": "1WN4YIEfwueEKKd6TD5Ghm0qUdDgCum1Y",
@@ -507,7 +573,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 6.pptx",
+          "local_md5": "b67c232ca2278da55e0c12d1592ce689"
         },
         {
           "id": "1aE18bYIGbNrc7thQVpICQYdpYiZFu69v",
@@ -530,7 +599,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 7.pptx",
+          "local_md5": "64d9d4cc63e4fce2aa0cbe6efb8ac697"
         },
         {
           "id": "1-P43q5sMtQC8mdM1rO4WmgDR5Yo7HFTq",
@@ -553,7 +625,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 8.pptx",
+          "local_md5": "7374ff20d1aac5e5556f023b3d7dff86"
         },
         {
           "id": "1KgBi71b3PysRlgATfUAEgOm_pi7IbgMR",
@@ -576,7 +651,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 9.pptx",
+          "local_md5": "efdc5528b28aa0c5f457786c7984ec88"
         },
         {
           "id": "1BCR37kL-fYF4Hlox2XWyU-mIKP6J_fk3M9QFJkP6Se8",
@@ -599,7 +677,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Student Assessment Templates/Students Assesment Templates .docx",
+          "local_md5": "7ea094d178b6d28e22e098dca3e39008"
         },
         {
           "id": "1Oho2QN9LhJiWGP3nVp3HFlT38ungb_uFP3FVbsAor0o",
@@ -622,7 +703,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_sheet"
+          "native_type": "google_sheet",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Student Assessment Templates/Students Master Checklist.xlsx",
+          "local_md5": "0dc2da75c99823bad5016fb0a38fda16"
         },
         {
           "id": "1oEBUbOc2XCukS1cn-akM63jUk6XZw2WEChOg7I_-HWA",
@@ -645,7 +729,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.docx",
+          "local_md5": "976c50964fec5af0076a99a080d584e8"
         },
         {
           "id": "1xsBH0v1e0PU7Ky5flxqJ8L6O-2tUKA4c",
@@ -668,7 +755,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Student Assessment Templates/Students Master Checklist - V1.pdf",
+          "local_md5": "7732e7812bc131fcee86489c1f682f42"
         },
         {
           "id": "1G6g_GQeeuYr6P5uvlQgL3sSmtNBU-FRp",
@@ -691,7 +781,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Lessons Resources/Student Assessment Templates/US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+          "local_md5": "3525fa102ce4c0466bd69fd203663460"
         },
         {
           "id": "1VW0lfxVtROjxIRLwIX5ideFg2KrMyb99l-q_YEyDa20",
@@ -714,7 +807,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Programme Overview/Canva File Link/Endstar Term 2 Overview.docx",
+          "local_md5": "6217679ec549ef783474825cdf042845"
         },
         {
           "id": "13Xxo0z5GuUfu5WWQOyEFHHseqhkO3-Gr",
@@ -737,7 +833,10 @@
           "owner_email": "goldlucks.og@gmail.com",
           "owner_name": "goldlucks.og",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Programme Overview/Explorer's Programme Overview.pdf",
+          "local_md5": "193ee40cd56a794412ddab793fd6bc09"
         },
         {
           "id": "1QjihhK2Pj9xm1LHS0F4BqX1LOuRLd-_9g7mj1yya9pg",
@@ -760,7 +859,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Programme Overview/Learning Outcomes - Jan 2026 Cohort.docx",
+          "local_md5": "e25279a28c307072df3d8dca69a3c84b"
         },
         {
           "id": "11eKeEqldn6-HGN-gsofW93l-80sE6LQy",
@@ -783,7 +885,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Programme Overview/Teacher Training - Explorer Programme.pdf",
+          "local_md5": "8993165e2767240911324fcb12ca87f5"
         },
         {
           "id": "1uQsHLrRZq3a79ktzPYRS2JWRVNgBLXkP",
@@ -806,7 +911,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Quick Access Links/Troubleshooting Guide/Endstar Troubleshooting.pdf",
+          "local_md5": "ee4e0eaa9b4a989976800067c60db23f"
         },
         {
           "id": "1J1lzRFmLyT-S8aDwSGcAhfRxWDk5GlFN",
@@ -829,7 +937,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Quick Access Links/Curriculum Overview - Canva Link.docx",
+          "local_md5": "1d45f3e4ba0d986fd056f9ed569c4b98"
         },
         {
           "id": "1dXizd8jEYXSSYNGEzJM1DiI49Eb0DSDaOZfd5JClY7g",
@@ -852,7 +963,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Showcase & Deliverables/Pitch and Student Rubric links.docx",
+          "local_md5": "70a662b64a7c16e3fbd2b93c7f894f42"
         },
         {
           "id": "1a715pT-di1BqrCu8cc8c5pOONFkqlomE",
@@ -875,7 +989,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Exemplar Workbook/Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+          "local_md5": "b076f3e4403956974874c65caeee5e56"
         },
         {
           "id": "101wtzms8ohIyOy9hJ7hf4cfG1Fb9tx20",
@@ -898,7 +1015,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Exemplar Workbook/Explorers Programme - January 2026 - Abderrahmane.pdf",
+          "local_md5": "3fe2008deb8396a5634dfcf2bb03a359"
         },
         {
           "id": "1iF_c9uAbOyB_YwgQSSILojPiGXdYxZT0PVuYy_e7-M4",
@@ -921,7 +1041,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Endstar Level Design - Teacher Rubric.docx",
+          "local_md5": "6f5df9b3201a66737017a1621f781fc1"
         },
         {
           "id": "158D0r5iAlLH2jm0lxCk83MpJDrqD-cMWb6gf-dKr2lk",
@@ -944,7 +1067,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/ENDSTAR LEVEL DESIGN STUDENT GUIDE.docx",
+          "local_md5": "cb61a669c33e325d3c568f1d4e46c722"
         },
         {
           "id": "19wCPZtWhOKE2AJsXPFJ9s5i1ZjxAFxzY",
@@ -967,7 +1093,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Endstar Setup Guide.pdf",
+          "local_md5": "dd800945123a64700c0d568bea0f6a77"
         },
         {
           "id": "133pcu41topR7D5NRTAJ_K-X6_rKjurlx",
@@ -990,7 +1119,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Endstar Troubleshooting V1.pdf",
+          "local_md5": "ee4e0eaa9b4a989976800067c60db23f"
         },
         {
           "id": "13Tu47gYkJJ0ZNWeHkGdKj9FdQTtcK6m0",
@@ -1013,7 +1145,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Learning Schedule Explorers Programme Jan Cohort 2025_26.xlsx",
+          "local_md5": "684c4f1349f33b9db97cf6b228fc3427"
         },
         {
           "id": "10Ja93oTAc_Sjdt8BhWfvCQ_H7gtPu8Z9OD5BahHSqk4",
@@ -1036,7 +1171,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_sheet"
+          "native_type": "google_sheet",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Teacher Resources/Mubarak Bin Mohammad Learning Schedule.xlsx",
+          "local_md5": "585137869bd7f195225a3d93fdb68d07"
         },
         {
           "id": "1tLwMqQn0y9RPLSFzn-Uik40kCxXezplX",
@@ -1059,7 +1197,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Technical Support/Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+          "local_md5": "11de5f4120c4ff0f42d9b77a81a27803"
         },
         {
           "id": "1hAcNKueIEN4pgV1h99ov6kPeYRYj6ztW",
@@ -1082,7 +1223,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Technical Support/Endstar Setup Guide.pdf",
+          "local_md5": "dd800945123a64700c0d568bea0f6a77"
         },
         {
           "id": "1EBASx0gEaMz7BcVwP5NE0MYgEdqhbWmd",
@@ -1105,7 +1249,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Technical Support/Endstar Troubleshooting.pdf",
+          "local_md5": "ee4e0eaa9b4a989976800067c60db23f"
         },
         {
           "id": "1cxfhtOTdvOcLBbpqbGLuEuBFTk0-BGVN",
@@ -1128,11 +1275,68 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term1/Technical Support/School AI Login & Space Access.mov",
+          "local_md5": "3b6fd669d5625fc737806e159c17d4f1"
         }
-      ]
+      ],
+      "downloaded": [
+        "Explorers Programme Curriculum Specifications Term 1",
+        "IB Wrapper Design Curriciulum Mapping",
+        "Feedback Forms.docx",
+        "Explorer's Programme - Lesson 1.pptx",
+        "Explorer's Programme - Lesson 10.pptx",
+        "Explorer's Programme - Lesson 11.pptx",
+        "Explorer's Programme - Lesson 12.pptx",
+        "Explorer's Programme - Lesson 13.pptx",
+        "Explorer's Programme - Lesson 14.pptx",
+        "Explorer's Programme - Lesson 15.pptx",
+        "Explorer's Programme - Lesson 16.pptx",
+        "Explorer's Programme - Lesson 17.pptx",
+        "Explorer's Programme - Lesson 18.pptx",
+        "Explorer's Programme - Lesson 19.pptx",
+        "Explorer's Programme - Lesson 2.pptx",
+        "Explorer's Programme - Lesson 20.pptx",
+        "Explorer's Programme - Lesson 21.pptx",
+        "Explorer's Programme - Lesson 22.pptx",
+        "Explorer's Programme - Lesson 3.pptx",
+        "Explorer's Programme - Lesson 4.pptx",
+        "Explorer's Programme - Lesson 5.pptx",
+        "Explorer's Programme - Lesson 6.pptx",
+        "Explorer's Programme - Lesson 7.pptx",
+        "Explorer's Programme - Lesson 8.pptx",
+        "Explorer's Programme - Lesson 9.pptx",
+        "Students Assesment Templates ",
+        "Students Master Checklist",
+        "Students Master Checklist - V1",
+        "Students Master Checklist - V1.pdf",
+        "US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations).pdf",
+        "Endstar Term 2 Overview",
+        "Explorer's Programme Overview.pdf",
+        "Learning Outcomes - Jan 2026 Cohort",
+        "Teacher Training - Explorer Programme.pdf",
+        "Endstar Troubleshooting.pdf",
+        "Curriculum Overview - Canva Link.docx",
+        "Pitch and Student Rubric links",
+        "Explorers Programme - January 2026 - Abderrahmane No Answer Key.pdf",
+        "Explorers Programme - January 2026 - Abderrahmane.pdf",
+        "Endstar Level Design - Teacher Rubric",
+        "ENDSTAR LEVEL DESIGN STUDENT GUIDE",
+        "Endstar Setup Guide.pdf",
+        "Endstar Troubleshooting V1.pdf",
+        "Learning Schedule Explorers Programme Jan Cohort 2025_26.xlsx",
+        "Mubarak Bin Mohammad Learning Schedule",
+        "Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+        "Endstar Setup Guide.pdf",
+        "Endstar Troubleshooting.pdf",
+        "School AI Login & Space Access.mov"
+      ],
+      "errors": []
     },
     "term2": {
+      "folder_id": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
+      "folder_name": "Term 2 - Accelerator",
       "files": [
         {
           "id": "1oxW7t5J2b44B5c3Yg3fnpIqjPGYi6Yqy",
@@ -1155,7 +1359,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 1/Exampler Work - Lesson 1 -2.pptx",
+          "local_md5": "edb0d1ccee34ad982b79b22684daf10d"
         },
         {
           "id": "1zhMjUhFWC_swsC344_7KA_0ycUO3SnSR",
@@ -1178,7 +1385,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 2/Designing_Restoring_Light.mp4",
+          "local_md5": "b9598966985d6b572aaf8ddf4eda5607"
         },
         {
           "id": "1rCR0jVGEDMBvCXDLERFZ52Z5LRkitzRUktc_Mb6M_II",
@@ -1201,7 +1411,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 2/Exampler Work - Lesson 3-4.pptx",
+          "local_md5": "9088dc01df06e06e0771355c25accf34"
         },
         {
           "id": "1zAfC4Iu6EFL_JXz9of0IFT5aeSgFsZekp1lvpd6HMEQ",
@@ -1224,7 +1437,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 3/Exampler Work - Lesson 5-6 .pptx",
+          "local_md5": "ec11797a60ef451a5d9002c255fc7b86"
         },
         {
           "id": "16WlHyyn1KLNVvqwDBicUSSH5KWZ5Gdkdb7l5ygsSSFM",
@@ -1247,7 +1463,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 4/Exampler Work - Lesson 7-8.pptx",
+          "local_md5": "ac4b26dae13b9b31b4830821b89ba640"
         },
         {
           "id": "1-n-UBklBHQupX0ydLBRFX2Gb3bXJxR_6OY7FyILydxk",
@@ -1270,7 +1489,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 5/Exampler Work - Lesson 9-10.pptx",
+          "local_md5": "a969a17c57f8106d76a22fac33c1816b"
         },
         {
           "id": "1_4Qn7N0nKMOvB_HVVfqEc2sb613W1PG-fHkCtfg-oag",
@@ -1293,7 +1515,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Exampler Work - Lesson 11-12 .pptx",
+          "local_md5": "3814168d8504db5e602d0c714e358315"
         },
         {
           "id": "1WCd5jhVvtkto0b3XmdS3hX-OJIhIXeeB",
@@ -1316,7 +1541,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Light_of_the_Mosque.mp4",
+          "local_md5": "573ff94f9ccf99d135745e6bbf2b458b"
         },
         {
           "id": "1PbKFmxqT8tqu4LNMxz0oMSTPUSTM9r6l",
@@ -1339,7 +1567,10 @@
           "owner_email": "tilkinonu@endlessstudios.com",
           "owner_name": "T. Bora Ilkinonu",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/The_Unseen_Hero.mp4",
+          "local_md5": "d0659f615f80ecd4506bc7e5753a1715"
         },
         {
           "id": "1vi0xvAu0yUm2N-1T-MVCjLA0t_rQUB3W",
@@ -1362,7 +1593,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+          "local_md5": "400b28358ec58e4d512cad12fa1043cc"
         },
         {
           "id": "1Bn_NXHHKlDYysYGSYiWri6zZboCl-XYD",
@@ -1385,7 +1619,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Student Guide/TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+          "local_md5": "8d1c12f1c13ed6a163f1ce6ba501025e"
         },
         {
           "id": "1hmBnbclCY8MqnzJRkRzPFTK-QG--vAmmB3F7oahtAoA",
@@ -1408,7 +1645,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+          "local_md5": "e80a90e522e003ab835d87e68ab1b4d5"
         },
         {
           "id": "1UCrRlI20eB1ou-PHL6dzgACUk8lBdbQL",
@@ -1431,7 +1671,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+          "local_md5": "6686c0e20ea817984012f473f8eb21c7"
         },
         {
           "id": "1T6zYPcZ8zR_shuEKg9gtAAvXbkkHPArt",
@@ -1454,7 +1697,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Alignment/US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+          "local_md5": "673c882a7ba96120b866d06ef4520ad7"
         },
         {
           "id": "1BNkzUduOInmvXpaWvKzplqn5O-MGqtsM",
@@ -1477,7 +1723,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/LO's and Success Criteria/Term-2LOsSC-and-AI-KS.pdf",
+          "local_md5": "5c2831c806c125af1c124b753aa0af45"
         },
         {
           "id": "1QZzpI1wQvpecw64AgjDzfyRLGzulL0Re",
@@ -1500,7 +1749,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 1.docx",
+          "local_md5": "1c95a4870ac5cb20b7e017864d0e1df9"
         },
         {
           "id": "1zscQBb4o-plB8ER8OwsN-DI1CIHyjQlQ",
@@ -1523,7 +1775,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 2.docx",
+          "local_md5": "6820a6e682483479c4d7d1983dc83f75"
         },
         {
           "id": "1cip_tc4ZVdNjl_x0TEIrP9IW4ShGeiMm",
@@ -1546,7 +1801,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Students Slides/Lesson 1",
+          "local_md5": "4a38fa71982f7c04b56c37d80e7cf71a"
         },
         {
           "id": "1Q-U5KIoUtdAaI5RM0EcTOdKwoFy415Pi",
@@ -1569,7 +1827,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Students Slides/Lesson 2",
+          "local_md5": "770b3236c8548d47bd494b1a09e7deef"
         },
         {
           "id": "1Jrw7MCq0Sr59NxoCC1Y_zaRrYobQGuAh",
@@ -1592,7 +1853,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 1 .pptx",
+          "local_md5": "416a0a5798df7154c7726e6b7db01452"
         },
         {
           "id": "1gA4yxYHFTheYxgxRPK9c2aK5ystqPvkG",
@@ -1615,7 +1879,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 2.pptx",
+          "local_md5": "4c6dea33316ba6d566af5b4a2e4608d6"
         },
         {
           "id": "1cmZ47axRHmfFIzQJV7-66JaMHDzPMKuHWkeCrpDg4EE",
@@ -1638,7 +1905,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 3.docx",
+          "local_md5": "2c1ce3373181015798fc68b6983d3607"
         },
         {
           "id": "1JuEN5IxaHs7I1Se42uko8oUKMBmgssXd8skNcNDYII0",
@@ -1661,7 +1931,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 4.docx",
+          "local_md5": "eb5761308235147b780b1c7f3e573709"
         },
         {
           "id": "1pwtaqQnVgHLfluIHBJcT2oWDO1XYywdCBdiMRMs1xY0",
@@ -1684,7 +1957,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx",
+          "local_md5": "6e56a73cb50743cbee42f4731e4dbbb0"
         },
         {
           "id": "1qYyW20fxgglj6MMIVQeQDlOeATjCui4iuVYBH1edmEc",
@@ -1707,7 +1983,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4.pptx",
+          "local_md5": "034cdf559690a26c0e517b6971efa3d9"
         },
         {
           "id": "1qTbpTagXjNXqJHcUBlcGdwRp2rumRFbmhpc6LnhFRcQ",
@@ -1730,7 +2009,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx",
+          "local_md5": "071b9132bd22a824913557c575011b4d"
         },
         {
           "id": "1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ",
@@ -1753,7 +2035,9 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "15k8b5Jo_W0NBYxA9vyDKnq9Iwt13MRfAbL45rtJOXUk",
@@ -1776,7 +2060,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 5.docx",
+          "local_md5": "3d87b460541155a9bc05fe690c6aeccd"
         },
         {
           "id": "12iFaZ7kxtJ3B5hfNE3JWy2PDVEGihpucMsrXVcE0BUk",
@@ -1799,7 +2086,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 6.docx",
+          "local_md5": "fb403cd29fa5c000be9b5472a06c4d83"
         },
         {
           "id": "1SYejGLpHtWMj16WZwGXmRo9RCsZi_4Po1mKuLch20X0",
@@ -1822,7 +2112,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx",
+          "local_md5": "0c5e1a1c8fbfa95faf580fc9e83538aa"
         },
         {
           "id": "1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc",
@@ -1845,7 +2138,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1lTbBFlTQ41pyc747HliVoth_2MudXDw0w2BrVnKua3Q",
@@ -1868,7 +2163,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 5.pptx",
+          "local_md5": "bb5ebf164d2cef3d71510c15c27f08fb"
         },
         {
           "id": "1XmQdlY3HEyXSmuStbj6cNufLM8sXnMS8xLH1M2ZvWWY",
@@ -1891,7 +2189,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx",
+          "local_md5": "9f7daa26a1fead86798a1b814261986b"
         },
         {
           "id": "124uCYW6bPJnubZ87wD5kInHgII0lAeRf6dsfUbgomjY",
@@ -1914,7 +2215,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 4/Lesson Plan/Lesson 7.docx",
+          "local_md5": "c4cd5a149ccc7d51e7475465ad228c5d"
         },
         {
           "id": "1LqQdIOmSidvzWLifHM0agIbOLj2ogUGB",
@@ -1937,7 +2241,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 4/Lesson Plan/Lesson 8",
+          "local_md5": "d076d523b95084db95934e3950e3e6c0"
         },
         {
           "id": "1FkovqTGdbeE2C1wVR8FCqCNPw4pAvwHjYW17joAHcxk",
@@ -1960,7 +2267,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
+          "local_md5": "cbdbc98e36ae31587516bd6aaf220b08"
         },
         {
           "id": "1kQO8XOSKO7Vzul9fzEGoYtNImYayhzQqMtonnZdT_To",
@@ -1983,7 +2293,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
+          "local_md5": "a37b79a693c46e222336b3e5361276d1"
         },
         {
           "id": "1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY",
@@ -2006,7 +2319,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0",
@@ -2029,7 +2344,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1IdexiZxE9rObgNnrOaNJGe4bHMt5Tnzm",
@@ -2052,7 +2369,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 5/Lesson Plan/Lesson 10",
+          "local_md5": "8b8a625e7f6227c9943bc6fc7c84064a"
         },
         {
           "id": "1j1S8_K1zzhu5kvGZzOSxiWtAAj-tAR2P",
@@ -2075,7 +2395,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 5/Lesson Plan/Lesson 9",
+          "local_md5": "b5893cd4bdece1acb0243e0c7a90ea19"
         },
         {
           "id": "1w6bhh0c__RRcjzrF563GnlxnJOJoIF_KYVp25dnVud0",
@@ -2098,7 +2421,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 5/Students Slides/Lesson 10.pptx",
+          "local_md5": "49d936d3d42bb7f1ae04657d233f0de0"
         },
         {
           "id": "1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24",
@@ -2121,7 +2447,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE",
@@ -2144,7 +2472,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs",
@@ -2167,7 +2497,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1un1LPJElWToNbaEEoidWdYNw2DxMU0Uk",
@@ -2190,7 +2522,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 11.docx",
+          "local_md5": "2d5561e9970c6ef0597b4da0d4c4b25a"
         },
         {
           "id": "10HpIPOmwRsdRevtCf5idc2kxmTYph5VB",
@@ -2213,7 +2548,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 12.docx",
+          "local_md5": "abcf44c63ea692fc4d295efa2a46574e"
         },
         {
           "id": "1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI",
@@ -2236,7 +2574,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1E9wwEcrty-GdiLz_chmzkLfx4FyT6r-ONIkzvxkZhmU",
@@ -2259,7 +2599,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 6/Students Slides/Lesson 12.pptx",
+          "local_md5": "89a65fea0a98d41e87be0da0e89c629c"
         },
         {
           "id": "1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U",
@@ -2282,7 +2625,9 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "download_error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         },
         {
           "id": "1qNzGaeYZ9BlWk4ZnESDrPrJBA3jFGm4snWyQO0PHTKc",
@@ -2305,7 +2650,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": true,
-          "native_type": "google_slides"
+          "native_type": "google_slides",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Content/Week 6/Teachers Slides/Lesson 12.pptx",
+          "local_md5": "0a9d7926fb8090bd93228418802ed88c"
         },
         {
           "id": "1y5cDbjoCmZt71UIlUQ3CfeF3dbWomcLe",
@@ -2328,7 +2676,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/Defender Of The Desert Term_2_Design Brief.pdf",
+          "local_md5": "794375e91691ab6f3a4bf3908d8a367a"
         },
         {
           "id": "1n3jUHek4lsuwe4aktppHwWB5mfFPl6pk",
@@ -2351,7 +2702,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/Exemplar-Games.pdf",
+          "local_md5": "d3ccea7d9694c21ed015605b4739602d"
         },
         {
           "id": "1q1alcp0vGEhYAWxA6wDOmvgTy6LJGz-v",
@@ -2374,7 +2728,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/Guardians Of History Term_2_Design Brief.pdf",
+          "local_md5": "d1193ab7710b0885414e24e567ecdb21"
         },
         {
           "id": "1HZNIUsWD-BO639vLyt66VSHxpI-MXbfV",
@@ -2397,7 +2754,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/Open Brief Term_2_Design Brief.pdf",
+          "local_md5": "60ebc960fed3abf335149f6d89942d70"
         },
         {
           "id": "19Wz_DQTu7vW8HqqBl2PbWDmCos373eiY",
@@ -2420,7 +2780,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/Term_2_Design Briefs All 6 in A4.pdf",
+          "local_md5": "e8b557c190b496d1dc9ed728162b5a45"
         },
         {
           "id": "1HfpfHfxymvTdoR42_A7OKtrw9t-7wfev",
@@ -2443,7 +2806,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/The Grandeur Of Light Term_2_Design Brief.pdf",
+          "local_md5": "bddf4dc9fbc7956e22ffa82d4a04eb8a"
         },
         {
           "id": "1O_Jh8-5hJUAHRjmAmsonXaX0l002GASs",
@@ -2466,7 +2832,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/The Secrets Of Art Term_2_Design Brief.pdf",
+          "local_md5": "70b6b1b1feabd12ca6ea6ae11eeb9c34"
         },
         {
           "id": "1bK7w-1XuZFAGYf2zuZMDWksn8Fe4qRom",
@@ -2489,7 +2858,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Design Briefs and Exemplar Games/The Time Traveler's Compass Term_2_Design Briefs .pdf",
+          "local_md5": "7372f6d617d547ee040c0706cf5da81a"
         },
         {
           "id": "1nGD6KnTma51S_sx-8xW8MR9RLXXZwRhD",
@@ -2512,7 +2884,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Professional Development/Week 1.pdf",
+          "local_md5": "30feefe886376a4b78fea2112bfc3e26"
         },
         {
           "id": "1488ayNvjhqqWzx900MmbZ4ZsM1xac4Vr",
@@ -2535,7 +2910,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Professional Development/Week 3.pdf",
+          "local_md5": "6878a65c320c0273538d63d4bae0e2d2"
         },
         {
           "id": "1NRSY3ZffCq673klm0WoG3J_1jFGVQ5vt",
@@ -2558,7 +2936,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Professional Development/Week 5.pdf",
+          "local_md5": "ece344aab874ecd64b7e887164941e40"
         },
         {
           "id": "1D8Gzqy6kBQRvCHUxfyVdGVuHswFnBYL_",
@@ -2581,7 +2962,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Student Portfolio/Activities & Portfolio Deck",
+          "local_md5": "06dbef76acd363a4503567e830a136ac"
         },
         {
           "id": "1EDRV5C67LX97IBtNo_2xN37UQjF5QECc",
@@ -2604,7 +2988,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+          "local_md5": "2b9db91f1c13f40f6be243793ff75ebb"
         },
         {
           "id": "1zs3bKjAo9iGOMsaMp6dokkCBLKAYW9OXnNaIKcs5TXc",
@@ -2627,7 +3014,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_sheet"
+          "native_type": "google_sheet",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Learning Schedule.xlsx",
+          "local_md5": "1bbb7601042b70caf66aaf34326f6270"
         },
         {
           "id": "1b3Pevvotp8wZclu5l4ttIBgb26Bo4yC0",
@@ -2650,7 +3040,10 @@
           "owner_email": "dokeeffe@endlessstudios.com",
           "owner_name": "Daniel O' Keeffe",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Teacher Resources/Term 2 Introduction content.pptx",
+          "local_md5": "ee2d38742357d9569503a8346a50e0b5"
         },
         {
           "id": "1QnGkKa96w_eTu_YLtEUDg8C0XUy_I6RdkGWhH7UcLRc",
@@ -2673,7 +3066,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": true,
-          "native_type": "google_doc"
+          "native_type": "google_doc",
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Classkick/Classkick - how to.docx",
+          "local_md5": "c23c2173962a4ab99f0053ca39a7df94"
         },
         {
           "id": "1K9aKmDaQASl8esfoHajw3kdkM_LDhVRZ",
@@ -2696,7 +3092,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Classkick/Students Log In Video.mov",
+          "local_md5": "791c31fb0351605a2f4f5f50d28c84dc"
         },
         {
           "id": "1y-LN60mcYLFHhxz25o1R5ofFBV240tMC",
@@ -2719,7 +3118,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Classkick/Teachers Dashboard Classkick 1.mov",
+          "local_md5": "3b06edf910684d5a1284eb958c250a9b"
         },
         {
           "id": "1qoa7eSwoC-j1RzNIm6-cKoglhelrveKX",
@@ -2742,7 +3144,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Classkick/Teachers how to add students.mov",
+          "local_md5": "aef9870b792c74e860d3fd741bddf9ef"
         },
         {
           "id": "1ZVXzFqSb-MokYWItreMXUaqksoq2OAOO",
@@ -2765,7 +3170,10 @@
           "owner_email": "asabar@endlessstudios.com",
           "owner_name": "Abzer Sabar",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Endstar - /Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+          "local_md5": "11de5f4120c4ff0f42d9b77a81a27803"
         },
         {
           "id": "16jK0Zn45YLrB6zYCXnHUpfrKNHU9beEn",
@@ -2788,7 +3196,10 @@
           "owner_email": "asabar@endlessstudios.com",
           "owner_name": "Abzer Sabar",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Endstar - /Endstar Engine User Guide (WIP) (1).pdf",
+          "local_md5": "de14ac2dbc3e7979f368f19e5123d718"
         },
         {
           "id": "1KaV4AnrJZzGjPpUzsRs52Z5Wsf-F5WVR",
@@ -2811,7 +3222,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Endstar - /Endstar Setup Guide.pdf",
+          "local_md5": "dd800945123a64700c0d568bea0f6a77"
         },
         {
           "id": "17WvBxXw4tQhs24LWnjQW_pnQvblB8Kh0",
@@ -2834,7 +3248,10 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/Endstar - /Endstar Troubleshooting.pdf",
+          "local_md5": "9d358ed3d091416afa164a8cf5a2daf6"
         },
         {
           "id": "1lTOCB_yDfOI8sP-mU64Z3ikBgPmnhp8B",
@@ -2857,11 +3274,167 @@
           "owner_email": "amcgirr@endlessstudios.com",
           "owner_name": "Alan Mc Girr",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Technical Support Guides/School AI/School AI Login & Space Access.mov",
+          "local_md5": "3b6fd669d5625fc737806e159c17d4f1"
+        }
+      ],
+      "downloaded": [
+        "Exampler Work - Lesson 1 -2.pptx",
+        "Designing_Restoring_Light.mp4",
+        "Exampler Work - Lesson 3-4",
+        "Exampler Work - Lesson 5-6 ",
+        "Exampler Work - Lesson 7-8",
+        "Exampler Work - Lesson 9-10",
+        "Exampler Work - Lesson 11-12 ",
+        "Light_of_the_Mosque.mp4",
+        "The_Unseen_Hero.mp4",
+        "TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+        "TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+        "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME)",
+        "TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+        "US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+        "Term-2LOsSC-and-AI-KS.pdf",
+        "Lesson 1.docx",
+        "Lesson 2.docx",
+        "Lesson 1",
+        "Lesson 2",
+        "Lesson 1 .pptx",
+        "Lesson 2.pptx",
+        "Lesson 3",
+        "Lesson 4",
+        "Lesson 3",
+        "Lesson 4",
+        "Lesson 3",
+        "Lesson 5",
+        "Lesson 6",
+        "Lesson 5",
+        "Lesson 5",
+        "Lesson 6",
+        "Lesson 7",
+        "Lesson 8",
+        "Lesson 7 ",
+        "Lesson 8",
+        "Lesson 10",
+        "Lesson 9",
+        "Lesson 10",
+        "Lesson 11.docx",
+        "Lesson 12.docx",
+        "Lesson 12",
+        "Lesson 12",
+        "Defender Of The Desert Term_2_Design Brief.pdf",
+        "Exemplar-Games.pdf",
+        "Guardians Of History Term_2_Design Brief.pdf",
+        "Open Brief Term_2_Design Brief.pdf",
+        "Term_2_Design Briefs All 6 in A4.pdf",
+        "The Grandeur Of Light Term_2_Design Brief.pdf",
+        "The Secrets Of Art Term_2_Design Brief.pdf",
+        "The Time Traveler's Compass Term_2_Design Briefs .pdf",
+        "Week 1.pdf",
+        "Week 3.pdf",
+        "Week 5.pdf",
+        "Activities & Portfolio Deck",
+        "Curriculum Specifications Term 2 .docx",
+        "Learning Schedule",
+        "Term 2 Introduction content.pptx",
+        "Classkick - how to",
+        "Students Log In Video.mov",
+        "Teachers Dashboard Classkick 1.mov",
+        "Teachers how to add students.mov",
+        "Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+        "Endstar Engine User Guide (WIP) (1).pdf",
+        "Endstar Setup Guide.pdf",
+        "Endstar Troubleshooting.pdf",
+        "School AI Login & Space Access.mov"
+      ],
+      "errors": [
+        {
+          "file": "Lesson 4",
+          "file_id": "1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 2/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 6",
+          "file_id": "1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 3/Students Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 7 ",
+          "file_id": "1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 8",
+          "file_id": "1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 9",
+          "file_id": "1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 5/Students Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 10",
+          "file_id": "1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 9",
+          "file_id": "1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 11",
+          "file_id": "1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 6/Students Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+        },
+        {
+          "file": "Lesson 11",
+          "file_id": "1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U",
+          "term": "term2",
+          "folder_path": "Teacher Resources/Curriculum Content/Week 6/Teachers Slides",
+          "mime_type": "application/vnd.google-apps.presentation",
+          "change_type": "UNCHANGED",
+          "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
         }
       ]
     },
     "term3": {
+      "folder_id": "1T6zzl0oqltIGcl8M4wAg2xy-z2HDZuxi",
+      "folder_name": "Term 3 - Mastery",
       "files": [
         {
           "id": "1T-KSpJ3PNLHTJ0TqtFQkttM7v5pvlMLL",
@@ -2884,7 +3457,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Assention.mp4",
+          "local_md5": "75da74b814846736d4ac14bd2f345db8"
         },
         {
           "id": "1x7kiu6Dy6LxOLTBaOsoeensSgWJBBUmP",
@@ -2907,7 +3483,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+          "local_md5": "7f343c9b20f8c9b0d116619eac38875c"
         },
         {
           "id": "1C6C7uz6kBX6d9OqnaZinQrMMul6OAoXB",
@@ -2930,7 +3509,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+          "local_md5": "6be7c08172689b0dc25f774d6f3baaab"
         },
         {
           "id": "1zDh96tb4T8JUa9wfSsTRdtU7jh0YNQGw",
@@ -2953,7 +3535,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Lesson supporting videos/TrailerCreationinCapcut.mp4",
+          "local_md5": "5b97c02cc1561e9681479977e8af9be3"
         },
         {
           "id": "1ky7zJ0aO-rJYT71o3qK126UAM3ZV7tU7",
@@ -2976,7 +3561,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 1.pptx",
+          "local_md5": "3d21c709e147363a94621322eafa933e"
         },
         {
           "id": "1MzWwbWDMVdrWytXx0QM-BDqotKmhj0z7",
@@ -2999,7 +3587,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+          "local_md5": "fee6d07b4027eabcf312ff64af2b0ca1"
         },
         {
           "id": "1-L-qPJpIr-tiC-MTonDuIyXZywIV4296",
@@ -3022,7 +3613,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 2/Lesson 3.pptx",
+          "local_md5": "0a0e498eba799a52e2e87766fe6876a0"
         },
         {
           "id": "1l2ywBK7TujzSV3DxkuS9pN6N_KjMQWWu",
@@ -3045,7 +3639,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 2/Lesson 4.pptx",
+          "local_md5": "71e03d5fb81ab2e66a2b306fa686bac5"
         },
         {
           "id": "1uytG6ExZQIVU21LLM3SoCTCA-cU5kLg5",
@@ -3068,7 +3665,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 3/Lesson 5.pptx",
+          "local_md5": "bd7b3cc62f6d6d0d02e2a1002733f339"
         },
         {
           "id": "1pA0gc6RKqhA2CUuGeJUkebDyODkjcfzL",
@@ -3091,7 +3691,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+          "local_md5": "ddb47dd8635beb9cb2b8487a5e794744"
         },
         {
           "id": "14ULVoLTeGILn4ebb_YT9v8bCBQD0z9ma",
@@ -3114,7 +3717,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 4/Lesson 7.pptx",
+          "local_md5": "97c92f734126a9cbd44ecfa687b9c12b"
         },
         {
           "id": "17Aox4Z2s2FM_usV0RF--3o9o-PgBZq-f",
@@ -3137,7 +3743,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+          "local_md5": "56355eb87301d3fb7c75a8e11f10e753"
         },
         {
           "id": "16ZDNt7OtwzJN__oi-JnJ66aX-R4qlpjm",
@@ -3160,7 +3769,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 5/claude & blender video.mp4",
+          "local_md5": "3963446b931d83cb3780406bdbfa990f"
         },
         {
           "id": "1xMFOEJ4ykrOz3l-mi8QmOJqR_stzNzU2",
@@ -3183,7 +3795,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 5/Lesson 10.pptx",
+          "local_md5": "69ddc5f1927a968b0fdb1d2baa1dab5e"
         },
         {
           "id": "15BRTVwLLDNZFJV_U5C7LhtvQq_5Sf2lq",
@@ -3206,7 +3821,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 5/Lesson 9.pptx",
+          "local_md5": "63a4b75af7400b52d5affd4ad068bad6"
         },
         {
           "id": "12dOEamzHxssBC4XGMsJB8BC73BZ6qW_B",
@@ -3229,7 +3847,10 @@
           "owner_email": "hbenamor@endlessstudios.com",
           "owner_name": "Houssem Ben Amor",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 5/Make Stylized 3D Game Assets FAST with AI .mp4",
+          "local_md5": "041a6cf80ba780a8f4ac1a540eccc826"
         },
         {
           "id": "1-sBZzLT3SF0LrS5K0CoLsFwRQsqvdK_R",
@@ -3252,7 +3873,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 6/Lesson 11.pptx",
+          "local_md5": "3ff3717a05a5dcb1778fd93d39272bd2"
         },
         {
           "id": "12ASVMUEF7xdIRK9diRAtNt4b8Ouk5mTU",
@@ -3275,7 +3899,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+          "local_md5": "63c34c2479f30ec47ec8bbc91e5b630f"
         },
         {
           "id": "1jh-FPpnaSjBGhCe-l5AXJz34nNzWbMfV",
@@ -3298,7 +3925,10 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+          "local_md5": "8976d0a3f934fafa52e2da52df410bb5"
         },
         {
           "id": "1_fXt_8ctnx4PoY7mmIoqY2a1rQuRALa_",
@@ -3321,9 +3951,141 @@
           "owner_email": "obrienciaran4@gmail.com",
           "owner_name": "obrienciaran4",
           "is_native_google": false,
-          "native_type": null
+          "native_type": null,
+          "change_type": "UNCHANGED",
+          "local_path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+          "local_md5": "fd094474412fd77a93649132aa61e8eb"
         }
-      ]
+      ],
+      "downloaded": [
+        "Assention.mp4",
+        "Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+        "Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+        "TrailerCreationinCapcut.mp4",
+        "Lesson 1.pptx",
+        "Lesson 2.pptx",
+        "Lesson 3.pptx",
+        "Lesson 4.pptx",
+        "Lesson 5.pptx",
+        "Lesson 6.pptx",
+        "Lesson 7.pptx",
+        "Lesson 8.pptx",
+        "claude & blender video.mp4",
+        "Lesson 10.pptx",
+        "Lesson 9.pptx",
+        "Make Stylized 3D Game Assets FAST with AI .mp4",
+        "Lesson 11.pptx",
+        "Lesson 12.pptx",
+        "Lesson 13.pptx",
+        "Lesson 14.pptx"
+      ],
+      "errors": []
     }
+  },
+  "summary": {
+    "total_files": 144,
+    "new": 0,
+    "modified": 0,
+    "deleted": 0,
+    "renamed": 0,
+    "metadata_changed": 0,
+    "unchanged": 144,
+    "downloaded": 135,
+    "errors": 9
+  },
+  "activity_log": {
+    "term1": [],
+    "term2": [],
+    "term3": []
+  },
+  "revision_history": {},
+  "download_errors": [
+    {
+      "file": "Lesson 4",
+      "file_id": "1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 2/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1WQEU-pua8ghVUxwXy9nvNmHaMxLv1-f_rd2C6L--cMQ/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 6",
+      "file_id": "1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 3/Students Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1I1CkpIwVZrkAu8JVZxvgCpxmeSyEcctsF4y1-CVm1Mc/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 7 ",
+      "file_id": "1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1dAHUgNXTrfjwN-m32bpH1pdjrfAStVZ8pzzxoFHdCEY/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 8",
+      "file_id": "1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 4/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1Wc15WvOC3wjdKtY-WSczl_79GYafz5Isn9wRASHUaY0/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 9",
+      "file_id": "1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Students Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1eX5dfpWWqEABjV83-Eqdm-oBIDsAXReI7h_KJ-Qup24/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 10",
+      "file_id": "1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1ZrUXhqF-j0Z_V-hCUS_6krjwJeCqzxLIJEP8yr4MCJE/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 9",
+      "file_id": "1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 5/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1yNJA8xO8NZiTRiA4k-o_XviRNx6OQCGo0ZdqlQbBFOs/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 11",
+      "file_id": "1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Students Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1GWpunb6ajMsuDXynYS6OiMuCvq26_Nsmy-hfGdGi9OI/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    },
+    {
+      "file": "Lesson 11",
+      "file_id": "1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U",
+      "term": "term2",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 6/Teachers Slides",
+      "mime_type": "application/vnd.google-apps.presentation",
+      "change_type": "UNCHANGED",
+      "error": "<HttpError 403 when requesting https://www.googleapis.com/drive/v3/files/1MHgvB5zALOJ3M59rJb6Quy2kuoc-NBSTROscdvDw_4U/export?mimeType=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation&alt=media returned \"This file is too large to be exported.\". Details: \"[{'message': 'This file is too large to be exported.', 'domain': 'global', 'reason': 'exportSizeLimitExceeded'}]\">"
+    }
+  ],
+  "integrity": {
+    "valid": 57,
+    "total": 57,
+    "errors": [],
+    "warnings": []
   }
 }

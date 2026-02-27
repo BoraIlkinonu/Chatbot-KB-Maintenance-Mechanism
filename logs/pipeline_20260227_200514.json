@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-02-27T19:49:55.295960+00:00",
+  "steps_run": [
+    {
+      "step": 1,
+      "name": "Sync",
+      "status": "success"
+    },
+    {
+      "step": 2,
+      "name": "Convert",
+      "status": "success"
+    },
+    {
+      "step": 3,
+      "name": "LLM Extract",
+      "status": "success"
+    },
+    {
+      "step": 4,
+      "name": "Build KB",
+      "status": "success"
+    },
+    {
+      "step": 5,
+      "name": "Dual-Judge",
+      "status": "success"
+    }
+  ],
+  "errors": [],
+  "status": "completed",
+  "completed_at": "2026-02-27T20:05:14.764252+00:00"
+}
