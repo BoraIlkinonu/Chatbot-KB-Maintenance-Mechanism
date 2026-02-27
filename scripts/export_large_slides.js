@@ -29,7 +29,7 @@
  * ID of the Drive folder where exported PPTX files will be saved.
  * Open the folder in Drive → copy the ID from the URL after /folders/
  */
-var EXPORTS_FOLDER_ID = "1_RDSSJXYMNBT3rw3Y3i8W9qmd9pyYY0n";
+var EXPORTS_FOLDER_ID = "1YOBetrxAjn5LBmcU9YzFNNOUQDrCEXcz";
 
 /**
  * Source folders to scan for large native Google Slides.
@@ -229,7 +229,11 @@ function exportSlideToPptx_(fileInfo, destFolderId) {
   }
 
   var blob = response.getBlob();
-  var fileName = fileInfo.name + ".pptx";
+  // Include parent folder name to avoid collisions (e.g. Students Slides vs Teachers Slides)
+  var pathParts = (fileInfo.folderPath || "").split("/");
+  var parentFolder = pathParts.length > 0 ? pathParts[pathParts.length - 1] : "";
+  var prefix = parentFolder ? parentFolder.replace(/\s+/g, "_") + "__" : "";
+  var fileName = prefix + fileInfo.name + ".pptx";
   blob.setName(fileName);
 
   // Save to Drive with metadata in description for pipeline to read
