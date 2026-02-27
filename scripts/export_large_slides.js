@@ -37,8 +37,8 @@ var EXPORTS_FOLDER_ID = "1YOBetrxAjn5LBmcU9YzFNNOUQDrCEXcz";
  */
 var SOURCE_FOLDERS = {
   "term1": "17s13FlHGkaNPPlf3jAUY0tSza2yxHqPe",
-  "term2": "1T6zzl0oqltIGcl8M4wAg2xy-z2HDZuxi",
-  "term3": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
+  "term2": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
+  "term3": "1T6zzl0oqltIGcl8M4wAg2xy-z2HDZuxi",
 };
 
 // ─── MAIN FUNCTIONS ─────────────────────────────────────

@@ -34,11 +34,11 @@ TARGET_FOLDERS = {
         "name": "Term 1 - Foundations",
     },
     "term2": {
-        "id": "1T6zzl0oqltIGcl8M4wAg2xy-z2HDZuxi",
+        "id": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
         "name": "Term 2 - Accelerator",
     },
     "term3": {
-        "id": "16UgEwue1ROxFJyPTrowIqTQyduoNEIUb",
+        "id": "1T6zzl0oqltIGcl8M4wAg2xy-z2HDZuxi",
         "name": "Term 3 - Mastery",
     },
 }
