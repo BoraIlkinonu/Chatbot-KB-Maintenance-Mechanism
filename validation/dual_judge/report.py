@@ -140,7 +140,7 @@ class DualJudgeReport:
                 if data["tier"] == 1 and data["verdict"] == "INCORRECT":
                     tier1_incorrect += 1
 
-        if tier1 >= 0.8 and tier1_incorrect == 0:
+        if tier1 >= 0.95 and tier1_incorrect == 0:
             return "PASS"
         elif tier1 >= 0.5:
             return "NEEDS_REVIEW"

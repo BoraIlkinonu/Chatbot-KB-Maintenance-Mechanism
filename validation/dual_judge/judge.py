@@ -37,7 +37,7 @@ class DualJudge:
 
         Returns dict with per-field verdicts, consensus flag, and metadata.
         """
-        for attempt in range(1, 3):
+        for attempt in range(1, 6):
             results = []
             for _ in range(2):
                 try:
@@ -71,9 +71,9 @@ class DualJudge:
                 merged["_judge_votes"] = votes
                 return merged
 
-        # No consensus after 2 attempts — return first judge's result flagged
+        # No consensus after 5 attempts — return first judge's result flagged
         merged = results[0].copy()
         merged["_consensus"] = False
-        merged["_attempt"] = 2
+        merged["_attempt"] = 5
         merged["_judge_votes"] = votes
         return merged
