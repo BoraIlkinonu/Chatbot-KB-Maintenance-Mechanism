@@ -44,7 +44,7 @@ def send_slack(message, blocks=None):
 # Notification templates
 # ──────────────────────────────────────────────────────────
 
-def notify_sync_complete(sync_summary, revision_count=0):
+def notify_sync_complete(sync_summary, revision_count=0, download_errors=None):
     """Notify team about sync results."""
     s = sync_summary
     emoji = ":white_check_mark:" if s["errors"] == 0 else ":warning:"
@@ -60,7 +60,24 @@ def notify_sync_complete(sync_summary, revision_count=0):
     if revision_count > 0:
         msg += f"\nRevision data fetched for {revision_count} changed files"
 
-    if s["errors"] > 0:
+    if s["errors"] > 0 and download_errors:
+        msg += f"\n:rotating_light: *{s['errors']} download failure(s):*\n"
+        for err in download_errors[:15]:
+            term_label = _term_label(err.get("term", ""))
+            error_msg = err.get("error", "unknown error")
+            # Classify error type for clarity
+            if "403" in error_msg or "exportSizeLimitExceeded" in error_msg:
+                reason = "export too large — handled via Apps Script"
+            elif "404" in error_msg:
+                reason = "file not found"
+            elif "401" in error_msg:
+                reason = "auth error"
+            else:
+                reason = error_msg[:150]
+            msg += f"  • `{err['file']}` [{term_label}] — {reason}\n"
+        if len(download_errors) > 15:
+            msg += f"  _... +{len(download_errors) - 15} more_\n"
+    elif s["errors"] > 0:
         msg += "\n:rotating_light: *Errors occurred during sync — check logs*"
 
     return send_slack(msg)

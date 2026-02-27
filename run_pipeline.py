@@ -104,7 +104,7 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         elif not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync(download_all=download_all)
-            notify_sync_complete(sync_result["summary"])
+            notify_sync_complete(sync_result["summary"], download_errors=sync_result.get("download_errors", []))
             notify_revision_summary(sync_result.get("revision_history", {}))
 
             # Notify about activity

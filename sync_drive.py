@@ -628,6 +628,7 @@ def run_sync(dry_run=False, download_all=False):
         },
         "activity_log": {},
         "revision_history": {},
+        "download_errors": [],
     }
 
     all_current_files = {}  # For saving as next "previous scan"
@@ -758,7 +759,17 @@ def run_sync(dry_run=False, download_all=False):
                 except Exception as e:
                     print(f"    ERROR downloading {change['name']}: {e}")
                     change["download_error"] = str(e)
-                    errors.append({"file": change["name"], "error": str(e)})
+                    error_entry = {
+                        "file": change["name"],
+                        "file_id": change.get("id", ""),
+                        "term": term_key,
+                        "folder_path": change.get("folder_path", ""),
+                        "mime_type": change.get("mime_type", ""),
+                        "change_type": ct,
+                        "error": str(e),
+                    }
+                    errors.append(error_entry)
+                    sync_result["download_errors"].append(error_entry)
                     sync_result["summary"]["errors"] += 1
             elif ct in ("NEW", "MODIFIED", "RENAMED") and dry_run:
                 print(f"  [{ct}] Would download: {change['name']}")
