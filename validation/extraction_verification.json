@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-02-27T10:53:24.321334+00:00",
-  "lesson_coverage": 0.9971,
-  "lesson_coverage_pct": "99.7%",
-  "lesson_matched": 14403,
-  "lesson_structural": 878,
-  "lesson_unmatched": 44,
+  "generated_at": "2026-02-27T11:11:34.449775+00:00",
+  "lesson_coverage": 0.9983,
+  "lesson_coverage_pct": "99.8%",
+  "lesson_matched": 11294,
+  "lesson_structural": 800,
+  "lesson_unmatched": 20,
   "nonlesson_matched": 0,
   "nonlesson_structural": 0,
   "nonlesson_unmatched": 0,
   "nonlesson_total": 0,
-  "overall_coverage": 0.9971,
-  "overall_coverage_pct": "99.7%",
-  "total_source": 16542,
-  "matched": 14403,
-  "structural": 878,
-  "unmatched": 44,
-  "skipped_trivial": 1217,
+  "overall_coverage": 0.9983,
+  "overall_coverage_pct": "99.8%",
+  "total_source": 13159,
+  "matched": 11294,
+  "structural": 800,
+  "unmatched": 20,
+  "skipped_trivial": 1045,
   "total_kb": 10080,
   "truncations": [],
   "stage_losses": {
-    "6": [
+    "2": [
       {
         "type": "text_block",
         "content_preview": "AI-Based",
@@ -27,7 +27,7 @@
         "location": "slide:8:para:0",
         "term": 2,
         "lesson": 3,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -36,7 +36,7 @@
         "location": "slide:8:para:0",
         "term": 2,
         "lesson": 3,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -45,7 +45,7 @@
         "location": "slide:17:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -54,7 +54,7 @@
         "location": "slide:18:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -63,7 +63,7 @@
         "location": "slide:18:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -72,7 +72,7 @@
         "location": "slide:17:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -81,7 +81,7 @@
         "location": "slide:18:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
@@ -90,100 +90,8 @@
         "location": "slide:18:para:2",
         "term": 2,
         "lesson": 5,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "text content not captured during conversion"
       },
-      {
-        "type": "text_block",
-        "content_preview": "Give me:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
-        "location": "slide:9:para:15",
-        "term": 2,
-        "lesson": 7,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "Purpose:",
-        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
-        "location": "slide:13:para:0",
-        "term": 2,
-        "lesson": 8,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide10.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
-        "location": "slide:19:run_hyperlink",
-        "term": 3,
-        "lesson": 2,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide10.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
-        "location": "slide:8:run_hyperlink",
-        "term": 3,
-        "lesson": 6,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide20.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
-        "location": "slide:19:run_hyperlink",
-        "term": 3,
-        "lesson": 6,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide9.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
-        "location": "slide:8:run_hyperlink",
-        "term": 3,
-        "lesson": 8,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:13:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:16:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide15.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:16:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
-      },
-      {
-        "type": "link",
-        "content_preview": "slide8.xml",
-        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
-        "location": "slide:18:run_hyperlink",
-        "term": 3,
-        "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
-      }
-    ],
-    "2": [
       {
         "type": "text_block",
         "content_preview": "2- Define",
@@ -204,219 +112,95 @@
       },
       {
         "type": "text_block",
-        "content_preview": "MCQ 3 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
-        "location": "slide:20:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 3 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
-        "location": "slide:21:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 3 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
-        "location": "slide:23:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 4",
-        "location": "slide:24:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 3 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
-        "location": "slide:20:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 3 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
-        "location": "slide:21:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 3 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 3,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
-        "location": "slide:23:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 4 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 4",
-        "location": "slide:24:text:7",
-        "term": 2,
-        "lesson": 4,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 7 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
-        "location": "slide:25:text:7",
+        "content_preview": "Give me:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 .pptx",
+        "location": "slide:9:para:15",
         "term": 2,
         "lesson": 7,
         "reason": "text content not captured during conversion"
       },
       {
         "type": "text_block",
-        "content_preview": "MCQ 7 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
-        "location": "slide:26:text:7",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 7 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 7 ",
-        "location": "slide:27:text:7",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 8 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
-        "location": "slide:20:text:7",
+        "content_preview": "Purpose:",
+        "source_file": "term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8.pptx",
+        "location": "slide:13:para:0",
         "term": 2,
         "lesson": 8,
         "reason": "text content not captured during conversion"
+      }
+    ],
+    "1": [
+      {
+        "type": "link",
+        "content_preview": "slide10.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+        "location": "slide:19:run_hyperlink",
+        "term": 3,
+        "lesson": 2,
+        "reason": "link never extracted from source"
       },
       {
-        "type": "text_block",
-        "content_preview": "MCQ 8 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
-        "location": "slide:21:text:7",
-        "term": 2,
+        "type": "link",
+        "content_preview": "slide10.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 3,
+        "lesson": 6,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide20.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+        "location": "slide:19:run_hyperlink",
+        "term": 3,
+        "lesson": 6,
+        "reason": "link never extracted from source"
+      },
+      {
+        "type": "link",
+        "content_preview": "slide9.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+        "location": "slide:8:run_hyperlink",
+        "term": 3,
         "lesson": 8,
-        "reason": "text content not captured during conversion"
+        "reason": "link never extracted from source"
       },
       {
-        "type": "text_block",
-        "content_preview": "MCQ 8 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Students Slides/Lesson 8",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 8,
-        "reason": "text content not captured during conversion"
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:13:run_hyperlink",
+        "term": 3,
+        "lesson": 12,
+        "reason": "link never extracted from source"
       },
       {
-        "type": "text_block",
-        "content_preview": "MCQ 7 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
-        "location": "slide:25:text:7",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:16:run_hyperlink",
+        "term": 3,
+        "lesson": 12,
+        "reason": "link never extracted from source"
       },
       {
-        "type": "text_block",
-        "content_preview": "MCQ 7 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
-        "location": "slide:26:text:7",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
+        "type": "link",
+        "content_preview": "slide15.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:16:run_hyperlink",
+        "term": 3,
+        "lesson": 12,
+        "reason": "link never extracted from source"
       },
       {
-        "type": "text_block",
-        "content_preview": "MCQ 7 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 7 ",
-        "location": "slide:27:text:7",
-        "term": 2,
-        "lesson": 7,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 8 .1",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
-        "location": "slide:20:text:7",
-        "term": 2,
-        "lesson": 8,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 8 . 2",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
-        "location": "slide:21:text:7",
-        "term": 2,
-        "lesson": 8,
-        "reason": "text content not captured during conversion"
-      },
-      {
-        "type": "text_block",
-        "content_preview": "MCQ 8 . 3",
-        "source_file": "native:term2/Teacher Resources/Curriculum Content/Week 4/Teachers Slides/Lesson 8",
-        "location": "slide:22:text:7",
-        "term": 2,
-        "lesson": 8,
-        "reason": "text content not captured during conversion"
+        "type": "link",
+        "content_preview": "slide8.xml",
+        "source_file": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+        "location": "slide:18:run_hyperlink",
+        "term": 3,
+        "lesson": 12,
+        "reason": "link never extracted from source"
       }
     ]
   },
@@ -426,15 +210,15 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 99.7% (15281 matched [878 structural], 44 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 99.8% (12094 matched [800 structural], 20 unmatched of lesson-assigned atoms)",
       "details": {
-        "lesson_coverage": 0.9971,
-        "overall_coverage": 0.9971,
-        "lesson_matched": 14403,
-        "lesson_structural": 878,
-        "lesson_unmatched": 44,
-        "total_source": 16542,
-        "skipped_trivial": 1217
+        "lesson_coverage": 0.9983,
+        "overall_coverage": 0.9983,
+        "lesson_matched": 11294,
+        "lesson_structural": 800,
+        "lesson_unmatched": 20,
+        "total_source": 13159,
+        "skipped_trivial": 1045
       }
     },
     {
@@ -442,11 +226,11 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 96.9% (254/262)",
+      "message": "Link extraction coverage: 96.7% (235/243)",
       "details": {
-        "link_coverage": 0.9695,
-        "matched": 254,
-        "total": 262
+        "link_coverage": 0.9671,
+        "matched": 235,
+        "total": 243
       }
     },
     {
@@ -454,34 +238,34 @@
       "layer": 5,
       "passed": false,
       "severity": "WARNING",
-      "message": "Text content lost at early stages: 26 atoms",
+      "message": "Text content lost at early stages: 12 atoms",
       "details": {
-        "count": 26,
+        "count": 12,
         "examples": [
           {
-            "content": "2- Define",
+            "content": "AI-Based",
             "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx"
+            "file": "term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3.pptx"
           },
           {
-            "content": "3- Ideate",
+            "content": "AI-Based",
             "stage": 2,
-            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Teachers Slides/Lesson 6.pptx"
+            "file": "term2/Teacher Resources/Curriculum Content/Week 2/Teachers Slides/Lesson 3.pptx"
           },
           {
-            "content": "MCQ 3 .1",
+            "content": "Action:",
             "stage": 2,
-            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
           },
           {
-            "content": "MCQ 3 . 2",
+            "content": "Action:",
             "stage": 2,
-            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
           },
           {
-            "content": "MCQ 3 . 3",
+            "content": "Action:",
             "stage": 2,
-            "file": "native:term2/Teacher Resources/Curriculum Content/Week 2/Students Slides/Lesson 3"
+            "file": "term2/Teacher Resources/Curriculum Content/Week 3/Students Slides/Lesson 5.pptx"
           }
         ]
       }
@@ -511,11 +295,11 @@
       "layer": 5,
       "passed": true,
       "severity": "INFO",
-      "message": "Speaker note preservation: 100.0% (394/394)",
+      "message": "Speaker note preservation: 100.0% (317/317)",
       "details": {
         "coverage": 1.0,
-        "matched": 394,
-        "total": 394
+        "matched": 317,
+        "total": 317
       }
     },
     {
