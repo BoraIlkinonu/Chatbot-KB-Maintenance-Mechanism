@@ -1,0 +1,2247 @@
+{
+  "diffed_at": "2026-02-27T10:14:43.847380+00:00",
+  "diffs": {
+    "IB Wrapper Design Curriciulum Mapping": {
+      "added": [
+        {
+          "object_id": "g3b8f3ec2c7b_0_0",
+          "slide": 1,
+          "md5": "a2164e9c8c7bf79b90ec798d0645c040"
+        },
+        {
+          "object_id": "g3b8f3ec2c7b_0_1",
+          "slide": 1,
+          "md5": "0b8efac64f8d27df5a836727166bb51c"
+        },
+        {
+          "object_id": "g3b8f3ec2c7b_0_20",
+          "slide": 2,
+          "md5": "bbfbcafceb74a1810d559afb3d551331"
+        },
+        {
+          "object_id": "g3b8f3ec2c7b_0_29",
+          "slide": 4,
+          "md5": "e3ef6eaad6b1a20b7c61e302d8c4fc38"
+        },
+        {
+          "object_id": "g3b8f3ec2c7b_1_13",
+          "slide": 6,
+          "md5": "f18db5c71388378d87db7a0616a9ce5c"
+        },
+        {
+          "object_id": "g3b8f3ec2c7b_0_37",
+          "slide": 8,
+          "md5": "094c00cd241f47100a51661eb8113fae"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Exampler Work - Lesson 3-4": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_1",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_2",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_3",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_5",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a205fc6680_0_9",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a205fc6680_0_10",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_124",
+          "slide": 4,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_125",
+          "slide": 4,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_224",
+          "slide": 4,
+          "md5": "25875acc3eb2d8f8f2c5a402d3baaa79"
+        },
+        {
+          "object_id": "g3911539ae63_0_8",
+          "slide": 5,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3911539ae63_0_9",
+          "slide": 5,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3911539ae63_0_114",
+          "slide": 5,
+          "md5": "3d9223d8b0a9a7a77f27de1fbba219e0"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2193",
+          "slide": 10,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2194",
+          "slide": 10,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a9b837a198_16_41",
+          "slide": 12,
+          "md5": "ff621074c2436afd826ae5751c6db773"
+        },
+        {
+          "object_id": "g3b41333bd22_2_1",
+          "slide": 13,
+          "md5": "8b46bdc24083384e574bdaac6bbb0efc"
+        },
+        {
+          "object_id": "g3b41333bd22_2_0",
+          "slide": 13,
+          "md5": "07103f28bdda5ff30eb20fce0108739a"
+        },
+        {
+          "object_id": "g3aa09cd6960_0_1",
+          "slide": 14,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aa09cd6960_0_2",
+          "slide": 14,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Exampler Work - Lesson 5-6 ": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_183",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_184",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_185",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_187",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a9fea6b08f_0_11",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a9fea6b08f_0_12",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_567",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_568",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Exampler Work - Lesson 7-8": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_1",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_2",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_3",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_5",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_1084",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_1085",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g391514ed784_0_122",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g391514ed784_0_123",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b3f261d0a1_2_3",
+          "slide": 7,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3b3f261d0a1_2_4",
+          "slide": 7,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Exampler Work - Lesson 9-10": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_183",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_184",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_185",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_187",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_536",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_25",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_26",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b4066195e3_0_594",
+          "slide": 6,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g3b4066195e3_0_595",
+          "slide": 6,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g3b4066195e3_0_596",
+          "slide": 6,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g3b4066195e3_0_598",
+          "slide": 6,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3b4066195e3_0_694",
+          "slide": 7,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Exampler Work - Lesson 11-12 ": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_92",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_93",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_94",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_96",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2249",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2250",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_129",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_130",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_535",
+          "slide": 5,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_536",
+          "slide": 5,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_125",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_126",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_74",
+          "slide": 7,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_75",
+          "slide": 7,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 3": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_1",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_2",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_3",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_5",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_96",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_97",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_188",
+          "slide": 2,
+          "md5": "b8176fac235189c3554284b01c693bcb"
+        },
+        {
+          "object_id": "g3b18424156c_1_13",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_373",
+          "slide": 3,
+          "md5": "b7bc86c09f98bcdb2fbc8f250ebc1ad5"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_570",
+          "slide": 4,
+          "md5": "b0b339eb7df63a97119f4f92c392d61d"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_571",
+          "slide": 4,
+          "md5": "13bd3793bfc9ea0c4af93851214b86fa"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_770",
+          "slide": 5,
+          "md5": "11063b431d94b76a87476d0b7d80b8fa"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_771",
+          "slide": 5,
+          "md5": "f80428ba5bb6751adb30afd4addfaba8"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_973",
+          "slide": 6,
+          "md5": "eb3a944c7047ce4b42f4be0dcb50f981"
+        },
+        {
+          "object_id": "g3b3175f7845_9_2",
+          "slide": 7,
+          "md5": "87ad88d583e996ba4226b0af0e68422a"
+        },
+        {
+          "object_id": "g3a205fc6680_0_7",
+          "slide": 9,
+          "md5": "f20e3f99369daa981e7106894acf83f9"
+        },
+        {
+          "object_id": "g3911539ae63_0_0",
+          "slide": 9,
+          "md5": "24ac2c6802cc6860957cf2b9134524cf"
+        },
+        {
+          "object_id": "g3a205fc6680_0_143",
+          "slide": 11,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a205fc6680_0_144",
+          "slide": 11,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a205fc6680_0_248",
+          "slide": 11,
+          "md5": "44e5f6c0a165b2412978df1098aac697"
+        },
+        {
+          "object_id": "g3b18424156c_1_24",
+          "slide": 11,
+          "md5": "c12fbf74d1e3d3f6ab05701fedfb093a"
+        },
+        {
+          "object_id": "g3911539ae63_0_5",
+          "slide": 13,
+          "md5": "28ba8037f4fa8f93eefcdab468f70e01"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_124",
+          "slide": 15,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_125",
+          "slide": 15,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_224",
+          "slide": 15,
+          "md5": "25875acc3eb2d8f8f2c5a402d3baaa79"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_356",
+          "slide": 16,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_357",
+          "slide": 16,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_444",
+          "slide": 16,
+          "md5": "d271474da2023efd85239bc7560900b2"
+        },
+        {
+          "object_id": "g3911539ae63_0_8",
+          "slide": 17,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3911539ae63_0_9",
+          "slide": 17,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3911539ae63_0_114",
+          "slide": 17,
+          "md5": "3d9223d8b0a9a7a77f27de1fbba219e0"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_855",
+          "slide": 19,
+          "md5": "e9e281787f5a4209634efffa7d045563"
+        },
+        {
+          "object_id": "g3b3eafff4c1_7_14",
+          "slide": 20,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 4": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_92",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_93",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_94",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_96",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1088",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1089",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1108",
+          "slide": 2,
+          "md5": "0df4522d3da4107e8ff97e0c30047996"
+        },
+        {
+          "object_id": "g3b18424156c_1_16",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1121",
+          "slide": 3,
+          "md5": "a5e4b7a0c8370120282640948a556538"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1225",
+          "slide": 4,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1226",
+          "slide": 4,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1330",
+          "slide": 4,
+          "md5": "4056c51c4853248245dbe70f45129b51"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1331",
+          "slide": 4,
+          "md5": "67212513d476d698ad9335001de189c8"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1952",
+          "slide": 5,
+          "md5": "f24c5911922a2de4b9211972ae63f833"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1956",
+          "slide": 5,
+          "md5": "583c3afbd188da72f05a9da89027eba5"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1731",
+          "slide": 6,
+          "md5": "061fe4f1c6650ff6d63ad2b780601eef"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2193",
+          "slide": 9,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2194",
+          "slide": 9,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2214",
+          "slide": 9,
+          "md5": "0eeb6b45403452aae70f808c622e464d"
+        },
+        {
+          "object_id": "g3b3175f7845_9_0",
+          "slide": 10,
+          "md5": "c0a9410daa7e88a67336fc6d89f4b511"
+        },
+        {
+          "object_id": "g3a9b837a198_16_41",
+          "slide": 11,
+          "md5": "ff621074c2436afd826ae5751c6db773"
+        },
+        {
+          "object_id": "g3a9b837a198_16_15",
+          "slide": 12,
+          "md5": "f42ec625eec9c43727695fdfcc1a9053"
+        },
+        {
+          "object_id": "g3a9b837a198_16_16",
+          "slide": 12,
+          "md5": "1fa01652e0e984f000ac5cb44f5f4bd4"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2546",
+          "slide": 15,
+          "md5": "231fa572d4d9ba723b3f9f83bfe9fb75"
+        },
+        {
+          "object_id": "g3aa09cd6960_0_1",
+          "slide": 16,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aa09cd6960_0_2",
+          "slide": 16,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2571",
+          "slide": 17,
+          "md5": "a49aeaa412d7e7fee8465942997664ba"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_21",
+          "slide": 18,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_22",
+          "slide": 18,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_51",
+          "slide": 18,
+          "md5": "fe2a0b32adbe096920bd71c5107b1879"
+        },
+        {
+          "object_id": "g3b37e8ab943_1_28",
+          "slide": 20,
+          "md5": "cb0f7241481930f32bbc4c852287b7ab"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_81",
+          "slide": 21,
+          "md5": "075ec9d89d358231747296e97bb5a850"
+        },
+        {
+          "object_id": "g3b3eafff4c1_7_456",
+          "slide": 22,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_123",
+          "slide": 25,
+          "md5": "40b48ed48aae4a62d90e74c7f06f4cb3"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_1",
+          "slide": 26,
+          "md5": "a64f5d5bc20947def3b199643a27df66"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_2",
+          "slide": 26,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_3",
+          "slide": 26,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_8",
+          "slide": 26,
+          "md5": "21f3e4020d64833ac0c1b575fc68bfd9"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 5": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_183",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_184",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_185",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_187",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_135",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_136",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_236",
+          "slide": 2,
+          "md5": "2b15a8e6b13d7d4c0b4e7de874e97eb5"
+        },
+        {
+          "object_id": "g3b18424156c_1_18",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_238",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_239",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a9fea6b08f_0_5",
+          "slide": 3,
+          "md5": "7804479a16d5bdbe16b2ca738b68b82f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_476",
+          "slide": 4,
+          "md5": "68ba0fa451b9f7e425d68211d421783a"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_478",
+          "slide": 4,
+          "md5": "63cd9b2cf935ffd6b46f6c906275a60b"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_510",
+          "slide": 5,
+          "md5": "a2b7402cf5322815ce397f139350d018"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_511",
+          "slide": 5,
+          "md5": "86403df8da879034d3ae1ef289b860da"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_517",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_518",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_526",
+          "slide": 6,
+          "md5": "4d05d9bf704c641c78e3e985b70cc215"
+        },
+        {
+          "object_id": "g3a9b837a198_1_38",
+          "slide": 7,
+          "md5": "d6787cbc62913e8202a4c1506f57bfbb"
+        },
+        {
+          "object_id": "g39142545ffd_1_0",
+          "slide": 7,
+          "md5": "966b5b67676268e8ed91ad5b14da9951"
+        },
+        {
+          "object_id": "g3ad15058ba5_22_0",
+          "slide": 7,
+          "md5": "87ad88d583e996ba4226b0af0e68422a"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_565",
+          "slide": 8,
+          "md5": "c770cac549d4cb21949fa9973f93228b"
+        },
+        {
+          "object_id": "g3a9fea6b08f_0_11",
+          "slide": 9,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a9fea6b08f_0_12",
+          "slide": 9,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b3175f7845_0_1",
+          "slide": 16,
+          "md5": "eff08a91b2ae4913cda69d7d2a5b0d4c"
+        },
+        {
+          "object_id": "g3a2ab057904_0_94",
+          "slide": 16,
+          "md5": "fd3db103eed0cb89d6bbfcfbc30f6441"
+        },
+        {
+          "object_id": "g3a3ae465d76_13_0",
+          "slide": 17,
+          "md5": "21fb3d815beaf9f2756e49438ee26de3"
+        },
+        {
+          "object_id": "g3a3ae465d76_13_1",
+          "slide": 17,
+          "md5": "f449a505cc788c350ff918ff5295cb7a"
+        },
+        {
+          "object_id": "g3a3ae465d76_13_2",
+          "slide": 18,
+          "md5": "db6605c90c527a248a7090bfc97470b1"
+        },
+        {
+          "object_id": "g3a3ae465d76_13_3",
+          "slide": 18,
+          "md5": "cab41bd212b21b0da94d15a7f2b074e3"
+        },
+        {
+          "object_id": "g3a2ab057904_0_184",
+          "slide": 19,
+          "md5": "30ccdcd972da1aaf8d910a749294e32c"
+        },
+        {
+          "object_id": "g3a2ab057904_0_56",
+          "slide": 21,
+          "md5": "0d45f326b8c0f3a570f33f5ed0bb744f"
+        },
+        {
+          "object_id": "g3a2ab057904_0_48",
+          "slide": 22,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a2ab057904_0_49",
+          "slide": 22,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a2ab057904_0_52",
+          "slide": 22,
+          "md5": "57818918ee95da787efbfcd54988cef6"
+        },
+        {
+          "object_id": "g3a2ab057904_0_282",
+          "slide": 23,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2ab057904_0_283",
+          "slide": 23,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b3eafff4c1_7_898",
+          "slide": 24,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 6": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_274",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_275",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_276",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_278",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a309c449c7_0_1",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a309c449c7_0_2",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a309c449c7_0_29",
+          "slide": 2,
+          "md5": "9ca1ae93480503380788c5e9f73ab2ef"
+        },
+        {
+          "object_id": "g3b18424156c_1_20",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a309c449c7_0_17",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a309c449c7_0_18",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a309c449c7_0_23",
+          "slide": 3,
+          "md5": "5d1bce919cccd1a16b1d51c48ca21ed4"
+        },
+        {
+          "object_id": "g3a309c449c7_0_55",
+          "slide": 4,
+          "md5": "297ca004dd6d79857686ab03f4bf1c3c"
+        },
+        {
+          "object_id": "g3a309c449c7_0_56",
+          "slide": 4,
+          "md5": "dd42ab7c24f3d23d2efb9c0bab450b35"
+        },
+        {
+          "object_id": "g3a309c449c7_0_86",
+          "slide": 5,
+          "md5": "ec5513118ab46aeace9a8f0c3d1831be"
+        },
+        {
+          "object_id": "g3a309c449c7_0_87",
+          "slide": 5,
+          "md5": "da4b116a967ab46d1e549458e25d4234"
+        },
+        {
+          "object_id": "g3a309c449c7_0_90",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a309c449c7_0_91",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aa4f873d78_0_0",
+          "slide": 6,
+          "md5": "2616db5d6052774126def197ca250ead"
+        },
+        {
+          "object_id": "g3b3175f7845_9_3",
+          "slide": 6,
+          "md5": "87ad88d583e996ba4226b0af0e68422a"
+        },
+        {
+          "object_id": "g3a309c449c7_0_113",
+          "slide": 7,
+          "md5": "12570be5eafbebec910d60ec4dffd5ab"
+        },
+        {
+          "object_id": "g3a309c449c7_0_127",
+          "slide": 7,
+          "md5": "0dd7d810fe33da575ed36e90e2c68e09"
+        },
+        {
+          "object_id": "g3aaad32a24d_1_9",
+          "slide": 8,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aaad32a24d_1_10",
+          "slide": 8,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aaad32a24d_1_25",
+          "slide": 8,
+          "md5": "83261e9d7494bbb21b52f247efe23ade"
+        },
+        {
+          "object_id": "g3a309c449c7_0_153",
+          "slide": 9,
+          "md5": "7690f5071d2b744b93e66585684eca18"
+        },
+        {
+          "object_id": "g390f5882780_0_550",
+          "slide": 9,
+          "md5": "1a8d9d1c7a68bf71c180ddb357981e15"
+        },
+        {
+          "object_id": "g3a309c449c7_0_232",
+          "slide": 11,
+          "md5": "80c5f74be672a1b58a0af0699caac42b"
+        },
+        {
+          "object_id": "g3b18424156c_1_27",
+          "slide": 13,
+          "md5": "badfdd00ce15a05b536a88ddc6c88cd1"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_159",
+          "slide": 19,
+          "md5": "4606c6fdb7ae39dd68d61263b1760732"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_189",
+          "slide": 20,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_190",
+          "slide": 20,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_193",
+          "slide": 20,
+          "md5": "e13913e7628ad316555c08135f8d1af5"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_285",
+          "slide": 22,
+          "md5": "4514736fc32af90522d58763d1735b11"
+        },
+        {
+          "object_id": "g3a3ae465d76_0_281",
+          "slide": 23,
+          "md5": "ee636fc5986a2ec7017e4b6a3252ed8f"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_102",
+          "slide": 24,
+          "md5": "a64f5d5bc20947def3b199643a27df66"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_103",
+          "slide": 24,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_104",
+          "slide": 24,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a9fea6b08f_2_109",
+          "slide": 24,
+          "md5": "21f3e4020d64833ac0c1b575fc68bfd9"
+        },
+        {
+          "object_id": "g3b3eafff4c1_7_1338",
+          "slide": 25,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 7 ": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_1",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_2",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_3",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_5",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_96",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_97",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a58513f12a_0_3",
+          "slide": 2,
+          "md5": "7f102aa8af66dfdbec72003f3e85ce6d"
+        },
+        {
+          "object_id": "g3b18b3bcea9_0_3",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_373",
+          "slide": 3,
+          "md5": "b7bc86c09f98bcdb2fbc8f250ebc1ad5"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_87",
+          "slide": 4,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_88",
+          "slide": 4,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aef79b53d5_7_0",
+          "slide": 4,
+          "md5": "11a00e8420d4b64d6cffb08b1953b0a8"
+        },
+        {
+          "object_id": "g3aef79b53d5_7_1",
+          "slide": 4,
+          "md5": "d22c378513368c68223f71f82d223f8e"
+        },
+        {
+          "object_id": "g3a58513f12a_0_28",
+          "slide": 5,
+          "md5": "6eb5d600677aaa4c7966ef18470350d8"
+        },
+        {
+          "object_id": "g3a58513f12a_0_29",
+          "slide": 5,
+          "md5": "0eb1af0cce29eacf86f625aa6aba17bc"
+        },
+        {
+          "object_id": "g3a58513f12a_0_39",
+          "slide": 6,
+          "md5": "c15a02f336ed4f6e4c58fe134a257b5f"
+        },
+        {
+          "object_id": "g39142682693_0_16",
+          "slide": 7,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g39142682693_0_18",
+          "slide": 7,
+          "md5": "0b8efac64f8d27df5a836727166bb51c"
+        },
+        {
+          "object_id": "g3b34e36a452_1_0",
+          "slide": 11,
+          "md5": "dbeb0ada8bde0adf1da3e689c1fa5cb8"
+        },
+        {
+          "object_id": "g3a205fc6680_0_143",
+          "slide": 13,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a205fc6680_0_144",
+          "slide": 13,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a205fc6680_0_248",
+          "slide": 13,
+          "md5": "44e5f6c0a165b2412978df1098aac697"
+        },
+        {
+          "object_id": "g3a58513f12a_0_152",
+          "slide": 15,
+          "md5": "150571bc12e0cb3aba14b394b81caeed"
+        },
+        {
+          "object_id": "g399f12be0bf_0_7",
+          "slide": 16,
+          "md5": "f26eebecd9cc7b5f9a163a987c9890fc"
+        },
+        {
+          "object_id": "g391514ed784_0_122",
+          "slide": 18,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g391514ed784_0_123",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aa0fad2a60_10_3",
+          "slide": 20,
+          "md5": "206bb967bdf2bc4f47f2066842288984"
+        },
+        {
+          "object_id": "g3aa0fad2a60_1_26",
+          "slide": 20,
+          "md5": "da77e088f0f8a96d98b30a072b56fae9"
+        },
+        {
+          "object_id": "g3aa0fad2a60_1_27",
+          "slide": 20,
+          "md5": "db80c7731d56c7c9526e3bc2131cd61f"
+        },
+        {
+          "object_id": "g3aa0fad2a60_0_106",
+          "slide": 21,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aa0fad2a60_0_107",
+          "slide": 21,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g391514ed784_0_32",
+          "slide": 22,
+          "md5": "47f3986713a289c65e2bd42f856e11c4"
+        },
+        {
+          "object_id": "g399f12be0bf_0_87",
+          "slide": 23,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g399f12be0bf_0_88",
+          "slide": 23,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g399f12be0bf_0_101",
+          "slide": 23,
+          "md5": "ea8e39980d31e6e5dcaaea12b0f1831e"
+        },
+        {
+          "object_id": "g399f12be0bf_0_147",
+          "slide": 24,
+          "md5": "79204fbe7f3803670fa49a95674fbe38"
+        },
+        {
+          "object_id": "g3b3ee476f7e_0_14",
+          "slide": 25,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 8": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_92",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_93",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_94",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_96",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1088",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1089",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1108",
+          "slide": 2,
+          "md5": "68eb2ffe468133768416587007bc80cb"
+        },
+        {
+          "object_id": "g3b18b3bcea9_0_7",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1121",
+          "slide": 3,
+          "md5": "d107d28789076c98acc83eff1ef872c9"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1225",
+          "slide": 4,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1226",
+          "slide": 4,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1731",
+          "slide": 6,
+          "md5": "0dd869afe10e524f6954aa968e228273"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2193",
+          "slide": 10,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2194",
+          "slide": 10,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2214",
+          "slide": 10,
+          "md5": "0eeb6b45403452aae70f808c622e464d"
+        },
+        {
+          "object_id": "g3aa0fad2a60_10_1",
+          "slide": 13,
+          "md5": "8efcbcb59d9cc33063030b39919eb722"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_113",
+          "slide": 13,
+          "md5": "0552ca6d20beacbc04a734d93997ad45"
+        },
+        {
+          "object_id": "g3aa0fad2a60_10_0",
+          "slide": 13,
+          "md5": "7e016baa80386557a11aec72825fd7ba"
+        },
+        {
+          "object_id": "g3aa0fad2a60_0_207",
+          "slide": 14,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aa0fad2a60_0_208",
+          "slide": 14,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b34e36a452_1_4",
+          "slide": 15,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3b34e36a452_1_5",
+          "slide": 15,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_21",
+          "slide": 16,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_22",
+          "slide": 16,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_145",
+          "slide": 16,
+          "md5": "069249e057f35a9c9940ef8db9f208cd"
+        },
+        {
+          "object_id": "g3b4103eb948_0_1",
+          "slide": 18,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3b4103eb948_0_2",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b4103eb948_0_23",
+          "slide": 18,
+          "md5": "40b48ed48aae4a62d90e74c7f06f4cb3"
+        },
+        {
+          "object_id": "g3aa072dd369_0_1",
+          "slide": 19,
+          "md5": "a64f5d5bc20947def3b199643a27df66"
+        },
+        {
+          "object_id": "g3aa072dd369_0_2",
+          "slide": 19,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aa072dd369_0_3",
+          "slide": 19,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aa072dd369_0_8",
+          "slide": 19,
+          "md5": "21f3e4020d64833ac0c1b575fc68bfd9"
+        },
+        {
+          "object_id": "g3b3ee476f7e_0_453",
+          "slide": 20,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 10": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_1",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_2",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_3",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_5",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_96",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_97",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3911c2d5edd_2_11",
+          "slide": 2,
+          "md5": "969386017f9a72f07018f4a3c84b84d2"
+        },
+        {
+          "object_id": "g3b1856839a6_0_6",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_1_373",
+          "slide": 3,
+          "md5": "97ab5de564f91d4828df4e64f2bb77da"
+        },
+        {
+          "object_id": "g3911c2d5edd_2_49",
+          "slide": 6,
+          "md5": "bcfd6ab1b68d765ec73aad7781bd631a"
+        },
+        {
+          "object_id": "g3b31bd1bbf1_0_35",
+          "slide": 6,
+          "md5": "87ad88d583e996ba4226b0af0e68422a"
+        },
+        {
+          "object_id": "g3a58513f12a_0_64",
+          "slide": 7,
+          "md5": "d6a91287bfea81d562a73cdd4e9627db"
+        },
+        {
+          "object_id": "g3a205fc6680_0_143",
+          "slide": 9,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a205fc6680_0_144",
+          "slide": 9,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a205fc6680_0_248",
+          "slide": 9,
+          "md5": "6be78d2a941ab7403e29cea4392ecd8e"
+        },
+        {
+          "object_id": "g3ae702f2ffb_0_143",
+          "slide": 12,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3ae702f2ffb_0_144",
+          "slide": 12,
+          "md5": "0b8efac64f8d27df5a836727166bb51c"
+        },
+        {
+          "object_id": "g3ae702f2ffb_0_29",
+          "slide": 13,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3ae702f2ffb_0_30",
+          "slide": 13,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g399f12be0bf_0_67",
+          "slide": 14,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g399f12be0bf_0_68",
+          "slide": 14,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g399f12be0bf_0_87",
+          "slide": 14,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g399f12be0bf_0_88",
+          "slide": 14,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g399f12be0bf_0_101",
+          "slide": 14,
+          "md5": "7c31e96c1192f35b4b14a0bb632fdb77"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_24",
+          "slide": 16,
+          "md5": "977fb93d013c94fb5ab91f70b5c63583"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_1",
+          "slide": 17,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_2",
+          "slide": 17,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_23",
+          "slide": 17,
+          "md5": "40b48ed48aae4a62d90e74c7f06f4cb3"
+        },
+        {
+          "object_id": "g3b3edb3b0cd_0_14",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 9": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_183",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_184",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_185",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_187",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_135",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_136",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_236",
+          "slide": 2,
+          "md5": "821541d61c1e122a22c5e6f184f0854d"
+        },
+        {
+          "object_id": "g3b18b3bcea9_0_9",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_238",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_239",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_250",
+          "slide": 3,
+          "md5": "d8bc9609abf7117f9ff9a8dc90945ab9"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_174",
+          "slide": 4,
+          "md5": "3e11268a1f5c0127f92e5a1849ec8ce2"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_175",
+          "slide": 4,
+          "md5": "c780da96c3fb806e43ef02968fd14ce9"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_182",
+          "slide": 5,
+          "md5": "08418872788d85d6f70c342d40f6cb56"
+        },
+        {
+          "object_id": "g3a74552ff5a_11_184",
+          "slide": 5,
+          "md5": "3a16caea484424ecb1336f860fd81f38"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_517",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_518",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_526",
+          "slide": 6,
+          "md5": "d0c7a67e5df6ad0cef15c17face4af49"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_0",
+          "slide": 8,
+          "md5": "3bccb21fe831fe2d7ff48d8ffa39e0a6"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_18",
+          "slide": 8,
+          "md5": "2c93b7790884ba326df31d43135270d7"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_151",
+          "slide": 12,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_152",
+          "slide": 12,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_162",
+          "slide": 12,
+          "md5": "cd45e2b5332153f6fc30b86c2cfd698d"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_61",
+          "slide": 14,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_62",
+          "slide": 14,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3ae67ac1e39_1_70",
+          "slide": 14,
+          "md5": "47f3986713a289c65e2bd42f856e11c4"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_244",
+          "slide": 15,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_245",
+          "slide": 15,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_253",
+          "slide": 15,
+          "md5": "a16c36fe559e7850da89463e39b8a735"
+        },
+        {
+          "object_id": "g3a84422feb8_1_99",
+          "slide": 16,
+          "md5": "2551da51cff731de33d4cafdc1aecffd"
+        },
+        {
+          "object_id": "g3a84422feb8_1_1",
+          "slide": 17,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a84422feb8_1_2",
+          "slide": 17,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a84422feb8_1_97",
+          "slide": 17,
+          "md5": "70a5a39670c21a9ce755061446792fc6"
+        },
+        {
+          "object_id": "g3b3ee476f7e_0_892",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 11": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_92",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_93",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_94",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_96",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1088",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1089",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1108",
+          "slide": 2,
+          "md5": "e4a8fbcd3ef1bffb448d1b1268b0b881"
+        },
+        {
+          "object_id": "g3b1856839a6_0_8",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1121",
+          "slide": 3,
+          "md5": "1ea3613d32a7f79fd03de9a907f3a6df"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1225",
+          "slide": 4,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_1226",
+          "slide": 4,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_31",
+          "slide": 4,
+          "md5": "1b80c82a806f9e70b14c42481941fd76"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_32",
+          "slide": 4,
+          "md5": "faca22e6ec3ac9b8c879e4d1e938125d"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_36",
+          "slide": 5,
+          "md5": "0f5377b4f6beafb5ec44370010a61214"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_37",
+          "slide": 5,
+          "md5": "39b61ee468e64d63856bee294c0e6699"
+        },
+        {
+          "object_id": "g3af9669be93_2_16",
+          "slide": 6,
+          "md5": "0997d9f0462b296d7c50c01dc42735d5"
+        },
+        {
+          "object_id": "g3af9669be93_2_17",
+          "slide": 6,
+          "md5": "55edb9684460d05f0227a407bfaee921"
+        },
+        {
+          "object_id": "g3af9669be93_2_18",
+          "slide": 6,
+          "md5": "90d1976229f95fbb2d74791b014f32c0"
+        },
+        {
+          "object_id": "g3af9669be93_2_24",
+          "slide": 6,
+          "md5": "5069c1c2215ca1a13e8a8296a45218d2"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_58",
+          "slide": 7,
+          "md5": "b5be276e1d726abab56a6ce36c852432"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2193",
+          "slide": 8,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a24c1bc083_0_2194",
+          "slide": 8,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_23",
+          "slide": 8,
+          "md5": "11b2eba938291986f46252a55bc8025d"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_110",
+          "slide": 11,
+          "md5": "deebd46a5b88ce5169c62e0b466a8cef"
+        },
+        {
+          "object_id": "g3aefb243a1b_2_1",
+          "slide": 12,
+          "md5": "e439077015fb37f9df0864c0a70d06a0"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_129",
+          "slide": 13,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_130",
+          "slide": 13,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b31bd1bbf1_0_11",
+          "slide": 14,
+          "md5": "d47385ac435922b459fc3426b35c255c"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_21",
+          "slide": 16,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_22",
+          "slide": 16,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_282",
+          "slide": 16,
+          "md5": "538e44e12a99448e7e38d34583611830"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_286",
+          "slide": 17,
+          "md5": "5fea9e85bc4816859dfae35e171e27e5"
+        },
+        {
+          "object_id": "g3b3edb3b0cd_0_452",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    },
+    "Lesson 12": {
+      "added": [
+        {
+          "object_id": "g36ffb6ba3cd_0_183",
+          "slide": 1,
+          "md5": "4a9addc9535f050b22715a478c2f887b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_184",
+          "slide": 1,
+          "md5": "e15f6ebdd7df518483a13c382b944c2b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_185",
+          "slide": 1,
+          "md5": "114ca639158310ebbd71d6744cade31b"
+        },
+        {
+          "object_id": "g36ffb6ba3cd_0_187",
+          "slide": 1,
+          "md5": "f129e6d9571b711b0682da5629d4dea8"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_135",
+          "slide": 2,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_136",
+          "slide": 2,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_295",
+          "slide": 2,
+          "md5": "b3ea470f7b0bf3cb0a9fc1c68cf9008e"
+        },
+        {
+          "object_id": "g3b1856839a6_0_10",
+          "slide": 2,
+          "md5": "ca1ec91c76a87ad42ca8e8f7340bf44c"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_238",
+          "slide": 3,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_239",
+          "slide": 3,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_250",
+          "slide": 3,
+          "md5": "369171331aece979720033a28e151c02"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_305",
+          "slide": 4,
+          "md5": "88676b4432739cf0e8f3058d3e3c9743"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_316",
+          "slide": 5,
+          "md5": "daebbf472d992beb1c57ff5d14f54f9f"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_317",
+          "slide": 5,
+          "md5": "153a8941178c59c39c03121fa7e05b17"
+        },
+        {
+          "object_id": "g3b37dad9728_0_7",
+          "slide": 5,
+          "md5": "91cb4e1f0cdffd5bbd5f1e84488d1991"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_517",
+          "slide": 6,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_518",
+          "slide": 6,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a2a032a76c_0_526",
+          "slide": 6,
+          "md5": "0592a39b75037641f384d95852c9d9f8"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_357",
+          "slide": 7,
+          "md5": "af80b80912a577b742b928a18bdf0708"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_151",
+          "slide": 9,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_152",
+          "slide": 9,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_162",
+          "slide": 9,
+          "md5": "0b74be80b265806eae9b5271fdc37eec"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_410",
+          "slide": 10,
+          "md5": "faa9fdeba0455fab073d6b7fb6284b72"
+        },
+        {
+          "object_id": "g3af2bcb57bc_0_13",
+          "slide": 11,
+          "md5": "eb53d93bec772649fc4349a3d2ebe66f"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_74",
+          "slide": 12,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_75",
+          "slide": 12,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_219",
+          "slide": 13,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_220",
+          "slide": 13,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_575",
+          "slide": 14,
+          "md5": "438caa72569b46ab1388153c18811380"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_460",
+          "slide": 15,
+          "md5": "0f251fa41368082cc30d2abae7550373"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_468",
+          "slide": 16,
+          "md5": "1ae14d482cb293393568fadc026657c0"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_495",
+          "slide": 17,
+          "md5": "c0988c2272c814419158dfcb7ac8d4c1"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_173",
+          "slide": 18,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_174",
+          "slide": 18,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3aed5a1d0cd_0_183",
+          "slide": 18,
+          "md5": "d47385ac435922b459fc3426b35c255c"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_244",
+          "slide": 19,
+          "md5": "9f1e43fe49783023f6ea881c08279111"
+        },
+        {
+          "object_id": "g3a7d6d17d38_0_245",
+          "slide": 19,
+          "md5": "7c476dd94a93f862687e4f1ad181ebb7"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_549",
+          "slide": 19,
+          "md5": "ec675da04558a6335e79cf1a8a224e8a"
+        },
+        {
+          "object_id": "g3916bcb7cc4_0_599",
+          "slide": 20,
+          "md5": "07596628303bd55028779b0ca5cbd7ae"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_144",
+          "slide": 22,
+          "md5": "e7ad7a20100cb0903fa5e27a1ec9ab8e"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_145",
+          "slide": 22,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        },
+        {
+          "object_id": "g3b410c8cbb2_0_166",
+          "slide": 22,
+          "md5": "40b48ed48aae4a62d90e74c7f06f4cb3"
+        },
+        {
+          "object_id": "g3b3edb3b0cd_0_891",
+          "slide": 23,
+          "md5": "7807d0f930a0d04885dcc364723bd18f"
+        }
+      ],
+      "changed": [],
+      "removed": [],
+      "unchanged_count": 0
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "verdict": "FAIL",
-  "generated_at": "2026-02-27T04:08:50.332527+00:00",
-  "started_at": "2026-02-27T04:08:49.786312+00:00",
+  "generated_at": "2026-02-27T10:14:46.952914+00:00",
+  "started_at": "2026-02-27T10:14:46.399327+00:00",
   "total_checks": 190,
   "passed": 172,
   "failed": 18,
@@ -493,11 +493,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-27T04:08:48) > consolidated_at (2026-02-27T04:08:47)",
+      "message": "KB generated_at (2026-02-27T10:14:44) > consolidated_at (2026-02-27T10:14:44)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-27T04:08:48.368294+00:00",
-        "cons_ts": "2026-02-27T04:08:47.958103+00:00"
+        "kb_ts": "2026-02-27T10:14:44.955321+00:00",
+        "cons_ts": "2026-02-27T10:14:44.526655+00:00"
       }
     },
     {
@@ -1078,11 +1078,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-27T04:08:48) > consolidated_at (2026-02-27T04:08:47)",
+      "message": "KB generated_at (2026-02-27T10:14:45) > consolidated_at (2026-02-27T10:14:44)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-27T04:08:48.916250+00:00",
-        "cons_ts": "2026-02-27T04:08:47.958103+00:00"
+        "kb_ts": "2026-02-27T10:14:45.517557+00:00",
+        "cons_ts": "2026-02-27T10:14:44.526655+00:00"
       }
     },
     {
@@ -1667,11 +1667,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-27T04:08:49) > consolidated_at (2026-02-27T04:08:47)",
+      "message": "KB generated_at (2026-02-27T10:14:46) > consolidated_at (2026-02-27T10:14:44)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-27T04:08:49.391954+00:00",
-        "cons_ts": "2026-02-27T04:08:47.958103+00:00"
+        "kb_ts": "2026-02-27T10:14:46.016607+00:00",
+        "cons_ts": "2026-02-27T10:14:44.526655+00:00"
       }
     },
     {
@@ -2170,7 +2170,7 @@
       "layer": 3,
       "passed": false,
       "severity": "WARNING",
-      "message": "405 duplicate image paths within lessons",
+      "message": "409 duplicate image paths within lessons",
       "details": {
         "duplicates": [
           {
