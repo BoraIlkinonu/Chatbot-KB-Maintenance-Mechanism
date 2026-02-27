@@ -687,12 +687,14 @@ def run_sync(dry_run=False, download_all=False):
                     file_id = cf["id"]
                     sync_result["revision_history"][file_id] = {
                         "name": cf["name"],
+                        "folder_path": cf.get("folder_path", ""),
                         "term": term_key,
                         "revisions": revisions,
                     }
                     # Update cumulative revision history
                     revision_history["files"][file_id] = {
                         "name": cf["name"],
+                        "folder_path": cf.get("folder_path", ""),
                         "term": term_key,
                         "revisions": revisions,
                     }

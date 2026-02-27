@@ -86,6 +86,7 @@ def analyze_changes(sync_result):
                 is_native_pres = change.get("mime_type") == "application/vnd.google-apps.presentation"
                 admin_flags.append({
                     "file": change.get("name", ""),
+                    "folder_path": change.get("folder_path", ""),
                     "term": term_key,
                     "change_type": ct,
                     "source_type": "native_slides" if is_native_pres else "pptx",

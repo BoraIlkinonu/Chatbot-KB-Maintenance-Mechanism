@@ -122,7 +122,9 @@ def notify_new_images(admin_flags):
         f"{len(admin_flags)} file(s) with new/modified images:\n"
     )
     for flag in admin_flags[:10]:
-        msg += f"  • `{flag.get('file', '')}` ({flag.get('change_type', '')})\n"
+        fp = flag.get("folder_path", "")
+        display = f"{fp}/{flag.get('file', '')}" if fp else flag.get("file", "")
+        msg += f"  • `{display}` ({flag.get('change_type', '')})\n"
 
     msg += "\n_Run Stage 4 (Claude image analysis) when ready._"
 
@@ -321,6 +323,7 @@ def notify_revision_summary(revision_data):
     user_details = {}  # {user_name: [{file, term, time}, ...]}
     for file_id, file_info in revision_data.items():
         file_name = file_info.get("name", "unknown")
+        folder_path = file_info.get("folder_path", "")
         term = file_info.get("term", "")
         for rev in file_info.get("revisions", []):
             user = rev.get("user_name") or rev.get("user_email") or "unknown"
@@ -328,6 +331,7 @@ def notify_revision_summary(revision_data):
                 user_details[user] = []
             user_details[user].append({
                 "file": file_name,
+                "folder_path": folder_path,
                 "term": term,
                 "time": rev.get("time", ""),
             })
@@ -350,6 +354,8 @@ def notify_revision_summary(revision_data):
         for fname, info in sorted(file_latest.items()):
             term_str = f" [{_term_label(info['term'])}]" if info["term"] else ""
             time_str = _format_timestamp(info["time"])
-            msg += f"  • `{fname}`{term_str} — {time_str}\n"
+            fp = info.get("folder_path", "")
+            display = f"{fp}/{fname}" if fp else fname
+            msg += f"  • `{display}`{term_str} — {time_str}\n"
 
     return send_slack(msg)
