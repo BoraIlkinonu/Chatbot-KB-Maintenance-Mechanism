@@ -570,6 +570,18 @@
         "term3/Technical Support Guides/Endstar - /Endstar Troubleshooting.pdf"
       ],
       "action_required": "Review file_manifest.json — classify pending_review files as lesson_content, support_resource, or exclude."
+    },
+    {
+      "alert_type": "new_files_detected",
+      "timestamp": "2026-02-27T03:09:13.108577+00:00",
+      "count": 4,
+      "files": [
+        "term3/Technical Support Guides/Endstar - /Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+        "term3/Technical Support Guides/Endstar - /Endstar Engine User Guide (WIP) (1).pdf",
+        "term3/Technical Support Guides/Endstar - /Endstar Setup Guide.pdf",
+        "term3/Technical Support Guides/Endstar - /Endstar Troubleshooting.pdf"
+      ],
+      "action_required": "Review file_manifest.json — classify pending_review files as lesson_content, support_resource, or exclude."
     }
   ]
 }

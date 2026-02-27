@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-02-26T22:32:17.749093+00:00",
-  "lesson_coverage": 0.9994,
+  "generated_at": "2026-02-27T03:09:13.139275+00:00",
+  "lesson_coverage": 0.9992,
   "lesson_coverage_pct": "99.9%",
-  "overall_coverage": 0.9994,
+  "overall_coverage": 0.9992,
   "overall_coverage_pct": "99.9%",
-  "total_source": 13583,
-  "matched": 11909,
-  "structural": 769,
+  "total_source": 10200,
+  "matched": 8776,
+  "structural": 691,
   "unmatched": 8,
-  "skipped_trivial": 897,
-  "total_kb": 8766,
+  "skipped_trivial": 725,
+  "total_kb": 8765,
   "truncations": [],
   "stage_losses": {
-    "6": [
+    "1": [
       {
         "type": "link",
         "content_preview": "slide10.xml",
@@ -20,7 +20,7 @@
         "location": "slide:19:run_hyperlink",
         "term": 2,
         "lesson": 2,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -29,7 +29,7 @@
         "location": "slide:8:run_hyperlink",
         "term": 2,
         "lesson": 6,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -38,7 +38,7 @@
         "location": "slide:19:run_hyperlink",
         "term": 2,
         "lesson": 6,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -47,7 +47,7 @@
         "location": "slide:8:run_hyperlink",
         "term": 2,
         "lesson": 8,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -56,7 +56,7 @@
         "location": "slide:13:run_hyperlink",
         "term": 2,
         "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -65,7 +65,7 @@
         "location": "slide:16:run_hyperlink",
         "term": 2,
         "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -74,7 +74,7 @@
         "location": "slide:16:run_hyperlink",
         "term": 2,
         "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       },
       {
         "type": "link",
@@ -83,7 +83,7 @@
         "location": "slide:18:run_hyperlink",
         "term": 2,
         "lesson": 12,
-        "reason": "present in stage 5 but missing from KB output"
+        "reason": "link never extracted from source"
       }
     ]
   },
@@ -93,15 +93,15 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Lesson content coverage: 99.9% (12678 matched [769 structural], 8 unmatched of lesson-assigned atoms)",
+      "message": "Lesson content coverage: 99.9% (9467 matched [691 structural], 8 unmatched of lesson-assigned atoms)",
       "details": {
-        "lesson_coverage": 0.9994,
-        "overall_coverage": 0.9994,
-        "lesson_matched": 11909,
-        "lesson_structural": 769,
+        "lesson_coverage": 0.9992,
+        "overall_coverage": 0.9992,
+        "lesson_matched": 8776,
+        "lesson_structural": 691,
         "lesson_unmatched": 8,
-        "total_source": 13583,
-        "skipped_trivial": 897
+        "total_source": 10200,
+        "skipped_trivial": 725
       }
     },
     {
@@ -109,11 +109,11 @@
       "layer": 5,
       "passed": true,
       "severity": "ERROR",
-      "message": "Link extraction coverage: 95.8% (182/190)",
+      "message": "Link extraction coverage: 95.3% (163/171)",
       "details": {
-        "link_coverage": 0.9579,
-        "matched": 182,
-        "total": 190
+        "link_coverage": 0.9532,
+        "matched": 163,
+        "total": 171
       }
     },
     {
@@ -152,11 +152,11 @@
       "layer": 5,
       "passed": true,
       "severity": "INFO",
-      "message": "Speaker note preservation: 100.0% (335/335)",
+      "message": "Speaker note preservation: 100.0% (258/258)",
       "details": {
         "coverage": 1.0,
-        "matched": 335,
-        "total": 335
+        "matched": 258,
+        "total": 258
       }
     },
     {
