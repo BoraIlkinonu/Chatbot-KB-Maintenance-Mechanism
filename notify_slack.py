@@ -335,7 +335,7 @@ def notify_revision_summary(revision_data):
         folder_path = file_info.get("folder_path", "")
         term = file_info.get("term", "")
         for rev in file_info.get("revisions", []):
-            user = rev.get("user_name") or rev.get("user_email") or "unknown"
+            user = rev.get("user_name") or rev.get("user_email") or "(Google system operation)"
             if user not in user_details:
                 user_details[user] = []
             user_details[user].append({
@@ -350,21 +350,25 @@ def notify_revision_summary(revision_data):
 
     msg = f":scroll: *Revision History* ({len(revision_data)} files)\n"
 
-    # Per-user: files with term and last edit time
-    for user, entries in sorted(user_details.items()):
-        # Deduplicate files, keep latest time per file
-        file_latest = {}
+    # Group by term first, then by user within each term
+    term_users = {}  # {term: {user: {file: info}}}
+    for user, entries in user_details.items():
         for e in entries:
+            term = e.get("term", "unknown")
+            term_users.setdefault(term, {}).setdefault(user, {})
             key = e["file"]
-            if key not in file_latest or e["time"] > file_latest[key]["time"]:
-                file_latest[key] = e
+            if key not in term_users[term][user] or e["time"] > term_users[term][user][key]["time"]:
+                term_users[term][user][key] = e
 
-        msg += f"\n*{user}:*\n"
-        for fname, info in sorted(file_latest.items()):
-            term_str = f" [{_term_label(info['term'])}]" if info["term"] else ""
-            time_str = _format_timestamp(info["time"])
-            fp = info.get("folder_path", "")
-            display = f"{fp}/{fname}" if fp else fname
-            msg += f"  • `{display}`{term_str} — {time_str}\n"
+    for term_key in sorted(term_users):
+        term_label = _term_label(term_key)
+        msg += f"\n*{term_label}:* `sources/{term_key}/`\n"
+        for user, file_latest in sorted(term_users[term_key].items()):
+            msg += f"  *{user}:*\n"
+            for fname, info in sorted(file_latest.items()):
+                time_str = _format_timestamp(info["time"])
+                fp = info.get("folder_path", "")
+                display = f"{fp}/{fname}" if fp else fname
+                msg += f"    • `{display}` — {time_str}\n"
 
     return send_slack(msg)

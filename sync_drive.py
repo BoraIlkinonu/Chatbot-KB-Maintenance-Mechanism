@@ -310,11 +310,17 @@ def fetch_file_revisions(drive_service, file_id, file_name):
 
             for rev in resp.get("revisions", []):
                 user = rev.get("lastModifyingUser", {})
+                user_name = user.get("displayName", "")
+                user_email = user.get("emailAddress", "")
+                # Revisions without lastModifyingUser are Google system
+                # operations (auto-conversion, format migration), not human edits
+                if not user_name and not user_email:
+                    user_name = "(Google system operation)"
                 revisions.append({
                     "id": rev.get("id", ""),
                     "time": rev.get("modifiedTime", ""),
-                    "user_email": user.get("emailAddress", ""),
-                    "user_name": user.get("displayName", ""),
+                    "user_email": user_email,
+                    "user_name": user_name,
                     "size": int(rev.get("size", 0) or 0),
                 })
 
