@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T22:32:04.528299+00:00",
+  "generated_at": "2026-02-26T21:22:06.473870+00:00",
   "term": 1,
   "total_templates": 8,
   "templates": [
@@ -95,7 +95,7 @@
         "id": "students-master-checklist",
         "template_name": "Students Master Checklist",
         "programme_component": "summative-product",
-        "purpose": "Clear Goal & Progress Tracking,\"Define a clear objective (e.g., open a door, defeat a boss)\",☐",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
         "weighting_percent": 50,
         "linked_lessons": [
           "Lesson 1",
@@ -138,7 +138,7 @@
         "id": "students-master-checklist-v1",
         "template_name": "Students Master Checklist - V1",
         "programme_component": "summative-product",
-        "purpose": "Clear Goal & Progress Tracking,\"Define a clear objective (e.g., open a door, defeat a boss)\",☐",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
         "weighting_percent": 50,
         "linked_lessons": [
           "Lesson 1",
@@ -181,7 +181,7 @@
         "id": "students-master-checklist-v1",
         "template_name": "Students Master Checklist - V1",
         "programme_component": "summative-product",
-        "purpose": "Clear Goal & Progress Tracking,\"Define a clear objective (e.g., open a door, defeat a boss)\",☐",
+        "purpose": "Clear Goal & Progress TrackingDefine a clear objective (e.g., open a door, defeat a boss) ☐",
         "weighting_percent": 50,
         "linked_lessons": [
           "Lesson 1",
@@ -224,7 +224,7 @@
         "id": "us-curriculum-assessment-guide-term-1-studio-project-explorer-s-programme-endstar-foundations",
         "template_name": "US Curriculum Assessment Guide – Term 1 Studio Project (Explorer’s Programme, Endstar Foundations)",
         "programme_component": "summative-product",
-        "purpose": "US  Curriculum  Assessment  Guide  –  Term",
+        "purpose": "Assessment / Rubric template for the Explorer's Programme",
         "weighting_percent": 50,
         "linked_lessons": [
           "Lesson 1",

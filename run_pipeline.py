@@ -18,7 +18,7 @@ from change_analyzer import analyze_changes
 from notify_slack import (
     notify_sync_complete, notify_build_complete, notify_validation_result,
     notify_new_images, notify_no_changes, notify_error, notify_activity_summary,
-    notify_dry_run_summary, notify_revision_summary,
+    notify_dry_run_summary, notify_revision_summary, notify_pptx_integrity,
 )
 
 
@@ -109,6 +109,9 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
 
             # Notify about activity
             notify_activity_summary(sync_result.get("activity_log", {}))
+
+            # Notify about PPTX integrity issues (errors/warnings only)
+            notify_pptx_integrity(sync_result.get("integrity", {}))
         else:
             print("\n>>> STEP 1: Sync skipped (using latest log)\n")
             logs = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)

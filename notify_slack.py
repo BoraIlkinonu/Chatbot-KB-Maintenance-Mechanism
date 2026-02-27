@@ -135,6 +135,46 @@ def notify_no_changes():
     return send_slack(msg)
 
 
+def notify_pptx_integrity(integrity_results):
+    """Notify about PPTX integrity check results."""
+    if not integrity_results:
+        return False
+
+    total = integrity_results.get("total", 0)
+    valid = integrity_results.get("valid", 0)
+    errors = integrity_results.get("errors", [])
+    warnings = integrity_results.get("warnings", [])
+
+    if not errors and not warnings:
+        return False  # All good, no need to notify
+
+    if errors:
+        emoji = ":rotating_light:"
+        headline = "PPTX INTEGRITY ERRORS"
+    else:
+        emoji = ":warning:"
+        headline = "PPTX Integrity Warnings"
+
+    msg = (
+        f"{emoji} *{headline}*\n"
+        f"Checked: {total} | Valid: {valid} | "
+        f"Errors: {len(errors)} | Warnings: {len(warnings)}\n"
+    )
+
+    for err in errors[:5]:
+        msg += f"\n:x: `{err['file']}`: {err['error'][:100]}"
+
+    for warn in warnings[:5]:
+        msg += f"\n:warning: `{warn['file']}`: {warn['warning']}"
+
+    if len(errors) > 5:
+        msg += f"\n_... and {len(errors) - 5} more errors_"
+    if len(warnings) > 5:
+        msg += f"\n_... and {len(warnings) - 5} more warnings_"
+
+    return send_slack(msg)
+
+
 def notify_error(stage, error_msg):
     """Notify about a pipeline error."""
     msg = (

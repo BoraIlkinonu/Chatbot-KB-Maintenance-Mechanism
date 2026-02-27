@@ -1,7 +1,7 @@
 {
   "verdict": "FAIL",
-  "generated_at": "2026-02-26T22:32:05.042219+00:00",
-  "started_at": "2026-02-26T22:32:04.619142+00:00",
+  "generated_at": "2026-02-26T21:22:06.853554+00:00",
+  "started_at": "2026-02-26T21:22:06.523535+00:00",
   "total_checks": 190,
   "passed": 176,
   "failed": 14,
@@ -493,11 +493,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T22:32:03) > consolidated_at (2026-02-26T22:32:03)",
+      "message": "KB generated_at (2026-02-26T21:22:05) > consolidated_at (2026-02-26T21:22:05)",
       "details": {
         "term": 1,
-        "kb_ts": "2026-02-26T22:32:03.398281+00:00",
-        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
+        "kb_ts": "2026-02-26T21:22:05.717660+00:00",
+        "cons_ts": "2026-02-26T21:22:05.494786+00:00"
       }
     },
     {
@@ -531,9 +531,9 @@
       "details": {
         "term": 1,
         "template_files": [
+          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json",
-          "templates.json"
+          "Term 2 - Templates.json"
         ]
       }
     },
@@ -1050,11 +1050,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T22:32:03) > consolidated_at (2026-02-26T22:32:03)",
+      "message": "KB generated_at (2026-02-26T21:22:05) > consolidated_at (2026-02-26T21:22:05)",
       "details": {
         "term": 2,
-        "kb_ts": "2026-02-26T22:32:03.832885+00:00",
-        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
+        "kb_ts": "2026-02-26T21:22:05.963440+00:00",
+        "cons_ts": "2026-02-26T21:22:05.494786+00:00"
       }
     },
     {
@@ -1088,9 +1088,9 @@
       "details": {
         "term": 2,
         "template_files": [
+          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json",
-          "templates.json"
+          "Term 2 - Templates.json"
         ]
       }
     },
@@ -1655,11 +1655,11 @@
       "layer": 1,
       "passed": true,
       "severity": "INFO",
-      "message": "KB generated_at (2026-02-26T22:32:04) > consolidated_at (2026-02-26T22:32:03)",
+      "message": "KB generated_at (2026-02-26T21:22:06) > consolidated_at (2026-02-26T21:22:05)",
       "details": {
         "term": 3,
-        "kb_ts": "2026-02-26T22:32:04.217145+00:00",
-        "cons_ts": "2026-02-26T22:32:03.012756+00:00"
+        "kb_ts": "2026-02-26T21:22:06.243806+00:00",
+        "cons_ts": "2026-02-26T21:22:05.494786+00:00"
       }
     },
     {
@@ -1707,9 +1707,9 @@
       "details": {
         "term": 3,
         "template_files": [
+          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json",
-          "templates.json"
+          "Term 2 - Templates.json"
         ]
       }
     },
@@ -1797,8 +1797,8 @@
       "message": "3 KB files loaded successfully",
       "details": {
         "files": [
-          "Term 2 - Lesson Based Structure.json",
           "Term 1 - Lesson Based Structure.json",
+          "Term 2 - Lesson Based Structure.json",
           "Term 3 - Lesson Based Structure.json"
         ],
         "errors": []
@@ -1894,10 +1894,10 @@
       "layer": 3,
       "passed": true,
       "severity": "WARNING",
-      "message": "All 1853 image paths exist on disk",
+      "message": "All 1848 image paths exist on disk",
       "details": {
         "missing_count": 0,
-        "total": 1853,
+        "total": 1848,
         "samples": []
       }
     },
@@ -1919,9 +1919,9 @@
       "message": "3 template KB files found",
       "details": {
         "files": [
+          "templates.json",
           "Term 1 - Templates.json",
-          "Term 2 - Templates.json",
-          "templates.json"
+          "Term 2 - Templates.json"
         ]
       }
     },
@@ -1946,7 +1946,7 @@
           {
             "term": 3,
             "lesson_id": 1,
-            "images": 66
+            "images": 63
           },
           {
             "term": 3,
@@ -2142,25 +2142,25 @@
           {
             "term": 2,
             "lesson_id": 9,
-            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
+            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\claude",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 9,
-            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
+            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Make S",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 10,
-            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
+            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\claude",
             "issue": "unencoded space"
           },
           {
             "term": 2,
             "lesson_id": 10,
-            "url": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/sources/term2/Te",
+            "url": "D:\\Chatbot KB Maintenance Mechanism\\sources\\term2\\Teacher Resources\\Curriculum Content\\Week 5\\Make S",
             "issue": "unencoded space"
           },
           {
@@ -2213,58 +2213,58 @@
       "layer": 3,
       "passed": false,
       "severity": "WARNING",
-      "message": "375 duplicate image paths within lessons",
+      "message": "373 duplicate image paths within lessons",
       "details": {
         "duplicates": [
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_001.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_001.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_002.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_002.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_003.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_003.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_004.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_004.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_005.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_005.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_006.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_006.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_007.jpg"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_007.jpg"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_008.png"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_008.png"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_009.jpg"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_009.jpg"
           },
           {
             "term": 3,
             "lesson_id": 3,
-            "path": "/home/runner/work/Chatbot-KB-Maintenance-Mechanism/Chatbot-KB-Maintenance-Mechanism/media/native_slides/Lesson_3/image_010.jpg"
+            "path": "D:\\Chatbot KB Maintenance Mechanism\\media\\native_slides\\Lesson_3\\image_010.jpg"
           }
         ]
       }

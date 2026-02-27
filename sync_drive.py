@@ -19,7 +19,7 @@ from googleapiclient.http import MediaIoBaseDownload
 
 from config import (
     TARGET_FOLDERS, SOURCES_DIR, LOGS_DIR, PREVIOUS_SCAN_FILE,
-    NATIVE_GOOGLE_MIMES, LOG_EVERYTHING, BASE_DIR,
+    NATIVE_GOOGLE_MIMES, LOG_EVERYTHING, BASE_DIR, EXPORTS_FOLDER_ID,
 )
 from auth import authenticate, get_drive_service, get_activity_service
 
@@ -390,8 +390,65 @@ SKIP_MIMES = {
 }
 
 
+def _download_from_exports_folder(service, source_file_id, dest_dir, file_name):
+    """Try to download a pre-exported PPTX from the Apps Script exports folder.
+    Returns (path, md5) or (None, None) if not found."""
+    if not EXPORTS_FOLDER_ID:
+        return None, None
+
+    try:
+        # Search exports folder (and subfolders) for a file whose description
+        # contains this source file ID
+        query = (
+            f"'{EXPORTS_FOLDER_ID}' in parents or "
+            f"'{EXPORTS_FOLDER_ID}' in parents"
+        )
+        # Search recursively: look for PPTX files with source_id in description
+        resp = service.files().list(
+            q=(
+                f"mimeType = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' "
+                f"and trashed = false "
+                f"and fullText contains '{source_file_id}'"
+            ),
+            fields="files(id,name,description,size,md5Checksum)",
+            pageSize=10,
+        ).execute()
+
+        for export_file in resp.get("files", []):
+            desc = export_file.get("description", "")
+            if source_file_id in desc:
+                # Found the pre-exported PPTX — download it as binary
+                print(f"    Found pre-exported PPTX in exports folder: {export_file['name']}")
+                export_id = export_file["id"]
+                request = service.files().get_media(fileId=export_id)
+
+                dest_dir = Path(dest_dir)
+                dest_dir.mkdir(parents=True, exist_ok=True)
+                dest_name = file_name if file_name.endswith(".pptx") else file_name + ".pptx"
+                dest_path = dest_dir / dest_name
+
+                fh = io.BytesIO()
+                downloader = MediaIoBaseDownload(fh, request)
+                done = False
+                while not done:
+                    _, done = downloader.next_chunk()
+
+                with open(dest_path, "wb") as f:
+                    f.write(fh.getvalue())
+
+                local_md5 = hashlib.md5(fh.getvalue()).hexdigest()
+                return str(dest_path), local_md5
+
+    except Exception as e:
+        print(f"    Exports folder lookup failed: {e}")
+
+    return None, None
+
+
 def download_file(service, file_meta, dest_dir):
-    """Download a file from Drive. Exports native Google formats to Office equivalents."""
+    """Download a file from Drive. Exports native Google formats to Office equivalents.
+    For large native Slides that exceed the 10MB export limit, falls back to
+    pre-exported PPTX files from the Apps Script exports folder."""
     fid = file_meta["id"]
     name = file_meta["name"]
     mime = file_meta["mime_type"]
@@ -417,9 +474,22 @@ def download_file(service, file_meta, dest_dir):
     fh = io.BytesIO()
     downloader = MediaIoBaseDownload(fh, request)
 
-    done = False
-    while not done:
-        _, done = downloader.next_chunk()
+    try:
+        done = False
+        while not done:
+            _, done = downloader.next_chunk()
+    except Exception as e:
+        if "exportSizeLimitExceeded" in str(e):
+            # Try the Apps Script exports folder fallback
+            print(f"    Export too large ({name}), checking exports folder...")
+            fallback_path, fallback_md5 = _download_from_exports_folder(
+                service, fid, dest_dir, name
+            )
+            if fallback_path:
+                return fallback_path, fallback_md5
+            # No fallback available — re-raise so caller logs the error
+            print(f"    No pre-exported PPTX found. Run Apps Script to export.")
+        raise
 
     with open(dest_path, "wb") as f:
         f.write(fh.getvalue())
@@ -428,6 +498,69 @@ def download_file(service, file_meta, dest_dir):
     local_md5 = hashlib.md5(fh.getvalue()).hexdigest()
 
     return str(dest_path), local_md5
+
+
+# ──────────────────────────────────────────────────────────
+# PPTX Integrity Verification
+# ──────────────────────────────────────────────────────────
+
+def verify_downloaded_pptx(sources_dir):
+    """Verify all downloaded PPTX files can be opened and have valid content.
+    Returns {valid, total, errors: [{file, error}], warnings: [{file, warning}]}."""
+    results = {"valid": 0, "total": 0, "errors": [], "warnings": []}
+
+    try:
+        from pptx import Presentation
+    except ImportError:
+        print("  [WARN] python-pptx not installed, skipping PPTX integrity check")
+        return results
+
+    pptx_files = list(Path(sources_dir).rglob("*.pptx"))
+    results["total"] = len(pptx_files)
+
+    if not pptx_files:
+        return results
+
+    print(f"\n  Verifying {len(pptx_files)} PPTX files...")
+
+    for pptx_path in pptx_files:
+        rel_path = str(pptx_path.relative_to(sources_dir))
+        try:
+            prs = Presentation(str(pptx_path))
+            slide_count = len(prs.slides)
+            total_shapes = 0
+            total_images = 0
+
+            for slide in prs.slides:
+                for shape in slide.shapes:
+                    total_shapes += 1
+                    if shape.shape_type == 13:  # MSO_SHAPE_TYPE.PICTURE
+                        total_images += 1
+
+            # Warnings for suspicious files
+            if slide_count == 0:
+                results["warnings"].append({
+                    "file": rel_path,
+                    "warning": "Empty presentation (0 slides)",
+                })
+            elif total_shapes == 0:
+                results["warnings"].append({
+                    "file": rel_path,
+                    "warning": f"{slide_count} slides but 0 shapes (possibly corrupt)",
+                })
+            else:
+                results["valid"] += 1
+
+        except Exception as e:
+            results["errors"].append({
+                "file": rel_path,
+                "error": str(e)[:200],
+            })
+
+    print(f"  PPTX integrity: {results['valid']}/{results['total']} valid, "
+          f"{len(results['errors'])} corrupt, {len(results['warnings'])} warnings")
+
+    return results
 
 
 # ──────────────────────────────────────────────────────────
@@ -641,6 +774,15 @@ def run_sync(dry_run=False, download_all=False):
         if errors:
             print(f"  Errors: {len(errors)}")
         print()
+
+    # Verify integrity of downloaded PPTX files
+    if not dry_run:
+        integrity_results = verify_downloaded_pptx(SOURCES_DIR)
+        sync_result["integrity"] = integrity_results
+        if integrity_results["errors"] or integrity_results["warnings"]:
+            print(f"\n  PPTX Integrity: {integrity_results['valid']} valid, "
+                  f"{len(integrity_results['errors'])} errors, "
+                  f"{len(integrity_results['warnings'])} warnings")
 
     # Save current scan as "previous" for next run (skip in dry-run mode)
     if not dry_run:
