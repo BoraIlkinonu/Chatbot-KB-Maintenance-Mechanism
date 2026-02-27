@@ -44,7 +44,7 @@ LESSON_KEYWORDS = {
     4: ["design specification", "team roles", "constraints", "success criteria", "collaboration", "research insights"],
     5: ["brainstorming", "concept generation", "micro-prototype", "storyboard", "core mechanic", "peer feedback"],
     6: ["prototype", "core mechanic", "debugging", "testing", "iteration", "playability"],
-    7: ["gameplay expansion", "immersion", "visuals", "sound", "dialogue", "polish"],
+    7: ["gameplay expansion", "immersion", "visuals", "sound design", "dialogue", "polish"],
     8: ["peer testing", "WWW/EBI", "feedback analysis", "theme mapping", "usability"],
     9: ["iteration", "refinement", "feedback implementation", "impact vs effort", "prioritisation"],
     10: ["team roles", "project manager", "milestones", "timeline", "risk management"],
@@ -270,9 +270,13 @@ def extract_from_native_doc(native_doc):
         if "learning activit" in heading_lower or "starter" in heading_lower:
             result["activities"].extend(content)
 
-        # Assessment Summary
-        if "assessment" in heading_lower and "summary" in heading_lower:
-            result["assessment_summary"] = " ".join(content)
+        # Assessment (Summary, for Learning, of Learning, etc.)
+        if "assessment" in heading_lower:
+            new_text = " ".join(content)
+            if result["assessment_summary"]:
+                result["assessment_summary"] += " " + new_text
+            else:
+                result["assessment_summary"] = new_text
 
         # Curriculum Alignment — keep as individual standards, not joined
         if "curriculum" in heading_lower and "alignment" in heading_lower:
@@ -286,7 +290,7 @@ def extract_from_native_doc(native_doc):
         r"learning objective|lesson objective",  # objectives
         r"success criteria",                     # success_criteria
         r"learning activit|starter",             # activities
-        r"assessment.*summary",                  # assessment
+        r"assessment",                              # assessment
         r"curriculum.*alignment",                # curriculum_alignment
     ]
     remaining = {}
@@ -652,10 +656,14 @@ def extract_learning_objectives_from_slides(slides):
             if len(stripped) < 10:
                 continue
             # Skip noise lines
-            if any(kw in stripped.lower() for kw in [
+            stripped_lower = stripped.lower()
+            if any(kw in stripped_lower for kw in [
                 "by the end", "term ", "lesson ", "click", "scan",
                 "welcome", "today", "explorer", "http",
             ]):
+                continue
+            # Skip success criteria / self-assessment lines (same as Strategy A)
+            if any(pat in stripped_lower for pat in _success_criteria_patterns):
                 continue
             stripped = re.sub(r"^[\d.)\-•*]+\s*", "", stripped)
             if stripped and len(stripped) >= 10:
@@ -1125,20 +1133,23 @@ def extract_keywords(all_text, lesson_num, lesson_specific_text=""):
     """Extract keywords combining dictionary lookup with content analysis.
 
     Args:
-        all_text: Full concatenated text (slides + shared docs) — used for lesson dictionary lookup.
+        all_text: Full concatenated text (slides + shared docs) — fallback for keyword matching.
         lesson_num: Lesson number for LESSON_KEYWORDS dictionary.
         lesson_specific_text: Text from lesson slides, speaker notes, and lesson plan only
-            (not shared assessment/programme docs). Content candidates are matched against
-            this narrower text to avoid programme-wide terms appearing in every lesson.
+            (not shared assessment/programme docs). Both dictionary keywords and content
+            candidates are matched against this narrower text to avoid programme-wide
+            terms appearing in every lesson.
     """
     keywords = []
 
     # Start with lesson-specific keywords that appear in content
+    # Use lesson_specific_text (slides + notes + lesson plan) when available
+    # to avoid programme-wide terms appearing in every lesson
     lesson_kws = LESSON_KEYWORDS.get(lesson_num, [])
-    text_lower = all_text.lower()
+    specific_lower = (lesson_specific_text or all_text).lower()
 
     for kw in lesson_kws:
-        if kw.lower() in text_lower:
+        if kw.lower() in specific_lower:
             keywords.append(kw)
 
     # Additional content-based keywords — matched against lesson-specific text only
@@ -1194,8 +1205,8 @@ def extract_endstar_tools(all_text):
             if re.search(pattern, text_lower):
                 found.add(canonical)
     # Check ambiguous single-word keywords only with Endstar context
-    _context_terms = ["endstar", "platform tool", "game engine", "tool panel",
-                      "toolbox", "endstar tool"]
+    _context_terms = ["endstar", "platform tool", "tool panel",
+                      "toolbox", "endstar tool", "endstar feature"]
     has_context = any(ct in text_lower for ct in _context_terms)
     if has_context:
         for keyword, canonical in ENDSTAR_AMBIGUOUS_TOOLS.items():
@@ -1576,8 +1587,10 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     # Artifacts
     artifacts = extract_artifacts_from_slides(all_slides) if all_slides else []
 
-    # Assessment Signals
+    # Assessment Signals (native first, slides supplement)
     assessment_signals = extract_assessment_signals_from_slides(all_slides) if all_slides else []
+    if native_assessment and native_assessment not in " ".join(assessment_signals):
+        assessment_signals.insert(0, native_assessment)
 
     # Resources
     resources = extract_resources_from_slides(all_slides) if all_slides else []
@@ -1681,6 +1694,16 @@ def build_lesson_kb(lesson_num, lesson_data, term_num):
     # Extract video URLs mentioned in slide text/notes
     slide_video_refs = extract_video_refs_from_slides(all_slides) if all_slides else []
     all_video_refs.extend(slide_video_refs)
+    # Also extract video URLs from native slides/docs links (may not be in consolidated refs)
+    seen_urls = set(vr.get("url", "") for vr in all_video_refs if vr.get("url"))
+    for nl in native_slides_links:
+        url = nl.get("url", "")
+        if url and url not in seen_urls and any(p.search(url) for p in VIDEO_URL_PATTERNS):
+            all_video_refs.append({
+                "url": url, "type": "video_link",
+                "title": nl.get("text", ""), "video_id": "",
+            })
+            seen_urls.add(url)
     video_entries = build_video_entries(all_video_refs)
 
     # Build resource entries from consolidated links + native Slides/Docs links

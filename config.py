@@ -104,7 +104,6 @@ ENDSTAR_TOOLS = {
     "interactions": "Interactions",
     "mechanics tool": "Mechanics",
     "mechanics system": "Mechanics",
-    "logic": "Logic",
     "connections": "Connections",
     "props": "Props",
     "rule block": "Rule Blocks",
@@ -126,6 +125,7 @@ ENDSTAR_AMBIGUOUS_TOOLS = {
     "sound": "Sound",
     "mechanics": "Mechanics",
     "visuals": "Visuals",
+    "logic": "Logic",
 }
 
 # URL patterns for video services

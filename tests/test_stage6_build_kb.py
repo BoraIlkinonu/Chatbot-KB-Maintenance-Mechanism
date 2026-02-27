@@ -28,10 +28,16 @@ class TestExtractEndstarTools:
         assert "Logic" not in tools, "'logical' should not match 'logic'"
 
     def test_exact_word_match(self):
-        """'logic' on its own should match."""
-        text = "Use logic blocks to control game flow"
+        """'logic' is ambiguous — needs Endstar context to match."""
+        text = "Use logic blocks to control game flow in the Endstar platform"
         tools = extract_endstar_tools(text)
         assert "Logic" in tools
+
+    def test_logic_without_context(self):
+        """'logic' without Endstar context should NOT match (ambiguous)."""
+        text = "Use logic blocks to control game flow"
+        tools = extract_endstar_tools(text)
+        assert "Logic" not in tools
 
     def test_case_insensitive(self):
         """Scenario 5: 'TRIGGERS' matches 'Triggers'."""
@@ -52,7 +58,7 @@ class TestExtractEndstarTools:
         assert "NPC dialogue" in tools
 
     def test_multiple_tools_found(self):
-        text = "Use triggers and NPCs with custom interactions and mechanics"
+        text = "Use triggers and NPCs with custom interactions and mechanics in the Endstar platform"
         tools = extract_endstar_tools(text)
         assert "Triggers" in tools
         assert "NPCs" in tools
@@ -296,7 +302,7 @@ Teachers should demo the tool
         slides_md = """# Test
 
 ## Slide 1
-Mechanics Overview
+Endstar Mechanics Overview
 
 ## Slide 2
 Use logic and connections to build interactions
