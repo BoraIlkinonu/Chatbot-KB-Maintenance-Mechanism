@@ -1,7 +1,7 @@
 {
   "_description": "File inclusion/exclusion manifest for KB pipeline. Controls which files are included in lesson KB, excluded from coverage metrics, or flagged for admin review.",
   "_usage": "Pipeline reads this at consolidation time. Verification tool uses it to filter coverage metrics. Admin reviews 'pending_review' entries and moves them to 'include' or 'exclude'.",
-  "_updated": "2026-02-26",
+  "_updated": "2026-02-27",
   "categories": {
     "lesson_content": "Files containing lesson-specific content (slides, lesson plans). Included in KB and coverage metrics.",
     "support_resource": "Programme-level resources (setup guides, troubleshooting, rubrics). Excluded from lesson coverage but may be included in a separate support KB.",
@@ -146,149 +146,149 @@
       "term": 1
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Assention.mp4",
+      "path": "term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Assention.mp4",
+      "category": "media",
+      "term": 3
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+      "category": "media",
+      "term": 3
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Lesson supporting videos/Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+      "category": "media",
+      "term": 3
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Lesson supporting videos/TrailerCreationinCapcut.mp4",
+      "category": "media",
+      "term": 3
+    },
+    {
+      "path": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Assessment Guides/Student Guide/TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Curriculum Alignment/US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+      "category": "admin_doc",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Curriculum Content/LO's and Success Criteria/Term-2LOsSC-and-AI-KS.pdf",
+      "category": "admin_doc",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Curriculum Specifications Term 2 .docx",
+      "category": "admin_doc",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/Defender Of The Desert Term_2_Design Brief.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/Exemplar-Games.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/Guardians Of History Term_2_Design Brief.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/Open Brief Term_2_Design Brief.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/Term_2_Design Briefs All 6 in A4.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/The Grandeur Of Light Term_2_Design Brief.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/The Secrets Of Art Term_2_Design Brief.pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Design Briefs and Exemplar Games/The Time Traveler's Compass Term_2_Design Briefs .pdf",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Learning Schedule.xlsx",
+      "category": "admin_doc",
+      "term": 2
+    },
+    {
+      "path": "term2/Teacher Resources/Term 2 Introduction content.pptx",
+      "category": "admin_doc",
+      "term": 2
+    },
+    {
+      "path": "term2/Technical Support Guides/Classkick/Classkick - how to.docx",
+      "category": "support_resource",
+      "term": 2
+    },
+    {
+      "path": "term2/Technical Support Guides/Classkick/Students Log In Video.mov",
       "category": "media",
       "term": 2
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Fortnite OG Chapter 1 - Season 1 - Gameplay Trailer - Fortnite (1080p, h264).mp4",
+      "path": "term2/Technical Support Guides/Classkick/Teachers Dashboard Classkick 1.mov",
       "category": "media",
       "term": 2
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/Introducing Gen-4.5  Runway - Runway (1080p, h264).mp4",
+      "path": "term2/Technical Support Guides/Classkick/Teachers how to add students.mov",
       "category": "media",
       "term": 2
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Lesson supporting videos/TrailerCreationinCapcut.mp4",
+      "path": "term2/Technical Support Guides/School AI/School AI Login & Space Access.mov",
       "category": "media",
       "term": 2
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Student Guide/TERM 2 ASSESSMENT – STUDENT GUIDE.docx",
+      "path": "term2/Teacher Resources/Professional Development/Week 1.pdf",
       "category": "support_resource",
-      "term": 3
+      "term": 2
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Student Guide/TERM-2-ASSESSMENT-STUDENT GUIDE-Visual Version .pdf",
+      "path": "term2/Teacher Resources/Professional Development/Week 3.pdf",
       "category": "support_resource",
-      "term": 3
+      "term": 2
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME) Visual Version.pdf",
+      "path": "term2/Teacher Resources/Professional Development/Week 5.pdf",
       "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Assessment Guides/Teacher Guide/TERM 2 ASSESSMENT – TEACHER- (PORTFOLIO + GAME).docx",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Alignment/US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
-      "category": "admin_doc",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/LO's and Success Criteria/Term-2LOsSC-and-AI-KS.pdf",
-      "category": "admin_doc",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Specifications Term 2 .docx",
-      "category": "admin_doc",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/Defender Of The Desert Term_2_Design Brief.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/Exemplar-Games.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/Guardians Of History Term_2_Design Brief.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/Open Brief Term_2_Design Brief.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/Term_2_Design Briefs All 6 in A4.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/The Grandeur Of Light Term_2_Design Brief.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/The Secrets Of Art Term_2_Design Brief.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Design Briefs and Exemplar Games/The Time Traveler's Compass Term_2_Design Briefs .pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Learning Schedule.xlsx",
-      "category": "admin_doc",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Term 2 Introduction content.pptx",
-      "category": "admin_doc",
-      "term": 3
-    },
-    {
-      "path": "term3/Technical Support Guides/Classkick/Classkick - how to.docx",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Technical Support Guides/Classkick/Students Log In Video.mov",
-      "category": "media",
-      "term": 3
-    },
-    {
-      "path": "term3/Technical Support Guides/Classkick/Teachers Dashboard Classkick 1.mov",
-      "category": "media",
-      "term": 3
-    },
-    {
-      "path": "term3/Technical Support Guides/Classkick/Teachers how to add students.mov",
-      "category": "media",
-      "term": 3
-    },
-    {
-      "path": "term3/Technical Support Guides/School AI/School AI Login & Space Access.mov",
-      "category": "media",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Professional Development/Week 1.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Professional Development/Week 3.pdf",
-      "category": "support_resource",
-      "term": 3
-    },
-    {
-      "path": "term3/Teacher Resources/Professional Development/Week 5.pdf",
-      "category": "support_resource",
-      "term": 3
+      "term": 2
     },
     {
       "path": "term1/Lessons Resources/Lesson Decks (Slides)/Explorer's Programme - Lesson 1.pptx",
@@ -423,225 +423,225 @@
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 1.pptx",
+      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 1.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 2/Lesson 3.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 2/Lesson 4.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 5.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 7.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 5/claude & blender video.mp4",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 5/Lesson 10.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 5/Lesson 9.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 5/Make Stylized 3D Game Assets FAST with AI .mp4",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 11.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term3/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+      "category": "pending_review",
+      "term": 3,
+      "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 1/Exampler Work - Lesson 1 -2.pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Teacher Slides/Lesson 2.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 2/Designing_Restoring_Light.mp4",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 2/Lesson 3.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 3/Exampler Work - Lesson 5-6 .pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 2/Lesson 4.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 4/Exampler Work - Lesson 7-8.pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 5.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 5/Exampler Work - Lesson 9-10.pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson 6.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Exampler Work - Lesson 11-12 .pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 4/Lesson 7.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Light_of_the_Mosque.mp4",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 4/Lesson 8.pptx",
+      "path": "term2/Teacher Resources/Assessment Guides/Exemplar work/Week 6/The_Unseen_Hero.mp4",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 5/claude & blender video.mp4",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 1.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 5/Lesson 10.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 2.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 5/Lesson 9.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 1 .pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 5/Make Stylized 3D Game Assets FAST with AI .mp4",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 2.pptx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 11.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 3.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson 12.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 4.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 7/Lesson 13.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 5.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term2/Teacher Resources/Curriculum Content/Week 7/Lesson 14.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 6.docx",
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 1/Exampler Work - Lesson 1 -2.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 4/Lesson Plan/Lesson 7.docx",
       "category": "pending_review",
-      "term": 3,
+      "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 2/Designing_Restoring_Light.mp4",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 11.docx",
       "category": "pending_review",
-      "term": 3,
+      "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 3/Exampler Work - Lesson 5-6 .pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 12.docx",
       "category": "pending_review",
-      "term": 3,
+      "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 4/Exampler Work - Lesson 7-8.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Students Slides/Lesson 12.pptx",
       "category": "pending_review",
-      "term": 3,
+      "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     },
     {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 5/Exampler Work - Lesson 9-10.pptx",
+      "path": "term2/Teacher Resources/Curriculum Content/Week 6/Teachers Slides/Lesson 12.pptx",
       "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Exampler Work - Lesson 11-12 .pptx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 6/Light_of_the_Mosque.mp4",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Assessment Guides/Exemplar work/Week 6/The_Unseen_Hero.mp4",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 1.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Lesson Plans/Lesson 2.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 1 .pptx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 1/Teachers Slides/Lesson 2.pptx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 3.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 2/Lesson Plans/Lesson 4.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 5.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 3/Lesson Plans/Lesson 6.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 4/Lesson Plan/Lesson 7.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 11.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Lesson Plans/Lesson 12.docx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Students Slides/Lesson 12.pptx",
-      "category": "pending_review",
-      "term": 3,
-      "detected_at": "2026-02-26T10:01:28.654857+00:00"
-    },
-    {
-      "path": "term3/Teacher Resources/Curriculum Content/Week 6/Teachers Slides/Lesson 12.pptx",
-      "category": "pending_review",
-      "term": 3,
+      "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
     }
   ]
