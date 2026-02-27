@@ -404,3 +404,188 @@ def notify_revision_summary(revision_data):
                 msg += f"    • `{display}` — {time_str}\n"
 
     return send_slack(msg)
+
+
+# ──────────────────────────────────────────────────────────
+# Consolidated Pipeline Summary
+# ──────────────────────────────────────────────────────────
+
+def notify_pipeline_summary(results):
+    """
+    Send ONE consolidated pipeline summary to Slack.
+
+    Replaces the 8+ individual notifications with a single message that has
+    clear severity tiers so admins can instantly distinguish real problems
+    from expected/handled behavior.
+
+    results dict keys:
+        sync_summary, download_errors, integrity, revision_history,
+        activity_log, stages_run, stage_errors, builds, validations,
+        admin_flags, fatal_error, status, completed_at
+    """
+    stage_errors = results.get("stage_errors", [])
+    fatal = results.get("fatal_error")
+
+    # ── Header ──
+    if fatal:
+        header_emoji = ":rotating_light:"
+        header_text = "KB Pipeline FAILED"
+    elif stage_errors:
+        header_emoji = ":warning:"
+        header_text = f"KB Pipeline Complete — {len(stage_errors)} issue(s) need attention"
+    else:
+        header_emoji = ":white_check_mark:"
+        header_text = "KB Pipeline Complete"
+
+    sections = [f"{header_emoji} *{header_text}*"]
+
+    # ── Action Required (genuine failures only) ──
+    action_lines = []
+    if fatal:
+        action_lines.append(f":rotating_light: Fatal error: `{fatal[:300]}`")
+    for err in stage_errors[:5]:
+        action_lines.append(f":x: {err}")
+
+    for v in results.get("validations", []):
+        if v.get("blocked"):
+            action_lines.append(
+                f":no_entry: Term {v['term']} publishing blocked — "
+                f"{v.get('error_count', 0)} error(s)"
+            )
+            for detail in v.get("error_details", [])[:3]:
+                action_lines.append(f"  • {detail}")
+
+    if action_lines:
+        sections.append("*Action Required:*\n" + "\n".join(action_lines))
+
+    # ── Sync ──
+    s = results.get("sync_summary")
+    if s:
+        sync_text = (
+            f"*Sync:* {s.get('total_files', 0)} files scanned | "
+            f"+{s.get('new', 0)} new, ~{s.get('modified', 0)} modified | "
+            f"{s.get('downloaded', 0)} downloaded"
+        )
+
+        download_errors = results.get("download_errors", [])
+        if download_errors:
+            export_large = [e for e in download_errors
+                            if "exportSizeLimitExceeded" in e.get("error", "")
+                            or ("403" in e.get("error", "")
+                                and "export" in e.get("error", "").lower())]
+            other_dl = [e for e in download_errors if e not in export_large]
+
+            if export_large:
+                sync_text += (
+                    f"\n  :information_source: {len(export_large)} native Google Slides "
+                    f"too large for PPTX export — text extracted via native API (Stage 3)"
+                )
+            if other_dl:
+                sync_text += (
+                    f"\n  :warning: {len(other_dl)} unexpected download failure(s) "
+                    f"— see sync log for details"
+                )
+
+        sections.append(sync_text)
+
+    # ── Build ──
+    builds = results.get("builds", [])
+    if builds:
+        parts = [
+            f"T{b['term']}: {b['lessons']} lessons"
+            for b in sorted(builds, key=lambda x: str(x.get('term', 0)))
+        ]
+        sections.append(f"*Build:* {' | '.join(parts)}")
+
+    # ── Validation ──
+    validations = results.get("validations", [])
+    if validations:
+        val_parts = []
+        for v in sorted(validations, key=lambda x: str(x.get("term", 0))):
+            st = v.get("status", "UNKNOWN")
+            conf = v.get("confidence", "?")
+            if v.get("blocked"):
+                ve = ":no_entry:"
+            elif st == "VALID":
+                ve = ":white_check_mark:"
+            elif "WARNING" in st:
+                ve = ":large_yellow_circle:"
+            else:
+                ve = ":warning:"
+            val_parts.append(f"{ve} T{v['term']}: {st} ({conf}%)")
+        sections.append(f"*Validation:* {' | '.join(val_parts)}")
+
+    # ── Notes (informational, non-alarming) ──
+    note_items = []
+
+    integrity = results.get("integrity", {})
+    int_errors = integrity.get("errors", [])
+    int_warnings = integrity.get("warnings", [])
+    if int_errors:
+        note_items.append(f"PPTX integrity: {len(int_errors)} error(s) — see sync log")
+    elif int_warnings:
+        note_items.append(f"PPTX integrity: {len(int_warnings)} warning(s) — see sync log")
+
+    admin_flags = results.get("admin_flags", [])
+    if admin_flags:
+        note_items.append(f"{len(admin_flags)} file(s) with new images — run Stage 4 when ready")
+
+    if note_items:
+        sections.append(
+            "*Notes:*\n" + "\n".join(f"  :information_source: {n}" for n in note_items)
+        )
+
+    # ── Activity (compact summary) ──
+    activity_log = results.get("activity_log", {})
+    total_activity = sum(len(v) for v in activity_log.values()) if activity_log else 0
+    if total_activity > 0:
+        user_counts = {}
+        for term_activities in activity_log.values():
+            for a in term_activities:
+                for actor in a.get("actors", []):
+                    user = actor.get("person_name", "unknown")
+                    user_counts[user] = user_counts.get(user, 0) + 1
+
+        activity_text = f"*Drive Activity:* {total_activity} events"
+        user_lines = []
+        for user, count in sorted(user_counts.items(), key=lambda x: -x[1])[:5]:
+            user_lines.append(f"  • {user}: {count} event(s)")
+        if user_lines:
+            activity_text += "\n" + "\n".join(user_lines)
+        sections.append(activity_text)
+
+    # ── Revisions (compact summary) ──
+    revision_history = results.get("revision_history", {})
+    if revision_history:
+        by_term = {}
+        for file_id, info in revision_history.items():
+            term = info.get("term", "unknown")
+            by_term.setdefault(term, []).append(info)
+
+        rev_text = f"*Revisions:* {len(revision_history)} changed file(s)"
+        for term_key in sorted(by_term)[:3]:
+            term_label = _term_label(term_key)
+            files = by_term[term_key]
+            names = [f"`{f.get('name', '?')}`" for f in files[:4]]
+            line = f"  {term_label}: {', '.join(names)}"
+            if len(files) > 4:
+                line += f" +{len(files) - 4} more"
+            rev_text += "\n" + line
+        sections.append(rev_text)
+
+    # ── Footer ──
+    stages_run = results.get("stages_run", [])
+    if stages_run:
+        passed = sum(1 for sr in stages_run if sr.get("status") == "success")
+        failed = sum(1 for sr in stages_run if sr.get("status") == "failed")
+        footer = f"_Stages: {passed} passed"
+        if failed:
+            footer += f", {failed} failed"
+        completed_at = results.get("completed_at", "")
+        if completed_at:
+            footer += f" | {completed_at[:16]} UTC"
+        footer += "_"
+        sections.append(footer)
+
+    msg = "\n\n".join(sections)
+    return send_slack(msg)

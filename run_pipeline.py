@@ -16,9 +16,9 @@ from config import STAGES, LOGS_DIR, OUTPUT_DIR
 from sync_drive import run_sync
 from change_analyzer import analyze_changes
 from notify_slack import (
-    notify_sync_complete, notify_build_complete, notify_validation_result,
-    notify_new_images, notify_no_changes, notify_error, notify_activity_summary,
-    notify_dry_run_summary, notify_revision_summary, notify_pptx_integrity,
+    notify_no_changes, notify_error, notify_dry_run_summary,
+    notify_revision_summary, notify_activity_summary,
+    notify_pipeline_summary,
 )
 
 
@@ -121,6 +121,7 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         "status": "running",
     }
 
+    pipeline_results = {}  # Collected for consolidated Slack notification
     sync_result = None
 
     try:
@@ -146,14 +147,13 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync(download_all=download_all)
             download_errors = sync_result.get("download_errors", [])
-            notify_sync_complete(sync_result["summary"], download_errors=download_errors)
-            notify_revision_summary(sync_result.get("revision_history", {}))
 
-            # Notify about activity
-            notify_activity_summary(sync_result.get("activity_log", {}))
-
-            # Notify about PPTX integrity issues (errors/warnings only)
-            notify_pptx_integrity(sync_result.get("integrity", {}))
+            # Collect for consolidated notification
+            pipeline_results["sync_summary"] = sync_result["summary"]
+            pipeline_results["download_errors"] = download_errors
+            pipeline_results["revision_history"] = sync_result.get("revision_history", {})
+            pipeline_results["activity_log"] = sync_result.get("activity_log", {})
+            pipeline_results["integrity"] = sync_result.get("integrity", {})
 
             # Write sync summary to GitHub step summary
             _write_sync_github_summary(sync_result["summary"], download_errors)
@@ -209,7 +209,6 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
                     "status": "failed",
                     "error": str(e),
                 })
-                notify_error(stage_name, str(e))
                 # Continue with remaining stages unless it's a critical failure
                 if stage_num in (5, 6):  # Consolidation or build failure is critical
                     print("Critical stage failed. Stopping pipeline.")
@@ -218,25 +217,55 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         # ─── Step 4: Handle Admin Flags ──────────────────
         if analysis.get("admin_flags"):
             print(f"\n>>> Admin Flags: {len(analysis['admin_flags'])} files need image analysis")
-            notify_new_images(analysis["admin_flags"])
+            pipeline_results["admin_flags"] = analysis["admin_flags"]
 
-        # ─── Step 5: Report Results ──────────────────────
-        # Check validation results
+        # ─── Step 5: Collect Results ─────────────────────
+        # Collect validation results
         if 7 in stages_to_run:
             from config import VALIDATION_DIR
             val_reports = list(VALIDATION_DIR.glob("validation_report_term*.json"))
+            validations = []
+            builds = []
             for vr in val_reports:
                 with open(vr, "r", encoding="utf-8") as f:
                     report = json.load(f)
-                notify_validation_result(report)
 
-                # Notify build complete
                 term = vr.stem.replace("validation_report_term", "")
+                validations.append({
+                    "term": term,
+                    "status": report.get("status", "UNKNOWN"),
+                    "confidence": report.get("overall_confidence", 0),
+                    "blocked": report.get("publish_blocked", False),
+                    "error_count": report.get("summary", {}).get("errors", 0),
+                    "warning_count": report.get("summary", {}).get("warnings", 0),
+                    "error_details": [
+                        a.get("message", "")
+                        for a in report.get("anomalies_by_severity", {}).get("ERROR", [])[:5]
+                    ],
+                })
+
                 kb_path = OUTPUT_DIR / f"Term {term} - Lesson Based Structure.json"
                 if kb_path.exists():
                     with open(kb_path, "r", encoding="utf-8") as f:
                         kb = json.load(f)
-                    notify_build_complete(term, kb.get("total_lessons", 0), str(kb_path))
+                    builds.append({"term": term, "lessons": kb.get("total_lessons", 0)})
+
+            pipeline_results["validations"] = validations
+            pipeline_results["builds"] = builds
+
+        elif 6 in stages_to_run:
+            # Build ran but no validation — still report what was built
+            builds = []
+            for kb_file in sorted(OUTPUT_DIR.glob("Term * - Lesson Based Structure.json")):
+                try:
+                    with open(kb_file, "r", encoding="utf-8") as f:
+                        kb = json.load(f)
+                    term_str = kb_file.stem.split(" - ")[0].replace("Term ", "")
+                    builds.append({"term": term_str, "lessons": kb.get("total_lessons", 0)})
+                except Exception:
+                    pass
+            if builds:
+                pipeline_results["builds"] = builds
 
         # ─── Step 6: Cross-Validation (optional) ──────────
         if cross_validate:
@@ -272,12 +301,29 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         traceback.print_exc()
         pipeline_log["errors"].append(error_msg)
         pipeline_log["status"] = "failed"
-        notify_error("Pipeline", str(e))
+        pipeline_results["fatal_error"] = str(e)
 
     # Save pipeline log
     log_path = LOGS_DIR / f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
     with open(log_path, "w", encoding="utf-8") as f:
         json.dump(pipeline_log, f, indent=2, ensure_ascii=False)
+
+    # ── Send ONE consolidated Slack notification ──
+    pipeline_results["stage_errors"] = [
+        f"Stage {sr['stage']} ({sr['name']}): {sr.get('error', '')[:200]}"
+        for sr in pipeline_log["stages_run"]
+        if sr.get("status") == "failed"
+    ]
+    pipeline_results["stages_run"] = pipeline_log["stages_run"]
+    pipeline_results["completed_at"] = pipeline_log.get("completed_at", "")
+    pipeline_results["status"] = pipeline_log["status"]
+
+    try:
+        notify_pipeline_summary(pipeline_results)
+    except Exception:
+        # Summary build failed — fall back to simple error notification
+        if pipeline_results.get("fatal_error"):
+            notify_error("Pipeline", pipeline_results["fatal_error"])
 
     print(f"\n{'=' * 60}")
     print(f"  Pipeline {pipeline_log['status'].upper()}")
