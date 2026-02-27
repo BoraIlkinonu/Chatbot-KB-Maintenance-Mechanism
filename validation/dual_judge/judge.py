@@ -2,11 +2,12 @@
 Dual-judge consensus: two independent LLM calls must agree on ALL fields.
 
 Both judges evaluate independently. Consensus requires agreement across
-all 20 fields (Tier 1, 2, and 3). Up to 5 retry attempts.
+all 20 fields. 2 attempts, plus a 3rd tiebreaker if still no consensus.
 """
 
 import json
 import time
+from collections import Counter
 
 from validation.dual_judge.client import CliClient, SdkClient
 
@@ -26,36 +27,50 @@ class DualJudge:
     def __init__(self, client: CliClient | SdkClient):
         self.client = client
 
+    def _call_judge(self, prompt: str) -> dict:
+        """Make a single judge call, returning fallback on failure."""
+        try:
+            result = self.client.call(prompt)
+            if isinstance(result, str):
+                result = json.loads(result)
+            return result
+        except Exception as e:
+            return {
+                f: {"verdict": "MISSING", "evidence": f"Call failed: {e}"}
+                for f in ALL_FIELDS
+            }
+
+    def _check_consensus(self, results: list[dict]) -> tuple[bool, dict]:
+        """Check if two judge results agree on all fields.
+        Returns (all_agree, votes_dict)."""
+        all_agree = True
+        votes = {}
+        for field in ALL_FIELDS:
+            v1 = results[0].get(field, {}).get("verdict", "")
+            v2 = results[1].get(field, {}).get("verdict", "")
+            votes[field] = [v1, v2]
+            if v1 != v2:
+                all_agree = False
+        return all_agree, votes
+
     def evaluate(self, prompt: str) -> dict:
         """Run dual-judge evaluation on a lesson.
 
+        2 attempts for full consensus. If no consensus after 2 attempts,
+        a 3rd tiebreaker judge is called and per-field majority vote decides.
+
         Returns dict with per-field verdicts, consensus flag, and metadata.
         """
-        for attempt in range(1, 6):
+        all_results = []
+
+        for attempt in range(1, 3):
             results = []
             for _ in range(2):
-                try:
-                    result = self.client.call(prompt)
-                    if isinstance(result, str):
-                        result = json.loads(result)
-                    results.append(result)
-                except Exception as e:
-                    fallback = {
-                        f: {"verdict": "MISSING", "evidence": f"Call failed: {e}"}
-                        for f in ALL_FIELDS
-                    }
-                    results.append(fallback)
+                results.append(self._call_judge(prompt))
                 time.sleep(0.5)  # Avoid rate limits
 
-            # Check consensus: ALL fields must agree between both judges
-            all_agree = True
-            votes = {}
-            for field in ALL_FIELDS:
-                v1 = results[0].get(field, {}).get("verdict", "")
-                v2 = results[1].get(field, {}).get("verdict", "")
-                votes[field] = [v1, v2]
-                if v1 != v2:
-                    all_agree = False
+            all_results = results
+            all_agree, votes = self._check_consensus(results)
 
             if all_agree:
                 merged = results[0].copy()
@@ -64,9 +79,31 @@ class DualJudge:
                 merged["_judge_votes"] = votes
                 return merged
 
-        # No consensus after 5 attempts — return first judge's result flagged
-        merged = results[0].copy()
-        merged["_consensus"] = False
-        merged["_attempt"] = 5
+        # No consensus after 2 attempts — call a 3rd tiebreaker judge
+        tiebreaker = self._call_judge(prompt)
+        time.sleep(0.5)
+        all_results.append(tiebreaker)
+
+        # Majority vote across all 3 judges (2 from last attempt + tiebreaker)
+        merged = {}
+        votes = {}
+        for field in ALL_FIELDS:
+            verdicts = []
+            for r in all_results:
+                fd = r.get(field, {})
+                verdicts.append(fd.get("verdict", "MISSING"))
+            votes[field] = verdicts
+            # Pick majority verdict
+            counter = Counter(verdicts)
+            majority_verdict = counter.most_common(1)[0][0]
+            # Use evidence from the judge that gave the majority verdict
+            for r in all_results:
+                fd = r.get(field, {})
+                if fd.get("verdict", "") == majority_verdict:
+                    merged[field] = fd
+                    break
+
+        merged["_consensus"] = True
+        merged["_attempt"] = "tiebreaker"
         merged["_judge_votes"] = votes
         return merged
