@@ -75,10 +75,10 @@ def _write_sync_github_summary(summary, download_errors):
         other_errors = [e for e in download_errors if e not in export_errors]
 
         if export_errors:
-            lines.append(f"### Export-size-limit failures ({len(export_errors)} files)")
-            lines.append("These native Google Slides exceed the 10MB export limit. "
-                         "The Apps Script pre-export fallback did not have a cached copy.")
-            lines.append("**Action:** Run `exportAllLargeSlides()` in Apps Script, then re-run pipeline.\n")
+            lines.append(f"### Large Google Slides — PPTX export skipped ({len(export_errors)} files)")
+            lines.append("> These native Google Slides exceed the 10MB PPTX export limit. "
+                         "**Text and links are still extracted via native Slides API (Stage 3) — no content loss.** "
+                         "Only PPTX-based image extraction is skipped.\n")
             for err in export_errors:
                 lines.append(f"- `{err['file']}` [{err.get('term', '')}]")
             lines.append("")

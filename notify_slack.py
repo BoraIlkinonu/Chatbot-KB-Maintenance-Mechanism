@@ -73,9 +73,9 @@ def notify_sync_complete(sync_summary, revision_count=0, download_errors=None):
 
         if export_too_large:
             msg += (
-                f"\n:warning: *{len(export_too_large)} native Google Slides too large to export via API*\n"
-                f"_Apps Script pre-export was also not found for these files._\n"
-                f"_Action: run `exportAllLargeSlides()` in Apps Script, then re-run pipeline._\n"
+                f"\n:information_source: *{len(export_too_large)} native Google Slides too large for PPTX export*\n"
+                f"_Text and links are still extracted via native Google Slides API (Stage 3) — no content loss._\n"
+                f"_Only PPTX-based image extraction is skipped for these files._\n"
             )
             for err in export_too_large[:15]:
                 term_label = _term_label(err.get("term", ""))
