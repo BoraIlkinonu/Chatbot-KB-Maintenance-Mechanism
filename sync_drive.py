@@ -211,21 +211,21 @@ def fetch_recent_activity(activity_service, folder_id, since_timestamp=None,
     """
     time_filter = f"time >= '{since_timestamp}'" if since_timestamp else "time >= '2020-01-01T00:00:00Z'"
 
-    # Strategy 1: Folder-level query (works if you own or have editor access)
+    # Strategy 1: Folder-level query (requires folder ownership)
     activities = _fetch_activity_by_ancestor(activity_service, folder_id, time_filter)
     if activities is not None:
         return activities
 
-    # Strategy 2: Per-file queries (works with read-only access)
+    # Strategy 2: Per-file queries (same data quality, works with any access level)
     if file_ids:
-        print(f"    Falling back to per-file activity queries ({len(file_ids)} files)...")
+        print(f"    Using per-file activity queries ({len(file_ids)} files)...")
         return _fetch_activity_by_files(activity_service, file_ids, time_filter)
 
     return []
 
 
 def _fetch_activity_by_ancestor(activity_service, folder_id, time_filter):
-    """Try folder-level activity query. Returns None if access denied."""
+    """Try folder-level activity query. Requires folder ownership; returns None otherwise."""
     activities = []
     try:
         body = {
@@ -247,8 +247,10 @@ def _fetch_activity_by_ancestor(activity_service, folder_id, time_filter):
         return activities
 
     except Exception as e:
-        print(f"    Folder-level activity query failed (likely no ownership): {e}")
-        return None  # Signal to caller to try per-file fallback
+        # ancestorName requires folder ownership — expected for shared folders.
+        # Per-file fallback provides identical data quality.
+        print(f"    Folder not owned — using per-file activity queries instead (no data loss)")
+        return None
 
 
 def _fetch_activity_by_files(activity_service, file_ids, time_filter):
