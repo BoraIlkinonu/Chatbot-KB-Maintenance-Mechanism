@@ -589,3 +589,142 @@ def notify_pipeline_summary(results):
 
     msg = "\n\n".join(sections)
     return send_slack(msg)
+
+
+# ──────────────────────────────────────────────────────────
+# LLM Pipeline Notifications
+# ──────────────────────────────────────────────────────────
+
+def notify_llm_pipeline_complete(results):
+    """
+    Send notification for LLM-based pipeline completion.
+
+    results dict keys:
+        sync_summary, extraction, dual_judge, builds,
+        steps_run, step_errors, status, completed_at, fatal_error
+    """
+    fatal = results.get("fatal_error")
+    step_errors = results.get("step_errors", [])
+
+    if fatal:
+        header_emoji = ":rotating_light:"
+        header_text = "KB Pipeline FAILED"
+    elif step_errors:
+        header_emoji = ":warning:"
+        header_text = f"KB Pipeline Complete — {len(step_errors)} issue(s)"
+    else:
+        header_emoji = ":white_check_mark:"
+        header_text = "KB Rebuilt via LLM Extraction"
+
+    sections = [f"{header_emoji} *{header_text}*"]
+
+    # Action required
+    if fatal:
+        sections.append(f":rotating_light: Fatal: `{fatal[:300]}`")
+    for err in step_errors[:5]:
+        sections.append(f":x: {err}")
+
+    # Sync summary
+    s = results.get("sync_summary")
+    if s:
+        sections.append(
+            f"*Sync:* {s.get('total_files', 0)} files | "
+            f"+{s.get('new', 0)} new, ~{s.get('modified', 0)} modified | "
+            f"{s.get('downloaded', 0)} downloaded"
+        )
+
+    # Extraction stats
+    ext = results.get("extraction")
+    if ext:
+        sections.append(
+            f"*Extraction:* {ext.get('extracted', 0)} extracted | "
+            f"{ext.get('cached', 0)} cached (unchanged) | "
+            f"{ext.get('errors', 0)} errors | "
+            f"{ext.get('calls_made', 0)} LLM calls"
+        )
+
+    # Build stats
+    builds = results.get("builds", [])
+    if builds:
+        parts = [
+            f"T{b['term']}: {b['lessons']} lessons"
+            for b in sorted(builds, key=lambda x: str(x.get('term', 0)))
+        ]
+        sections.append(f"*Build:* {' | '.join(parts)}")
+
+    # Dual-judge scores
+    dj = results.get("dual_judge")
+    if dj:
+        scores = dj.get("scores", {})
+        verdict = dj.get("verdict", "?")
+
+        verdict_emoji = {
+            "PASS": ":white_check_mark:",
+            "NEEDS_REVIEW": ":warning:",
+            "FAIL": ":no_entry:",
+        }.get(verdict, ":question:")
+
+        sections.append(
+            f"*Dual-Judge:* {verdict_emoji} {verdict} | "
+            f"T1: {scores.get('tier1', 0):.0%} | "
+            f"T2: {scores.get('tier2', 0):.0%} | "
+            f"T3: {scores.get('tier3', 0):.0%} | "
+            f"Overall: {scores.get('overall', 0):.0%}"
+        )
+
+        if verdict == "NEEDS_REVIEW":
+            sections.append(":warning: Below 95% on Tier 1 — review needed")
+
+    # Footer
+    steps_run = results.get("steps_run", [])
+    if steps_run:
+        passed = sum(1 for sr in steps_run if sr.get("status") == "success")
+        failed = sum(1 for sr in steps_run if sr.get("status") == "failed")
+        footer = f"_Steps: {passed} passed"
+        if failed:
+            footer += f", {failed} failed"
+        completed_at = results.get("completed_at", "")
+        if completed_at:
+            footer += f" | {completed_at[:16]} UTC"
+        footer += "_"
+        sections.append(footer)
+
+    return send_slack("\n\n".join(sections))
+
+
+def notify_sources_ready(results):
+    """
+    Notify that sources are ready for local processing (fallback mode).
+
+    Sent when no LLM backend is available in CI.
+    """
+    import os
+    run_number = os.environ.get("GITHUB_RUN_NUMBER", "?")
+
+    s = results.get("sync_summary", {})
+
+    sections = [
+        ":arrows_counterclockwise: *Source Files Changed — Local Processing Required*",
+    ]
+
+    if s:
+        sections.append(
+            f"*Changes:*\n"
+            f"  +{s.get('new', 0)} new | ~{s.get('modified', 0)} modified | "
+            f"{s.get('downloaded', 0)} downloaded"
+        )
+
+    sections.append(
+        f":arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"
+    )
+
+    sections.append(
+        ":computer: *Run locally:*\n"
+        "```\n"
+        "python llm_extract.py --backend cli\n"
+        "python build_kb.py\n"
+        "python validate_kb_judge.py --backend cli --verbose\n"
+        "```"
+    )
+
+    return send_slack("\n\n".join(sections))

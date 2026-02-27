@@ -59,6 +59,14 @@ def extract_lesson_from_path(path, term=None):
     path_lower = path.lower()
     max_lesson = TERM_MAX_LESSONS.get(term, 24) if term else 24
 
+    # "Lesson X -Y" or "Lesson X - Y" format (exemplar files like "Lesson 1 -2.md")
+    # Must be checked BEFORE single-lesson regex to avoid matching only "Lesson 1"
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start <= max_lesson and 1 <= end <= max_lesson and start != end:
+            return list(range(start, end + 1))
+
     # Explicit "Lesson X"
     match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
     if match:

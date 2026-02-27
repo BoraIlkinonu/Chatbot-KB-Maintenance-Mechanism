@@ -115,8 +115,6 @@ ENDSTAR_TOOLS = {
     "sound engine": "Sound",
     "npc dialogue": "NPC dialogue",
     "level flow": "Level flow",
-    "prototype": "Prototyping tools",
-    "prototyping": "Prototyping tools",
 }
 
 # Single-word Endstar tool keywords that are ambiguous and need context
@@ -126,6 +124,8 @@ ENDSTAR_AMBIGUOUS_TOOLS = {
     "mechanics": "Mechanics",
     "visuals": "Visuals",
     "logic": "Logic",
+    "prototype": "Prototyping tools",
+    "prototyping": "Prototyping tools",
 }
 
 # URL patterns for video services

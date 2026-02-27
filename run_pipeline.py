@@ -1,7 +1,16 @@
 """
-Pipeline Orchestrator
-Main entry point that runs: sync → analyze → stages → validate → notify.
-Reads change analyzer output to determine which stages to execute.
+Pipeline Orchestrator (LLM-based)
+
+5-step pipeline:
+  1. Sync Drive — download source files
+  2. Convert to text — PPTX/DOCX/PDF/XLSX → markdown, Google Docs/Slides → text
+  2.5 Analyze images (optional) — Claude describes extracted images
+  3. LLM Extract — Claude extracts all KB fields as JSON
+  4. Build KB — assemble LLM JSON into final KB schema
+  5. Dual-Judge — two independent Claude judges score KB against source
+
+Fallback mode: if no LLM backend is available, uploads converted sources
+as artifact and notifies Slack for local processing.
 """
 
 import sys
@@ -12,44 +21,12 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import STAGES, LOGS_DIR, OUTPUT_DIR
+from config import LOGS_DIR, OUTPUT_DIR
 from sync_drive import run_sync
-from change_analyzer import analyze_changes
 from notify_slack import (
-    notify_no_changes, notify_error, notify_dry_run_summary,
-    notify_revision_summary, notify_activity_summary,
-    notify_pipeline_summary,
+    notify_no_changes, notify_error,
+    notify_llm_pipeline_complete, notify_sources_ready,
 )
-
-
-def run_stage(stage_num, sync_result=None):
-    """Run a single pipeline stage by number."""
-    if stage_num == 1:
-        from extract_media import run_extraction
-        return run_extraction()
-    elif stage_num == 2:
-        from convert_docs import run_conversion
-        return run_conversion()
-    elif stage_num == 3:
-        from extract_native_google import run_native_extraction
-        return run_native_extraction(sync_result)
-    elif stage_num == 5:
-        from consolidate import run_consolidation
-        return run_consolidation()
-    elif stage_num == 6:
-        from build_kb import run_build
-        result = run_build()
-        # Also build templates after the main KB
-        from build_templates import run_build_templates
-        run_build_templates()
-        return result
-    elif stage_num == 7:
-        from qa.runner import run_qa
-        report = run_qa(layers=[1, 3, 4])
-        return {"verdict": report.compute_verdict(), "exit_code": report.exit_code()}
-    else:
-        print(f"Stage {stage_num} is not an automated pipeline stage.")
-        return None
 
 
 def _write_sync_github_summary(summary, download_errors):
@@ -60,8 +37,8 @@ def _write_sync_github_summary(summary, download_errors):
         return
 
     lines = ["## Sync Results\n"]
-    lines.append(f"| Metric | Count |")
-    lines.append(f"|--------|-------|")
+    lines.append("| Metric | Count |")
+    lines.append("|--------|-------|")
     lines.append(f"| Files scanned | {summary['total_files']} |")
     lines.append(f"| New | {summary['new']} |")
     lines.append(f"| Modified | {summary['modified']} |")
@@ -76,9 +53,7 @@ def _write_sync_github_summary(summary, download_errors):
 
         if export_errors:
             lines.append(f"### Large Google Slides — PPTX export skipped ({len(export_errors)} files)")
-            lines.append("> These native Google Slides exceed the 10MB PPTX export limit. "
-                         "**Text and links are still extracted via native Slides API (Stage 3) — no content loss.** "
-                         "Only PPTX-based image extraction is skipped.\n")
+            lines.append("> Text extracted via native Slides API — no content loss.\n")
             for err in export_errors:
                 lines.append(f"- `{err['file']}` [{err.get('term', '')}]")
             lines.append("")
@@ -93,21 +68,22 @@ def _write_sync_github_summary(summary, download_errors):
         f.write("\n".join(lines) + "\n")
 
 
-def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
-                  dry_run=False, download_all=False):
+def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
+                 dry_run=False, download_all=False, force_extract=False):
     """
-    Execute the full pipeline.
+    Execute the LLM-based pipeline.
 
     Args:
-        skip_sync: If True, skip Drive sync and use latest sync log
-        force_full: If True, run all stages regardless of changes
-        cross_validate: If True, run Stage 8 cross-validation after build
-        dry_run: If True, scan Drive and report changes without downloading or running stages
-        download_all: If True, download ALL files from Drive (not just changed ones)
+        skip_sync: Skip Drive sync, use latest sync log
+        force_full: Force full rebuild regardless of changes
+        analyze_images: Run optional image analysis step
+        dry_run: Scan Drive and report changes without processing
+        download_all: Download ALL files from Drive (for CI)
+        force_extract: Force re-extraction even if LLM cache is valid
     """
     print()
     print("=" * 60)
-    print("  Curriculum KB Maintenance Pipeline")
+    print("  Curriculum KB Maintenance Pipeline (LLM)")
     print(f"  {datetime.now(timezone.utc).isoformat()}")
     print("=" * 60)
     print()
@@ -116,12 +92,12 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
 
     pipeline_log = {
         "started_at": datetime.now(timezone.utc).isoformat(),
-        "stages_run": [],
+        "steps_run": [],
         "errors": [],
         "status": "running",
     }
 
-    pipeline_results = {}  # Collected for consolidated Slack notification
+    pipeline_results = {}
     sync_result = None
 
     try:
@@ -129,168 +105,148 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         if dry_run:
             print("\n>>> STEP 1: Drive Sync (DRY RUN)\n")
             sync_result = run_sync(dry_run=True)
+            from notify_slack import notify_dry_run_summary
             notify_dry_run_summary(sync_result)
-            notify_revision_summary(sync_result.get("revision_history", {}))
-            notify_activity_summary(sync_result.get("activity_log", {}))
             pipeline_log["status"] = "dry_run"
             pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
-            # Save pipeline log and exit early
-            log_path = LOGS_DIR / f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
-            with open(log_path, "w", encoding="utf-8") as f:
-                json.dump(pipeline_log, f, indent=2, ensure_ascii=False)
-            print(f"\n{'=' * 60}")
-            print(f"  Dry run complete — no stages executed")
-            print(f"  Log: {log_path}")
-            print(f"{'=' * 60}\n")
+            _save_pipeline_log(pipeline_log)
             return pipeline_log
         elif not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync(download_all=download_all)
-            download_errors = sync_result.get("download_errors", [])
-
-            # Collect for consolidated notification
             pipeline_results["sync_summary"] = sync_result["summary"]
-            pipeline_results["download_errors"] = download_errors
-            pipeline_results["revision_history"] = sync_result.get("revision_history", {})
-            pipeline_results["activity_log"] = sync_result.get("activity_log", {})
-            pipeline_results["integrity"] = sync_result.get("integrity", {})
-
-            # Write sync summary to GitHub step summary
-            _write_sync_github_summary(sync_result["summary"], download_errors)
+            pipeline_results["download_errors"] = sync_result.get("download_errors", [])
+            _write_sync_github_summary(sync_result["summary"],
+                                       sync_result.get("download_errors", []))
+            pipeline_log["steps_run"].append({
+                "step": 1, "name": "Sync", "status": "success",
+            })
         else:
-            print("\n>>> STEP 1: Sync skipped (using latest log)\n")
+            print("\n>>> STEP 1: Sync skipped\n")
             logs = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)
             if logs:
                 with open(logs[0], "r", encoding="utf-8") as f:
                     sync_result = json.load(f)
 
-        # ─── Step 2: Analyze Changes ─────────────────────
-        print("\n>>> STEP 2: Change Analysis\n")
-        if sync_result:
+        # ─── Check for changes ────────────────────────────
+        if not force_full and sync_result:
+            from change_analyzer import analyze_changes
             analysis = analyze_changes(sync_result)
-        else:
-            analysis = {"has_changes": False, "stages_to_run": [], "admin_flags": []}
+            if not analysis["has_changes"]:
+                print("No changes detected. Pipeline skipped.")
+                notify_no_changes()
+                pipeline_log["status"] = "no_changes"
+                _save_pipeline_log(pipeline_log)
+                return pipeline_log
 
-        if not analysis["has_changes"] and not force_full:
-            print("No changes detected. Skipping pipeline stages.")
-            notify_no_changes()
-            pipeline_log["status"] = "no_changes"
+        # ─── Step 2: Convert to text ──────────────────────
+        print("\n>>> STEP 2: Convert to Text\n")
+
+        print("  2a. Media extraction (hyperlinks + images)...")
+        from extract_media import run_extraction as run_media
+        run_media()
+
+        print("  2b. Document conversion (PPTX/DOCX/PDF → markdown)...")
+        from convert_docs import run_conversion
+        run_conversion()
+
+        print("  2c. Native Google extraction (Docs/Slides API)...")
+        from extract_native_google import run_native_extraction
+        run_native_extraction(sync_result)
+
+        print("  2d. Consolidation...")
+        from consolidate import run_consolidation
+        run_consolidation()
+
+        pipeline_log["steps_run"].append({
+            "step": 2, "name": "Convert", "status": "success",
+        })
+
+        # ─── Step 2.5: Image Analysis (optional) ─────────
+        if analyze_images:
+            print("\n>>> STEP 2.5: Image Analysis (optional)\n")
+            try:
+                from analyze_images import run_analysis
+                img_result = run_analysis(backend="auto")
+                pipeline_results["image_analysis"] = img_result
+                pipeline_log["steps_run"].append({
+                    "step": 2.5, "name": "Image Analysis", "status": "success",
+                })
+            except Exception as e:
+                print(f"  Image analysis failed (non-critical): {e}")
+                pipeline_log["steps_run"].append({
+                    "step": 2.5, "name": "Image Analysis", "status": "failed",
+                    "error": str(e),
+                })
+
+        # ─── Step 3: LLM Extract ─────────────────────────
+        print("\n>>> STEP 3: LLM Extract\n")
+        try:
+            from llm_extract import run_extraction
+            extract_result = run_extraction(backend="auto", force=force_extract)
+            pipeline_results["extraction"] = extract_result
+            pipeline_log["steps_run"].append({
+                "step": 3, "name": "LLM Extract", "status": "success",
+            })
+        except RuntimeError as e:
+            # No API key and no CLI — fallback mode
+            print(f"\n  No LLM backend available: {e}")
+            print("  Entering fallback mode — sources only.\n")
+            pipeline_results["fallback"] = True
+            pipeline_results["sync_summary"] = pipeline_results.get("sync_summary", {})
+            notify_sources_ready(pipeline_results)
+            pipeline_log["status"] = "fallback"
+            pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
+            _save_pipeline_log(pipeline_log)
             return pipeline_log
 
-        # ─── Step 3: Run Pipeline Stages ─────────────────
-        if force_full:
-            stages_to_run = [1, 2, 3, 5, 6, 7]
-            print(f"\nForce full rebuild: running stages {stages_to_run}\n")
-        else:
-            stages_to_run = analysis["stages_to_run"]
-            print(f"\nStages to run based on changes: {stages_to_run}\n")
+        # ─── Step 4: Build KB ─────────────────────────────
+        print("\n>>> STEP 4: Build KB\n")
+        from build_kb import run_build
+        run_build()
+        pipeline_log["steps_run"].append({
+            "step": 4, "name": "Build KB", "status": "success",
+        })
 
-        for stage_num in stages_to_run:
-            stage_info = STAGES.get(stage_num, {})
-            stage_name = stage_info.get("name", f"Stage {stage_num}")
+        # Also build templates
+        try:
+            from build_templates import run_build_templates
+            run_build_templates()
+        except Exception as e:
+            print(f"  Template build failed (non-critical): {e}")
 
-            print(f"\n>>> Running Stage {stage_num}: {stage_name}\n")
+        # ─── Step 5: Dual-Judge ───────────────────────────
+        print("\n>>> STEP 5: Dual-Judge Validation\n")
+        try:
+            from validation.dual_judge.evaluator import run_dual_judge_validation
+            report = run_dual_judge_validation(backend="auto", verbose=True)
+            pipeline_results["dual_judge"] = {
+                "scores": report.compute_scores(),
+                "verdict": report.compute_verdict(),
+                "sampled": report.sampled_count,
+                "calls_made": report.calls_made,
+            }
+            pipeline_log["steps_run"].append({
+                "step": 5, "name": "Dual-Judge", "status": "success",
+            })
+        except Exception as e:
+            print(f"  Dual-judge failed: {e}")
+            pipeline_log["steps_run"].append({
+                "step": 5, "name": "Dual-Judge", "status": "failed",
+                "error": str(e),
+            })
+
+        # ─── Collect KB build info ────────────────────────
+        builds = []
+        for kb_file in sorted(OUTPUT_DIR.glob("Term * - Lesson Based Structure.json")):
             try:
-                result = run_stage(stage_num, sync_result)
-                pipeline_log["stages_run"].append({
-                    "stage": stage_num,
-                    "name": stage_name,
-                    "status": "success",
-                    "completed_at": datetime.now(timezone.utc).isoformat(),
-                })
-            except Exception as e:
-                error_msg = f"Stage {stage_num} ({stage_name}) failed: {e}"
-                print(f"\nERROR: {error_msg}")
-                traceback.print_exc()
-                pipeline_log["errors"].append(error_msg)
-                pipeline_log["stages_run"].append({
-                    "stage": stage_num,
-                    "name": stage_name,
-                    "status": "failed",
-                    "error": str(e),
-                })
-                # Continue with remaining stages unless it's a critical failure
-                if stage_num in (5, 6):  # Consolidation or build failure is critical
-                    print("Critical stage failed. Stopping pipeline.")
-                    break
-
-        # ─── Step 4: Handle Admin Flags ──────────────────
-        if analysis.get("admin_flags"):
-            print(f"\n>>> Admin Flags: {len(analysis['admin_flags'])} files need image analysis")
-            pipeline_results["admin_flags"] = analysis["admin_flags"]
-
-        # ─── Step 5: Collect Results ─────────────────────
-        # Collect validation results
-        if 7 in stages_to_run:
-            from config import VALIDATION_DIR
-            val_reports = list(VALIDATION_DIR.glob("validation_report_term*.json"))
-            validations = []
-            builds = []
-            for vr in val_reports:
-                with open(vr, "r", encoding="utf-8") as f:
-                    report = json.load(f)
-
-                term = vr.stem.replace("validation_report_term", "")
-                validations.append({
-                    "term": term,
-                    "status": report.get("status", "UNKNOWN"),
-                    "confidence": report.get("overall_confidence", 0),
-                    "blocked": report.get("publish_blocked", False),
-                    "error_count": report.get("summary", {}).get("errors", 0),
-                    "warning_count": report.get("summary", {}).get("warnings", 0),
-                    "error_details": [
-                        a.get("message", "")
-                        for a in report.get("anomalies_by_severity", {}).get("ERROR", [])[:5]
-                    ],
-                })
-
-                kb_path = OUTPUT_DIR / f"Term {term} - Lesson Based Structure.json"
-                if kb_path.exists():
-                    with open(kb_path, "r", encoding="utf-8") as f:
-                        kb = json.load(f)
-                    builds.append({"term": term, "lessons": kb.get("total_lessons", 0)})
-
-            pipeline_results["validations"] = validations
-            pipeline_results["builds"] = builds
-
-        elif 6 in stages_to_run:
-            # Build ran but no validation — still report what was built
-            builds = []
-            for kb_file in sorted(OUTPUT_DIR.glob("Term * - Lesson Based Structure.json")):
-                try:
-                    with open(kb_file, "r", encoding="utf-8") as f:
-                        kb = json.load(f)
-                    term_str = kb_file.stem.split(" - ")[0].replace("Term ", "")
-                    builds.append({"term": term_str, "lessons": kb.get("total_lessons", 0)})
-                except Exception:
-                    pass
-            if builds:
-                pipeline_results["builds"] = builds
-
-        # ─── Step 6: Cross-Validation (optional) ──────────
-        if cross_validate:
-            print("\n>>> Running Stage 8: Cross-Validation Expert Agent\n")
-            try:
-                from cross_validate_kb import run_cross_validation
-                cv_result = run_cross_validation()
-                pipeline_log["stages_run"].append({
-                    "stage": 8,
-                    "name": "Cross-Validation",
-                    "status": "success",
-                    "overall_confidence": cv_result.get("overall_confidence"),
-                    "completed_at": datetime.now(timezone.utc).isoformat(),
-                })
-            except Exception as e:
-                error_msg = f"Stage 8 (Cross-Validation) failed: {e}"
-                print(f"\nERROR: {error_msg}")
-                traceback.print_exc()
-                pipeline_log["errors"].append(error_msg)
-                pipeline_log["stages_run"].append({
-                    "stage": 8,
-                    "name": "Cross-Validation",
-                    "status": "failed",
-                    "error": str(e),
-                })
+                with open(kb_file, "r", encoding="utf-8") as f:
+                    kb = json.load(f)
+                term_str = kb_file.stem.split(" - ")[0].replace("Term ", "")
+                builds.append({"term": term_str, "lessons": kb.get("total_lessons", 0)})
+            except Exception:
+                pass
+        pipeline_results["builds"] = builds
 
         pipeline_log["status"] = "completed"
         pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
@@ -303,51 +259,62 @@ def run_pipeline(skip_sync=False, force_full=False, cross_validate=False,
         pipeline_log["status"] = "failed"
         pipeline_results["fatal_error"] = str(e)
 
-    # Save pipeline log
-    log_path = LOGS_DIR / f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
-    with open(log_path, "w", encoding="utf-8") as f:
-        json.dump(pipeline_log, f, indent=2, ensure_ascii=False)
+    _save_pipeline_log(pipeline_log)
 
-    # ── Send ONE consolidated Slack notification ──
-    pipeline_results["stage_errors"] = [
-        f"Stage {sr['stage']} ({sr['name']}): {sr.get('error', '')[:200]}"
-        for sr in pipeline_log["stages_run"]
+    # ── Send notification ──
+    pipeline_results["status"] = pipeline_log["status"]
+    pipeline_results["steps_run"] = pipeline_log["steps_run"]
+    pipeline_results["completed_at"] = pipeline_log.get("completed_at", "")
+    pipeline_results["step_errors"] = [
+        f"Step {sr['step']} ({sr['name']}): {sr.get('error', '')[:200]}"
+        for sr in pipeline_log["steps_run"]
         if sr.get("status") == "failed"
     ]
-    pipeline_results["stages_run"] = pipeline_log["stages_run"]
-    pipeline_results["completed_at"] = pipeline_log.get("completed_at", "")
-    pipeline_results["status"] = pipeline_log["status"]
 
     try:
-        notify_pipeline_summary(pipeline_results)
+        notify_llm_pipeline_complete(pipeline_results)
     except Exception:
-        # Summary build failed — fall back to simple error notification
         if pipeline_results.get("fatal_error"):
             notify_error("Pipeline", pipeline_results["fatal_error"])
 
     print(f"\n{'=' * 60}")
     print(f"  Pipeline {pipeline_log['status'].upper()}")
-    print(f"  Stages run: {len(pipeline_log['stages_run'])}")
+    print(f"  Steps run: {len(pipeline_log['steps_run'])}")
     print(f"  Errors: {len(pipeline_log['errors'])}")
-    print(f"  Log: {log_path}")
     print(f"{'=' * 60}\n")
 
     return pipeline_log
 
 
+def _save_pipeline_log(pipeline_log):
+    """Save pipeline log to disk."""
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    log_path = LOGS_DIR / f"pipeline_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json"
+    with open(log_path, "w", encoding="utf-8") as f:
+        json.dump(pipeline_log, f, indent=2, ensure_ascii=False)
+    print(f"  Log: {log_path}")
+
+
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="KB Maintenance Pipeline")
+    parser = argparse.ArgumentParser(description="KB Maintenance Pipeline (LLM)")
     parser.add_argument("--skip-sync", action="store_true", help="Skip Drive sync")
     parser.add_argument("--force-full", action="store_true", help="Force full rebuild")
-    parser.add_argument("--cross-validate", action="store_true",
-                        help="Run Stage 8 cross-validation (requires claude CLI)")
+    parser.add_argument("--analyze-images", action="store_true",
+                        help="Run optional image analysis step")
     parser.add_argument("--dry-run", action="store_true",
-                        help="Scan and report changes without downloading or running stages")
+                        help="Scan and report changes without processing")
     parser.add_argument("--download-all", action="store_true",
-                        help="Download ALL files from Drive (not just changed). Use in CI.")
+                        help="Download ALL files from Drive (for CI)")
+    parser.add_argument("--force-extract", action="store_true",
+                        help="Force LLM re-extraction even if cache is valid")
     args = parser.parse_args()
 
-    run_pipeline(skip_sync=args.skip_sync, force_full=args.force_full,
-                 cross_validate=args.cross_validate, dry_run=args.dry_run,
-                 download_all=args.download_all)
+    run_pipeline(
+        skip_sync=args.skip_sync,
+        force_full=args.force_full,
+        analyze_images=args.analyze_images,
+        dry_run=args.dry_run,
+        download_all=args.download_all,
+        force_extract=args.force_extract,
+    )

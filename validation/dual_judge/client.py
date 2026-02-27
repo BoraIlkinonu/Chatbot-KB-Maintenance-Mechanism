@@ -5,11 +5,14 @@ Auto-detects the best available backend. CLI for local development,
 SDK for GitHub Actions CI.
 """
 
+import base64
 import json
+import mimetypes
 import os
 import re
 import subprocess
 import time
+from pathlib import Path
 from typing import Protocol
 
 
@@ -22,17 +25,18 @@ class LLMClient(Protocol):
     def is_available(self) -> bool: ...
     def has_budget(self) -> bool: ...
     def call(self, prompt: str) -> dict: ...
+    def image_call(self, prompt: str, image_path: str) -> dict: ...
 
 
 class CliClient:
     """Claude CLI subprocess client (local development)."""
 
     def __init__(self, model: str = "sonnet", timeout: int = 300,
-                 max_retries: int = 3, budget: int = 60):
+                 max_retries: int = 3, budget: int = 0):
         self.model = model
         self.timeout = timeout
         self.max_retries = max_retries
-        self.budget = budget
+        self.budget = budget  # 0 = unlimited
         self.calls_made = 0
         self._available = None
 
@@ -51,7 +55,7 @@ class CliClient:
         return self._available
 
     def has_budget(self) -> bool:
-        return self.calls_made < self.budget
+        return self.budget == 0 or self.calls_made < self.budget
 
     def call(self, prompt: str) -> dict:
         if not self.has_budget():
@@ -69,6 +73,39 @@ class CliClient:
                     time.sleep(2 ** attempt)
 
         raise RuntimeError(f"All {self.max_retries} attempts failed: {last_error}")
+
+    def image_call(self, prompt: str, image_path: str) -> dict:
+        """Send an image + text prompt to the LLM via CLI.
+
+        Encodes the image as base64 inline in the prompt since the CLI
+        doesn't have a native --image flag for multimodal input.
+        """
+        if not self.has_budget():
+            raise RuntimeError(f"LLM budget exhausted ({self.calls_made}/{self.budget})")
+
+        img_path = Path(image_path)
+        img_data = base64.b64encode(img_path.read_bytes()).decode("ascii")
+        mime = mimetypes.guess_type(image_path)[0] or "image/png"
+
+        # Embed as data URI in markdown-style image reference
+        multimodal_prompt = (
+            f"[Image (base64-encoded {mime}, filename: {img_path.name})]\n"
+            f"data:{mime};base64,{img_data}\n\n"
+            f"{prompt}"
+        )
+
+        last_error = None
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                result = self._single_call(multimodal_prompt)
+                self.calls_made += 1
+                return result
+            except Exception as e:
+                last_error = e
+                if attempt < self.max_retries:
+                    time.sleep(2 ** attempt)
+
+        raise RuntimeError(f"All {self.max_retries} image_call attempts failed: {last_error}")
 
     def _single_call(self, prompt: str) -> dict:
         cmd = ["claude", "-p", "--model", self.model, "--output-format", "json"]
@@ -92,7 +129,7 @@ class SdkClient:
     """Anthropic SDK client (CI / GitHub Actions)."""
 
     def __init__(self, model: str = "claude-sonnet-4-6", timeout: int = 300,
-                 max_retries: int = 3, budget: int = 60):
+                 max_retries: int = 3, budget: int = 0):
         self.model = model
         self.timeout = timeout
         self.max_retries = max_retries
@@ -110,22 +147,25 @@ class SdkClient:
             return False
 
     def has_budget(self) -> bool:
-        return self.calls_made < self.budget
+        return self.budget == 0 or self.calls_made < self.budget
+
+    def _ensure_client(self):
+        if self._client is None:
+            import anthropic
+            self._client = anthropic.Anthropic()
 
     def call(self, prompt: str) -> dict:
         if not self.has_budget():
             raise RuntimeError(f"LLM budget exhausted ({self.calls_made}/{self.budget})")
 
-        if self._client is None:
-            import anthropic
-            self._client = anthropic.Anthropic()
+        self._ensure_client()
 
         last_error = None
         for attempt in range(1, self.max_retries + 1):
             try:
                 response = self._client.messages.create(
                     model=self.model,
-                    max_tokens=4096,
+                    max_tokens=8192,
                     messages=[{"role": "user", "content": prompt}],
                 )
                 self.calls_made += 1
@@ -137,6 +177,48 @@ class SdkClient:
                     time.sleep(2 ** attempt)
 
         raise RuntimeError(f"All {self.max_retries} attempts failed: {last_error}")
+
+    def image_call(self, prompt: str, image_path: str) -> dict:
+        """Send an image + text prompt via the Anthropic SDK multimodal API."""
+        if not self.has_budget():
+            raise RuntimeError(f"LLM budget exhausted ({self.calls_made}/{self.budget})")
+
+        self._ensure_client()
+
+        img_path = Path(image_path)
+        img_data = base64.b64encode(img_path.read_bytes()).decode("ascii")
+        mime = mimetypes.guess_type(image_path)[0] or "image/png"
+
+        last_error = None
+        for attempt in range(1, self.max_retries + 1):
+            try:
+                response = self._client.messages.create(
+                    model=self.model,
+                    max_tokens=1024,
+                    messages=[{
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": mime,
+                                    "data": img_data,
+                                },
+                            },
+                            {"type": "text", "text": prompt},
+                        ],
+                    }],
+                )
+                self.calls_made += 1
+                text = response.content[0].text
+                return {"description": text}
+            except Exception as e:
+                last_error = e
+                if attempt < self.max_retries:
+                    time.sleep(2 ** attempt)
+
+        raise RuntimeError(f"All {self.max_retries} image_call attempts failed: {last_error}")
 
 
 def _extract_json(text: str) -> dict:
@@ -209,7 +291,7 @@ def _extract_json_from_text(text: str) -> dict | None:
     return None
 
 
-def create_client(backend: str = "auto", budget: int = 60) -> CliClient | SdkClient:
+def create_client(backend: str = "auto", budget: int = 0) -> CliClient | SdkClient:
     """Create the best available LLM client.
 
     Args:

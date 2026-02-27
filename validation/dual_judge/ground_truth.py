@@ -10,7 +10,7 @@ import json
 import re
 from pathlib import Path
 
-from config import CONVERTED_DIR, NATIVE_DIR, WEEK_LESSON_MAP
+from config import CONVERTED_DIR, NATIVE_DIR, MEDIA_DIR, WEEK_LESSON_MAP
 
 
 def extract_ground_truth(term: int, lesson_num: int) -> str:
@@ -53,6 +53,13 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
         except (json.JSONDecodeError, OSError):
             pass
 
+    # 3. Hyperlinks extracted from PPTX/DOCX/PDF (extraction_metadata.json)
+    #    These contain real URLs from source file hyperlink metadata that
+    #    are NOT visible in the converted markdown text.
+    link_text = _extract_hyperlinks_for_lesson(term, lesson_num)
+    if link_text:
+        parts.append(link_text)
+
     if not parts:
         return "[No source content found]"
 
@@ -67,6 +74,13 @@ def _extract_lesson_from_path(path: str, term: int) -> list[int]:
     """
     path_lower = path.lower().replace("\\", "/")
     max_lesson = {1: 24, 2: 14, 3: 24}.get(term, 24)
+
+    # "Lesson X-Y" range (e.g. "Lesson 1 -2.md") — must check BEFORE single-lesson
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start <= max_lesson and 1 <= end <= max_lesson and start != end:
+            return list(range(start, end + 1))
 
     # Explicit "Lesson X"
     match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
@@ -107,10 +121,6 @@ def _read_md_file(path: Path, rel_path: str) -> str | None:
 
     if not text:
         return None
-
-    # Cap at 8000 chars per document
-    if len(text) > 8000:
-        text = text[:8000] + "\n[... truncated ...]"
 
     return f"=== CONVERTED — {rel_path} ===\n{text}"
 
@@ -180,10 +190,7 @@ def _extract_native(native: dict) -> str | None:
     if len(parts) <= 1:
         return None
 
-    result = "\n".join(parts)
-    if len(result) > 5000:
-        result = result[:5000] + "\n[... truncated ...]"
-    return result
+    return "\n".join(parts)
 
 
 def _extract_shape_text(element: dict) -> str | None:
@@ -205,3 +212,42 @@ def _extract_shape_text(element: dict) -> str | None:
             texts.append(content)
 
     return " ".join(texts) if texts else None
+
+
+def _extract_hyperlinks_for_lesson(term: int, lesson_num: int) -> str | None:
+    """Extract hyperlinks from PPTX/DOCX/PDF binary metadata for a lesson.
+
+    These URLs come from extraction_metadata.json and are NOT visible in
+    the converted markdown text — without them the judge falsely flags
+    legitimate URLs as fabricated.
+    """
+    meta_path = MEDIA_DIR / "extraction_metadata.json"
+    if not meta_path.exists():
+        return None
+
+    try:
+        data = json.loads(meta_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+    links: list[str] = []
+
+    for file_type in ("pptx_files", "docx_files", "pdf_files"):
+        for file_info in data.get(file_type, []):
+            rel_path = file_info.get("relative_path", "")
+            file_lessons = _extract_lesson_from_path(rel_path, term)
+            if lesson_num not in file_lessons:
+                continue
+
+            for link in file_info.get("links", []):
+                url = link.get("url", "")
+                text = link.get("text", "")
+                if url:
+                    entry = f"[Hyperlink]: {text} -> {url}" if text else f"[Hyperlink]: {url}"
+                    if entry not in links:
+                        links.append(entry)
+
+    if not links:
+        return None
+
+    return f"=== HYPERLINKS (binary metadata) ===\n" + "\n".join(links)
