@@ -2,6 +2,11 @@
 
 ## Pending Improvements
 
+### Template KB content validation
+- **Priority**: High
+- **Description**: Templates KB files (`output/Term N - Templates.json`, `output/templates.json`) currently have no content validation. The QA system only checks file existence (X011, E008). Many templates have empty `core_skills`, empty `assessment_criteria_summary`, generic fallback `purpose` text, and `linked_lessons` hardcoded to all lessons in a term rather than being actually lesson-specific. Need validation checks for: field population (are skills/criteria extracted?), purpose quality (not generic fallback?), linked_lessons accuracy, and cross-check against source content.
+- **Files affected**: `qa/layer1/consistency_checks.py` (new T-series checks), `build_templates.py` (extraction quality), `verification/` (template coverage)
+
 ### Cross-reference external resources to lesson slides
 - **Priority**: Medium
 - **Description**: External resources (videos, images, docs) that sit outside lesson slide decks are downloaded and tracked, but not mapped to the specific lesson/slide that references them. For example, `Lesson supporting videos/Fortnite OG Chapter 1.mp4` is mentioned on slide 13 of Lesson 12, but the KB doesn't link the MP4 to that slide.

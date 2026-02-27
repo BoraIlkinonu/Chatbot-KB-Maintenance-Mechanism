@@ -178,51 +178,73 @@ def _write_github_summary(result, checks, failed_checks):
 
 
 def _send_slack_notification(result, checks, failed_checks):
-    """Send Slack notification when checks fail or need attention."""
+    """Send a single consolidated extraction verification summary to Slack."""
     webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
     if not webhook_url:
         return
 
-    # Only notify when there are failures or warnings
-    if not failed_checks:
-        return
-
     import urllib.request
 
-    # Split lesson vs non-lesson for clear Slack display
+    # Split lesson vs non-lesson
     lesson_unmatched = sum(1 for m in result.unmatched
                            if m.source_atom.term is not None and m.source_atom.lesson is not None)
     nonlesson_unmatched = len(result.unmatched) - lesson_unmatched
 
-    blocks = [
-        {
-            "type": "header",
-            "text": {"type": "plain_text", "text": "KB Pipeline Alert", "emoji": True},
-        },
-        {
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": (
-                    f":books: *Lesson Content* (powers the chatbot):\n"
-                    f"  Coverage: *{result.lesson_coverage_pct}* | Unmatched: {lesson_unmatched}\n\n"
-                    f":file_folder: *Non-Lesson Content* (admin docs, guides — does NOT affect chatbot):\n"
-                    f"  Unmatched: {nonlesson_unmatched}"
-                ),
-            },
-        },
-    ]
+    # Determine overall status
+    errors = [c for c in failed_checks if c.severity == "ERROR"]
+    warnings = [c for c in failed_checks if c.severity in ("WARNING", "INFO")]
 
-    # Add failed checks
-    fail_lines = []
-    for c in failed_checks:
-        fail_lines.append(f"*{c.check_id}* [{c.severity}]: {c.message}")
-    blocks.append({
-        "type": "section",
-        "text": {"type": "mrkdwn", "text": "\n".join(fail_lines)},
-    })
+    if errors:
+        header_emoji = ":rotating_light:"
+        header_text = "Extraction Verification — Action Required"
+    elif warnings:
+        header_emoji = ":white_check_mark:"
+        header_text = "Extraction Verification — All OK"
+    else:
+        header_emoji = ":white_check_mark:"
+        header_text = "Extraction Verification — All Checks Passed"
 
-    payload = json.dumps({"blocks": blocks}).encode("utf-8")
+    sections = [f"{header_emoji} *{header_text}*"]
+
+    # Coverage summary
+    sections.append(
+        f"*Lesson Content* (powers the chatbot): "
+        f"*{result.lesson_coverage_pct}* coverage | {lesson_unmatched} unmatched\n"
+        f"*Non-Lesson Content* (admin docs — does NOT affect chatbot): "
+        f"{nonlesson_unmatched} unmatched"
+    )
+
+    # Action Required (ERROR-level only)
+    if errors:
+        error_lines = ["*Action Required:*"]
+        for c in errors:
+            error_lines.append(f"  :x: *{c.check_id}*: {c.message}")
+            for ex in c.details.get("examples", [])[:3]:
+                error_lines.append(f"    • `{ex.get('file', '?')}`: {ex.get('content', '')[:60]}")
+        sections.append("\n".join(error_lines))
+
+    # Findings (WARNING/INFO — informational, with context)
+    if warnings:
+        finding_lines = ["*Findings* (informational — no action needed):"]
+        for c in warnings:
+            detail = _check_detail(c)
+            finding_lines.append(f"  :information_source: *{c.check_id}*: {detail}")
+        sections.append("\n".join(finding_lines))
+
+    # Passed checks (compact)
+    passed = [c for c in checks if c.passed]
+    if passed:
+        pass_ids = ", ".join(c.check_id for c in passed)
+        sections.append(f"*Passed:* {pass_ids}")
+
+    # Report file path
+    sections.append(
+        f"_Full details: `validation/extraction_verification.json` "
+        f"and `validation/extraction_verification.txt`_"
+    )
+
+    msg = "\n\n".join(sections)
+    payload = json.dumps({"text": msg}).encode("utf-8")
     req = urllib.request.Request(
         webhook_url, data=payload,
         headers={"Content-Type": "application/json"},
@@ -232,6 +254,67 @@ def _send_slack_notification(result, checks, failed_checks):
         print("Slack notification sent.")
     except Exception as e:
         print(f"Slack notification could not be sent: {e} — pipeline results are unaffected")
+
+
+def _check_detail(check):
+    """Generate a human-readable explanation for a check finding."""
+    cid = check.check_id
+    d = check.details
+
+    if cid == "V003":
+        count = d.get("count", 0)
+        examples = d.get("examples", [])
+        text = f"{count} text atoms lost at early extraction stages"
+        if examples:
+            files = sorted(set(ex.get("file", "?") for ex in examples))
+            text += f" — files: {', '.join(f'`{f}`' for f in files[:5])}"
+            if len(files) > 5:
+                text += f" +{len(files) - 5} more"
+        return text
+
+    if cid == "V004":
+        truncs = d.get("truncations", [])
+        fields = sorted(set(t.get("field", "?") for t in truncs))
+        return f"{len(truncs)} KB fields hit truncation limits ({', '.join(fields[:5])})"
+
+    if cid == "V005":
+        files = d.get("files", [])
+        text = f"{len(files)} source files not assigned to any lesson"
+        if files:
+            text += f" — {', '.join(f'`{f}`' for f in files[:3])}"
+        return text
+
+    if cid == "V006":
+        return check.message
+
+    if cid == "V007":
+        count = d.get("count", 0)
+        examples = d.get("examples", [])
+        text = (
+            f"{count} native doc sections stored in `remaining_content` "
+            f"(structural elements like headers/footers/TOC — not lost content)"
+        )
+        if examples:
+            locations = sorted(set(ex.get("location", "?") for ex in examples))
+            text += f"\n    Section types: {', '.join(locations[:5])}"
+        return text
+
+    if cid == "V008":
+        files = d.get("files", [])
+        text = f"{d.get('count', 0)} new source files not yet in file_manifest.json"
+        if files:
+            text += f" — {', '.join(f'`{f}`' for f in files[:3])}"
+        return text
+
+    if cid == "V009":
+        files = d.get("files", [])
+        text = f"{d.get('count', 0)} manifest entries with no file on disk"
+        if files:
+            text += f" — {', '.join(f'`{f}`' for f in files[:3])}"
+        return text
+
+    # Fallback
+    return check.message
 
 
 def _generate_fix_suggestions(attributions, result):
