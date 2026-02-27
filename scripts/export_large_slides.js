@@ -6,13 +6,17 @@
  *
  * SETUP:
  *   1. Go to https://script.google.com and create a new project
+ *      Name it "Export Large Files"
  *   2. Paste this entire file into the editor
- *   3. Set EXPORTS_FOLDER_ID below to a Drive folder you own
- *   4. Run exportAllLargeSlides() — it will ask for permissions on first run
- *   5. (Optional) Set a time-based trigger to run daily before the pipeline
+ *   3. Set EXPORTS_FOLDER_ID below (open folder in Drive, copy ID from URL)
+ *   4. Run setupDailyTrigger() ONCE — this will:
+ *      - Ask for permissions (approve them)
+ *      - Run the first export immediately
+ *      - Set up a daily trigger at 6-7pm UTC (before the midnight UAE pipeline)
+ *   5. Done! Exports run automatically every day.
  *
- * The pipeline will check the exports folder for pre-converted PPTX files
- * and download those instead of trying the API export.
+ * The pipeline checks the exports folder for pre-converted PPTX files
+ * and downloads those instead of trying the API export.
  */
 
 // ─── CONFIGURATION ──────────────────────────────────────
@@ -22,7 +26,7 @@
  * Create a folder in your Drive and paste its ID here.
  * (The folder ID is the last part of the folder URL)
  */
-var EXPORTS_FOLDER_ID = "YOUR_EXPORTS_FOLDER_ID_HERE";
+var EXPORTS_FOLDER_ID = "1_RDSSJXYMNBT3rw3Y3i8W9qmd9pyYY0n";
 
 /**
  * Source folders to scan for large native Google Slides.
@@ -140,6 +144,38 @@ function listExports() {
     }
   }
 }
+
+/**
+ * ONE-TIME SETUP: Run this function to:
+ *   1. Export all large slides immediately
+ *   2. Install a daily trigger (6-7pm UTC) to keep exports fresh
+ *
+ * You only need to run this ONCE. It handles everything.
+ */
+function setupDailyTrigger() {
+  // Remove any existing triggers for this function to avoid duplicates
+  var triggers = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < triggers.length; i++) {
+    if (triggers[i].getHandlerFunction() === "exportAllLargeSlides") {
+      ScriptApp.deleteTrigger(triggers[i]);
+    }
+  }
+
+  // Create daily trigger at 6-7pm UTC (= 10-11pm UAE)
+  // This runs before the pipeline's midnight UAE schedule
+  ScriptApp.newTrigger("exportAllLargeSlides")
+    .timeBased()
+    .everyDays(1)
+    .atHour(18)  // 6pm UTC = 10pm UAE
+    .create();
+
+  Logger.log("Daily trigger installed (6-7pm UTC).");
+  Logger.log("Running first export now...\n");
+
+  // Run the first export immediately
+  exportAllLargeSlides();
+}
+
 
 /**
  * Clean up all exports (delete everything in the exports folder).
