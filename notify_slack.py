@@ -708,19 +708,27 @@ def notify_sources_ready(results):
     ext = results.get("extraction")
 
     sections = [
-        ":arrows_counterclockwise: *Source Files Changed — Local Processing Required*",
+        ":white_check_mark: *Source Sync Complete — Local LLM Steps Required*",
     ]
 
-    # Explain WHY fallback was triggered
-    if ext and ext.get("errors", 0) > 0:
+    # Explain WHY fallback was triggered — clear, non-alarming
+    has_api_key = bool(os.environ.get("ANTHROPIC_API_KEY"))
+    if not has_api_key:
         sections.append(
-            f":warning: LLM extraction failed: {ext['errors']} errors, "
-            f"0 usable results (no API key or backend unavailable)"
+            ":key: `ANTHROPIC_API_KEY` is not configured in CI secrets.\n"
+            "LLM extraction, KB build, and validation were *skipped*.\n"
+            "Source files are synced and ready for download."
+        )
+    elif ext and ext.get("errors", 0) > 0:
+        sections.append(
+            f":warning: LLM extraction ran but failed "
+            f"({ext['errors']} files could not be processed).\n"
+            "Source files are synced and ready for download."
         )
     else:
         sections.append(
-            ":information_source: No LLM backend available in CI — "
-            "extraction must be run locally"
+            ":information_source: No LLM backend available in CI.\n"
+            "Source files are synced and ready for download."
         )
 
     if s:
@@ -730,6 +738,11 @@ def notify_sources_ready(results):
             f"{s.get('downloaded', 0)} downloaded"
         )
 
+    # Skipped stages
+    sections.append(
+        "*Skipped stages:* LLM Extraction → KB Build → Validation"
+    )
+
     sections.append(
         f":arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"
     )
@@ -738,7 +751,7 @@ def notify_sources_ready(results):
         sections.append(f"<https://github.com/{repo}/actions/runs/{run_id}|View CI Run>")
 
     sections.append(
-        ":computer: *Run locally:*\n"
+        ":computer: *Run locally after downloading sources:*\n"
         "```\n"
         "python llm_extract.py --backend cli\n"
         "python build_kb.py\n"
