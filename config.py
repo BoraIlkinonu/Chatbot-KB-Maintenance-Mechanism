@@ -76,7 +76,7 @@ STAGES = {
     # Stage 4 (Image Analysis) is manual — requires Claude Code agents
     5: {"name": "Consolidation",            "script": "consolidate.py"},
     6: {"name": "KB Build",                 "script": "build_kb.py"},
-    7: {"name": "Validation",               "script": "validate_kb.py"},
+    7: {"name": "Validation",               "script": "validate_kb_judge.py"},
 }
 
 # Change type → stages to re-run
@@ -95,38 +95,6 @@ IMAGE_BEARING_EXTENSIONS = {".pptx"}
 
 # Video file extensions
 VIDEO_EXTENSIONS = {".mp4", ".mov", ".avi", ".webm"}
-
-# Endstar platform tool keywords → canonical tool name
-ENDSTAR_TOOLS = {
-    "triggers": "Triggers",
-    "npcs": "NPCs",
-    "npc": "NPCs",
-    "interactions": "Interactions",
-    "mechanics tool": "Mechanics",
-    "mechanics system": "Mechanics",
-    "connections": "Connections",
-    "props": "Props",
-    "rule block": "Rule Blocks",
-    "rule blocks": "Rule Blocks",
-    "visuals tool": "Visuals",
-    "visual tool": "Visuals",
-    "sound tool": "Sound",
-    "sound effect": "Sound",
-    "sound engine": "Sound",
-    "npc dialogue": "NPC dialogue",
-    "level flow": "Level flow",
-}
-
-# Single-word Endstar tool keywords that are ambiguous and need context
-# These only match when co-occurring with Endstar-related terms nearby
-ENDSTAR_AMBIGUOUS_TOOLS = {
-    "sound": "Sound",
-    "mechanics": "Mechanics",
-    "visuals": "Visuals",
-    "logic": "Logic",
-    "prototype": "Prototyping tools",
-    "prototyping": "Prototyping tools",
-}
 
 # URL patterns for video services
 VIDEO_URL_PATTERNS = [
@@ -148,39 +116,6 @@ NATIVE_GOOGLE_MIMES = {
 }
 
 # ──────────────────────────────────────────────────────────
-# Validation (5-signal consensus)
-# ──────────────────────────────────────────────────────────
-SIGNAL_WEIGHTS = {
-    "path_pattern":      1.0,
-    "video_parent":      1.0,
-    "metadata_crossref": 0.95,
-    "semantic_align":    0.8,
-    "keyword_match":     0.7,
-    "volume_check":      0.5,
-}
-
-# Anomaly severity thresholds
-VALIDATION_THRESHOLDS = {
-    "misaligned_confidence": 60,    # Below this → MISALIGNED
-    "volume_outlier_zscore": 2.0,   # Above this → VOLUME_OUTLIER
-}
-
-# ERROR-severity anomalies block KB publishing
-BLOCK_ON_ERROR = True
-
-# ──────────────────────────────────────────────────────────
-# Week ↔ Lesson mapping (UAE curriculum)
-# ──────────────────────────────────────────────────────────
-WEEK_LESSON_MAP = {
-    1: [1, 2],
-    2: [3, 4],
-    3: [5, 6],
-    4: [7, 8],
-    5: [9, 10],
-    6: [11, 12],
-}
-
-# ──────────────────────────────────────────────────────────
 # Duplicate Detection
 # ──────────────────────────────────────────────────────────
 FUZZY_NAME_THRESHOLD = 0.85  # Levenshtein similarity
@@ -194,18 +129,6 @@ CONSOLIDATE_COMBINED = False  # Write combined file alongside per-term files
 # Slack Notifications
 # ──────────────────────────────────────────────────────────
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
-
-# ──────────────────────────────────────────────────────────
-# Cross-Validation (Stage 8)
-# ──────────────────────────────────────────────────────────
-CROSS_VALIDATION_DIR = VALIDATION_DIR
-JUDGE_MODEL = "opus"                      # Claude CLI model alias
-CROSS_VALIDATION_SAMPLE_RATE = 0.5        # Fraction of passing lessons to verify
-
-# ──────────────────────────────────────────────────────────
-# QA System (Layered Validation)
-# ──────────────────────────────────────────────────────────
-QA_PREVIOUS_BUILDS_DIR = VALIDATION_DIR / "previous_builds"
 
 # ──────────────────────────────────────────────────────────
 # Logging

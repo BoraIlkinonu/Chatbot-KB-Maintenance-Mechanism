@@ -21,16 +21,13 @@ from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import BASE_DIR
+from config import BASE_DIR, CONSOLIDATED_DIR
 from validation.dual_judge.client import create_client
 from validation.dual_judge.ground_truth import extract_ground_truth
 
 LLM_CACHE_DIR = BASE_DIR / "llm_cache"
 PROMPT_TEMPLATE_PATH = BASE_DIR / "llm_extraction_prompt.md"
 IMAGE_DESCRIPTIONS_PATH = BASE_DIR / "image_descriptions.json"
-
-# Max lessons per term
-TERM_MAX_LESSONS = {1: 24, 2: 14, 3: 24}
 
 # All 19 LLM-extracted fields (grade_band is 19th, document_sources is assembly metadata)
 EXTRACTION_FIELDS = [
@@ -96,16 +93,15 @@ def _append_image_descriptions(source_text: str, term: int,
     if not descriptions:
         return source_text
 
-    # Filter descriptions relevant to this lesson
+    # Filter descriptions relevant to this lesson using consolidated classification
+    from consolidate import get_file_classification
     lesson_descs = []
     for img_path, desc in descriptions.items():
-        path_lower = img_path.lower()
-        # Simple heuristic: check if path contains term and lesson references
-        if f"term{term}" in path_lower or f"term {term}" in path_lower:
-            if f"lesson{lesson_num}" in path_lower.replace(" ", "") or \
-               f"lesson {lesson_num}" in path_lower or \
-               f"lesson_{lesson_num}" in path_lower:
-                lesson_descs.append(f"[Image: {Path(img_path).name}] {desc}")
+        cls = get_file_classification(img_path)
+        img_term = cls.get("term")
+        img_lessons = cls.get("lessons", [])
+        if img_term == term and lesson_num in img_lessons:
+            lesson_descs.append(f"[Image: {Path(img_path).name}] {desc}")
 
     if not lesson_descs:
         return source_text
@@ -114,31 +110,44 @@ def _append_image_descriptions(source_text: str, term: int,
     return source_text + image_section
 
 
+# Expected types for extraction fields: "str" or "list"
+_FIELD_TYPES = {
+    "lesson_title": "str",
+    "learning_objectives": "list",
+    "description_of_activities": "str",
+    "core_topics": "list",
+    "teacher_notes": "list",
+    "slides_summary": "str",
+    "videos": "list",
+    "resources": "list",
+    "success_criteria": "list",
+    "big_question": "str",
+    "uae_link": "str",
+    "endstar_tools": "list",
+    "keywords": "list",
+    "activity_type": "str",
+    "assessment_signals": "list",
+    "curriculum_alignment": "list",
+    "ai_focus": "list",
+    "artifacts": "list",
+    "grade_band": "str",
+}
+
+
 def _validate_extraction(result: dict) -> dict:
-    """Ensure extraction has all required fields with correct types."""
+    """Ensure extraction has all required fields with correct types.
+
+    Uses schema-driven validation — no per-field if-elif chains.
+    """
     validated = {}
     for field in EXTRACTION_FIELDS:
         value = result.get(field)
-        # Determine expected type from field name
-        if field in ("lesson_title", "description_of_activities", "slides_summary",
-                     "big_question", "uae_link", "activity_type", "grade_band"):
+        expected = _FIELD_TYPES.get(field, "list")
+        if expected == "str":
             validated[field] = str(value) if value else ""
-        elif field == "teacher_notes":
-            # Should be list of {slide, notes} dicts
+        else:  # "list"
             if isinstance(value, list):
                 validated[field] = value
-            else:
-                validated[field] = []
-        elif field == "videos":
-            # Should be list of {url, title, type} dicts
-            if isinstance(value, list):
-                validated[field] = value
-            else:
-                validated[field] = []
-        else:
-            # All other array fields
-            if isinstance(value, list):
-                validated[field] = [str(v) for v in value if v]
             elif isinstance(value, str) and value:
                 validated[field] = [value]
             else:
@@ -166,6 +175,41 @@ def extract_lesson(term: int, lesson_num: int, client, template: str) -> dict:
     return _validate_extraction(result)
 
 
+def _discover_lessons(term: int) -> list[int]:
+    """Discover which lessons exist for a term from consolidated data.
+
+    Reads consolidated_term{N}.json to find actual lesson numbers.
+    No hardcoded counts — the source files determine what exists.
+    """
+    consolidated_path = CONSOLIDATED_DIR / f"consolidated_term{term}.json"
+    if not consolidated_path.exists():
+        print(f"  WARNING: {consolidated_path} not found")
+        return []
+
+    try:
+        data = json.loads(consolidated_path.read_text(encoding="utf-8"))
+        by_lesson = data.get("by_lesson", {})
+        return sorted(int(k) for k in by_lesson.keys())
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"  WARNING: Could not read {consolidated_path}: {e}")
+        return []
+
+
+def _discover_terms() -> list[int]:
+    """Discover which terms exist from consolidated files.
+
+    No hardcoded term list — scans for consolidated_term*.json files.
+    """
+    terms = []
+    for f in sorted(CONSOLIDATED_DIR.glob("consolidated_term*.json")):
+        try:
+            term_num = int(f.stem.replace("consolidated_term", ""))
+            terms.append(term_num)
+        except ValueError:
+            continue
+    return terms
+
+
 def run_extraction(terms: list[int] | None = None, backend: str = "auto",
                    force: bool = False) -> dict:
     """Run LLM extraction for all lessons across specified terms.
@@ -181,7 +225,9 @@ def run_extraction(terms: list[int] | None = None, backend: str = "auto",
     Raises:
         RuntimeError: If no LLM backend is available
     """
-    terms = terms or [1, 2, 3]
+    terms = terms or _discover_terms()
+    if not terms:
+        raise RuntimeError("No consolidated term files found. Run consolidation first.")
 
     print("=" * 60)
     print("  LLM Extraction")
@@ -200,10 +246,10 @@ def run_extraction(terms: list[int] | None = None, backend: str = "auto",
     error_details = []
 
     for term in terms:
-        max_lesson = TERM_MAX_LESSONS.get(term, 24)
-        print(f"\nTerm {term} ({max_lesson} lessons):")
+        lesson_nums = _discover_lessons(term)
+        print(f"\nTerm {term} ({len(lesson_nums)} lessons discovered: {lesson_nums}):")
 
-        for lesson_num in range(1, max_lesson + 1):
+        for lesson_num in lesson_nums:
             cache_path = LLM_CACHE_DIR / f"term{term}_lesson{lesson_num}.json"
 
             # Get source text and hash for cache check

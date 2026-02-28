@@ -1,90 +1,53 @@
 ======================================================================
   DUAL-LLM JUDGE VALIDATION REPORT
-  2026-02-26T21:52:14+00:00
+  2026-02-28T01:30:43+00:00
 ======================================================================
 
-Sample: 12/48 content lessons (25.0%)
-LLM Calls: 34 (budget: 60)
-Consensus Rate: 8/12 (66.7%)
+Sample: 12/50 content lessons (24.0%)
+LLM Calls: 33 (budget: 60)
+Consensus Rate: 12/12 (100.0%)
 
-Tier 1 Score: 84.5%  (Critical)
-Tier 2 Score: 68.9%  (Important)
-Tier 3 Score: 80.8%  (Informational)
-Overall Score: 79.1%
+Tier 1 Score: 83.3%  (Critical)
+Tier 2 Score: 94.7%  (Important)
+Tier 3 Score: 98.1%  (Informational)
+Overall Score: 89.7%
 
 Verdict: NEEDS_REVIEW
 
 FAILURES:
 --------------------------------------------------
-  [ERROR   ] DJ_T1L14_core_topics: PARTIAL — KB lists slide headings/section titles rather than true core topics. Missing 'Color Theory' (named i
-  [ERROR   ] DJ_T1L14_learning_objectives: PARTIAL — KB lists 'Creating YOUR Mood Board' and 'The Basics of Mood Boards' which are the headings from Slid
-  [ERROR   ] DJ_T1L9_core_topics: PARTIAL — List captures legitimate topics (Game Ideation, brainstorming, narrative, gameplay mechanics) but po
-  [ERROR   ] DJ_T2L14_description_of_activities: PARTIAL — Key activities (Starter, AI vs Manual comparison, CapCut demo, Activity 14.1 build steps) are presen
-  [ERROR   ] DJ_T2L14_learning_objectives: PARTIAL — Both actual learning objectives from Slide 4 are correctly captured. However, KB includes two additi
-  [ERROR   ] DJ_T2L14_videos: PARTIAL — KB videos field contains only one entry. Source references at least two video links: Slide 10 ('Chec
-  [ERROR   ] DJ_T2L1_resources: PARTIAL — The source markdown for slide 2 references 'Click here to start the assessment' and slide 9 referenc
-  [ERROR   ] DJ_T2L3_learning_objectives: PARTIAL — The two genuine objectives from slide 5 are captured correctly. However, a third item ('I compared g
-  [ERROR   ] DJ_T2L3_videos: PARTIAL — Source slide 3 explicitly labels 'Agentic AI in Healthcare' as a video ('Check out this video 🔗 Agen
-  [ERROR   ] DJ_T2L5_core_topics: PARTIAL — Real topics (ethical marketing, launch announcement creation, AI tagline drafting, ethical check) ar
-  [ERROR   ] DJ_T2L5_learning_objectives: PARTIAL — Both real objectives (Apply Ethical Judgment, Structured Launch Announcement) are captured correctly
-  [ERROR   ] DJ_T2L5_videos: PARTIAL — Source slide 10 explicitly references a video tutorial (🎥). The video URL is captured in the resourc
-  [ERROR   ] DJ_T2L8_core_topics: PARTIAL — Main themes are present but the list is excessively granular — individual slide bullet points (e.g.,
-  [ERROR   ] DJ_T2L8_learning_objectives: PARTIAL — The two actual learning objectives from Slide 4 are correctly captured. However, the KB also include
-  [ERROR   ] DJ_T2L8_resources: PARTIAL — KB lists a Google Slides URL for 'Empathise → Define → Ideate → Prototype', which corresponds to the
-  [ERROR   ] DJ_T3L11_core_topics: PARTIAL — KB includes relevant terms like 'Portfolio', 'Evidence', 'Curation' but lists extraneous slide secti
-  [ERROR   ] DJ_T3L11_description_of_activities: PARTIAL — Lesson 11 activities are present (Starter, Activity 11.1, 11.2, Portfolio Entry 13, reflection plena
-  [ERROR   ] DJ_T3L11_learning_objectives: INCORRECT — KB lists only 'My Success Criteria / Self-Assessment' which is a slide prompt, not an objective. Sou
-  [ERROR   ] DJ_T3L11_lesson_title: INCORRECT — KB title is 'Lesson 11 – Learning Check' which is a slide section header. Source lesson plan title i
-  [ERROR   ] DJ_T3L2_core_topics: PARTIAL — Most substantive topics are captured (Bartle's Four Player Types, empathy mapping, persona creation,
-  [ERROR   ] DJ_T3L2_learning_objectives: PARTIAL — The first 2 objectives match the lesson plan exactly. Items 3–5 ('I created a clear persona...', 'I 
-  [ERROR   ] DJ_T3L2_resources: PARTIAL — KB lists 5 URLs including 4 Google Drive links plausibly corresponding to resources mentioned in the
-  [ERROR   ] DJ_T3L2_videos: PARTIAL — Slide 6 contains a '🎥 Clip Link' reference; KB assigns URL https://www.youtube.com/watch?v=XcG6CpxKF
-  [ERROR   ] DJ_T3L4_core_topics: PARTIAL — KB includes valid topics (Game Design, Rewritten Brief, Team Roles, Constraints, Success Criteria, R
-  [WARNING ] DJ_T1L14_activity_type: PARTIAL — 'Portfolio and documentation' captures the upload/portfolio aspect but misses the primary activity t
-  [WARNING ] DJ_T1L14_endstar_tools: PARTIAL — 'Visuals' is plausible given the visual/moodboard focus. However, 'Mechanics' is not evidenced in th
-  [WARNING ] DJ_T1L15_activity_type: INCORRECT — KB classifies this as 'Persona and empathy mapping' — this activity type does not appear anywhere in
-  [WARNING ] DJ_T1L15_endstar_tools: PARTIAL — Rule Blocks and Props are explicitly named in source (slides 11, 16, 17). Connections/wiring appear 
-  [WARNING ] DJ_T1L22_activity_type: PARTIAL — 'Polish' partly fits (the pitch/presentation is being polished), but 'Game expansion' mischaracteris
-  [WARNING ] DJ_T1L22_endstar_tools: INCORRECT — KB lists 'Logic' but the source makes no mention of any Endstar tool called Logic. The only AI tool 
-  [WARNING ] DJ_T1L22_success_criteria: PARTIAL — The actual tiered criteria from slide 12 are captured correctly, but the list also includes 'AI as a
-  [WARNING ] DJ_T1L9_endstar_tools: INCORRECT — KB lists 'Interactions' but this term does not appear anywhere in the source. Source references Mura
-  [WARNING ] DJ_T1L9_success_criteria: PARTIAL — KB correctly includes the tiered criteria from slides 9 and 17, but also includes storyteller tips f
-  [WARNING ] DJ_T2L14_activity_type: PARTIAL — KB labels it 'Game expansion and polish' but the lesson is specifically about video trailer creation
-  [WARNING ] DJ_T2L14_assessment_signals: PARTIAL — KB captures the success criteria-based signals from Slide 5 but omits the three MCQ questions from S
-  [WARNING ] DJ_T2L14_endstar_tools: INCORRECT — KB lists ['Visuals'] but the only Endstar reference in the source is 'Endstar deeplink' on Slide 9. 
-  [WARNING ] DJ_T2L1_assessment_signals: PARTIAL — KB captures two success criteria from slide 7 but misses the mandatory diagnostic test (slide 2), Po
-  [WARNING ] DJ_T2L3_activity_type: INCORRECT — KB sets activity_type to 'Agentic AI', which is the lesson topic, not an activity classification. Th
-  [WARNING ] DJ_T2L3_assessment_signals: PARTIAL — KB captures only one assessment signal. Source has MCQ 3.1, MCQ 3.2, MCQ 3.3 (Learning Check slides 
-  [WARNING ] DJ_T2L3_endstar_tools: INCORRECT — KB lists 'Sound' but source slide 11 describes the Endstar in-game chat agent for code, design, debu
-  [WARNING ] DJ_T2L5_activity_type: PARTIAL — Classified as 'Peer testing and feedback'. Peer review does appear as an extension task (slide 18), 
-  [WARNING ] DJ_T2L5_keywords: PARTIAL — Keywords listed (audience, player, gameplay, AI, launch, etc.) are all present in source. However, p
-  [WARNING ] DJ_T2L8_assessment_signals: MISSING — Source contains clear assessment content: Slide 15 self-assessment rubric (All/Most/Some), Portfolio
-  [WARNING ] DJ_T2L8_endstar_tools: INCORRECT — KB lists 'Prototyping tools' which does not appear in the source. The lesson's primary Endstar tool 
-  [WARNING ] DJ_T3L11_activity_type: INCORRECT — KB classifies as 'Peer testing and feedback' but the primary lesson activity is portfolio curation a
-  [WARNING ] DJ_T3L11_assessment_signals: MISSING — Source lesson plan clearly lists Assessment for Learning (Activity 11.1 Portfolio Structure Review, 
-  [WARNING ] DJ_T3L11_big_question: MISSING — Source lesson plan clearly states the big question: 'Why is documenting your process just as importa
-  [WARNING ] DJ_T3L11_endstar_tools: PARTIAL — KB lists generic categories (NPCs, Triggers, Props, Mechanics) but misses specific Endstar tools nam
-  [WARNING ] DJ_T3L11_success_criteria: INCORRECT — KB has 'Reflect on how well you met today's learning objectives.' which is a generic self-assessment
-  [WARNING ] DJ_T3L11_uae_link: MISSING — Source lesson plan has: 'This lesson supports professionalism by documenting decisions, progress, an
-  [WARNING ] DJ_T3L2_assessment_signals: MISSING — KB field is empty but source contains substantial assessment information: Portfolio Entry 2 (Assessm
-  [WARNING ] DJ_T3L2_endstar_tools: PARTIAL — 'Props' is explicitly referenced in slide 21 (Persona Builder Sprint uses '6 props max'). 'NPC dialo
-  [WARNING ] DJ_T3L2_success_criteria: PARTIAL — The two core success criteria ('Empathy-Informed Design' and 'Understand My Player' with full descri
-  [WARNING ] DJ_T3L4_assessment_signals: MISSING — Source explicitly lists Assessment for Learning (Activities 4.1, 4.2, 4.3) and Assessment of Learnin
-  [WARNING ] DJ_T3L4_endstar_tools: PARTIAL — Source does not explicitly list Endstar tools by name. KB lists 'Logic, Mechanics, Prototyping tools
-  [INFO    ] DJ_T1L14_artifacts: PARTIAL — KB has empty array but the moodboard is an explicit student artifact — Slide 8 tasks students to cre
-  [INFO    ] DJ_T1L15_ai_focus: PARTIAL — KB only lists 'AI Literacy (OECD K1.1)' from the assessment slide label. Source has richer AI conten
-  [INFO    ] DJ_T1L15_artifacts: PARTIAL — Source explicitly mentions portfolio evidence (slide 14 title) and success criteria requiring 'Uploa
-  [INFO    ] DJ_T1L15_grade_band: PARTIAL — Source shows 'Level 8' (slide 1) and 'Explorer's Programme' but does not explicitly state 'G9–G10'. 
-  [INFO    ] DJ_T1L22_ai_focus: PARTIAL — KB only lists 'AI Literacy (OECD K1.3)' but source has two substantial AI strands: (1) Ask AI – Pers
-  [INFO    ] DJ_T1L22_artifacts: MISSING — Source slide 11 explicitly names a portfolio artifact — 'Portfolio Evidence — Lesson 22: What you bu
-  [INFO    ] DJ_T1L22_curriculum_alignment: PARTIAL — OECD K1.3 is correctly identified (slides 3 and 14), but the first entry text is truncated to 'OECD 
-  [INFO    ] DJ_T1L9_artifacts: MISSING — Source clearly describes two tangible deliverables: (1) a game story outline in the workbook (slides
-  [INFO    ] DJ_T2L14_artifacts: MISSING — Source clearly describes a 15–20 second game trailer exported at 1080p as the primary deliverable (S
-  [INFO    ] DJ_T2L1_artifacts: PARTIAL — KB captures Portfolio Entry 17 (slides 10–11) and Portfolio Entry 14B (slide 13), but misses 'My Res
-  [INFO    ] DJ_T2L8_ai_focus: PARTIAL — KB captures only two minor AI literacy points (a generic check-your-understanding label and one teac
-  [INFO    ] DJ_T3L11_artifacts: PARTIAL — Portfolio Entry 13 (main Lesson 11 deliverable) is present. However, KB includes Lesson 12 artifacts
-  [INFO    ] DJ_T3L2_ai_focus: PARTIAL — KB captures fragmented AI references (AI literacy reflection prompt, NPC MCQ, AI tools mention) but 
-  [INFO    ] DJ_T3L2_artifacts: PARTIAL — The key artifact 'Portfolio Entry 2 – Player Experience (UX)' is correctly identified. However, 'Por
-  [INFO    ] DJ_T3L4_ai_focus: PARTIAL — KB ai_focus captures AI literacy reflection prompts and references from slides, but the entries are 
-  [INFO    ] DJ_T3L4_artifacts: PARTIAL — KB lists Portfolio Entry 5 and Portfolio Entry 6 which match source. However, it includes duplicates
-  [INFO    ] DJ_T3L4_document_sources: PARTIAL — KB lists the lesson plan markdown file correctly. However, it omits the 'NATIVE GOOGLE_DOC — Lesson 
+  [ERROR   ] DJ_T1L3_resources: PARTIAL — KB captures 3 resource URLs (Khaleej Times, QuickDraw, Drive healthcare file) but misses at least 6 
+  [ERROR   ] DJ_T1L3_slides: MISSING — KB has slides: [] (empty array), but source contains 16 slides with significant textual content incl
+  [ERROR   ] DJ_T1L5_resources: PARTIAL — KB captures all Slide 15 resources and tool links (Miro, Figma, Canva, Gemini, Meshy AI, NotebookLM)
+  [ERROR   ] DJ_T1L5_slides: MISSING — KB has an empty slides array ([]) but source contains 16 slides with substantive text content. Slide
+  [ERROR   ] DJ_T1L9_resources: PARTIAL — KB captures 3 of 5 source hyperlinks (feedback form, Mural, Farcana docs). The two Google Drive file
+  [ERROR   ] DJ_T1L9_slides: MISSING — KB has slides: [] (empty array) despite 20 slides with substantive content in the source. Slide text
+  [ERROR   ] DJ_T1L9_videos: MISSING — Two Google Drive file links (drive.google.com/file/d/12dOEamzHxssBC4XGMsJB8BC73BZ6qW_B and /16ZDNt7O
+  [ERROR   ] DJ_T2L12_resources: PARTIAL — KB captures 3 of 7 external URLs: notebooklm.google.com, Fortnite YouTube, and Gemini. Missing: Trai
+  [ERROR   ] DJ_T2L12_slides: PARTIAL — Only slides 1–4 are captured (duplicated from both student and teacher slides sources), and slide 4 
+  [ERROR   ] DJ_T2L1_resources: PARTIAL — KB captures 6 non-video URLs correctly but omits 7 Google Drive file links present in the source (dr
+  [ERROR   ] DJ_T2L1_slides: PARTIAL — KB captures only 4 of 25 source slides; slide 4 content is truncated mid-sentence ('I'd spend 55 min
+  [ERROR   ] DJ_T2L6_resources: PARTIAL — 15 of ~18 unique external resource URLs are captured correctly. Missing: (1) https://docs.google.com
+  [ERROR   ] DJ_T2L6_slides: PARTIAL — KB captures only 4 of 27 teacher slides, and slide 4 is truncated mid-sentence ('By the end of this 
+  [ERROR   ] DJ_T2L7_slides: PARTIAL — KB shows only 4 of 27+ source slides; slide 4 content is visibly truncated at 'Expand G'. Slides 5–2
+  [ERROR   ] DJ_T2L7_teacher_notes: PARTIAL — Only one speaker note captured (from Exampler Work slide 2). Student slides contain embedded teacher
+  [ERROR   ] DJ_T2L8_resources: PARTIAL — Three of five hyperlinks from source are captured (two YouTube URLs + Drive file link). Missing: the
+  [ERROR   ] DJ_T2L8_slides: PARTIAL — Only 3 of 19+ source slides are captured. Slide 3 is truncated ('How do we know when' — missing 'our
+  [ERROR   ] DJ_T2L8_teacher_notes: PARTIAL — Only one note captured ('Use your comic strip to identify where immersion breaks...'). This is from 
+  [ERROR   ] DJ_T3L1_resources: PARTIAL — KB captures 6 non-video resource URLs correctly. However, 7 Drive file links (drive.google.com/file/
+  [ERROR   ] DJ_T3L1_slides: PARTIAL — Only 4 of 22 slides are represented in the slides field (Slides 1–4). Slides 5–22 are entirely absen
+  [ERROR   ] DJ_T3L6_slides: MISSING — KB 'slides' field is an empty array despite 26 slides with substantial text content in source. Slide
+  [ERROR   ] DJ_T3L8_resources: PARTIAL — KB lists both YouTube URLs but omits the Google Drive link (https://drive.google.com/file/d/1m88yw-p
+  [ERROR   ] DJ_T3L8_slides: MISSING — KB has 'slides': [] (empty array) but source contains 18 slides with substantial text content that s
+  [ERROR   ] DJ_T3L9_slides: MISSING — The 'slides' array is explicitly empty ([]) despite 20 slides of substantive text content in source.
+  [ERROR   ] DJ_T3L9_teacher_notes: PARTIAL — 16 of 17 slides with speaker notes are captured (slides 2–7, 10–12, 14–20). Slide 9 notes are missin
+  [WARNING ] DJ_T1L3_endstar_tools: PARTIAL — KB lists only generic 'Connections' and 'Mechanics', but source (Slide 7) explicitly names specific 
+  [WARNING ] DJ_T2L12_endstar_tools: PARTIAL — KB uses broad category labels (Triggers, Rule Blocks, Mechanics, Props) rather than the specific too
+  [WARNING ] DJ_T2L1_endstar_tools: PARTIAL — KB lists Rule Blocks, Triggers, and Props — all present in source (Warm-Up and exemplar brief). Howe
+  [WARNING ] DJ_T2L6_endstar_tools: PARTIAL — KB lists generic categories (Triggers, NPCs, Rule Blocks, Props, etc.) but misses specific named too
+  [WARNING ] DJ_T2L7_big_question: PARTIAL — KB captures the lesson plan/Google Doc version ('How can expanding gameplay mechanics and immersion 
+  [WARNING ] DJ_T2L7_endstar_tools: PARTIAL — KB lists generic categories (Triggers, Props, Mechanics, etc.) but misses specific named Endstar too
+  [WARNING ] DJ_T2L7_uae_link: PARTIAL — KB captures the lesson plan version but the student slides (Slide 2) present a different phrasing: '
+  [WARNING ] DJ_T2L8_endstar_tools: PARTIAL — KB lists generic categories (Triggers, Rule Blocks, Visuals, etc.) but misses specific named tools e
+  [INFO    ] DJ_T2L12_document_sources: PARTIAL — Four of six listed paths are verified in source content: Exampler Work, Students Slides, Teachers Sl
+  [INFO    ] DJ_T2L8_document_sources: PARTIAL — Two sources are verified against provided content: the Exemplar Work file and the Lesson 8 students 

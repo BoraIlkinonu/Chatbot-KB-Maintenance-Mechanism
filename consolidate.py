@@ -17,93 +17,245 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from config import (
     BASE_DIR, CONVERTED_DIR, MEDIA_DIR, NATIVE_DIR, CONSOLIDATED_DIR, LOGS_DIR, SOURCES_DIR,
-    WEEK_LESSON_MAP, FUZZY_NAME_THRESHOLD, VIDEO_EXTENSIONS, VIDEO_URL_PATTERNS,
+    FUZZY_NAME_THRESHOLD, VIDEO_EXTENSIONS, VIDEO_URL_PATTERNS,
     CONSOLIDATE_COMBINED,
 )
 
 FILE_MANIFEST_PATH = BASE_DIR / "file_manifest.json"
+LLM_CACHE_DIR = BASE_DIR / "llm_cache"
+PROMPTS_DIR = BASE_DIR / "prompts"
 
-# Term key → term number mapping
-TERM_KEY_MAP = {"term1": 1, "term2": 2, "term3": 3}
 
-# Max lessons per term (Term 1 = 24, Term 2 = 14, Term 3 = 24)
-TERM_MAX_LESSONS = {1: 24, 2: 14, 3: 24}
+def _parse_term_key(term_key):
+    """Extract term number from 'termN' key string. Returns int or None."""
+    try:
+        return int((term_key or "").lower().replace("term", ""))
+    except ValueError:
+        return None
 
 
 # ──────────────────────────────────────────────────────────
-# Term + Lesson extraction from paths
+# LLM-based file classification (replaces regex extraction)
 # ──────────────────────────────────────────────────────────
+
+# In-memory classification cache (populated from disk or LLM)
+_classification_cache: dict[str, dict] = {}
+
+
+def _cache_key(file_paths: list[str]) -> str:
+    """SHA-256 of sorted file paths for cache keying."""
+    joined = "\n".join(sorted(file_paths))
+    return hashlib.sha256(joined.encode("utf-8")).hexdigest()
+
+
+def _load_classification_cache(term: int | None = None) -> dict[str, dict]:
+    """Load file classification cache from disk."""
+    cache = {}
+    pattern = f"file_classification_term{term}.json" if term else "file_classification_*.json"
+    for cache_file in sorted(LLM_CACHE_DIR.glob(pattern if term else "file_classification_*.json")):
+        try:
+            data = json.loads(cache_file.read_text(encoding="utf-8"))
+            for entry in data.get("classifications", []):
+                path = entry.get("path", "")
+                if path:
+                    cache[path] = entry
+        except (json.JSONDecodeError, OSError):
+            pass
+    return cache
+
+
+def classify_files_via_llm(file_paths: list[str], backend: str = "cli") -> dict[str, dict]:
+    """Classify file paths via LLM and cache the results.
+
+    Args:
+        file_paths: List of relative file paths to classify
+        backend: LLM backend - "cli", "sdk", or "auto"
+
+    Returns:
+        Dict mapping path → {term, lessons, content_type, has_slides}
+    """
+    if not file_paths:
+        return {}
+
+    # Load prompt template
+    prompt_path = PROMPTS_DIR / "file_classification_prompt.md"
+    template = prompt_path.read_text(encoding="utf-8")
+
+    # Build the file list string
+    paths_text = "\n".join(file_paths)
+    prompt = template.replace("{file_paths}", paths_text)
+
+    # Call LLM
+    from validation.dual_judge.client import create_client
+    client = create_client(backend=backend)
+    result = client.call(prompt)
+
+    # Parse result — expect list of dicts
+    classifications = result if isinstance(result, list) else result.get("classifications", [])
+
+    # Build path→classification map
+    cache = {}
+    for entry in classifications:
+        path = entry.get("path", "")
+        if path:
+            cache[path] = {
+                "path": path,
+                "term": entry.get("term"),
+                "lessons": entry.get("lessons", []),
+                "content_type": entry.get("content_type", "other"),
+                "has_slides": entry.get("has_slides", False),
+            }
+
+    # Save to disk cache
+    LLM_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Group by term for per-term cache files
+    by_term: dict[int | None, list[dict]] = {}
+    for entry in cache.values():
+        by_term.setdefault(entry.get("term"), []).append(entry)
+
+    for term, entries in by_term.items():
+        term_label = f"term{term}" if term else "unknown"
+        cache_path = LLM_CACHE_DIR / f"file_classification_{term_label}.json"
+        existing = []
+        if cache_path.exists():
+            try:
+                existing = json.loads(cache_path.read_text(encoding="utf-8")).get("classifications", [])
+            except (json.JSONDecodeError, OSError):
+                pass
+        # Merge: new entries override existing ones with same path
+        existing_map = {e["path"]: e for e in existing}
+        for e in entries:
+            existing_map[e["path"]] = e
+        cache_path.write_text(json.dumps({
+            "classified_at": datetime.now(timezone.utc).isoformat(),
+            "classifications": list(existing_map.values()),
+        }, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # Update in-memory cache
+    _classification_cache.update(cache)
+
+    return cache
+
+
+def get_file_classification(path: str) -> dict:
+    """Get classification for a file path from cache.
+
+    Returns dict with {term, lessons, content_type, has_slides}.
+    Falls back to regex-based extraction if not in cache.
+    """
+    global _classification_cache
+
+    # Check in-memory cache first
+    if path in _classification_cache:
+        return _classification_cache[path]
+
+    # Load from disk cache if memory cache is empty
+    if not _classification_cache:
+        _classification_cache = _load_classification_cache()
+        if path in _classification_cache:
+            return _classification_cache[path]
+
+    # Fallback: regex-based extraction (for uncached paths)
+    result = {
+        "path": path,
+        "term": _extract_term_regex(path),
+        "lessons": _extract_lesson_regex(path),
+        "content_type": _extract_content_type_regex(path),
+        "has_slides": _is_slides_file(path),
+    }
+    _classification_cache[path] = result
+    return result
+
 
 def extract_term_from_path(path):
-    """Extract term number from file path. Returns int (1/2/3) or None."""
-    path_lower = path.lower().replace("\\", "/")
-
-    # Match folder prefix from sync: "term1/...", "term2/...", "term3/..."
-    for key, num in TERM_KEY_MAP.items():
-        if path_lower.startswith(key + "/") or f"/{key}/" in path_lower:
-            return num
-
-    # Match descriptive folder names from Drive
-    if "term 1" in path_lower or "foundations" in path_lower:
-        return 1
-    if "term 2" in path_lower or "accelerator" in path_lower:
-        return 2
-    if "term 3" in path_lower or "mastery" in path_lower:
-        return 3
-
-    return None
+    """Extract term number from file path. Uses cache, falls back to regex."""
+    return get_file_classification(path).get("term")
 
 
 def extract_lesson_from_path(path, term=None):
-    """Extract lesson number(s) from file path."""
-    path_lower = path.lower()
-    max_lesson = TERM_MAX_LESSONS.get(term, 24) if term else 24
+    """Extract lesson number(s) from file path. Uses cache, falls back to regex."""
+    cls = get_file_classification(path)
+    lessons = cls.get("lessons", [])
+    if lessons:
+        return lessons
 
-    # "Lesson X -Y" or "Lesson X - Y" format (exemplar files like "Lesson 1 -2.md")
-    # Must be checked BEFORE single-lesson regex to avoid matching only "Lesson 1"
-    match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
-    if match:
-        start, end = int(match.group(1)), int(match.group(2))
-        if 1 <= start <= max_lesson and 1 <= end <= max_lesson and start != end:
-            return list(range(start, end + 1))
-
-    # Explicit "Lesson X"
-    match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
-    if match:
-        num = int(match.group(1))
-        if 1 <= num <= max_lesson:
-            return [num]
-
-    # "Lessons X-Y"
-    match = re.search(r"lessons?\s*(\d{1,2})\s*[-–]\s*(\d{1,2})", path_lower)
-    if match:
-        start, end = int(match.group(1)), int(match.group(2))
-        if 1 <= start <= max_lesson and 1 <= end <= max_lesson:
-            return list(range(start, end + 1))
-
-    # Week folder → lessons (only for curriculum content, not support docs)
-    if not any(skip in path_lower for skip in ["assessment", "exemplar", "teacher guide"]):
-        match = re.search(r"week[_\s\-]*(\d)", path_lower)
-        if match:
-            week = int(match.group(1))
-            if week in WEEK_LESSON_MAP:
-                return WEEK_LESSON_MAP[week]
-
-    # Cross-term check: skip files that reference a different term
+    # Cross-term check when using regex fallback
     if term:
-        for t_num in range(1, 4):
-            if t_num != term and re.search(rf"term\s*{t_num}\b", path_lower):
-                return []  # File belongs to different term
-
-    # Portfolio / all lessons
-    if any(t in path_lower for t in ["portfolio", "all weeks", "all lessons"]):
-        return list(range(1, max_lesson + 1))
-
+        path_lower = path.lower()
+        for m in re.finditer(r"term\s*(\d+)\b", path_lower):
+            t_num = int(m.group(1))
+            if t_num != term:
+                return []
     return []
 
 
 def determine_content_type(path):
-    """Determine content type from path."""
+    """Determine content type from path. Uses cache, falls back to regex."""
+    return get_file_classification(path).get("content_type", "other")
+
+
+# ──────────────────────────────────────────────────────────
+# Regex fallbacks (used when LLM cache is not available)
+# ──────────────────────────────────────────────────────────
+
+def _extract_term_regex(path):
+    """Regex-based term extraction fallback."""
+    path_norm = path.replace("\\", "/")
+    first_component = path_norm.split("/")[0].lower()
+
+    result = _parse_term_key(first_component)
+    if result is not None:
+        return result
+
+    path_lower = path_norm.lower()
+    if "foundations" in path_lower or "term 1" in path_lower:
+        return 1
+    if "accelerator" in path_lower or "term 2" in path_lower:
+        return 2
+    if "mastery" in path_lower or "term 3" in path_lower:
+        return 3
+
+    match = re.search(r"term\s*(\d+)", path_lower)
+    if match:
+        return int(match.group(1))
+
+    return None
+
+
+def _extract_lesson_regex(path, term=None):
+    """Regex-based lesson extraction fallback."""
+    path_lower = path.lower()
+
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start and 1 <= end and start != end:
+            return list(range(start, end + 1))
+
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
+    if match:
+        num = int(match.group(1))
+        if num >= 1:
+            return [num]
+
+    match = re.search(r"lessons?\s*(\d{1,2})\s*[-–]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start and 1 <= end:
+            return list(range(start, end + 1))
+
+    if term:
+        for m in re.finditer(r"term\s*(\d+)\b", path_lower):
+            t_num = int(m.group(1))
+            if t_num != term:
+                return []
+
+    return []
+
+
+def _extract_content_type_regex(path):
+    """Regex-based content type extraction fallback."""
     path_lower = path.lower()
     if "teachers slides" in path_lower or "teacher slides" in path_lower:
         return "teachers_slides"
@@ -122,6 +274,12 @@ def determine_content_type(path):
     if "curriculum" in path_lower:
         return "curriculum_doc"
     return "other"
+
+
+def _is_slides_file(path):
+    """Check if path is a slides file."""
+    path_lower = path.lower()
+    return path_lower.endswith(".pptx") or "slides" in path_lower
 
 
 # ──────────────────────────────────────────────────────────
@@ -322,7 +480,7 @@ def load_native_image_metadata():
     for pres_info in data.get("presentations", []):
         source_name = pres_info.get("source_name", "")
         term_key = pres_info.get("term", "")
-        term = TERM_KEY_MAP.get(term_key)
+        term = _parse_term_key(term_key)
         if term is None:
             term = extract_term_from_path(source_name)
 
@@ -520,7 +678,7 @@ def collect_all_links(pptx_links, native_extractions, pdf_links, docx_links=None
         ntype = ext.get("native_type", "")
 
         term_key = ext.get("term", "")
-        term = TERM_KEY_MAP.get(term_key)
+        term = _parse_term_key(term_key)
         if term is None:
             term = extract_term_from_path(source_path or name)
 
@@ -586,7 +744,7 @@ def collect_all_video_refs(video_files, native_extractions, all_links):
         name = ext.get("file_name", "")
         source_path = ext.get("source_path", "")
         term_key = ext.get("term", "")
-        term = TERM_KEY_MAP.get(term_key)
+        term = _parse_term_key(term_key)
         if term is None:
             term = extract_term_from_path(source_path or name)
         ext_lessons = extract_lesson_from_path(source_path or name, term=term)
@@ -879,7 +1037,7 @@ def run_consolidation():
 
         # Determine term: prefer explicit "term" field, fall back to path parsing
         term_key = ext.get("term", "")
-        term = TERM_KEY_MAP.get(term_key)
+        term = _parse_term_key(term_key)
         if term is None:
             term = extract_term_from_path(source_path or name)
         if term is None:
@@ -996,7 +1154,7 @@ def run_consolidation():
         ]
         term_unassigned_native = [
             n for n in consolidated["unassigned"]["native"]
-            if TERM_KEY_MAP.get(n.get("term", "")) == term_num
+            if _parse_term_key(n.get("term", "")) == term_num
             or extract_term_from_path(n.get("source_path", "") or n.get("file_name", "")) == term_num
         ]
 

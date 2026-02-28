@@ -8,7 +8,7 @@ Usage:
     from validation.dual_judge import run_dual_judge_validation
 
     result = run_dual_judge_validation(
-        terms=[1, 2, 3],
+        terms=None,          # auto-discover from KB output
         sample_rate=0.25,
         backend="auto",
         seed=42,

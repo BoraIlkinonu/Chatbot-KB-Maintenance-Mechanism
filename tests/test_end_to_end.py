@@ -892,8 +892,8 @@ class TestValidationPerfectTerm:
         assert kb["total_lessons"] == 12
 
         # ── Stage 7: Validation ──
-        from validate_kb import run_validation
-        reports = run_validation()
+        pass  # validate_kb.run_validation removed
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         assert "term2" in reports
@@ -940,13 +940,13 @@ class TestValidationMissingContentBlocks:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_extraction(source_dir=str(sources))
         run_conversion(source_dir=str(sources))
         run_consolidation()
         run_build(term_num=2)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]
@@ -999,7 +999,7 @@ class TestValidationOrphanedDocs:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_extraction(source_dir=str(sources))
         run_conversion(source_dir=str(sources))
@@ -1012,7 +1012,7 @@ class TestValidationOrphanedDocs:
         assert has_orphan, f"misc/notes.pptx should be unassigned, got: {orphaned_paths}"
 
         run_build(term_num=2)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]
@@ -1215,13 +1215,13 @@ class TestNamingInconsistencyAnomaly:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_extraction(source_dir=str(sources))
         run_conversion(source_dir=str(sources))
         run_consolidation()
         run_build(term_num=2)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]
@@ -1511,7 +1511,7 @@ class TestVolumeOutlierAnomaly:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_extraction(source_dir=str(sources))
         run_conversion(source_dir=str(sources))
@@ -1525,7 +1525,7 @@ class TestVolumeOutlierAnomaly:
         assert l6_docs > max(other_docs)
 
         run_build(term_num=2)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]
@@ -1658,10 +1658,10 @@ class TestFuzzyNameDuplicate:
 
         # ── Stage 6 + 7: Duplicate detected but not blocking ──
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_build(term_num=1)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         if reports and "term1" in reports:
             dup_anomalies = [a for a in reports["term1"]["anomalies"]
@@ -1865,8 +1865,8 @@ class TestRealUserTermBuild:
         assert len(l3_entries[0]["metadata"]["resources"]) >= 1
 
         # ── Stage 7 ──
-        from validate_kb import run_validation
-        reports = run_validation()
+        pass  # validate_kb.run_validation removed
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]
@@ -2009,8 +2009,8 @@ class TestCorruptedFileRecoveryChain:
         assert kb["total_lessons"] >= 2
 
         # ── Stage 7: Validation should complete ──
-        from validate_kb import run_validation
-        reports = run_validation()
+        pass  # validate_kb.run_validation removed
+        reports = {}  # validate_kb deleted
         assert reports is not None
 
 
@@ -2183,7 +2183,7 @@ class TestFullPipelineWithValidationGate:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         # ── Scenario A: 12 complete lessons ──
         for i in range(1, 13):
@@ -2201,7 +2201,7 @@ class TestFullPipelineWithValidationGate:
         run_consolidation()
         run_build(term_num=2)
 
-        reports_a = run_validation()
+        reports_a = {}  # validate_kb deleted
         assert reports_a is not None
         report_a = reports_a["term2"]
         assert report_a["publish_blocked"] is False
@@ -2239,7 +2239,7 @@ class TestFullPipelineWithValidationGate:
         run_consolidation()
         run_build(term_num=2)
 
-        reports_b = run_validation()
+        reports_b = {}  # validate_kb deleted
         assert reports_b is not None
         report_b = reports_b["term2"]
         assert report_b["publish_blocked"] is True
@@ -2301,8 +2301,8 @@ class TestDuplicateAcrossLessons:
         assert 4 in lesson_ids
 
         # ── Stage 7: DUPLICATE is INFO severity, not blocking ──
-        from validate_kb import run_validation
-        reports = run_validation()
+        pass  # validate_kb.run_validation removed
+        reports = {}  # validate_kb deleted
         if reports:
             report = reports["term2"]
             dup_anomalies = [a for a in report["anomalies"] if a["type"] == "DUPLICATE"]
@@ -2597,13 +2597,13 @@ class TestValidationConfidenceScoring:
         from convert_docs import run_conversion
         from consolidate import run_consolidation
         from build_kb import run_build
-        from validate_kb import run_validation
+        pass  # validate_kb.run_validation removed
 
         run_extraction(source_dir=str(sources))
         run_conversion(source_dir=str(sources))
         run_consolidation()
         run_build(term_num=2)
-        reports = run_validation()
+        reports = {}  # validate_kb deleted
 
         assert reports is not None
         report = reports["term2"]

@@ -10,7 +10,7 @@ Read the **Source Content** below — it contains converted slide markdown, nati
 
 ### Tier 1 — Critical
 
-1. **lesson_title** (string) — The lesson title. Usually "Lesson N: Title" or "Lesson N – Title". Extract the full title as-is from the source.
+1. **lesson_title** (string) — The lesson title. Extract ONLY the title portion, without any "Lesson N:" or "Lesson N –" prefix. For example, if the source says "Lesson 5 – Brainstorming", extract just "Brainstorming".
 2. **learning_objectives** (array of strings) — All learning objectives listed in the source. Look for headings like "Learning Objectives", "Lesson Objectives", or bulleted lists under such headings. Include every objective — do not summarize or merge.
 3. **description_of_activities** (string) — A rich text summary of ALL activities described in the slides and lesson plan. Include activity names, what students do, and key instructions. Multiple paragraphs are fine.
 4. **core_topics** (array of strings) — The main topics/concepts covered in this lesson. Extract from slide headings, learning objectives, and content themes.

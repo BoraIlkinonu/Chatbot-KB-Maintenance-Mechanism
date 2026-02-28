@@ -643,6 +643,54 @@
       "category": "pending_review",
       "term": 2,
       "detected_at": "2026-02-26T10:01:28.654857+00:00"
+    },
+    {
+      "path": "term2/Lesson 11/demo.mp4",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.357689+00:00"
+    },
+    {
+      "path": "term2/Lesson 11/Teachers Slides.pptx",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.357689+00:00"
+    },
+    {
+      "path": "term2/Lesson 5/Teachers Slides.pptx",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.357689+00:00"
+    },
+    {
+      "path": "term2/Lesson 3/Handout.pdf",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.465976+00:00"
+    },
+    {
+      "path": "term2/Lesson 3/Slides.pptx",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.465976+00:00"
+    },
+    {
+      "path": "term1/Lesson 1/Teachers Slide.pptx",
+      "category": "pending_review",
+      "term": 1,
+      "detected_at": "2026-02-27T14:16:32.563215+00:00"
+    },
+    {
+      "path": "term1/Lesson 1/Teachers Slides.pptx",
+      "category": "pending_review",
+      "term": 1,
+      "detected_at": "2026-02-27T14:16:32.563215+00:00"
+    },
+    {
+      "path": "term2/Lesson 8/tutorial.mp4",
+      "category": "pending_review",
+      "term": 2,
+      "detected_at": "2026-02-27T14:16:32.591184+00:00"
     }
   ]
 }

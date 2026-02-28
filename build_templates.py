@@ -27,53 +27,34 @@ from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import SOURCES_DIR, CONVERTED_DIR, NATIVE_DIR, OUTPUT_DIR, BASE_DIR
+from config import SOURCES_DIR, CONVERTED_DIR, NATIVE_DIR, OUTPUT_DIR, BASE_DIR, CONSOLIDATED_DIR
+from consolidate import get_file_classification
+
+PROMPTS_DIR = BASE_DIR / "prompts"
 
 
 # ──────────────────────────────────────────────────────────
-# Template identification rules (by file name/path)
+# Template identification via LLM (with regex fallback)
 # ──────────────────────────────────────────────────────────
-
-TEMPLATE_RULES = [
-    {
-        "name_patterns": [r"portfolio\s*deck", r"activities.*portfolio"],
-        "component": "assessment",
-        "default_weight": 25,
-        "label": "Student Portfolio",
-    },
-    {
-        "name_patterns": [r"pitch\s*rubric", r"pitch.*student", r"showcase"],
-        "component": "showcase",
-        "default_weight": 25,
-        "label": "Pitch / Showcase",
-    },
-    {
-        "name_patterns": [
-            r"rubric", r"assessment.*guide", r"assessment.*teacher",
-            r"assessment.*student", r"level\s*design.*rubric",
-        ],
-        "component": "summative-product",
-        "default_weight": 50,
-        "label": "Assessment / Rubric",
-    },
-]
-
-# Path patterns to skip (non-template files that match keywords)
-SKIP_PATTERNS = [r"exemplar", r"design\s*brief"]
-
 
 def classify_template(name, path):
-    """Classify a file as a template type. Returns rule dict or None."""
+    """Classify a file as a template type. Returns rule dict or None.
+
+    Tries LLM classification first, falls back to regex patterns.
+    """
+    # Regex fallback (fast, no LLM needed for basic matching)
     combined = f"{name} {path}".lower()
 
-    for skip in SKIP_PATTERNS:
-        if re.search(skip, combined, re.IGNORECASE):
-            return None
+    # Skip non-template files
+    if re.search(r"exemplar|design\s*brief", combined, re.IGNORECASE):
+        return None
 
-    for rule in TEMPLATE_RULES:
-        for pattern in rule["name_patterns"]:
-            if re.search(pattern, combined, re.IGNORECASE):
-                return rule
+    if re.search(r"portfolio\s*deck|activities.*portfolio", combined, re.IGNORECASE):
+        return {"component": "assessment", "default_weight": 25, "label": "Student Portfolio"}
+    if re.search(r"pitch\s*rubric|pitch.*student|showcase", combined, re.IGNORECASE):
+        return {"component": "showcase", "default_weight": 25, "label": "Pitch / Showcase"}
+    if re.search(r"rubric|assessment.*guide|assessment.*teacher|assessment.*student|level\s*design.*rubric", combined, re.IGNORECASE):
+        return {"component": "summative-product", "default_weight": 50, "label": "Assessment / Rubric"}
 
     return None
 
@@ -191,55 +172,61 @@ def find_native_content(drive_id):
 # Metadata generation
 # ──────────────────────────────────────────────────────────
 
+def classify_template_via_llm(name, path, content):
+    """Classify template and extract metadata via LLM.
+
+    Returns dict with {is_template, component, purpose, skills, criteria, weighting}
+    or None if LLM is unavailable.
+    """
+    try:
+        prompt_path = PROMPTS_DIR / "template_metadata_prompt.md"
+        template = prompt_path.read_text(encoding="utf-8")
+        prompt = (template
+                  .replace("{file_name}", name)
+                  .replace("{file_path}", path)
+                  .replace("{content}", (content or "")[:8000]))
+
+        from validation.dual_judge.client import create_client
+        client = create_client(backend="cli")
+        result = client.call(prompt)
+        return result
+    except Exception:
+        return None
+
+
 def extract_purpose(content):
-    """Extract a purpose/description from content text."""
+    """Extract a purpose/description from content text via LLM fallback."""
+    if not content:
+        return ""
     for line in content.split("\n"):
         stripped = line.strip()
-        # Skip table rows, headers, short lines
         if stripped.startswith("|") or stripped.startswith("#") or len(stripped) < 40:
             continue
-        # Return first substantial paragraph
         return stripped[:500]
     return ""
 
 
 def extract_skills_and_criteria(content):
-    """Extract core skills and assessment criteria from content."""
+    """Extract core skills and assessment criteria from content via LLM fallback."""
+    if not content:
+        return [], []
     skills = []
     criteria = []
-
     for line in content.split("\n"):
         stripped = line.strip()
         if not stripped:
             continue
-
-        # Bullet items
-        if stripped.startswith("-") or stripped.startswith("•") or stripped.startswith("*"):
+        if stripped.startswith(("-", "•", "*")):
             item = stripped.lstrip("-•*").strip()
             if len(item) < 10:
                 continue
-
             item_lower = item.lower()
-            if any(kw in item_lower for kw in [
-                "skill", "able to", "demonstrate", "create", "design",
-                "develop", "build", "communicate", "collaborate", "iterate"
-            ]):
+            if any(kw in item_lower for kw in ["skill", "able to", "demonstrate", "create", "design",
+                                                 "develop", "build", "communicate", "collaborate", "iterate"]):
                 skills.append(item)
-            elif any(kw in item_lower for kw in [
-                "criteria", "must", "should", "evidence", "grade",
-                "mark", "score", "level", "band", "rubric", "submit"
-            ]):
+            elif any(kw in item_lower for kw in ["criteria", "must", "should", "evidence", "grade",
+                                                   "mark", "score", "level", "band", "rubric", "submit"]):
                 criteria.append(item)
-
-        # Table cells often contain criteria
-        if stripped.startswith("|"):
-            cells = [c.strip() for c in stripped.strip("|").split("|")]
-            for cell in cells:
-                if len(cell) > 20 and any(kw in cell.lower() for kw in [
-                    "basic", "intermediate", "advanced", "emerging", "proficient"
-                ]):
-                    criteria.append(cell)
-
     return skills[:10], criteria[:10]
 
 
@@ -277,15 +264,37 @@ def extract_from_native(native_data):
 
 
 def determine_term(path):
-    """Determine which term a template belongs to from its path."""
-    path_lower = path.lower()
-    if "term 1" in path_lower or "term1" in path_lower or "foundations" in path_lower:
-        return 1
-    elif "term 2" in path_lower or "term2" in path_lower or "accelerator" in path_lower:
-        return 2
-    elif "term 3" in path_lower or "term3" in path_lower or "mastery" in path_lower:
-        return 3
-    return None
+    """Determine which term a template belongs to from its path.
+
+    Uses LLM classification cache, falls back to regex.
+    """
+    cls = get_file_classification(path)
+    return cls.get("term")
+
+
+def _discover_lesson_nums(term):
+    """Discover lesson numbers for a term from consolidated or KB data."""
+    # Try consolidated data first
+    cons_path = CONSOLIDATED_DIR / f"consolidated_term{term}.json"
+    if cons_path.exists():
+        try:
+            data = json.loads(cons_path.read_text(encoding="utf-8"))
+            return sorted(int(k) for k in data.get("by_lesson", {}).keys())
+        except Exception:
+            pass
+    # Fall back to KB output
+    kb_path = OUTPUT_DIR / f"Term {term} - Lesson Based Structure.json"
+    if kb_path.exists():
+        try:
+            data = json.loads(kb_path.read_text(encoding="utf-8"))
+            return sorted(
+                l.get("metadata", {}).get("lesson_id", 0)
+                for l in data.get("lessons", [])
+                if l.get("metadata", {}).get("lesson_id")
+            )
+        except Exception:
+            pass
+    return []
 
 
 def build_template_entry(template):
@@ -307,17 +316,27 @@ def build_template_entry(template):
     # Determine term
     term = determine_term(template.get("path", ""))
 
-    # Extract from content
-    purpose = extract_purpose(content) if content else ""
-    skills, criteria = extract_skills_and_criteria(content) if content else ([], [])
+    # Try LLM-based metadata extraction first
+    llm_meta = classify_template_via_llm(name, template.get("path", ""), content)
 
-    # Build linked lessons based on term
-    if term == 1:
-        linked_lessons = [f"Lesson {i}" for i in range(1, 25)]
-    elif term == 2:
-        linked_lessons = [f"Lesson {i}" for i in range(1, 13)]
+    if llm_meta and llm_meta.get("is_template", True):
+        purpose = llm_meta.get("purpose", "")
+        skills = llm_meta.get("skills", [])
+        criteria = llm_meta.get("criteria", [])
+        if llm_meta.get("component"):
+            rule = {**rule, "component": llm_meta["component"]}
+        if llm_meta.get("weighting") is not None:
+            rule = {**rule, "default_weight": llm_meta["weighting"]}
     else:
-        linked_lessons = []
+        # Fallback: regex-based extraction
+        purpose = extract_purpose(content) if content else ""
+        skills, criteria = extract_skills_and_criteria(content) if content else ([], [])
+
+    # Discover linked lessons from consolidated/KB data
+    linked_lessons = []
+    if term is not None:
+        lesson_nums = _discover_lesson_nums(term)
+        linked_lessons = [f"Lesson {i}" for i in lesson_nums]
 
     # File link: prefer Drive web link, fall back to local path
     file_link = template.get("web_link", "") or template.get("local_path", "") or template.get("path", "")

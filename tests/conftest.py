@@ -109,10 +109,8 @@ def config_override(tmp_path, monkeypatch):
     import convert_docs
     import consolidate
     import build_kb
-    import validate_kb
-    import cross_validate_kb
 
-    for module in (extract_media, convert_docs, consolidate, build_kb, validate_kb, cross_validate_kb):
+    for module in (extract_media, convert_docs, consolidate, build_kb):
         for name in ("SOURCES_DIR", "MEDIA_DIR", "CONVERTED_DIR", "NATIVE_DIR",
                       "CONSOLIDATED_DIR", "OUTPUT_DIR", "LOGS_DIR", "VALIDATION_DIR"):
             if hasattr(module, name):

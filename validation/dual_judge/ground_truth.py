@@ -10,7 +10,7 @@ import json
 import re
 from pathlib import Path
 
-from config import CONVERTED_DIR, NATIVE_DIR, MEDIA_DIR, WEEK_LESSON_MAP
+from config import CONVERTED_DIR, NATIVE_DIR, MEDIA_DIR, CONSOLIDATED_DIR
 
 
 def extract_ground_truth(term: int, lesson_num: int) -> str:
@@ -69,44 +69,40 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
 def _extract_lesson_from_path(path: str, term: int) -> list[int]:
     """Extract lesson number(s) from file path.
 
-    Mirrors consolidate.extract_lesson_from_path() logic so ground truth
-    matches what the pipeline assigns.
+    Uses consolidate.get_file_classification() to match what the pipeline assigns.
+    Falls back to regex for paths not in the classification cache.
     """
-    path_lower = path.lower().replace("\\", "/")
-    max_lesson = {1: 24, 2: 14, 3: 24}.get(term, 24)
+    from consolidate import get_file_classification
+    cls = get_file_classification(path)
+    lessons = cls.get("lessons", [])
+    if lessons:
+        return lessons
 
-    # "Lesson X-Y" range (e.g. "Lesson 1 -2.md") — must check BEFORE single-lesson
+    # Regex fallback for paths not in cache
+    path_lower = path.lower().replace("\\", "/")
+
     match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
     if match:
         start, end = int(match.group(1)), int(match.group(2))
-        if 1 <= start <= max_lesson and 1 <= end <= max_lesson and start != end:
+        if 1 <= start and 1 <= end and start != end:
             return list(range(start, end + 1))
 
-    # Explicit "Lesson X"
     match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
     if match:
         num = int(match.group(1))
-        if 1 <= num <= max_lesson:
+        if num >= 1:
             return [num]
 
-    # "Lessons X-Y" (range)
     match = re.search(r"lessons?\s*(\d{1,2})\s*[-–]\s*(\d{1,2})", path_lower)
     if match:
         start, end = int(match.group(1)), int(match.group(2))
-        if 1 <= start <= max_lesson and 1 <= end <= max_lesson:
+        if 1 <= start and 1 <= end:
             return list(range(start, end + 1))
 
-    # Week folder → lessons (skip support docs)
-    if not any(skip in path_lower for skip in ["assessment", "exemplar", "teacher guide"]):
-        match = re.search(r"week[_\s\-]*(\d)", path_lower)
-        if match:
-            week = int(match.group(1))
-            if week in WEEK_LESSON_MAP:
-                return WEEK_LESSON_MAP[week]
-
     # Cross-term check
-    for t_num in range(1, 4):
-        if t_num != term and re.search(rf"term\s*{t_num}\b", path_lower):
+    for m in re.finditer(r"term\s*(\d+)\b", path_lower):
+        t_num = int(m.group(1))
+        if t_num != term:
             return []
 
     return []

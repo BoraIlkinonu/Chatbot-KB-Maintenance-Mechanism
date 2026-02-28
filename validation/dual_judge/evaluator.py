@@ -5,6 +5,7 @@ This is the main entry point for the dual-judge validation system.
 """
 
 import json
+import re
 from pathlib import Path
 
 from config import OUTPUT_DIR, VALIDATION_DIR
@@ -59,6 +60,17 @@ def _format_kb_entry(lesson: dict) -> str:
     return json.dumps(entry, indent=2, ensure_ascii=False)
 
 
+def _discover_terms(kb_dir: Path | None = None) -> list[int]:
+    """Discover available terms from KB output files."""
+    base = kb_dir or OUTPUT_DIR
+    terms = []
+    for kb_file in sorted(base.glob("Term * - Lesson Based Structure.json")):
+        m = re.search(r"Term (\d+)", kb_file.name)
+        if m:
+            terms.append(int(m.group(1)))
+    return terms
+
+
 def _build_all_lessons(terms: list[int], kb_dir: Path | None = None) -> list[dict]:
     """Build a flat list of all lesson dicts with term/lesson metadata."""
     all_lessons = []
@@ -103,7 +115,8 @@ def run_dual_judge_validation(
     Returns:
         DualJudgeReport with scores, verdicts, and failure details
     """
-    terms = terms or [1, 2, 3]
+    if terms is None:
+        terms = _discover_terms(kb_dir)
     report = DualJudgeReport()
     report.budget = budget
 

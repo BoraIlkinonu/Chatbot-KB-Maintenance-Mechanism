@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 sys.stdout.reconfigure(encoding="utf-8")
 
 from config import (
-    CONSOLIDATED_DIR, OUTPUT_DIR, WEEK_LESSON_MAP,
+    CONSOLIDATED_DIR, OUTPUT_DIR,
     BASE_DIR, CONVERTED_DIR, NATIVE_DIR,
 )
 
@@ -99,37 +99,41 @@ def extract_tables_from_markdown(content):
     return tables
 
 
-# Assessment/rubric and schedule keywords for table classification
-_RUBRIC_KEYWORDS = {
-    "rubric", "criterion", "criteria", "assessment", "marks", "score",
-    "grade", "grading", "proficient", "emerging", "exceeding", "level",
-    "performance", "competency", "mastery", "beginning", "developing",
-    "portfolio", "reflection", "self-assessment", "peer-assessment",
-}
-
-_SCHEDULE_KEYWORDS = {
-    "week", "date", "deadline", "milestone", "schedule", "timeline",
-    "session", "day", "period", "term", "semester", "calendar",
-}
+PROMPTS_DIR = BASE_DIR / "prompts"
 
 
 def classify_table(table):
-    """Classify a table as 'rubric', 'schedule', or 'data'."""
-    headers_text = " ".join(str(h).lower() for h in table.get("headers", []))
+    """Classify a table as 'rubric', 'schedule', or 'data' via LLM.
+
+    Falls back to regex if LLM is unavailable.
+    """
+    headers = table.get("headers", [])
     rows = table.get("rows", [])
-    first_row_text = " ".join(str(c).lower() for c in rows[0]) if rows else ""
-    combined = headers_text + " " + first_row_text
+    headers_text = " | ".join(str(h) for h in headers)
+    rows_text = "\n".join(" | ".join(str(c) for c in row) for row in rows[:5])
 
-    rubric_hits = sum(1 for kw in _RUBRIC_KEYWORDS if kw in combined)
-    schedule_hits = sum(1 for kw in _SCHEDULE_KEYWORDS if kw in combined)
+    try:
+        prompt_path = PROMPTS_DIR / "table_classification_prompt.md"
+        template = prompt_path.read_text(encoding="utf-8")
+        prompt = template.replace("{headers}", headers_text).replace("{rows}", rows_text)
 
-    if rubric_hits >= 2:
+        from validation.dual_judge.client import create_client
+        client = create_client(backend="cli")
+        result = client.call(prompt)
+        classification = result.get("classification", "data")
+        if classification in ("rubric", "schedule", "data"):
+            return classification
+    except Exception:
+        pass
+
+    # Fallback: simple keyword check
+    combined = (headers_text + " " + rows_text).lower()
+    rubric_kw = {"rubric", "criterion", "criteria", "assessment", "marks", "score",
+                 "grade", "proficient", "emerging", "exceeding", "mastery"}
+    schedule_kw = {"week", "date", "deadline", "milestone", "schedule", "timeline"}
+    if sum(1 for kw in rubric_kw if kw in combined) >= 1:
         return "rubric"
-    if schedule_hits >= 2:
-        return "schedule"
-    if rubric_hits == 1:
-        return "rubric"
-    if schedule_hits == 1:
+    if sum(1 for kw in schedule_kw if kw in combined) >= 1:
         return "schedule"
     return "data"
 
@@ -176,7 +180,11 @@ def _extract_structural_data(lesson_data: dict, term_num: int, lesson_num: int) 
     # 1. Parse slides from converted PPTX markdown
     all_slides = []
     for doc in docs:
-        if doc.get("content_type") not in ("teachers_slides", "students_slides"):
+        # Use LLM classification's has_slides field, fall back to content_type
+        from consolidate import get_file_classification
+        cls = get_file_classification(doc.get("path", ""))
+        is_slides = cls.get("has_slides", False) or doc.get("content_type") in ("teachers_slides", "students_slides")
+        if not is_slides:
             continue
         content = _read_full_content(doc)
         if content:
@@ -307,14 +315,6 @@ def _extract_structural_data(lesson_data: dict, term_num: int, lesson_num: int) 
     }
 
 
-def _week_for_lesson(lesson_num: int) -> int | None:
-    """Look up week number from WEEK_LESSON_MAP."""
-    for week, lessons in WEEK_LESSON_MAP.items():
-        if lesson_num in lessons:
-            return week
-    return None
-
-
 def build_lesson_entry(term_num: int, lesson_num: int, lesson_data: dict) -> dict | None:
     """Build a single lesson's KB entry from LLM extraction + structural data.
 
@@ -329,35 +329,15 @@ def build_lesson_entry(term_num: int, lesson_num: int, lesson_data: dict) -> dic
     # Load structural data (slides, images, tables, native content)
     structural = _extract_structural_data(lesson_data, term_num, lesson_num)
 
-    # Derive metadata title (strip "Lesson N:" prefix for the metadata.title field)
+    # LLM extraction already returns clean title without "Lesson N:" prefix
     lesson_title = llm.get("lesson_title", f"Lesson {lesson_num}")
-    title_for_metadata = re.sub(
-        r"^lesson\s*\d+\s*[:–\-—]\s*", "", lesson_title, flags=re.IGNORECASE
-    ).strip() or lesson_title
+    title_for_metadata = lesson_title
 
-    week = _week_for_lesson(lesson_num)
-
-    # Use LLM teacher_notes, but fall back to slide speaker notes if LLM returned empty
+    # LLM extraction includes speaker notes directly
     teacher_notes = llm.get("teacher_notes", [])
-    if not teacher_notes:
-        teacher_notes = [
-            {"slide": s["slide_number"], "notes": s["notes"]}
-            for s in structural["slides"]
-            if s.get("notes")
-        ]
 
-    # Video entries — normalize from LLM format
-    video_entries = []
-    for v in llm.get("videos", []):
-        if isinstance(v, dict):
-            video_entries.append({
-                "url": v.get("url", ""),
-                "video_id": v.get("video_id", ""),
-                "type": v.get("type", ""),
-                "title": v.get("title", ""),
-            })
-        elif isinstance(v, str):
-            video_entries.append({"url": v, "video_id": "", "type": "", "title": ""})
+    # Video entries from LLM extraction
+    video_entries = llm.get("videos", [])
 
     # Build the lesson entry in the exact expected schema
     lesson_entry = {
@@ -368,7 +348,7 @@ def build_lesson_entry(term_num: int, lesson_num: int, lesson_data: dict) -> dic
             "lesson_id": lesson_num,
             "title": title_for_metadata,
             "url": f"Lesson {lesson_num}",
-            "grade_band": llm.get("grade_band", "G9\u2013G10") or "G9\u2013G10",
+            "grade_band": llm.get("grade_band", ""),
             "core_topics": llm.get("core_topics", []),
             "endstar_tools": llm.get("endstar_tools", []),
             "ai_focus": llm.get("ai_focus", []),
@@ -390,7 +370,6 @@ def build_lesson_entry(term_num: int, lesson_num: int, lesson_data: dict) -> dic
         "prompts": "",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "pipeline_version": "3.0",
-        "week": week,
         "big_question": llm.get("big_question", ""),
         "uae_link": llm.get("uae_link", ""),
         "success_criteria": llm.get("success_criteria", []),
@@ -472,11 +451,10 @@ def run_build(term_num=None):
             print(f"  No lesson data for Term {t}. Skipping.")
             continue
 
-        lesson_nums = [int(k) for k in term_lessons.keys() if k.isdigit()]
-        max_lesson = max(lesson_nums) if lesson_nums else 0
+        lesson_nums = sorted(int(k) for k in term_lessons.keys() if k.isdigit())
         lessons = []
 
-        for lesson_num in range(1, max_lesson + 1):
+        for lesson_num in lesson_nums:
             lesson_data = term_lessons.get(str(lesson_num), {})
 
             entry = build_lesson_entry(t, lesson_num, lesson_data)

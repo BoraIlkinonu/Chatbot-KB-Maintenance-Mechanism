@@ -20,7 +20,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from config import BASE_DIR, MEDIA_DIR
 from validation.dual_judge.client import create_client
-from consolidate import extract_term_from_path, extract_lesson_from_path
+from consolidate import get_file_classification
 
 IMAGE_CACHE_DIR = BASE_DIR / "image_cache"
 IMAGE_DESCRIPTIONS_PATH = BASE_DIR / "image_descriptions.json"
@@ -40,8 +40,9 @@ def _load_image_metadata() -> list[dict]:
 
     for pptx_info in data.get("pptx_files", []):
         rel_path = pptx_info.get("relative_path", "")
-        term = extract_term_from_path(rel_path)
-        lessons = extract_lesson_from_path(rel_path, term=term)
+        cls = get_file_classification(rel_path)
+        term = cls.get("term")
+        lessons = cls.get("lessons", [])
 
         for img in pptx_info.get("images", []):
             img_path = img.get("image_path", "")
@@ -63,12 +64,10 @@ def _load_image_metadata() -> list[dict]:
         native_data = json.loads(native_meta_path.read_text(encoding="utf-8"))
         for pres_info in native_data.get("presentations", []):
             source_name = pres_info.get("source_name", "")
-            term_key = pres_info.get("term", "")
-            term = {"term1": 1, "term2": 2, "term3": 3}.get(term_key)
-            if term is None:
-                term = extract_term_from_path(source_name)
             source_path = pres_info.get("source_path", "") or source_name
-            lessons = extract_lesson_from_path(source_path, term=term)
+            cls = get_file_classification(source_path)
+            term = cls.get("term")
+            lessons = cls.get("lessons", [])
 
             for img in pres_info.get("images", []):
                 img_path = img.get("image_path", "")

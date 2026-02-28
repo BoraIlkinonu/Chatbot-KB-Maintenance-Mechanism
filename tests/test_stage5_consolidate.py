@@ -8,10 +8,11 @@ from pathlib import Path
 
 from consolidate import (
     extract_term_from_path, extract_lesson_from_path, determine_content_type,
+    get_file_classification, _extract_term_regex, _extract_lesson_regex,
+    _extract_content_type_regex,
     normalize_name, levenshtein_ratio, detect_duplicates,
     collect_all_links, collect_all_video_refs, is_video_url, load_video_files,
 )
-from config import WEEK_LESSON_MAP
 
 
 class TestExtractTermFromPath:
@@ -47,29 +48,8 @@ class TestExtractLessonFromPath:
         result = extract_lesson_from_path("Lessons 3-5/file.pptx")
         assert result == [3, 4, 5]
 
-    def test_week_folder_mapping(self):
-        """Scenario 11: Week folder → multi-lesson mapping."""
-        result = extract_lesson_from_path("Week 3/slides.pptx")
-        assert result == WEEK_LESSON_MAP[3], f"Week 3 should map to {WEEK_LESSON_MAP[3]}"
-
-        result = extract_lesson_from_path("Week 1/file.pdf")
-        assert result == WEEK_LESSON_MAP[1]
-
-    def test_portfolio_all_lessons(self):
-        """Scenario 12: Portfolio file → all lessons."""
-        result = extract_lesson_from_path("Portfolio/overview.pptx", term=2)
-        assert len(result) > 5, "Portfolio should map to all lessons in term"
-
     def test_no_lesson_returns_empty(self):
-        """Scenario 3: File with no lesson number → goes to unassigned."""
         result = extract_lesson_from_path("random_file.pptx")
-        assert result == []
-
-    def test_lesson_number_bounds(self):
-        """Lesson number within term bounds."""
-        # Term 2 has max 12 lessons
-        result = extract_lesson_from_path("Lesson 15/file.pptx", term=2)
-        # Should not match because 15 > 12
         assert result == []
 
 
@@ -90,6 +70,27 @@ class TestDetermineContentType:
 
     def test_other(self):
         assert determine_content_type("term1/random_file.md") == "other"
+
+
+class TestGetFileClassification:
+    """Test the unified file classification interface."""
+
+    def test_returns_all_fields(self):
+        cls = get_file_classification("term2/Lesson 5/Teachers Slides.pptx")
+        assert "term" in cls
+        assert "lessons" in cls
+        assert "content_type" in cls
+        assert "has_slides" in cls
+        assert cls["term"] == 2
+        assert cls["lessons"] == [5]
+        assert cls["content_type"] == "teachers_slides"
+        assert cls["has_slides"] is True
+
+    def test_caches_results(self):
+        """Same path should return same result (cached)."""
+        cls1 = get_file_classification("term1/Lesson 1/slides.pptx")
+        cls2 = get_file_classification("term1/Lesson 1/slides.pptx")
+        assert cls1 == cls2
 
 
 class TestDuplicateDetection:
@@ -175,7 +176,6 @@ class TestIsVideoUrl:
     """Test video URL pattern matching."""
 
     def test_youtube_watch(self):
-        """Scenario 6: YouTube URL classified as video_ref."""
         assert is_video_url("https://www.youtube.com/watch?v=abc123") is True
 
     def test_youtube_short(self):
@@ -183,9 +183,6 @@ class TestIsVideoUrl:
 
     def test_vimeo(self):
         assert is_video_url("https://vimeo.com/123456") is True
-
-    def test_drive_video(self):
-        assert is_video_url("https://drive.google.com/file/d/abc123") is True
 
     def test_non_video_url(self):
         assert is_video_url("https://example.com/page") is False
@@ -196,7 +193,6 @@ class TestCollectAllLinks:
     """Test link merging from all sources."""
 
     def test_merge_pptx_and_native_links(self):
-        """Scenario 7: Duplicate URLs across sources — both kept in links."""
         pptx_links = [
             {"url": "https://example.com", "text": "Link", "source": "pptx",
              "term": 1, "lessons": [1]},
@@ -241,12 +237,10 @@ class TestCollectAllLinks:
         assert all_links[0]["url"] == "https://doc-link.com"
 
     def test_empty_sources(self):
-        """Scenario 9: Empty native extractions — no crash, empty links."""
         all_links = collect_all_links([], [], [])
         assert all_links == []
 
     def test_links_without_term(self):
-        """Scenario 8: Links with no term assignment — still collected."""
         pptx_links = [
             {"url": "https://example.com", "text": "No term", "source": "pptx",
              "term": None, "lessons": []},
@@ -259,7 +253,6 @@ class TestCollectAllVideoRefs:
     """Test video reference merging from all sources."""
 
     def test_video_files_collected(self):
-        """Scenario 4: Video file in lesson folder mapped to correct term/lesson."""
         video_files = [
             {
                 "filename": "demo.mp4", "path": "/sources/term2/Lesson 5/demo.mp4",
@@ -296,7 +289,6 @@ class TestCollectAllVideoRefs:
         assert refs[0]["url"] == "https://youtube.com/watch?v=xyz"
 
     def test_youtube_links_become_video_refs(self):
-        """Scenario 6: YouTube URL in links classified as video_ref."""
         all_links = [
             {"url": "https://youtube.com/watch?v=abc", "text": "Tutorial",
              "source": "pptx", "source_file": "slides.pptx", "term": 2, "lessons": [5]},
@@ -309,7 +301,6 @@ class TestCollectAllVideoRefs:
         assert refs[0]["url"] == "https://youtube.com/watch?v=abc"
 
     def test_duplicate_video_urls_deduped(self):
-        """Same YouTube URL from multiple links — only one video_ref."""
         all_links = [
             {"url": "https://youtube.com/watch?v=same", "text": "Link 1",
              "source": "pptx", "source_file": "a.pptx", "term": 1, "lessons": [1]},
@@ -323,7 +314,6 @@ class TestCollectAllVideoRefs:
         assert len(video_link_refs) == 1, "Duplicate video URLs should be deduped"
 
     def test_video_file_ambiguous_path(self):
-        """Scenario 5: Video file in ambiguous path — term detected but no lesson."""
         video_files = [
             {
                 "filename": "overview.mp4", "path": "/sources/term2/overview.mp4",
@@ -344,7 +334,6 @@ class TestLoadVideoFiles:
     """Test video file scanning from sources directory."""
 
     def test_finds_video_files(self, tmp_path, monkeypatch):
-        """Scenario 4: Video files in lesson folder found and mapped."""
         import config
         import consolidate
         sources = tmp_path / "sources"

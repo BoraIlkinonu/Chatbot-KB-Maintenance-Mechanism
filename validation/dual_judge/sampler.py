@@ -8,12 +8,6 @@ slide count (more slides = higher probability of being sampled).
 import random
 
 
-# Placeholder lessons with no real content (skip these)
-SKIP_LESSONS = {
-    3: set(range(13, 25)),  # T3 L13-24 are placeholders
-}
-
-
 def sample_lessons(
     all_lessons: list[dict],
     sample_rate: float = 0.25,
@@ -33,14 +27,11 @@ def sample_lessons(
     """
     rng = random.Random(seed)
 
-    # Filter to requested terms and skip placeholders
+    # Filter to requested terms
     eligible = []
     for lesson in all_lessons:
         t = lesson.get("term", 0)
-        ln = lesson.get("lesson_num", 0)
         if terms and t not in terms:
-            continue
-        if ln in SKIP_LESSONS.get(t, set()):
             continue
         eligible.append(lesson)
 
