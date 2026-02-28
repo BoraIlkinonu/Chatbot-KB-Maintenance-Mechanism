@@ -881,8 +881,12 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             if do_download and local_path:
                 try:
                     fp = change.get("folder_path", "")
-                    label = "RECOVER" if (file_missing and ct in ("UNCHANGED", "METADATA_CHANGED")) else (ct if ct != "UNCHANGED" else "SYNC")
-                    print(f"  [{label}] Downloading: {fp}/{change['name']}" if fp else f"  [{label}] Downloading: {change['name']}")
+                    if file_missing and ct in ("UNCHANGED", "METADATA_CHANGED"):
+                        action = "[RECOVER] Re-downloading (missing from disk):"
+                    else:
+                        label = ct if ct != "UNCHANGED" else "SYNC"
+                        action = f"[{label}] Downloading:"
+                    print(f"  {action} {fp}/{change['name']}" if fp else f"  {action} {change['name']}")
                     result_path, local_md5 = download_file(
                         drive_service, change, local_path, creds=creds
                     )
