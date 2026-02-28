@@ -23,7 +23,7 @@ from sync_drive import run_sync
 from notify_slack import notify_no_changes, notify_error, notify_changes_detected
 
 
-def _write_sync_github_summary(summary, download_errors):
+def _write_sync_github_summary(summary, download_errors, verification=None):
     """Write sync results to GitHub step summary (CI only)."""
     import os
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -37,26 +37,37 @@ def _write_sync_github_summary(summary, download_errors):
     lines.append(f"| New | {summary['new']} |")
     lines.append(f"| Modified | {summary['modified']} |")
     lines.append(f"| Downloaded | {summary['downloaded']} |")
+    recovered = summary.get('recovered', 0)
+    if recovered:
+        lines.append(f"| Recovered | {recovered} |")
     lines.append(f"| Errors | {summary['errors']} |")
     lines.append("")
 
-    if download_errors:
-        export_errors = [e for e in download_errors
-                         if "exportSizeLimitExceeded" in e.get("error", "") or "403" in e.get("error", "")]
-        other_errors = [e for e in download_errors if e not in export_errors]
-
-        if export_errors:
-            lines.append(f"### Large Google Slides — PPTX export skipped ({len(export_errors)} files)")
-            lines.append("> Text extracted via native Slides API — no content loss.\n")
-            for err in export_errors:
-                lines.append(f"- `{err['file']}` [{err.get('term', '')}]")
+    # Verification results — the definitive file check
+    if verification:
+        expected = verification.get("expected_files", 0)
+        if verification.get("all_present"):
+            lines.append(f"### File Verification: PASS")
+            lines.append(f"> All {expected} files verified on disk.\n")
+        else:
+            missing = verification.get("missing", [])
+            zero_byte = verification.get("zero_byte", [])
+            total_problems = len(missing) + len(zero_byte)
+            lines.append(f"### File Verification: FAIL — {total_problems} of {expected} files missing\n")
+            for m in missing + zero_byte:
+                fp = m.get("folder_path", "")
+                display = f"{fp}/{m['file']}" if fp else m["file"]
+                drive_link = m.get("drive_link", "")
+                link_md = f" — [Drive link]({drive_link})" if drive_link else ""
+                lines.append(f"- `{display}` [{m.get('term', '')}] — {m.get('reason', 'unknown')[:150]}{link_md}")
             lines.append("")
 
-        if other_errors:
-            lines.append(f"### Unexpected download failures ({len(other_errors)} files)")
-            for err in other_errors:
-                lines.append(f"- `{err['file']}` [{err.get('term', '')}] — {err.get('error', '')[:150]}")
-            lines.append("")
+    if download_errors and not verification:
+        for err in download_errors[:15]:
+            fp = err.get("folder_path", "")
+            display = f"{fp}/{err['file']}" if fp else err["file"]
+            lines.append(f"- `{display}` [{err.get('term', '')}] — {err.get('error', '')[:150]}")
+        lines.append("")
 
     with open(summary_path, "a", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
@@ -115,7 +126,8 @@ def run_ci_pipeline(dry_run=False, download="none"):
 
         _write_sync_github_summary(
             sync_result["summary"],
-            sync_result.get("download_errors", [])
+            sync_result.get("download_errors", []),
+            verification=sync_result.get("verification"),
         )
         pipeline_log["steps_run"].append({
             "step": "sync", "status": "success",
@@ -137,7 +149,10 @@ def run_ci_pipeline(dry_run=False, download="none"):
             return pipeline_log
 
         # Notify admin about changes
-        notify_changes_detected(analysis["change_details"])
+        notify_changes_detected(
+            analysis["change_details"],
+            verification=sync_result.get("verification"),
+        )
         pipeline_log["status"] = "synced"
         pipeline_log["changes"] = analysis["summary"]
         pipeline_log["manifest_summary"] = manifest.get("summary", {})
@@ -210,6 +225,8 @@ def run_local_pipeline(skip_sync=False, force_full=False, analyze_images=False,
             print("\n>>> STEP 1: Drive Sync\n")
             sync_result = run_sync()
             pipeline_results["sync_summary"] = sync_result["summary"]
+            if "verification" in sync_result:
+                pipeline_results["verification"] = sync_result["verification"]
             pipeline_log["steps_run"].append({"step": 1, "name": "Sync", "status": "success"})
         else:
             print("\n>>> STEP 1: Sync skipped\n")

@@ -44,8 +44,9 @@ def send_slack(message, blocks=None):
 # Notification templates
 # ──────────────────────────────────────────────────────────
 
-def notify_sync_complete(sync_summary, revision_count=0, download_errors=None):
-    """Notify team about sync results."""
+def notify_sync_complete(sync_summary, revision_count=0, download_errors=None,
+                         verification=None):
+    """Notify team about sync results with actionable details for any missing files."""
     s = sync_summary
     emoji = ":white_check_mark:" if s["errors"] == 0 else ":warning:"
 
@@ -57,43 +58,64 @@ def notify_sync_complete(sync_summary, revision_count=0, download_errors=None):
         f"Downloaded: {s['downloaded']} | Errors: {s['errors']}"
     )
 
+    recovered = s.get("recovered", 0)
+    if recovered:
+        msg += f" | Recovered: {recovered}"
+
     if revision_count > 0:
         msg += f"\nRevision data fetched for {revision_count} changed files"
 
+    # Verification summary — the definitive file count
+    if verification:
+        expected = verification.get("expected_files", 0)
+        on_disk = verification.get("files_on_disk", 0)
+        missing = verification.get("missing", [])
+        zero_byte = verification.get("zero_byte", [])
+
+        if verification.get("all_present"):
+            msg += f"\n:white_check_mark: *Verified: {expected}/{expected} files on disk*"
+        else:
+            total_problems = len(missing) + len(zero_byte)
+            msg += f"\n:rotating_light: *{total_problems} of {expected} files FAILED to download*\n"
+
+            # Group missing files by term for clarity
+            by_term = {}
+            for m in missing + zero_byte:
+                t = m.get("term", "unknown")
+                by_term.setdefault(t, []).append(m)
+
+            for term_key in sorted(by_term):
+                term_label = _term_label(term_key)
+                msg += f"\n*{term_label}:*\n"
+                for m in by_term[term_key][:10]:
+                    size_mb = m.get("size_bytes", 0) / (1024 * 1024)
+                    fp = m.get("folder_path", "")
+                    display = f"{fp}/{m['file']}" if fp else m["file"]
+                    msg += f"  :x: `{display}` ({size_mb:.1f}MB)\n"
+                    if fp:
+                        msg += f"     Path: `{fp}`\n"
+                    msg += f"     Error: {m.get('reason', 'unknown')[:150]}\n"
+                    if m.get("drive_link"):
+                        msg += f"     Drive: {m['drive_link']}\n"
+                    msg += f"     Fix: Download manually -> `sources/{term_key}/{fp}/{m['file']}`\n"
+                if len(by_term[term_key]) > 10:
+                    msg += f"  _... +{len(by_term[term_key]) - 10} more_\n"
+
+            return send_slack(msg)
+
+    # Legacy: download errors without verification
     if s["errors"] > 0 and download_errors:
-        # Classify errors
-        export_too_large = []
-        other_errors = []
-        for err in download_errors:
-            error_msg = err.get("error", "")
-            if "exportSizeLimitExceeded" in error_msg or ("403" in error_msg and "export" in error_msg.lower()):
-                export_too_large.append(err)
-            else:
-                other_errors.append(err)
-
-        if export_too_large:
-            msg += (
-                f"\n:information_source: *{len(export_too_large)} native Google Slides too large for PPTX export*\n"
-                f"_Text and links are still extracted via native Google Slides API (Stage 3) — no content loss._\n"
-                f"_Only PPTX-based image extraction is skipped for these files._\n"
-            )
-            for err in export_too_large[:15]:
-                term_label = _term_label(err.get("term", ""))
-                fp = err.get("folder_path", "")
-                display = f"{fp}/{err['file']}" if fp else err["file"]
-                msg += f"  • `{display}` [{term_label}]\n"
-            if len(export_too_large) > 15:
-                msg += f"  _... +{len(export_too_large) - 15} more_\n"
-
-        if other_errors:
-            msg += f"\n:rotating_light: *{len(other_errors)} unexpected download failure(s):*\n"
-            for err in other_errors[:10]:
-                term_label = _term_label(err.get("term", ""))
-                fp = err.get("folder_path", "")
-                display = f"{fp}/{err['file']}" if fp else err["file"]
-                msg += f"  • `{display}` [{term_label}] — {err.get('error', '')[:150]}\n"
+        for err in download_errors[:10]:
+            term_label = _term_label(err.get("term", ""))
+            fp = err.get("folder_path", "")
+            display = f"{fp}/{err['file']}" if fp else err["file"]
+            size_mb = err.get("size_bytes", 0) / (1024 * 1024)
+            msg += f"\n  :x: `{display}` [{term_label}] ({size_mb:.1f}MB)"
+            msg += f"\n     Error: {err.get('error', '')[:150]}"
+            if err.get("drive_link"):
+                msg += f"\n     Drive: {err['drive_link']}"
     elif s["errors"] > 0:
-        msg += "\n:rotating_light: *Errors occurred during sync — see sync log JSON for error details (likely export-size-limit or permission issues)*"
+        msg += "\n:rotating_light: *Errors occurred during sync — see sync log for details*"
 
     return send_slack(msg)
 
@@ -467,24 +489,30 @@ def notify_pipeline_summary(results):
             f"{s.get('downloaded', 0)} downloaded"
         )
 
-        download_errors = results.get("download_errors", [])
-        if download_errors:
-            export_large = [e for e in download_errors
-                            if "exportSizeLimitExceeded" in e.get("error", "")
-                            or ("403" in e.get("error", "")
-                                and "export" in e.get("error", "").lower())]
-            other_dl = [e for e in download_errors if e not in export_large]
+        # Verification line — the definitive file count
+        verification = results.get("verification")
+        if verification:
+            expected = verification.get("expected_files", 0)
+            if verification.get("all_present"):
+                sync_text += f"\n  :white_check_mark: Verified: {expected}/{expected} files on disk"
+            else:
+                missing = verification.get("missing", [])
+                zero_byte = verification.get("zero_byte", [])
+                total_problems = len(missing) + len(zero_byte)
+                sync_text += f"\n  :rotating_light: {total_problems}/{expected} files MISSING"
+                for m in (missing + zero_byte)[:5]:
+                    fp = m.get("folder_path", "")
+                    display = f"{fp}/{m['file']}" if fp else m["file"]
+                    sync_text += f"\n    :x: `{display}` — {m.get('reason', '?')[:100]}"
+                if total_problems > 5:
+                    sync_text += f"\n    _... +{total_problems - 5} more_"
 
-            if export_large:
-                sync_text += (
-                    f"\n  :information_source: {len(export_large)} native Google Slides "
-                    f"too large for PPTX export — text extracted via native API (Stage 3)"
-                )
-            if other_dl:
-                sync_text += (
-                    f"\n  :warning: {len(other_dl)} unexpected download failure(s) "
-                    f"— see sync log for details"
-                )
+        download_errors = results.get("download_errors", [])
+        if download_errors and not verification:
+            for err in download_errors[:5]:
+                fp = err.get("folder_path", "")
+                display = f"{fp}/{err['file']}" if fp else err["file"]
+                sync_text += f"\n  :x: `{display}` — {err.get('error', '')[:100]}"
 
         sections.append(sync_text)
 
@@ -627,11 +655,22 @@ def notify_llm_pipeline_complete(results):
     # Sync summary
     s = results.get("sync_summary")
     if s:
-        sections.append(
+        sync_line = (
             f"*Sync:* {s.get('total_files', 0)} files | "
             f"+{s.get('new', 0)} new, ~{s.get('modified', 0)} modified | "
             f"{s.get('downloaded', 0)} downloaded"
         )
+        verification = results.get("verification")
+        if verification:
+            expected = verification.get("expected_files", 0)
+            if verification.get("all_present"):
+                sync_line += f"\n  :white_check_mark: {expected}/{expected} files verified"
+            else:
+                missing = verification.get("missing", [])
+                zero_byte = verification.get("zero_byte", [])
+                total_problems = len(missing) + len(zero_byte)
+                sync_line += f"\n  :rotating_light: {total_problems}/{expected} files MISSING"
+        sections.append(sync_line)
 
     # Extraction stats
     ext = results.get("extraction")
@@ -692,10 +731,11 @@ def notify_llm_pipeline_complete(results):
     return send_slack("\n\n".join(sections))
 
 
-def notify_changes_detected(change_details):
+def notify_changes_detected(change_details, verification=None):
     """
     Notify admin that Drive changes were detected.
     Lists changed files by term, tells admin to download and run locally.
+    Includes verification results if files failed to download.
     """
     import os
     run_number = os.environ.get("GITHUB_RUN_NUMBER", "?")
@@ -721,6 +761,26 @@ def notify_changes_detected(change_details):
             sections.append(f"  • `{item.get('file', '?')}` ({ct})")
         if len(items) > 10:
             sections.append(f"  _... +{len(items) - 10} more_")
+
+    # Verification results
+    if verification:
+        expected = verification.get("expected_files", 0)
+        if verification.get("all_present"):
+            sections.append(f"\n:white_check_mark: *{expected}/{expected} files verified on disk*")
+        else:
+            missing = verification.get("missing", [])
+            zero_byte = verification.get("zero_byte", [])
+            total_problems = len(missing) + len(zero_byte)
+            sections.append(f"\n:rotating_light: *{total_problems} of {expected} files FAILED to download:*")
+            for m in (missing + zero_byte)[:5]:
+                fp = m.get("folder_path", "")
+                display = f"{fp}/{m['file']}" if fp else m["file"]
+                term_label = _term_label(m.get("term", ""))
+                sections.append(f"  :x: `{display}` [{term_label}] — {m.get('reason', '?')[:120]}")
+                if m.get("drive_link"):
+                    sections.append(f"     Drive: {m['drive_link']}")
+            if total_problems > 5:
+                sections.append(f"  _... +{total_problems - 5} more_")
 
     sections.append(
         f"\n:arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"

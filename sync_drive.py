@@ -17,11 +17,50 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from googleapiclient.http import MediaIoBaseDownload
 
+import re
+
 from config import (
     TARGET_FOLDERS, SOURCES_DIR, LOGS_DIR, PREVIOUS_SCAN_FILE,
-    NATIVE_GOOGLE_MIMES, LOG_EVERYTHING, BASE_DIR, EXPORTS_FOLDER_ID,
+    NATIVE_GOOGLE_MIMES, LOG_EVERYTHING, BASE_DIR,
 )
 from auth import authenticate, get_drive_service, get_activity_service
+
+
+# ──────────────────────────────────────────────────────────
+# Path sanitization (Windows-safe file/folder names)
+# ──────────────────────────────────────────────────────────
+
+_ILLEGAL_CHARS = re.compile(r'[<>:"/\\|?*]')
+
+
+def _sanitize_name(name):
+    """Replace characters illegal in Windows file/folder names."""
+    sanitized = _ILLEGAL_CHARS.sub('_', name)
+    sanitized = sanitized.rstrip('. ')
+    return sanitized or '_unnamed'
+
+
+def _expected_local_path(sources_dir, term_key, file_meta):
+    """Compute where a Drive file should be on the local filesystem.
+    Single source of truth — used in should_download, download_file, and verification."""
+    name = file_meta["name"]
+    mime = file_meta.get("mime_type", "")
+    folder_path = file_meta.get("folder_path", "")
+
+    # Native Google files get export extension
+    if mime in EXPORT_MIMES:
+        _, ext = EXPORT_MIMES[mime]
+        if not name.endswith(ext):
+            name = name + ext
+
+    # Sanitize every path segment for Windows
+    name = _sanitize_name(name)
+    segments = [_sanitize_name(s) for s in folder_path.split("/") if s]
+
+    base = Path(sources_dir) / term_key
+    if segments:
+        return base / Path(*segments) / name
+    return base / name
 
 
 # ──────────────────────────────────────────────────────────
@@ -52,9 +91,10 @@ def scan_folder(service, folder_id, depth=0, folder_path=""):
             mime = item.get("mimeType", "")
 
             if mime == "application/vnd.google-apps.folder":
-                # Recurse into subfolder, tracking path
+                # Recurse into subfolder, tracking path (sanitized for Windows)
                 subfolder_name = item.get("name", "")
-                subfolder_path = f"{folder_path}/{subfolder_name}" if folder_path else subfolder_name
+                safe_name = _sanitize_name(subfolder_name)
+                subfolder_path = f"{folder_path}/{safe_name}" if folder_path else safe_name
                 children = scan_folder(service, item["id"], depth + 1, subfolder_path)
                 files.extend(children)
             elif mime == "application/vnd.google-apps.shortcut":
@@ -398,65 +438,64 @@ SKIP_MIMES = {
 }
 
 
-def _download_from_exports_folder(service, source_file_id, dest_dir, file_name):
-    """Try to download a pre-exported PPTX from the Apps Script exports folder.
-    Returns (path, md5) or (None, None) if not found."""
-    if not EXPORTS_FOLDER_ID:
-        return None, None
+def _direct_export(creds, file_id, mime, dest_path):
+    """Export native Google file via direct URL — bypasses 10MB API limit.
+    Uses the same URL the browser uses. Returns (path, md5) or raises."""
+    from google.auth.transport.requests import AuthorizedSession
 
-    try:
-        # Search exports folder (and subfolders) for a file whose description
-        # contains this source file ID
-        query = (
-            f"'{EXPORTS_FOLDER_ID}' in parents or "
-            f"'{EXPORTS_FOLDER_ID}' in parents"
-        )
-        # Search recursively: look for PPTX files with source_id in description
-        resp = service.files().list(
-            q=(
-                f"mimeType = 'application/vnd.openxmlformats-officedocument.presentationml.presentation' "
-                f"and trashed = false "
-                f"and fullText contains '{source_file_id}'"
-            ),
-            fields="files(id,name,description,size,md5Checksum)",
-            pageSize=10,
-        ).execute()
+    url_map = {
+        "application/vnd.google-apps.presentation":
+            f"https://docs.google.com/presentation/d/{file_id}/export/pptx",
+        "application/vnd.google-apps.document":
+            f"https://docs.google.com/document/d/{file_id}/export?format=docx",
+        "application/vnd.google-apps.spreadsheet":
+            f"https://docs.google.com/spreadsheets/d/{file_id}/export?format=xlsx",
+    }
+    url = url_map.get(mime)
+    if not url:
+        raise ValueError(f"No direct export URL for MIME type: {mime}")
 
-        for export_file in resp.get("files", []):
-            desc = export_file.get("description", "")
-            if source_file_id in desc:
-                # Found the pre-exported PPTX — download it as binary
-                print(f"    Found pre-exported PPTX in exports folder: {export_file['name']}")
-                export_id = export_file["id"]
-                request = service.files().get_media(fileId=export_id)
+    session = AuthorizedSession(creds)
+    resp = session.get(url)
+    resp.raise_for_status()
 
-                dest_dir = Path(dest_dir)
-                dest_dir.mkdir(parents=True, exist_ok=True)
-                dest_name = file_name if file_name.endswith(".pptx") else file_name + ".pptx"
-                dest_path = dest_dir / dest_name
+    if len(resp.content) == 0:
+        raise ValueError(f"Direct export returned empty content for {file_id}")
 
-                fh = io.BytesIO()
-                downloader = MediaIoBaseDownload(fh, request)
-                done = False
-                while not done:
-                    _, done = downloader.next_chunk()
+    dest_path = Path(dest_path)
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(dest_path, "wb") as f:
+        f.write(resp.content)
 
-                with open(dest_path, "wb") as f:
-                    f.write(fh.getvalue())
-
-                local_md5 = hashlib.md5(fh.getvalue()).hexdigest()
-                return str(dest_path), local_md5
-
-    except Exception as e:
-        print(f"    Exports folder not accessible — pre-export not available for this file")
-
-    return None, None
+    local_md5 = hashlib.md5(resp.content).hexdigest()
+    return str(dest_path), local_md5
 
 
-def download_file(service, file_meta, dest_dir):
-    """Download a file from Drive. Exports native Google formats to Office equivalents.
-    For large native Slides that exceed the 10MB export limit, falls back to
-    pre-exported PPTX files from the Apps Script exports folder."""
+def _is_transient_error(e):
+    """Check if an exception is a transient/retryable error."""
+    err_str = str(e)
+    # Rate limits, server errors, network timeouts
+    for marker in ("429", "500", "502", "503", "504", "timed out",
+                    "Connection reset", "Connection aborted", "RemoteDisconnected"):
+        if marker in err_str:
+            return True
+    return False
+
+
+def download_file(service, file_meta, dest_path, creds=None):
+    """Download a file from Drive to dest_path. Retries on failure. Never silently skips.
+
+    Args:
+        service: Drive API service object.
+        file_meta: File metadata dict from scan.
+        dest_path: Full target path (from _expected_local_path).
+        creds: OAuth credentials (needed for direct export fallback).
+
+    Returns:
+        (local_path, local_md5) or (None, None) for skipped types.
+    Raises:
+        Exception with full context on all failures.
+    """
     fid = file_meta["id"]
     name = file_meta["name"]
     mime = file_meta["mime_type"]
@@ -466,48 +505,129 @@ def download_file(service, file_meta, dest_dir):
         print(f"    Skipping {name} (type: {mime.split('.')[-1]})")
         return None, None
 
-    dest_dir = Path(dest_dir)
-    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest_path = Path(dest_path)
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # For native Google files, export to Office format
+    # Build the API request
     if mime in EXPORT_MIMES:
         export_mime, ext = EXPORT_MIMES[mime]
-        if not name.endswith(ext):
-            name = name + ext
         request = service.files().export_media(fileId=fid, mimeType=export_mime)
     else:
         request = service.files().get_media(fileId=fid)
 
-    dest_path = dest_dir / name
-    fh = io.BytesIO()
-    downloader = MediaIoBaseDownload(fh, request)
-
+    # ── Attempt 1: Standard API download/export ──
+    last_error = None
     try:
+        fh = io.BytesIO()
+        downloader = MediaIoBaseDownload(fh, request)
         done = False
         while not done:
             _, done = downloader.next_chunk()
+
+        content = fh.getvalue()
+        if len(content) == 0:
+            raise ValueError("API returned empty content (0 bytes)")
+
+        with open(dest_path, "wb") as f:
+            f.write(content)
+
+        return str(dest_path), hashlib.md5(content).hexdigest()
+
     except Exception as e:
-        if "exportSizeLimitExceeded" in str(e):
-            # Try the Apps Script exports folder fallback
-            print(f"    Export too large ({name}), checking exports folder...")
-            fallback_path, fallback_md5 = _download_from_exports_folder(
-                service, fid, dest_dir, name
-            )
-            if fallback_path:
-                return fallback_path, fallback_md5
-            # No fallback available — text/links still extracted via native API (Stage 3).
-            # Only PPTX-based image extraction is lost. Re-raise so caller logs the error.
-            print(f"    No pre-export found for {name}. Text content still available via native API."
-                  f" Run Apps Script exportAllLargeSlides() for image extraction.")
-        raise
+        last_error = e
 
-    with open(dest_path, "wb") as f:
-        f.write(fh.getvalue())
+        # ── Attempt 2: Direct URL export (for exportSizeLimitExceeded) ──
+        if "exportSizeLimitExceeded" in str(e) and mime in EXPORT_MIMES and creds:
+            print(f"    API export too large for {name} — trying direct URL export...")
+            try:
+                return _direct_export(creds, fid, mime, dest_path)
+            except Exception as e2:
+                last_error = e2
+                print(f"    Direct export also failed: {e2}")
 
-    # Compute local MD5
-    local_md5 = hashlib.md5(fh.getvalue()).hexdigest()
+        # ── Attempt 3: Retry once on transient errors ──
+        if _is_transient_error(last_error):
+            print(f"    Transient error for {name} — retrying in 2s...")
+            time.sleep(2)
+            try:
+                # Rebuild request (the previous one is consumed)
+                if mime in EXPORT_MIMES:
+                    export_mime, _ = EXPORT_MIMES[mime]
+                    request = service.files().export_media(fileId=fid, mimeType=export_mime)
+                else:
+                    request = service.files().get_media(fileId=fid)
 
-    return str(dest_path), local_md5
+                fh = io.BytesIO()
+                downloader = MediaIoBaseDownload(fh, request)
+                done = False
+                while not done:
+                    _, done = downloader.next_chunk()
+
+                content = fh.getvalue()
+                if len(content) == 0:
+                    raise ValueError("Retry returned empty content (0 bytes)")
+
+                with open(dest_path, "wb") as f:
+                    f.write(content)
+
+                return str(dest_path), hashlib.md5(content).hexdigest()
+
+            except Exception as e3:
+                last_error = e3
+
+    # All attempts failed — raise with FULL context
+    folder_path = file_meta.get("folder_path", "")
+    size_mb = file_meta.get("size", 0) / (1024 * 1024)
+    drive_link = file_meta.get("web_link", "")
+    raise RuntimeError(
+        f"Download failed for '{name}' (id={fid}, {size_mb:.1f}MB, {mime})\n"
+        f"  Path: {folder_path}\n"
+        f"  Drive: {drive_link}\n"
+        f"  Error: {last_error}"
+    )
+
+
+# ──────────────────────────────────────────────────────────
+# Post-download verification
+# ──────────────────────────────────────────────────────────
+
+def _verify_downloads(term_key, changes, sources_dir):
+    """Verify every downloadable file exists on disk with non-zero size.
+    Returns list of missing/empty files with full diagnostic info."""
+    missing = []
+    for f in changes:
+        if f["change_type"] == "DELETED":
+            continue
+        if f.get("mime_type", "") in SKIP_MIMES:
+            continue
+
+        expected = _expected_local_path(sources_dir, term_key, f)
+
+        if not expected.exists():
+            missing.append({
+                "file": f["name"],
+                "file_id": f.get("id", ""),
+                "term": term_key,
+                "folder_path": f.get("folder_path", ""),
+                "mime_type": f.get("mime_type", ""),
+                "size_bytes": f.get("size", 0),
+                "expected_path": str(expected),
+                "drive_link": f.get("web_link", ""),
+                "reason": f.get("download_error", "unknown — file not on disk after sync"),
+            })
+        elif expected.stat().st_size == 0:
+            missing.append({
+                "file": f["name"],
+                "file_id": f.get("id", ""),
+                "term": term_key,
+                "folder_path": f.get("folder_path", ""),
+                "mime_type": f.get("mime_type", ""),
+                "size_bytes": f.get("size", 0),
+                "expected_path": str(expected),
+                "drive_link": f.get("web_link", ""),
+                "reason": "file exists but is 0 bytes",
+            })
+    return missing
 
 
 # ──────────────────────────────────────────────────────────
@@ -630,6 +750,7 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             "metadata_changed": 0,
             "unchanged": 0,
             "downloaded": 0,
+            "recovered": 0,
             "errors": 0,
         },
         "activity_log": {},
@@ -716,7 +837,6 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
                 time.sleep(0.1)  # Rate limiting between revision queries
 
         # Download changed files (skip in dry-run mode)
-        term_sources = SOURCES_DIR / term_key
         downloaded = []
         errors = []
 
@@ -737,37 +857,44 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             elif ct == "METADATA_CHANGED":
                 sync_result["summary"]["metadata_changed"] += 1
 
+            # Compute expected local path (single source of truth)
+            if change.get("mime_type", "") not in SKIP_MIMES and ct != "DELETED":
+                local_path = _expected_local_path(SOURCES_DIR, term_key, change)
+                file_missing = not local_path.exists() or local_path.stat().st_size == 0
+            else:
+                local_path = None
+                file_missing = False
+
             # Determine if this file should be downloaded
-            should_download = (
+            do_download = (
                 not dry_run and not skip_downloads and (
+                    file_missing or                     # ALWAYS download if missing/empty
                     ct in ("NEW", "MODIFIED", "RENAMED") or
                     (download_all and ct in ("UNCHANGED", "METADATA_CHANGED"))
                 )
             )
 
-            if should_download:
+            # Track recovery downloads
+            if file_missing and ct in ("UNCHANGED", "METADATA_CHANGED"):
+                sync_result["summary"]["recovered"] += 1
+
+            if do_download and local_path:
                 try:
-                    # Preserve folder hierarchy from Drive
                     fp = change.get("folder_path", "")
-                    dest_dir = term_sources / fp if fp else term_sources
-                    label = ct if ct != "UNCHANGED" else "SYNC"
+                    label = "RECOVER" if (file_missing and ct in ("UNCHANGED", "METADATA_CHANGED")) else (ct if ct != "UNCHANGED" else "SYNC")
                     print(f"  [{label}] Downloading: {fp}/{change['name']}" if fp else f"  [{label}] Downloading: {change['name']}")
-                    local_path, local_md5 = download_file(
-                        drive_service, change, dest_dir
+                    result_path, local_md5 = download_file(
+                        drive_service, change, local_path, creds=creds
                     )
-                    if local_path is None:
+                    if result_path is None:
                         # File was skipped (shortcut, folder, etc.)
                         continue
-                    change["local_path"] = local_path
+                    change["local_path"] = result_path
                     change["local_md5"] = local_md5
                     downloaded.append(change["name"])
                     sync_result["summary"]["downloaded"] += 1
                 except Exception as e:
-                    err_str = str(e)
-                    if "exportSizeLimitExceeded" in err_str or ("403" in err_str and "export" in err_str.lower()):
-                        print(f"    Export too large for {change['name']} — no pre-export available, skipped")
-                    else:
-                        print(f"    Download failed for {change['name']}: {e}")
+                    print(f"    Download FAILED for {change['name']}: {e}")
                     change["download_error"] = str(e)
                     error_entry = {
                         "file": change["name"],
@@ -775,7 +902,9 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
                         "term": term_key,
                         "folder_path": change.get("folder_path", ""),
                         "mime_type": change.get("mime_type", ""),
+                        "size_bytes": change.get("size", 0),
                         "change_type": ct,
+                        "drive_link": change.get("web_link", ""),
                         "error": str(e),
                     }
                     errors.append(error_entry)
@@ -784,6 +913,16 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             elif ct in ("NEW", "MODIFIED", "RENAMED") and dry_run:
                 print(f"  [{ct}] Would download: {change['name']}")
 
+        # Post-download verification: check every file exists on disk
+        if not dry_run and not skip_downloads:
+            term_missing = _verify_downloads(term_key, changes, SOURCES_DIR)
+            if term_missing:
+                print(f"  VERIFICATION: {len(term_missing)} file(s) missing after sync!")
+                for m in term_missing:
+                    print(f"    MISSING: {m['file']} — {m['reason']}")
+        else:
+            term_missing = []
+
         # Store term results
         sync_result["terms"][term_key] = {
             "folder_id": folder_id,
@@ -791,6 +930,7 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             "files": changes,
             "downloaded": downloaded,
             "errors": errors,
+            "missing_after_sync": term_missing,
         }
 
         # Save for next comparison
@@ -802,16 +942,44 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
             print(f"  Would download: {sum(1 for c in changes if c['change_type'] in ('NEW', 'MODIFIED', 'RENAMED'))} files")
         else:
             print(f"  Downloaded: {len(downloaded)} files")
+            recovered = sync_result["summary"].get("recovered", 0)
+            if recovered:
+                print(f"  Recovered: {recovered} previously missing files")
         if errors:
-            export_limit = sum(1 for e in errors if "exportSizeLimitExceeded" in e.get("error", "") or "403" in e.get("error", ""))
-            other = len(errors) - export_limit
-            parts = []
-            if export_limit:
-                parts.append(f"{export_limit} export-size-limit")
-            if other:
-                parts.append(f"{other} unexpected")
-            print(f"  Download errors: {len(errors)} ({', '.join(parts)})")
+            print(f"  Download errors: {len(errors)}")
+            for e in errors[:5]:
+                print(f"    - {e['file']}: {e['error'][:120]}")
         print()
+
+    # Aggregate verification results across all terms
+    if not dry_run and not skip_downloads:
+        all_missing = []
+        all_zero_byte = []
+        total_downloadable = 0
+        for term_key_v, term_data in sync_result["terms"].items():
+            for f in term_data["files"]:
+                if f["change_type"] != "DELETED" and f.get("mime_type", "") not in SKIP_MIMES:
+                    total_downloadable += 1
+            for m in term_data.get("missing_after_sync", []):
+                if m["reason"] == "file exists but is 0 bytes":
+                    all_zero_byte.append(m)
+                else:
+                    all_missing.append(m)
+
+        total_on_disk = total_downloadable - len(all_missing) - len(all_zero_byte)
+        sync_result["verification"] = {
+            "expected_files": total_downloadable,
+            "files_on_disk": total_on_disk,
+            "missing": all_missing,
+            "zero_byte": all_zero_byte,
+            "all_present": len(all_missing) == 0 and len(all_zero_byte) == 0,
+        }
+
+        if all_missing or all_zero_byte:
+            print(f"\n  VERIFICATION FAILED: {len(all_missing)} missing, {len(all_zero_byte)} zero-byte "
+                  f"out of {total_downloadable} expected files")
+        else:
+            print(f"\n  VERIFIED: {total_downloadable}/{total_downloadable} files on disk")
 
     # Verify integrity of downloaded PPTX files
     if not dry_run and not skip_downloads:
@@ -854,7 +1022,16 @@ def run_sync(dry_run=False, download_all=False, skip_downloads=False):
     print(f"  Unchanged           : {s['unchanged']}")
     if not dry_run and not skip_downloads:
         print(f"  Downloaded          : {s['downloaded']}")
+        recovered = s.get("recovered", 0)
+        if recovered:
+            print(f"  Recovered           : {recovered}")
     print(f"  Errors              : {s['errors']}")
+    if not dry_run and not skip_downloads:
+        v = sync_result.get("verification", {})
+        if v.get("all_present"):
+            print(f"  Verification        : ALL {v['expected_files']} files present")
+        elif v:
+            print(f"  Verification        : FAILED — {len(v['missing'])} missing, {len(v['zero_byte'])} zero-byte")
     if dry_run:
         print(f"\n  ** DRY RUN — no files downloaded, previous_scan.json NOT updated **")
     elif skip_downloads:

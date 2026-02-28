@@ -52,7 +52,6 @@ jobs:
         env:
           GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          EXPORTS_FOLDER_ID: ${{ secrets.EXPORTS_FOLDER_ID }}
         run: |
           DOWNLOAD="${{ github.event.inputs.download || 'none' }}"
           ARGS="--mode ci --download $DOWNLOAD"

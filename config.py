@@ -43,11 +43,6 @@ TARGET_FOLDERS = {
     },
 }
 
-# Folder where Apps Script exports large native Slides as PPTX
-# (bypasses the 10MB API export limit). Set to "" to disable.
-# See scripts/export_large_slides.js for setup instructions.
-EXPORTS_FOLDER_ID = os.environ.get("EXPORTS_FOLDER_ID", "1YOBetrxAjn5LBmcU9YzFNNOUQDrCEXcz")
-
 # ──────────────────────────────────────────────────────────
 # Google OAuth
 # ──────────────────────────────────────────────────────────
