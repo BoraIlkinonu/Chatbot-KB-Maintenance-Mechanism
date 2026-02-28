@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import LOGS_DIR, OUTPUT_DIR
+from config import LOGS_DIR, OUTPUT_DIR, CHANGE_MANIFEST_FILE, SOURCES_DIR, CONVERTED_DIR
 from sync_drive import run_sync
 from notify_slack import notify_no_changes, notify_error, notify_changes_detected
 
@@ -66,11 +66,18 @@ def _write_sync_github_summary(summary, download_errors):
 # CI Mode: Sync + Notify Only
 # ──────────────────────────────────────────────────────────
 
-def run_ci_pipeline(dry_run=False, download_all=True):
-    """CI pipeline: sync Drive -> detect changes -> Slack notify -> done."""
+def run_ci_pipeline(dry_run=False, download="none"):
+    """CI pipeline: sync Drive -> detect changes -> write manifest -> Slack notify -> done.
+
+    Args:
+        dry_run: Scan only, no state update, no downloads.
+        download: Download mode — "none" (metadata scan only), "diff" (changed files),
+                  "all" (everything).
+    """
     print()
     print("=" * 60)
     print("  KB Pipeline — CI Mode (Sync + Notify)")
+    print(f"  Download mode: {download}")
     print(f"  {datetime.now(timezone.utc).isoformat()}")
     print("=" * 60)
     print()
@@ -79,6 +86,7 @@ def run_ci_pipeline(dry_run=False, download_all=True):
     pipeline_log = {
         "started_at": datetime.now(timezone.utc).isoformat(),
         "mode": "ci",
+        "download": download,
         "steps_run": [],
         "errors": [],
         "status": "running",
@@ -95,8 +103,16 @@ def run_ci_pipeline(dry_run=False, download_all=True):
             _save_pipeline_log(pipeline_log)
             return pipeline_log
 
-        print("\n>>> Sync Drive\n")
-        sync_result = run_sync(download_all=download_all)
+        print(f"\n>>> Sync Drive (download={download})\n")
+        if download == "none":
+            sync_result = run_sync(skip_downloads=True)
+        elif download == "diff":
+            sync_result = run_sync(download_all=False)
+        elif download == "all":
+            sync_result = run_sync(download_all=True)
+        else:
+            sync_result = run_sync(skip_downloads=True)
+
         _write_sync_github_summary(
             sync_result["summary"],
             sync_result.get("download_errors", [])
@@ -105,9 +121,13 @@ def run_ci_pipeline(dry_run=False, download_all=True):
             "step": "sync", "status": "success",
         })
 
-        # Detect changes
-        from change_analyzer import analyze_changes
+        # Detect changes + write manifest
+        from change_analyzer import analyze_changes, write_change_manifest
         analysis = analyze_changes(sync_result)
+        manifest = write_change_manifest(sync_result)
+        pipeline_log["steps_run"].append({
+            "step": "manifest", "status": "success",
+        })
 
         if not analysis["has_changes"]:
             print("No changes detected.")
@@ -120,6 +140,7 @@ def run_ci_pipeline(dry_run=False, download_all=True):
         notify_changes_detected(analysis["change_details"])
         pipeline_log["status"] = "synced"
         pipeline_log["changes"] = analysis["summary"]
+        pipeline_log["manifest_summary"] = manifest.get("summary", {})
 
     except Exception as e:
         error_msg = f"CI pipeline failed: {e}"
@@ -139,6 +160,28 @@ def run_ci_pipeline(dry_run=False, download_all=True):
 # ──────────────────────────────────────────────────────────
 # Local Mode: Full LLM Pipeline
 # ──────────────────────────────────────────────────────────
+
+def _cleanup_deleted_files(deleted_entries):
+    """Remove deleted files from sources/ and converted/ so they're excluded from LLM extraction."""
+    for entry in deleted_entries:
+        term = entry["term"]
+        fname = entry["file"]
+        fp = entry.get("folder_path", "")
+
+        # Remove from sources/
+        source_path = SOURCES_DIR / term / fp / fname if fp else SOURCES_DIR / term / fname
+        if source_path.exists():
+            source_path.unlink()
+            print(f"    Removed source: {source_path.relative_to(SOURCES_DIR)}")
+
+        # Remove corresponding converted files (.md, etc.)
+        stem = Path(fname).stem
+        converted_term = CONVERTED_DIR / term
+        if converted_term.exists():
+            for converted in converted_term.rglob(f"{stem}.*"):
+                converted.unlink()
+                print(f"    Removed converted: {converted.relative_to(CONVERTED_DIR)}")
+
 
 def run_local_pipeline(skip_sync=False, force_full=False, analyze_images=False,
                        backend="cli"):
@@ -185,6 +228,15 @@ def run_local_pipeline(skip_sync=False, force_full=False, analyze_images=False,
                 pipeline_log["status"] = "no_changes"
                 _save_pipeline_log(pipeline_log)
                 return pipeline_log
+
+        # Clean up deleted files from change manifest (written by CI)
+        if CHANGE_MANIFEST_FILE.exists():
+            with open(CHANGE_MANIFEST_FILE, "r", encoding="utf-8") as f:
+                manifest = json.load(f)
+            deleted = manifest.get("deleted", [])
+            if deleted:
+                print(f"  Change manifest: {len(deleted)} deleted file(s) to clean up")
+                _cleanup_deleted_files(deleted)
 
         # ─── Step 2: Convert to text ────────────────────────
         print("\n>>> STEP 2: Convert to Text\n")
@@ -322,14 +374,14 @@ if __name__ == "__main__":
                         help="Run optional image analysis step (local mode)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Scan and report changes without processing")
-    parser.add_argument("--download-all", action="store_true",
-                        help="Download ALL files from Drive (CI mode)")
+    parser.add_argument("--download", choices=["none", "diff", "all"], default="none",
+                        help="Download mode: none (metadata only), diff (changed files), all (everything)")
     parser.add_argument("--backend", choices=["cli", "sdk", "auto"], default="cli",
                         help="LLM backend for local mode (default: cli)")
     args = parser.parse_args()
 
     if args.mode == "ci":
-        run_ci_pipeline(dry_run=args.dry_run, download_all=args.download_all)
+        run_ci_pipeline(dry_run=args.dry_run, download=args.download)
     else:
         run_local_pipeline(
             skip_sync=args.skip_sync,

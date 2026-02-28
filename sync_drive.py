@@ -577,7 +577,7 @@ def verify_downloaded_pptx(sources_dir):
 # Main sync
 # ──────────────────────────────────────────────────────────
 
-def run_sync(dry_run=False, download_all=False):
+def run_sync(dry_run=False, download_all=False, skip_downloads=False):
     """Execute full sync: scan → detect changes → download → log.
 
     Args:
@@ -585,9 +585,12 @@ def run_sync(dry_run=False, download_all=False):
                  and do NOT update previous_scan.json.
         download_all: If True, download ALL files (not just changed ones).
                       Needed in CI where the runner starts with an empty sources dir.
+        skip_downloads: If True, scan and update previous_scan.json but
+                        skip all file downloads. Used for metadata-only CI runs.
     """
+    mode_label = " (DRY RUN)" if dry_run else (" (METADATA ONLY)" if skip_downloads else "")
     print("=" * 60)
-    print("  KB Maintenance Pipeline — Drive Sync" + (" (DRY RUN)" if dry_run else ""))
+    print("  KB Maintenance Pipeline — Drive Sync" + mode_label)
     print("=" * 60)
     print()
 
@@ -616,6 +619,7 @@ def run_sync(dry_run=False, download_all=False):
     sync_result = {
         "sync_timestamp": datetime.now(timezone.utc).isoformat(),
         "dry_run": dry_run,
+        "skip_downloads": skip_downloads,
         "terms": {},
         "summary": {
             "total_files": 0,
@@ -735,7 +739,7 @@ def run_sync(dry_run=False, download_all=False):
 
             # Determine if this file should be downloaded
             should_download = (
-                not dry_run and (
+                not dry_run and not skip_downloads and (
                     ct in ("NEW", "MODIFIED", "RENAMED") or
                     (download_all and ct in ("UNCHANGED", "METADATA_CHANGED"))
                 )
@@ -794,7 +798,7 @@ def run_sync(dry_run=False, download_all=False):
             "files": current_files,
         }
 
-        if dry_run:
+        if dry_run or skip_downloads:
             print(f"  Would download: {sum(1 for c in changes if c['change_type'] in ('NEW', 'MODIFIED', 'RENAMED'))} files")
         else:
             print(f"  Downloaded: {len(downloaded)} files")
@@ -810,7 +814,7 @@ def run_sync(dry_run=False, download_all=False):
         print()
 
     # Verify integrity of downloaded PPTX files
-    if not dry_run:
+    if not dry_run and not skip_downloads:
         integrity_results = verify_downloaded_pptx(SOURCES_DIR)
         sync_result["integrity"] = integrity_results
         if integrity_results["errors"] or integrity_results["warnings"]:
@@ -839,7 +843,7 @@ def run_sync(dry_run=False, download_all=False):
     # Summary
     s = sync_result["summary"]
     print("=" * 60)
-    print("  Sync Complete" + (" (DRY RUN)" if dry_run else ""))
+    print("  Sync Complete" + mode_label)
     print("=" * 60)
     print(f"  Total files scanned : {s['total_files']}")
     print(f"  New                 : {s['new']}")
@@ -848,11 +852,13 @@ def run_sync(dry_run=False, download_all=False):
     print(f"  Renamed             : {s['renamed']}")
     print(f"  Metadata changed    : {s['metadata_changed']}")
     print(f"  Unchanged           : {s['unchanged']}")
-    if not dry_run:
+    if not dry_run and not skip_downloads:
         print(f"  Downloaded          : {s['downloaded']}")
     print(f"  Errors              : {s['errors']}")
     if dry_run:
         print(f"\n  ** DRY RUN — no files downloaded, previous_scan.json NOT updated **")
+    elif skip_downloads:
+        print(f"\n  ** METADATA ONLY — no files downloaded, previous_scan.json updated **")
     print(f"\n  Log saved: {log_file}")
     print("=" * 60)
 

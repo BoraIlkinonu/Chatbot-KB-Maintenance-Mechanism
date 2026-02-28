@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import LOGS_DIR
+from config import LOGS_DIR, CHANGE_MANIFEST_FILE
 
 
 def analyze_changes(sync_result):
@@ -43,6 +43,57 @@ def analyze_changes(sync_result):
             "total_changes": len(change_details),
         },
     }
+
+
+def write_change_manifest(sync_result):
+    """Write a structured change manifest for downstream consumers.
+
+    Groups files by change type: added, modified, deleted, renamed.
+    Written to state/change_manifest.json for the local pipeline to read.
+    """
+    manifest = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "added": [],
+        "modified": [],
+        "deleted": [],
+        "renamed": [],
+    }
+
+    for term_key, term_data in sync_result.get("terms", {}).items():
+        for change in term_data.get("files", []):
+            ct = change["change_type"]
+            if ct == "UNCHANGED" or ct == "METADATA_CHANGED":
+                continue
+
+            entry = {
+                "file": change.get("name", ""),
+                "term": term_key,
+                "folder_path": change.get("folder_path", ""),
+            }
+
+            if ct == "NEW":
+                manifest["added"].append(entry)
+            elif ct == "MODIFIED":
+                manifest["modified"].append(entry)
+            elif ct == "DELETED":
+                manifest["deleted"].append(entry)
+            elif ct == "RENAMED":
+                entry["previous_name"] = change.get("previous_name", "")
+                manifest["renamed"].append(entry)
+
+    manifest["summary"] = {
+        "total_added": len(manifest["added"]),
+        "total_modified": len(manifest["modified"]),
+        "total_deleted": len(manifest["deleted"]),
+        "total_renamed": len(manifest["renamed"]),
+    }
+
+    CHANGE_MANIFEST_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(CHANGE_MANIFEST_FILE, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+
+    print(f"  Change manifest: {CHANGE_MANIFEST_FILE}")
+    return manifest
 
 
 def run_analysis(sync_log_path=None):

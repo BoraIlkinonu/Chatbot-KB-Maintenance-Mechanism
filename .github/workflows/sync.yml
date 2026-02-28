@@ -8,13 +8,22 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (scan only, no downloads)'
+        description: 'Dry run (scan only, no state update)'
         required: false
         default: 'false'
         type: choice
         options:
           - 'false'
           - 'true'
+      download:
+        description: 'Download mode'
+        required: false
+        default: 'none'
+        type: choice
+        options:
+          - 'none'
+          - 'diff'
+          - 'all'
 
 permissions:
   contents: write
@@ -45,14 +54,19 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           EXPORTS_FOLDER_ID: ${{ secrets.EXPORTS_FOLDER_ID }}
         run: |
-          ARGS="--mode ci --download-all"
+          DOWNLOAD="${{ github.event.inputs.download || 'none' }}"
+          ARGS="--mode ci --download $DOWNLOAD"
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="--mode ci --dry-run"
           fi
           python run_pipeline.py $ARGS
 
       - name: Upload sources artifact
-        if: always() && github.event.inputs.dry_run != 'true'
+        if: >-
+          always()
+          && github.event.inputs.dry_run != 'true'
+          && github.event.inputs.download != 'none'
+          && github.event.inputs.download != ''
         uses: actions/upload-artifact@v4
         with:
           name: sources-${{ github.run_number }}

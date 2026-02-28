@@ -21,6 +21,7 @@ VALIDATION_DIR = BASE_DIR / "validation"     # Validation results from Stage 7
 
 # State files
 PREVIOUS_SCAN_FILE = BASE_DIR / "state" / "previous_scan.json"
+CHANGE_MANIFEST_FILE = BASE_DIR / "state" / "change_manifest.json"
 SYNC_LOG_FILE = LOGS_DIR / "sync_log.json"
 BUILD_LOG_FILE = LOGS_DIR / "build_log.json"
 
