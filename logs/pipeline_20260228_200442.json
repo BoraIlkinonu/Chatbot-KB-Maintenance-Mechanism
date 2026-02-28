@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-02-28T19:57:55.276534+00:00",
+  "mode": "ci",
+  "download": "all",
+  "steps_run": [
+    {
+      "step": "sync",
+      "status": "success"
+    },
+    {
+      "step": "manifest",
+      "status": "success"
+    }
+  ],
+  "errors": [],
+  "status": "no_changes"
+}
