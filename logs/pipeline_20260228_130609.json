@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-02-28T12:59:44.910755+00:00",
+  "steps_run": [
+    {
+      "step": 1,
+      "name": "Sync",
+      "status": "success"
+    }
+  ],
+  "errors": [],
+  "status": "no_changes"
+}
