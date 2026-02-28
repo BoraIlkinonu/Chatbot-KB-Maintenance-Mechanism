@@ -1,9 +1,9 @@
 """
 Ground truth extraction from source files for dual-judge evaluation.
 
-Scans converted/ directory and native_extractions.json directly to build
-ground truth text. Does NOT depend on consolidated JSON files — reads
-from the same source files the pipeline uses, so it never goes stale.
+Reads consolidated JSON to determine which files belong to which lessons,
+then reads those files directly. Does NOT depend on consolidate module —
+uses the consolidated output files as the source of truth.
 """
 
 import json
@@ -16,24 +16,40 @@ from config import CONVERTED_DIR, NATIVE_DIR, MEDIA_DIR, CONSOLIDATED_DIR
 def extract_ground_truth(term: int, lesson_num: int) -> str:
     """Extract all source content for a lesson as readable text.
 
-    Scans converted/term{N}/ for markdown files matching the lesson,
-    and reads native extractions for the same term+lesson. Returns a
-    single string for LLM evaluation.
+    Reads the consolidated JSON to find which files belong to this lesson,
+    then reads and concatenates those files. Returns a single string for
+    LLM evaluation.
     """
     parts = []
 
-    # 1. Converted documents (PPTX→MD, DOCX→MD, etc.)
-    converted_dir = CONVERTED_DIR / f"term{term}"
-    if converted_dir.exists():
-        for md_file in sorted(converted_dir.rglob("*.md")):
-            rel_path = md_file.relative_to(CONVERTED_DIR)
-            lessons = _extract_lesson_from_path(str(rel_path), term)
-            if lesson_num in lessons:
-                doc_text = _read_md_file(md_file, str(rel_path))
-                if doc_text:
-                    parts.append(doc_text)
+    # 1. Get file assignments from consolidated JSON
+    lesson_files = _get_lesson_files_from_consolidated(term, lesson_num)
 
-    # 2. Native Google Docs/Slides content
+    # 2. Read each assigned converted document
+    for doc in lesson_files:
+        doc_path = doc.get("path", "")
+        full_path = doc.get("full_path", "")
+        if not full_path and doc_path:
+            full_path = str(CONVERTED_DIR / doc_path)
+
+        if full_path:
+            text = _read_file(full_path)
+            if text:
+                parts.append(f"=== CONVERTED — {doc_path} ===\n{text}")
+
+    # 3. If no consolidated data, fall back to regex-based path scanning
+    if not lesson_files:
+        converted_dir = CONVERTED_DIR / f"term{term}"
+        if converted_dir.exists():
+            for md_file in sorted(converted_dir.rglob("*.md")):
+                rel_path = str(md_file.relative_to(CONVERTED_DIR))
+                lessons = _extract_lesson_from_path(rel_path)
+                if lesson_num in lessons:
+                    text = _read_file(str(md_file))
+                    if text:
+                        parts.append(f"=== CONVERTED — {rel_path} ===\n{text}")
+
+    # 4. Native Google Docs/Slides content
     native_path = NATIVE_DIR / "native_extractions.json"
     if native_path.exists():
         try:
@@ -45,7 +61,7 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
                     continue
                 name = ext.get("file_name", "")
                 source_path = ext.get("source_path", name)
-                lessons = _extract_lesson_from_path(source_path or name, term)
+                lessons = _extract_lesson_from_path(source_path or name)
                 if lesson_num in lessons:
                     native_text = _extract_native(ext)
                     if native_text:
@@ -53,9 +69,7 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
         except (json.JSONDecodeError, OSError):
             pass
 
-    # 3. Hyperlinks extracted from PPTX/DOCX/PDF (extraction_metadata.json)
-    #    These contain real URLs from source file hyperlink metadata that
-    #    are NOT visible in the converted markdown text.
+    # 5. Hyperlinks from binary metadata
     link_text = _extract_hyperlinks_for_lesson(term, lesson_num)
     if link_text:
         parts.append(link_text)
@@ -66,19 +80,23 @@ def extract_ground_truth(term: int, lesson_num: int) -> str:
     return "\n\n".join(parts)
 
 
-def _extract_lesson_from_path(path: str, term: int) -> list[int]:
-    """Extract lesson number(s) from file path.
+def _get_lesson_files_from_consolidated(term: int, lesson_num: int) -> list[dict]:
+    """Read consolidated JSON to find files assigned to this lesson."""
+    cons_path = CONSOLIDATED_DIR / f"consolidated_term{term}.json"
+    if not cons_path.exists():
+        return []
 
-    Uses consolidate.get_file_classification() to match what the pipeline assigns.
-    Falls back to regex for paths not in the classification cache.
-    """
-    from consolidate import get_file_classification
-    cls = get_file_classification(path)
-    lessons = cls.get("lessons", [])
-    if lessons:
-        return lessons
+    try:
+        data = json.loads(cons_path.read_text(encoding="utf-8"))
+        by_lesson = data.get("by_lesson", {})
+        lesson_data = by_lesson.get(str(lesson_num), {})
+        return lesson_data.get("documents", [])
+    except (json.JSONDecodeError, OSError):
+        return []
 
-    # Regex fallback for paths not in cache
+
+def _extract_lesson_from_path(path: str) -> list[int]:
+    """Extract lesson number(s) from file path using regex."""
     path_lower = path.lower().replace("\\", "/")
 
     match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
@@ -99,26 +117,16 @@ def _extract_lesson_from_path(path: str, term: int) -> list[int]:
         if 1 <= start and 1 <= end:
             return list(range(start, end + 1))
 
-    # Cross-term check
-    for m in re.finditer(r"term\s*(\d+)\b", path_lower):
-        t_num = int(m.group(1))
-        if t_num != term:
-            return []
-
     return []
 
 
-def _read_md_file(path: Path, rel_path: str) -> str | None:
-    """Read a converted markdown file and format it for ground truth."""
+def _read_file(path: str) -> str | None:
+    """Read a text file. Returns content or None."""
     try:
-        text = path.read_text(encoding="utf-8", errors="replace").strip()
+        text = Path(path).read_text(encoding="utf-8", errors="replace").strip()
+        return text if text else None
     except OSError:
         return None
-
-    if not text:
-        return None
-
-    return f"=== CONVERTED — {rel_path} ===\n{text}"
 
 
 def _extract_native(native: dict) -> str | None:
@@ -211,12 +219,7 @@ def _extract_shape_text(element: dict) -> str | None:
 
 
 def _extract_hyperlinks_for_lesson(term: int, lesson_num: int) -> str | None:
-    """Extract hyperlinks from PPTX/DOCX/PDF binary metadata for a lesson.
-
-    These URLs come from extraction_metadata.json and are NOT visible in
-    the converted markdown text — without them the judge falsely flags
-    legitimate URLs as fabricated.
-    """
+    """Extract hyperlinks from PPTX/DOCX/PDF binary metadata for a lesson."""
     meta_path = MEDIA_DIR / "extraction_metadata.json"
     if not meta_path.exists():
         return None
@@ -231,7 +234,7 @@ def _extract_hyperlinks_for_lesson(term: int, lesson_num: int) -> str | None:
     for file_type in ("pptx_files", "docx_files", "pdf_files"):
         for file_info in data.get(file_type, []):
             rel_path = file_info.get("relative_path", "")
-            file_lessons = _extract_lesson_from_path(rel_path, term)
+            file_lessons = _extract_lesson_from_path(rel_path)
             if lesson_num not in file_lessons:
                 continue
 

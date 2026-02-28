@@ -1,6 +1,7 @@
 """
-Smart Change Analyzer
-Reads sync results and determines which pipeline stages need to re-run.
+Change Analyzer
+Reads sync results and determines if there are changes to process.
+Returns a simple list of changed files with term info.
 """
 
 import json
@@ -10,60 +11,14 @@ from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import (
-    CHANGE_STAGE_MAP, IMAGE_BEARING_EXTENSIONS, CONVERTIBLE_EXTENSIONS,
-    NATIVE_GOOGLE_MIMES, LOGS_DIR,
-)
-
-
-def classify_change(change):
-    """
-    Classify a single file change into a change category.
-    Returns: (category, needs_admin_flag)
-    """
-    ct = change["change_type"]
-    name = change.get("name", "")
-    ext = ("." + change.get("extension", "")).lower() if change.get("extension") else ""
-    mime = change.get("mime_type", "")
-
-    if ct == "UNCHANGED":
-        return None, False
-
-    if ct == "DELETED":
-        return "deleted_file", False
-
-    if ct == "RENAMED":
-        return "renamed_file", False
-
-    if ct == "METADATA_CHANGED":
-        return "metadata_only", False
-
-    # NEW or MODIFIED
-    is_native = change.get("is_native_google", False)
-    is_native_presentation = mime == "application/vnd.google-apps.presentation"
-
-    if ct == "NEW":
-        if ext in IMAGE_BEARING_EXTENSIONS or is_native_presentation:
-            return "new_images", True   # Flag admin for image analysis
-        return "new_file", False
-
-    # MODIFIED
-    if ext in IMAGE_BEARING_EXTENSIONS or is_native_presentation:
-        # PPTX or native presentation modified — might have new images
-        return "new_images", True
-    elif ext in CONVERTIBLE_EXTENSIONS or is_native:
-        return "text_only", False
-    else:
-        return "structural", False
+from config import LOGS_DIR
 
 
 def analyze_changes(sync_result):
     """
     Analyze all changes from a sync result.
-    Returns: dict with stages_to_run, change_details, admin_flags
+    Returns: dict with has_changes (bool) and list of changed files.
     """
-    all_stages = set()
-    admin_flags = []
     change_details = []
     has_changes = False
 
@@ -74,66 +29,26 @@ def analyze_changes(sync_result):
                 continue
 
             has_changes = True
-            category, needs_admin = classify_change(change)
-
-            if category is None:
-                continue
-
-            stages = CHANGE_STAGE_MAP.get(category, [])
-            all_stages.update(stages)
-
-            if needs_admin:
-                is_native_pres = change.get("mime_type") == "application/vnd.google-apps.presentation"
-                admin_flags.append({
-                    "file": change.get("name", ""),
-                    "folder_path": change.get("folder_path", ""),
-                    "term": term_key,
-                    "change_type": ct,
-                    "source_type": "native_slides" if is_native_pres else "pptx",
-                    "reason": (
-                        "New/modified native Google Slides may contain new images requiring analysis (Stage 4)"
-                        if is_native_pres else
-                        "New/modified PPTX may contain new images requiring Claude analysis (Stage 4)"
-                    ),
-                })
-
             change_details.append({
                 "file": change.get("name", ""),
-                "file_id": change.get("id", ""),
                 "term": term_key,
                 "change_type": ct,
-                "category": category,
-                "stages_triggered": stages,
             })
 
-    analysis = {
+    return {
         "analyzed_at": datetime.now(timezone.utc).isoformat(),
         "has_changes": has_changes,
-        "stages_to_run": sorted(all_stages),
-        "admin_flags": admin_flags,
         "change_details": change_details,
         "summary": {
             "total_changes": len(change_details),
-            "categories": {},
-            "stages_to_run": sorted(all_stages),
-            "needs_admin_review": len(admin_flags) > 0,
         },
     }
-
-    # Count by category
-    for detail in change_details:
-        cat = detail["category"]
-        analysis["summary"]["categories"][cat] = (
-            analysis["summary"]["categories"].get(cat, 0) + 1
-        )
-
-    return analysis
 
 
 def run_analysis(sync_log_path=None):
     """Run analysis from a sync log file or the latest one."""
     print("=" * 60)
-    print("  Smart Change Analyzer")
+    print("  Change Analyzer")
     print("=" * 60)
     print()
 
@@ -141,7 +56,6 @@ def run_analysis(sync_log_path=None):
     if sync_log_path:
         log_path = Path(sync_log_path)
     else:
-        # Find most recent sync log
         log_files = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)
         if not log_files:
             print("No sync logs found. Run sync_drive.py first.")
@@ -152,7 +66,6 @@ def run_analysis(sync_log_path=None):
     with open(log_path, "r", encoding="utf-8") as f:
         sync_result = json.load(f)
 
-    # Analyze
     analysis = analyze_changes(sync_result)
 
     # Save analysis
@@ -161,23 +74,10 @@ def run_analysis(sync_log_path=None):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(analysis, f, indent=2, ensure_ascii=False)
 
-    # Print summary
     s = analysis["summary"]
     print(f"\n  Total changes: {s['total_changes']}")
-    print(f"  Categories:")
-    for cat, count in s["categories"].items():
-        print(f"    {cat}: {count}")
-    print(f"\n  Stages to run: {s['stages_to_run']}")
-    print(f"  Needs admin review: {s['needs_admin_review']}")
-
-    if analysis["admin_flags"]:
-        print(f"\n  Admin flags:")
-        for flag in analysis["admin_flags"]:
-            print(f"    - {flag['file']} ({flag['reason'][:60]}...)")
-
     if not analysis["has_changes"]:
         print("\n  No changes detected. Pipeline stages will be skipped.")
-
     print(f"\n  Analysis saved: {output_path}")
     print("=" * 60)
 

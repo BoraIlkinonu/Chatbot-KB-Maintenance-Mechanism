@@ -23,7 +23,7 @@ Classify each file path below. For each file, determine:
 2. **lessons** (array of int) — Which lesson number(s) this file relates to:
    - "Lesson 5" → [5]
    - "Lesson 3-5" or "Lessons 3-5" → [3, 4, 5]
-   - Portfolio/assessment files that span all lessons → all lesson numbers for that term
+   - Portfolio/assessment/rubric/design brief files that span the whole term → [] (empty array). Only assign lesson numbers if the filename/path explicitly contains a lesson number.
    - If no lesson can be determined → []
 
 3. **content_type** (string) — One of:

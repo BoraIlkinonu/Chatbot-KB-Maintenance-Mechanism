@@ -692,59 +692,38 @@ def notify_llm_pipeline_complete(results):
     return send_slack("\n\n".join(sections))
 
 
-def notify_sources_ready(results):
+def notify_changes_detected(change_details):
     """
-    Notify that sources are ready for local processing (fallback mode).
-
-    Sent when no LLM backend is available in CI, or when extraction
-    produced 0 usable results.
+    Notify admin that Drive changes were detected.
+    Lists changed files by term, tells admin to download and run locally.
     """
     import os
     run_number = os.environ.get("GITHUB_RUN_NUMBER", "?")
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     run_id = os.environ.get("GITHUB_RUN_ID", "")
 
-    s = results.get("sync_summary", {})
-    ext = results.get("extraction")
+    # Group by term
+    by_term = {}
+    for change in change_details:
+        term = change.get("term", "unknown")
+        by_term.setdefault(term, []).append(change)
 
     sections = [
-        ":white_check_mark: *Source Sync Complete — Local LLM Steps Required*",
+        f":bell: *Drive Changes Detected* — {len(change_details)} file(s) changed",
     ]
 
-    # Explain WHY fallback was triggered — clear, non-alarming
-    has_api_key = bool(os.environ.get("ANTHROPIC_API_KEY"))
-    if not has_api_key:
-        sections.append(
-            ":key: `ANTHROPIC_API_KEY` is not configured in CI secrets.\n"
-            "LLM extraction, KB build, and validation were *skipped*.\n"
-            "Source files are synced and ready for download."
-        )
-    elif ext and ext.get("errors", 0) > 0:
-        sections.append(
-            f":warning: LLM extraction ran but failed "
-            f"({ext['errors']} files could not be processed).\n"
-            "Source files are synced and ready for download."
-        )
-    else:
-        sections.append(
-            ":information_source: No LLM backend available in CI.\n"
-            "Source files are synced and ready for download."
-        )
-
-    if s:
-        sections.append(
-            f"*Sync:* {s.get('total_files', 0)} files | "
-            f"+{s.get('new', 0)} new, ~{s.get('modified', 0)} modified | "
-            f"{s.get('downloaded', 0)} downloaded"
-        )
-
-    # Skipped stages
-    sections.append(
-        "*Skipped stages:* LLM Extraction → KB Build → Validation"
-    )
+    for term_key in sorted(by_term):
+        term_label = _term_label(term_key)
+        items = by_term[term_key]
+        sections.append(f"*{term_label}:*")
+        for item in items[:10]:
+            ct = item.get("change_type", "?")
+            sections.append(f"  • `{item.get('file', '?')}` ({ct})")
+        if len(items) > 10:
+            sections.append(f"  _... +{len(items) - 10} more_")
 
     sections.append(
-        f":arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"
+        f"\n:arrow_down: Download `sources-{run_number}` artifact from GitHub Actions"
     )
 
     if repo and run_id:
@@ -753,9 +732,7 @@ def notify_sources_ready(results):
     sections.append(
         ":computer: *Run locally after downloading sources:*\n"
         "```\n"
-        "python llm_extract.py --backend cli\n"
-        "python build_kb.py\n"
-        "python validate_kb_judge.py --backend cli --verbose\n"
+        "python run_pipeline.py --mode local --skip-sync --backend cli\n"
         "```"
     )
 

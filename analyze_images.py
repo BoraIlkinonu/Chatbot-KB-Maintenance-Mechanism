@@ -11,6 +11,7 @@ Usage:
 
 import sys
 import json
+import re
 import hashlib
 import argparse
 from pathlib import Path
@@ -18,15 +19,43 @@ from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-from config import BASE_DIR, MEDIA_DIR
+from config import BASE_DIR, MEDIA_DIR, CONSOLIDATED_DIR
 from validation.dual_judge.client import create_client
-from consolidate import get_file_classification
 
 IMAGE_CACHE_DIR = BASE_DIR / "image_cache"
 IMAGE_DESCRIPTIONS_PATH = BASE_DIR / "image_descriptions.json"
+PROMPTS_DIR = BASE_DIR / "prompts"
 
 # Supported image extensions
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp", ".tiff"}
+
+
+def _extract_lesson_from_path(path: str) -> list[int]:
+    """Extract lesson number(s) from file path using regex."""
+    path_lower = path.lower().replace("\\", "/")
+
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})\s*[-–—]\s*(\d{1,2})", path_lower)
+    if match:
+        start, end = int(match.group(1)), int(match.group(2))
+        if 1 <= start and 1 <= end and start != end:
+            return list(range(start, end + 1))
+
+    match = re.search(r"lesson[_\s\-]*(\d{1,2})", path_lower)
+    if match:
+        num = int(match.group(1))
+        if num >= 1:
+            return [num]
+
+    return []
+
+
+def _extract_term_from_path(path: str) -> int | None:
+    """Extract term number from file path using regex."""
+    path_lower = path.lower().replace("\\", "/")
+    match = re.search(r"term\s*(\d+)", path_lower)
+    if match:
+        return int(match.group(1))
+    return None
 
 
 def _load_image_metadata() -> list[dict]:
@@ -40,9 +69,8 @@ def _load_image_metadata() -> list[dict]:
 
     for pptx_info in data.get("pptx_files", []):
         rel_path = pptx_info.get("relative_path", "")
-        cls = get_file_classification(rel_path)
-        term = cls.get("term")
-        lessons = cls.get("lessons", [])
+        term = _extract_term_from_path(rel_path)
+        lessons = _extract_lesson_from_path(rel_path)
 
         for img in pptx_info.get("images", []):
             img_path = img.get("image_path", "")
@@ -65,9 +93,8 @@ def _load_image_metadata() -> list[dict]:
         for pres_info in native_data.get("presentations", []):
             source_name = pres_info.get("source_name", "")
             source_path = pres_info.get("source_path", "") or source_name
-            cls = get_file_classification(source_path)
-            term = cls.get("term")
-            lessons = cls.get("lessons", [])
+            term = _extract_term_from_path(source_path)
+            lessons = _extract_lesson_from_path(source_path)
 
             for img in pres_info.get("images", []):
                 img_path = img.get("image_path", "")
@@ -130,16 +157,7 @@ def _save_cache_entry(content_hash: str, image_path: str, description: str,
 
 def run_analysis(terms: list[int] | None = None, backend: str = "auto",
                  force: bool = False) -> dict:
-    """Analyze images and produce image_descriptions.json.
-
-    Args:
-        terms: Restrict to these terms (None = all)
-        backend: LLM backend - "cli", "sdk", or "auto"
-        force: Re-analyze all images even if cached
-
-    Returns:
-        Summary dict with counts
-    """
+    """Analyze images and produce image_descriptions.json."""
     print("=" * 60)
     print("  Image Analysis (Optional)")
     print("=" * 60)
@@ -162,6 +180,9 @@ def run_analysis(terms: list[int] | None = None, backend: str = "auto",
     # Create client
     client = create_client(backend=backend)
     print(f"Backend: {type(client).__name__}")
+
+    # Load prompt template
+    prompt_template = (PROMPTS_DIR / "image_analysis_prompt.md").read_text(encoding="utf-8")
 
     analyzed = 0
     cached = 0
@@ -190,21 +211,17 @@ def run_analysis(terms: list[int] | None = None, backend: str = "auto",
             cached += 1
             continue
 
-        # Build context prompt
+        # Build prompt from template
         term = img_info.get("term", "?")
         lessons = img_info.get("lessons", [])
         slide = img_info.get("primary_slide", "?")
         source = img_info.get("source_file", "?")
 
-        prompt = (
-            f"This image is from Term {term}, "
-            f"Lesson(s) {', '.join(str(l) for l in lessons) if lessons else '?'}, "
-            f"Slide {slide}, file: {source}. "
-            f"Describe its educational content: what it shows, "
-            f"content type (diagram/chart/photo/screenshot/table/illustration), "
-            f"and any text visible in the image. "
-            f"Keep the description concise (2-4 sentences)."
-        )
+        prompt = (prompt_template
+                  .replace("{term}", str(term))
+                  .replace("{lessons}", ", ".join(str(l) for l in lessons) if lessons else "?")
+                  .replace("{slide}", str(slide))
+                  .replace("{source}", str(source)))
 
         print(f"  [{i}/{len(images)}] {img_path.name}...", end="", flush=True)
 

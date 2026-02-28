@@ -1,16 +1,13 @@
 """
-Pipeline Orchestrator (LLM-based)
+Pipeline Orchestrator
 
-5-step pipeline:
-  1. Sync Drive — download source files
-  2. Convert to text — PPTX/DOCX/PDF/XLSX → markdown, Google Docs/Slides → text
-  2.5 Analyze images (optional) — Claude describes extracted images
-  3. LLM Extract — Claude extracts all KB fields as JSON
-  4. Build KB — assemble LLM JSON into final KB schema
-  5. Dual-Judge — two independent Claude judges score KB against source
+Two modes:
+  --mode ci:    Sync Drive -> detect changes -> Slack notify -> done
+  --mode local: Sync (optional) -> convert -> native extract -> LLM consolidate
+                -> LLM KB build -> LLM templates -> LLM validation
 
-Fallback mode: if no LLM backend is available, uploads converted sources
-as artifact and notifies Slack for local processing.
+CI has no ANTHROPIC_API_KEY. CI only syncs and notifies admin.
+Full pipeline (LLM steps) runs locally.
 """
 
 import sys
@@ -23,10 +20,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from config import LOGS_DIR, OUTPUT_DIR
 from sync_drive import run_sync
-from notify_slack import (
-    notify_no_changes, notify_error,
-    notify_llm_pipeline_complete, notify_sources_ready,
-)
+from notify_slack import notify_no_changes, notify_error, notify_changes_detected
 
 
 def _write_sync_github_summary(summary, download_errors):
@@ -68,59 +62,112 @@ def _write_sync_github_summary(summary, download_errors):
         f.write("\n".join(lines) + "\n")
 
 
-def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
-                 dry_run=False, download_all=False, force_extract=False):
-    """
-    Execute the LLM-based pipeline.
+# ──────────────────────────────────────────────────────────
+# CI Mode: Sync + Notify Only
+# ──────────────────────────────────────────────────────────
 
-    Args:
-        skip_sync: Skip Drive sync, use latest sync log
-        force_full: Force full rebuild regardless of changes
-        analyze_images: Run optional image analysis step
-        dry_run: Scan Drive and report changes without processing
-        download_all: Download ALL files from Drive (for CI)
-        force_extract: Force re-extraction even if LLM cache is valid
-    """
+def run_ci_pipeline(dry_run=False, download_all=True):
+    """CI pipeline: sync Drive -> detect changes -> Slack notify -> done."""
     print()
     print("=" * 60)
-    print("  Curriculum KB Maintenance Pipeline (LLM)")
+    print("  KB Pipeline — CI Mode (Sync + Notify)")
     print(f"  {datetime.now(timezone.utc).isoformat()}")
     print("=" * 60)
     print()
 
     LOGS_DIR.mkdir(parents=True, exist_ok=True)
-
     pipeline_log = {
         "started_at": datetime.now(timezone.utc).isoformat(),
+        "mode": "ci",
         "steps_run": [],
         "errors": [],
         "status": "running",
     }
 
-    pipeline_results = {}
-    sync_result = None
-
     try:
-        # ─── Step 1: Sync ────────────────────────────────
+        # Sync Drive
         if dry_run:
-            print("\n>>> STEP 1: Drive Sync (DRY RUN)\n")
+            print("\n>>> Sync (DRY RUN)\n")
             sync_result = run_sync(dry_run=True)
             from notify_slack import notify_dry_run_summary
             notify_dry_run_summary(sync_result)
             pipeline_log["status"] = "dry_run"
-            pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
             _save_pipeline_log(pipeline_log)
             return pipeline_log
-        elif not skip_sync:
+
+        print("\n>>> Sync Drive\n")
+        sync_result = run_sync(download_all=download_all)
+        _write_sync_github_summary(
+            sync_result["summary"],
+            sync_result.get("download_errors", [])
+        )
+        pipeline_log["steps_run"].append({
+            "step": "sync", "status": "success",
+        })
+
+        # Detect changes
+        from change_analyzer import analyze_changes
+        analysis = analyze_changes(sync_result)
+
+        if not analysis["has_changes"]:
+            print("No changes detected.")
+            notify_no_changes()
+            pipeline_log["status"] = "no_changes"
+            _save_pipeline_log(pipeline_log)
+            return pipeline_log
+
+        # Notify admin about changes
+        notify_changes_detected(analysis["change_details"])
+        pipeline_log["status"] = "synced"
+        pipeline_log["changes"] = analysis["summary"]
+
+    except Exception as e:
+        error_msg = f"CI pipeline failed: {e}"
+        print(f"\nFATAL ERROR: {error_msg}")
+        traceback.print_exc()
+        pipeline_log["errors"].append(error_msg)
+        pipeline_log["status"] = "failed"
+        notify_error("CI Sync", str(e))
+
+    _save_pipeline_log(pipeline_log)
+    print(f"\n{'=' * 60}")
+    print(f"  CI Pipeline {pipeline_log['status'].upper()}")
+    print(f"{'=' * 60}\n")
+    return pipeline_log
+
+
+# ──────────────────────────────────────────────────────────
+# Local Mode: Full LLM Pipeline
+# ──────────────────────────────────────────────────────────
+
+def run_local_pipeline(skip_sync=False, force_full=False, analyze_images=False,
+                       backend="cli"):
+    """Local pipeline: sync -> convert -> native -> LLM consolidate -> LLM build -> LLM templates -> LLM validate."""
+    print()
+    print("=" * 60)
+    print("  KB Pipeline — Local Mode (Full LLM)")
+    print(f"  {datetime.now(timezone.utc).isoformat()}")
+    print("=" * 60)
+    print()
+
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    pipeline_log = {
+        "started_at": datetime.now(timezone.utc).isoformat(),
+        "mode": "local",
+        "steps_run": [],
+        "errors": [],
+        "status": "running",
+    }
+    pipeline_results = {}
+    sync_result = None
+
+    try:
+        # ─── Step 1: Sync (optional) ────────────────────────
+        if not skip_sync:
             print("\n>>> STEP 1: Drive Sync\n")
-            sync_result = run_sync(download_all=download_all)
+            sync_result = run_sync()
             pipeline_results["sync_summary"] = sync_result["summary"]
-            pipeline_results["download_errors"] = sync_result.get("download_errors", [])
-            _write_sync_github_summary(sync_result["summary"],
-                                       sync_result.get("download_errors", []))
-            pipeline_log["steps_run"].append({
-                "step": 1, "name": "Sync", "status": "success",
-            })
+            pipeline_log["steps_run"].append({"step": 1, "name": "Sync", "status": "success"})
         else:
             print("\n>>> STEP 1: Sync skipped\n")
             logs = sorted(LOGS_DIR.glob("sync_*.json"), reverse=True)
@@ -128,7 +175,7 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
                 with open(logs[0], "r", encoding="utf-8") as f:
                     sync_result = json.load(f)
 
-        # ─── Check for changes ────────────────────────────
+        # Check for changes
         if not force_full and sync_result:
             from change_analyzer import analyze_changes
             analysis = analyze_changes(sync_result)
@@ -139,7 +186,7 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
                 _save_pipeline_log(pipeline_log)
                 return pipeline_log
 
-        # ─── Step 2: Convert to text ──────────────────────
+        # ─── Step 2: Convert to text ────────────────────────
         print("\n>>> STEP 2: Convert to Text\n")
 
         print("  2a. Media extraction (hyperlinks + images)...")
@@ -154,102 +201,58 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
         from extract_native_google import run_native_extraction
         run_native_extraction(sync_result)
 
-        print("  2d. Consolidation...")
-        from consolidate import run_consolidation
-        run_consolidation()
-
-        pipeline_log["steps_run"].append({
-            "step": 2, "name": "Convert", "status": "success",
-        })
+        pipeline_log["steps_run"].append({"step": 2, "name": "Convert", "status": "success"})
 
         # ─── Step 2.5: Image Analysis (optional) ─────────
         if analyze_images:
             print("\n>>> STEP 2.5: Image Analysis (optional)\n")
             try:
                 from analyze_images import run_analysis
-                img_result = run_analysis(backend="auto")
+                img_result = run_analysis(backend=backend)
                 pipeline_results["image_analysis"] = img_result
-                pipeline_log["steps_run"].append({
-                    "step": 2.5, "name": "Image Analysis", "status": "success",
-                })
+                pipeline_log["steps_run"].append({"step": 2.5, "name": "Image Analysis", "status": "success"})
             except Exception as e:
                 print(f"  Image analysis failed (non-critical): {e}")
-                pipeline_log["steps_run"].append({
-                    "step": 2.5, "name": "Image Analysis", "status": "failed",
-                    "error": str(e),
-                })
+                pipeline_log["steps_run"].append({"step": 2.5, "name": "Image Analysis", "status": "failed", "error": str(e)})
 
-        # ─── Step 3: LLM Extract ─────────────────────────
-        print("\n>>> STEP 3: LLM Extract\n")
-        try:
-            from llm_extract import run_extraction
-            extract_result = run_extraction(backend="auto", force=force_extract)
-            pipeline_results["extraction"] = extract_result
+        # ─── Step 3: LLM Consolidation ──────────────────────
+        print("\n>>> STEP 3: LLM Consolidation\n")
+        from consolidate import run_consolidation
+        run_consolidation(backend=backend)
+        pipeline_log["steps_run"].append({"step": 3, "name": "Consolidation", "status": "success"})
 
-            # Check if extraction actually produced results
-            total_usable = extract_result.get("extracted", 0) + extract_result.get("cached", 0)
-            if total_usable == 0:
-                print(f"\n  Extraction produced 0 usable results "
-                      f"({extract_result.get('errors', 0)} errors).")
-                print("  Entering fallback mode — sources only.\n")
-                pipeline_results["fallback"] = True
-                notify_sources_ready(pipeline_results)
-                pipeline_log["status"] = "fallback"
-                pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
-                _save_pipeline_log(pipeline_log)
-                return pipeline_log
-
-            pipeline_log["steps_run"].append({
-                "step": 3, "name": "LLM Extract", "status": "success",
-            })
-        except RuntimeError as e:
-            # No API key and no CLI — fallback mode
-            print(f"\n  No LLM backend available: {e}")
-            print("  Entering fallback mode — sources only.\n")
-            pipeline_results["fallback"] = True
-            notify_sources_ready(pipeline_results)
-            pipeline_log["status"] = "fallback"
-            pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
-            _save_pipeline_log(pipeline_log)
-            return pipeline_log
-
-        # ─── Step 4: Build KB ─────────────────────────────
-        print("\n>>> STEP 4: Build KB\n")
+        # ─── Step 4: LLM KB Build ───────────────────────────
+        print("\n>>> STEP 4: LLM KB Build\n")
         from build_kb import run_build
-        run_build()
-        pipeline_log["steps_run"].append({
-            "step": 4, "name": "Build KB", "status": "success",
-        })
+        run_build(backend=backend)
+        pipeline_log["steps_run"].append({"step": 4, "name": "KB Build", "status": "success"})
 
         # Also build templates
         try:
+            print("\n>>> STEP 4b: LLM Templates Build\n")
             from build_templates import run_build_templates
-            run_build_templates()
+            run_build_templates(backend=backend)
+            pipeline_log["steps_run"].append({"step": "4b", "name": "Templates", "status": "success"})
         except Exception as e:
             print(f"  Template build failed (non-critical): {e}")
 
-        # ─── Step 5: Dual-Judge ───────────────────────────
+        # ─── Step 5: Dual-Judge Validation ───────────────────
         print("\n>>> STEP 5: Dual-Judge Validation\n")
         try:
             from validation.dual_judge.evaluator import run_dual_judge_validation
-            report = run_dual_judge_validation(backend="auto", verbose=True)
+            report = run_dual_judge_validation(backend=backend, verbose=True)
             pipeline_results["dual_judge"] = {
                 "scores": report.compute_scores(),
                 "verdict": report.compute_verdict(),
                 "sampled": report.sampled_count,
                 "calls_made": report.calls_made,
             }
-            pipeline_log["steps_run"].append({
-                "step": 5, "name": "Dual-Judge", "status": "success",
-            })
+            pipeline_log["steps_run"].append({"step": 5, "name": "Dual-Judge", "status": "success"})
         except Exception as e:
             print(f"  Dual-judge failed: {e}")
-            pipeline_log["steps_run"].append({
-                "step": 5, "name": "Dual-Judge", "status": "failed",
-                "error": str(e),
-            })
+            pipeline_log["steps_run"].append({"step": 5, "name": "Dual-Judge", "status": "failed", "error": str(e)})
 
-        # ─── Collect KB build info ────────────────────────
+        # Collect KB build info
         builds = []
         for kb_file in sorted(OUTPUT_DIR.glob("Term * - Lesson Based Structure.json")):
             try:
@@ -260,7 +263,6 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
             except Exception:
                 pass
         pipeline_results["builds"] = builds
-
         pipeline_log["status"] = "completed"
         pipeline_log["completed_at"] = datetime.now(timezone.utc).isoformat()
 
@@ -274,7 +276,7 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
 
     _save_pipeline_log(pipeline_log)
 
-    # ── Send notification ──
+    # Send notification
     pipeline_results["status"] = pipeline_log["status"]
     pipeline_results["steps_run"] = pipeline_log["steps_run"]
     pipeline_results["completed_at"] = pipeline_log.get("completed_at", "")
@@ -285,6 +287,7 @@ def run_pipeline(skip_sync=False, force_full=False, analyze_images=False,
     ]
 
     try:
+        from notify_slack import notify_llm_pipeline_complete
         notify_llm_pipeline_complete(pipeline_results)
     except Exception:
         if pipeline_results.get("fatal_error"):
@@ -310,24 +313,27 @@ def _save_pipeline_log(pipeline_log):
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="KB Maintenance Pipeline (LLM)")
-    parser.add_argument("--skip-sync", action="store_true", help="Skip Drive sync")
-    parser.add_argument("--force-full", action="store_true", help="Force full rebuild")
+    parser = argparse.ArgumentParser(description="KB Maintenance Pipeline")
+    parser.add_argument("--mode", choices=["ci", "local"], default="local",
+                        help="Pipeline mode: ci (sync+notify) or local (full LLM)")
+    parser.add_argument("--skip-sync", action="store_true", help="Skip Drive sync (local mode)")
+    parser.add_argument("--force-full", action="store_true", help="Force full rebuild (local mode)")
     parser.add_argument("--analyze-images", action="store_true",
-                        help="Run optional image analysis step")
+                        help="Run optional image analysis step (local mode)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Scan and report changes without processing")
     parser.add_argument("--download-all", action="store_true",
-                        help="Download ALL files from Drive (for CI)")
-    parser.add_argument("--force-extract", action="store_true",
-                        help="Force LLM re-extraction even if cache is valid")
+                        help="Download ALL files from Drive (CI mode)")
+    parser.add_argument("--backend", choices=["cli", "sdk", "auto"], default="cli",
+                        help="LLM backend for local mode (default: cli)")
     args = parser.parse_args()
 
-    run_pipeline(
-        skip_sync=args.skip_sync,
-        force_full=args.force_full,
-        analyze_images=args.analyze_images,
-        dry_run=args.dry_run,
-        download_all=args.download_all,
-        force_extract=args.force_extract,
-    )
+    if args.mode == "ci":
+        run_ci_pipeline(dry_run=args.dry_run, download_all=args.download_all)
+    else:
+        run_local_pipeline(
+            skip_sync=args.skip_sync,
+            force_full=args.force_full,
+            analyze_images=args.analyze_images,
+            backend=args.backend,
+        )

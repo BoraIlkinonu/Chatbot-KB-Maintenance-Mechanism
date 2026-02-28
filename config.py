@@ -4,7 +4,6 @@ All constants, paths, API settings, and pipeline parameters.
 """
 
 import os
-import re
 from pathlib import Path
 
 # ──────────────────────────────────────────────────────────
@@ -73,37 +72,10 @@ STAGES = {
     1: {"name": "Media Extraction",         "script": "extract_media.py"},
     2: {"name": "Document Conversion",      "script": "convert_docs.py"},
     3: {"name": "Native Google Extraction",  "script": "extract_native_google.py"},
-    # Stage 4 (Image Analysis) is manual — requires Claude Code agents
     5: {"name": "Consolidation",            "script": "consolidate.py"},
     6: {"name": "KB Build",                 "script": "build_kb.py"},
     7: {"name": "Validation",               "script": "validate_kb_judge.py"},
 }
-
-# Change type → stages to re-run
-CHANGE_STAGE_MAP = {
-    "text_only":       [2, 3, 5, 6, 7],
-    "new_images":      [1, 2, 3, 5, 6, 7],  # + flag admin for Stage 4
-    "new_file":        [1, 2, 3, 5, 6, 7],
-    "structural":      [1, 2, 3, 5, 6, 7],  # full rebuild
-    "deleted_file":    [5, 6, 7],
-    "renamed_file":    [5, 6, 7],
-    "metadata_only":   [6, 7],               # re-build KB with updated metadata
-}
-
-# File extensions that may contain images
-IMAGE_BEARING_EXTENSIONS = {".pptx"}
-
-# Video file extensions
-VIDEO_EXTENSIONS = {".mp4", ".mov", ".avi", ".webm"}
-
-# URL patterns for video services
-VIDEO_URL_PATTERNS = [
-    re.compile(r"(?:https?://)?(?:www\.)?youtube\.com/watch\?v=[\w\-]+", re.IGNORECASE),
-    re.compile(r"(?:https?://)?youtu\.be/[\w\-]+", re.IGNORECASE),
-    re.compile(r"(?:https?://)?(?:www\.)?vimeo\.com/\d+", re.IGNORECASE),
-    # Note: drive.google.com/file/d/ removed — it matched ALL Drive files (PDFs, images, etc.)
-    # Drive video files are captured by the video file scanner via actual file extensions
-]
 
 # Supported file types for conversion
 CONVERTIBLE_EXTENSIONS = {".pptx", ".docx", ".xlsx", ".pdf"}
@@ -114,16 +86,6 @@ NATIVE_GOOGLE_MIMES = {
     "application/vnd.google-apps.spreadsheet":  "google_sheet",
     "application/vnd.google-apps.presentation": "google_slides",
 }
-
-# ──────────────────────────────────────────────────────────
-# Duplicate Detection
-# ──────────────────────────────────────────────────────────
-FUZZY_NAME_THRESHOLD = 0.85  # Levenshtein similarity
-
-# ──────────────────────────────────────────────────────────
-# Consolidation
-# ──────────────────────────────────────────────────────────
-CONSOLIDATE_COMBINED = False  # Write combined file alongside per-term files
 
 # ──────────────────────────────────────────────────────────
 # Slack Notifications

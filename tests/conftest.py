@@ -7,6 +7,7 @@ import sys
 import json
 import pytest
 from pathlib import Path
+from unittest.mock import MagicMock
 
 
 def pytest_configure(config):
@@ -89,8 +90,7 @@ def tmp_logs(tmp_path):
 
 @pytest.fixture
 def config_override(tmp_path, monkeypatch):
-    """Monkeypatch config.py paths to use temp directories.
-    Patches both config module AND the module-level imports in stage scripts."""
+    """Monkeypatch config.py paths to use temp directories."""
     import config
 
     dirs = {}
@@ -104,23 +104,51 @@ def config_override(tmp_path, monkeypatch):
     # Also patch BASE_DIR
     monkeypatch.setattr(config, "BASE_DIR", tmp_path)
 
+    # Create prompts directory with actual prompt files
+    prompts_src = Path(__file__).parent.parent / "prompts"
+    prompts_dst = tmp_path / "prompts"
+    prompts_dst.mkdir(parents=True, exist_ok=True)
+    if prompts_src.exists():
+        for prompt_file in prompts_src.glob("*.md"):
+            (prompts_dst / prompt_file.name).write_text(
+                prompt_file.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+
     # Patch module-level imports in stage scripts so they use the temp dirs
     import extract_media
     import convert_docs
     import consolidate
     import build_kb
+    import build_templates
 
-    for module in (extract_media, convert_docs, consolidate, build_kb):
+    for module in (extract_media, convert_docs, consolidate, build_kb, build_templates):
         for name in ("SOURCES_DIR", "MEDIA_DIR", "CONVERTED_DIR", "NATIVE_DIR",
                       "CONSOLIDATED_DIR", "OUTPUT_DIR", "LOGS_DIR", "VALIDATION_DIR"):
             if hasattr(module, name):
                 monkeypatch.setattr(module, name, dirs.get(name, getattr(config, name)))
-
-    # Also patch BASE_DIR in build_kb
-    if hasattr(build_kb, "BASE_DIR"):
-        monkeypatch.setattr(build_kb, "BASE_DIR", tmp_path)
+        if hasattr(module, "BASE_DIR"):
+            monkeypatch.setattr(module, "BASE_DIR", tmp_path)
+        if hasattr(module, "PROMPTS_DIR"):
+            monkeypatch.setattr(module, "PROMPTS_DIR", prompts_dst)
 
     return dirs
+
+
+# ──────────────────────────────────────────────────────────
+# Mock LLM Client
+# ──────────────────────────────────────────────────────────
+
+@pytest.fixture
+def mock_llm_client():
+    """A mock LLM client that returns configurable responses."""
+    client = MagicMock()
+    client.calls_made = 0
+    client.budget = 100
+    client.is_available.return_value = True
+    client.has_budget.return_value = True
+    # Default: return empty dict, tests override via client.call.return_value
+    client.call.return_value = {}
+    return client
 
 
 # ──────────────────────────────────────────────────────────
@@ -258,44 +286,25 @@ def mock_docs_api_response():
 
 @pytest.fixture
 def sample_consolidated_lesson():
-    """Sample consolidated lesson data matching the Stage 5 output format."""
+    """Sample consolidated lesson data matching the LLM consolidation output format."""
     return {
-        "lesson": 5,
-        "term": 2,
-        "document_count": 2,
-        "image_count": 3,
-        "native_count": 0,
-        "link_count": 4,
-        "video_ref_count": 2,
         "documents": [
             {
                 "path": "term2/Lesson 5/Teachers Slides.md",
                 "full_path": "",  # Will be set in tests
                 "content_type": "teachers_slides",
-                "term": 2,
-                "lessons": [5],
-                "format": "md",
+                "has_slides": True,
                 "char_count": 500,
-                "slide_count": 10,
-                "content_preview": "",
             },
         ],
-        "images": [],
-        "native_content": [],
         "links": [
-            {"url": "https://notebooklm.google.com", "text": "NotebookLM", "source": "pptx",
-             "source_file": "term2/Lesson 5/Teachers Slides.pptx", "term": 2, "lessons": [5]},
-            {"url": "https://example.com/rubric", "text": "Rubric", "source": "pptx",
-             "source_file": "term2/Lesson 5/Teachers Slides.pptx", "term": 2, "lessons": [5]},
-            {"url": "https://youtube.com/watch?v=abc123", "text": "Tutorial", "source": "pptx",
-             "source_file": "term2/Lesson 5/Teachers Slides.pptx", "term": 2, "lessons": [5]},
-            {"url": "https://example.com/resource", "text": "Resource", "source": "pdf",
-             "source_file": "term2/Lesson 5/Handout.pdf", "term": 2, "lessons": [5]},
+            {"url": "https://notebooklm.google.com", "text": "NotebookLM",
+             "source_file": "term2/Lesson 5/Teachers Slides.md"},
+            {"url": "https://example.com/rubric", "text": "Rubric",
+             "source_file": "term2/Lesson 5/Teachers Slides.md"},
         ],
         "video_refs": [
-            {"type": "video_link", "title": "Tutorial", "url": "https://youtube.com/watch?v=abc123",
-             "source": "pptx", "term": 2, "lessons": [5]},
-            {"type": "video_file", "title": "demo_video", "filename": "demo_video.mp4",
-             "path": "/sources/term2/Lesson 5/demo_video.mp4", "url": "", "term": 2, "lessons": [5]},
+            {"url": "https://youtube.com/watch?v=abc123", "title": "Tutorial", "type": "youtube"},
         ],
+        "image_count": 0,
     }

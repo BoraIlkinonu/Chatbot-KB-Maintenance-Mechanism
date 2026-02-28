@@ -1,4 +1,4 @@
-name: KB Sync & Build Pipeline
+name: KB Sync & Notify
 
 on:
   schedule:
@@ -7,24 +7,8 @@ on:
 
   workflow_dispatch:
     inputs:
-      force_full:
-        description: 'Force full pipeline rebuild'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-          - 'false'
-          - 'true'
       dry_run:
-        description: 'Dry run (scan only, no downloads or stages)'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-          - 'false'
-          - 'true'
-      analyze_images:
-        description: 'Run optional image analysis step'
+        description: 'Dry run (scan only, no downloads)'
         required: false
         default: 'false'
         type: choice
@@ -36,9 +20,9 @@ permissions:
   contents: write
 
 jobs:
-  sync-and-build:
+  sync-and-notify:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -54,54 +38,35 @@ jobs:
           pip install --upgrade pip
           pip install google-auth google-auth-oauthlib google-api-python-client
           pip install python-pptx python-docx openpyxl pypdf
-          pip install anthropic
 
-      - name: Run Pipeline
+      - name: Run CI Pipeline (Sync + Notify)
         env:
           GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           EXPORTS_FOLDER_ID: ${{ secrets.EXPORTS_FOLDER_ID }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS="--download-all"
-          if [ "${{ github.event.inputs.force_full }}" = "true" ]; then
-            ARGS="$ARGS --force-full"
-          fi
+          ARGS="--mode ci --download-all"
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-            ARGS="--dry-run"
-          fi
-          if [ "${{ github.event.inputs.analyze_images }}" = "true" ]; then
-            ARGS="$ARGS --analyze-images"
+            ARGS="--mode ci --dry-run"
           fi
           python run_pipeline.py $ARGS
 
-      - name: Upload sources artifact (for fallback mode)
+      - name: Upload sources artifact
         if: always() && github.event.inputs.dry_run != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: sources-${{ github.run_number }}
           path: |
-            converted/
-            native_extracts/
-            media/extraction_metadata.json
-            consolidated/
+            sources/
+            state/
           retention-days: 30
 
-      - name: Upload KB outputs as artifact
-        if: always() && github.event.inputs.dry_run != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: kb-outputs-${{ github.run_number }}
-          path: output/
-          retention-days: 30
-
-      - name: Commit output files
+      - name: Commit state files
         if: github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "KB Pipeline Bot"
           git config user.email "kb-pipeline@endstar.ai"
-          git add output/ logs/ state/ validation/ -f
-          git add llm_cache/ -f 2>/dev/null || true
+          git add state/ logs/ -f
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
