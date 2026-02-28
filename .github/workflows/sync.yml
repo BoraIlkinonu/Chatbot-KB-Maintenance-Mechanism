@@ -100,7 +100,8 @@ jobs:
         run: |
           git config user.name "KB Pipeline Bot"
           git config user.email "kb-pipeline@endstar.ai"
-          git add output/ logs/ state/ validation/ llm_cache/ -f
+          git add output/ logs/ state/ validation/ -f
+          git add llm_cache/ -f 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
