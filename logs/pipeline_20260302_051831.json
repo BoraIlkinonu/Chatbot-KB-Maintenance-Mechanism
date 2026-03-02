@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-03-02T05:18:03.629687+00:00",
+  "mode": "ci",
+  "download": "none",
+  "steps_run": [
+    {
+      "step": "sync",
+      "status": "success"
+    },
+    {
+      "step": "manifest",
+      "status": "success"
+    }
+  ],
+  "errors": [],
+  "status": "synced",
+  "changes": {
+    "total_changes": 2
+  },
+  "manifest_summary": {
+    "total_added": 2,
+    "total_modified": 0,
+    "total_deleted": 0,
+    "total_renamed": 0
+  }
+}

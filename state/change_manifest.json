@@ -1,11 +1,22 @@
 {
-  "generated_at": "2026-02-28T20:04:42.346427+00:00",
-  "added": [],
+  "generated_at": "2026-03-02T05:18:31.051472+00:00",
+  "added": [
+    {
+      "file": "Generation Gamma Presentation.mp4",
+      "term": "term3",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos"
+    },
+    {
+      "file": "Lesson 15.pptx",
+      "term": "term3",
+      "folder_path": "Teacher Resources/Curriculum Content/Week 8"
+    }
+  ],
   "modified": [],
   "deleted": [],
   "renamed": [],
   "summary": {
-    "total_added": 0,
+    "total_added": 2,
     "total_modified": 0,
     "total_deleted": 0,
     "total_renamed": 0
