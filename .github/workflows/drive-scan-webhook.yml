@@ -70,7 +70,7 @@ jobs:
           retention-days: 30
 
       - name: Upload downloaded files artifact
-        if: inputs.download == 'true' || inputs.full_sync == 'true'
+        if: inputs.download || inputs.full_sync
         uses: actions/upload-artifact@v4
         with:
           name: downloads
@@ -79,7 +79,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Commit state files
-        if: inputs.dry_run != 'true'
+        if: "!inputs.dry_run"
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -88,6 +88,7 @@ jobs:
             echo "No state changes to commit"
           else
             git commit -m "Drive Scanner: update state $(date -u +%Y-%m-%d)"
+            git pull --rebase origin drive-scan-webhook
             git push
           fi
 
