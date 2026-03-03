@@ -227,26 +227,19 @@ def run_scan(dry_run=False, download=False, full_sync=False, output_file=None):
             json.dump(payload, f, indent=2, ensure_ascii=False)
         print(f"\n  Payload written to: {output_file}")
 
-    if dry_run:
-        print(f"\n  ** DRY RUN — no webhook delivery, no downloads, no state update **")
-        print(f"\n  Payload preview:")
-        preview = json.dumps(payload, indent=2, ensure_ascii=False)
-        if len(preview) > 3000:
-            preview = preview[:3000] + "\n  ... (truncated)"
-        print(preview)
+    # Always deliver webhook so dashboard shows results for every scan
+    print(f"\n  Delivering webhook...")
+    success, status_code, error = deliver_webhook(payload)
+    if success:
+        print(f"  Webhook delivered successfully (HTTP {status_code})")
     else:
-        # Deliver webhook
-        if payload["has_changes"] or full_sync:
-            print(f"\n  Delivering webhook...")
-            success, status_code, error = deliver_webhook(payload)
-            if success:
-                print(f"  Webhook delivered successfully (HTTP {status_code})")
-            else:
-                print(f"  Webhook delivery failed: {error}")
-                notify_webhook_delivery(success, status_code, error)
-        else:
-            print(f"\n  No changes — skipping webhook delivery")
+        print(f"  Webhook delivery failed: {error}")
+        if not dry_run:
+            notify_webhook_delivery(success, status_code, error)
 
+    if dry_run:
+        print(f"\n  ** DRY RUN — no state update **")
+    else:
         # Send Slack notification
         notify_scan_changes(payload)
 

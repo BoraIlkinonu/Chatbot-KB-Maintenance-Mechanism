@@ -1,0 +1,8 @@
+name = "drive-scanner-hook"
+main = "src/index.js"
+compatibility_date = "2024-12-01"
+account_id = "3ddbe0754dc5981e46144e9e11370efe"
+
+[[kv_namespaces]]
+binding = "SCAN_PAYLOADS"
+id = "e7cca2283ba6484ea04b9afe870e112f"
