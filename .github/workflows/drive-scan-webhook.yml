@@ -91,6 +91,22 @@ jobs:
             git push
           fi
 
+      - name: Notify Slack on success
+        if: success()
+        env:
+          SLACK_WEBHOOK_EXTERNAL: ${{ secrets.SLACK_WEBHOOK_EXTERNAL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_EXTERNAL" ]; then
+            MODE=""
+            if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="Dry Run";
+            elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="Full Sync";
+            elif [ "${{ inputs.download }}" = "true" ]; then MODE="Scan + Download";
+            else MODE="Scan"; fi
+            curl -s -X POST "$SLACK_WEBHOOK_EXTERNAL" \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\": \":white_check_mark: *Drive Scanner completed* — ${MODE}\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run> · <https://drive-scanner-hook.tilkinonu.workers.dev|Dashboard>\"}"
+          fi
+
       - name: Notify Slack on failure
         if: failure()
         env:
@@ -99,5 +115,5 @@ jobs:
           if [ -n "$SLACK_WEBHOOK_EXTERNAL" ]; then
             curl -s -X POST "$SLACK_WEBHOOK_EXTERNAL" \
               -H 'Content-Type: application/json' \
-              -d "{\"text\": \":rotating_light: *Drive Scanner FAILED*\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+              -d "{\"text\": \":rotating_light: *Drive Scanner FAILED*\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run> · <https://drive-scanner-hook.tilkinonu.workers.dev|Dashboard>\"}"
           fi
