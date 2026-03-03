@@ -89,7 +89,9 @@ def notify_scan_error(error_msg):
     """Notify about a scan error."""
     msg = (
         f":rotating_light: *Drive Scanner Error*\n"
-        f"```{error_msg[:500]}```"
+        f"```{error_msg[:500]}```\n"
+        f"<{DASHBOARD_URL}|:mag: Dashboard> · "
+        f"<https://github.com/BoraIlkinonu/Chatbot-KB-Maintenance-Mechanism/actions|:gear: GitHub Actions>"
     )
     return send_slack(msg)
 
@@ -102,7 +104,9 @@ def notify_webhook_delivery(success, status_code, error):
     msg = (
         f":warning: *Webhook Delivery Failed*\n"
         f"Status: {status_code or 'N/A'}\n"
-        f"Error: {error or 'unknown'}"
+        f"Error: {error or 'unknown'}\n"
+        f"<{DASHBOARD_URL}|:mag: Dashboard> · "
+        f"<https://github.com/BoraIlkinonu/Chatbot-KB-Maintenance-Mechanism/actions|:gear: GitHub Actions>"
     )
     return send_slack(msg)
 
