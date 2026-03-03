@@ -36,6 +36,20 @@ jobs:
         with:
           ref: drive-scan-webhook
 
+      - name: Register run mode with dashboard
+        env:
+          EXTERNAL_WEBHOOK_URL: ${{ secrets.EXTERNAL_WEBHOOK_URL }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="dry_run";
+          elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="full_sync";
+          elif [ "${{ inputs.download }}" = "true" ]; then MODE="download";
+          elif [ "${{ github.event_name }}" = "schedule" ]; then MODE="scheduled";
+          else MODE="scan"; fi
+          DASHBOARD_URL="${EXTERNAL_WEBHOOK_URL%/webhook}"
+          curl -sf -X POST "${DASHBOARD_URL}/api/run-mode" \
+            -H 'Content-Type: application/json' \
+            -d "{\"run_id\": \"${{ github.run_id }}\", \"mode\": \"${MODE}\"}" || true
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
