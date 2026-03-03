@@ -1,0 +1,134 @@
+name: Drive Scan Webhook
+
+on:
+  schedule:
+    # Daily at 2:00 AM UAE time (22:00 UTC previous day)
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — scan only, no webhook/downloads/state update'
+        required: false
+        default: false
+        type: boolean
+      download:
+        description: 'Download changed files (NEW/MODIFIED/RENAMED)'
+        required: false
+        default: true
+        type: boolean
+      full_sync:
+        description: 'Full sync — delete cache + download ALL files from scratch'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write  # Needed for committing state files
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout drive-scan-webhook branch
+        uses: actions/checkout@v4
+        with:
+          ref: drive-scan-webhook
+
+      - name: Register run mode with dashboard
+        env:
+          EXTERNAL_WEBHOOK_URL: ${{ secrets.EXTERNAL_WEBHOOK_URL }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="dry_run";
+          elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="full_sync";
+          elif [ "${{ inputs.download }}" = "true" ]; then MODE="download";
+          elif [ "${{ github.event_name }}" = "schedule" ]; then MODE="scheduled";
+          else MODE="scan"; fi
+          DASHBOARD_URL="${EXTERNAL_WEBHOOK_URL%/webhook}"
+          curl -sf -X POST "${DASHBOARD_URL}/api/run-mode" \
+            -H 'Content-Type: application/json' \
+            -d "{\"run_id\": \"${{ github.run_id }}\", \"mode\": \"${MODE}\"}" || true
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Drive Scanner
+        env:
+          GOOGLE_TOKEN: ${{ secrets.GOOGLE_TOKEN }}
+          EXTERNAL_WEBHOOK_URL: ${{ secrets.EXTERNAL_WEBHOOK_URL }}
+          SLACK_WEBHOOK_EXTERNAL: ${{ secrets.SLACK_WEBHOOK_EXTERNAL }}
+        run: |
+          ARGS="--output scan_result.json"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          if [ "${{ inputs.full_sync }}" = "true" ]; then
+            ARGS="$ARGS --full-sync"
+          elif [ "${{ inputs.download }}" = "true" ]; then
+            ARGS="$ARGS --download"
+          fi
+          python -m drive_scanner $ARGS
+
+      - name: Upload scan result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-result
+          path: scan_result.json
+          retention-days: 30
+
+      - name: Upload downloaded files artifact
+        if: inputs.download || inputs.full_sync
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloads
+          path: downloads/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Commit state files
+        if: "!inputs.dry_run"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add drive_scanner/state/previous_scan.json drive_scanner/state/revision_history.json
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "Drive Scanner: update state $(date -u +%Y-%m-%d)"
+            git pull --rebase origin drive-scan-webhook
+            git push
+          fi
+
+      - name: Notify Slack on success
+        if: success()
+        env:
+          SLACK_WEBHOOK_EXTERNAL: ${{ secrets.SLACK_WEBHOOK_EXTERNAL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_EXTERNAL" ]; then
+            MODE=""
+            if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="Dry Run";
+            elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="Full Sync";
+            elif [ "${{ inputs.download }}" = "true" ]; then MODE="Scan + Download";
+            else MODE="Scan"; fi
+            curl -s -X POST "$SLACK_WEBHOOK_EXTERNAL" \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\": \":white_check_mark: *Drive Scanner completed* — ${MODE}\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run> · <https://drive-scanner-hook.tilkinonu.workers.dev|Dashboard>\"}"
+          fi
+
+      - name: Notify Slack on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_EXTERNAL: ${{ secrets.SLACK_WEBHOOK_EXTERNAL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_EXTERNAL" ]; then
+            curl -s -X POST "$SLACK_WEBHOOK_EXTERNAL" \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\": \":rotating_light: *Drive Scanner FAILED*\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run> · <https://drive-scanner-hook.tilkinonu.workers.dev|Dashboard>\"}"
+          fi
