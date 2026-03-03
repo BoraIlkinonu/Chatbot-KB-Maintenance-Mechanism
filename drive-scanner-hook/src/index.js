@@ -185,20 +185,40 @@ export default {
           html_url: r.html_url,
         }));
 
-        // For each completed run, fetch artifacts
+        const ghHeaders = {
+          Authorization: `Bearer ${pat}`,
+          Accept: "application/vnd.github+json",
+          "User-Agent": "drive-scanner-dashboard",
+          "X-GitHub-Api-Version": "2022-11-28",
+        };
+
         const results = [];
         for (const run of runs) {
-          if (run.status === "completed") {
+          // Fetch jobs/steps for in-progress runs
+          if (run.status !== "completed") {
+            const jobsRes = await fetch(
+              `https://api.github.com/repos/${GITHUB_REPO}/actions/runs/${run.id}/jobs`,
+              { headers: ghHeaders }
+            );
+            const jobsData = await jobsRes.json();
+            run.steps = [];
+            for (const job of jobsData.jobs || []) {
+              for (const step of job.steps || []) {
+                run.steps.push({
+                  name: step.name,
+                  status: step.status,
+                  conclusion: step.conclusion,
+                  started_at: step.started_at,
+                  completed_at: step.completed_at,
+                });
+              }
+            }
+            run.artifacts = [];
+          } else {
+            // Fetch artifacts for completed runs
             const artRes = await fetch(
               `https://api.github.com/repos/${GITHUB_REPO}/actions/runs/${run.id}/artifacts`,
-              {
-                headers: {
-                  Authorization: `Bearer ${pat}`,
-                  Accept: "application/vnd.github+json",
-                  "User-Agent": "drive-scanner-dashboard",
-                  "X-GitHub-Api-Version": "2022-11-28",
-                },
-              }
+              { headers: ghHeaders }
             );
             const artData = await artRes.json();
             run.artifacts = (artData.artifacts || []).map((a) => ({
@@ -208,8 +228,7 @@ export default {
               expired: a.expired,
               created_at: a.created_at,
             }));
-          } else {
-            run.artifacts = [];
+            run.steps = [];
           }
           results.push(run);
         }
@@ -372,6 +391,24 @@ function dashboardHTML() {
   .btn-danger { background: var(--red); color: #fff; }
   .btn-sm { padding: 4px 10px; font-size: 0.78rem; }
 
+  /* Active/inactive button states during a run */
+  .btn-active {
+    background: var(--green) !important; color: #111 !important;
+    border-color: var(--green) !important;
+    box-shadow: 0 0 12px rgba(61,214,140,0.3);
+  }
+  .btn-inactive {
+    background: var(--surface2) !important; color: var(--text2) !important;
+    border-color: var(--border) !important; opacity: 0.45;
+  }
+
+  /* Run card separators */
+  .run-card {
+    padding: 14px 0; border-bottom: 2px solid var(--border);
+    margin-bottom: 2px;
+  }
+  .run-card:last-of-type { border-bottom: none; margin-bottom: 0; }
+
   /* Status message */
   .status-msg {
     margin-top: 8px; font-size: 0.82rem; color: var(--text2);
@@ -492,6 +529,20 @@ function dashboardHTML() {
     border-top: 1px solid var(--border);
   }
   .btn-wrap:hover .tooltip { display: block; }
+  /* Step progress */
+  .steps { display: flex; gap: 2px; flex-wrap: wrap; margin-top: 6px; }
+  .step {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 0.72rem; padding: 2px 8px; border-radius: 4px;
+    background: var(--surface2); color: var(--text2);
+    white-space: nowrap;
+  }
+  .step-done { background: rgba(61,214,140,0.12); color: var(--green); }
+  .step-running { background: rgba(255,212,59,0.15); color: var(--yellow); }
+  .step-fail { background: rgba(240,84,76,0.12); color: var(--red); }
+  .step-skip { opacity: 0.4; }
+  .step-icon { font-size: 0.68rem; }
+
   .tooltip h4 { font-size: 0.88rem; margin-bottom: 6px; color: var(--text); }
   .tooltip p { margin: 0 0 8px; color: var(--text2); }
   .tooltip p:last-child { margin-bottom: 0; }
@@ -557,7 +608,7 @@ function dashboardHTML() {
   <h3>Trigger Workflow</h3>
   <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px;">
     <div class="btn-wrap">
-      <button class="btn-dry" onclick="triggerWorkflow('dry_run')">Dry Run</button>
+      <button class="btn-dry trigger-btn" data-mode="dry_run" onclick="triggerWorkflow('dry_run')">Dry Run</button>
       <div class="tooltip">
         <h4>Dry Run</h4>
         <div class="tip-label">What it does</div>
@@ -568,7 +619,7 @@ function dashboardHTML() {
       </div>
     </div>
     <div class="btn-wrap">
-      <button class="btn-scan" onclick="triggerWorkflow('scan')">Scan</button>
+      <button class="btn-scan trigger-btn" data-mode="scan" onclick="triggerWorkflow('scan')">Scan</button>
       <div class="tooltip">
         <h4>Scan</h4>
         <div class="tip-label">What it does</div>
@@ -579,7 +630,7 @@ function dashboardHTML() {
       </div>
     </div>
     <div class="btn-wrap">
-      <button class="btn-download" onclick="triggerWorkflow('download')">Scan + Download</button>
+      <button class="btn-download trigger-btn" data-mode="download" onclick="triggerWorkflow('download')">Scan + Download</button>
       <div class="tooltip">
         <h4>Scan + Download</h4>
         <div class="tip-label">What it does</div>
@@ -589,7 +640,7 @@ function dashboardHTML() {
       </div>
     </div>
     <div class="btn-wrap">
-      <button class="btn-full" onclick="triggerWorkflow('full_sync')">Full Sync</button>
+      <button class="btn-full trigger-btn" data-mode="full_sync" onclick="triggerWorkflow('full_sync')">Full Sync</button>
       <div class="tooltip">
         <h4>Full Sync</h4>
         <div class="tip-label">What it does</div>
@@ -689,8 +740,32 @@ async function clearAll() {
     '<div class="card"><div class="empty">All payloads cleared</div></div>';
 }
 
+let runsPollingTimer = null;
+let activeMode = null;
+let lastRunsJson = '';
+
+function setButtonsRunning(mode) {
+  activeMode = mode;
+  document.querySelectorAll('.trigger-btn').forEach(btn => {
+    if (btn.dataset.mode === mode) {
+      btn.classList.add('btn-active');
+      btn.disabled = false;
+    } else {
+      btn.classList.add('btn-inactive');
+      btn.disabled = true;
+    }
+  });
+}
+function resetButtons() {
+  activeMode = null;
+  document.querySelectorAll('.trigger-btn').forEach(btn => {
+    btn.classList.remove('btn-active', 'btn-inactive');
+    btn.disabled = false;
+  });
+}
+
 async function triggerWorkflow(mode) {
-  setTriggerStatus('<span class="spinner"></span> Triggering ' + mode + '...', '');
+  setButtonsRunning(mode);
   try {
     const res = await fetch(BASE + '/api/trigger', {
       method: 'POST',
@@ -699,52 +774,116 @@ async function triggerWorkflow(mode) {
     });
     const data = await res.json();
     if (data.error) {
+      resetButtons();
       setTriggerStatus('Error: ' + data.error + (data.body ? ' — ' + data.body : ''), 'err');
     } else {
-      setTriggerStatus('Workflow triggered: ' + mode + '. Results will appear here when done.', 'ok');
-      // Auto-refresh runs after a short delay
+      setTriggerStatus('', '');
       setTimeout(loadRuns, 5000);
+      startRunsPolling();
     }
   } catch (e) {
+    resetButtons();
     setTriggerStatus('Network error: ' + e.message, 'err');
   }
 }
 
+function startRunsPolling() {
+  stopRunsPolling();
+  runsPollingTimer = setInterval(loadRuns, 10000);
+}
+function stopRunsPolling() {
+  if (runsPollingTimer) clearInterval(runsPollingTimer);
+  runsPollingTimer = null;
+}
+
+function buildRunsHTML(runs) {
+  let html = '';
+  for (let i = 0; i < runs.length; i++) {
+    const run = runs[i];
+    const isRunning = run.status !== 'completed';
+    const isFailed = run.conclusion === 'failure';
+    const cls = run.conclusion === 'success' ? 'run-success' : isFailed ? 'run-failure' : 'run-pending';
+    const statusText = isRunning ? run.status : run.conclusion;
+
+    html += '<div class="run-card">';
+    html += '<div style="display:flex;justify-content:space-between;align-items:center">';
+    html += '<div>';
+    html += '<span class="run-status ' + cls + '">';
+    if (isRunning) html += '<span class="spinner" style="margin-right:6px"></span>';
+    html += esc(statusText) + '</span>';
+    html += ' <span style="color:var(--text2);font-size:0.82rem">' + esc(formatTime(run.created_at)) + '</span>';
+    html += '</div>';
+    html += '<div style="display:flex;gap:8px;align-items:center">';
+    if (run.artifacts && run.artifacts.length > 0) {
+      for (const a of run.artifacts) {
+        if (!a.expired) {
+          html += '<a class="btn-dl" href="' + BASE + '/api/artifacts/' + a.id + '" title="' + esc(a.name) + ' (' + esc(formatSize(a.size_in_bytes)) + ')">' + esc(a.name) + '</a>';
+        } else {
+          html += '<span style="color:var(--text2);font-size:0.78rem">' + esc(a.name) + ' (expired)</span>';
+        }
+      }
+    }
+    if (!isFailed) {
+      html += '<a href="' + esc(run.html_url) + '" target="_blank" style="color:var(--accent);font-size:0.78rem">View on GitHub</a>';
+    }
+    html += '</div></div>';
+
+    if (run.steps && run.steps.length > 0) {
+      html += '<div class="steps">';
+      for (const step of run.steps) {
+        let sCls = '';
+        let icon = '';
+        if (step.status === 'completed' && step.conclusion === 'success') { sCls = 'step-done'; icon = '\\u2713'; }
+        else if (step.status === 'completed' && step.conclusion === 'failure') { sCls = 'step-fail'; icon = '\\u2717'; }
+        else if (step.status === 'completed' && step.conclusion === 'skipped') { sCls = 'step-skip'; icon = '\\u2014'; }
+        else if (step.status === 'in_progress') { sCls = 'step-running'; icon = '\\u25B6'; }
+        else { sCls = ''; icon = '\\u25CB'; }
+        html += '<span class="step ' + sCls + '"><span class="step-icon">' + icon + '</span>' + esc(step.name) + '</span>';
+      }
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+  return html;
+}
+
 async function loadRuns() {
   const panel = document.getElementById('runsPanel');
-  panel.innerHTML = '<div class="empty"><span class="spinner"></span> Loading runs...</div>';
+  // Show spinner only on very first load
+  if (!panel.dataset.loaded) {
+    panel.innerHTML = '<div class="empty"><span class="spinner"></span> Loading runs...</div>';
+  }
   try {
     const res = await fetch(BASE + '/api/runs');
     const runs = await res.json();
-    if (runs.error) { panel.innerHTML = '<div class="empty">' + esc(runs.error) + '</div>'; return; }
-    if (runs.length === 0) { panel.innerHTML = '<div class="empty">No runs yet</div>'; return; }
-    let html = '<table><thead><tr><th>Time</th><th>Status</th><th>Artifacts</th><th></th></tr></thead><tbody>';
-    for (const run of runs) {
-      const cls = run.conclusion === 'success' ? 'run-success' : run.conclusion === 'failure' ? 'run-failure' : 'run-pending';
-      const statusText = run.status === 'completed' ? run.conclusion : run.status;
-      html += '<tr>';
-      html += '<td>' + esc(formatTime(run.created_at)) + '</td>';
-      html += '<td><span class="run-status ' + cls + '">' + esc(statusText) + '</span></td>';
-      html += '<td>';
-      if (run.artifacts && run.artifacts.length > 0) {
-        for (const a of run.artifacts) {
-          if (!a.expired) {
-            html += '<a class="btn-dl" href="' + BASE + '/api/artifacts/' + a.id + '" title="' + esc(a.name) + ' (' + esc(formatSize(a.size_in_bytes)) + ')">' + esc(a.name) + '</a> ';
-          } else {
-            html += '<span style="color:var(--text2);font-size:0.78rem">' + esc(a.name) + ' (expired)</span> ';
-          }
-        }
-      } else {
-        html += '<span style="color:var(--text2);font-size:0.78rem">—</span>';
+    if (runs.error) { panel.innerHTML = '<div class="empty">' + esc(runs.error) + '</div>'; stopRunsPolling(); return; }
+    if (runs.length === 0) { panel.innerHTML = '<div class="empty">No runs yet</div>'; panel.dataset.loaded = '1'; stopRunsPolling(); return; }
+
+    const hasInProgress = runs.some(r => r.status !== 'completed');
+
+    // Only update DOM if data actually changed (prevents flicker)
+    const newJson = JSON.stringify(runs);
+    if (newJson !== lastRunsJson) {
+      lastRunsJson = newJson;
+      let html = buildRunsHTML(runs);
+      if (hasInProgress) {
+        html += '<div style="font-size:0.78rem;color:var(--text2);margin-top:12px;padding-top:8px"><span class="spinner" style="margin-right:4px"></span>Updating every 10s...</div>';
       }
-      html += '</td>';
-      html += '<td><a href="' + esc(run.html_url) + '" target="_blank" style="color:var(--accent);font-size:0.78rem">View</a></td>';
-      html += '</tr>';
+      panel.innerHTML = html;
+      panel.dataset.loaded = '1';
     }
-    html += '</tbody></table>';
-    panel.innerHTML = html;
+
+    if (!hasInProgress && runsPollingTimer) {
+      stopRunsPolling();
+      resetButtons();
+      setTriggerStatus('', '');
+      loadPayloads();
+    }
   } catch (e) {
-    panel.innerHTML = '<div class="empty" style="color:var(--red)">Failed to load runs: ' + esc(e.message) + '</div>';
+    // Don't overwrite on transient network errors during polling
+    if (!panel.dataset.loaded) {
+      panel.innerHTML = '<div class="empty" style="color:var(--red)">Failed to load runs: ' + esc(e.message) + '</div>';
+    }
   }
 }
 

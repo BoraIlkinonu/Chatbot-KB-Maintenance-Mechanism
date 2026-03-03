@@ -10,6 +10,8 @@ from datetime import datetime
 
 from drive_scanner.config import SLACK_WEBHOOK_EXTERNAL
 
+DASHBOARD_URL = "https://drive-scanner-hook.tilkinonu.workers.dev"
+
 
 def send_slack(message, blocks=None):
     """Send a message to the external Slack app via webhook."""
@@ -49,7 +51,8 @@ def notify_scan_changes(payload):
     if not has_changes:
         return send_slack(
             ":zzz: *Drive Scan: No changes detected*\n"
-            f"Scanned {summary.get('total_files_scanned', 0)} files — all up to date."
+            f"Scanned {summary.get('total_files_scanned', 0)} files — all up to date.\n"
+            f"<{DASHBOARD_URL}|:mag: Dashboard>"
         )
 
     # Build change summary
@@ -73,11 +76,11 @@ def notify_scan_changes(payload):
         for item in term_changes[:10]:
             ct = item.get("change_type", "?")
             name = item.get("file_name", "?")
-            lessons = item.get("lessons", [])
-            lesson_str = f" (L{','.join(str(l) for l in lessons)})" if lessons else ""
-            sections.append(f"  :small_blue_diamond: `{name}` — {ct}{lesson_str}")
+            sections.append(f"  :small_blue_diamond: `{name}` — {ct}")
         if len(term_changes) > 10:
             sections.append(f"  _... +{len(term_changes) - 10} more_")
+
+    sections.append(f"\n<{DASHBOARD_URL}|:mag: View full details on Dashboard>")
 
     return send_slack("\n".join(sections))
 
