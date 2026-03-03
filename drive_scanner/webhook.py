@@ -4,6 +4,7 @@ Builds the v1.0 schema payload and delivers it to the external webhook URL.
 """
 
 import json
+import os
 import urllib.request
 from datetime import datetime, timezone
 
@@ -11,6 +12,21 @@ from drive_scanner.config import EXTERNAL_WEBHOOK_URL
 from drive_scanner.lessons import extract_lesson_range
 
 SCHEMA_VERSION = "1.0"
+
+def _github_run_info():
+    """Extract GitHub Actions run metadata from environment, if available."""
+    run_id = os.environ.get("GITHUB_RUN_ID")
+    if not run_id:
+        return None
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+    return {
+        "run_id": run_id,
+        "run_url": f"{server}/{repo}/actions/runs/{run_id}" if repo else None,
+        "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", "1"),
+        "triggered_by": os.environ.get("GITHUB_ACTOR", ""),
+        "event": os.environ.get("GITHUB_EVENT_NAME", ""),
+    }
 
 
 def build_payload(scan_results, activity_by_term, revision_data):
@@ -70,7 +86,7 @@ def build_payload(scan_results, activity_by_term, revision_data):
             "revisions": info.get("revisions", []),
         }
 
-    return {
+    payload = {
         "schema_version": SCHEMA_VERSION,
         "event_type": "drive_scan_complete",
         "scan_timestamp": scan_timestamp,
@@ -80,6 +96,12 @@ def build_payload(scan_results, activity_by_term, revision_data):
         "activity": {k: v for k, v in activity_by_term.items() if v},
         "revisions": revisions_section,
     }
+
+    run_info = _github_run_info()
+    if run_info:
+        payload["github_run"] = run_info
+
+    return payload
 
 
 def _build_change_entry(change):

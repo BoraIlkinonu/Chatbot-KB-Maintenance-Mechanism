@@ -320,6 +320,7 @@ function buildSummary(data) {
   return {
     has_changes: data.has_changes || false,
     scan_time: data.scan_time || data.timestamp || null,
+    run_id: (data.github_run || {}).run_id || null,
     ...counts,
     total: counts.new + counts.modified + counts.deleted + counts.renamed,
   };
@@ -907,7 +908,8 @@ function renderHistory() {
       ? '<span class="badge badge-yellow">' + s.total + ' changes</span>'
       : '<span class="badge badge-green">No changes</span>';
     const time = formatTime(p.timestamp);
-    return '<div class="history-item' + active + '" onclick="selectPayload(\\''+esc(p.id)+'\\')"><div>' + time + '</div>' + badge + '</div>';
+    const runTag = s.run_id ? '<div style="font-size:0.7rem;color:var(--text2)">Run #' + esc(s.run_id) + '</div>' : '';
+    return '<div class="history-item' + active + '" onclick="selectPayload(\\''+esc(p.id)+'\\')"><div>' + time + runTag + '</div>' + badge + '</div>';
   }).join('');
 }
 
@@ -923,7 +925,13 @@ function renderDetail(data, id) {
   html += '</div>';
 
   const scanTime = data.scan_time || data.timestamp || id;
-  html += '<div style="font-size:0.85rem; color:var(--text2); margin-bottom: 12px;">Received: ' + formatTime(id) + ' &middot; Scan: ' + formatTime(scanTime) + '</div>';
+  let metaLine = 'Received: ' + formatTime(id) + ' &middot; Scan: ' + formatTime(scanTime);
+  const ghRun = data.github_run;
+  if (ghRun) {
+    metaLine += ' &middot; Run <a href="' + esc(ghRun.run_url) + '" target="_blank" style="color:var(--accent)">#' + esc(ghRun.run_id) + '</a>';
+    if (ghRun.triggered_by) metaLine += ' by ' + esc(ghRun.triggered_by);
+  }
+  html += '<div style="font-size:0.85rem; color:var(--text2); margin-bottom: 12px;">' + metaLine + '</div>';
 
   // Summary bar
   const changes = data.changes || {};
@@ -966,8 +974,8 @@ function renderDetail(data, id) {
         html += '<td>' + esc(ch.file_name || ch.name || '—') + '</td>';
         html += '<td><span class="ct-' + ct + '">' + esc(ch.change_type || '—') + '</span></td>';
         html += '<td>' + esc(formatLessons(ch.lessons)) + '</td>';
-        html += '<td>' + esc(formatSize(ch.size)) + '</td>';
-        html += '<td>' + esc(ch.last_modified_by || ch.modifier || '—') + '</td>';
+        html += '<td>' + esc(formatSize(ch.size_bytes || ch.size)) + '</td>';
+        html += '<td>' + esc(ch.last_modifier || ch.last_modified_by || ch.modifier || '—') + '</td>';
         html += '</tr>';
       }
     }
@@ -988,12 +996,22 @@ function renderDetail(data, id) {
   }
 
   // --- Revisions ---
+  // Build file ID → name map from changes
+  const idToName = {};
+  for (const items of Object.values(changes)) {
+    if (Array.isArray(items)) {
+      for (const ch of items) {
+        if (ch.file_id && ch.file_name) idToName[ch.file_id] = ch.file_name;
+      }
+    }
+  }
   const revisions = data.revisions || data.revision_details || {};
   const revEntries = Object.entries(revisions);
   if (revEntries.length > 0) {
     html += '<div class="card"><h3>Revisions</h3>';
-    for (const [fileName, revs] of revEntries) {
-      html += '<details><summary>' + esc(fileName) + ' (' + (Array.isArray(revs) ? revs.length : 0) + ' revisions)</summary>';
+    for (const [fileKey, revs] of revEntries) {
+      const displayName = idToName[fileKey] || fileKey;
+      html += '<details><summary>' + esc(displayName) + ' (' + (Array.isArray(revs) ? revs.length : 0) + ' revisions)</summary>';
       html += '<div class="rev-list">';
       if (Array.isArray(revs)) {
         for (const r of revs) {
