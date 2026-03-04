@@ -42,8 +42,7 @@ jobs:
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="dry_run";
           elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="full_sync";
-          elif [ "${{ inputs.download }}" = "true" ]; then MODE="download";
-          elif [ "${{ github.event_name }}" = "schedule" ]; then MODE="scheduled";
+          elif [ "${{ inputs.download }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then MODE="download";
           else MODE="scan"; fi
           DASHBOARD_URL="${EXTERNAL_WEBHOOK_URL%/webhook}"
           curl -sf -X POST "${DASHBOARD_URL}/api/run-mode" \
@@ -67,10 +66,9 @@ jobs:
           ARGS="--output scan_result.json"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
-          fi
-          if [ "${{ inputs.full_sync }}" = "true" ]; then
+          elif [ "${{ inputs.full_sync }}" = "true" ]; then
             ARGS="$ARGS --full-sync"
-          elif [ "${{ inputs.download }}" = "true" ]; then
+          elif [ "${{ inputs.download }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then
             ARGS="$ARGS --download"
           fi
           python -m drive_scanner $ARGS
@@ -84,7 +82,7 @@ jobs:
           retention-days: 30
 
       - name: Upload downloaded files artifact
-        if: inputs.download || inputs.full_sync
+        if: inputs.download || inputs.full_sync || github.event_name == 'schedule'
         uses: actions/upload-artifact@v4
         with:
           name: downloads
@@ -115,7 +113,7 @@ jobs:
             MODE=""
             if [ "${{ inputs.dry_run }}" = "true" ]; then MODE="Dry Run";
             elif [ "${{ inputs.full_sync }}" = "true" ]; then MODE="Full Sync";
-            elif [ "${{ inputs.download }}" = "true" ]; then MODE="Scan + Download";
+            elif [ "${{ inputs.download }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ]; then MODE="Scan + Download";
             else MODE="Scan"; fi
             curl -s -X POST "$SLACK_WEBHOOK_EXTERNAL" \
               -H 'Content-Type: application/json' \
