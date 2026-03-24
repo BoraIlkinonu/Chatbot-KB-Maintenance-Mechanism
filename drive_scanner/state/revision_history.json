@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-23T22:31:20.457183+00:00",
+  "last_updated": "2026-03-24T22:28:07.114055+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -5248,6 +5248,76 @@
           "user_email": "tilkinonu@endlessstudios.com",
           "user_name": "T. Bora Ilkinonu",
           "size": 0
+        },
+        {
+          "id": "264",
+          "time": "2026-03-24T05:41:48.260Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        },
+        {
+          "id": "265",
+          "time": "2026-03-24T08:25:16.755Z",
+          "user_email": "tilkinonu@endlessstudios.com",
+          "user_name": "T. Bora Ilkinonu",
+          "size": 0
+        }
+      ]
+    },
+    "1lI5jDodJ4cR4D_TLLAaPv2SU6PByM2De": {
+      "name": "TERM 3 ASSESSMENT – STUDENT VERSION 2.docx",
+      "folder_path": "Teacher Resources/Assessment/Student Guide",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QdXRtc1NVdTVTdXBWYWNxRFc4SGUzdGZWQnRJPQ",
+          "time": "2026-03-24T11:26:06.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 14597
+        }
+      ]
+    },
+    "1gYUHzo9brznIerYaBMsv18X1bUzeqqUP": {
+      "name": "Term-3-Assessment-Student-Visual Version 2.pdf",
+      "folder_path": "Teacher Resources/Assessment/Student Guide",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QZFFDZGdvd3B5L1VCQksxaGVyYW9DSFVtUHQwPQ",
+          "time": "2026-03-24T11:26:12.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 183684
+        }
+      ]
+    },
+    "1NJbVdPK8i7wK-swKLoqtDZbOkBt5B3Q3": {
+      "name": "TERM 3 ASSESSMENT – Teacher Version 2.docx",
+      "folder_path": "Teacher Resources/Assessment/Teacher Guide",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QdmF1R0hJYWNKQXlGY1l2SlQycmo4RE9UdEdVPQ",
+          "time": "2026-03-24T11:25:16.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 15492
+        }
+      ]
+    },
+    "1tZ2hU8treLmxmtddZsrDtXLo3Ot3Wptp": {
+      "name": "Term-3-Assessment-Teacher-Visual Version 2.pdf",
+      "folder_path": "Teacher Resources/Assessment/Teacher Guide",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QbGRNRzNrZGUxWEYyNUtldndLdFAzN3ZCZVhBPQ",
+          "time": "2026-03-24T11:25:21.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 280042
         }
       ]
     }
