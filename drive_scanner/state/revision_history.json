@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-24T22:28:07.114055+00:00",
+  "last_updated": "2026-03-25T22:34:00.189329+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -4599,11 +4599,11 @@
           "size": 17236424
         },
         {
-          "id": "0B6QnY51ORm-JbHU3VU94aEoycy9iL1RrNnNxMmhCOHN1ejhVPQ",
-          "time": "2026-03-23T21:40:11.052Z",
+          "id": "0B6QnY51ORm-Jd3VkYkx6MGdqUlRyZzdlb2dzOUlyVGpMZVYwPQ",
+          "time": "2026-03-25T09:21:33.917Z",
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
-          "size": 5555270
+          "size": 5560085
         }
       ]
     },
@@ -4716,6 +4716,13 @@
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
           "size": 13213285
+        },
+        {
+          "id": "0B6QnY51ORm-JczY1OUxXQ3dSOSs5S3Q5N1lmNHBHZy9HcmpJPQ",
+          "time": "2026-03-25T08:00:01.311Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 13205237
         }
       ]
     },
@@ -4744,6 +4751,13 @@
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
           "size": 13210837
+        },
+        {
+          "id": "0B6QnY51ORm-JUUhOd1UyUk8xQ0E4N1QraEpTcnp4YmpidUVnPQ",
+          "time": "2026-03-25T09:13:34.358Z",
+          "user_email": "",
+          "user_name": "(Google system operation)",
+          "size": 13212628
         }
       ]
     },
@@ -5220,6 +5234,13 @@
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
           "size": 52929955
+        },
+        {
+          "id": "0B6QnY51ORm-JUnVWZURIV2F5RjJUR2NVVG1FVmFBQXB4ZEVnPQ",
+          "time": "2026-03-25T10:28:55.182Z",
+          "user_email": "hbenamor@endlessstudios.com",
+          "user_name": "Houssem Ben Amor",
+          "size": 52921335
         }
       ]
     },
@@ -5318,6 +5339,160 @@
           "user_email": "dokeeffe@endlessstudios.com",
           "user_name": "Daniel O' Keeffe",
           "size": 280042
+        }
+      ]
+    },
+    "1paA7rofl4T5yt5srrwHxIq8PeldnFd5r": {
+      "name": "itch.io deployment.mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1SVRrOVJ5UDl3YWRlUlAxNFljKzgvbXg3K0pRPQ",
+          "time": "2026-03-25T07:54:23.000Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 277941547
+        }
+      ]
+    },
+    "1nN2_k7riMR6n1V82s7yzQfdg6yOdVXBF": {
+      "name": "Webpage Generation.mp4",
+      "folder_path": "Teacher Resources/Curriculum Content/Lesson supporting videos",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1OFJhY294Zjh3Wk0ra3BpeGZWNDZoaGRXU2tjPQ",
+          "time": "2026-03-25T07:50:40.000Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 58796142
+        }
+      ]
+    },
+    "1uJuoJr6oC4BmnpBBU2BrjVeWkFgrV3J9": {
+      "name": "Classkick - how to.docx",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-Qb0FiSjJKeWpkNWFCMFFhb2xZb1BNSi9Pbm4wPQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 6588
+        }
+      ]
+    },
+    "18Eqcj8jWOzdG80oV8rBnHVIpSZ6NHgwz": {
+      "name": "Students Log In Video.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QU2xPTGl2K1BOYjlYYlpLbnRwYThOV3VmZUs0PQ",
+          "time": "2026-03-25T09:48:17.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 93489879
+        }
+      ]
+    },
+    "197MtvbnUWRn1iHVyW37AoyLjm7v_6XXM": {
+      "name": "Teachers Dashboard Classkick 1.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QT2RNTVNDV3dBVS9OVHEyWnVqbVJ2ajNwVitNPQ",
+          "time": "2026-03-25T09:48:16.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 45576827
+        }
+      ]
+    },
+    "1SqaI2k4SZadKc39CUgNE6WSxng68gOUd": {
+      "name": "Teachers how to add students.mov",
+      "folder_path": "Technical Support Guides/Classkick",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QZnRnTmNSRDlBbmJUcEl3RDZYc210Q21oMURvPQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 92847761
+        }
+      ]
+    },
+    "10bHHDYQcMvV7Il5bImP7gIymFpWo-H8f": {
+      "name": "Endstar Engine Props and Rule Block Cheat Sheet.pdf",
+      "folder_path": "Technical Support Guides/Endstar -",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QdnFwazFFNW82ZzB6QnJ1MlhZcFQvZmZtaTBBPQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 67840
+        }
+      ]
+    },
+    "1d5ZEzOnPhdkgpfb1ZU2vkxz7WFF4iW5w": {
+      "name": "Endstar Engine User Guide (WIP) (1).pdf",
+      "folder_path": "Technical Support Guides/Endstar -",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QQ3BvZ3ZScXlGRzBxdGZlRTBEa3lrWTc2UTdJPQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 438990
+        }
+      ]
+    },
+    "1XVsIcOt1CaKq5L5XypjIPhOcZIUiRQ7d": {
+      "name": "Endstar Setup Guide.pdf",
+      "folder_path": "Technical Support Guides/Endstar -",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QcnJHcWV5QTAvSTJta3hTbFoveWFSc2FpWEo4PQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 1027818
+        }
+      ]
+    },
+    "13zIMZa8pKyPT-RsNLc9pFLEjdc3jtCLk": {
+      "name": "Endstar Troubleshooting.pdf",
+      "folder_path": "Technical Support Guides/Endstar -",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QRTVLcW9uWm44eUJxUmw4R0F3amZCdld6U0JnPQ",
+          "time": "2026-03-25T09:48:15.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 207128
+        }
+      ]
+    },
+    "1nGivwTQTl5EOXaoZ4BUlAoCLHpi1Lm7I": {
+      "name": "School AI Login & Space Access.mov",
+      "folder_path": "Technical Support Guides/School AI",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QTHlMRVB2bkZZWmlOeUoyd01TTVFndk5oUUQ4PQ",
+          "time": "2026-03-25T09:48:17.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 103625641
         }
       ]
     }
