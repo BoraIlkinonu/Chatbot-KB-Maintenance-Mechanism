@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-25T22:34:00.189329+00:00",
+  "last_updated": "2026-03-26T22:27:14.164930+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -5493,6 +5493,27 @@
           "user_email": "dokeeffe@endlessstudios.com",
           "user_name": "Daniel O' Keeffe",
           "size": 103625641
+        }
+      ]
+    },
+    "1hhK_aEd06kWYQboVChCuKYepB8mgJ-gj": {
+      "name": "Student Portfolio & Activities entry (classkick).pptx",
+      "folder_path": "Teacher Resources",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0B9YDzTjtup_1NEUrMk9yWnNDN0s0RElRQ0QvYldmMnNaVUw4PQ",
+          "time": "2026-03-26T07:37:56.000Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 52921335
+        },
+        {
+          "id": "0B9YDzTjtup_1MHJpZC8zOEt1R0FqTEdDemhhbHR0bXp2QlNBPQ",
+          "time": "2026-03-26T08:09:58.694Z",
+          "user_email": "obrienciaran4@gmail.com",
+          "user_name": "obrienciaran4",
+          "size": 10104850
         }
       ]
     }
