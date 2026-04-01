@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-31T22:32:50.948709+00:00",
+  "last_updated": "2026-04-01T22:35:20.733979+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -1517,6 +1517,13 @@
           "user_email": "obrienciaran4@gmail.com",
           "user_name": "obrienciaran4",
           "size": 0
+        },
+        {
+          "id": "148",
+          "time": "2026-04-01T12:07:53.612Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
+          "size": 0
         }
       ]
     },
@@ -2027,6 +2034,13 @@
           "time": "2026-01-09T10:06:03.186Z",
           "user_email": "hbenamor@endlessstudios.com",
           "user_name": "Houssem Ben Amor",
+          "size": 0
+        },
+        {
+          "id": "63",
+          "time": "2026-04-01T15:59:38.913Z",
+          "user_email": "amcgirr@endlessstudios.com",
+          "user_name": "Alan Mc Girr",
           "size": 0
         }
       ]
@@ -3950,7 +3964,7 @@
       ]
     },
     "1HQjX9OOflMw3VHVY4CNStsttVPgS9idO": {
-      "name": "US Computer Science Curriculum Alignment (US private schools and Charter schools) (2).pdf",
+      "name": "US Computer Science Curriculum Alignment CSTA (US private schools and Charter schools) (2).pdf",
       "folder_path": "Teacher Resources/Curriculum Alignment",
       "term": "term3",
       "revisions": [
@@ -3964,7 +3978,7 @@
       ]
     },
     "14jo_Ba_0u2WRRA0RhWYa6vPw5Tw9gtZBZZpKzjO4mVY": {
-      "name": "US Computer Science Curriculum Alignment (US private schools and Charter schools).pdf",
+      "name": "US Computer Science Curriculum Alignment CSTA (US private schools and Charter schools).pdf",
       "folder_path": "Teacher Resources/Curriculum Alignment",
       "term": "term3",
       "revisions": [
@@ -5542,6 +5556,34 @@
           "user_email": "dokeeffe@endlessstudios.com",
           "user_name": "Daniel O' Keeffe",
           "size": 1564355
+        }
+      ]
+    },
+    "1e35B0frAh0CnhXkTHpCGoP94bnNkLxfm": {
+      "name": "US Computer Science Curriculum Alignment CSP.docx",
+      "folder_path": "Teacher Resources/Curriculum Alignment",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QTE5scFNqbkROOHJPbXJWREVlcXdJWFNjWTNVPQ",
+          "time": "2026-04-01T12:52:14.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 11372
+        }
+      ]
+    },
+    "1V8JtaIyI7EdLuDe2x2j7WkKtJMQg2eqG": {
+      "name": "US Computer Science Curriculum Alignment CSP.pdf",
+      "folder_path": "Teacher Resources/Curriculum Alignment",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QdWJtc2ZrYm8wMUtTUU5LMXgrREVPRlVDRWxrPQ",
+          "time": "2026-04-01T12:52:25.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 89740
         }
       ]
     }
