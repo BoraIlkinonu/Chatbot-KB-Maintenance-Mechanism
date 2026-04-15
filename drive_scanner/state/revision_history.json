@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-14T22:42:27.255064+00:00",
+  "last_updated": "2026-04-15T22:39:05.048637+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -5619,6 +5619,62 @@
           "user_email": "dokeeffe@endlessstudios.com",
           "user_name": "Daniel O' Keeffe",
           "size": 541732
+        }
+      ]
+    },
+    "1WICSRhJf3kJeGuFHGLy4CVZENF1HIcJA": {
+      "name": "Endless-Studios-Future-Creators-Showcase (Student Version).pdf",
+      "folder_path": "Teacher Resources/End of Year Showcase",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QS0VqMGV4U1IvN1o5M294U2VnU25od1I1bmhrPQ",
+          "time": "2026-04-15T10:07:26.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 2986318
+        }
+      ]
+    },
+    "1_TMOkPvrykd-3kP12VAZVSdKwp9jJvCx": {
+      "name": "Game_Pitch_Deck_Template (1).pptx",
+      "folder_path": "Teacher Resources/End of Year Showcase",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QVWk4YVBFUzE4RThnRjFsVndMQ2JtVHU0Yk5ZPQ",
+          "time": "2026-04-15T07:45:56.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 148952
+        }
+      ]
+    },
+    "1TCGi75I82MvTg6aEhah8m0wjt_U3e0Ch": {
+      "name": "Endstar Swimming Mechanic.mp4",
+      "folder_path": "Teacher Resources/New Features Endstar",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QQWdUQlM4ZDJ2dDJpK1A1bDdVb1NKVnBHWUZVPQ",
+          "time": "2026-04-15T04:29:21.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 148325011
+        }
+      ]
+    },
+    "1q3v2FrB5T8YSxZIikr_HVbPElY07mNYw": {
+      "name": "Endstar Trading Mechanic.mp4",
+      "folder_path": "Teacher Resources/New Features Endstar",
+      "term": "term3",
+      "revisions": [
+        {
+          "id": "0ByQWsJ0u6H-QazFkQ0w4YitZVmpqbkVjbW5FMFVXeVF4L3pzPQ",
+          "time": "2026-04-15T04:29:18.000Z",
+          "user_email": "dokeeffe@endlessstudios.com",
+          "user_name": "Daniel O' Keeffe",
+          "size": 186894536
         }
       ]
     }
