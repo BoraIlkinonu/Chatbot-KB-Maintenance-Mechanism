@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-13T23:52:25.267545+00:00",
+  "last_updated": "2026-09-15T00:14:27.867741+00:00",
   "files": {
     "1kLUQAyBqC2tSsfshlEvJ9BFL-HVeIA_hegZ0_zBAN_o": {
       "name": "Explorers Programme Curriculum Specifications Term 1",
@@ -4667,6 +4667,20 @@
           "user_email": "dokeeffe@endlessstudios.com",
           "user_name": "Daniel O' Keeffe",
           "size": 103625641
+        }
+      ]
+    },
+    "1MW2x2xf9y9ehw03wTw3ILyLzyI1rbEIrJpdvUVi_mfo": {
+      "name": "Term-2LOsSC-and-AI-KS",
+      "folder_path": "Teacher Resources/Curriculum Content/LO's and Success Criteria",
+      "term": "term2",
+      "revisions": [
+        {
+          "id": "1",
+          "time": "2026-09-14T09:01:14.284Z",
+          "user_email": "cobrien@endlessstudios.com",
+          "user_name": "Ciaran O'Brien",
+          "size": 0
         }
       ]
     }
